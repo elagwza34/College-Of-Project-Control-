@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "Article grid loads live database records",
+    "Search submits and returns database matches",
+    "No-results state",
+    "Single page content, SEO, 8-card carousel, 3 visible, one-card steps, end boundary",
+    "Tablet and mobile card counts, no horizontal page overflow",
+    "Missing and unpublished article state",
+    "API failure and retry recovery"
+  ],
+  "exceptions": []
+}

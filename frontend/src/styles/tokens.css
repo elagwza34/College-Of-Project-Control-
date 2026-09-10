@@ -1,0 +1,141 @@
+:root {
+  /* Cool ivory and slate canvas — academic, calm and highly legible. */
+  --background-50: 0.97714 0.00347 219.53; /* #F5F8F9 */
+  --background-100: 0.956 0.006 220;
+  --background-200: 0.91595 0.01052 219.59; /* #DCE5E8 */
+  --background-300: 0.850 0.014 220;
+  --background-400: 0.755 0.018 222;
+  --background-500: 0.650 0.020 224;
+  --background-600: 0.545 0.020 226;
+  --background-700: 0.435 0.019 228;
+  --background-800: 0.330 0.017 230;
+  --background-900: 0.230 0.014 232;
+  --background-950: 0.145 0.010 234;
+
+  /* Primary — deep petrol #123B4A. */
+  --primary-50: 0.975 0.008 226;
+  --primary-100: 0.935 0.015 226;
+  --primary-200: 0.855 0.025 226;
+  --primary-300: 0.735 0.038 226;
+  --primary-400: 0.535 0.048 226;
+  --primary-500: 0.33121 0.05183 225.99;
+  --primary-600: 0.285 0.046 226;
+  --primary-700: 0.240 0.040 226;
+  --primary-800: 0.195 0.033 226;
+  --primary-900: 0.155 0.025 226;
+  --primary-950: 0.115 0.018 226;
+
+  /* Secondary — medium petrol #1F5F73. */
+  --secondary-50: 0.975 0.009 223;
+  --secondary-100: 0.930 0.020 223;
+  --secondary-200: 0.845 0.036 223;
+  --secondary-300: 0.720 0.055 223;
+  --secondary-400: 0.575 0.068 223;
+  --secondary-500: 0.45436 0.07095 222.59;
+  --secondary-600: 0.385 0.064 223;
+  --secondary-700: 0.320 0.056 223;
+  --secondary-800: 0.255 0.046 224;
+  --secondary-900: 0.195 0.036 224;
+  --secondary-950: 0.135 0.025 224;
+
+  /* Accent — calm turquoise #3FA7A3. */
+  --accent-50: 0.975 0.012 192;
+  --accent-100: 0.930 0.030 192;
+  --accent-200: 0.850 0.052 192;
+  --accent-300: 0.760 0.076 192;
+  --accent-400: 0.705 0.090 192;
+  --accent-500: 0.66791 0.09461 191.55;
+  --accent-600: 0.570 0.084 192;
+  --accent-700: 0.475 0.071 192;
+  --accent-800: 0.385 0.056 192;
+  --accent-900: 0.300 0.041 192;
+  --accent-950: 0.215 0.028 192;
+
+  /* Highlight — matches the Hero's accent #FFA953. */
+  --highlight-50: 0.981 0.019 83.1;
+  --highlight-100: 0.953 0.040 78.1;
+  --highlight-200: 0.913 0.070 73.7;
+  --highlight-300: 0.872 0.099 70.3;
+  --highlight-400: 0.836 0.123 66.7;
+  --highlight-500: 0.804 0.143 63.1;
+  --highlight-600: 0.730 0.142 61.9;
+  --highlight-700: 0.637 0.129 59.9;
+  --highlight-800: 0.526 0.104 59.4;
+  --highlight-900: 0.435 0.084 58.0;
+  --highlight-950: 0.310 0.056 55.1;
+
+  /* Signal — conversion accent #FFA953. Used selectively with petrol. */
+  --signal-50: 255 248 235;
+  --signal-100: 255 237 210;
+  --signal-200: 255 220 175;
+  --signal-300: 255 202 140;
+  --signal-400: 255 185 110;
+  --signal-500: 255 169 83;
+  --signal-600: 230 145 60;
+  --signal-700: 195 118 45;
+  --signal-800: 150 90 35;
+  --signal-900: 115 68 28;
+  --signal-950: 70 40 18;
+
+  /* Foreground — ink navy rather than neutral black. */
+  --foreground-50: 0.975 0.004 240;
+  --foreground-100: 0.920 0.008 240;
+  --foreground-200: 0.820 0.014 240;
+  --foreground-300: 0.710 0.020 240;
+  --foreground-400: 0.625 0.026 238;
+  --foreground-500: 0.56499 0.02912 235.76; /* #667985 */
+  --foreground-600: 0.460 0.028 240;
+  --foreground-700: 0.360 0.026 244;
+  --foreground-800: 0.27601 0.02328 248.68; /* #1F2933 */
+  --foreground-900: 0.220 0.021 250;
+  --foreground-950: 0.160 0.018 252;
+
+  /* Typography */
+  --font-heading: 'Poppins', system-ui, sans-serif;
+  --font-body: 'Poppins', system-ui, sans-serif;
+  --font-label: 'Poppins', system-ui, sans-serif;
+}
+
+
+:root {
+  --canvas-rgb: 245 248 249;
+  --color-canvas: rgb(var(--canvas-rgb));
+  --surface-rgb: 255 255 255;
+  --color-surface: rgb(var(--surface-rgb));
+  --ink-rgb: 31 41 51;
+  --color-ink: rgb(var(--ink-rgb));
+  --muted-rgb: 75 96 110;
+  --color-muted: rgb(var(--muted-rgb));
+  --border-rgb: 220 229 232;
+  --color-border: rgb(var(--border-rgb));
+  --primary-rgb: 18 59 74;
+  --color-primary: rgb(var(--primary-rgb));
+  --secondary-rgb: 31 95 115;
+  --color-secondary: rgb(var(--secondary-rgb));
+  --accent-rgb: 63 167 163;
+  --color-accent: rgb(var(--accent-rgb));
+  --action-rgb: 255 169 83;
+  --color-action: rgb(var(--action-rgb));
+  --ipc-surface-rgb: 8 13 16;
+  --color-ipc-surface: rgb(var(--ipc-surface-rgb));
+  --ipc-gold-rgb: 216 179 110;
+  --color-ipc-gold: rgb(var(--ipc-gold-rgb));
+  --ipc-ink-rgb: 156 104 19;
+  --color-ipc-ink: rgb(var(--ipc-ink-rgb));
+  --error-rgb: 185 28 28;
+  --color-error: rgb(var(--error-rgb));
+  --success-rgb: 21 128 61;
+  --color-success: rgb(var(--success-rgb));
+  --warning-rgb: 146 64 14;
+  --color-warning: rgb(var(--warning-rgb));
+  --radius-control: 6px;
+  --radius-card: 12px;
+  --radius-panel: 16px;
+  --shadow-card: 0 8px 24px -16px rgb(18 59 74 / .2);
+  --shadow-overlay: 0 24px 64px -16px rgb(18 59 74 / .24);
+  --header-height: 112px;
+  --section-nav-height: 56px;
+  --section-space: 4rem;
+  --page-gutter: 1rem;
+}
+@media (min-width: 768px) { :root { --section-space: 6rem; --page-gutter: 1.5rem; } }

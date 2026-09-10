@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "Every approved header and section text matches the supplied content, including all credit, funding and assessment notes",
+    "Current design system, valid section anchors, one heading and responsive layout",
+    "Expandable module outputs, two-credit Planning and Control, working local CTAs and preserved source contact details",
+    "Canonical and alias routes share approved content and retain programme testimonials"
+  ],
+  "exceptions": []
+}

@@ -1,0 +1,668 @@
+@import './styles/tokens.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+    color-scheme: light;
+  }
+  body {
+    min-width: 320px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    background-color: oklch(var(--background-50));
+    color: oklch(var(--foreground-800));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    color: oklch(var(--foreground-950));
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  small {
+    font-size: 0.875rem;
+  }
+  :focus-visible {
+    outline: 3px solid rgb(var(--signal-500));
+    outline-offset: 3px;
+  }
+  ::selection {
+    color: white;
+    background: oklch(var(--primary-600));
+  }
+  [id] {
+    scroll-margin-top: calc(var(--header-height) + var(--section-nav-height) + 16px);
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply w-full max-w-[1280px] mx-auto px-4 md:px-6;
+  }
+  .honeypot-field {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+  }
+
+  /* Premium card on #F5F8F9 canvas */
+  .card-premium {
+    @apply bg-white rounded-xl border border-background-200/80 shadow-card;
+  }
+  .card-premium-hover {
+    @apply bg-white rounded-xl border border-background-200/80 shadow-card hover:border-primary-300/60 transition-all duration-300;
+  }
+
+  .signal-pattern {
+    background-image:
+      radial-gradient(circle at 16% 20%, rgb(var(--signal-500) / 0.20) 0 2px, transparent 3px),
+      radial-gradient(circle at 84% 72%, rgb(var(--signal-500) / 0.14) 0 1.5px, transparent 2.5px);
+    background-size: 42px 42px, 56px 56px;
+  }
+
+  /* Gold micro-accent line */
+  .gold-accent-line {
+    @apply w-8 h-0.5 rounded-full;
+    background: oklch(var(--highlight-500) / 0.6);
+  }
+
+  /* Lavender section divider */
+  .section-divider {
+    height: 1px;
+    background: oklch(var(--primary-300) / 0.18);
+    width: 100%;
+  }
+}
+
+.page-loader {
+  min-height: 65vh;
+  display: grid;
+  place-items: center;
+  color: oklch(var(--primary-700));
+  background: oklch(var(--background-50));
+  font: 600 0.75rem/1 var(--font-label);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  transform: translateY(-160%);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: oklch(var(--highlight-500));
+  color: oklch(var(--secondary-950));
+  font-weight: 700;
+  transition: transform 180ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* ── Animations ───────────────────────────────────────────────── */
+
+@keyframes marquee-scroll {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 70s linear infinite;
+  will-change: transform;
+}
+
+.pause-on-hover:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+.animate-marquee-mentors {
+  animation: marquee-scroll 40s linear infinite;
+  will-change: transform;
+}
+
+/* IPC institutional section — portrait marquee (right to left) */
+@keyframes ipc-portrait-flow {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.animate-ipc-portraits {
+  animation: ipc-portrait-flow 34s linear infinite;
+  will-change: transform;
+  direction: ltr;
+}
+
+.ipc-portrait-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+}
+
+/* Scrollbar hide */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Testimonial fade-in */
+@keyframes testimonial-fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-testimonial-in {
+  animation: testimonial-fade-in 0.5s ease-out forwards;
+}
+
+/* Speech bubble tail */
+.speech-tail {
+  position: absolute;
+  left: -14px;
+  top: 32px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-right: 14px solid white;
+}
+.speech-tail-border {
+  position: absolute;
+  left: -16px;
+  top: 30px;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  border-right: 16px solid oklch(var(--background-200) / 0.8);
+}
+
+/* ── Premium Micro-Interaction Animations ──────────────────────── */
+
+/* Fade Up — base state */
+.reveal-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Blur In */
+.reveal-blur-in {
+  opacity: 0;
+  filter: blur(6px);
+  transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1),
+              filter 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-blur-in.is-visible {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* Scale In */
+.reveal-scale-in {
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 450ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-scale-in.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── Stagger utility — use as inline style delay on children ──── */
+/* Apply data-animate="fade-up|blur-in|scale-in" to parent
+   and .reveal-stagger-child on each child with style="transition-delay: Xms" */
+
+.reveal-stagger-child {
+  opacity: 0;
+}
+.reveal-stagger-child.animate-in {
+  opacity: 1;
+}
+
+.reveal-stagger-child.fade-up-child {
+  transform: translateY(20px);
+  transition: opacity 450ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-stagger-child.fade-up-child.animate-in {
+  transform: translateY(0);
+}
+
+.reveal-stagger-child.blur-in-child {
+  filter: blur(4px);
+  transition: opacity 400ms cubic-bezier(0.22, 1, 0.36, 1),
+              filter 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-stagger-child.blur-in-child.animate-in {
+  filter: blur(0);
+}
+
+.reveal-stagger-child.scale-in-child {
+  transform: scale(0.93);
+  transition: opacity 400ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-stagger-child.scale-in-child.animate-in {
+  transform: scale(1);
+}
+
+/* ── 3D Structural Pattern Overlay ──────────────────────────── */
+.pattern-cubes-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url('https://storage.readdy-site.link/project_files/2c065606-36c7-4cac-81e4-2edb67f93f84/8c6d5361-a544-46cc-bda3-258e3264c4ec_compressed_ChatGPT-Image-Jun-26-2026-08_14_07-PM-1.webp');
+  background-size: 500px;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+/* Dark sections — pattern shows as-is at low opacity */
+.pattern-cubes-overlay-dark {
+  opacity: 0.10;
+}
+
+/* Light sections — inverted pattern */
+.pattern-cubes-overlay-light {
+  opacity: 0.06;
+  filter: invert(1);
+}
+
+/* ── Slow pattern drift animation ───────────────────────────── */
+@keyframes pattern-drift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+.pattern-cubes-animate {
+  animation: pattern-drift 60s linear infinite;
+}
+
+/* ── Nav Link Underline Slide ─────────────────────────────────── */
+.nav-underline-slide {
+  position: relative;
+}
+.nav-underline-slide::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: width 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nav-underline-slide:hover::after {
+  width: 100%;
+}
+
+/* ── Magnetic Button ──────────────────────────────────────────── */
+.magnetic-btn {
+  display: inline-flex;
+  transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ── Lift Hover — subtle raise on hover ──────────────────────── */
+.lift-hover {
+  transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.lift-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px -8px oklch(var(--foreground-900) / 0.08);
+}
+
+/* ── Card Scale Hover — subtle scale on hover ─────────────────── */
+.card-scale-hover {
+  transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.card-scale-hover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px -8px oklch(var(--foreground-900) / 0.08);
+}
+
+/* ── Subtle Premium Decorative Effects ────────────────────────── */
+
+/* Faint lavender glow — floating orb in select sections */
+@keyframes lavender-float {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.035; }
+  33% { transform: translate(20px, -15px) scale(1.05); opacity: 0.05; }
+  66% { transform: translate(-10px, 10px) scale(0.95); opacity: 0.025; }
+}
+.lavender-glow {
+  animation: lavender-float 12s ease-in-out infinite;
+}
+
+/* Gold micro-sparkle pulse */
+@keyframes gold-pulse {
+  0%, 100% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(1.08); }
+}
+.gold-sparkle {
+  animation: gold-pulse 4s ease-in-out infinite;
+}
+
+/* Subtle pathway line drawing */
+@keyframes pathway-draw {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+.pathway-line {
+  stroke-dasharray: 1000;
+  animation: pathway-draw 20s linear infinite;
+}
+
+/* Footer light theme using the project canvas colour. */
+.footer-light-bg {
+  background: linear-gradient(180deg, #ffffff 0%, #F5F8F9 100%);
+}
+
+/* ── Skeleton Shimmer Animation ──────────────────────────────── */
+@keyframes skeleton-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ── Page Transition Base ──────────────────────────────────── */
+.page-transition-wrapper {
+  will-change: opacity, transform;
+}
+
+/* ── Fade Slide Up (for result cards) ─────────────────────── */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Editorial PMO Route Styles ─────────────────────────────── */
+
+/* Editorial background variants constrained to the brand palette. */
+.bg-editorial-cream {
+  background-color: #F5F8F9;
+}
+
+/* White editorial panel */
+.bg-editorial-yellow {
+  background-color: #FFFFFF;
+}
+
+/* Light petrol editorial panel */
+.bg-editorial-mint {
+  background-color: #F5F8F9;
+}
+
+/* Light petrol editorial panel */
+.bg-editorial-peach {
+  background-color: #F5F8F9;
+}
+
+/* Light petrol editorial panel */
+.bg-editorial-lavender {
+  background-color: #F5F8F9;
+}
+
+/* Off-white card */
+.bg-editorial-white {
+  background-color: #FFFFFF;
+}
+
+/* Thin charcoal divider */
+.divider-ink {
+  height: 1px;
+  background-color: #1F2933;
+  opacity: 0.15;
+}
+
+/* Thick charcoal divider */
+.divider-ink-thick {
+  height: 2px;
+  background-color: #1F2933;
+  opacity: 0.12;
+}
+
+/* Sandy-gold route marker */
+.route-marker {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #D6A85F;
+  border: 3px solid #F5F8F9;
+  box-shadow: 0 0 0 2px #D6A85F;
+}
+
+/* Dotted route line vertical */
+.route-line-vertical {
+  width: 0;
+  border-left: 2px dashed #1F2933;
+  opacity: 0.25;
+}
+
+/* Dotted route line horizontal */
+.route-line-horizontal {
+  height: 0;
+  border-top: 2px dashed #1F2933;
+  opacity: 0.25;
+}
+
+/* Hand-drawn card with subtle ink border */
+.card-editorial {
+  background: #FFFFFF;
+  border: 1px solid #DCE5E8;
+  border-radius: 4px;
+}
+
+/* Secondary petrol CTA button */
+.btn-editorial-teal {
+  background-color: #1F5F73;
+  color: #FFFFFF;
+  font-family: var(--font-label);
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 0.375rem;
+  transition: all 300ms ease;
+}
+.btn-editorial-teal:hover {
+  background-color: #123B4A;
+}
+
+/* Primary petrol commercial CTA */
+.btn-editorial-purple {
+  background-color: #123B4A;
+  color: #F5F8F9;
+  font-family: var(--font-label);
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 0.375rem;
+  transition: all 300ms ease;
+}
+.btn-editorial-purple:hover {
+  background-color: #123B4A;
+}
+
+/* Small label style */
+.label-editorial {
+  font-family: var(--font-label);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1F2933;
+  opacity: 0.55;
+}
+
+/* Editorial section heading */
+.heading-editorial {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: #1F2933;
+  line-height: 1.15;
+}
+
+/* Handwritten quote style */
+.quote-editorial {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 500;
+  color: #1F2933;
+  opacity: 0.75;
+}
+
+/* Subtle fade-in for illustrations */
+@keyframes editorial-fade-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-editorial-in {
+  animation: editorial-fade-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Gold arrow hover nudge */
+@keyframes arrow-nudge {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+.hover-arrow-nudge:hover .arrow-icon {
+  animation: arrow-nudge 0.6s ease-in-out infinite;
+}
+
+/* Testimonial carousel transitions */
+@keyframes testimonial-slide-left {
+  from { opacity: 0; transform: translateX(60px) scale(0.92); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+@keyframes testimonial-slide-right {
+  from { opacity: 0; transform: translateX(-60px) scale(0.92); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+.animate-testimonial-left {
+  animation: testimonial-slide-left 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.animate-testimonial-right {
+  animation: testimonial-slide-right 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Shared hero treatment: temporary external photography with one contrast level. */
+.hero-image-office,
+.hero-image-project,
+.hero-image-documents {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-image-office {
+  background-image: linear-gradient(rgba(9, 31, 39, 0.82), rgba(9, 31, 39, 0.82)), url('https://images.pexels.com/photos/6285078/pexels-photo-6285078.jpeg?auto=compress&cs=tinysrgb&w=1920');
+}
+
+.hero-image-project {
+  background-image: linear-gradient(rgba(9, 31, 39, 0.82), rgba(9, 31, 39, 0.82)), url('https://images.pexels.com/photos/5833304/pexels-photo-5833304.jpeg?auto=compress&cs=tinysrgb&w=1920');
+}
+
+.hero-image-documents {
+  background-image: linear-gradient(rgba(9, 31, 39, 0.82), rgba(9, 31, 39, 0.82)), url('https://images.pexels.com/photos/19357343/pexels-photo-19357343/free-photo-of-pen-on-documents.jpeg?auto=compress&cs=tinysrgb&w=1920');
+}
+
+.hero-contrast-overlay {
+  background: rgba(9, 31, 39, 0.82);
+}
+
+@layer components {
+  .btn-primary { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-signal-500 px-6 py-3 text-sm font-bold text-primary-950 transition-colors hover:bg-signal-400 disabled:cursor-wait disabled:opacity-60; }
+  .form-control { @apply w-full min-h-12 rounded-md border border-foreground-500 bg-white px-3 py-2 text-base text-foreground-900; }
+  .form-control:focus-visible { outline: 3px solid #1F5F73; outline-offset: 2px; }
+}
+
+@layer components {
+  .section-space { padding-block: var(--section-space); }
+  .btn-secondary { @apply inline-flex min-h-12 items-center justify-center rounded-md border border-current px-6 py-3 text-sm font-semibold; }
+  .card-editorial { border-radius: var(--radius-card); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  .reveal-fade-up, .reveal-blur-in, .reveal-scale-in { opacity: 1; transform: none; filter: none; }
+}
+
+body:has(#sticky-actions) { padding-bottom: 132px; }
+/* IPC is an always-moving strip as requested; keep the site-wide motion
+   preference rule from completing this particular loop in a single frame. */
+#ipc-authority .animate-ipc-portraits {
+  animation-duration: 34s !important;
+  animation-iteration-count: infinite !important;
+  animation-play-state: running;
+}
+dialog::backdrop { background: rgb(0 0 0 / .6); }
+
+.trusted-logos { background: #fff; color: #111820; padding-block: 14px; }
+.trusted-logos-window {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent);
+}
+.trusted-logos-track {
+  display: flex;
+  width: max-content;
+  direction: ltr;
+  will-change: transform;
+  animation: trusted-logos-scroll var(--logos-duration) linear infinite;
+  /* This strip is explicitly configured to move continuously. */
+  animation-duration: var(--logos-duration) !important;
+  animation-iteration-count: infinite !important;
+}
+.trusted-logos-group { display: flex; flex-shrink: 0; align-items: center; }
+.trusted-logo {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 72px;
+  margin-right: 24px;
+  padding: 4px 8px;
+}
+.trusted-logo-image { width: 144px; height: 64px; max-width: 100%; max-height: 100%; object-fit: contain; }
+@keyframes trusted-logos-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}

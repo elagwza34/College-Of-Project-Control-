@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "construction: 80vh hero, local image, desktop/tablet/mobile, FAQ, working section links, current branding, approved testimonials and canonical/alias routes",
+    "energy: 80vh hero, local image, desktop/tablet/mobile, FAQ, working section links, current branding, approved testimonials and canonical/alias routes",
+    "engineering: 80vh hero, local image, desktop/tablet/mobile, FAQ, working section links, current branding, approved testimonials and canonical/alias routes",
+    "public-sector: 80vh hero, local image, desktop/tablet/mobile, FAQ, working section links, current branding, approved testimonials and canonical/alias routes"
+  ],
+  "exceptions": []
+}

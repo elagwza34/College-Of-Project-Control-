@@ -1,0 +1,7 @@
+{
+  "checks": [
+    "strategic: all supplied sections, local photo, 80vh desktop hero, mobile layouts, section links, current branding, local booking/eligibility, testimonials and alias",
+    "chartered: all supplied sections, local photo, 80vh desktop hero, mobile layouts, section links, current branding, local booking/eligibility, testimonials and alias"
+  ],
+  "exceptions": []
+}

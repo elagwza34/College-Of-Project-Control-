@@ -1,0 +1,63 @@
+/* College of Project Control — brand override for Django admin.
+   Mirrors the approved frontend palette (#002F2C teal / #D9B36C gold)
+   documented in the project README. Repeats the same selectors Django's
+   own base.css / dark_mode.css use so it wins regardless of the admin
+   light/dark toggle. */
+
+html[data-theme="light"],
+:root {
+  --primary: #002f2c;
+  --secondary: #001714;
+  --accent: #d9b36c;
+  --primary-fg: #fff;
+
+  --header-color: #f4e9cb;
+  --header-branding-color: var(--accent);
+  --header-bg: var(--secondary);
+  --header-link-color: var(--primary-fg);
+
+  --breadcrumbs-fg: #cfe0dd;
+  --breadcrumbs-bg: #06453f;
+
+  --link-fg: #06453f;
+  --link-hover-color: #002f2c;
+  --link-selected-fg: #002f2c;
+
+  --button-bg: var(--primary);
+  --button-hover-bg: #06453f;
+  --default-button-bg: #002f2c;
+  --default-button-hover-bg: #06453f;
+
+  --object-tools-bg: #002f2c;
+  --object-tools-hover-bg: #06453f;
+}
+
+html[data-theme="dark"] {
+  --primary: #06453f;
+  --secondary: #001714;
+  --accent: #d9b36c;
+  --primary-fg: #fff;
+
+  --header-bg: var(--secondary);
+  --header-branding-color: var(--accent);
+  --header-link-color: var(--primary-fg);
+
+  --breadcrumbs-bg: var(--primary);
+  --link-fg: #d9b36c;
+  --link-hover-color: #e3ca8e;
+  --link-selected-fg: #d9b36c;
+
+  --button-bg: var(--primary);
+  --button-hover-bg: #002f2c;
+}
+
+#branding h1 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.selector-chosen h2,
+.calendar caption,
+.calendarbox h2 {
+  background: var(--primary);
+}

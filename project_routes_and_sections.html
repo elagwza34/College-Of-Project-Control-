@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>دليل روابط صفحات المشروع وترتيب السكاشن - College of Project Control</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 14mm 14mm 16mm 14mm;
+    @bottom-right {
+      content: "صفحة " counter(page);
+      font-family: 'Cairo', sans-serif;
+      font-size: 9pt;
+      color: #64748b;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+    background-color: #ffffff;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    font-size: 9.5pt;
+    line-height: 1.55;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'Inter', Consolas, monospace;
+    direction: ltr;
+    display: inline-block;
+  }
+
+  /* Cover / Header Section */
+  .doc-header {
+    background: linear-gradient(135deg, #091326 0%, #172554 100%);
+    color: #ffffff;
+    padding: 24px 28px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+  }
+
+  .doc-badge {
+    display: inline-block;
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 8.5pt;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .doc-title {
+    font-size: 20pt;
+    font-weight: 900;
+    margin: 0 0 6px 0;
+    color: #ffffff;
+    line-height: 1.3;
+  }
+
+  .doc-subtitle {
+    font-size: 10.5pt;
+    color: #93c5fd;
+    margin: 0 0 16px 0;
+    font-weight: 600;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .stat-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .stat-num {
+    font-size: 13pt;
+    font-weight: 800;
+    color: #fef08a;
+    display: block;
+    line-height: 1.2;
+  }
+
+  .stat-label {
+    font-size: 8pt;
+    color: #e2e8f0;
+  }
+
+  /* Section Categories */
+  .category-title {
+    font-size: 14pt;
+    font-weight: 800;
+    color: #0f172a;
+    border-bottom: 2.5px solid #2563eb;
+    padding-bottom: 6px;
+    margin: 26px 0 14px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .category-count {
+    font-size: 8.5pt;
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 2px 9px;
+    border-radius: 12px;
+    border: 1px solid #bfdbfe;
+    font-weight: 700;
+  }
+
+  /* Page Item Card */
+  .page-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    margin-bottom: 15px;
+    page-break-inside: avoid;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    overflow: hidden;
+  }
+
+  .page-header {
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .page-name-group {
+    flex: 1;
+  }
+
+  .page-name {
+    font-size: 11pt;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .page-meta {
+    font-size: 8pt;
+    color: #475569;
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .page-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .badge-cat {
+    font-size: 7.5pt;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: #e0e7ff;
+    color: #3730a3;
+    white-space: nowrap;
+  }
+
+  .route-link {
+    direction: ltr;
+    color: #0284c7;
+    font-weight: 600;
+    text-decoration: none;
+    background: #f0f9ff;
+    padding: 1px 6px;
+    border-radius: 4px;
+    border: 1px solid #bae6fd;
+    font-size: 8pt;
+  }
+
+  .file-path {
+    direction: ltr;
+    color: #64748b;
+    font-size: 7.5pt;
+    background: #f1f5f9;
+    padding: 1px 5px;
+    border-radius: 4px;
+  }
+
+  /* Sequence Table */
+  .sections-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.5pt;
+  }
+
+  .sections-table th {
+    background: #f1f5f9;
+    color: #334155;
+    font-weight: 700;
+    padding: 6px 10px;
+    text-align: right;
+    border-bottom: 1px solid #cbd5e1;
+    font-size: 8pt;
+  }
+
+  .sections-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: top;
+  }
+
+  .sections-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .sections-table tr:nth-child(even) td {
+    background-color: #fafbfc;
+  }
+
+  .col-seq {
+    width: 32px;
+    font-weight: 800;
+    color: #2563eb;
+    text-align: center;
+  }
+
+  .col-comp {
+    width: 28%;
+    font-weight: 600;
+    color: #0f172a;
+    direction: ltr;
+    text-align: left;
+    font-size: 8pt;
+  }
+
+  .col-desc {
+    color: #334155;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  /* Table of Contents */
+  .toc-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    page-break-inside: avoid;
+  }
+
+  .toc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 20px;
+    font-size: 8.5pt;
+  }
+
+  .toc-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
+    border-bottom: 1px dotted #cbd5e1;
+    color: #1e293b;
+  }
+
+  .toc-item strong {
+    color: #1e40af;
+  }
+
+  /* Footer on printed pages */
+  .doc-footer {
+    text-align: center;
+    font-size: 8pt;
+    color: #94a3b8;
+    margin-top: 24px;
+    padding-top: 10px;
+    border-top: 1px solid #e2e8f0;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Document Header / Cover Banner -->
+  <div class="doc-header">
+    <span class="doc-badge">وثيقة معمارية وهيكلية شاملة</span>
+    <h1 class="doc-title">دليل روابط صفحات المشروع وترتيب السكاشن</h1>
+    <div class="doc-subtitle">College of Project Controls and Management (CPCM) — Full Sitemap & Page Sections Structure</div>
+    <p style="margin: 0; font-size: 8.5pt; color: #cbd5e1; max-width: 95%;">
+      تتضمن هذه الوثيقة حصراً تفصيلياً لجميع مسارات وروابط صفحات الموقع الإلكتروني للمشروع، والمسار البرمجي لكل صفحة، مع التسلسل الترتيبي لجميع السكاشن والمكونات (Components) من أعلى الصفحة إلى أسفلها، والدور الوظيفي والمحتوى المقدم في كل سكشن.
+    </p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-num">45+</span>
+        <span class="stat-label">رابط ومسار مفعّل</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">9</span>
+        <span class="stat-label">تصنيفات ومحاور رئيسية</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">10</span>
+        <span class="stat-label">مقالات معرفية تخصصية</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">تغطية لكامل المكونات</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Table of Contents -->
+  <div class="toc-box">
+    <div style="font-weight: 800; font-size: 10pt; color: #0f172a; margin-bottom: 8px;">فهرس الأقسام الرئيسية في هذا الدليل:</div>
+    <div class="toc-grid">
+      <div class="toc-item"><span>1. الصفحات الرئيسية والبرامج الأساسية</span> <strong>7 صفحات</strong></div>
+      <div class="toc-item"><span>2. مسارات بكالوريوس ضوابط المشاريع L6</span> <strong>6 صفحات</strong></div>
+      <div class="toc-item"><span>3. مسارات القطاعات الصناعية التخصصية</span> <strong>4 صفحات</strong></div>
+      <div class="toc-item"><span>4. صفحات الحملات التسويقية الموجهة</span> <strong>6 صفحات</strong></div>
+      <div class="toc-item"><span>5. أدوات التحويل التفاعلية والاستشارات</span> <strong>7 صفحات</strong></div>
+      <div class="toc-item"><span>6. مركز المعرفة والمقالات التخصصية</span> <strong>11 صفحة</strong></div>
+      <div class="toc-item"><span>7. صفحات الشكر وتأكيد التحويل</span> <strong>5 صفحات</strong></div>
+      <div class="toc-item"><span>8. الصفحات القانونية ومجلس الحوكمة</span> <strong>6 صفحات</strong></div>
+      <div class="toc-item"><span>9. لوحة التحكم الإدارية (Custom CMS)</span> <strong>صفحة متكاملة</strong></div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 1. الصفحات الرئيسية والبرامج الأساسية -->
+  <!-- ======================================================== -->
+  <div class="category-title">
+    <span>1. الصفحات الرئيسية والبرامج الأساسية (Core Pages)</span>
+    <span class="category-count">7 صفحات</span>
+  </div>
+
+  <!-- 1.1 Home Page -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">الصفحة الرئيسية — Home Page</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/</span></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/home/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Core Main Page</span>
+    </div>
+    <table class="sections-table">
+      <thead>
+        <tr>
+          <th class="col-seq">#</th>
+          <th class="col-comp">المكون (Component)</th>
+          <th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-seq">01</td>
+          <td class="col-comp">&lt;CompactHero /&gt;</td>
+          <td class="col-desc"><strong>الواجهة الرئيسية:</strong> عنوان جاذب للمهنيين والمؤسسات، إحصائيات الثقة (500+ مؤسسة، 2000+ متدرب، 95% إكمال)، وأزرار حجز الاستشارة واستعراض المسارات.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">02</td>
+          <td class="col-comp">&lt;PremiumMarquee /&gt;</td>
+          <td class="col-desc"><strong>شريط الاعتمادات والشركاء المتحرك:</strong> استعراض تخصصات ضوابط المشاريع والجهات الداعمة.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">03</td>
+          <td class="col-comp">&lt;ProgrammeCards /&gt;</td>
+          <td class="col-desc"><strong>بطاقات البرامج الرئيسية:</strong> Level 3, Level 4 (Associate PM), Level 6 (PCP Master), والمسار التجاري.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">04</td>
+          <td class="col-comp">&lt;SpecialistModules /&gt;</td>
+          <td class="col-desc"><strong>الوحدات التخصصية المستقلة:</strong> تمكين دراسة موضوع واحد محدد (Planning, Cost, Risk, PMO).</td>
+        </tr>
+        <tr>
+          <td class="col-seq">05</td>
+          <td class="col-comp">&lt;ProfessionalDirection /&gt;</td>
+          <td class="col-desc"><strong>توجيه المسار المهني:</strong> مساعدة المهني على مطابقة مسؤولياته الحالية بالبرنامج الأنسب.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">06</td>
+          <td class="col-comp">&lt;SectorPathways /&gt;</td>
+          <td class="col-desc"><strong>مسارات القطاعات:</strong> بوابات مخصصة لقطاعات الإنشاءات، الطاقة، الصناعة، والقطاع الحكومي.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">07</td>
+          <td class="col-comp">&lt;ExperienceDifferent /&gt;</td>
+          <td class="col-desc"><strong>تجربة الكلية المختلفة:</strong> التركيز على التعلم المطبق داخل مشاريع العمل الواقعية دون انقطاع.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">08</td>
+          <td class="col-comp">&lt;ProgrammeAccessSections /&gt;</td>
+          <td class="col-desc"><strong>مصفوفة التمويل والأهلية ودعم IPC:</strong> شروط التمويل الحكومي 100% عبر مخصصات الـ Levy واعتماد معهد IPC.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">09</td>
+          <td class="col-comp">&lt;PartnersPathways /&gt;</td>
+          <td class="col-desc"><strong>الشركاء والمسارات الأكاديمية:</strong> التعاون مع Kent Business College والمؤسسات المانحة.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">10</td>
+          <td class="col-comp">&lt;ForEmployers /&gt;</td>
+          <td class="col-desc"><strong>قسم أصحاب العمل:</strong> توضيح العائد الاستثماري على الشركات من تدريب الكوادر الحالية.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">11</td>
+          <td class="col-comp">&lt;MeetMentors /&gt;</td>
+          <td class="col-desc"><strong>نخبة المرشدين والأساتذة:</strong> استعراض السير الذاتية لكبار خبراء الصناعة والمشرفين.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">12</td>
+          <td class="col-comp">&lt;CoachingSupport /&gt;</td>
+          <td class="col-desc"><strong>خدمات التدريب الفردي (1-to-1):</strong> جلسات التوجيه الفردية والمتابعة الشهرية المستمرة.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">13</td>
+          <td class="col-comp">&lt;EventsConsultation /&gt;</td>
+          <td class="col-desc"><strong>الفعاليات والاستشارات:</strong> تسجيل الويبينارات الشهرية وحجز الجلسات الفردية.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">14</td>
+          <td class="col-comp">&lt;ProfessionalOutcomes /&gt;</td>
+          <td class="col-desc"><strong>مخرجات التطور الوظيفي:</strong> أرقام وإحصائيات الترقية المهنية واعترافات الصناعة بالخريجين.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">15</td>
+          <td class="col-comp">&lt;Testimonials /&gt;</td>
+          <td class="col-desc"><strong>آراء وقصص النجاح:</strong> شهادات حية من المتدربين ومدراء الموارد البشرية.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">16</td>
+          <td class="col-comp">&lt;Footer /&gt;</td>
+          <td class="col-desc"><strong>تذييل الموقع:</strong> القوائم السفلية، الروابط السريعة، حقوق الملكية، وشارات الاعتماد.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 1.2 Programmes Overview -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">دليل البرامج التدريبية — Programmes Overview</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/programmes</span></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/programmes/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Core Directory</span>
+    </div>
+    <table class="sections-table">
+      <thead>
+        <tr>
+          <th class="col-seq">#</th>
+          <th class="col-comp">المكون (Component)</th>
+          <th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">&lt;ProgrammesHero /&gt;</td><td class="col-desc">هيرو استعراض مظلة البرامج ومستوياتها (Level 3 إلى Level 7).</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">&lt;ProgrammeIntroduction /&gt;</td><td class="col-desc">مقدمة فلسفة التدريب المهني المتكامل وربط النظريات بالتطبيق العملي.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">&lt;ProgrammeFeatures /&gt;</td><td class="col-desc">مميزات برامج الكلية (دراسة أونلاين حية، بدون تكلفة عبر التمويل، إرشاد شخصي).</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">&lt;ProgrammeComparison /&gt;</td><td class="col-desc">جدول المقارنة الشامل للمستويات: المدة، المؤهل، المتطلبات، والشهادات المكتسبة.</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">&lt;ProgrammeVsModule /&gt;</td><td class="col-desc">مقارنة توضيحية بين دراسة برنامج تلمذة كامل أو دراسة موديول منفصل.</td></tr>
+        <tr><td class="col-seq">06</td><td class="col-comp">&lt;HowToChoose /&gt;</td><td class="col-desc">خطوات اختيار البرنامج الأنسب وفق المسمى الوظيفي وسنوات الخبرة.</td></tr>
+        <tr><td class="col-seq">07</td><td class="col-comp">&lt;WhyCollege /&gt;</td><td class="col-desc">نقاط قوة الكلية والاعتماد الأكاديمي بالتعاون مع Kent Business College.</td></tr>
+        <tr><td class="col-seq">08</td><td class="col-comp">&lt;EmployerSection /&gt;</td><td class="col-desc">حلول تمويل وتدريب فرق العمل في المؤسسات والشركات.</td></tr>
+        <tr><td class="col-seq">09</td><td class="col-comp">&lt;RecognitionSection /&gt;</td><td class="col-desc">الاعترافات الدولية والمحلية (APM, Institute of Project Controls, OTHM).</td></tr>
+        <tr><td class="col-seq">10</td><td class="col-comp">&lt;MeetMentors /&gt;</td><td class="col-desc">نخبة الأساتذة والمرشدين المشرفين على البرامج.</td></tr>
+        <tr><td class="col-seq">11</td><td class="col-comp">&lt;EventsSection /&gt;</td><td class="col-desc">الفعاليات القادمة والجلسات التعريفية المباشرة.</td></tr>
+        <tr><td class="col-seq">12</td><td class="col-comp">&lt;ProfessionalOutcomes /&gt;</td><td class="col-desc">مخرجات الخريجين في سوق العمل ونتائج التقييم النهائي (EPA).</td></tr>
+        <tr><td class="col-seq">13</td><td class="col-comp">&lt;ProgrammesFaq /&gt;</td><td class="col-desc">الأسئلة الأكثر تكراراً حول البرامج وشروط التقديم.</td></tr>
+        <tr><td class="col-seq">14</td><td class="col-comp">&lt;FinalCta /&gt;</td><td class="col-desc">دعوة ختامية لحجز موعد جلسة توجيه فردية.</td></tr>
+        <tr><td class="col-seq">15</td><td class="col-comp">&lt;Footer /&gt;</td><td class="col-desc">تذييل الصفحة وروابط التنقل.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 1.3 About Us -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">عن الكلية — About CPCM</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/about</span></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/about/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Institutional</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">&lt;CapabilityStrip /&gt;</td><td class="col-desc">شريط الكفاءات التأسيسية التي تبنيها الكلية في إدارة وتحكم المشاريع.</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">A focused home for project capability</td><td class="col-desc">رؤية الكلية كمركز متخصص حصرياً في ضوابط وحوكمة المشاريع.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">Development should change the work</td><td class="col-desc">فلسفة التدريب التطبيقي الذي ينعكس مباشرة على جودة العمل الميداني.</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">Connected view of project performance</td><td class="col-desc">الرؤية المترابطة بين الوقت والتكلفة والمخاطر والحوكمة.</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">From responsibility to evidence</td><td class="col-desc">كيف نساعد المتدرب على توثيق مسؤولياته وتحويلها إلى أدلة معتمدة.</td></tr>
+        <tr><td class="col-seq">06</td><td class="col-comp">Who CPCM supports</td><td class="col-desc">الشرائح المستفيدة: مهندسو التخطيط، مدراء العقود، قادة الـ PMO، والشركات.</td></tr>
+        <tr><td class="col-seq">07</td><td class="col-comp">Consultation CTA &amp; &lt;Footer /&gt;</td><td class="col-desc">دعوة لحجز استشارة لتحديد احتياج مؤسستك أو مسارك الشخصي + الفوتر.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 1.4 IPC -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">معهد ضوابط المشاريع — Institute of Project Controls (IPC)</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/ipc</span> <small>(بديل: /institute-of-project-controls)</small></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/ipc/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Institutional Body</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">Hero: Professional Confidence</td><td class="col-desc">تعريف بمعهد IPC كجهة مهنية مستقلة تعزز الثقة في إدارة المشاريع المعقدة.</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">#framework: Connected View</td><td class="col-desc">استعراض إطار عمل المعايير المهنية لضوابط المشاريع المعتمد لدى المعهد.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">Learning to recognised practice</td><td class="col-desc">تحويل الدراسة الأكاديمية إلى ممارسة مهنية معترف بها دولياً.</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">#membership: Recognition Levels</td><td class="col-desc">مستويات العضوية المهنية وشروط الحصول على كل رتبة.</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">FAQ Section</td><td class="col-desc">أسئلة شائعة حول عضوية IPC، الرسوم، والمنح المتاحة.</td></tr>
+        <tr><td class="col-seq">06</td><td class="col-comp">Connect Learning CTA &amp; &lt;Footer /&gt;</td><td class="col-desc">الدعوة للانضمام والاعتماد + فوتر الصفحة.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 1.5 APM Level 4 -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">مدير مشاريع مشارك — Associate Project Manager Level 4</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/associate-project-manager-level-4</span></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/apm-level-4/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Accredited Programme</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">#hero + &lt;HeroVisual /&gt;</td><td class="col-desc">واجهة دبلوم المستوى 4 المهني مع الرسوم التوضيحية لمسار الدبلوم.</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">&lt;PageSectionNav /&gt;</td><td class="col-desc">شريط التنقل السريع بين أقسام الصفحة (Overview, Pathway, Curriculum, etc.).</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">#overview: Cohort Dates</td><td class="col-desc">مواعيد انطلاق الدفعات السنوية (يناير · أبريل · سبتمبر) والمدة الزمنية (24 شهر).</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">#pathway &amp; #curriculum</td><td class="col-desc">الخطة الدراسية التفصيلية: إدارة النطاق، الميزانية، الجدولة، وإدارة أصحاب المصلحة.</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">#outputs + &lt;TickList /&gt;</td><td class="col-desc">المخرجات العملية وقائمة الأدلة التي يعدها المتدرب في عمله.</td></tr>
+        <tr><td class="col-seq">06</td><td class="col-comp">#learning: Delivery Model</td><td class="col-desc">نمط التعلم المرن عن بعد وورش العمل الحية والتوجيه الشهري.</td></tr>
+        <tr><td class="col-seq">07</td><td class="col-comp">&lt;MeetMentors /&gt; &amp; &lt;Coaching /&gt;</td><td class="col-desc">المرشدون المعتمدون وجلسات الكوتشينج الفردية.</td></tr>
+        <tr><td class="col-seq">08</td><td class="col-comp">&lt;ProgrammeAccessSections /&gt;</td><td class="col-desc">التمويل الحكومي بالكامل عبر ضريبة الـ Levy للأفراد والشركات في إنجلترا.</td></tr>
+        <tr><td class="col-seq">09</td><td class="col-comp">Beyond the apprenticeship</td><td class="col-desc">التأهيل للحصول على مؤهل APM PMQ والانتقال لاحقاً لمستوى Level 6.</td></tr>
+        <tr><td class="col-seq">10</td><td class="col-comp">#faq &amp; CTA &amp; &lt;Footer /&gt;</td><td class="col-desc">الأسئلة الشائعة + نموذج التقدم + الفوتر.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 1.6 Employers -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">بوابة أصحاب العمل والمؤسسات — Employers</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/employers</span></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/employers/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">B2B Corporate</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">#hero + &lt;PageSectionNav /&gt;</td><td class="col-desc">بناء كفاءات تحكم المشاريع داخل المؤسسة وشريط التنقل الخاص بالشركات.</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">#overview: Project Risk</td><td class="col-desc">كيف نساعد المؤسسات على معالجة تأخر المشاريع بنسبة 60% وتجاوز التكاليف.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">#employer-needs</td><td class="col-desc">تحليل الاحتياجات الفنية للفرق الهندسية وإدارات الـ PMO.</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">#how-it-works: On-the-job</td><td class="col-desc">آلية تدريب الموظفين دون إيقاف الإنتاج (التدريب مدمج بالمهام اليومية).</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">#progress &amp; #programmes</td><td class="col-desc">منظومة تقارير الشفافية لإدارات الموارد البشرية والبرامج المتاحة.</td></tr>
+        <tr><td class="col-seq">06</td><td class="col-comp">#funding: Levy Maximization</td><td class="col-desc">استرداد مخصصات Apprenticeship Levy بتمويل 100% أو 95% للشركات الصغيرة.</td></tr>
+        <tr><td class="col-seq">07</td><td class="col-comp">#responsibilities</td><td class="col-desc">تحديد مسؤوليات صاحب العمل والتزامات الكلية لضمان النجاح.</td></tr>
+        <tr><td class="col-seq">08</td><td class="col-comp">#stories &amp; #resources</td><td class="col-desc">قصص نجاح الشركاء وأدلة إرشادية لقادة الموارد البشرية.</td></tr>
+        <tr><td class="col-seq">09</td><td class="col-comp">#faq &amp; #consultation</td><td class="col-desc">الأسئلة الشائعة + نموذج حجز استشارة لفرق العمل + الفوتر.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 1.7 Apprentices -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">بوابة المتدربين والمهنيين — Apprentices</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/apprentices</span></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/apprentices/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">B2C Learners</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">Hero &amp; Stats Row</td><td class="col-desc">تطوير مسارك المهني مع البقاء في وظيفتك الحالية وبتمويل كامل دون أي ديون دراسية.</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">Career Journey Timeline</td><td class="col-desc">الخط الزمني للرحلة من الانضمام وحتى الاعتماد كمهني محترف.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">Benefits 3-Column Grid</td><td class="col-desc">مزايا البرنامج: مؤهل معتمد، راتب مدفوع، وتطبيق مباشر على مشاريعك.</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">Weekly Rhythm (Expectations)</td><td class="col-desc">توزيع الساعات الأسبوعية ويوم التدريب المخصص (20% Off-the-job training).</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">Support &amp; Service Cards</td><td class="col-desc">منظومة الرعاية الكاملة: الدعم الأكاديمي، الكوتشينج، والمتابعة المهنية.</td></tr>
+        <tr><td class="col-seq">06</td><td class="col-comp">Testimonials &amp; FAQ</td><td class="col-desc">شهادات المتدربين الحاليين والأسئلة الشائعة للمتقدمين.</td></tr>
+        <tr><td class="col-seq">07</td><td class="col-comp">Final CTA &amp; &lt;Footer /&gt;</td><td class="col-desc">دعوة للتسجيل وفحص الأهلية + الفوتر.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ======================================================== -->
+  <!-- 2. مسارات بكالوريوس ضوابط المشاريع L6 -->
+  <!-- ======================================================== -->
+  <div class="category-title">
+    <span>2. مسارات بكالوريوس ضوابط المشاريع L6 (Level 6 PCP Pathways)</span>
+    <span class="category-count">6 صفحات</span>
+  </div>
+
+  <!-- 2.1 PCP Master -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">الصفحة الرئيسية للمستوى 6 — PCP Master Landing</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/project-controls-professional-level-6</span> <small>(بديل: /pcp-master)</small></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/pcp-master/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Flagship Degree</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">#hero + &lt;PageSectionNav /&gt;</td><td class="col-desc">هيرو البرنامج المتكامل لبكالوريوس ضوابط المشاريع المهني المستوى 6 (27 شهر).</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">#register: Cohort Booking</td><td class="col-desc">نموذج حجز مقعد مباشر في الدفعة القادمة للمهنيين المؤهلين.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">#overview &amp; #audience</td><td class="col-desc">نظرة عامة والفئات المستهدفة: مهندسو الجدولة، مدراء التكاليف، أخصائيو الحوكمة.</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">#structure + ProfessionalPathwaysSection</td><td class="col-desc">استعراض المسارات المهنية المشتركة لاختيار التخصص المناسب.</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">#cohorts &amp; #outputs</td><td class="col-desc">مواعيد الدفعات وقائمة المخرجات والأدلة التي يقدمها المتدرب في عمله.</td></tr>
+        <tr><td class="col-seq">06</td><td class="col-comp">#delivery &amp; #workload</td><td class="col-desc">طريقة التدريس المباشرة أونلاين وتوزيع عبء العمل الأسبوعي بدون ضغط.</td></tr>
+        <tr><td class="col-seq">07</td><td class="col-comp">&lt;MeetMentors /&gt; &amp; &lt;Coaching /&gt;</td><td class="col-desc">فريق الأساتذة وقادة الصناعة المشرفين على التدريب.</td></tr>
+        <tr><td class="col-seq">08</td><td class="col-comp">&lt;ProgrammeAccessSections /&gt;</td><td class="col-desc">شروط القبول والتمويل الحكومي الكامل بنسبة 100% عبر ضريبة التلمذة.</td></tr>
+        <tr><td class="col-seq">09</td><td class="col-comp">#events &amp; &lt;PcpFaqSection /&gt;</td><td class="col-desc">الورش التعريفية المباشرة والأسئلة الشائعة + الفوتر.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 2.2 Strategic PCP -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">المسار الاستراتيجي — Strategic PCP Route</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/project-controls-professional/strategic-route</span> <small>(بديل: /strategic-pcp)</small></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/strategic-pcp/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Pathway Route</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">Hero + HeroVisual (Strategic)</td><td class="col-desc">هيرو مخصص للقيادة الاستراتيجية ومحاكاة الربط بين المشاريع والمحافظ الاستثمارية.</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">Programme Facts Ticker Strip</td><td class="col-desc">شريط الحقائق: المستوى 6، 6 وحدات معتمدة، 27 شهراً، تدريب تطبيقي أونلاين.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">#audience: Target Leaders</td><td class="col-desc">المستهدفون: قادة الـ PMO، مدراء المحافظ، مستشارو الحوكمة، ومسؤولو الفوائد.</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">&lt;ProgrammeAccessSections /&gt;</td><td class="col-desc">التمويل والأهلية الحكومية ودعم معهد IPC.</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">#overview: 6-Step Process</td><td class="col-desc">الخطوات الست للتأهيل الاستراتيجي من التشخيص الأولي وحتى الاعتماد.</td></tr>
+        <tr><td class="col-seq">06</td><td class="col-comp">#pathway &amp; #credits: 6 Credits</td><td class="col-desc">الوحدات الست تفصيلياً مع أكورديون تفاصيل كل وحدة ونواتجها الميدانية.</td></tr>
+        <tr><td class="col-seq">07</td><td class="col-comp">#capabilities &amp; SystemThinking</td><td class="col-desc">بناء التفكير المنظومي والربط بين القرارات التنفيذية ومؤشرات الأداء.</td></tr>
+        <tr><td class="col-seq">08</td><td class="col-comp">#outputs &amp; Decision Pillars</td><td class="col-desc">معايير الأدلة الممتازة وركائز اتخاذ القرار من الدليل إلى الإجراء العملي.</td></tr>
+        <tr><td class="col-seq">09</td><td class="col-comp">#learning, Mentors &amp; Coaching</td><td class="col-desc">دورة التعلم الخماسية ونخبة المرشدين والدعم الفردي.</td></tr>
+        <tr><td class="col-seq">10</td><td class="col-comp">For Employers &amp; Recognition</td><td class="col-desc">القيمة العائدة على المؤسسات وبناء منظومة حوكمة موثوقة.</td></tr>
+        <tr><td class="col-seq">11</td><td class="col-comp">#faq &amp; Final Call to Action</td><td class="col-desc">الأسئلة الشائعة وحجز جلسة توجيه استراتيجية + الفوتر.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 2.3 Operational PCP -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">المسار التشغيلي — Operational PCP Route</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/project-controls-professional/operational-route</span> <small>(بديل: /operational-pcp)</small></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/operational-pcp/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Pathway Route</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">Hero + HeroVisual (Integrated)</td><td class="col-desc">هيرو التحكم الميداني ومحاكاة لوحة القياس المتكاملة (Schedule, EVM, Early Warning).</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">Programme Facts &amp; Nav</td><td class="col-desc">الحقائق الأساسية وشريط التنقل السريع بين الأقسام.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">#audience: Planners &amp; Cost</td><td class="col-desc">المستهدفون: مهندسو الجدولة الزمنية، مراقبو التكاليف، ومحللو القيمة المكتسبة (EVM).</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">Credits &amp; Operational Capabilities</td><td class="col-desc">الوحدات الست المتخصصة في التتبع، التنبؤ بالانحرافات، وإدارة التغييرات.</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">Workplace Outputs &amp; Evidence</td><td class="col-desc">نماذج الجدولة، خطط الأساس، وتحديثات التكلفة المقدمة كأدلة واقعية.</td></tr>
+        <tr><td class="col-seq">06</td><td class="col-comp">Mentors, Employer Benefits &amp; FAQ</td><td class="col-desc">المرشدون وقيمة السيطرة على تكاليف المشاريع لأصحاب العمل + الفوتر.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 2.4 PMO & Governance -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">مسار مكاتب إدارة المشاريع والحوكمة — PMO &amp; Governance Route</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/project-controls-professional/pmo-governance-route</span> <small>(بديل: /pmo-pcp)</small></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/pmo-pcp/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Editorial Specialized</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">&lt;PmoEditorialHero /&gt;</td><td class="col-desc">واجهة صحفية وتحليلية رفيعة المستوى مخصصة لقيادات مكاتب الـ PMO.</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">Trust Strip &amp; Video Introduction</td><td class="col-desc">شريط الشركاء وبطاقة فيديو تشخيصية حول بناء مكتب PMO يثق به القادة التنفيذيون.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">&lt;PmoTestimonials /&gt; &amp; &lt;Events /&gt;</td><td class="col-desc">شهادات مدراء PMO معتمدين والماستركلاس القادمة في الحوكمة.</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">&lt;PmoJourney /&gt; &amp; Problem Analysis</td><td class="col-desc">رحلة تحول الـ PMO من مجرد مدخل بيانات إلى شريك قرار استراتيجي ومعالجة فجوات التقارير.</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">#apm: APM PMO Recognition</td><td class="col-desc">الاعتراف المهني من جمعية إدارة المشاريع البريطانية (APM).</td></tr>
+        <tr><td class="col-seq">06</td><td class="col-comp">&lt;MeetMentors /&gt; &amp; Employer Value</td><td class="col-desc">كبار خبراء الـ PMO وقيمة هذا التدريب في استدامة مشاريع المنظمة.</td></tr>
+        <tr><td class="col-seq">07</td><td class="col-comp">#apprenticeship &amp; Commercial</td><td class="col-desc">مقارنة بين المسار الممول بنسبة 100% عبر الـ Levy والمسار التجاري المباشر.</td></tr>
+        <tr><td class="col-seq">08</td><td class="col-comp">Insights, FAQ &amp; &lt;PmoEnquiryForm /&gt;</td><td class="col-desc">مقالات معرفية، أسئلة شائعة، ونموذج تقديم مخصص للـ PMO + الفوتر.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 2.5 Chartered PMO -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">مسار التأهيل للاعتماد المهني — Chartered PMO Pathway</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/project-controls-professional/chartered-pmo-pathway</span> <small>(بديل: /chartered-pmo-pathway)</small></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/chartered-pmo-pathway/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Chartered Preparation</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">Hero + HeroVisual (Chartered)</td><td class="col-desc">واجهة بناء سجل الأدلة المهنية (Professional Evidence Record) للجاهزية لـ ChPP.</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">Programme Facts &amp; Audience</td><td class="col-desc">المستهدفون: كبار مدراء المشاريع والـ PMO الساعين للحصول على لقب Chartered.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">6 Credits for Chartered Readiness</td><td class="col-desc">الوحدات التدريبية المخصصة لتغطية الكفايات الفنية الـ 10 لمعيار APM ChPP.</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">Accountability Transparency Note</td><td class="col-desc">توضيح شفاف ومهم: الكلية تؤهل وتدرب على الأدلة، بينما تمنح APM اللقب باستقلالية.</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">Mentors, Coaching &amp; FAQ</td><td class="col-desc">إشراف خبراء حاصلين على لقب ChPP + الأسئلة الشائعة + الفوتر.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 2.6 Strategic + Operational Combined -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">المسار المدمج (استراتيجي + تشغيلي) — Strategic + Operational Route</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/project-controls-professional/strategic-operational-route</span> <small>(بديل: /strategic-operational-pcp)</small></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/strategic-operational-pcp/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Combined Route</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">&lt;RouteHero /&gt; &amp; &lt;RouteNavbar /&gt;</td><td class="col-desc">الربط الشامل بين التحكم الميداني الدقيق وصنع القرار الاستراتيجي في الإدارة العليا.</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">&lt;RouteCapability /&gt; &amp; &lt;RouteProblems /&gt;</td><td class="col-desc">القدرات المزدوجة ومعالجة فجوة التواصل بين الموقع والإدارة التنفيذية.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">&lt;RouteProcess /&gt; &amp; &lt;RouteStats /&gt;</td><td class="col-desc">منهجية العمل الموحدة وإحصائيات تحسين الأداء.</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">&lt;RouteChoose /&gt; &amp; &lt;RouteWhoFor /&gt;</td><td class="col-desc">لمن يصلح هذا المسار ومبررات اختياره للمؤسسات الكبرى.</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">&lt;RouteDevelop /&gt; &amp; &lt;Testimonials /&gt;</td><td class="col-desc">مراحل التدريب وشهادات المهنيين.</td></tr>
+        <tr><td class="col-seq">06</td><td class="col-comp">Forms: Eligibility &amp; Consultation</td><td class="col-desc">نموذج فحص الأهلية السريع ونموذج حجز الاستشارة المباشرة + الفوتر.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ======================================================== -->
+  <!-- 3. مسارات القطاعات الصناعية التخصصية -->
+  <!-- ======================================================== -->
+  <div class="category-title">
+    <span>3. مسارات القطاعات الصناعية التخصصية (Sector Pathways)</span>
+    <span class="category-count">4 صفحات</span>
+  </div>
+
+  <p style="margin-top: -6px; font-size: 8.5pt; color: #64748b; margin-bottom: 12px;">
+    تعتمد هذه المسارات الأربعة هيكلية متماثلة ومصممة خصيصاً لتناسب التحديات والبيئات التنظيمية لكل صناعة:
+  </p>
+
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">هيكل مسارات القطاعات (الإنشاءات، الطاقة، الصناعة، القطاع العام)</h3>
+        <div class="page-meta">
+          <span><strong>الإنشاءات:</strong> <span class="route-link">/operational-pcp-construction</span></span>
+          <span><strong>الهندسة والفضاء:</strong> <span class="route-link">/operational-pcp-engineering</span></span>
+          <span><strong>الطاقة والغاز:</strong> <span class="route-link">/operational-pcp-energy</span></span>
+          <span><strong>القطاع الحكومي:</strong> <span class="route-link">/operational-pcp-public-sector</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Industry Sectors</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">&lt;SectorHero /&gt;</td><td class="col-desc">واجهة بصرية مستهدفة لتحديات القطاع (عقود NEC في الإنشاءات، سلاسل التوريد في الصناعة، إلخ).</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">&lt;RouteNavbar /&gt;</td><td class="col-desc">شريط تنقل سريع لأقسام الصفحة لتسهيل التصفح للشركات والمهندسين.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">&lt;RouteCapability /&gt;</td><td class="col-desc">الكفاءات الحرجة المحددة المطلوبة في هذا القطاع لضبط المشروعات بنجاح.</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">&lt;RouteProblems /&gt;</td><td class="col-desc">أبرز أسباب التعثر وتأخر الجداول الزمنية وتجاوز الميزانيات الشائعة في القطاع.</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">&lt;RouteProcess /&gt; &amp; &lt;RouteStats /&gt;</td><td class="col-desc">المنهجية القياسية المتبعة لمعالجة الانحرافات وإحصائيات نجاح التطبيق.</td></tr>
+        <tr><td class="col-seq">06</td><td class="col-comp">&lt;RouteChoose /&gt; &amp; &lt;RouteWhoFor /&gt;</td><td class="col-desc">مبررات اختيار هذا التخصص والوظائف المستهدفة في شركات هذا القطاع.</td></tr>
+        <tr><td class="col-seq">07</td><td class="col-comp">&lt;RouteDevelop /&gt; &amp; &lt;Testimonials /&gt;</td><td class="col-desc">خطوات البرنامج التطبيقي وآراء مهندسين من كبرى شركات نفس القطاع.</td></tr>
+        <tr><td class="col-seq">08</td><td class="col-comp">&lt;EventsSection /&gt; &amp; &lt;RouteFinalCta /&gt;</td><td class="col-desc">ورش العمل والماستركلاس التخصصية القادمة والدعوة الختامية للتقديم.</td></tr>
+        <tr><td class="col-seq">09</td><td class="col-comp">&lt;RouteEligibilityForm /&gt;</td><td class="col-desc">نموذج فحص الأهلية المخصص لمهندسي القطاع للتأكد من انطباق شروط التمويل.</td></tr>
+        <tr><td class="col-seq">10</td><td class="col-comp">&lt;RouteConsultationForm /&gt;</td><td class="col-desc">نموذج حجز استشارة فنية مسبقة مع مستشار البرنامج.</td></tr>
+        <tr><td class="col-seq">11</td><td class="col-comp">&lt;RouteFaq /&gt; &amp; &lt;Footer /&gt;</td><td class="col-desc">الأسئلة الشائعة الخاصة بهذا القطاع وتذييل الصفحة مع زر التحويل العائم.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 4. صفحات الحملات الإعلانية والتسويقية -->
+  <!-- ======================================================== -->
+  <div class="category-title">
+    <span>4. صفحات الحملات الإعلانية والتسويقية (Campaign Landing Pages)</span>
+    <span class="category-count">6 صفحات</span>
+  </div>
+
+  <p style="margin-top: -6px; font-size: 8.5pt; color: #64748b; margin-bottom: 12px;">
+    صفحات هبوط عالية التحويل (High-converting CRO Pages) مخصصة لحملات LinkedIn و Google Ads وموجهة لشرائح محددة:
+  </p>
+
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">هيكل صفحات الحملات الست (Campaigns Architecture)</h3>
+        <div class="page-meta">
+          <span><strong>HR &amp; Employers:</strong> <span class="route-link">/campaign/hr-employer</span></span>
+          <span><strong>Head of PMO:</strong> <span class="route-link">/campaign/head-of-pmo</span></span>
+          <span><strong>Commercial:</strong> <span class="route-link">/commercial-project-controls-route</span></span>
+          <span><strong>قطاعات الحملات:</strong> <span class="route-link">/campaign/construction</span> | <span class="route-link">/campaign/energy</span> | <span class="route-link">/campaign/public-sector</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">CRO Landing</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">&lt;PcpHero /&gt;</td><td class="col-desc">هيرو مركز مع رسالة تسويقية واضحة وزر مباشر لتحميل الدليل أو حجز مقعد.</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">&lt;PcpFundingStrip /&gt;</td><td class="col-desc">شريط الإشارة للتمويل بنسبة 100% عبر مخصصات الـ Apprenticeship Levy للمؤسسات المؤهلة.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">&lt;PcpPainPointsGrid /&gt;</td><td class="col-desc">شبكة من 4 تحديات ومشاكل يعاني منها متخذ القرار (نقص الكفاءات، نزيف التكاليف، تضارب التقارير).</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">&lt;CampaignTransformation /&gt;</td><td class="col-desc">التحول الجذري في قدرات المؤسسة وفريق العمل قبل وبعد الانخراط في البرنامج.</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">&lt;CampaignRouteFit /&gt;</td><td class="col-desc">كيف يتلاءم البرنامج مع بيئة العمل والمهام الفعلية دون تعطيل الإنجاز اليومي.</td></tr>
+        <tr><td class="col-seq">06</td><td class="col-comp">&lt;CapabilityTracks /&gt;</td><td class="col-desc">مسارات الكفاءة الست الأساسية المكتسبة في البرنامج.</td></tr>
+        <tr><td class="col-seq">07</td><td class="col-comp">&lt;BenefitCard /&gt; (3 Cards)</td><td class="col-desc">بطاقات الفوائد المباشرة للمؤسسة (توفير الميزانية، وضوح الرؤية، استبقاء المواهب).</td></tr>
+        <tr><td class="col-seq">08</td><td class="col-comp">Testimonial &amp; &lt;Events /&gt;</td><td class="col-desc">شهادة موثوقة من قيادي في نفس الشريحة ودعوة لحضور الويبينار القادم.</td></tr>
+        <tr><td class="col-seq">09</td><td class="col-comp">#lead-form + &lt;CampaignLeadForm /&gt;</td><td class="col-desc"><strong>نموذج اقتناص الـ Leads الأساسي:</strong> جمع بيانات الاسم، البريد، الشركة، والمسمى الوظيفي.</td></tr>
+        <tr><td class="col-seq">10</td><td class="col-comp">&lt;PcpFaqSection /&gt; &amp; &lt;Footer /&gt;</td><td class="col-desc">إزالة الشكوك والتردد عبر الأسئلة الشائعة + إشعار الامتثال التنظيمي والفوتر.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ======================================================== -->
+  <!-- 5. أدوات التحويل التفاعلية والاستشارات -->
+  <!-- ======================================================== -->
+  <div class="category-title">
+    <span>5. أدوات التحويل التفاعلية والاستشارات (Interactive Tools &amp; Conversion)</span>
+    <span class="category-count">6 صفحات</span>
+  </div>
+
+  <!-- 5.1 Eligibility Checker -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">أداة فحص الأهلية الحكومية للتمويل — Eligibility Checker</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/apprenticeship-eligibility-checker</span></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/apprenticeship-eligibility-checker/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Funding Checker</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">&lt;EligibilityCheckerFlow /&gt;</td><td class="col-desc">معالج متعدد الخطوات للتحقق من شروط الإقامة (UK/EEA لمدة 3 سنوات) وساعات العمل في إنجلترا.</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">&lt;PcpFaqSection /&gt;</td><td class="col-desc">إجابات الأسئلة المتكررة حول الأهلية والمؤهلات السابقة.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">"Still not sure?" CTA &amp; &lt;Footer /&gt;</td><td class="col-desc">دعوة للتواصل مع فريق القبول للمراجعة اليدوية + الفوتر.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 5.3 Other Tools Table -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">صفحات التواصل وحجز الجلسات والفعاليات</h3>
+      </div>
+      <span class="badge-cat">Conversion Endpoints</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">الصفحة</th><th class="col-comp">الرابط</th><th class="col-desc">المحتوى والسكاشن الرئيسية</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>حجز جلسة استشارية</strong></td>
+          <td><span class="route-link">/book-a-session</span></td>
+          <td>نموذج حجز استشارة فردية عبر الإنترنت مع مستشار أكاديمي لاختيار المسار ومراجعة الأهلية.</td>
+        </tr>
+        <tr>
+          <td><strong>اتصل بنا</strong></td>
+          <td><span class="route-link">/contact</span></td>
+          <td>بيانات الاتصال المباشرة + نموذج الاستفسارات العامة والمؤسسية (#enquiry-form) + سكشن ما بعد التواصل.</td>
+        </tr>
+        <tr>
+          <td><strong>الأسئلة الشائعة</strong></td>
+          <td><span class="route-link">/faq</span></td>
+          <td>مجمع الأسئلة الشائعة وتصنيفاتها (&lt;HomeFaq /&gt;) ومحرك بحث داخلي بالأسئلة وسكشن المساعدة المباشرة.</td>
+        </tr>
+        <tr>
+          <td><strong>قصص وآراء الخريجين</strong></td>
+          <td><span class="route-link">/testimonials</span></td>
+          <td>سكشن مخرجات التعلم الواقعية (&lt;ProfessionalOutcomes /&gt;) وشهادات مسؤولي المشروعات في الشركات.</td>
+        </tr>
+        <tr>
+          <td><strong>الفعاليات والويبينار</strong></td>
+          <td><span class="route-link">/events</span></td>
+          <td>قائمة الفعاليات القادمة وبطاقات التسجيل المباشر في جلسات الأسئلة والأجوبة الشهرية.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 6. مركز المعرفة والمقالات التخصصية -->
+  <!-- ======================================================== -->
+  <div class="category-title">
+    <span>6. مركز المعرفة والمقالات التخصصية (Knowledge Hub &amp; Articles)</span>
+    <span class="category-count">11 صفحة</span>
+  </div>
+
+  <!-- 6.1 Hub Index -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">فهرس مركز المعرفة الرئيسي — Knowledge Hub</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/knowledge-hub</span> <small>(بديل: /articles)</small></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/knowledge-hub/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Content Hub</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">&lt;HeroSection /&gt; &amp; &lt;Breadcrumbs /&gt;</td><td class="col-desc">واجهة مكتبة المقالات والبحث التخصصي لمجتمع ضوابط المشاريع.</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">Categories Section (&lt;CategoryCard /&gt;)</td><td class="col-desc">تصنيفات الأدلة: التمويل، الحوكمة، المقارنات المهنية، جاهزية الاعتماد.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">Featured Articles Section</td><td class="col-desc">المقالات الأكثر قراءة وتأثيراً للمهنيين وأصحاب العمل.</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">#funding-guides</td><td class="col-desc">أدلة الاستفادة من مخصصات ضريبة التلمذة وتمويل التدريب.</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">#route-comparisons</td><td class="col-desc">مقارنات تفصيلية ومحايدة بين المسارات والشهادات العالمية (PCP vs PMP).</td></tr>
+        <tr><td class="col-seq">06</td><td class="col-comp">#sector-guides</td><td class="col-desc">أدلة قطاعية لإدارة المخاطر في الإنشاءات والطاقة والبنية التحتية.</td></tr>
+        <tr><td class="col-seq">07</td><td class="col-comp">#chpp-readiness &amp; #employer-guides</td><td class="col-desc">أدلة الحصول على لقب Chartered وأدلة متخذي القرار في الموارد البشرية.</td></tr>
+        <tr><td class="col-seq">08</td><td class="col-comp">&lt;PcpComplianceNote /&gt; &amp; &lt;Footer /&gt;</td><td class="col-desc">إشعار الامتثال والفوتر والزر العائم.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 6.2 10 Articles Table -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">قائمة المقالات التخصصية العشرة (Knowledge Hub Articles)</h3>
+        <p style="margin: 3px 0 0 0; font-size: 8pt; color: #64748b;">
+          الهيكل الموحد لكل مقال: &lt;ArticleLayout&gt; (المحتوى + الفهرس) &larr; &lt;ArticleCta&gt; &larr; &lt;PcpFaqSection&gt; &larr; &lt;RelatedArticles&gt; &larr; &lt;Footer&gt;
+        </p>
+      </div>
+      <span class="badge-cat">10 Articles</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">عنوان المقال</th><th class="col-desc">الرابط المباشر للمقال (Route)</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td>ما هي تلمذة ضوابط المشاريع المستوى 6؟</td><td><span class="route-link">/knowledge-hub/what-is-pcp-apprenticeship</span></td></tr>
+        <tr><td class="col-seq">02</td><td>دليل أصحاب العمل للحصول على تمويل كامل 100%</td><td><span class="route-link">/knowledge-hub/funded-pcp-employer-guide</span></td></tr>
+        <tr><td class="col-seq">03</td><td>مقارنة موضوعية: بكالوريوس PCP L6 مقابل شهادة PMP</td><td><span class="route-link">/knowledge-hub/pcp-vs-pmp</span></td></tr>
+        <tr><td class="col-seq">04</td><td>دعم الجاهزية للحصول على لقب APM ChPP</td><td><span class="route-link">/knowledge-hub/apm-chpp-readiness</span></td></tr>
+        <tr><td class="col-seq">05</td><td>المسار الاستراتيجي مقابل المسار التشغيلي: كيف تختار؟</td><td><span class="route-link">/knowledge-hub/strategic-vs-operational</span></td></tr>
+        <tr><td class="col-seq">06</td><td>تدريب ضوابط المشاريع في قطاع الإنشاءات والبنية التحتية</td><td><span class="route-link">/knowledge-hub/construction-training</span></td></tr>
+        <tr><td class="col-seq">07</td><td>تدريب ضوابط المشاريع في قطاع الطاقة والحياد الصفري</td><td><span class="route-link">/knowledge-hub/energy-training</span></td></tr>
+        <tr><td class="col-seq">08</td><td>تدريب حوكمة وإدارة مكاتب الـ PMO</td><td><span class="route-link">/knowledge-hub/pmo-governance-training</span></td></tr>
+        <tr><td class="col-seq">09</td><td>كيف تستفيد المؤسسات من تمويل الـ Apprenticeship؟</td><td><span class="route-link">/knowledge-hub/employer-apprenticeship-funding</span></td></tr>
+        <tr><td class="col-seq">10</td><td>المسارات التجارية المباشرة (Commercial Routes)</td><td><span class="route-link">/knowledge-hub/commercial-routes-explained</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ======================================================== -->
+  <!-- 7. صفحات الشكر وتأكيد التحويل -->
+  <!-- ======================================================== -->
+  <div class="category-title">
+    <span>7. صفحات الشكر وتأكيد التحويل (Thank-You Pages)</span>
+    <span class="category-count">5 صفحات</span>
+  </div>
+
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">صفحات التوجيه بعد إتمام النماذج (Conversion Confirmation)</h3>
+      </div>
+      <span class="badge-cat">Post-Conversion</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">الصفحة والهدف</th><th class="col-desc">الرابط والرسالة المعروضة</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="col-seq">01</td>
+          <td><strong>تأكيد فحص الأهلية</strong></td>
+          <td><span class="route-link">/thank-you/eligibility</span><br>رسالة تأكيد اكتمال مراجعة الأهلية والتواصل من المستشار خلال 24 ساعة.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">02</td>
+          <td><strong>تأكيد حجز الاستشارة</strong></td>
+          <td><span class="route-link">/thank-you/consultation</span><br>تأكيد موعد الجلسة الاستشارية ورابط التقويم ودعوة لتحضير أسئلة المسار.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">03</td>
+          <td><strong>تأكيد التسجيل في الويبينار</strong></td>
+          <td><span class="route-link">/thank-you/eventbrite</span><br>تأكيد حجز المقعد في ورشة العمل القادمة وإرسال رابط البث المباشر.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">04</td>
+          <td><strong>تأكيد طلب كتيب المسار التجاري</strong></td>
+          <td><span class="route-link">/thank-you/commercial</span><br>تأكيد إرسال الكتيب والأسعار الخاصة بالشركات غير المشمولة بالـ Levy.</td>
+        </tr>
+        <tr>
+          <td class="col-seq">05</td>
+          <td><strong>تأكيد تحميل الدليل الإرشادي</strong></td>
+          <td><span class="route-link">/thank-you/guide</span><br>رابط التنزيل المباشر للدليل وخطوات المتابعة مع فريق القبول.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 8. الصفحات القانونية ومجلس الحوكمة -->
+  <!-- ======================================================== -->
+  <div class="category-title">
+    <span>8. الصفحات القانونية ومجلس الحوكمة (Legal &amp; Governance)</span>
+    <span class="category-count">6 صفحات</span>
+  </div>
+
+  <!-- 8.1 Governance Board -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">مجلس الحوكمة وإبداء الاهتمام — Governance Board</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/governance-board</span></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/pages/governance-board/page.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Institutional Governance</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">المكون / السكشن</th><th class="col-desc">وصف المحتوى والدور الوظيفي للسكشن</th></tr></thead>
+      <tbody>
+        <tr><td class="col-seq">01</td><td class="col-comp">#hero: Strategic Excellence</td><td class="col-desc">تعريف بمجلس الحوكمة كهيئة استراتيجية مستقلة تضمن التميز الأكاديمي والمهني.</td></tr>
+        <tr><td class="col-seq">02</td><td class="col-comp">#about: Institutional Role</td><td class="col-desc">أهداف المجلس واختصاصاته في مراقبة جودة البرامج وتلبية احتياجات الصناعة.</td></tr>
+        <tr><td class="col-seq">03</td><td class="col-comp">#why-join: Impact</td><td class="col-desc">لماذا تنضم لعضوية المجلس والمساهمة في صياغة مستقبل مهنة ضوابط المشاريع.</td></tr>
+        <tr><td class="col-seq">04</td><td class="col-comp">#responsibilities &amp; #commitment</td><td class="col-desc">المسؤوليات الملقاة على عاتق الأعضاء وحجم الالتزام الزمني المطلوب سنوياً.</td></tr>
+        <tr><td class="col-seq">05</td><td class="col-comp">#expertise &amp; #profile</td><td class="col-desc">مجالات الخبرة المطلوبة والملف الشخصي والمهني للمرشح المثالي.</td></tr>
+        <tr><td class="col-seq">06</td><td class="col-comp">#principles: Governance Code</td><td class="col-desc">مبادئ الحوكمة والنزاهة والشفافية المؤسسية.</td></tr>
+        <tr><td class="col-seq">07</td><td class="col-comp">#eoi-form: Expression of Interest</td><td class="col-desc"><strong>استمارة التقديم:</strong> إرسال طلب إبداء الاهتمام والانضمام للمجلس + الفوتر.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 8.2 Other Legal -->
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">الصفحات والسياسات القانونية (Legal Policies)</h3>
+      </div>
+      <span class="badge-cat">Compliance</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">الصفحة</th><th class="col-comp">الرابط</th><th class="col-desc">الملف والمحتوى القانوني</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>اتفاقية صاحب العمل</strong></td>
+          <td><span class="route-link">/employer-agreement</span></td>
+          <td>شروط العقد والالتزام المتبادل بين الكلية وجهة العمل لبرامج الـ Apprenticeship.</td>
+        </tr>
+        <tr>
+          <td><strong>سياسة الخصوصية</strong></td>
+          <td><span class="route-link">/privacy</span></td>
+          <td>الامتثال لمعايير GDPR البريطانية وحماية بيانات المتقدمين والمتدربين.</td>
+        </tr>
+        <tr>
+          <td><strong>الشروط والأحكام</strong></td>
+          <td><span class="route-link">/terms</span></td>
+          <td>شروط استخدام المنصة والخدمات التدريبية المعتمدة.</td>
+        </tr>
+        <tr>
+          <td><strong>إمكانية الوصول (A11y)</strong></td>
+          <td><span class="route-link">/accessibility</span></td>
+          <td>بيان التوافق مع معايير WCAG 2.1 AA لضمان سهولة استخدام الموقع لجميع الفئات.</td>
+        </tr>
+        <tr>
+          <td><strong>ملفات تعريف الارتباط</strong></td>
+          <td><span class="route-link">/cookies</span></td>
+          <td>سياسة استخدام الكوكيز والتتبع الإحصائي والتسويقي.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 9. لوحة التحكم الإدارية -->
+  <!-- ======================================================== -->
+  <div class="category-title">
+    <span>9. لوحة التحكم الإدارية (Custom CMS Admin Dashboard)</span>
+    <span class="category-count">نظام إدارة مخصص</span>
+  </div>
+
+  <div class="page-card">
+    <div class="page-header">
+      <div class="page-name-group">
+        <h3 class="page-name">لوحة التحكم التفاعلية — CPCM Dashboard</h3>
+        <div class="page-meta">
+          <span><strong>الرابط:</strong> <span class="route-link">/dashboard</span> <small>(بديل: /dashboard/home)</small></span>
+          <span><strong>تسجيل الدخول:</strong> <span class="route-link">/dashboard/login</span></span>
+          <span><strong>الملف:</strong> <span class="file-path">frontend/src/dashboard/DashboardApp.tsx</span></span>
+        </div>
+      </div>
+      <span class="badge-cat">Management CMS</span>
+    </div>
+    <table class="sections-table">
+      <thead><tr><th class="col-seq">#</th><th class="col-comp">القسم الإداري</th><th class="col-desc">الوظيفة وإمكانات التحكم</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="col-seq">01</td>
+          <td><strong>الشريط الجانبي (Sidebar)</strong></td>
+          <td>
+            • رابط <strong>Home Page</strong> المباشر لتعديل الصفحة الرئيسية.<br>
+            • زر <strong>View Live Website</strong> لفتح الموقع المباشر في تبويب جديد للمعينة.<br>
+            • زر تسجيل الخروج <strong>Log out</strong> وإنهاء الجلسة الآمنة.
+          </td>
+        </tr>
+        <tr>
+          <td class="col-seq">02</td>
+          <td><strong>محرر تفاصيل الصفحة والـ SEO</strong></td>
+          <td>
+            • تعديل عنوان الصفحة الأساسي (<code>Title</code>).<br>
+            • تعديل الرابط المختصر (<code>Slug</code>: /home).<br>
+            • تعديل عنوان محركات البحث (<code>SEO Title</code>).<br>
+            • تبديل حالة النشر (<code>Status</code>: Draft / Published).<br>
+            • تعديل وصف محركات البحث (<code>SEO Description</code>).<br>
+            • زر حفظ البيانات الفورية (<code>Save Details</code>) مع إشعارات النجاح.
+          </td>
+        </tr>
+        <tr>
+          <td class="col-seq">03</td>
+          <td><strong>محرر أقسام صفحة الهوم (17 قسماً بالتسلسل)</strong></td>
+          <td>
+            <strong>يتيح التحكم الكامل في كل سكشن من سكاشن الهوم الـ 17:</strong><br>
+            1. <code>Homepage hero</code> — 2. <code>Discipline marquee</code> — 3. <code>Programme pathways</code><br>
+            4. <code>IPC scholarships &amp; bursaries</code> — 5. <code>Mentor team</code> — 6. <code>For employers</code><br>
+            7. <code>Specialist modules</code> — 8. <code>Professional experience</code> — 9. <code>For professionals</code><br>
+            10. <code>Sector pathways</code> — 11. <code>Learner voice</code> — 12. <code>Recognition pathways</code><br>
+            13. <code>Events &amp; consultation</code> — 14. <code>Knowledge hub insights</code> — 15. <code>Homepage enquiry</code><br>
+            16. <code>Frequently asked questions</code> — 17. <code>Closing call to action</code>.<br><br>
+            • تعديل اسم السكشن التوضيحي (<code>Section Label</code>).<br>
+            • تعديل الترتيب الرقمي (<code>Order</code>).<br>
+            • إظهار أو إخفاء السكشن على الموقع (<code>Visible Checkbox</code>).<br>
+            • تعديل محتوى السكشن كاملاً عبر محرر الـ JSON التفاعلي مع التحقق من صحة المدخلات.<br>
+            • زر حفظ مستقل لكل سكشن (<code>Save Section</code>) وزر حذف السكشن أو إضافة سكشن جديد (<code>+ Add Section</code>).
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="doc-footer">
+    تم إنشاء وتوثيق هذا الدليل آلياً لمشروع College of Project Controls and Management — سبتمبر 2026
+  </div>
+
+</body>
+</html>

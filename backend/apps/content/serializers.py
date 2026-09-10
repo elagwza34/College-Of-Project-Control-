@@ -1,6 +1,98 @@
 from rest_framework import serializers
 
-from .models import MenuItem, NavigationMenu, Page, PageSection, SiteSettings
+from .models import Coach, Enquiry, Event, MentorProfile, MenuItem, NavigationMenu, Page, PageSection, Partner, ProfessionalCredential, Sector, SiteSettings
+
+
+class MentorPublicSerializer(serializers.ModelSerializer):
+    initials = serializers.CharField(source="display_initials", read_only=True)
+    role = serializers.CharField(source="role_title")
+    specialties = serializers.SerializerMethodField()
+    body = serializers.CharField(source="biography")
+    imageUrl = serializers.SerializerMethodField()
+    linkedinUrl = serializers.CharField(source="linkedin_url")
+
+    class Meta:
+        model = MentorProfile
+        fields = ("id", "initials", "name", "role", "affiliation", "specialties", "body", "imageUrl", "linkedinUrl")
+
+    def get_specialties(self, obj):
+        return [value.strip() for value in obj.specialties.split(",") if value.strip()]
+
+    def get_imageUrl(self, obj):
+        if not obj.image:
+            return obj.image_url or ""
+        request = self.context.get("request")
+        return request.build_absolute_uri(obj.image.url) if request else obj.image.url
+
+
+class CoachPublicSerializer(serializers.ModelSerializer):
+    initials = serializers.CharField(source="display_initials", read_only=True)
+    imageUrl = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Coach
+        fields = ("id", "initials", "name", "qualification", "focus", "imageUrl")
+
+    def get_imageUrl(self, obj):
+        if not obj.image:
+            return ""
+        request = self.context.get("request")
+        return request.build_absolute_uri(obj.image.url) if request else obj.image.url
+
+
+class PartnerPublicSerializer(serializers.ModelSerializer):
+    imageUrl = serializers.SerializerMethodField()
+    linkUrl = serializers.CharField(source="link_url")
+
+    class Meta:
+        model = Partner
+        fields = ("id", "name", "imageUrl", "linkUrl")
+
+    def get_imageUrl(self, obj):
+        if not obj.logo:
+            return obj.logo_url or ""
+        request = self.context.get("request")
+        return request.build_absolute_uri(obj.logo.url) if request else obj.logo.url
+
+
+class ProfessionalCredentialPublicSerializer(serializers.ModelSerializer):
+    imageUrl = serializers.SerializerMethodField()
+    linkUrl = serializers.CharField(source="link_url")
+
+    class Meta:
+        model = ProfessionalCredential
+        fields = ("id", "name", "role", "imageUrl", "linkUrl")
+
+    def get_imageUrl(self, obj):
+        if not obj.image:
+            return obj.image_url or ""
+        request = self.context.get("request")
+        return request.build_absolute_uri(obj.image.url) if request else obj.image.url
+
+
+class SectorPublicSerializer(serializers.ModelSerializer):
+    imageUrl = serializers.SerializerMethodField()
+    linkUrl = serializers.CharField(source="link_url")
+
+    class Meta:
+        model = Sector
+        fields = ("id", "slug", "title", "description", "icon", "imageUrl", "linkUrl")
+
+    def get_imageUrl(self, obj):
+        if not obj.image:
+            return obj.image_url or ""
+        request = self.context.get("request")
+        return request.build_absolute_uri(obj.image.url) if request else obj.image.url
+
+
+class EventPublicSerializer(serializers.ModelSerializer):
+    format = serializers.CharField(source="get_format_display")
+    ctaLabel = serializers.CharField(source="cta_label")
+    ctaHref = serializers.CharField(source="cta_href")
+
+    class Meta:
+        model = Event
+        fields = ("id", "title", "category", "format", "cadence", "description", "ctaLabel", "ctaHref")
 
 
 class MenuItemSerializer(serializers.ModelSerializer):
@@ -58,10 +150,20 @@ class PageSectionSerializer(serializers.ModelSerializer):
     sectionTypeLabel = serializers.CharField(source="get_section_type_display")
     anchorId = serializers.CharField(source="anchor_id")
     styleVariant = serializers.CharField(source="style_variant")
+    content = serializers.SerializerMethodField()
 
     class Meta:
         model = PageSection
         fields = ("id", "type", "sectionTypeLabel", "anchorId", "styleVariant", "content")
+
+    def get_content(self, obj):
+        content = dict(obj.content)
+        if obj.style_variant != "mentors":
+            return content
+
+        mentors = MentorProfile.objects.filter(is_active=True).order_by("order", "id")
+        content["items"] = MentorPublicSerializer(mentors, many=True, context=self.context).data
+        return content
 
 
 class PageSerializer(serializers.ModelSerializer):
@@ -83,3 +185,18 @@ class PageSerializer(serializers.ModelSerializer):
     def get_sections(self, obj):
         sections = obj.sections.filter(is_enabled=True).order_by("order", "id")
         return PageSectionSerializer(sections, many=True).data
+
+
+class EnquirySerializer(serializers.ModelSerializer):
+    organisation = serializers.CharField(required=False, allow_blank=True)
+    roleTitle = serializers.CharField(source="role_title", required=False, allow_blank=True)
+    enquiryType = serializers.CharField(source="enquiry_type", required=False, allow_blank=True)
+    sourcePath = serializers.CharField(source="source_path", required=False, allow_blank=True)
+
+    class Meta:
+        model = Enquiry
+        fields = (
+            "id", "name", "email", "phone", "organisation", "roleTitle",
+            "enquiryType", "message", "sourcePath", "created_at",
+        )
+        read_only_fields = ("id", "created_at")

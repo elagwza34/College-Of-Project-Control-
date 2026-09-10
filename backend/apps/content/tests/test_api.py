@@ -1,7 +1,7 @@
 from django.urls import reverse
 from rest_framework.test import APITestCase
 
-from apps.content.models import Page, PageSection, PublicationStatus
+from apps.content.models import Enquiry, MentorProfile, Page, PageSection, ProfessionalCredential, PublicationStatus
 
 
 class ContentApiTests(APITestCase):
@@ -50,3 +50,111 @@ class ContentApiTests(APITestCase):
         self.assertIn("siteName", response.data["settings"])
         self.assertIn("primaryCtaLabel", response.data["settings"])
 
+    def test_mentor_section_uses_active_dashboard_profiles_in_order(self):
+        MentorProfile.objects.update(is_active=False)
+        page = Page.objects.create(
+            title="Home",
+            slug="home",
+            status=PublicationStatus.PUBLISHED,
+            is_homepage=True,
+        )
+        PageSection.objects.create(
+            page=page,
+            internal_name="Mentor team",
+            section_type=PageSection.SectionType.CARD_GRID,
+            style_variant="mentors",
+            order=10,
+            content={"heading": "Learn from practitioners", "items": []},
+        )
+        MentorProfile.objects.create(
+            name="Second Mentor",
+            role_title="Consultant",
+            biography="Second profile",
+            order=20,
+        )
+        MentorProfile.objects.create(
+            name="First Mentor",
+            role_title="Director",
+            specialties="Planning, Risk",
+            biography="First profile",
+            order=10,
+        )
+        MentorProfile.objects.create(
+            name="Hidden Mentor",
+            role_title="Hidden",
+            biography="Not public",
+            order=1,
+            is_active=False,
+        )
+
+        response = self.client.get(reverse("homepage"))
+
+        self.assertEqual(response.status_code, 200)
+        items = response.data["sections"][0]["content"]["items"]
+        self.assertEqual([item["name"] for item in items], ["First Mentor", "Second Mentor"])
+        self.assertEqual(items[0]["specialties"], ["Planning", "Risk"])
+        self.assertEqual(items[0]["initials"], "FM")
+
+    def test_anonymous_visitor_can_submit_an_enquiry(self):
+        response = self.client.post(
+            reverse("create-enquiry"),
+            {
+                "name": "Alex Morgan",
+                "email": "alex@example.com",
+                "organisation": "Example Employer",
+                "roleTitle": "PMO Manager",
+                "enquiryType": "Employer capability",
+                "message": "We want to develop a cohort.",
+                "sourcePath": "/employers",
+            },
+            format="json",
+        )
+
+        self.assertEqual(response.status_code, 201)
+        enquiry = Enquiry.objects.get()
+        self.assertEqual(enquiry.role_title, "PMO Manager")
+        self.assertEqual(enquiry.source_path, "/employers")
+
+    def test_active_mentor_has_a_public_detail_endpoint(self):
+        mentor = MentorProfile.objects.create(
+            name="Public Mentor",
+            role_title="Programme Director",
+            biography="A detailed professional biography.",
+            linkedin_url="https://www.linkedin.com/in/public-mentor",
+        )
+
+        response = self.client.get(reverse("mentor-detail", kwargs={"pk": mentor.pk}))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data["name"], "Public Mentor")
+        self.assertEqual(response.data["linkedinUrl"], "https://www.linkedin.com/in/public-mentor")
+
+    def test_professional_credentials_returns_only_active_items_in_order(self):
+        ProfessionalCredential.objects.all().delete()
+        ProfessionalCredential.objects.create(
+            name="Second certificate",
+            role="Qualification Pathway",
+            image_url="https://example.com/second.png",
+            order=20,
+        )
+        ProfessionalCredential.objects.create(
+            name="First certificate",
+            role="Professional Body",
+            image_url="https://example.com/first.png",
+            order=10,
+        )
+        ProfessionalCredential.objects.create(
+            name="Hidden certificate",
+            image_url="https://example.com/hidden.png",
+            order=1,
+            is_active=False,
+        )
+
+        response = self.client.get(reverse("professional-credentials-list"))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(
+            [credential["name"] for credential in response.data],
+            ["First certificate", "Second certificate"],
+        )
+        self.assertEqual(response.data[0]["imageUrl"], "https://example.com/first.png")

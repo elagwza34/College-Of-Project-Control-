@@ -1,0 +1,4876 @@
+{
+  "tag": "div",
+  "attrs": {
+    "id": "kbc-operational-pathway-v1"
+  },
+  "children": [
+    {
+      "tag": "header",
+      "attrs": {
+        "class": "kbc-hero",
+        "id": "operational-top"
+      },
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "kbc-container"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-eyebrow",
+                    "style": "color: var(--kbc-gold);"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "style": "color: var(--kbc-gold);"
+                      },
+                      "children": [
+                        "2026/27 Learner and Employer Pathway"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "h1",
+                  "attrs": {},
+                  "children": [
+                    "Operational Pathway",
+                    {
+                      "tag": "br",
+                      "attrs": {},
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "style": "color: var(--kbc-gold); font-size: 0.6em; display: block; margin-top: 8px;"
+                      },
+                      "children": [
+                        "Project Controls Professional Level 6"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "kbc-hero-description"
+                  },
+                  "children": [
+                    "\n          An operational route built around control, assurance and action. Develop professionals who do more than report project status. They establish credible controls, challenge data, model outcomes and provide evidence-based recommendations that influence delivery.\n        "
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-hero-stats"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "6"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "Credits Level 6 selected operational route"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "835"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "Published minimum training hours"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "£27k"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "Maximum apprenticeship funding band"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-hero-actions"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "kbc-button kbc-button--primary",
+                        "href": "https://kentbusinesscollege.com/book-information-session/"
+                      },
+                      "children": [
+                        "\n           book an information session\n          "
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "kbc-button kbc-button--secondary",
+                        "href": "#operational-overview",
+                        "style": "color: var(--kbc-white); border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.06);"
+                      },
+                      "children": [
+                        "\n            Explore the pathway\n          "
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-hero-panel"
+              },
+              "children": [
+                {
+                  "tag": "h3",
+                  "attrs": {},
+                  "children": [
+                    "What the pathway is designed to build"
+                  ]
+                },
+                {
+                  "tag": "ul",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "Integrated planning, cost, risk and performance control."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "Operational project leadership and decision support."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "Data assurance, forecasting and recovery recommendations."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "Credible workplace evidence mapped to the apprenticeship."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "Preparation for selected external professional examinations."
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "nav",
+      "attrs": {
+        "class": "kbc-nav",
+        "aria-label": "Operational Pathway page navigation"
+      },
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "kbc-container"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-nav-scroll"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-nav-group"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#operational-overview"
+                      },
+                      "children": [
+                        "Overview"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#operational-structure"
+                      },
+                      "children": [
+                        "Structure"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#operational-modules"
+                      },
+                      "children": [
+                        "Modules"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-nav-group"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#operational-roles"
+                      },
+                      "children": [
+                        "Roles"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#operational-capability"
+                      },
+                      "children": [
+                        "Capability"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#operational-evidence"
+                      },
+                      "children": [
+                        "Evidence"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-nav-group"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#operational-eligibility"
+                      },
+                      "children": [
+                        "Eligibility"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#operational-employer"
+                      },
+                      "children": [
+                        "Employer"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#operational-funding"
+                      },
+                      "children": [
+                        "Funding"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#operational-assessment"
+                      },
+                      "children": [
+                        "Assessment"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#operational-contact"
+                      },
+                      "children": [
+                        "Contact"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "class": "kbc-section kbc-section--white",
+        "id": "operational-overview",
+        "data-kbc-section": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "kbc-container"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-section-heading"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-eyebrow"
+                  },
+                  "children": [
+                    "The operational route"
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "An operational route built around control, assurance and action"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "kbc-lead"
+                  },
+                  "children": [
+                    "\n          The Operational Pathway develops professionals who do more than report project status. They establish credible controls, challenge data, model outcomes and provide evidence-based recommendations that influence delivery.\n        "
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-grid kbc-grid--3"
+              },
+              "children": [
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-icon"
+                      },
+                      "children": [
+                        "📊"
+                      ]
+                    },
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Integrated control"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Integrated planning, cost, risk and performance control. Operational project leadership and decision support."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-icon"
+                      },
+                      "children": [
+                        "🔍"
+                      ]
+                    },
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Data assurance"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Data assurance, forecasting and recovery recommendations. Credible workplace evidence mapped to the apprenticeship."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-icon"
+                      },
+                      "children": [
+                        "📜"
+                      ]
+                    },
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Professional preparation"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Preparation for selected external professional examinations including PMP, APM Risk, EVM, and PMI-SP."
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-note",
+                "style": "margin-top: 25px;"
+              },
+              "children": [
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "strong",
+                      "attrs": {},
+                      "children": [
+                        "Important distinction:"
+                      ]
+                    },
+                    " The apprenticeship, KBC pathway modules and external certifications are separate outcomes. The apprenticeship is awarded after successful end-point assessment. PMI, APM and APMG qualifications are awarded only by the relevant professional body after its own eligibility, registration and examination requirements are met.\n        "
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "class": "kbc-section kbc-section--soft",
+        "id": "operational-structure",
+        "data-kbc-section": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "kbc-container"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-section-heading"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-eyebrow"
+                  },
+                  "children": [
+                    "Select six credits"
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "Select six credits to create one coherent pathway"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "kbc-lead"
+                  },
+                  "children": [
+                    "\n          The supplied operational route contains eight available credits. KBC's recommended structure uses three foundation credits, two integrated planning and control credits, then one specialist elective.\n        "
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-grid kbc-grid--2",
+                "style": "margin-bottom: 28px;"
+              },
+              "children": [
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card kbc-card--dark"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Recommended six-credit structure"
+                      ]
+                    },
+                    {
+                      "tag": "ul",
+                      "attrs": {
+                        "class": "kbc-list"
+                      },
+                      "children": [
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Project Management Professional preparation — Project leadership, value, people, process and business environment."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "AI in Project Management / Controls — Responsible AI workflows, dashboards, automation and governed decisions."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Project Planning and Control — Integrated planning, monitoring, schedule, cost, progress and change control."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Choose one specialist elective — APM Risk Management, Earned Value Management or PMI Scheduling Professional."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Course structure overview"
+                      ]
+                    },
+                    {
+                      "tag": "ul",
+                      "attrs": {
+                        "class": "kbc-list"
+                      },
+                      "children": [
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "tag": "strong",
+                              "attrs": {},
+                              "children": [
+                                "PMP preparation"
+                              ]
+                            },
+                            " — PMI, 2 credits, 8 months"
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "tag": "strong",
+                              "attrs": {},
+                              "children": [
+                                "AI in Project Controls"
+                              ]
+                            },
+                            " — KBC / IPC, 1 credit, 4 months"
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "tag": "strong",
+                              "attrs": {},
+                              "children": [
+                                "Project Planning and Control"
+                              ]
+                            },
+                            " — APMG, 2 credits, 8 months"
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "tag": "strong",
+                              "attrs": {},
+                              "children": [
+                                "APM Risk Management"
+                              ]
+                            },
+                            " — APM, 1 credit, 4 months"
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "tag": "strong",
+                              "attrs": {},
+                              "children": [
+                                "Earned Value Management"
+                              ]
+                            },
+                            " — APMG, 1 credit, 4 months"
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "tag": "strong",
+                              "attrs": {},
+                              "children": [
+                                "PMI Scheduling Professional"
+                              ]
+                            },
+                            " — PMI, 1 credit, 4 months"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-note"
+              },
+              "children": [
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "strong",
+                      "attrs": {},
+                      "children": [
+                        "Catalogue control note:"
+                      ]
+                    },
+                    " The supplied operational pathway visual assigns two credits to Project Planning and Control. A separate supplied table shows one credit. This catalogue follows the six-credit pathway visual; the final controlled offer and signed training plan must confirm the agreed credit allocation before enrolment.\n        "
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "class": "kbc-section kbc-section--white",
+        "id": "operational-modules",
+        "data-kbc-section": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "kbc-container"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-section-heading"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-eyebrow"
+                  },
+                  "children": [
+                    "Six pathway credits"
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "Six credits that build operational capability"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "kbc-lead"
+                  },
+                  "children": [
+                    "\n          Each credit provides a structured context for applying the full Project Controls Professional occupational standard.\n        "
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-credit-roadmap",
+                "aria-label": "Recommended six-credit pathway structure"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-credit-roadmap__intro"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "h3",
+                          "attrs": {},
+                          "children": [
+                            "How the six-credit pathway flows"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Complete the five core credits, then select one specialist elective to complete the recommended six-credit structure."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-total"
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "6"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "Total credits"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-credit-roadmap__track"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-step"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-step__label"
+                          },
+                          "children": [
+                            "Core stage 01"
+                          ]
+                        },
+                        {
+                          "tag": "h3",
+                          "attrs": {},
+                          "children": [
+                            "PMP preparation"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Project leadership, value, people, process and business environment."
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "kbc-credit-step__value"
+                          },
+                          "children": [
+                            {
+                              "tag": "strong",
+                              "attrs": {},
+                              "children": [
+                                "2"
+                              ]
+                            },
+                            {
+                              "tag": "span",
+                              "attrs": {},
+                              "children": [
+                                "Credits"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-step"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-step__label"
+                          },
+                          "children": [
+                            "Core stage 02"
+                          ]
+                        },
+                        {
+                          "tag": "h3",
+                          "attrs": {},
+                          "children": [
+                            "AI in Project Controls"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Responsible AI workflows, dashboards, automation and governed decisions."
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "kbc-credit-step__value"
+                          },
+                          "children": [
+                            {
+                              "tag": "strong",
+                              "attrs": {},
+                              "children": [
+                                "1"
+                              ]
+                            },
+                            {
+                              "tag": "span",
+                              "attrs": {},
+                              "children": [
+                                "Credit"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-step"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-step__label"
+                          },
+                          "children": [
+                            "Core stage 03"
+                          ]
+                        },
+                        {
+                          "tag": "h3",
+                          "attrs": {},
+                          "children": [
+                            "Project Planning and Control"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Integrated planning, monitoring, schedule, cost, progress and change control."
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "kbc-credit-step__value"
+                          },
+                          "children": [
+                            {
+                              "tag": "strong",
+                              "attrs": {},
+                              "children": [
+                                "2"
+                              ]
+                            },
+                            {
+                              "tag": "span",
+                              "attrs": {},
+                              "children": [
+                                "Credits"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-step kbc-credit-step--choice"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-step__label"
+                          },
+                          "children": [
+                            "Specialist choice"
+                          ]
+                        },
+                        {
+                          "tag": "h3",
+                          "attrs": {},
+                          "children": [
+                            "Choose one specialist elective"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "APM Risk Management, Earned Value Management or PMI Scheduling Professional."
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "kbc-credit-step__value"
+                          },
+                          "children": [
+                            {
+                              "tag": "strong",
+                              "attrs": {},
+                              "children": [
+                                "1"
+                              ]
+                            },
+                            {
+                              "tag": "span",
+                              "attrs": {},
+                              "children": [
+                                "Credit"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-elective-links",
+                    "aria-label": "Specialist elective options"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#credit-apm-risk"
+                      },
+                      "children": [
+                        "View APM Risk Management"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#credit-evm"
+                      },
+                      "children": [
+                        "View Earned Value Management"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#credit-pmi-sp"
+                      },
+                      "children": [
+                        "View PMI Scheduling Professional"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-credit-list"
+              },
+              "children": [
+                {
+                  "tag": "section",
+                  "attrs": {
+                    "class": "kbc-credit-detail",
+                    "id": "credit-pmp",
+                    "aria-labelledby": "credit-pmp-title"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-detail__meta"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-detail__type"
+                          },
+                          "children": [
+                            "Core credit"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-detail__number"
+                          },
+                          "children": [
+                            "01"
+                          ]
+                        },
+                        {
+                          "tag": "dl",
+                          "attrs": {
+                            "class": "kbc-credit-facts"
+                          },
+                          "children": [
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Owner"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "PMI"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Value"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "2 credits"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Duration"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "8 months"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-detail__content"
+                      },
+                      "children": [
+                        {
+                          "tag": "h3",
+                          "attrs": {
+                            "id": "credit-pmp-title"
+                          },
+                          "children": [
+                            "PMP preparation"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Develop project leadership across people, process and the business environment, aligned to the revised PMP examination in force from July 2026."
+                          ]
+                        },
+                        {
+                          "tag": "details",
+                          "attrs": {
+                            "class": "kbc-credit-more"
+                          },
+                          "children": [
+                            {
+                              "tag": "summary",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "kbc-view-label"
+                                  },
+                                  "children": [
+                                    "View more about PMP preparation"
+                                  ]
+                                },
+                                {
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "kbc-hide-label"
+                                  },
+                                  "children": [
+                                    "Hide credit details"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "kbc-credit-output"
+                              },
+                              "children": [
+                                {
+                                  "tag": "p",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "tag": "strong",
+                                      "attrs": {},
+                                      "children": [
+                                        "Indicative workplace outputs:"
+                                      ]
+                                    },
+                                    " Project management plan, stakeholder and communications strategy, integrated delivery dashboard, recovery or benefits realisation recommendation."
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "section",
+                  "attrs": {
+                    "class": "kbc-credit-detail",
+                    "id": "credit-ai",
+                    "aria-labelledby": "credit-ai-title"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-detail__meta"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-detail__type"
+                          },
+                          "children": [
+                            "Core credit"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-detail__number"
+                          },
+                          "children": [
+                            "02"
+                          ]
+                        },
+                        {
+                          "tag": "dl",
+                          "attrs": {
+                            "class": "kbc-credit-facts"
+                          },
+                          "children": [
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Owner"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "KBC / IPC"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Value"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "1 credit"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Duration"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "4 months"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-detail__content"
+                      },
+                      "children": [
+                        {
+                          "tag": "h3",
+                          "attrs": {
+                            "id": "credit-ai-title"
+                          },
+                          "children": [
+                            "AI in Project Controls"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Build responsible AI workflows, dashboards and governed agents that operate on structured project controls data while retaining human approval and accountability."
+                          ]
+                        },
+                        {
+                          "tag": "details",
+                          "attrs": {
+                            "class": "kbc-credit-more"
+                          },
+                          "children": [
+                            {
+                              "tag": "summary",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "kbc-view-label"
+                                  },
+                                  "children": [
+                                    "View more about AI in Project Controls"
+                                  ]
+                                },
+                                {
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "kbc-hide-label"
+                                  },
+                                  "children": [
+                                    "Hide credit details"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "kbc-credit-output"
+                              },
+                              "children": [
+                                {
+                                  "tag": "p",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "tag": "strong",
+                                      "attrs": {},
+                                      "children": [
+                                        "Indicative workplace outputs:"
+                                      ]
+                                    },
+                                    " Prompt library and evaluation log, controlled project data model, automated reporting workflow, AI dashboard or agent prototype."
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "section",
+                  "attrs": {
+                    "class": "kbc-credit-detail",
+                    "id": "credit-planning-control",
+                    "aria-labelledby": "credit-planning-title"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-detail__meta"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-detail__type"
+                          },
+                          "children": [
+                            "Core credit"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-detail__number"
+                          },
+                          "children": [
+                            "03"
+                          ]
+                        },
+                        {
+                          "tag": "dl",
+                          "attrs": {
+                            "class": "kbc-credit-facts"
+                          },
+                          "children": [
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Owner"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "APMG"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Value"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "2 credits"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Duration"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "8 months"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-detail__content"
+                      },
+                      "children": [
+                        {
+                          "tag": "h3",
+                          "attrs": {
+                            "id": "credit-planning-title"
+                          },
+                          "children": [
+                            "Project Planning and Control"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Develop the integrated techniques needed to establish plans, monitor delivery and keep scope, time, cost, resources, progress and change under control."
+                          ]
+                        },
+                        {
+                          "tag": "details",
+                          "attrs": {
+                            "class": "kbc-credit-more"
+                          },
+                          "children": [
+                            {
+                              "tag": "summary",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "kbc-view-label"
+                                  },
+                                  "children": [
+                                    "View more about Project Planning and Control"
+                                  ]
+                                },
+                                {
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "kbc-hide-label"
+                                  },
+                                  "children": [
+                                    "Hide credit details"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "kbc-credit-output"
+                              },
+                              "children": [
+                                {
+                                  "tag": "p",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "tag": "strong",
+                                      "attrs": {},
+                                      "children": [
+                                        "Indicative workplace outputs:"
+                                      ]
+                                    },
+                                    " Basis of schedule, integrated control schedule, progress measurement framework, controls dashboard and variance report."
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "section",
+                  "attrs": {
+                    "class": "kbc-credit-detail kbc-credit-detail--elective",
+                    "id": "credit-apm-risk",
+                    "aria-labelledby": "credit-risk-title"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-detail__meta"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-detail__type"
+                          },
+                          "children": [
+                            "Specialist elective"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-detail__number"
+                          },
+                          "children": [
+                            "04"
+                          ]
+                        },
+                        {
+                          "tag": "dl",
+                          "attrs": {
+                            "class": "kbc-credit-facts"
+                          },
+                          "children": [
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Owner"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "APM"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Value"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "1 credit"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Duration"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "4 months"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-detail__content"
+                      },
+                      "children": [
+                        {
+                          "tag": "h3",
+                          "attrs": {
+                            "id": "credit-risk-title"
+                          },
+                          "children": [
+                            "APM Risk Management"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Strengthen the ability to establish a risk process, facilitate reviews, challenge assumptions and connect uncertainty to cost, schedule and decision-making."
+                          ]
+                        },
+                        {
+                          "tag": "details",
+                          "attrs": {
+                            "class": "kbc-credit-more"
+                          },
+                          "children": [
+                            {
+                              "tag": "summary",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "kbc-view-label"
+                                  },
+                                  "children": [
+                                    "View more about APM Risk Management"
+                                  ]
+                                },
+                                {
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "kbc-hide-label"
+                                  },
+                                  "children": [
+                                    "Hide credit details"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "kbc-credit-output"
+                              },
+                              "children": [
+                                {
+                                  "tag": "p",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "tag": "strong",
+                                      "attrs": {},
+                                      "children": [
+                                        "Indicative workplace outputs:"
+                                      ]
+                                    },
+                                    " Risk management plan, risk and opportunity register, quantitative risk analysis summary, mitigation effectiveness review."
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "section",
+                  "attrs": {
+                    "class": "kbc-credit-detail kbc-credit-detail--elective",
+                    "id": "credit-evm",
+                    "aria-labelledby": "credit-evm-title"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-detail__meta"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-detail__type"
+                          },
+                          "children": [
+                            "Specialist elective"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-detail__number"
+                          },
+                          "children": [
+                            "05"
+                          ]
+                        },
+                        {
+                          "tag": "dl",
+                          "attrs": {
+                            "class": "kbc-credit-facts"
+                          },
+                          "children": [
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Owner"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "APMG"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Value"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "1 credit"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Duration"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "4 months"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-detail__content"
+                      },
+                      "children": [
+                        {
+                          "tag": "h3",
+                          "attrs": {
+                            "id": "credit-evm-title"
+                          },
+                          "children": [
+                            "Earned Value Management"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Use integrated scope, schedule and cost data to measure performance, explain variance, forecast outcomes and support timely corrective action."
+                          ]
+                        },
+                        {
+                          "tag": "details",
+                          "attrs": {
+                            "class": "kbc-credit-more"
+                          },
+                          "children": [
+                            {
+                              "tag": "summary",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "kbc-view-label"
+                                  },
+                                  "children": [
+                                    "View more about Earned Value Management"
+                                  ]
+                                },
+                                {
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "kbc-hide-label"
+                                  },
+                                  "children": [
+                                    "Hide credit details"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "kbc-credit-output"
+                              },
+                              "children": [
+                                {
+                                  "tag": "p",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "tag": "strong",
+                                      "attrs": {},
+                                      "children": [
+                                        "Indicative workplace outputs:"
+                                      ]
+                                    },
+                                    " EVM implementation plan, performance measurement baseline, monthly EVM report, estimate-at-completion analysis."
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "section",
+                  "attrs": {
+                    "class": "kbc-credit-detail kbc-credit-detail--elective",
+                    "id": "credit-pmi-sp",
+                    "aria-labelledby": "credit-pmi-sp-title"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-detail__meta"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-detail__type"
+                          },
+                          "children": [
+                            "Specialist elective"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-credit-detail__number"
+                          },
+                          "children": [
+                            "06"
+                          ]
+                        },
+                        {
+                          "tag": "dl",
+                          "attrs": {
+                            "class": "kbc-credit-facts"
+                          },
+                          "children": [
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Owner"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "PMI"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Value"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "1 credit"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "dt",
+                                  "attrs": {},
+                                  "children": [
+                                    "Duration"
+                                  ]
+                                },
+                                {
+                                  "tag": "dd",
+                                  "attrs": {},
+                                  "children": [
+                                    "4 months"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-credit-detail__content"
+                      },
+                      "children": [
+                        {
+                          "tag": "h3",
+                          "attrs": {
+                            "id": "credit-pmi-sp-title"
+                          },
+                          "children": [
+                            "PMI Scheduling Professional"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Develop advanced scheduling capability and prepare eligible candidates for the PMI-SP examination and application process."
+                          ]
+                        },
+                        {
+                          "tag": "details",
+                          "attrs": {
+                            "class": "kbc-credit-more"
+                          },
+                          "children": [
+                            {
+                              "tag": "summary",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "kbc-view-label"
+                                  },
+                                  "children": [
+                                    "View more about PMI Scheduling Professional"
+                                  ]
+                                },
+                                {
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "kbc-hide-label"
+                                  },
+                                  "children": [
+                                    "Hide credit details"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "kbc-credit-output"
+                              },
+                              "children": [
+                                {
+                                  "tag": "p",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "tag": "strong",
+                                      "attrs": {},
+                                      "children": [
+                                        "Indicative workplace outputs:"
+                                      ]
+                                    },
+                                    " Schedule management plan, logic and quality assurance review, critical path and sensitivity analysis."
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-note",
+                "style": "margin-top: 26px;"
+              },
+              "children": [
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "strong",
+                      "attrs": {},
+                      "children": [
+                        "Assessment and award boundary:"
+                      ]
+                    },
+                    " KBC learning and pathway assessment support the apprenticeship and exam preparation. Any external professional qualification is subject to the owner's current syllabus, eligibility, registration, examination and award decisions.\n        "
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "class": "kbc-section kbc-section--soft",
+        "id": "operational-roles",
+        "data-kbc-section": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "kbc-container"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-section-heading"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-eyebrow"
+                  },
+                  "children": [
+                    "Who it is for"
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "For experienced professionals with access to complex work"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-grid kbc-grid--2"
+              },
+              "children": [
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Typical roles"
+                      ]
+                    },
+                    {
+                      "tag": "ul",
+                      "attrs": {
+                        "class": "kbc-list"
+                      },
+                      "children": [
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Project controls professionals"
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Planning engineers"
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Cost engineers"
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Risk managers"
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "PMO analysts"
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Project managers with controls responsibilities"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card kbc-card--dark"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "A suitable role normally provides"
+                      ]
+                    },
+                    {
+                      "tag": "ul",
+                      "attrs": {
+                        "class": "kbc-list"
+                      },
+                      "children": [
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Responsibility for controls information, methods or recommendations."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Access to schedules, cost, risk, progress, change or reporting data."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Opportunities to influence project, programme or portfolio stakeholders."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "A line manager who can support application and authenticate evidence."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Sufficient new learning after recognition of prior experience."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-grid kbc-grid--2",
+                "style": "margin-top: 22px;"
+              },
+              "children": [
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Initial assessment tests suitability"
+                      ]
+                    },
+                    {
+                      "tag": "ul",
+                      "attrs": {
+                        "class": "kbc-list"
+                      },
+                      "children": [
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Learner and residency eligibility."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Employment and working location."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Role alignment to ST0845 duties."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Prior learning, qualifications and experience."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "English, maths and learning support."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Ability to complete within available employment time."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Certification eligibility is separate"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Experienced apprentices may still need to satisfy professional-body experience, education, application, audit and exam requirements. KBC preparation does not override those rules."
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "class": "kbc-section kbc-section--white",
+        "id": "operational-capability",
+        "data-kbc-section": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "kbc-container"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-section-heading"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-eyebrow"
+                  },
+                  "children": [
+                    "Capability themes"
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "Capability themes developed across the route"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-grid kbc-grid--3"
+              },
+              "children": [
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-icon"
+                      },
+                      "children": [
+                        "📋"
+                      ]
+                    },
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Integrated baseline"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Align scope, breakdown structures, schedule, cost, risk and assumptions into a credible basis for control."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-icon"
+                      },
+                      "children": [
+                        "📅"
+                      ]
+                    },
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Planning and scheduling"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Create achievable schedules, test constraints, evaluate dependencies and explain schedule confidence."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-icon"
+                      },
+                      "children": [
+                        "💰"
+                      ]
+                    },
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Cost engineering"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Set budgets, monitor commitments and expenditure, integrate cost and schedule and forecast out-turn."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-icon"
+                      },
+                      "children": [
+                        "⚠️"
+                      ]
+                    },
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Risk and opportunity"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Lead reviews, challenge assumptions, quantify uncertainty and recommend proportionate responses."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-icon"
+                      },
+                      "children": [
+                        "📈"
+                      ]
+                    },
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Progress and performance"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Establish rules of credit, analyse variances and trends, apply earned value and recommend corrective action."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-icon"
+                      },
+                      "children": [
+                        "🔒"
+                      ]
+                    },
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Data assurance"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Validate source data, challenge assumptions, control records and protect integrity, security and traceability."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-icon"
+                      },
+                      "children": [
+                        "🔄"
+                      ]
+                    },
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Change and recovery"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Assess impacts, distinguish scope change, maintain approved baselines and build evidence-led recovery plans."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-icon"
+                      },
+                      "children": [
+                        "🏢"
+                      ]
+                    },
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Commercial awareness"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Interpret contracts, tenders, supplier deliverables and the relationship between cost, revenue and profitability."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-icon"
+                      },
+                      "children": [
+                        "🧭"
+                      ]
+                    },
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Leadership and ethics"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Influence decisions, mentor others, act impartially and remain accountable for reports and recommendations."
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-note",
+                "style": "margin-top: 26px;"
+              },
+              "children": [
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "strong",
+                      "attrs": {},
+                      "children": [
+                        "Evidence expectation:"
+                      ]
+                    },
+                    " Learners should be able to demonstrate how they selected a method, assured the data, interpreted the result, communicated the recommendation and evaluated the organisational impact.\n        "
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "class": "kbc-section kbc-section--soft",
+        "id": "operational-evidence",
+        "data-kbc-section": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "kbc-container"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-section-heading"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-eyebrow"
+                  },
+                  "children": [
+                    "Professional artefacts"
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "Build professional artefacts that improve delivery"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-grid kbc-grid--3"
+              },
+              "children": [
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Controls strategy"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Project controls plan, governance map, reporting calendar and assurance model."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Integrated baseline"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Scope and coding structure, schedule, budget, risk and assumptions."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Schedule assurance"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Logic checks, critical path analysis, constraints, resources and confidence."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Cost and EVM"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Budget baseline, commitments, actuals, earned value, forecast and narrative."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Risk and change"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Risk analysis, contingency, change impact and control recommendations."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "AI and automation"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Governed workflow, dashboard, data model, approval matrix and audit trail."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Decision support"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Executive report, option analysis, recovery plan and recommendation."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Leadership evidence"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Coaching, challenge, stakeholder engagement and team development."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Improvement"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Lessons learned, benchmarking, process refinement and technology adoption."
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-note",
+                "style": "margin-top: 26px;"
+              },
+              "children": [
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "strong",
+                      "attrs": {},
+                      "children": [
+                        "Confidentiality:"
+                      ]
+                    },
+                    " Evidence may be redacted, anonymised or supported by witness testimony where commercial, security or personal information cannot be shared with assessors in its original form.\n        "
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "class": "kbc-section kbc-section--white",
+        "id": "operational-eligibility",
+        "data-kbc-section": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "kbc-container"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-eligibility-visual-heading"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-eyebrow"
+                  },
+                  "children": [
+                    "Eligibility criteria"
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "class": "kbc-eligibility-visual-title"
+                  },
+                  "children": [
+                    "Could this apprenticeship",
+                    {
+                      "tag": "br",
+                      "attrs": {},
+                      "children": []
+                    },
+                    "pathway be right ",
+                    {
+                      "tag": "span",
+                      "attrs": {},
+                      "children": [
+                        "for you?"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "kbc-eligibility-intro"
+                  },
+                  "children": [
+                    "\n          Kent Business College completes a role, suitability, prior-learning and funding review before enrolment. Use this guide and quick check as an initial indication only.\n        "
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-eligibility-layout"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-eligibility-checklist",
+                    "aria-label": "Eligibility criteria"
+                  },
+                  "children": [
+                    {
+                      "tag": "article",
+                      "attrs": {
+                        "class": "kbc-eligibility-item"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-eligibility-symbol",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "attrs": {
+                                "viewbox": "0 0 24 24",
+                                "fill": "none",
+                                "stroke-width": "1.8",
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round"
+                              },
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M3 11.5 12 4l9 7.5"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M5.5 10.5V21h13V10.5"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M9 21v-6h6v6"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-eligibility-number"
+                          },
+                          "children": [
+                            "1"
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "kbc-eligibility-copy"
+                          },
+                          "children": [
+                            {
+                              "tag": "h3",
+                              "attrs": {},
+                              "children": [
+                                "UK resident for the past 3 years"
+                              ]
+                            },
+                            {
+                              "tag": "p",
+                              "attrs": {},
+                              "children": [
+                                "You must have lived in the UK for the past 3 years."
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "article",
+                      "attrs": {
+                        "class": "kbc-eligibility-item"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-eligibility-symbol",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "attrs": {
+                                "viewbox": "0 0 24 24",
+                                "fill": "none",
+                                "stroke-width": "1.8",
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round"
+                              },
+                              "children": [
+                                {
+                                  "tag": "rect",
+                                  "attrs": {
+                                    "x": "5",
+                                    "y": "3",
+                                    "width": "14",
+                                    "height": "18",
+                                    "rx": "2"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "circle",
+                                  "attrs": {
+                                    "cx": "12",
+                                    "cy": "10",
+                                    "r": "3"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M9 10h6M12 7c1 1.1 1.5 2.1 1.5 3S13 11.9 12 13M12 7c-1 1.1-1.5 2.1-1.5 3S11 11.9 12 13M8 16h8"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-eligibility-number"
+                          },
+                          "children": [
+                            "2"
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "kbc-eligibility-copy"
+                          },
+                          "children": [
+                            {
+                              "tag": "h3",
+                              "attrs": {},
+                              "children": [
+                                "Must not require sponsorship to work"
+                              ]
+                            },
+                            {
+                              "tag": "p",
+                              "attrs": {},
+                              "children": [
+                                "You must hold a British Passport, Indefinite Leave to Remain, or Tier 2 visa with at least three years of UK residency."
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "article",
+                      "attrs": {
+                        "class": "kbc-eligibility-item"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-eligibility-symbol",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "attrs": {
+                                "viewbox": "0 0 24 24",
+                                "fill": "none",
+                                "stroke-width": "1.8",
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round"
+                              },
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "m3 9 9-5 9 5-9 5-9-5Z"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M7 11.5V16c2.8 2 7.2 2 10 0v-4.5"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M21 9v6"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-eligibility-number"
+                          },
+                          "children": [
+                            "3"
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "kbc-eligibility-copy"
+                          },
+                          "children": [
+                            {
+                              "tag": "h3",
+                              "attrs": {},
+                              "children": [
+                                "Not enrolled in other government-funded training"
+                              ]
+                            },
+                            {
+                              "tag": "p",
+                              "attrs": {},
+                              "children": [
+                                "You must not be enrolled in other government-funded training at the time of this programme."
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "article",
+                      "attrs": {
+                        "class": "kbc-eligibility-item"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-eligibility-symbol",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "attrs": {
+                                "viewbox": "0 0 24 24",
+                                "fill": "none",
+                                "stroke-width": "1.8",
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round"
+                              },
+                              "children": [
+                                {
+                                  "tag": "circle",
+                                  "attrs": {
+                                    "cx": "10",
+                                    "cy": "7",
+                                    "r": "3"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M3.5 20v-1.5A6.5 6.5 0 0 1 10 12h1"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "m15 15 6 6M21 15l-6 6"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-eligibility-number"
+                          },
+                          "children": [
+                            "4"
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "kbc-eligibility-copy"
+                          },
+                          "children": [
+                            {
+                              "tag": "h3",
+                              "attrs": {},
+                              "children": [
+                                "Self-employed individuals are not eligible"
+                              ]
+                            },
+                            {
+                              "tag": "p",
+                              "attrs": {},
+                              "children": [
+                                "Self-employed individuals are not eligible for DfE funding."
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "article",
+                      "attrs": {
+                        "class": "kbc-eligibility-item"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-eligibility-symbol",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "attrs": {
+                                "viewbox": "0 0 24 24",
+                                "fill": "none",
+                                "stroke-width": "1.8",
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round"
+                              },
+                              "children": [
+                                {
+                                  "tag": "rect",
+                                  "attrs": {
+                                    "x": "3",
+                                    "y": "7",
+                                    "width": "18",
+                                    "height": "13",
+                                    "rx": "2"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M8 7V5h8v2"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M3 12h18"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M10 12v2h4v-2"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-eligibility-number"
+                          },
+                          "children": [
+                            "5"
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "kbc-eligibility-copy"
+                          },
+                          "children": [
+                            {
+                              "tag": "h3",
+                              "attrs": {},
+                              "children": [
+                                "Paid employment in England"
+                              ]
+                            },
+                            {
+                              "tag": "p",
+                              "attrs": {},
+                              "children": [
+                                "You must be in paid employment in England (normally 30+ hrs/week; minimum 16)."
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "article",
+                      "attrs": {
+                        "class": "kbc-eligibility-item"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-eligibility-symbol",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "attrs": {
+                                "viewbox": "0 0 24 24",
+                                "fill": "none",
+                                "stroke-width": "1.8",
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round"
+                              },
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M3 21h18"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M5 21V8l7-4 7 4v13"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M9 11h1M14 11h1M9 15h1M14 15h1M9 19h1M14 19h1"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-eligibility-number"
+                          },
+                          "children": [
+                            "6"
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "kbc-eligibility-copy"
+                          },
+                          "children": [
+                            {
+                              "tag": "h3",
+                              "attrs": {},
+                              "children": [
+                                "Employer based in England"
+                              ]
+                            },
+                            {
+                              "tag": "p",
+                              "attrs": {},
+                              "children": [
+                                "Your employer must be based in England and registered with the Apprenticeship Service."
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "article",
+                      "attrs": {
+                        "class": "kbc-eligibility-item"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-eligibility-symbol",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "attrs": {
+                                "viewbox": "0 0 24 24",
+                                "fill": "none",
+                                "stroke-width": "1.8",
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round"
+                              },
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M12 21s7-4.4 7-11a7 7 0 1 0-14 0c0 6.6 7 11 7 11Z"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "circle",
+                                  "attrs": {
+                                    "cx": "12",
+                                    "cy": "10",
+                                    "r": "2.5"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-eligibility-number"
+                          },
+                          "children": [
+                            "7"
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "kbc-eligibility-copy"
+                          },
+                          "children": [
+                            {
+                              "tag": "h3",
+                              "attrs": {},
+                              "children": [
+                                "Spend at least 50% of working hours in England"
+                              ]
+                            },
+                            {
+                              "tag": "p",
+                              "attrs": {},
+                              "children": [
+                                "You must spend at least 50% of your working hours within England."
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "aside",
+                  "attrs": {
+                    "class": "kbc-eligibility-media-column",
+                    "aria-label": "Eligibility review illustration and important information"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-eligibility-image"
+                      },
+                      "children": [
+                        {
+                          "tag": "img",
+                          "attrs": {
+                            "src": "https://jokdxsdbxorzciulkdyl.supabase.co/storage/v1/object/public/images/c5916acf755e4a2cbe4d778a1ae304ca.png",
+                            "alt": "Experienced professionals reviewing apprenticeship eligibility, workplace evidence and employer support",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-eligibility-disclaimer"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "kbc-eligibility-disclaimer-icon",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "attrs": {
+                                "viewbox": "0 0 24 24",
+                                "fill": "none",
+                                "stroke-width": "1.8",
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round"
+                              },
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M12 3 5 6v5c0 4.4 2.7 8.4 7 10 4.3-1.6 7-5.6 7-10V6l-7-3Z"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "m9 12 2 2 4-4"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "This is an indication only and does not guarantee eligibility, funding or enrolment. Final suitability is confirmed after KBC's full role, prior-learning, employer-support and funding review."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-eligibility-actions"
+              },
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "class": "kbc-button kbc-button--primary",
+                    "href": "https://kentbusinesscollege.com/apprenticeship-eligibility-checker/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    "Check Eligibility"
+                  ]
+                },
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "class": "kbc-button kbc-button--secondary",
+                    "href": "mailto:office@kentbusinesscollege.com?subject=Operational%20Pathway%20Eligibility%20Enquiry"
+                  },
+                  "children": [
+                    "Speak to an Adviser"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "class": "kbc-section kbc-section--soft",
+        "id": "operational-employer",
+        "data-kbc-section": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "kbc-container"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-section-heading"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-eyebrow"
+                  },
+                  "children": [
+                    "Employer responsibilities"
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "The workplace creates the conditions for competence"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-grid kbc-grid--2"
+              },
+              "children": [
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card kbc-card--dark"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Employer commitments"
+                      ]
+                    },
+                    {
+                      "tag": "ul",
+                      "attrs": {
+                        "class": "kbc-list"
+                      },
+                      "children": [
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Provide a productive role with a direct link to ST0845."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Release the apprentice for agreed paid training."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Provide access to projects, data, systems and stakeholders."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Support safe, ethical and appropriately supervised application."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Attend progress reviews and help remove barriers."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Authenticate the learner's contribution to workplace evidence."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Support gateway and EPA readiness decisions."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Operational sponsor"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "The strongest pathway experience is supported by a line manager or project controls sponsor who can provide access, challenge, feedback and organisational context without completing the apprentice's work."
+                      ]
+                    },
+                    {
+                      "tag": "h3",
+                      "attrs": {
+                        "style": "margin-top: 18px;"
+                      },
+                      "children": [
+                        "Data and system permissions"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Employer approval is required before using live project data in AI tools, automation platforms, external applications or learner evidence. Restricted information must not be uploaded to unapproved systems."
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-grid kbc-grid--4",
+                "style": "margin-top: 22px;"
+              },
+              "children": [
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "More credible forecasts"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Assured data, explicit assumptions and integrated analysis."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Earlier intervention"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Trend, risk and schedule signals converted into timely action."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Consistent controls"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Repeatable methods, templates and governance across teams."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Internal capability"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Professionals who can lead, coach and improve the controls function."
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "class": "kbc-section kbc-section--white",
+        "id": "operational-funding",
+        "data-kbc-section": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "kbc-container"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-section-heading kbc-funding-heading"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-eyebrow"
+                  },
+                  "children": [
+                    "Funding scenarios for 2026/27 starts"
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "How the apprenticeship may be funded"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "kbc-lead"
+                  },
+                  "children": [
+                    "The actual funding position depends on the employer, available funds, apprentice age and the agreed training price."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-funding-layout"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-funding-scenarios"
+                  },
+                  "children": [
+                    {
+                      "tag": "article",
+                      "attrs": {
+                        "class": "kbc-funding-card"
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {
+                            "class": "kbc-funding-card__metric"
+                          },
+                          "children": [
+                            "Account"
+                          ]
+                        },
+                        {
+                          "tag": "h3",
+                          "attrs": {},
+                          "children": [
+                            "Levy account funds"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Eligible training and assessment costs are paid from available employer account funds, up to the negotiated price and funding-band maximum."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "article",
+                      "attrs": {
+                        "class": "kbc-funding-card"
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {
+                            "class": "kbc-funding-card__metric"
+                          },
+                          "children": [
+                            "75%"
+                          ]
+                        },
+                        {
+                          "tag": "h3",
+                          "attrs": {},
+                          "children": [
+                            "Levy shortfall"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "For levy-paying employers with insufficient account funds, government contributes 75%; the employer is responsible for the remaining 25% up to the band maximum."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "article",
+                      "attrs": {
+                        "class": "kbc-funding-card"
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {
+                            "class": "kbc-funding-card__metric"
+                          },
+                          "children": [
+                            "100%"
+                          ]
+                        },
+                        {
+                          "tag": "h3",
+                          "attrs": {},
+                          "children": [
+                            "Eligible non-levy starts aged 16–24"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "For non-levy employers and apprentices aged 16-24 at the start, government funds eligible costs up to the band maximum when all conditions are met."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "article",
+                      "attrs": {
+                        "class": "kbc-funding-card"
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {
+                            "class": "kbc-funding-card__metric"
+                          },
+                          "children": [
+                            "95%"
+                          ]
+                        },
+                        {
+                          "tag": "h3",
+                          "attrs": {},
+                          "children": [
+                            "Eligible non-levy starts aged 25+"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "For non-levy employers and apprentices aged 25+ government contributes 95%; the employer normally contributes 5% up to the band maximum."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-funding-feature"
+                  },
+                  "children": [
+                    {
+                      "tag": "strong",
+                      "attrs": {
+                        "class": "kbc-funding-feature__amount"
+                      },
+                      "children": [
+                        "£27,000"
+                      ]
+                    },
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Maximum funding band"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "The final price must reflect prior learning and be agreed with the employer."
+                      ]
+                    },
+                    {
+                      "tag": "ul",
+                      "attrs": {
+                        "class": "kbc-list"
+                      },
+                      "children": [
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "The apprentice must not be charged eligible apprenticeship training or assessment costs."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Employers are responsible for costs above the £27,000 funding-band maximum."
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Memberships, professional exams or resits are included only when expressly confirmed and eligible."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "kbc-button kbc-button--primary",
+                        "href": "mailto:office@kentbusinesscollege.com?subject=Operational%20Pathway%20Funding%20Enquiry"
+                      },
+                      "children": [
+                        "Discuss funding"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-note kbc-funding-note"
+              },
+              "children": [
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "strong",
+                      "attrs": {},
+                      "children": [
+                        "No funding guarantee from a catalogue:"
+                      ]
+                    },
+                    " Funding is confirmed only after learner eligibility, employer account arrangements, negotiated price, prior learning and the applicable funding rules are checked. The apprentice must not be charged eligible apprenticeship training or assessment costs."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "class": "kbc-section kbc-section--soft",
+        "id": "operational-assessment",
+        "data-kbc-section": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "kbc-container"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-section-heading"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-eyebrow"
+                  },
+                  "children": [
+                    "Gateway and EPA"
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "Independent assessment of occupational competence"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "kbc-lead"
+                  },
+                  "children": [
+                    "\n          The operational route prepares the learner for the apprenticeship, but the end-point assessment remains an independent test of the full ST0845 occupation.\n        "
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-grid kbc-grid--3"
+              },
+              "children": [
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Technical work-based assignment"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Independent assessment through a work-based technical assignment, written report, presentation and questioning. The learner must demonstrate analysis, judgement, application and communication across mapped KSBs."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Professional discussion"
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "A structured discussion with an independent assessor, underpinned by the apprentice's portfolio. The discussion tests breadth, depth, professional behaviours and the apprentice's ability to explain authentic evidence."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attrs": {
+                    "class": "kbc-card"
+                  },
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "attrs": {},
+                      "children": [
+                        "Gateway readiness"
+                      ]
+                    },
+                    {
+                      "tag": "ul",
+                      "attrs": {
+                        "class": "kbc-list"
+                      },
+                      "children": [
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Completed all mandatory training and KSBs"
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Gateway evidence portfolio assembled and reviewed"
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "English and maths requirements met"
+                          ]
+                        },
+                        {
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            "Employer and provider sign-off"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-note",
+                "style": "margin-top: 26px;"
+              },
+              "children": [
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "strong",
+                      "attrs": {},
+                      "children": [
+                        "Professional exams are not EPA:"
+                      ]
+                    },
+                    " Passing PMP, PMI-SP, APM or APMG examinations does not replace apprenticeship gateway or end-point assessment. Likewise, achieving the apprenticeship does not automatically confer those external certifications.\n        "
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "class": "kbc-section kbc-section--white",
+        "id": "operational-contact",
+        "data-kbc-section": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "kbc-container"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-final-cta",
+                "style": "position: relative; isolation: isolate; overflow: hidden; padding: 46px; border-radius: 24px; color: var(--kbc-white); background: radial-gradient(circle at 90% 8%, rgba(117, 64, 220, 0.62), transparent 38%), linear-gradient(135deg, var(--kbc-dark), var(--kbc-purple)); box-shadow: 0 24px 60px rgba(32, 20, 50, 0.18);"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "kbc-final-grid",
+                    "style": "display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 34px; align-items: center;"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "kbc-eyebrow",
+                            "style": "color: #e5bd59;"
+                          },
+                          "children": [
+                            "Take the next step"
+                          ]
+                        },
+                        {
+                          "tag": "h2",
+                          "attrs": {
+                            "style": "color: var(--kbc-white);"
+                          },
+                          "children": [
+                            "Apply or book an information session"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {
+                            "style": "color: rgba(255,255,255,0.77); max-width: 750px; margin-bottom: 0;"
+                          },
+                          "children": [
+                            "\n              Kent Business College will review your role, prior learning, employer support, funding eligibility and whether the Operational Pathway is the most appropriate route.\n            "
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "kbc-contact",
+                            "style": "display: grid; gap: 5px; margin-top: 20px; color: rgba(255,255,255,0.82); font-size: 14px;"
+                          },
+                          "children": [
+                            {
+                              "tag": "strong",
+                              "attrs": {},
+                              "children": [
+                                "Admissions and employer enquiries"
+                              ]
+                            },
+                            {
+                              "tag": "a",
+                              "attrs": {
+                                "href": "mailto:office@kentbusinesscollege.com",
+                                "style": "color: var(--kbc-white); text-decoration-thickness: 1px; text-underline-offset: 4px;"
+                              },
+                              "children": [
+                                "office@kentbusinesscollege.com"
+                              ]
+                            },
+                            {
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://kentbusinesscollege.com",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "style": "color: var(--kbc-white); text-decoration-thickness: 1px; text-underline-offset: 4px;"
+                              },
+                              "children": [
+                                "kentbusinesscollege.com"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "kbc-button-row",
+                        "style": "margin-top: 0;"
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "class": "kbc-button kbc-button--primary",
+                            "href": "mailto:office@kentbusinesscollege.com?subject=Operational%20Pathway%20Enquiry%20-%20Project%20Controls%20Professional%20Level%206"
+                          },
+                          "children": [
+                            "\n              Contact admissions\n            "
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-review",
+                "style": "margin-top: 20px; padding: 17px 19px; border-left: 4px solid var(--kbc-gold); border-radius: 0 14px 14px 0; color: var(--kbc-muted-text); background: var(--kbc-light-purple); font-size: 12px; line-height: 1.55;"
+              },
+              "children": [
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Information reviewed: 25 July 2026."
+                  ]
+                },
+                " Confirm the applicable standard version, funding year and professional-certification position before enrolment.\n      "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "aside",
+      "attrs": {
+        "class": "kbc-scroll-cta",
+        "aria-label": "Operational Pathway quick enquiry",
+        "aria-hidden": "true"
+      },
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "kbc-scroll-cta__inner"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-scroll-cta__copy"
+              },
+              "children": [
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Operational Pathway enquiries"
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Review your role, funding and pathway suitability with the admissions team."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "kbc-scroll-cta__actions"
+              },
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "class": "kbc-scroll-cta__secondary",
+                    "href": "#operational-modules"
+                  },
+                  "children": [
+                    "View credits"
+                  ]
+                },
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "class": "kbc-scroll-cta__button",
+                    "href": "https://kentbusinesscollege.com/book-information-session/"
+                  },
+                  "children": [
+                    "book an information session"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

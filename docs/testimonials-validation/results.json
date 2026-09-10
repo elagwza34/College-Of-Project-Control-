@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "Live public testimonial API responds",
+    "Contact dialog accepts name, programme, portrait, review and consent; submission remains pending",
+    "Dashboard approval publishes the submitted review in the home section",
+    "Testimonial navigation, thumbnail selection and employer audience tab",
+    "Programme-specific reviews on canonical and alias routes, responsive mobile layout",
+    "Withdrawing approval removes the review from the public section"
+  ],
+  "exceptions": []
+}

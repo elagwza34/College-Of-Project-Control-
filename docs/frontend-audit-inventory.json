@@ -1,0 +1,6334 @@
+{
+  "summary": {
+    "source_files": 174,
+    "tsx_files": 155,
+    "route_path_declarations": 69,
+    "hex_color_like_literals_including_comments": [
+      [
+        "#1F2933",
+        118
+      ],
+      [
+        "#1F5F73",
+        38
+      ],
+      [
+        "#F5F8F9",
+        31
+      ],
+      [
+        "#123B4A",
+        24
+      ],
+      [
+        "#D8B36E",
+        17
+      ],
+      [
+        "#FFFFFF",
+        17
+      ],
+      [
+        "#D6A85F",
+        13
+      ],
+      [
+        "#9C6813",
+        11
+      ],
+      [
+        "#080D10",
+        5
+      ],
+      [
+        "#C6953B",
+        4
+      ],
+      [
+        "#1A1204",
+        4
+      ],
+      [
+        "#C99A49",
+        3
+      ],
+      [
+        "#3FA7A3",
+        3
+      ],
+      [
+        "#D7B46C",
+        2
+      ],
+      [
+        "#9670",
+        2
+      ],
+      [
+        "#0A66C2",
+        2
+      ],
+      [
+        "#DCE5E8",
+        2
+      ],
+      [
+        "#FFA953",
+        2
+      ],
+      [
+        "#F5F1E8",
+        1
+      ],
+      [
+        "#D6B16D",
+        1
+      ],
+      [
+        "#E9C77D",
+        1
+      ],
+      [
+        "#F3EEE4",
+        1
+      ],
+      [
+        "#0D1418",
+        1
+      ],
+      [
+        "#667985",
+        1
+      ],
+      [
+        "#ffffff",
+        1
+      ],
+      [
+        "#091f27",
+        1
+      ],
+      [
+        "#B27715",
+        1
+      ],
+      [
+        "#084f96",
+        1
+      ]
+    ],
+    "arbitrary_font_sizes": [
+      [
+        "text-[64px]",
+        25
+      ],
+      [
+        "text-[10px]",
+        17
+      ],
+      [
+        "text-[15px]",
+        14
+      ],
+      [
+        "text-[14px]",
+        8
+      ],
+      [
+        "text-[42px]",
+        6
+      ],
+      [
+        "text-[9px]",
+        6
+      ],
+      [
+        "text-[11px]",
+        6
+      ],
+      [
+        "text-[0.9375rem]",
+        2
+      ],
+      [
+        "text-[2.75rem]",
+        2
+      ],
+      [
+        "text-[56px]",
+        1
+      ],
+      [
+        "text-[34px]",
+        1
+      ],
+      [
+        "text-[44px]",
+        1
+      ],
+      [
+        "text-[16px]",
+        1
+      ],
+      [
+        "text-[12rem]",
+        1
+      ],
+      [
+        "text-[20rem]",
+        1
+      ]
+    ],
+    "radius_classes": [
+      [
+        "rounded-full",
+        280
+      ],
+      [
+        "rounded-md",
+        238
+      ],
+      [
+        "rounded-xl",
+        142
+      ],
+      [
+        "rounded-lg",
+        135
+      ],
+      [
+        "rounded-2xl",
+        48
+      ],
+      [
+        "rounded-sm",
+        20
+      ],
+      [
+        "rounded",
+        9
+      ],
+      [
+        "rounded-t",
+        3
+      ],
+      [
+        "rounded-r",
+        1
+      ],
+      [
+        "rounded-l",
+        1
+      ],
+      [
+        "rounded-[2rem]",
+        1
+      ],
+      [
+        "rounded-b",
+        1
+      ]
+    ],
+    "external_image_queries": 57,
+    "img_elements": 53,
+    "lazy_image_attributes": 8
+  },
+  "files": [
+    {
+      "file": "App.tsx",
+      "lines": 22,
+      "imports": [
+        "router/index.tsx",
+        "i18n/index.ts",
+        "dashboard/DashboardApp.tsx"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "I18nextProvider",
+        "BrowserRouter",
+        "Routes",
+        "Route",
+        "DashboardApp",
+        "AppRoutes"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "#main-content"
+      ]
+    },
+    {
+      "file": "components/base/BenefitCard.tsx",
+      "lines": 32,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/base/SectionHeading.tsx",
+      "lines": 35,
+      "imports": [],
+      "headings": [
+        {
+          "line": 21,
+          "text": "{title}"
+        }
+      ],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/base/Skeleton.tsx",
+      "lines": 96,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "Skeleton"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/ArticleCta.tsx",
+      "lines": 55,
+      "imports": [],
+      "headings": [
+        {
+          "line": 20,
+          "text": "{title}"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-12 md:py-16 bg-background-100\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "components/feature/ArticleLayout.tsx",
+      "lines": 127,
+      "imports": [
+        "components/feature/PcpComplianceNote.tsx",
+        "components/feature/StickyCta.tsx"
+      ],
+      "headings": [
+        {
+          "line": 65,
+          "text": "{heroHeadline}"
+        }
+      ],
+      "sections": [
+        "<section className=\"hero-align-left relative w-full min-h-[90vh] flex items-center overflow-hidden\"",
+        "<section className=\"py-8 md:py-10 bg-background-50\"",
+        "<section className=\"py-10 md:py-14 bg-background-50\""
+      ],
+      "components": [
+        "PcpComplianceNote",
+        "StickyCta"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "https://collegeofprojectcontrols.com"
+      ]
+    },
+    {
+      "file": "components/feature/Breadcrumbs.tsx",
+      "lines": 61,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/CampaignLeadForm.tsx",
+      "lines": 286,
+      "imports": [
+        "services/enquiryApi.ts"
+      ],
+      "headings": [
+        {
+          "line": 106,
+          "text": "Thank You"
+        },
+        {
+          "line": 262,
+          "text": "{formTitle}"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "HTMLFormElement"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/CampaignRouteFit.tsx",
+      "lines": 67,
+      "imports": [
+        "components/base/SectionHeading.tsx"
+      ],
+      "headings": [],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-background-100\""
+      ],
+      "components": [
+        "SectionHeading"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/CampaignTransformation.tsx",
+      "lines": 81,
+      "imports": [
+        "components/base/SectionHeading.tsx"
+      ],
+      "headings": [],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-background-50\""
+      ],
+      "components": [
+        "SectionHeading"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/CapabilityStrip.tsx",
+      "lines": 36,
+      "imports": [],
+      "headings": [],
+      "sections": [
+        "<section className=\"border-y border-background-200 bg-white\" aria-labelledby=\"capability-strip-title\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [
+        "capability-strip-title"
+      ],
+      "links": []
+    },
+    {
+      "file": "components/feature/CoachingSupport.tsx",
+      "lines": 71,
+      "imports": [
+        "components/base/SectionHeading.tsx",
+        "services/coachesApi.ts"
+      ],
+      "headings": [
+        {
+          "line": 54,
+          "text": "{coach.name}"
+        },
+        {
+          "line": 63,
+          "text": "{title}"
+        }
+      ],
+      "sections": [
+        "<section id=\"coaching-support\" className=\"bg-primary-700 py-16 text-white md:py-24\""
+      ],
+      "components": [
+        "Coach",
+        "SectionHeading",
+        "CoachAvatar"
+      ],
+      "section_titles": [
+        "Support that connects learning with your professional development",
+        "Your coach helps turn programme learning into evidence of professional growth."
+      ],
+      "ids": [
+        "coaching-support"
+      ],
+      "links": []
+    },
+    {
+      "file": "components/feature/ContactForm.tsx",
+      "lines": 122,
+      "imports": [
+        "services/enquiryApi.ts"
+      ],
+      "headings": [
+        {
+          "line": 33,
+          "text": "Thank You"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "HTMLFormElement"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/CroUrgencyStrip.tsx",
+      "lines": 68,
+      "imports": [
+        "hooks/useCROTest.ts"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/EditorialPageHero.tsx",
+      "lines": 45,
+      "imports": [],
+      "headings": [
+        {
+          "line": 25,
+          "text": "{title}"
+        }
+      ],
+      "sections": [
+        "<section className=\"relative isolate overflow-hidden bg-primary-950 pb-16 pt-32 text-white md:pb-20 md:pt-40\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/EligibilityCheckerSection.tsx",
+      "lines": 60,
+      "imports": [],
+      "headings": [
+        {
+          "line": 28,
+          "text": "A quick self-check before you go further"
+        },
+        {
+          "line": 44,
+          "text": "Find out if an apprenticeship route could be right for you"
+        },
+        {
+          "line": 53,
+          "text": "{benefit.title}"
+        }
+      ],
+      "sections": [
+        "<section id=\"eligibility\" className=\"bg-white py-16 md:py-24\" aria-labelledby=\"eligibility-checker-cta-title\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [
+        "eligibility",
+        "eligibility-checker-cta-title"
+      ],
+      "links": [
+        "/apprenticeship-eligibility-checker/",
+        "/contact"
+      ]
+    },
+    {
+      "file": "components/feature/EventsSection.tsx",
+      "lines": 116,
+      "imports": [],
+      "headings": [
+        {
+          "line": 34,
+          "text": "Meet the people behind the programmes"
+        },
+        {
+          "line": 58,
+          "text": "Explore specialist Project Controls topics"
+        },
+        {
+          "line": 88,
+          "text": "Speak with the College"
+        }
+      ],
+      "sections": [
+        "<section id=\"events\" className=\"py-16 md:py-20 bg-background-100 relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement"
+      ],
+      "section_titles": [],
+      "ids": [
+        "events"
+      ],
+      "links": [
+        "#consultation"
+      ]
+    },
+    {
+      "file": "components/feature/Footer.tsx",
+      "lines": 221,
+      "imports": [
+        "services/enquiryApi.ts"
+      ],
+      "headings": [
+        {
+          "line": 101,
+          "text": "Stay Ahead in Project Controls"
+        },
+        {
+          "line": 188,
+          "text": "{column.title}"
+        }
+      ],
+      "sections": [
+        "<section aria-labelledby=\"newsletter-heading\" className=\"relative w-full overflow-hidden border-y border-background-200 bg-white\""
+      ],
+      "components": [
+        "HTMLFormElement"
+      ],
+      "section_titles": [],
+      "ids": [
+        "newsletter-heading",
+        "newsletter-form",
+        "newsletter-email"
+      ],
+      "links": [
+        "/associate-project-manager-level-4",
+        "/project-controls-professional-level-6",
+        "/commercial-project-controls-route",
+        "/programmes",
+        "/employers",
+        "/employers#process",
+        "/employer-agreement",
+        "/contact",
+        "/knowledge-hub/employer-apprenticeship-funding",
+        "/apprentices",
+        "/apprenticeship-eligibility-checker",
+        "/programmes",
+        "/about",
+        "/contact",
+        "/knowledge-hub",
+        "/articles",
+        "/events",
+        "/faq",
+        "/testimonials",
+        "#",
+        "#",
+        "#",
+        "#",
+        "/",
+        "mailto:info@collegeofprojectcontrols.com",
+        "/privacy",
+        "/terms",
+        "/accessibility",
+        "/cookies"
+      ]
+    },
+    {
+      "file": "components/feature/FundingOptionsSection.tsx",
+      "lines": 81,
+      "imports": [],
+      "headings": [
+        {
+          "line": 58,
+          "text": "{title}"
+        },
+        {
+          "line": 63,
+          "text": "{card.title}"
+        },
+        {
+          "line": 68,
+          "text": "What the course and programme package is designed to include"
+        },
+        {
+          "line": 72,
+          "text": "{card.title}"
+        },
+        {
+          "line": 77,
+          "text": "{ctaContent.title}"
+        }
+      ],
+      "sections": [
+        "<section className=\"relative overflow-hidden bg-background-50 py-16 md:py-24\" aria-labelledby=\"funding-options-title\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [
+        "funding-options-title"
+      ],
+      "links": [
+        "/book-a-session",
+        "/institute-of-project-controls"
+      ]
+    },
+    {
+      "file": "components/feature/FundingTicker.tsx",
+      "lines": 27,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/HomeFaq.tsx",
+      "lines": 133,
+      "imports": [],
+      "headings": [
+        {
+          "line": 91,
+          "text": "Professional development, clearly explained"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-background-100 relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement",
+        "FaqItem"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/IpcAuthority.tsx",
+      "lines": 210,
+      "imports": [],
+      "headings": [],
+      "sections": [
+        "<section\n      id=\"ipc-authority\"\n      className=\"relative overflow-hidden py-20 md:py-28 lg:py-[130px]\"\n      style={{\n        background:\n          'radial-gradient(circle at 75% 25%, rgba(178,119,21,0.10), transparent 32%), radial-gradient(circle at 8% 100%, rgba(178,119,21,0.08), transparent 35%), #080D10',\n      }}\n    "
+      ],
+      "components": [
+        "HTMLDivElement",
+        "PortraitSet"
+      ],
+      "section_titles": [],
+      "ids": [
+        "ipc-authority"
+      ],
+      "links": [
+        "/institute-of-project-controls"
+      ]
+    },
+    {
+      "file": "components/feature/MeetMentors.tsx",
+      "lines": 155,
+      "imports": [
+        "services/mentorsApi.ts"
+      ],
+      "headings": [
+        {
+          "line": 48,
+          "text": "{mentor.name}"
+        },
+        {
+          "line": 109,
+          "text": "Learn from people who understand the work"
+        }
+      ],
+      "sections": [
+        "<section id=\"mentors\" className=\"py-16 md:py-24 relative overflow-hidden\" style={{ backgroundColor: '#F5F8F9' }}"
+      ],
+      "components": [
+        "MentorCard",
+        "Mentor",
+        "MentorSet"
+      ],
+      "section_titles": [],
+      "ids": [
+        "mentors"
+      ],
+      "links": [
+        "/contact"
+      ]
+    },
+    {
+      "file": "components/feature/Navbar.tsx",
+      "lines": 367,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "ReturnType",
+        "HTMLDivElement",
+        "HTMLAnchorElement"
+      ],
+      "section_titles": [],
+      "ids": [
+        "desktop-routes-menu",
+        "mobile-navigation"
+      ],
+      "links": [
+        "/programmes",
+        "/project-controls-professional-level-6",
+        "/associate-project-manager-level-4",
+        "/project-controls-professional/pmo-governance-route",
+        "/project-controls-professional/strategic-route",
+        "/project-controls-professional/operational-route",
+        "/project-controls-professional/chartered-pmo-pathway",
+        "/commercial-project-controls-route",
+        "/project-controls-professional/construction-route",
+        "/project-controls-professional/engineering-manufacturing-aerospace-route",
+        "/project-controls-professional/public-sector-councils-route",
+        "/project-controls-professional/energy-oil-gas-utilities-route",
+        "/knowledge-hub",
+        "/articles",
+        "/events",
+        "/faq",
+        "/testimonials",
+        "/about",
+        "/governance-board",
+        "/employers",
+        "/apprentices",
+        "/contact",
+        "/",
+        "/programmes",
+        "/about",
+        "/",
+        "/institute-of-project-controls",
+        "/book-a-session",
+        "/institute-of-project-controls",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "components/feature/PageSectionNav.tsx",
+      "lines": 52,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "#consultation",
+        "#hero"
+      ]
+    },
+    {
+      "file": "components/feature/PcpComplianceNote.tsx",
+      "lines": 14,
+      "imports": [],
+      "headings": [],
+      "sections": [
+        "<section className=\"py-8 bg-background-50 border-t border-background-200/70\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/PcpFaqSection.tsx",
+      "lines": 48,
+      "imports": [
+        "components/base/SectionHeading.tsx"
+      ],
+      "headings": [],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-background-100\""
+      ],
+      "components": [
+        "SectionHeading",
+        "FaqItem"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/PcpFundingStrip.tsx",
+      "lines": 6,
+      "imports": [
+        "components/feature/FundingOptionsSection.tsx"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "FundingOptionsSection"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/PcpHero.tsx",
+      "lines": 157,
+      "imports": [],
+      "headings": [
+        {
+          "line": 69,
+          "text": "{renderedHeadline}"
+        }
+      ],
+      "sections": [
+        "<section className=\"hero-align-left relative w-full min-h-[90vh] flex items-center overflow-hidden\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/PcpPainPointsGrid.tsx",
+      "lines": 33,
+      "imports": [
+        "components/base/SectionHeading.tsx"
+      ],
+      "headings": [],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-background-100\""
+      ],
+      "components": [
+        "SectionHeading"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/ProfessionalOutcomes.tsx",
+      "lines": 65,
+      "imports": [],
+      "headings": [
+        {
+          "line": 29,
+          "text": "Development that shows up in the work"
+        },
+        {
+          "line": 46,
+          "text": "{outcome.title}"
+        }
+      ],
+      "sections": [
+        "<section className=\"relative overflow-hidden bg-background-50 py-16 md:py-20\" aria-labelledby=\"professional-outcomes-title\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [
+        "professional-outcomes-title"
+      ],
+      "links": [
+        "/contact"
+      ]
+    },
+    {
+      "file": "components/feature/ProfessionalPathwaysSection.tsx",
+      "lines": 121,
+      "imports": [],
+      "headings": [
+        {
+          "line": 55,
+          "text": "Three routes shaped around how you work"
+        },
+        {
+          "line": 79,
+          "text": "{pathway.title}"
+        },
+        {
+          "line": 110,
+          "text": "Need a tailored six-credit route?"
+        }
+      ],
+      "sections": [
+        "<section id={id} className={`relative overflow-hidden bg-background-50 py-16 md:py-24 ${className}`}"
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/project-controls-professional/operational-route",
+        "/project-controls-professional/strategic-route",
+        "/project-controls-professional/chartered-pmo-pathway",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "components/feature/ProfessionalRecognitionSection.tsx",
+      "lines": 128,
+      "imports": [
+        "services/professionalCredentialsApi.ts"
+      ],
+      "headings": [
+        {
+          "line": 88,
+          "text": "Development connected to {' '} recognised professional practice"
+        }
+      ],
+      "sections": [
+        "<section className=\"relative overflow-hidden bg-background-50 py-16 md:py-24\""
+      ],
+      "components": [
+        "ProfessionalCredential",
+        "HTMLDivElement",
+        "CredentialCard"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/project-controls-professional-level-6#pathways"
+      ]
+    },
+    {
+      "file": "components/feature/ProgrammeAccessSections.tsx",
+      "lines": 25,
+      "imports": [
+        "components/feature/PcpFundingStrip.tsx",
+        "components/feature/IpcAuthority.tsx",
+        "components/feature/EligibilityCheckerSection.tsx"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "PcpFundingStrip",
+        "EligibilityCheckerSection",
+        "IpcAuthority"
+      ],
+      "section_titles": [],
+      "ids": [
+        "funding"
+      ],
+      "links": []
+    },
+    {
+      "file": "components/feature/RelatedArticles.tsx",
+      "lines": 48,
+      "imports": [],
+      "headings": [
+        {
+          "line": 18,
+          "text": "Related Articles"
+        },
+        {
+          "line": 32,
+          "text": "{article.title}"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-12 md:py-16 bg-background-50\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/RouteLanding/RouteCapability.tsx",
+      "lines": 43,
+      "imports": [],
+      "headings": [
+        {
+          "line": 20,
+          "text": "{heading}"
+        },
+        {
+          "line": 32,
+          "text": "{f.title}"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-background-50\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/RouteLanding/RouteChoose.tsx",
+      "lines": 72,
+      "imports": [],
+      "headings": [
+        {
+          "line": 22,
+          "text": "{heading}"
+        },
+        {
+          "line": 47,
+          "text": "{route.title}"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-background-50\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/RouteLanding/RouteConsultationForm.tsx",
+      "lines": 151,
+      "imports": [
+        "services/enquiryApi.ts"
+      ],
+      "headings": [
+        {
+          "line": 48,
+          "text": "Thank You"
+        },
+        {
+          "line": 66,
+          "text": "{title}"
+        }
+      ],
+      "sections": [
+        "<section id=\"consultation\" className=\"py-16 md:py-20 bg-background-50\"",
+        "<section id=\"consultation\" className=\"py-16 md:py-20 bg-background-50\""
+      ],
+      "components": [
+        "HTMLFormElement"
+      ],
+      "section_titles": [],
+      "ids": [
+        "consultation",
+        "consultation"
+      ],
+      "links": []
+    },
+    {
+      "file": "components/feature/RouteLanding/RouteDevelop.tsx",
+      "lines": 34,
+      "imports": [],
+      "headings": [
+        {
+          "line": 11,
+          "text": "{heading}"
+        },
+        {
+          "line": 25,
+          "text": "{cap.title}"
+        }
+      ],
+      "sections": [
+        "<section id=\"develop\" className=\"py-16 md:py-20 bg-background-50\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [
+        "develop"
+      ],
+      "links": []
+    },
+    {
+      "file": "components/feature/RouteLanding/RouteEligibilityForm.tsx",
+      "lines": 110,
+      "imports": [
+        "services/enquiryApi.ts"
+      ],
+      "headings": [
+        {
+          "line": 48,
+          "text": "Thank You"
+        },
+        {
+          "line": 66,
+          "text": "{title}"
+        }
+      ],
+      "sections": [
+        "<section id=\"eligibility\" className=\"py-16 md:py-20 bg-background-100\"",
+        "<section id=\"eligibility\" className=\"py-16 md:py-20 bg-background-100\""
+      ],
+      "components": [
+        "HTMLFormElement"
+      ],
+      "section_titles": [],
+      "ids": [
+        "eligibility",
+        "eligibility"
+      ],
+      "links": []
+    },
+    {
+      "file": "components/feature/RouteLanding/RouteFaq.tsx",
+      "lines": 49,
+      "imports": [],
+      "headings": [
+        {
+          "line": 18,
+          "text": "{heading}"
+        }
+      ],
+      "sections": [
+        "<section id=\"faq\" className=\"py-16 md:py-20 bg-background-50\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [
+        "faq"
+      ],
+      "links": []
+    },
+    {
+      "file": "components/feature/RouteLanding/RouteFinalCta.tsx",
+      "lines": 43,
+      "imports": [],
+      "headings": [
+        {
+          "line": 19,
+          "text": "{heading}"
+        }
+      ],
+      "sections": [
+        "<section\n      className=\"py-16 md:py-20 relative overflow-hidden\"\n      style={{ background: 'linear-gradient(135deg, oklch(var(--primary-700)), oklch(var(--primary-900)))' }}\n    "
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/RouteLanding/RouteHero.tsx",
+      "lines": 263,
+      "imports": [],
+      "headings": [
+        {
+          "line": 98,
+          "text": "{headline}"
+        }
+      ],
+      "sections": [
+        "<section id=\"hero\" className=\"relative isolate flex min-h-[90vh] items-center overflow-hidden bg-primary-950 pb-14 pt-28 text-white md:pb-20 md:pt-36\""
+      ],
+      "components": [
+        "HTMLAnchorElement"
+      ],
+      "section_titles": [],
+      "ids": [
+        "hero"
+      ],
+      "links": [
+        "#consultation",
+        "#eligibility"
+      ]
+    },
+    {
+      "file": "components/feature/RouteLanding/RouteNavbar.tsx",
+      "lines": 17,
+      "imports": [
+        "components/feature/PageSectionNav.tsx"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "PageSectionNav"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "#consultation"
+      ]
+    },
+    {
+      "file": "components/feature/RouteLanding/RouteProblems.tsx",
+      "lines": 84,
+      "imports": [],
+      "headings": [
+        {
+          "line": 16,
+          "text": "{heading}"
+        },
+        {
+          "line": 28,
+          "text": "{card.title}"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-background-50\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/RouteLanding/RouteProcess.tsx",
+      "lines": 55,
+      "imports": [],
+      "headings": [
+        {
+          "line": 21,
+          "text": "{heading}"
+        },
+        {
+          "line": 36,
+          "text": "{step.title}"
+        }
+      ],
+      "sections": [
+        "<section\n      className=\"py-16 md:py-20 relative overflow-hidden\"\n      style={{ background: 'linear-gradient(135deg, oklch(var(--primary-900)), oklch(var(--primary-950)))' }}\n    "
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/RouteLanding/RouteStats.tsx",
+      "lines": 37,
+      "imports": [],
+      "headings": [
+        {
+          "line": 17,
+          "text": "{heading}"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-background-50\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/RouteLanding/RouteTestimonials.tsx",
+      "lines": 59,
+      "imports": [],
+      "headings": [
+        {
+          "line": 11,
+          "text": "{heading}"
+        },
+        {
+          "line": 40,
+          "text": "{caseStudy.title}"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-background-50\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/RouteLanding/RouteWhoFor.tsx",
+      "lines": 69,
+      "imports": [],
+      "headings": [
+        {
+          "line": 11,
+          "text": "{heading}"
+        },
+        {
+          "line": 22,
+          "text": "{professionals.title}"
+        },
+        {
+          "line": 42,
+          "text": "{employers.title}"
+        }
+      ],
+      "sections": [
+        "<section id=\"who-for\" className=\"py-16 md:py-20 bg-background-50\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [
+        "who-for"
+      ],
+      "links": [
+        "#consultation"
+      ]
+    },
+    {
+      "file": "components/feature/RouteLanding/SectorHero.tsx",
+      "lines": 169,
+      "imports": [],
+      "headings": [
+        {
+          "line": 105,
+          "text": "{renderHeadline()}"
+        }
+      ],
+      "sections": [
+        "<section id=\"hero\" className=\"relative isolate flex min-h-[90vh] items-center overflow-hidden bg-primary-950 pb-14 pt-28 text-white md:pb-20 md:pt-36\""
+      ],
+      "components": [
+        "HTMLAnchorElement"
+      ],
+      "section_titles": [],
+      "ids": [
+        "hero"
+      ],
+      "links": [
+        "#consultation",
+        "#eligibility"
+      ]
+    },
+    {
+      "file": "components/feature/SchemaOrg.tsx",
+      "lines": 142,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/SeoManager.tsx",
+      "lines": 321,
+      "imports": [
+        "router/config.tsx"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "HTMLMetaElement",
+        "HTMLLinkElement"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "components/feature/StickyCta.tsx",
+      "lines": 113,
+      "imports": [
+        "hooks/useCROTest.ts"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "#eligibility",
+        "#consultation",
+        "#routes",
+        "#eligibility",
+        "#consultation",
+        "#routes",
+        "#routes",
+        "#eligibility",
+        "#consultation"
+      ]
+    },
+    {
+      "file": "dashboard/api/client.ts",
+      "lines": 63,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/dashboard/login"
+      ]
+    },
+    {
+      "file": "dashboard/auth/AuthContext.tsx",
+      "lines": 38,
+      "imports": [
+        "dashboard/api/client.ts"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "AuthContextValue",
+        "AuthContext"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "dashboard/DashboardApp.tsx",
+      "lines": 55,
+      "imports": [
+        "dashboard/auth/AuthContext.tsx",
+        "dashboard/layout/DashboardLayout.tsx",
+        "dashboard/pages/LoginPage.tsx",
+        "dashboard/pages/OverviewPage.tsx",
+        "dashboard/pages/PageEditorPage.tsx",
+        "dashboard/pages/PagesListPage.tsx",
+        "dashboard/pages/MediaLibraryPage.tsx",
+        "dashboard/pages/NavigationPage.tsx",
+        "dashboard/pages/EnquiriesPage.tsx",
+        "dashboard/pages/MentorsPage.tsx",
+        "dashboard/pages/CoachesPage.tsx",
+        "dashboard/pages/PartnersPage.tsx",
+        "dashboard/pages/ProfessionalCredentialsPage.tsx",
+        "dashboard/pages/EventsPage.tsx",
+        "dashboard/pages/SectorsPage.tsx"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "Navigate",
+        "DashboardLayout",
+        "Routes",
+        "Route",
+        "LoginPage",
+        "ProtectedLayout",
+        "OverviewPage",
+        "PagesListPage",
+        "PageEditorPage",
+        "MediaLibraryPage",
+        "NavigationPage",
+        "MentorsPage",
+        "CoachesPage",
+        "PartnersPage",
+        "ProfessionalCredentialsPage",
+        "SectorsPage",
+        "EventsPage",
+        "EnquiriesPage",
+        "AuthProvider",
+        "DashboardRoutes"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "dashboard/layout/DashboardLayout.tsx",
+      "lines": 80,
+      "imports": [
+        "dashboard/auth/AuthContext.tsx"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "NavLink",
+        "Outlet"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/"
+      ]
+    },
+    {
+      "file": "dashboard/pages/CoachesPage.tsx",
+      "lines": 215,
+      "imports": [
+        "dashboard/api/client.ts"
+      ],
+      "headings": [
+        {
+          "line": 52,
+          "text": "Coaching &amp; Support"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "Coach",
+        "CoachEditor",
+        "File",
+        "HTMLInputElement"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "dashboard/pages/EnquiriesPage.tsx",
+      "lines": 101,
+      "imports": [
+        "dashboard/api/client.ts"
+      ],
+      "headings": [
+        {
+          "line": 48,
+          "text": "Enquiries"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "Enquiry"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "dashboard/pages/EventsPage.tsx",
+      "lines": 195,
+      "imports": [
+        "dashboard/api/client.ts"
+      ],
+      "headings": [
+        {
+          "line": 63,
+          "text": "Events"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "Event",
+        "EventEditor",
+        "TextField"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "dashboard/pages/LoginPage.tsx",
+      "lines": 78,
+      "imports": [
+        "dashboard/auth/AuthContext.tsx"
+      ],
+      "headings": [
+        {
+          "line": 36,
+          "text": "Dashboard Login"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "Navigate"
+      ],
+      "section_titles": [],
+      "ids": [
+        "username",
+        "password"
+      ],
+      "links": []
+    },
+    {
+      "file": "dashboard/pages/MediaLibraryPage.tsx",
+      "lines": 95,
+      "imports": [
+        "dashboard/api/client.ts"
+      ],
+      "headings": [
+        {
+          "line": 49,
+          "text": "Media Library"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "MediaItem",
+        "HTMLInputElement"
+      ],
+      "section_titles": [
+        "Click to copy URL"
+      ],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "dashboard/pages/MentorsPage.tsx",
+      "lines": 234,
+      "imports": [
+        "dashboard/api/client.ts"
+      ],
+      "headings": [
+        {
+          "line": 62,
+          "text": "Mentors"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "Mentor",
+        "MentorEditor",
+        "File",
+        "HTMLInputElement",
+        "TextField"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "dashboard/pages/NavigationPage.tsx",
+      "lines": 179,
+      "imports": [
+        "dashboard/api/client.ts"
+      ],
+      "headings": [
+        {
+          "line": 58,
+          "text": "Navigation"
+        },
+        {
+          "line": 129,
+          "text": "{group.name}"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "NavGroup",
+        "NavGroupCard"
+      ],
+      "section_titles": [],
+      "ids": [
+        "new-group-name",
+        "new-group-location"
+      ],
+      "links": []
+    },
+    {
+      "file": "dashboard/pages/OverviewPage.tsx",
+      "lines": 49,
+      "imports": [
+        "dashboard/api/client.ts"
+      ],
+      "headings": [
+        {
+          "line": 34,
+          "text": "Overview"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "Counts",
+        "Link"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/dashboard/pages",
+        "/dashboard/enquiries",
+        "/dashboard/media"
+      ]
+    },
+    {
+      "file": "dashboard/pages/PageEditorPage.tsx",
+      "lines": 312,
+      "imports": [
+        "dashboard/api/client.ts"
+      ],
+      "headings": [
+        {
+          "line": 100,
+          "text": "{page.title || 'Home Page'}"
+        },
+        {
+          "line": 115,
+          "text": "Page details"
+        },
+        {
+          "line": 157,
+          "text": "Sections"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "PageDetail",
+        "Link",
+        "Field",
+        "SectionEditor"
+      ],
+      "section_titles": [],
+      "ids": [
+        "page-status",
+        "page-seo-desc"
+      ],
+      "links": [
+        "/"
+      ]
+    },
+    {
+      "file": "dashboard/pages/PagesListPage.tsx",
+      "lines": 121,
+      "imports": [
+        "dashboard/api/client.ts"
+      ],
+      "headings": [
+        {
+          "line": 42,
+          "text": "Pages"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "PageRow",
+        "Link"
+      ],
+      "section_titles": [],
+      "ids": [
+        "new-page-title",
+        "new-page-slug"
+      ],
+      "links": []
+    },
+    {
+      "file": "dashboard/pages/PartnersPage.tsx",
+      "lines": 228,
+      "imports": [
+        "dashboard/api/client.ts"
+      ],
+      "headings": [
+        {
+          "line": 52,
+          "text": "Trusted Partners"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "Partner",
+        "PartnerEditor",
+        "File",
+        "HTMLInputElement"
+      ],
+      "section_titles": [],
+      "ids": [
+        "new-partner-url"
+      ],
+      "links": []
+    },
+    {
+      "file": "dashboard/pages/ProfessionalCredentialsPage.tsx",
+      "lines": 285,
+      "imports": [
+        "dashboard/api/client.ts"
+      ],
+      "headings": [
+        {
+          "line": 75,
+          "text": "Certificates &amp; Recognition"
+        },
+        {
+          "line": 84,
+          "text": "Add certificate image"
+        }
+      ],
+      "sections": [
+        "<section className=\"mt-6 rounded-xl border border-background-200/70 bg-white p-5\""
+      ],
+      "components": [
+        "ProfessionalCredential",
+        "File",
+        "HTMLInputElement",
+        "CredentialEditor"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "dashboard/pages/SectorsPage.tsx",
+      "lines": 228,
+      "imports": [
+        "dashboard/api/client.ts"
+      ],
+      "headings": [
+        {
+          "line": 59,
+          "text": "Sectors"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "Sector",
+        "SectorEditor",
+        "File",
+        "HTMLInputElement",
+        "TextField"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "data/articles.ts",
+      "lines": 135,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "#funding-guides",
+        "#route-comparisons",
+        "#sector-guides",
+        "#chpp-readiness",
+        "#employer-guides",
+        "/knowledge-hub/what-is-pcp-apprenticeship",
+        "/knowledge-hub/funded-pcp-employer-guide",
+        "/knowledge-hub/employer-apprenticeship-funding",
+        "/knowledge-hub/pcp-vs-pmp",
+        "/knowledge-hub/apm-chpp-readiness",
+        "/knowledge-hub/strategic-vs-operational",
+        "/knowledge-hub/construction-training",
+        "/knowledge-hub/energy-training",
+        "/knowledge-hub/pmo-governance-training",
+        "/knowledge-hub/commercial-routes-explained"
+      ]
+    },
+    {
+      "file": "hooks/useCROTest.ts",
+      "lines": 71,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "hooks/useLeadScoring.ts",
+      "lines": 184,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "LeadProfile"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "i18n/index.ts",
+      "lines": 19,
+      "imports": [
+        "i18n/local/index.ts"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "i18n/local/index.ts",
+      "lines": 25,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "index.css",
+      "lines": 850,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "main.tsx",
+      "lines": 11,
+      "imports": [
+        "i18n/index.ts",
+        "index.css",
+        "App.tsx"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "StrictMode",
+        "App"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/about/page.tsx",
+      "lines": 215,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/CapabilityStrip.tsx"
+      ],
+      "headings": [
+        {
+          "line": 75,
+          "text": "A specialist college for the people behind confident project delivery"
+        },
+        {
+          "line": 100,
+          "text": "A focused home for project capability"
+        },
+        {
+          "line": 127,
+          "text": "Professional development should change the work"
+        },
+        {
+          "line": 135,
+          "text": "{principle.title}"
+        },
+        {
+          "line": 147,
+          "text": "One connected view of project performance"
+        },
+        {
+          "line": 154,
+          "text": "{area.title}"
+        },
+        {
+          "line": 166,
+          "text": "A route from responsibility to evidence"
+        },
+        {
+          "line": 172,
+          "text": "{step.title}"
+        },
+        {
+          "line": 182,
+          "text": "Who CPCM supports"
+        },
+        {
+          "line": 187,
+          "text": "{audience.title}"
+        },
+        {
+          "line": 203,
+          "text": "What capability needs to change in your role or organisation?"
+        }
+      ],
+      "sections": [
+        "<section className=\"hero-align-left relative isolate flex min-h-[90vh] items-center overflow-hidden bg-primary-500 pb-20 pt-32 text-white md:pb-28 md:pt-40\"",
+        "<section className=\"bg-white py-16 md:py-24\" aria-labelledby=\"identity-title\"",
+        "<section className=\"bg-background-50 py-16 md:py-24\" aria-labelledby=\"principles-title\"",
+        "<section className=\"bg-primary-500 py-16 text-white md:py-24\" aria-labelledby=\"capability-title\"",
+        "<section className=\"bg-white py-16 md:py-24\" aria-labelledby=\"model-title\"",
+        "<section className=\"bg-background-50 py-16 md:py-24\" aria-labelledby=\"audiences-title\"",
+        "<section className=\"bg-highlight-500 py-14 md:py-16\""
+      ],
+      "components": [
+        "CapabilityStrip",
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [
+        "identity-title",
+        "principles-title",
+        "capability-title",
+        "model-title",
+        "audiences-title"
+      ],
+      "links": [
+        "/apprentices",
+        "/employers",
+        "/programmes",
+        "/contact",
+        "/contact"
+      ]
+    },
+    {
+      "file": "pages/apm-level-4/page.tsx",
+      "lines": 98,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/PageSectionNav.tsx",
+        "components/feature/SchemaOrg.tsx",
+        "components/base/SectionHeading.tsx",
+        "components/feature/MeetMentors.tsx",
+        "components/feature/ProgrammeAccessSections.tsx",
+        "components/feature/CoachingSupport.tsx",
+        "pages/apm-level-4/programmeData.ts"
+      ],
+      "headings": [
+        {
+          "line": 44,
+          "text": "Associate Project Manager Level 4"
+        },
+        {
+          "line": 47,
+          "text": "{title}"
+        },
+        {
+          "line": 59,
+          "text": "{title}"
+        },
+        {
+          "line": 60,
+          "text": "January · April · September"
+        },
+        {
+          "line": 65,
+          "text": "{phase.title}"
+        },
+        {
+          "line": 70,
+          "text": "{group.title}"
+        },
+        {
+          "line": 73,
+          "text": "Create project management outputs you can use in professional practice"
+        },
+        {
+          "line": 75,
+          "text": "{group.title}"
+        },
+        {
+          "line": 75,
+          "text": "You do not need “Project Manager” in your job title."
+        },
+        {
+          "line": 77,
+          "text": "{title}"
+        },
+        {
+          "line": 79,
+          "text": "{title}"
+        },
+        {
+          "line": 87,
+          "text": "{title}"
+        },
+        {
+          "line": 89,
+          "text": "Beyond the apprenticeship"
+        },
+        {
+          "line": 89,
+          "text": "{title}"
+        },
+        {
+          "line": 93,
+          "text": "{faq.q}"
+        },
+        {
+          "line": 95,
+          "text": "Ready to strengthen your project management career?"
+        }
+      ],
+      "sections": [
+        "<section id=\"hero\" className=\"hero-image-project relative flex min-h-[90vh] items-center overflow-hidden bg-primary-950 pb-16 pt-28 text-white md:pb-24 md:pt-36\"",
+        "<section aria-label=\"Key programme facts\" className=\"border-b border-background-200 bg-white py-6\"",
+        "<section id=\"overview\" className=\"py-16 md:py-24\"",
+        "<section id=\"pathway\" className=\"bg-white py-16 md:py-24\"",
+        "<section id=\"curriculum\" className=\"py-16 md:py-24\"",
+        "<section id=\"outputs\" className=\"bg-secondary-600 py-16 text-white md:py-24\"",
+        "<section className=\"bg-white py-16 md:py-24\"",
+        "<section id=\"learning\" className=\"py-16 md:py-24\"",
+        "<section className=\"bg-white py-16 md:py-24\"",
+        "<section className=\"py-16 md:py-24\"",
+        "<section className=\"bg-white py-16 md:py-24\"",
+        "<section className=\"py-16 md:py-24\"",
+        "<section id=\"faq\" className=\"bg-white py-16 md:py-24\"",
+        "<section className=\"bg-secondary-600 py-16 text-white md:py-20\""
+      ],
+      "components": [
+        "SchemaOrg",
+        "HeroVisual",
+        "PageSectionNav",
+        "SectionHeading",
+        "TickList",
+        "MeetMentors",
+        "CoachingSupport",
+        "ProgrammeAccessSections",
+        "Footer"
+      ],
+      "section_titles": [
+        "Become a more confident, structured and commercially aware project professional",
+        "Strengthen the capabilities professionals use every day to plan, coordinate, communicate and deliver successful projects.",
+        "Project Management Professional preparation + AI in Project Controls",
+        "First establish strong professional project management capability, then develop practical AI skills for modern project delivery and project controls.",
+        "A curriculum built around real project responsibilities",
+        "Explore the capability groups without losing sight of how they connect across the full project lifecycle.",
+        "Built for professionals delivering projects across multiple industries",
+        "Live teaching, practical application and continuous professional support",
+        "Designed to fit alongside a professional role",
+        "Approximately seven hours of structured learning per week, with around 350 apprenticeship learning hours across the programme.",
+        "Develop stronger project capability inside your organisation",
+        "Built for professionals and employers across project-driven sectors",
+        "The learning model connects live teaching, workplace application, portfolio evidence, coaching and employer-supported progress reviews.",
+        "Associate Project Manager Level 4, clearly explained"
+      ],
+      "ids": [
+        "hero",
+        "overview",
+        "pathway",
+        "curriculum",
+        "outputs",
+        "learning",
+        "experts",
+        "faq"
+      ],
+      "links": [
+        "#overview",
+        "#pathway",
+        "#curriculum",
+        "#learning",
+        "#experts",
+        "#funding",
+        "#faq",
+        "/book-a-session",
+        "#funding",
+        "/book-a-session",
+        "/book-a-session",
+        "/book-a-session",
+        "/employers",
+        "#funding",
+        "/book-a-session",
+        "#funding"
+      ]
+    },
+    {
+      "file": "pages/apm-level-4/programmeData.ts",
+      "lines": 87,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/apprentices/page.tsx",
+      "lines": 547,
+      "imports": [
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 208,
+          "text": "Progress Your Career in Project Controls"
+        },
+        {
+          "line": 250,
+          "text": "From Application to Career Progression"
+        },
+        {
+          "line": 273,
+          "text": "Skills That Employers Value & Promote"
+        },
+        {
+          "line": 332,
+          "text": "What Your Week Looks Like"
+        },
+        {
+          "line": 384,
+          "text": "Everything You Need to Succeed"
+        },
+        {
+          "line": 409,
+          "text": "{card.title}"
+        },
+        {
+          "line": 427,
+          "text": "What development should enable"
+        },
+        {
+          "line": 481,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "line": 521,
+          "text": "Ready to advance your career in project controls?"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "HTMLDivElement",
+        "StatItem",
+        "JourneyStep",
+        "BenefitCard",
+        "RhythmCard",
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [
+        "rhythm"
+      ],
+      "links": [
+        "#contact",
+        "#rhythm",
+        "#contact",
+        "#contact",
+        "mailto:info@collegeofprojectcontrols.com"
+      ]
+    },
+    {
+      "file": "pages/apprenticeship-eligibility-checker/checkerData.ts",
+      "lines": 98,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/apprenticeship-eligibility-checker/components/EligibilityCheckerFlow.tsx",
+      "lines": 359,
+      "imports": [
+        "pages/apprenticeship-eligibility-checker/checkerData.ts",
+        "pages/apprenticeship-eligibility-checker/eligibilityEngine.ts"
+      ],
+      "headings": [
+        {
+          "line": 210,
+          "text": "Apprenticeship eligibility checker"
+        },
+        {
+          "line": 217,
+          "text": "Ready to begin?"
+        },
+        {
+          "line": 262,
+          "text": "{currentStep.title}"
+        },
+        {
+          "line": 314,
+          "text": "{result.label}"
+        }
+      ],
+      "sections": [
+        "<section id=\"checker\" className=\"bg-background-50 py-16 md:py-20\" aria-labelledby=\"checker-heading\""
+      ],
+      "components": [
+        "EligibilityStatus",
+        "CheckerAnswers",
+        "Set",
+        "EligibilityResult",
+        "QuestionField"
+      ],
+      "section_titles": [],
+      "ids": [
+        "checker",
+        "checker-heading"
+      ],
+      "links": [
+        "/book-a-session",
+        "/contact",
+        "/book-a-session",
+        "/contact",
+        "/contact",
+        "/commercial-project-controls-route"
+      ]
+    },
+    {
+      "file": "pages/apprenticeship-eligibility-checker/eligibilityEngine.ts",
+      "lines": 54,
+      "imports": [
+        "pages/apprenticeship-eligibility-checker/checkerData.ts"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/apprenticeship-eligibility-checker/page.tsx",
+      "lines": 68,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "pages/apprenticeship-eligibility-checker/components/EligibilityCheckerFlow.tsx",
+        "pages/apprenticeship-eligibility-checker/checkerData.ts"
+      ],
+      "headings": [
+        {
+          "line": 17,
+          "text": "Check your apprenticeship eligibility"
+        },
+        {
+          "line": 54,
+          "text": "Still not sure?"
+        }
+      ],
+      "sections": [
+        "<section className=\"hero-image-office relative flex min-h-[90vh] items-center overflow-hidden bg-primary-700\"",
+        "<section className=\"bg-white py-12 text-center md:py-16\""
+      ],
+      "components": [
+        "EligibilityCheckerFlow",
+        "PcpFaqSection",
+        "Footer"
+      ],
+      "section_titles": [
+        "Frequently Asked Questions"
+      ],
+      "ids": [],
+      "links": [
+        "#checker",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/articles/page.tsx",
+      "lines": 114,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/Breadcrumbs.tsx",
+        "components/feature/SchemaOrg.tsx",
+        "data/articles.ts",
+        "components/feature/EditorialPageHero.tsx"
+      ],
+      "headings": [
+        {
+          "line": 85,
+          "text": "{article.title}"
+        }
+      ],
+      "sections": [
+        "<section className=\"bg-background-50 py-14 md:py-20\""
+      ],
+      "components": [
+        "SchemaOrg",
+        "EditorialPageHero",
+        "Breadcrumbs",
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/",
+        "/knowledge-hub"
+      ]
+    },
+    {
+      "file": "pages/book-a-session/page.tsx",
+      "lines": 32,
+      "imports": [
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 14,
+          "text": "This page is coming soon"
+        }
+      ],
+      "sections": [
+        "<section className=\"hero-image-office relative flex min-h-[90vh] items-center overflow-hidden bg-primary-700\""
+      ],
+      "components": [
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/contact"
+      ]
+    },
+    {
+      "file": "pages/campaign/commercial-route/page.tsx",
+      "lines": 232,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/PcpHero.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/PcpComplianceNote.tsx",
+        "components/feature/StickyCta.tsx",
+        "components/feature/CampaignTransformation.tsx",
+        "components/feature/CampaignRouteFit.tsx",
+        "pages/pcp-master/components/CapabilityTracks.tsx",
+        "components/base/SectionHeading.tsx",
+        "components/base/BenefitCard.tsx",
+        "components/feature/EventsSection.tsx",
+        "components/feature/PcpFundingStrip.tsx",
+        "components/feature/IpcAuthority.tsx"
+      ],
+      "headings": [
+        {
+          "line": 151,
+          "text": "Build Your Professional Standing with APM ChPP Readiness Support"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-12 md:py-16 bg-background-100\"",
+        "<section className=\"py-16 md:py-20 bg-secondary-500\"",
+        "<section className=\"py-16 md:py-20 bg-background-100\"",
+        "<section className=\"py-16 md:py-20 bg-background-50\"",
+        "<section id=\"lead-form\" className=\"py-16 md:py-20 bg-primary-500\""
+      ],
+      "components": [
+        "PcpHero",
+        "SectionHeading",
+        "CampaignTransformation",
+        "CampaignRouteFit",
+        "CapabilityTracks",
+        "BenefitCard",
+        "PcpFundingStrip",
+        "IpcAuthority",
+        "EventsSection",
+        "PcpFaqSection",
+        "PcpComplianceNote",
+        "StickyCta",
+        "Footer"
+      ],
+      "section_titles": [
+        "Build Your Project Controls Career Through the Commercial Route",
+        "Not eligible for apprenticeship funding? Access structured Level 6 development, expert tutoring and professional progression support through our commercial pathway.",
+        "The Same Professional Development. A Different Funding Route.",
+        "The commercial pathway gives you access to the same structured professional development, tutoring, Master Class Events and APM ChPP readiness support as the apprenticeship-funded route.",
+        "Without Access vs With the Commercial Route",
+        "The commercial pathway opens professional project controls development when apprenticeship funding is not available.",
+        "Which Route Matches Your Career Goals?",
+        "Three routes are available through the commercial pathway, each designed for different career stages and ambitions.",
+        "What You Gain Through the Commercial Route",
+        "Professional project controls development designed for your career, on flexible commercial terms.",
+        "Explore the Commercial Route",
+        "Complete the form and an adviser will discuss route options, payment plans and bursary possibilities for your situation."
+      ],
+      "ids": [
+        "funding",
+        "lead-form"
+      ],
+      "links": [
+        "/operational-pcp",
+        "/strategic-pcp",
+        "/strategic-operational-pcp",
+        "#lead-form",
+        "#lead-form",
+        "#lead-form",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/campaign/construction/page.tsx",
+      "lines": 195,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/PcpHero.tsx",
+        "components/feature/PcpFundingStrip.tsx",
+        "components/feature/PcpPainPointsGrid.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/PcpComplianceNote.tsx",
+        "components/feature/StickyCta.tsx",
+        "components/feature/CampaignTransformation.tsx",
+        "components/feature/CampaignRouteFit.tsx",
+        "pages/pcp-master/components/CapabilityTracks.tsx",
+        "components/base/SectionHeading.tsx",
+        "components/base/BenefitCard.tsx",
+        "components/feature/EventsSection.tsx"
+      ],
+      "headings": [],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-secondary-500\"",
+        "<section className=\"py-16 md:py-20 bg-background-100\"",
+        "<section className=\"py-16 md:py-20 bg-background-50\"",
+        "<section id=\"lead-form\" className=\"py-16 md:py-20 bg-primary-500\""
+      ],
+      "components": [
+        "PcpHero",
+        "PcpFundingStrip",
+        "PcpPainPointsGrid",
+        "CampaignTransformation",
+        "CampaignRouteFit",
+        "CapabilityTracks",
+        "SectionHeading",
+        "BenefitCard",
+        "EventsSection",
+        "PcpFaqSection",
+        "PcpComplianceNote",
+        "StickyCta",
+        "Footer"
+      ],
+      "section_titles": [
+        "Stop Letting Schedule Delays and Cost Drift Become Normal",
+        "Build project controls capability for construction, building and urban programmes where planning discipline, NEC change control, cost visibility and progress reporting matter.",
+        "Construction Delivery Problems That Stronger Controls Solve",
+        "These are not inevitable. They are capability gaps the Operational PCP route closes.",
+        "Construction Without Controls vs Construction With Controls",
+        "The difference between accepting delay as normal and building the capability to control delivery.",
+        "Routes Built for Construction Reality",
+        "Select the route that matches your role and the complexity of your construction programmes.",
+        "What Stronger Project Controls Delivers in Construction",
+        "Measurable improvements that directly reduce delay, cost drift and delivery risk.",
+        "Check Construction Route Eligibility",
+        "Complete the form to discuss construction-specific project controls development for your team."
+      ],
+      "ids": [
+        "lead-form"
+      ],
+      "links": [
+        "/operational-pcp-construction",
+        "/operational-pcp",
+        "/strategic-operational-pcp",
+        "#lead-form",
+        "#lead-form",
+        "#lead-form",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/campaign/energy/page.tsx",
+      "lines": 195,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/PcpHero.tsx",
+        "components/feature/PcpFundingStrip.tsx",
+        "components/feature/PcpPainPointsGrid.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/PcpComplianceNote.tsx",
+        "components/feature/StickyCta.tsx",
+        "components/feature/CampaignTransformation.tsx",
+        "components/feature/CampaignRouteFit.tsx",
+        "pages/pcp-master/components/CapabilityTracks.tsx",
+        "components/base/SectionHeading.tsx",
+        "components/base/BenefitCard.tsx",
+        "components/feature/EventsSection.tsx"
+      ],
+      "headings": [],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-secondary-500\"",
+        "<section className=\"py-16 md:py-20 bg-background-100\"",
+        "<section className=\"py-16 md:py-20 bg-background-50\"",
+        "<section id=\"lead-form\" className=\"py-16 md:py-20 bg-primary-500\""
+      ],
+      "components": [
+        "PcpHero",
+        "PcpFundingStrip",
+        "PcpPainPointsGrid",
+        "CampaignTransformation",
+        "CampaignRouteFit",
+        "CapabilityTracks",
+        "SectionHeading",
+        "BenefitCard",
+        "EventsSection",
+        "PcpFaqSection",
+        "PcpComplianceNote",
+        "StickyCta",
+        "Footer"
+      ],
+      "section_titles": [
+        "For Capital Programmes Where Weak Controls Are Too Expensive to Ignore",
+        "Develop project controls professionals who can strengthen baseline control, risk visibility, cost assurance, outage planning, commissioning milestones and governance confidence.",
+        "Capital Programme Challenges Where Weak Controls Hurt Most",
+        "In capital programmes, these problems do not self-correct. They compound.",
+        "Capital Programmes Without Integrated Controls vs Capital Programmes With Integrated Controls",
+        "The difference between hoping for the best and building the capability to control delivery.",
+        "Routes for Capital Programme Environments",
+        "Select the route that matches the scale and complexity of your capital programmes.",
+        "What Integrated Project Controls Delivers in Capital Programmes",
+        "Measurable improvements in governance, forecasting and delivery confidence.",
+        "Explore the Energy Project Controls Route",
+        "Complete the form and an adviser will discuss energy-specific project controls development for your team."
+      ],
+      "ids": [
+        "lead-form"
+      ],
+      "links": [
+        "/operational-pcp-energy",
+        "/strategic-pcp",
+        "/strategic-operational-pcp",
+        "#lead-form",
+        "#lead-form",
+        "#lead-form",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/campaign/head-of-pmo/page.tsx",
+      "lines": 194,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/PcpHero.tsx",
+        "components/feature/PcpFundingStrip.tsx",
+        "components/feature/PcpPainPointsGrid.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/PcpComplianceNote.tsx",
+        "components/feature/StickyCta.tsx",
+        "components/feature/CampaignTransformation.tsx",
+        "components/feature/CampaignRouteFit.tsx",
+        "pages/pcp-master/components/CapabilityTracks.tsx",
+        "components/base/SectionHeading.tsx",
+        "components/base/BenefitCard.tsx",
+        "components/feature/EventsSection.tsx"
+      ],
+      "headings": [
+        {
+          "line": 118,
+          "text": "Build PMO Capability with Professional Recognition Support"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-secondary-500\"",
+        "<section className=\"py-16 md:py-20 bg-background-100\"",
+        "<section className=\"py-16 md:py-20 bg-background-50\"",
+        "<section id=\"lead-form\" className=\"py-16 md:py-20 bg-primary-500\""
+      ],
+      "components": [
+        "PcpHero",
+        "PcpFundingStrip",
+        "PcpPainPointsGrid",
+        "CampaignTransformation",
+        "CampaignRouteFit",
+        "CapabilityTracks",
+        "SectionHeading",
+        "BenefitCard",
+        "EventsSection",
+        "PcpFaqSection",
+        "PcpComplianceNote",
+        "StickyCta",
+        "Footer"
+      ],
+      "section_titles": [
+        "Your PMO Does Not Need More Reports. It Needs Stronger Decision Confidence",
+        "Develop PMO and project controls professionals who can turn schedule, cost, risk and performance data into governance insight senior leaders can trust.",
+        "PMO Challenges That Hold Organisations Back",
+        "The symptoms of a PMO that produces data but does not drive decisions.",
+        "From Reporting PMO to Decision-Support PMO",
+        "The difference between producing reports and building decision confidence.",
+        "Routes Built for PMO and Governance Professionals",
+        "Select the route that aligns with your PMO maturity and career progression goals.",
+        "What Stronger PMO Capability Delivers",
+        "Tangible outcomes that transform PMO from cost centre to strategic partner.",
+        "Discuss the PMO Route",
+        "Complete the form and an adviser will contact you to discuss PMO capability development and APM recognition support."
+      ],
+      "ids": [
+        "lead-form"
+      ],
+      "links": [
+        "/pmo-pcp",
+        "/strategic-pcp",
+        "/strategic-operational-pcp",
+        "#lead-form",
+        "#lead-form",
+        "#lead-form",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/campaign/hr-employer/page.tsx",
+      "lines": 198,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/PcpHero.tsx",
+        "components/feature/PcpFundingStrip.tsx",
+        "components/feature/PcpPainPointsGrid.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/PcpComplianceNote.tsx",
+        "components/feature/StickyCta.tsx",
+        "components/feature/CampaignTransformation.tsx",
+        "components/feature/CampaignRouteFit.tsx",
+        "pages/pcp-master/components/CapabilityTracks.tsx",
+        "components/base/SectionHeading.tsx",
+        "components/base/BenefitCard.tsx",
+        "components/feature/EventsSection.tsx"
+      ],
+      "headings": [
+        {
+          "line": 122,
+          "text": "Build Chartered-Level Project Controls Capability Across Your Organisation"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-secondary-500\"",
+        "<section className=\"py-16 md:py-20 bg-background-100\"",
+        "<section className=\"py-16 md:py-20 bg-background-50\"",
+        "<section id=\"lead-form\" className=\"py-16 md:py-20 bg-primary-500\""
+      ],
+      "components": [
+        "PcpHero",
+        "PcpFundingStrip",
+        "PcpPainPointsGrid",
+        "CampaignTransformation",
+        "CampaignRouteFit",
+        "CapabilityTracks",
+        "SectionHeading",
+        "BenefitCard",
+        "EventsSection",
+        "PcpFaqSection",
+        "PcpComplianceNote",
+        "StickyCta",
+        "Footer"
+      ],
+      "section_titles": [
+        "Use Apprenticeship Funding to Build Project Controls Capability Your Business Can Actually Measure",
+        "A Level 6 Project Controls Professional pathway where eligible, designed to help employers develop planning, cost, risk, reporting, governance and PMO capability across project-driven teams.",
+        "Common Employer Challenges",
+        "The problems that drive HR and L&amp;D teams to look beyond traditional training.",
+        "Traditional Training vs Funded Professional Development",
+        "The difference between spending your training budget and building measurable organisational capability.",
+        "Which Route Fits Your Team?",
+        "Select the route that matches the roles, sectors and capability goals of your organisation.",
+        "What Employers Gain",
+        "Tangible benefits that directly improve project delivery and workforce capability.",
+        "Check Funding Availability for Your Organisation",
+        "Complete the form and an adviser will help you understand your funding position and best route options."
+      ],
+      "ids": [
+        "lead-form"
+      ],
+      "links": [
+        "/strategic-pcp",
+        "/operational-pcp",
+        "/strategic-operational-pcp",
+        "/pmo-pcp",
+        "/operational-pcp-construction",
+        "/operational-pcp-energy",
+        "#lead-form",
+        "#lead-form",
+        "#lead-form",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/campaign/public-sector/page.tsx",
+      "lines": 194,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/PcpHero.tsx",
+        "components/feature/PcpFundingStrip.tsx",
+        "components/feature/PcpPainPointsGrid.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/PcpComplianceNote.tsx",
+        "components/feature/StickyCta.tsx",
+        "components/feature/CampaignTransformation.tsx",
+        "components/feature/CampaignRouteFit.tsx",
+        "pages/pcp-master/components/CapabilityTracks.tsx",
+        "components/base/SectionHeading.tsx",
+        "components/base/BenefitCard.tsx",
+        "components/feature/EventsSection.tsx"
+      ],
+      "headings": [],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-secondary-500\"",
+        "<section className=\"py-16 md:py-20 bg-background-100\"",
+        "<section className=\"py-16 md:py-20 bg-background-50\"",
+        "<section id=\"lead-form\" className=\"py-16 md:py-20 bg-primary-500\""
+      ],
+      "components": [
+        "PcpHero",
+        "PcpFundingStrip",
+        "PcpPainPointsGrid",
+        "CampaignTransformation",
+        "CampaignRouteFit",
+        "CapabilityTracks",
+        "SectionHeading",
+        "BenefitCard",
+        "EventsSection",
+        "PcpFaqSection",
+        "PcpComplianceNote",
+        "StickyCta",
+        "Footer"
+      ],
+      "section_titles": [
+        "Build Project Controls Capability for Public Money, Public Scrutiny and Better Delivery Confidence",
+        "A funding-supported route, subject to eligibility, for public sector and council teams that need stronger governance, audit-ready evidence, risk control and decision-ready programme reporting.",
+        "Public Sector Delivery Challenges That Stronger Controls Address",
+        "These are not just programme problems — they affect public trust and political confidence.",
+        "Public Sector Delivery Without Controls vs Public Sector Delivery With Controls",
+        "The difference between surviving scrutiny and building delivery confidence.",
+        "Routes Built for Public Sector Reality",
+        "Select the route that matches your programme environment and governance requirements.",
+        "What Stronger Project Controls Delivers in the Public Sector",
+        "Outcomes that strengthen public trust, political confidence and delivery performance.",
+        "Explore the Public Sector Route",
+        "Complete the form and an adviser will discuss how project controls capability can strengthen public sector programme delivery."
+      ],
+      "ids": [
+        "lead-form"
+      ],
+      "links": [
+        "/operational-pcp-public-sector",
+        "/strategic-pcp",
+        "/pmo-pcp",
+        "#lead-form",
+        "#lead-form",
+        "#lead-form",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/chartered-pmo-pathway/page.tsx",
+      "lines": 6,
+      "imports": [
+        "pages/programme-template/PathwayPage.tsx",
+        "pages/programme-template/pathwayData.ts"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "PathwayPage"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/contact/page.tsx",
+      "lines": 173,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/ContactForm.tsx"
+      ],
+      "headings": [
+        {
+          "line": 46,
+          "text": "Let&rsquo;s find your next step"
+        },
+        {
+          "line": 108,
+          "text": "Not sure which programme or specialist development fits?"
+        },
+        {
+          "line": 120,
+          "text": "What happens next?"
+        },
+        {
+          "line": 152,
+          "text": "A few quick answers"
+        },
+        {
+          "line": 160,
+          "text": "{faq.q}"
+        }
+      ],
+      "sections": [
+        "<section className=\"relative overflow-hidden bg-primary-950\"",
+        "<section className=\"border-b border-background-200/40 bg-white py-14 md:py-16\"",
+        "<section id=\"enquiry-form\" className=\"relative overflow-hidden bg-gradient-to-br from-primary-800 via-primary-700 to-primary-900 py-16 md:py-24\"",
+        "<section className=\"bg-white py-16 md:py-24\""
+      ],
+      "components": [
+        "ContactForm",
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [
+        "enquiry-form"
+      ],
+      "links": [
+        "#enquiry-form",
+        "mailto:info@collegeofprojectcontrols.com",
+        "https://www.google.com/maps/search/?api=1&query=Kent+Business+College+Kent+England",
+        "mailto:info@collegeofprojectcontrols.com",
+        "#enquiry-form",
+        "/book-a-session",
+        "mailto:info@collegeofprojectcontrols.com"
+      ]
+    },
+    {
+      "file": "pages/employer-agreement/page.tsx",
+      "lines": 75,
+      "imports": [
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 49,
+          "text": "Employer Agreement"
+        }
+      ],
+      "sections": [
+        "<section className=\"hero-image-documents relative flex min-h-[90vh] items-center overflow-hidden bg-primary-700\"",
+        "<section className=\"bg-background-50 py-10 md:py-14\""
+      ],
+      "components": [
+        "HTMLIFrameElement",
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [
+        "ziframe_272239"
+      ],
+      "links": []
+    },
+    {
+      "file": "pages/employers/page.tsx",
+      "lines": 122,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/PageSectionNav.tsx",
+        "components/base/SectionHeading.tsx"
+      ],
+      "headings": [
+        {
+          "line": 93,
+          "text": "{item.title}"
+        },
+        {
+          "line": 99,
+          "text": "Build project controls capability that shows up at work."
+        },
+        {
+          "line": 103,
+          "text": "{s.title}"
+        },
+        {
+          "line": 105,
+          "text": "{a.title}"
+        },
+        {
+          "line": 105,
+          "text": "Not sure which project controls route fits the role?"
+        },
+        {
+          "line": 106,
+          "text": "Turn development into something the business can use."
+        },
+        {
+          "line": 110,
+          "text": "See how learning translates into workplace development."
+        },
+        {
+          "line": 111,
+          "text": "Built for project-driven organisations"
+        },
+        {
+          "line": 113,
+          "text": "setOpenFaq(openFaq === i ? null : i)} aria-expanded={openFaq === i} aria-controls={`faq-${i}`} className=\"flex w-full items-center justify-between gap-5 px-5 py-4 text-left text-sm font-bold hover:bg-background-50 md:text-base\"> {q}"
+        },
+        {
+          "line": 114,
+          "text": "Tell us what capability you need to build."
+        },
+        {
+          "line": 114,
+          "text": "Get in touch below"
+        }
+      ],
+      "sections": [
+        "<section id=\"hero\" className=\"relative flex min-h-[90vh] flex-col justify-center overflow-hidden bg-primary-700 pb-20 pt-32 text-white md:pb-24 md:pt-40\"",
+        "<section id=\"overview\" className=\"bg-white py-16 md:py-24\"",
+        "<section id=\"employer-needs\" className=\"py-16 md:py-24\"",
+        "<section id=\"how-it-works\" className=\"bg-white py-16 md:py-24\"",
+        "<section id=\"progress\" className=\"py-16 md:py-24\"",
+        "<section id=\"programmes\" className=\"bg-primary-700 py-16 text-white md:py-24\"",
+        "<section className=\"bg-white py-16 md:py-24\"",
+        "<section id=\"funding\" className=\"py-16 md:py-24\"",
+        "<section id=\"responsibilities\" className=\"bg-white py-16 md:py-24\"",
+        "<section id=\"workforce-services\" className=\"py-16 md:py-24\"",
+        "<section id=\"stories\" className=\"bg-secondary-500 py-16 text-white\"",
+        "<section className=\"bg-white py-14\"",
+        "<section id=\"resources\" className=\"py-16 md:py-24\"",
+        "<section id=\"faq\" className=\"bg-white py-16 md:py-24\"",
+        "<section id=\"consultation\" className=\"relative overflow-hidden bg-primary-700 py-16 text-white md:py-24\""
+      ],
+      "components": [
+        "PageSectionNav",
+        "SectionHeading",
+        "CardGrid",
+        "Footer"
+      ],
+      "section_titles": [
+        "Training should solve a workforce need, not simply deliver a qualification.",
+        "We start with the role, the employee and the capability your organisation needs. Training is then aligned with workplace responsibilities so that learning can be applied, evidenced and reviewed throughout the programme.",
+        "What are you trying to achieve?",
+        "Choose the situation closest to your organisation. We will help you identify the most appropriate next step.",
+        "From workforce need to measurable development",
+        "Know how your employee is progressing, not just that they are enrolled.",
+        "Employer involvement continues throughout the learning journey. Structured progress reviews help connect training with performance, workplace application and future development.",
+        "Build capability where your project environment needs it most.",
+        "Our pathways combine structured professional learning with direct application across project management, project controls, PMO and governance responsibilities.",
+        "Understand the funding route before you commit.",
+        "Apprenticeship funding depends on the programme, employee, employer, available funds and the rules applicable to the intended start date. KBC reviews the funding position before enrolment so that the employer understands the agreed training cost and funding route.",
+        "What we need from the employer",
+        "Strong work-based development depends on active employer involvement.",
+        "Understand and strengthen your project controls function.",
+        "Start with the roles, controls disciplines and project environment before deciding how development should be structured.",
+        "Employer resources in one place",
+        "Questions employers usually ask before starting"
+      ],
+      "ids": [
+        "hero",
+        "overview",
+        "employer-needs",
+        "how-it-works",
+        "progress",
+        "programmes",
+        "funding",
+        "responsibilities",
+        "workforce-services",
+        "stories",
+        "resources",
+        "faq",
+        "consultation"
+      ],
+      "links": [
+        "#consultation",
+        "#programmes",
+        "#consultation",
+        "#programmes",
+        "/associate-project-manager-level-4",
+        "/project-controls-professional-level-6",
+        "/project-controls-professional/pmo-governance-route",
+        "https://employer.kentbusinesscollege.net/",
+        "https://kentbusinesscollege.com/employer-agreement/",
+        "#progress",
+        "/knowledge-hub/employer-apprenticeship-funding",
+        "https://kentbusinesscollege.com/safeguarding-handbook/",
+        "#consultation",
+        "#programmes",
+        "https://employer.kentbusinesscollege.net/",
+        "/employer-agreement",
+        "#consultation",
+        "#resources",
+        "https://employer.kentbusinesscollege.net/",
+        "#consultation",
+        "/knowledge-hub/employer-apprenticeship-funding",
+        "/testimonials",
+        "/book-a-session",
+        "mailto:info@collegeofprojectcontrols.com?subject=Employer%20partnership%20enquiry",
+        "https://employer.kentbusinesscollege.net/",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/events/page.tsx",
+      "lines": 101,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/Breadcrumbs.tsx",
+        "components/feature/SchemaOrg.tsx",
+        "components/base/Skeleton.tsx",
+        "services/eventsApi.ts",
+        "components/feature/EditorialPageHero.tsx"
+      ],
+      "headings": [
+        {
+          "line": 29,
+          "text": "{event.title}"
+        }
+      ],
+      "sections": [
+        "<section className=\"bg-background-50 py-14 md:py-20\""
+      ],
+      "components": [
+        "EventItem",
+        "SchemaOrg",
+        "EditorialPageHero",
+        "Breadcrumbs",
+        "SkeletonCard",
+        "EventCard",
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/",
+        "/contact"
+      ]
+    },
+    {
+      "file": "pages/faq/page.tsx",
+      "lines": 163,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/EditorialPageHero.tsx"
+      ],
+      "headings": [
+        {
+          "line": 133,
+          "text": "{activeCategory.label}"
+        },
+        {
+          "line": 139,
+          "text": "{item.question}"
+        },
+        {
+          "line": 153,
+          "text": "Talk through your role, programme or funding position."
+        }
+      ],
+      "sections": [
+        "<section className=\"border-b border-background-200 bg-white py-5 md:hidden\"",
+        "<section className=\"py-14 md:py-20\"",
+        "<section className=\"border-t border-background-200 bg-white py-12 md:py-16\""
+      ],
+      "components": [
+        "EditorialPageHero",
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [
+        "faq-category"
+      ],
+      "links": [
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/governance-board/page.tsx",
+      "lines": 293,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/SchemaOrg.tsx",
+        "components/feature/EditorialPageHero.tsx"
+      ],
+      "headings": [
+        {
+          "line": 87,
+          "text": "A strategic body supporting institutional excellence"
+        },
+        {
+          "line": 107,
+          "text": "{pillar.title}"
+        },
+        {
+          "line": 120,
+          "text": "Contribute your expertise where it matters"
+        },
+        {
+          "line": 126,
+          "text": "{item.title}"
+        },
+        {
+          "line": 139,
+          "text": "Responsibilities of Governance Board members"
+        },
+        {
+          "line": 147,
+          "text": "{item.title}"
+        },
+        {
+          "line": 160,
+          "text": "A meaningful commitment with strategic impact"
+        },
+        {
+          "line": 180,
+          "text": "We welcome expertise across key areas of governance"
+        },
+        {
+          "line": 186,
+          "text": "{item.title}"
+        },
+        {
+          "line": 200,
+          "text": "Who we are looking for"
+        },
+        {
+          "line": 224,
+          "text": "Our approach to governance"
+        },
+        {
+          "line": 232,
+          "text": "{item.title}"
+        },
+        {
+          "line": 245,
+          "text": "Submit Your Expression of Interest"
+        },
+        {
+          "line": 266,
+          "text": "If you have strategic experience and a commitment to supporting educational excellence, we welcome your expression of interest."
+        }
+      ],
+      "sections": [
+        "<section id=\"about\" className=\"bg-white py-16 md:py-24\" aria-labelledby=\"about-title\"",
+        "<section id=\"why-join\" className=\"bg-background-50 py-16 md:py-24\" aria-labelledby=\"why-join-title\"",
+        "<section id=\"responsibilities\" className=\"bg-white py-16 md:py-24\" aria-labelledby=\"responsibilities-title\"",
+        "<section id=\"commitment\" className=\"bg-secondary-600 py-16 text-white md:py-24\" aria-labelledby=\"commitment-title\"",
+        "<section id=\"expertise\" className=\"bg-white py-16 md:py-24\" aria-labelledby=\"expertise-title\"",
+        "<section id=\"profile\" className=\"bg-background-50 py-16 md:py-24\" aria-labelledby=\"profile-title\"",
+        "<section id=\"principles\" className=\"bg-white py-16 md:py-24\" aria-labelledby=\"principles-title\"",
+        "<section id=\"eoi-form\" className=\"bg-background-50 py-16 md:py-24\" aria-labelledby=\"eoi-title\"",
+        "<section className=\"bg-highlight-500 py-14 md:py-16\""
+      ],
+      "components": [
+        "SchemaOrg",
+        "EditorialPageHero",
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [
+        "about",
+        "about-title",
+        "why-join",
+        "why-join-title",
+        "responsibilities",
+        "responsibilities-title",
+        "commitment",
+        "commitment-title",
+        "expertise",
+        "expertise-title",
+        "profile",
+        "profile-title",
+        "principles",
+        "principles-title",
+        "eoi-form",
+        "eoi-title"
+      ],
+      "links": [
+        "#eoi-form",
+        "#about",
+        "#eoi-form"
+      ]
+    },
+    {
+      "file": "pages/home/components/CompactHero.tsx",
+      "lines": 116,
+      "imports": [],
+      "headings": [
+        {
+          "line": 34,
+          "text": "Lead projects with clarity, control and confidence"
+        }
+      ],
+      "sections": [
+        "<section className=\"hero-align-left relative isolate flex min-h-[90vh] w-full items-center overflow-hidden bg-secondary-950 pt-16 md:pt-[72px]\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "#programmes",
+        "/College_of_Project_Controls_and_Management_Catalogue.pdf",
+        "/knowledge-hub/employer-apprenticeship-funding"
+      ]
+    },
+    {
+      "file": "pages/home/components/EventsConsultation.tsx",
+      "lines": 137,
+      "imports": [],
+      "headings": [
+        {
+          "line": 30,
+          "text": "Meet the people behind the learning"
+        },
+        {
+          "line": 54,
+          "text": "Explore specialist Project Controls topics"
+        },
+        {
+          "line": 96,
+          "text": "Speak with the College"
+        }
+      ],
+      "sections": [
+        "<section id=\"events\" className=\"py-16 md:py-20 bg-[#F5F8F9] relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement"
+      ],
+      "section_titles": [],
+      "ids": [
+        "events"
+      ],
+      "links": [
+        "/events",
+        "/events",
+        "/events"
+      ]
+    },
+    {
+      "file": "pages/home/components/ExperienceDifferent.tsx",
+      "lines": 184,
+      "imports": [],
+      "headings": [
+        {
+          "line": 123,
+          "text": "A complete professional-development experience"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-20 md:py-28 bg-primary-500 relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/about"
+      ]
+    },
+    {
+      "file": "pages/home/components/ForEmployers.tsx",
+      "lines": 140,
+      "imports": [],
+      "headings": [
+        {
+          "line": 51,
+          "text": "Build Project Controls capability across your organisation"
+        }
+      ],
+      "sections": [
+        "<section id=\"employers\" className=\"py-16 md:py-24 bg-background-50 relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement"
+      ],
+      "section_titles": [],
+      "ids": [
+        "employers"
+      ],
+      "links": [
+        "/employers",
+        "/contact",
+        "/employers"
+      ]
+    },
+    {
+      "file": "pages/home/components/PremiumMarquee.tsx",
+      "lines": 97,
+      "imports": [
+        "services/partnersApi.ts"
+      ],
+      "headings": [],
+      "sections": [
+        "<section className=\"relative overflow-hidden border-y border-background-200 bg-white py-4\" aria-label=\"Trusted professional pathways\""
+      ],
+      "components": [
+        "LogoTile",
+        "Partner",
+        "MarqueeSet"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/home/components/ProfessionalDirection.tsx",
+      "lines": 80,
+      "imports": [],
+      "headings": [
+        {
+          "line": 40,
+          "text": "See where Project Controls development can lead"
+        },
+        {
+          "line": 65,
+          "text": "{step.title}"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-24 bg-background-100 relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/home/components/ProgrammeCards.tsx",
+      "lines": 411,
+      "imports": [],
+      "headings": [
+        {
+          "line": 85,
+          "text": "{title}"
+        },
+        {
+          "line": 197,
+          "text": "Which programme best fits your responsibilities?"
+        },
+        {
+          "line": 291,
+          "text": "Not sure which programme fits your responsibilities?"
+        },
+        {
+          "line": 347,
+          "text": "Professional development {' '}built around real project responsibility"
+        }
+      ],
+      "sections": [
+        "<section id=\"programmes\" className=\"py-16 md:py-20 bg-background-50 relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement",
+        "ProgrammeCard",
+        "ProgrammeComparisonTable",
+        "ProgrammeGuidance"
+      ],
+      "section_titles": [
+        "Project Controls Professional Level 6",
+        "Associate Project Manager Level 4",
+        "Certified PMO Professional Level 6"
+      ],
+      "ids": [
+        "programmes"
+      ],
+      "links": [
+        "/project-controls-professional-level-6",
+        "/associate-project-manager-level-4",
+        "/pmo-pcp"
+      ]
+    },
+    {
+      "file": "pages/home/components/SectorPathways.tsx",
+      "lines": 131,
+      "imports": [
+        "services/sectorsApi.ts"
+      ],
+      "headings": [
+        {
+          "line": 35,
+          "text": "{sector.title}"
+        },
+        {
+          "line": 106,
+          "text": "Built for complex project environments"
+        }
+      ],
+      "sections": [
+        "<section id=\"sectors\" className=\"py-16 md:py-20 relative overflow-hidden\" style={{ backgroundColor: '#F5F8F9' }}"
+      ],
+      "components": [
+        "Sector",
+        "HTMLDivElement",
+        "SectorCard"
+      ],
+      "section_titles": [],
+      "ids": [
+        "sectors"
+      ],
+      "links": []
+    },
+    {
+      "file": "pages/home/components/SpecialistModules.tsx",
+      "lines": 102,
+      "imports": [],
+      "headings": [
+        {
+          "line": 52,
+          "text": "Choose the specialist capability you want to build"
+        }
+      ],
+      "sections": [
+        "<section id=\"specialist-modules\" className=\"relative overflow-hidden bg-white py-16 md:py-24\""
+      ],
+      "components": [
+        "HTMLDivElement"
+      ],
+      "section_titles": [],
+      "ids": [
+        "specialist-modules"
+      ],
+      "links": [
+        "/contact",
+        "/contact"
+      ]
+    },
+    {
+      "file": "pages/home/components/Testimonials.tsx",
+      "lines": 784,
+      "imports": [],
+      "headings": [
+        {
+          "line": 529,
+          "text": "What professionals and employers say"
+        },
+        {
+          "line": 632,
+          "text": "{cs.title}"
+        }
+      ],
+      "sections": [
+        "<section id=\"testimonials\" className=\"py-16 md:py-20 bg-background-50 relative overflow-hidden\""
+      ],
+      "components": [
+        "ReturnType",
+        "HTMLDivElement",
+        "NavArrows",
+        "PortraitCard",
+        "SpeechBubble",
+        "CounterPill",
+        "ThumbnailNav",
+        "ArrowButton",
+        "PaginationDots"
+      ],
+      "section_titles": [],
+      "ids": [
+        "testimonials"
+      ],
+      "links": [
+        "/testimonials"
+      ]
+    },
+    {
+      "file": "pages/home/page.tsx",
+      "lines": 63,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/ProfessionalOutcomes.tsx",
+        "components/feature/ProgrammeAccessSections.tsx",
+        "components/feature/CoachingSupport.tsx",
+        "pages/home/components/CompactHero.tsx",
+        "pages/home/components/ProgrammeCards.tsx",
+        "components/feature/MeetMentors.tsx",
+        "pages/home/components/ForEmployers.tsx",
+        "pages/home/components/SpecialistModules.tsx",
+        "pages/home/components/ExperienceDifferent.tsx",
+        "components/feature/ProfessionalPathwaysSection.tsx",
+        "pages/home/components/SectorPathways.tsx",
+        "pages/home/components/ProfessionalDirection.tsx",
+        "components/feature/ProfessionalRecognitionSection.tsx",
+        "pages/home/components/PremiumMarquee.tsx",
+        "pages/home/components/EventsConsultation.tsx",
+        "pages/home/components/Testimonials.tsx"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "CompactHero",
+        "PremiumMarquee",
+        "ProgrammeCards",
+        "SpecialistModules",
+        "ProfessionalDirection",
+        "ProfessionalPathwaysSection",
+        "SectorPathways",
+        "ExperienceDifferent",
+        "ProgrammeAccessSections",
+        "ForEmployers",
+        "MeetMentors",
+        "CoachingSupport",
+        "EventsConsultation",
+        "ProfessionalOutcomes",
+        "Testimonials",
+        "ProfessionalRecognitionSection",
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/ipc/page.tsx",
+      "lines": 79,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/SchemaOrg.tsx"
+      ],
+      "headings": [
+        {
+          "line": 46,
+          "text": "Institute of Project Controls"
+        },
+        {
+          "line": 63,
+          "text": "Professional confidence for a discipline that shapes delivery"
+        },
+        {
+          "line": 63,
+          "text": "{item.title}"
+        },
+        {
+          "line": 65,
+          "text": "One connected view of project controls"
+        },
+        {
+          "line": 67,
+          "text": "From learning to recognised practice"
+        },
+        {
+          "line": 67,
+          "text": "{title}"
+        },
+        {
+          "line": 69,
+          "text": "A profession with clear levels of recognition"
+        },
+        {
+          "line": 69,
+          "text": "{item.grade}"
+        },
+        {
+          "line": 71,
+          "text": "Frequently asked questions"
+        },
+        {
+          "line": 71,
+          "text": "{q}"
+        },
+        {
+          "line": 73,
+          "text": "Connect learning, workplace impact and professional recognition"
+        }
+      ],
+      "sections": [
+        "<section className=\"hero-image-documents relative flex min-h-[90vh] items-center overflow-hidden bg-[#080D10] py-20 text-white md:py-28 lg:py-32\"",
+        "<section className=\"border-b border-background-200 bg-white py-7\"",
+        "<section className=\"py-16 md:py-24\"",
+        "<section id=\"framework\" className=\"bg-primary-950 py-16 text-white md:py-24\"",
+        "<section className=\"bg-white py-16 md:py-24\"",
+        "<section id=\"membership\" className=\"py-16 md:py-24\"",
+        "<section className=\"py-16 md:py-24\"",
+        "<section className=\"bg-[#080D10] py-16 text-center text-white md:py-20\""
+      ],
+      "components": [
+        "SchemaOrg",
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [
+        "framework",
+        "membership"
+      ],
+      "links": [
+        "https://instituteofprojectcontrols.com",
+        "#framework",
+        "https://instituteofprojectcontrols.com",
+        "/programmes",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/knowledge-hub/apm-chpp-readiness.tsx",
+      "lines": 149,
+      "imports": [
+        "components/feature/ArticleLayout.tsx",
+        "components/feature/ArticleCta.tsx",
+        "components/feature/RelatedArticles.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 84,
+          "text": "Honesty About Professional Recognition Matters"
+        },
+        {
+          "line": 89,
+          "text": "What Is APM ChPP?"
+        },
+        {
+          "line": 94,
+          "text": "What 'ChPP Readiness Support' Means"
+        },
+        {
+          "line": 106,
+          "text": "What ChPP Readiness Support Does NOT Guarantee"
+        },
+        {
+          "line": 117,
+          "text": "Why ChPP Readiness Matters Even Without a Guarantee"
+        },
+        {
+          "line": 131,
+          "text": "KBC Compliance Note"
+        },
+        {
+          "line": 136,
+          "text": "Next Steps"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "ArticleLayout",
+        "ArticleCta",
+        "PcpFaqSection",
+        "RelatedArticles",
+        "Footer"
+      ],
+      "section_titles": [
+        "A clear, honest explanation of how APM Chartered Project Professional pathway support works within the PCP programme — what is included, how it helps and the important limits every learner and employer should understand.",
+        "Explore APM ChPP Readiness Support",
+        "ChPP Readiness: Questions Answered Honestly"
+      ],
+      "ids": [],
+      "links": [
+        "/knowledge-hub/what-is-pcp-apprenticeship",
+        "/knowledge-hub/pcp-vs-pmp",
+        "/knowledge-hub/strategic-vs-operational",
+        "/pcp-master#consultation",
+        "/pcp-master#eligibility",
+        "/strategic-pcp",
+        "/operational-pcp",
+        "/pmo-pcp"
+      ]
+    },
+    {
+      "file": "pages/knowledge-hub/commercial-routes-explained.tsx",
+      "lines": 191,
+      "imports": [
+        "components/feature/ArticleLayout.tsx",
+        "components/feature/ArticleCta.tsx",
+        "components/feature/RelatedArticles.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 89,
+          "text": "Not Eligible for Apprenticeship Funding? You Still Deserve Professional Project Controls Development."
+        },
+        {
+          "line": 97,
+          "text": "Who the Commercial Route Is For"
+        },
+        {
+          "line": 109,
+          "text": "What the Commercial Route Includes"
+        },
+        {
+          "line": 122,
+          "text": "Payment Options: Making the Commercial Route Accessible"
+        },
+        {
+          "line": 135,
+          "text": "Commercial Route vs Apprenticeship Route: Key Differences"
+        },
+        {
+          "line": 180,
+          "text": "Taking the Next Step"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "ArticleLayout",
+        "ArticleCta",
+        "PcpFaqSection",
+        "RelatedArticles",
+        "Footer"
+      ],
+      "section_titles": [
+        "If apprenticeship funding is not available for your situation, the commercial route still gives you access to professional project controls development, with discretionary KBC bursary options and interest-free instalments where available.",
+        "Explore the Commercial Route",
+        "Commercial Route: Common Questions"
+      ],
+      "ids": [],
+      "links": [
+        "/knowledge-hub/what-is-pcp-apprenticeship",
+        "/knowledge-hub/funded-pcp-employer-guide",
+        "/knowledge-hub/pcp-vs-pmp",
+        "/pcp-master#consultation",
+        "/campaign/commercial-route",
+        "/campaign/commercial-route"
+      ]
+    },
+    {
+      "file": "pages/knowledge-hub/construction-training.tsx",
+      "lines": 152,
+      "imports": [
+        "components/feature/ArticleLayout.tsx",
+        "components/feature/ArticleCta.tsx",
+        "components/feature/RelatedArticles.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 85,
+          "text": "Stop Letting Schedule Delays and Cost Drift Become Normal"
+        },
+        {
+          "line": 90,
+          "text": "Why Construction Needs Stronger Project Controls"
+        },
+        {
+          "line": 105,
+          "text": "What the Construction PCP Route Delivers"
+        },
+        {
+          "line": 117,
+          "text": "Who This Is For"
+        },
+        {
+          "line": 129,
+          "text": "Employer Value: Build Capability Your Construction Business Cannot Afford to Be Without"
+        },
+        {
+          "line": 141,
+          "text": "Funding: Funding Subject to Eligibility"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "ArticleLayout",
+        "ArticleCta",
+        "PcpFaqSection",
+        "RelatedArticles",
+        "Footer"
+      ],
+      "section_titles": [
+        "Sector-specific guidance for construction employers, planners, schedulers, commercial teams and NEC project professionals who need stronger planning discipline, cost visibility, change control and progress reporting capability.",
+        "Check Construction Route Eligibility",
+        "Construction Project Controls: Common Questions"
+      ],
+      "ids": [],
+      "links": [
+        "/knowledge-hub/what-is-pcp-apprenticeship",
+        "/knowledge-hub/strategic-vs-operational",
+        "/knowledge-hub/energy-training",
+        "/pcp-master#eligibility",
+        "/pcp-master#consultation",
+        "/operational-pcp-construction"
+      ]
+    },
+    {
+      "file": "pages/knowledge-hub/employer-apprenticeship-funding.tsx",
+      "lines": 178,
+      "imports": [
+        "components/feature/ArticleLayout.tsx",
+        "components/feature/ArticleCta.tsx",
+        "components/feature/RelatedArticles.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 89,
+          "text": "Use Apprenticeship Funding to Build Project Controls Capability Your Business Can Actually Measure"
+        },
+        {
+          "line": 97,
+          "text": "Step 1: Understand Your Funding Position"
+        },
+        {
+          "line": 133,
+          "text": "Step 2: Identify Where Project Controls Capability Matters Most"
+        },
+        {
+          "line": 145,
+          "text": "Step 3: Choose the Right PCP Route for Your Team"
+        },
+        {
+          "line": 157,
+          "text": "Step 4: Plan Your Cohort"
+        },
+        {
+          "line": 165,
+          "text": "Step 5: Make the Business Case"
+        },
+        {
+          "line": 170,
+          "text": "Take the Next Step"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "ArticleLayout",
+        "ArticleCta",
+        "PcpFaqSection",
+        "RelatedArticles",
+        "Footer"
+      ],
+      "section_titles": [
+        "A practical guide for HR Directors, L&D Managers, Heads of PMO and senior leaders who want to leverage apprenticeship funding to develop measurable project controls capability across their organisation.",
+        "Check Your Organisation",
+        "Employer Funding: Common Questions"
+      ],
+      "ids": [],
+      "links": [
+        "/knowledge-hub/funded-pcp-employer-guide",
+        "/knowledge-hub/what-is-pcp-apprenticeship",
+        "/knowledge-hub/pmo-governance-training",
+        "/pcp-master#eligibility",
+        "/pcp-master#consultation"
+      ]
+    },
+    {
+      "file": "pages/knowledge-hub/energy-training.tsx",
+      "lines": 136,
+      "imports": [
+        "components/feature/ArticleLayout.tsx",
+        "components/feature/ArticleCta.tsx",
+        "components/feature/RelatedArticles.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 85,
+          "text": "For Capital Programmes Where Weak Controls Are Too Expensive to Ignore"
+        },
+        {
+          "line": 90,
+          "text": "Why Energy and Capital Programmes Need Stronger Controls"
+        },
+        {
+          "line": 105,
+          "text": "Who This Is For"
+        },
+        {
+          "line": 117,
+          "text": "The Net Zero Dimension"
+        },
+        {
+          "line": 125,
+          "text": "Funding: Funding Subject to Eligibility"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "ArticleLayout",
+        "ArticleCta",
+        "PcpFaqSection",
+        "RelatedArticles",
+        "Footer"
+      ],
+      "section_titles": [
+        "Sector-specific guidance for energy, oil and gas, utilities and capital programme teams who need stronger baseline control, risk visibility, cost assurance, outage planning and governance confidence for complex delivery environments.",
+        "Explore the Energy Project Controls Route",
+        "Energy Project Controls: Common Questions"
+      ],
+      "ids": [],
+      "links": [
+        "/knowledge-hub/what-is-pcp-apprenticeship",
+        "/knowledge-hub/construction-training",
+        "/knowledge-hub/funded-pcp-employer-guide",
+        "/operational-pcp-energy",
+        "/pcp-master#eligibility",
+        "/operational-pcp-energy"
+      ]
+    },
+    {
+      "file": "pages/knowledge-hub/funded-pcp-employer-guide.tsx",
+      "lines": 169,
+      "imports": [
+        "components/feature/ArticleLayout.tsx",
+        "components/feature/ArticleCta.tsx",
+        "components/feature/RelatedArticles.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 89,
+          "text": "Use Apprenticeship Funding to Build Project Controls Capability Your Business Can Actually Measure"
+        },
+        {
+          "line": 97,
+          "text": "How Apprenticeship Funding Works"
+        },
+        {
+          "line": 112,
+          "text": "What the Funding Covers"
+        },
+        {
+          "line": 128,
+          "text": "Employer Eligibility"
+        },
+        {
+          "line": 140,
+          "text": "The Employer Value: What Better Project Controls Capability Saves Your Organisation"
+        },
+        {
+          "line": 152,
+          "text": "Making the Business Case"
+        },
+        {
+          "line": 160,
+          "text": "Download the Employer Guide"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "ArticleLayout",
+        "ArticleCta",
+        "PcpFaqSection",
+        "RelatedArticles",
+        "Footer"
+      ],
+      "section_titles": [
+        "A practical guide for HR Directors, L&D Managers, Heads of PMO and senior leaders who want to understand funding eligibility, levy rules, employer value and the measurable capability benefits of the Level 6 Project Controls Professional apprenticeship.",
+        "Check Your Organisation",
+        "Funding Questions Employers Ask"
+      ],
+      "ids": [],
+      "links": [
+        "/knowledge-hub/what-is-pcp-apprenticeship",
+        "/knowledge-hub/employer-apprenticeship-funding",
+        "/knowledge-hub/commercial-routes-explained",
+        "/pcp-master#eligibility",
+        "/pcp-master#consultation",
+        "/pcp-master#lead-magnet"
+      ]
+    },
+    {
+      "file": "pages/knowledge-hub/page.tsx",
+      "lines": 316,
+      "imports": [
+        "components/base/SectionHeading.tsx",
+        "components/feature/Footer.tsx",
+        "components/feature/PcpComplianceNote.tsx",
+        "components/feature/StickyCta.tsx",
+        "components/feature/Breadcrumbs.tsx",
+        "components/feature/SchemaOrg.tsx",
+        "components/base/Skeleton.tsx",
+        "data/articles.ts",
+        "components/feature/EditorialPageHero.tsx"
+      ],
+      "headings": [
+        {
+          "line": 50,
+          "text": "{title}"
+        },
+        {
+          "line": 77,
+          "text": "{article.title}"
+        },
+        {
+          "line": 283,
+          "text": "Ready to Find Your Best Route?"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-14 md:py-20 bg-background-50\"",
+        "<section className=\"py-14 md:py-20 bg-background-100\"",
+        "<section id=\"funding-guides\" className=\"py-14 md:py-20 bg-background-50\"",
+        "<section id=\"route-comparisons\" className=\"py-14 md:py-20 bg-background-100\"",
+        "<section id=\"sector-guides\" className=\"py-14 md:py-20 bg-background-50\"",
+        "<section id=\"chpp-readiness\" className=\"py-14 md:py-20 bg-background-100\"",
+        "<section id=\"employer-guides\" className=\"py-14 md:py-20 bg-background-50\"",
+        "<section className=\"py-14 md:py-20 bg-secondary-900\""
+      ],
+      "components": [
+        "EditorialPageHero",
+        "SchemaOrg",
+        "HeroSection",
+        "Breadcrumbs",
+        "SectionHeading",
+        "SkeletonCategoryCard",
+        "CategoryCard",
+        "SkeletonArticleCard",
+        "ArticleCard",
+        "PcpComplianceNote",
+        "Footer",
+        "StickyCta"
+      ],
+      "section_titles": [
+        "Find the Insight You Need",
+        "Five knowledge categories built around the questions HR, L&D, PMO and project controls professionals actually ask.",
+        "Start Here",
+        "These three articles answer the questions most employers and professionals ask first.",
+        "Funding Guides",
+        "Clear, honest information about apprenticeship funding options, employer eligibility, apprenticeship funding, levy and non-levy employers and commercial alternatives.",
+        "Route Comparisons",
+        "Honest comparisons between Project Controls Professional Level 6, PMP, APM PMQ, PMO training, strategic routes, operational routes and commercial routes.",
+        "Sector Guides",
+        "Sector-specific project controls training guidance for construction, energy, oil and gas, utilities, public sector, councils, engineering, manufacturing and aerospace.",
+        "APM ChPP Readiness",
+        "Understand how APM Chartered Project Professional pathway support works, including professional evidence, reflective practice and CPD readiness.",
+        "Employer Decision Guides",
+        "For HR, L&D, Heads of PMO and senior leaders who need to understand employer value, capability building, ROI and governance maturity."
+      ],
+      "ids": [
+        "funding-guides",
+        "route-comparisons",
+        "sector-guides",
+        "chpp-readiness",
+        "employer-guides"
+      ],
+      "links": [
+        "/knowledge-hub/funded-pcp-employer-guide",
+        "/project-controls-professional-level-6",
+        "https://collegeofprojectcontrols.com/knowledge-hub",
+        "/",
+        "/project-controls-professional-level-6#consultation",
+        "/project-controls-professional-level-6#eligibility"
+      ]
+    },
+    {
+      "file": "pages/knowledge-hub/pcp-vs-pmp.tsx",
+      "lines": 202,
+      "imports": [
+        "components/feature/ArticleLayout.tsx",
+        "components/feature/ArticleCta.tsx",
+        "components/feature/RelatedArticles.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 88,
+          "text": "Two Different Paths. Two Different Purposes."
+        },
+        {
+          "line": 93,
+          "text": "Side-by-Side Comparison"
+        },
+        {
+          "line": 159,
+          "text": "When the PCP Level 6 Is the Better Choice"
+        },
+        {
+          "line": 172,
+          "text": "When PMP May Be the Better Choice"
+        },
+        {
+          "line": 184,
+          "text": "What About the Commercial PCP Route?"
+        },
+        {
+          "line": 191,
+          "text": "The Bottom Line"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "ArticleLayout",
+        "ArticleCta",
+        "PcpFaqSection",
+        "RelatedArticles",
+        "Footer"
+      ],
+      "section_titles": [
+        "An honest, practical comparison of the UK Level 6 Project Controls Professional apprenticeship and the PMP certification, covering structure, cost, funding, professional recognition, employer value and career outcomes.",
+        "Not Sure Which Route Fits You?",
+        "PCP vs PMP: Common Questions"
+      ],
+      "ids": [],
+      "links": [
+        "/knowledge-hub/what-is-pcp-apprenticeship",
+        "/knowledge-hub/strategic-vs-operational",
+        "/knowledge-hub/apm-chpp-readiness",
+        "/pcp-master#routes",
+        "/pcp-master#consultation",
+        "/campaign/commercial-route"
+      ]
+    },
+    {
+      "file": "pages/knowledge-hub/pmo-governance-training.tsx",
+      "lines": 156,
+      "imports": [
+        "components/feature/ArticleLayout.tsx",
+        "components/feature/ArticleCta.tsx",
+        "components/feature/RelatedArticles.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 84,
+          "text": "Your PMO Does Not Need More Reports. It Needs Stronger Decision Confidence."
+        },
+        {
+          "line": 89,
+          "text": "The PMO Reporting Problem"
+        },
+        {
+          "line": 117,
+          "text": "What the PMO & Governance PCP Route Develops"
+        },
+        {
+          "line": 129,
+          "text": "Who This Is For"
+        },
+        {
+          "line": 140,
+          "text": "APM Recognition"
+        },
+        {
+          "line": 145,
+          "text": "The Employer Case for PMO Capability Investment"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "ArticleLayout",
+        "ArticleCta",
+        "PcpFaqSection",
+        "RelatedArticles",
+        "Footer"
+      ],
+      "section_titles": [
+        "How PMO teams can move from reporting what happened to providing the governance insight, portfolio visibility and decision confidence that senior leaders, boards and regulators actually need.",
+        "Discuss the PMO Route",
+        "PMO Governance: Common Questions"
+      ],
+      "ids": [],
+      "links": [
+        "/knowledge-hub/strategic-vs-operational",
+        "/knowledge-hub/what-is-pcp-apprenticeship",
+        "/knowledge-hub/employer-apprenticeship-funding",
+        "/pcp-master#consultation",
+        "/pmo-pcp",
+        "/pmo-pcp"
+      ]
+    },
+    {
+      "file": "pages/knowledge-hub/strategic-vs-operational.tsx",
+      "lines": 151,
+      "imports": [
+        "components/feature/ArticleLayout.tsx",
+        "components/feature/ArticleCta.tsx",
+        "components/feature/RelatedArticles.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 84,
+          "text": "Two Pathways. One Professional Standard. Different Career Outcomes."
+        },
+        {
+          "line": 89,
+          "text": "Strategic Project Controls: Leadership-Grade Capability"
+        },
+        {
+          "line": 108,
+          "text": "Operational Project Controls: Delivery-Grade Capability"
+        },
+        {
+          "line": 127,
+          "text": "Strategic + Operational: The Combined Route"
+        },
+        {
+          "line": 135,
+          "text": "Making Your Choice"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "ArticleLayout",
+        "ArticleCta",
+        "PcpFaqSection",
+        "RelatedArticles",
+        "Footer"
+      ],
+      "section_titles": [
+        "Understand the difference between strategic and operational project controls — two distinct but complementary professional pathways. Choose the route that fits your current role, your sector and your next career move.",
+        "Find Your Best Route",
+        "Strategic vs Operational: Common Questions"
+      ],
+      "ids": [],
+      "links": [
+        "/knowledge-hub/what-is-pcp-apprenticeship",
+        "/knowledge-hub/pcp-vs-pmp",
+        "/knowledge-hub/pmo-governance-training",
+        "/pcp-master#routes",
+        "/pcp-master#consultation",
+        "/strategic-pcp",
+        "/operational-pcp",
+        "/strategic-operational-pcp"
+      ]
+    },
+    {
+      "file": "pages/knowledge-hub/what-is-pcp-apprenticeship.tsx",
+      "lines": 174,
+      "imports": [
+        "components/feature/ArticleLayout.tsx",
+        "components/feature/ArticleCta.tsx",
+        "components/feature/RelatedArticles.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 88,
+          "text": "What Is the Level 6 Project Controls Professional Apprenticeship?"
+        },
+        {
+          "line": 96,
+          "text": "Programme Structure"
+        },
+        {
+          "line": 111,
+          "text": "Who Is This For?"
+        },
+        {
+          "line": 122,
+          "text": "Funding: Funding Subject to Eligibility"
+        },
+        {
+          "line": 130,
+          "text": "Professional Recognition and APM ChPP Readiness"
+        },
+        {
+          "line": 135,
+          "text": "What Makes This Different from a Normal Project Management Qualification?"
+        },
+        {
+          "line": 149,
+          "text": "Employer Value"
+        },
+        {
+          "line": 154,
+          "text": "Next Steps"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "ArticleLayout",
+        "ArticleCta",
+        "PcpFaqSection",
+        "RelatedArticles",
+        "Footer"
+      ],
+      "section_titles": [
+        "Everything employers and professionals need to know about the Level 6 Project Controls Professional apprenticeship, including programme structure, eligibility, funding, career outcomes and professional recognition support.",
+        "Ready to Explore the PCP Route?",
+        "Common Questions About the PCP Apprenticeship"
+      ],
+      "ids": [],
+      "links": [
+        "/knowledge-hub/funded-pcp-employer-guide",
+        "/knowledge-hub/strategic-vs-operational",
+        "/knowledge-hub/apm-chpp-readiness",
+        "/pcp-master#eligibility",
+        "/pcp-master#routes",
+        "/pcp-master",
+        "/strategic-pcp",
+        "/operational-pcp",
+        "/strategic-operational-pcp",
+        "/pmo-pcp",
+        "/operational-pcp-construction",
+        "/operational-pcp-energy",
+        "/operational-pcp-public-sector",
+        "/campaign/commercial-route"
+      ]
+    },
+    {
+      "file": "pages/legal/LegalPage.tsx",
+      "lines": 95,
+      "imports": [
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 71,
+          "text": "{content.title}"
+        },
+        {
+          "line": 83,
+          "text": "{section.heading}"
+        }
+      ],
+      "sections": [
+        "<section className=\"container-site max-w-4xl py-16 md:py-24\""
+      ],
+      "components": [
+        "LegalPageKey",
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/mentors/detail.tsx",
+      "lines": 96,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "services/mentorsApi.ts"
+      ],
+      "headings": [
+        {
+          "line": 26,
+          "text": "This mentor profile is not available"
+        },
+        {
+          "line": 65,
+          "text": "{mentor.name}"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "Mentor",
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/",
+        "/#mentors"
+      ]
+    },
+    {
+      "file": "pages/NotFound.tsx",
+      "lines": 29,
+      "imports": [],
+      "headings": [
+        {
+          "line": 16,
+          "text": "Let&apos;s get you back to the right route."
+        }
+      ],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/",
+        "/programmes"
+      ]
+    },
+    {
+      "file": "pages/operational-pcp/page.tsx",
+      "lines": 6,
+      "imports": [
+        "pages/programme-template/PathwayPage.tsx",
+        "pages/programme-template/pathwayData.ts"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "PathwayPage"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/operational-pcp-construction/page.tsx",
+      "lines": 329,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/StickyCta.tsx",
+        "components/feature/SchemaOrg.tsx",
+        "components/feature/RouteLanding/RouteNavbar.tsx",
+        "components/feature/RouteLanding/SectorHero.tsx",
+        "components/feature/RouteLanding/RouteCapability.tsx",
+        "components/feature/RouteLanding/RouteProblems.tsx",
+        "components/feature/RouteLanding/RouteProcess.tsx",
+        "components/feature/RouteLanding/RouteStats.tsx",
+        "components/feature/RouteLanding/RouteChoose.tsx",
+        "components/feature/RouteLanding/RouteWhoFor.tsx",
+        "components/feature/RouteLanding/RouteDevelop.tsx",
+        "components/feature/RouteLanding/RouteTestimonials.tsx",
+        "components/feature/RouteLanding/RouteFinalCta.tsx",
+        "components/feature/RouteLanding/RouteFaq.tsx",
+        "components/feature/EventsSection.tsx",
+        "services/sectorsApi.ts"
+      ],
+      "headings": [],
+      "sections": [
+        "<section className=\"py-16 md:py-20 text-center\"",
+        "<section className=\"py-8 bg-background-100\""
+      ],
+      "components": [
+        "SchemaOrg",
+        "SectorHero",
+        "RouteNavbar",
+        "RouteCapability",
+        "RouteProblems",
+        "RouteProcess",
+        "RouteStats",
+        "RouteChoose",
+        "RouteWhoFor",
+        "RouteDevelop",
+        "RouteTestimonials",
+        "EventsSection",
+        "RouteFinalCta",
+        "RouteFaq",
+        "Footer",
+        "StickyCta"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "#hero",
+        "#who-for",
+        "#eligibility",
+        "#develop",
+        "#faq",
+        "#eligibility",
+        "/commercial-project-controls-route",
+        "#",
+        "#consultation",
+        "#eligibility",
+        "https://collegeofprojectcontrols.com/project-controls-professional/construction-route",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/operational-pcp-energy/page.tsx",
+      "lines": 329,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/StickyCta.tsx",
+        "components/feature/SchemaOrg.tsx",
+        "components/feature/RouteLanding/RouteNavbar.tsx",
+        "components/feature/RouteLanding/SectorHero.tsx",
+        "components/feature/RouteLanding/RouteCapability.tsx",
+        "components/feature/RouteLanding/RouteProblems.tsx",
+        "components/feature/RouteLanding/RouteProcess.tsx",
+        "components/feature/RouteLanding/RouteStats.tsx",
+        "components/feature/RouteLanding/RouteChoose.tsx",
+        "components/feature/RouteLanding/RouteWhoFor.tsx",
+        "components/feature/RouteLanding/RouteDevelop.tsx",
+        "components/feature/RouteLanding/RouteTestimonials.tsx",
+        "components/feature/RouteLanding/RouteFinalCta.tsx",
+        "components/feature/RouteLanding/RouteFaq.tsx",
+        "components/feature/EventsSection.tsx",
+        "services/sectorsApi.ts"
+      ],
+      "headings": [],
+      "sections": [
+        "<section className=\"py-16 md:py-20 text-center\"",
+        "<section className=\"py-8 bg-background-100\""
+      ],
+      "components": [
+        "SchemaOrg",
+        "SectorHero",
+        "RouteNavbar",
+        "RouteCapability",
+        "RouteProblems",
+        "RouteProcess",
+        "RouteStats",
+        "RouteChoose",
+        "RouteWhoFor",
+        "RouteDevelop",
+        "RouteTestimonials",
+        "EventsSection",
+        "RouteFinalCta",
+        "RouteFaq",
+        "Footer",
+        "StickyCta"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "#hero",
+        "#who-for",
+        "#eligibility",
+        "#develop",
+        "#faq",
+        "#eligibility",
+        "/commercial-project-controls-route",
+        "#",
+        "#consultation",
+        "#eligibility",
+        "https://collegeofprojectcontrols.com/project-controls-professional/energy-oil-gas-utilities-route",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/operational-pcp-engineering/page.tsx",
+      "lines": 329,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/StickyCta.tsx",
+        "components/feature/SchemaOrg.tsx",
+        "components/feature/RouteLanding/RouteNavbar.tsx",
+        "components/feature/RouteLanding/SectorHero.tsx",
+        "components/feature/RouteLanding/RouteCapability.tsx",
+        "components/feature/RouteLanding/RouteProblems.tsx",
+        "components/feature/RouteLanding/RouteProcess.tsx",
+        "components/feature/RouteLanding/RouteStats.tsx",
+        "components/feature/RouteLanding/RouteChoose.tsx",
+        "components/feature/RouteLanding/RouteWhoFor.tsx",
+        "components/feature/RouteLanding/RouteDevelop.tsx",
+        "components/feature/RouteLanding/RouteTestimonials.tsx",
+        "components/feature/RouteLanding/RouteFinalCta.tsx",
+        "components/feature/RouteLanding/RouteFaq.tsx",
+        "components/feature/EventsSection.tsx",
+        "services/sectorsApi.ts"
+      ],
+      "headings": [],
+      "sections": [
+        "<section className=\"py-16 md:py-20 text-center\"",
+        "<section className=\"py-8 bg-background-100\""
+      ],
+      "components": [
+        "SchemaOrg",
+        "SectorHero",
+        "RouteNavbar",
+        "RouteCapability",
+        "RouteProblems",
+        "RouteProcess",
+        "RouteStats",
+        "RouteChoose",
+        "RouteWhoFor",
+        "RouteDevelop",
+        "RouteTestimonials",
+        "EventsSection",
+        "RouteFinalCta",
+        "RouteFaq",
+        "Footer",
+        "StickyCta"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "#hero",
+        "#who-for",
+        "#eligibility",
+        "#develop",
+        "#faq",
+        "#eligibility",
+        "/commercial-project-controls-route",
+        "#",
+        "#consultation",
+        "#eligibility",
+        "https://collegeofprojectcontrols.com/project-controls-professional/engineering-manufacturing-aerospace-route",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/operational-pcp-public-sector/page.tsx",
+      "lines": 329,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/StickyCta.tsx",
+        "components/feature/SchemaOrg.tsx",
+        "components/feature/RouteLanding/RouteNavbar.tsx",
+        "components/feature/RouteLanding/SectorHero.tsx",
+        "components/feature/RouteLanding/RouteCapability.tsx",
+        "components/feature/RouteLanding/RouteProblems.tsx",
+        "components/feature/RouteLanding/RouteProcess.tsx",
+        "components/feature/RouteLanding/RouteStats.tsx",
+        "components/feature/RouteLanding/RouteChoose.tsx",
+        "components/feature/RouteLanding/RouteWhoFor.tsx",
+        "components/feature/RouteLanding/RouteDevelop.tsx",
+        "components/feature/RouteLanding/RouteTestimonials.tsx",
+        "components/feature/RouteLanding/RouteFinalCta.tsx",
+        "components/feature/RouteLanding/RouteFaq.tsx",
+        "components/feature/EventsSection.tsx",
+        "services/sectorsApi.ts"
+      ],
+      "headings": [],
+      "sections": [
+        "<section className=\"py-16 md:py-20 text-center\"",
+        "<section className=\"py-8 bg-background-100\""
+      ],
+      "components": [
+        "SchemaOrg",
+        "SectorHero",
+        "RouteNavbar",
+        "RouteCapability",
+        "RouteProblems",
+        "RouteProcess",
+        "RouteStats",
+        "RouteChoose",
+        "RouteWhoFor",
+        "RouteDevelop",
+        "RouteTestimonials",
+        "EventsSection",
+        "RouteFinalCta",
+        "RouteFaq",
+        "Footer",
+        "StickyCta"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "#hero",
+        "#who-for",
+        "#eligibility",
+        "#develop",
+        "#faq",
+        "#eligibility",
+        "/commercial-project-controls-route",
+        "#",
+        "#consultation",
+        "#eligibility",
+        "https://collegeofprojectcontrols.com/project-controls-professional/public-sector-councils-route",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/pathway-redesign/PathwayPage.tsx",
+      "lines": 0,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/pcp-master/components/CapabilityTracks.tsx",
+      "lines": 30,
+      "imports": [
+        "components/base/SectionHeading.tsx",
+        "components/base/BenefitCard.tsx"
+      ],
+      "headings": [],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-background-50\""
+      ],
+      "components": [
+        "SectionHeading",
+        "BenefitCard"
+      ],
+      "section_titles": [
+        "Not Just a Qualification. A Capability Route Built Around Real Projects.",
+        "Each track builds a specific, measurable competence area within project controls. Develop planning, cost, risk, reporting and governance capability that your projects and organisation can see, measure and rely on every day."
+      ],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/pcp-master/components/RegisterInterestForm.tsx",
+      "lines": 38,
+      "imports": [
+        "services/enquiryApi.ts"
+      ],
+      "headings": [
+        {
+          "line": 21,
+          "text": "Interest registered"
+        }
+      ],
+      "sections": [],
+      "components": [
+        "HTMLFormElement"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/pcp-master/page.tsx",
+      "lines": 98,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/PageSectionNav.tsx",
+        "components/feature/PcpFaqSection.tsx",
+        "components/feature/SchemaOrg.tsx",
+        "components/base/SectionHeading.tsx",
+        "components/feature/MeetMentors.tsx",
+        "components/feature/ProgrammeAccessSections.tsx",
+        "components/feature/CoachingSupport.tsx",
+        "components/feature/ProfessionalPathwaysSection.tsx",
+        "pages/home/components/SectorPathways.tsx",
+        "pages/pcp-master/programmeData.ts"
+      ],
+      "headings": [
+        {
+          "line": 41,
+          "text": "Project Controls Professional Level 6"
+        },
+        {
+          "line": 53,
+          "text": "Choose your preferred cohort"
+        },
+        {
+          "line": 55,
+          "text": "Save your place on the next Project Controls cohort"
+        },
+        {
+          "line": 63,
+          "text": "{theme.title}"
+        },
+        {
+          "line": 65,
+          "text": "{group.title}"
+        },
+        {
+          "line": 67,
+          "text": "{phase.title}"
+        },
+        {
+          "line": 67,
+          "text": "Diploma Level 7 in Strategy and Leadership"
+        },
+        {
+          "line": 73,
+          "text": "{item.title}"
+        },
+        {
+          "line": 75,
+          "text": "What learners can evidence at work"
+        },
+        {
+          "line": 77,
+          "text": "{stage.title}"
+        },
+        {
+          "line": 77,
+          "text": "Assessment approach"
+        },
+        {
+          "line": 77,
+          "text": "Employer involvement"
+        },
+        {
+          "line": 79,
+          "text": "{item.title}"
+        },
+        {
+          "line": 79,
+          "text": "Monthly submissions"
+        },
+        {
+          "line": 79,
+          "text": "Coaching and reviews"
+        },
+        {
+          "line": 85,
+          "text": "{group.title}"
+        },
+        {
+          "line": 89,
+          "text": "Employer partnerships across project-driven sectors"
+        },
+        {
+          "line": 91,
+          "text": "{event.title}"
+        }
+      ],
+      "sections": [
+        "<section id=\"hero\" className=\"relative flex min-h-[90vh] flex-col justify-center overflow-hidden bg-primary-700 pb-20 pt-32 text-white md:pb-24 md:pt-40\"",
+        "<section className=\"bg-white py-14\" aria-labelledby=\"glance-title\"",
+        "<section id=\"register\" className=\"py-16 md:py-20\"",
+        "<section id=\"overview\" className=\"bg-white py-16 md:py-24\"",
+        "<section id=\"audience\" className=\"py-16 md:py-24\"",
+        "<section id=\"structure\" className=\"bg-primary-700 py-16 text-white md:py-24\"",
+        "<section id=\"cohorts\" className=\"py-16 md:py-24\"",
+        "<section id=\"outputs\" className=\"bg-secondary-500 py-16 text-white md:py-24\"",
+        "<section id=\"delivery\" className=\"bg-white py-16 md:py-24\"",
+        "<section id=\"workload\" className=\"py-16 md:py-24\"",
+        "<section id=\"benefits\" className=\"py-16 md:py-24\"",
+        "<section className=\"py-14\" aria-labelledby=\"partners-title\"",
+        "<section id=\"events\" className=\"bg-white py-16 md:py-24\"",
+        "<section id=\"next-step\" className=\"bg-secondary-500 py-16 text-white md:py-20\""
+      ],
+      "components": [
+        "SchemaOrg",
+        "PageSectionNav",
+        "SectionHeading",
+        "Bullets",
+        "ProfessionalPathwaysSection",
+        "SectorPathways",
+        "MeetMentors",
+        "CoachingSupport",
+        "ProgrammeAccessSections",
+        "PcpFaqSection",
+        "Footer"
+      ],
+      "section_titles": [
+        "From project controls practice to senior delivery confidence",
+        "Develop the ability to turn project information into reliable plans, controlled costs, credible schedules, early warnings, governance decisions and executive confidence.",
+        "For professionals who plan, control, analyse, govern and deliver projects",
+        "Relevant across engineering, infrastructure, construction, consultancy, digital transformation, marketing, business services and other project-driven organisations.",
+        "A six-credit work-based programme over 27 months",
+        "A standard credit is one four-month course. Project Management Professional is two credits over eight months.",
+        "Case studies and study materials can be tailored to your sector",
+        "Live, applied and work-based",
+        "Prepare before class, explore concepts with tutors, apply techniques in context and reflect on evidence, impact and professional judgement.",
+        "A structured weekly rhythm for working professionals",
+        "Apprenticeship learners must complete 840 off-the-job hours across the programme. Weekly live teaching is two hours.",
+        "More than a qualification",
+        "A wider support package designed around wellbeing, career direction, professional recognition and connection.",
+        "Attend an online or offline programme event",
+        "Explore pathway choices, employer funding and professional recognition before a one-to-one conversation.",
+        "Ready to choose the right Project Controls Professional Level 6 pathway?",
+        "Start with a one-to-one conversation about your current role, employer position, evidence opportunities, funding and pathway fit.",
+        "Project Controls Professional Level 6, clearly explained"
+      ],
+      "ids": [
+        "hero",
+        "glance-title",
+        "register",
+        "overview",
+        "audience",
+        "structure",
+        "cohorts",
+        "outputs",
+        "delivery",
+        "workload",
+        "teachers",
+        "benefits",
+        "partners-title",
+        "events",
+        "next-step",
+        "faq"
+      ],
+      "links": [
+        "/book-a-session",
+        "#pathways",
+        "#register",
+        "https://kentbusinesscollege.com/wp-content/uploads/2026/05/Edit-Project-Control-Professional-with-ChPP_compressed.pdf",
+        "#register",
+        "#register",
+        "/book-a-session",
+        "/book-a-session",
+        "/book-a-session",
+        "#events",
+        "mailto:office@kentbusinesscollege.org?subject=Project%20Controls%20Professional%20Level%206"
+      ]
+    },
+    {
+      "file": "pages/pcp-master/programmeData.ts",
+      "lines": 99,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/pmo-pcp/components/PmoClosingHero.tsx",
+      "lines": 39,
+      "imports": [],
+      "headings": [
+        {
+          "line": 5,
+          "text": "A PMO roadmap for better decisions."
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-24 bg-[#F5F8F9]\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "#eligibility",
+        "/commercial-project-controls-route"
+      ]
+    },
+    {
+      "file": "pages/pmo-pcp/components/PmoCommercialTeaser.tsx",
+      "lines": 100,
+      "imports": [],
+      "headings": [
+        {
+          "line": 18,
+          "text": "Want the PMO Route without apprenticeship paperwork?"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-24 bg-[#F5F8F9]\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/commercial-project-controls-route",
+        "#consultation"
+      ]
+    },
+    {
+      "file": "pages/pmo-pcp/components/PmoEditorialHero.tsx",
+      "lines": 66,
+      "imports": [],
+      "headings": [
+        {
+          "line": 24,
+          "text": "A PMO roadmap for better decisions."
+        }
+      ],
+      "sections": [
+        "<section id=\"hero\" className=\"relative isolate flex min-h-[90vh] items-center overflow-hidden bg-primary-950 pb-16 pt-32 text-white md:pb-24 md:pt-40\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [
+        "hero"
+      ],
+      "links": [
+        "#eligibility",
+        "#consultation",
+        "/PMO_Governance_Project_Controls_Professional_Catalogue.pdf",
+        "/commercial-project-controls-route"
+      ]
+    },
+    {
+      "file": "pages/pmo-pcp/components/PmoEditorialNavbar.tsx",
+      "lines": 21,
+      "imports": [
+        "components/feature/PageSectionNav.tsx"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "PageSectionNav"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "#hero",
+        "#journey",
+        "#apprenticeship",
+        "#apm",
+        "#employers",
+        "#faq",
+        "#consultation"
+      ]
+    },
+    {
+      "file": "pages/pmo-pcp/components/PmoEnquiryForm.tsx",
+      "lines": 231,
+      "imports": [
+        "services/enquiryApi.ts"
+      ],
+      "headings": [
+        {
+          "line": 51,
+          "text": "Thank You"
+        },
+        {
+          "line": 66,
+          "text": "Have any questions?"
+        }
+      ],
+      "sections": [
+        "<section id=\"consultation\" className=\"py-16 md:py-24 bg-[#F5F8F9]\"",
+        "<section id=\"consultation\" className=\"py-16 md:py-24 bg-[#F5F8F9]\""
+      ],
+      "components": [
+        "HTMLFormElement"
+      ],
+      "section_titles": [],
+      "ids": [
+        "consultation",
+        "consultation"
+      ],
+      "links": []
+    },
+    {
+      "file": "pages/pmo-pcp/components/PmoJourney.tsx",
+      "lines": 227,
+      "imports": [],
+      "headings": [
+        {
+          "line": 111,
+          "text": "Four capabilities to help your PMO become trusted."
+        },
+        {
+          "line": 165,
+          "text": "{stage.heading}"
+        }
+      ],
+      "sections": [
+        "<section id=\"journey\" className=\"py-16 md:py-24 bg-[#F5F8F9]\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [
+        "journey"
+      ],
+      "links": [
+        "#consultation"
+      ]
+    },
+    {
+      "file": "pages/pmo-pcp/components/PmoTestimonials.tsx",
+      "lines": 136,
+      "imports": [],
+      "headings": [
+        {
+          "line": 45,
+          "text": "What stronger PMO practice should enable"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-24 bg-[#F5F8F9]\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/pmo-pcp/page.tsx",
+      "lines": 636,
+      "imports": [
+        "components/feature/SchemaOrg.tsx",
+        "components/feature/Footer.tsx",
+        "components/feature/RouteLanding/RouteFaq.tsx",
+        "pages/pmo-pcp/components/PmoEditorialNavbar.tsx",
+        "pages/pmo-pcp/components/PmoEditorialHero.tsx",
+        "pages/pmo-pcp/components/PmoTestimonials.tsx",
+        "pages/pmo-pcp/components/PmoJourney.tsx",
+        "pages/pmo-pcp/components/PmoCommercialTeaser.tsx",
+        "pages/pmo-pcp/components/PmoClosingHero.tsx",
+        "components/feature/EventsSection.tsx",
+        "components/feature/MeetMentors.tsx",
+        "components/feature/ProgrammeAccessSections.tsx"
+      ],
+      "headings": [
+        {
+          "line": 200,
+          "text": "Get direction for stronger PMO capability."
+        },
+        {
+          "line": 230,
+          "text": "Discover the PMO Route"
+        },
+        {
+          "line": 262,
+          "text": "Four capabilities. One route to a PMO that leaders trust."
+        },
+        {
+          "line": 287,
+          "text": "It is time to stop asking PMOs only for reports."
+        },
+        {
+          "line": 297,
+          "text": "{card.title}"
+        },
+        {
+          "line": 312,
+          "text": "APM RECOGNITION"
+        },
+        {
+          "line": 325,
+          "text": "Recognised technical knowledge for the ChPP journey"
+        },
+        {
+          "line": 347,
+          "text": "ChPP Readiness Support"
+        },
+        {
+          "line": 356,
+          "text": "Important Chartered Status Note"
+        },
+        {
+          "line": 387,
+          "text": "Develop PMO capability inside your organisation."
+        },
+        {
+          "line": 397,
+          "text": "{item.title}"
+        },
+        {
+          "line": 417,
+          "text": "A workplace development journey, not just a course."
+        },
+        {
+          "line": 449,
+          "text": "{step.title}"
+        },
+        {
+          "line": 485,
+          "text": "PMO INSIGHTS"
+        },
+        {
+          "line": 495,
+          "text": "{insightsArticles[0].title}"
+        },
+        {
+          "line": 517,
+          "text": "{article.title}"
+        },
+        {
+          "line": 545,
+          "text": "Structured workplace development, funded where eligible."
+        },
+        {
+          "line": 561,
+          "text": "Direct access with less apprenticeship administration."
+        }
+      ],
+      "sections": [
+        "<section className=\"py-8 md:py-10 bg-[#F5F8F9]\"",
+        "<section className=\"py-16 md:py-24 bg-[#FFFFFF]\"",
+        "<section className=\"py-16 md:py-24 bg-[#FFFFFF]\"",
+        "<section className=\"py-16 md:py-24 bg-[#F5F8F9]\"",
+        "<section id=\"apm\" className=\"py-16 md:py-24 bg-[#F5F8F9]\"",
+        "<section id=\"employers\" className=\"py-16 md:py-24 bg-[#F5F8F9]\"",
+        "<section id=\"apprenticeship\" className=\"py-16 md:py-24 bg-[#F5F8F9]\"",
+        "<section className=\"py-16 md:py-24 bg-[#F5F8F9]\"",
+        "<section className=\"py-16 md:py-24 bg-[#F5F8F9]\"",
+        "<section className=\"py-16 md:py-20 text-center\""
+      ],
+      "components": [
+        "SchemaOrg",
+        "PmoEditorialHero",
+        "PmoEditorialNavbar",
+        "PmoTestimonials",
+        "EventsSection",
+        "PmoJourney",
+        "MeetMentors",
+        "ProgrammeAccessSections",
+        "PmoCommercialTeaser",
+        "RouteFaq",
+        "PmoClosingHero",
+        "Footer"
+      ],
+      "section_titles": [
+        "PMO Route frequently asked questions"
+      ],
+      "ids": [
+        "apm",
+        "employers",
+        "apprenticeship"
+      ],
+      "links": [
+        "https://collegeofprojectcontrols.com/project-controls-professional/pmo-governance-route",
+        "#eligibility",
+        "#consultation",
+        "#consultation",
+        "#consultation",
+        "#consultation",
+        "#eligibility",
+        "/knowledge-hub",
+        "/knowledge-hub",
+        "/knowledge-hub",
+        "#eligibility",
+        "/commercial-project-controls-route",
+        "/book-a-session",
+        "#eligibility",
+        "/commercial-project-controls-route"
+      ]
+    },
+    {
+      "file": "pages/programme-template/pathwayData.ts",
+      "lines": 186,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/programme-template/PathwayPage.tsx",
+      "lines": 80,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/PageSectionNav.tsx",
+        "components/feature/SchemaOrg.tsx",
+        "components/base/SectionHeading.tsx",
+        "components/feature/MeetMentors.tsx",
+        "components/feature/ProgrammeAccessSections.tsx",
+        "components/feature/CoachingSupport.tsx",
+        "pages/programme-template/pathwayData.ts"
+      ],
+      "headings": [
+        {
+          "line": 43,
+          "text": "{title}"
+        },
+        {
+          "line": 47,
+          "text": "{credit.title}"
+        },
+        {
+          "line": 48,
+          "text": "{credit.title}"
+        },
+        {
+          "line": 59,
+          "text": "{config.name}"
+        },
+        {
+          "line": 62,
+          "text": "{group.title}"
+        },
+        {
+          "line": 66,
+          "text": "{title}"
+        },
+        {
+          "line": 67,
+          "text": "{config.systemTitle}"
+        },
+        {
+          "line": 68,
+          "text": "{group.title}"
+        },
+        {
+          "line": 69,
+          "text": "{title}"
+        },
+        {
+          "line": 70,
+          "text": "{title}"
+        },
+        {
+          "line": 73,
+          "text": "{title}"
+        },
+        {
+          "line": 74,
+          "text": "{title}"
+        },
+        {
+          "line": 75,
+          "text": "{title}"
+        },
+        {
+          "line": 76,
+          "text": "{faq.q}"
+        },
+        {
+          "line": 77,
+          "text": "{config.finalTitle}"
+        }
+      ],
+      "sections": [
+        "<section id=\"overview\" className=\"py-16 md:py-24\"",
+        "<section id=\"pathway\" className=\"bg-primary-700 py-16 text-white md:py-24\"",
+        "<section id=\"credits\" className=\"bg-white py-16 md:py-24\"",
+        "<section id=\"hero\" className=\"relative flex min-h-[90vh] items-center overflow-hidden bg-primary-950 pb-16 pt-28 text-white md:pb-24 md:pt-36\"",
+        "<section aria-label=\"Programme facts\" className=\"border-b border-background-200 bg-white py-6\"",
+        "<section id=\"audience\" className=\"bg-white py-16 md:py-24\"",
+        "<section id=\"capabilities\" className=\"py-16 md:py-24\"",
+        "<section className=\"bg-secondary-600 py-16 text-white md:py-24\"",
+        "<section id=\"outputs\" className=\"bg-white py-16 md:py-24\"",
+        "<section className=\"py-16 md:py-24\"",
+        "<section id=\"learning\" className=\"bg-white py-16 md:py-24\"",
+        "<section className=\"bg-primary-700 py-16 text-white md:py-24\"",
+        "<section className=\"bg-white py-16 md:py-24\"",
+        "<section className=\"py-16 md:py-24\"",
+        "<section id=\"faq\" className=\"py-16 md:py-24\"",
+        "<section className=\"bg-secondary-600 py-16 text-white md:py-20\""
+      ],
+      "components": [
+        "PathwayConfig",
+        "SectionHeading",
+        "SchemaOrg",
+        "HeroVisual",
+        "PageSectionNav",
+        "TickList",
+        "ProgrammeAccessSections",
+        "Process",
+        "Credits",
+        "MeetMentors",
+        "CoachingSupport",
+        "Footer"
+      ],
+      "section_titles": [
+        "Understand the professional context of each credit",
+        "Open a credit for its capability, workplace application and external-award position.",
+        "Learn, apply, evidence, review, improve",
+        "Live teaching, guided learning, workplace application, coaching and professional reflection form one continuous cycle.",
+        "The complete Level 6 journey at a glance"
+      ],
+      "ids": [
+        "overview",
+        "pathway",
+        "credits",
+        "hero",
+        "audience",
+        "capabilities",
+        "outputs",
+        "learning",
+        "experts",
+        "faq"
+      ],
+      "links": [
+        "#overview",
+        "#audience",
+        "#funding",
+        "#pathway",
+        "#capabilities",
+        "#outputs",
+        "#experts",
+        "#faq",
+        "/book-a-session",
+        "#pathway",
+        "/book-a-session",
+        "/employers",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/programmes/components/EmployerSection.tsx",
+      "lines": 122,
+      "imports": [],
+      "headings": [
+        {
+          "line": 46,
+          "text": "Develop the capability your organisation actually needs"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-24 bg-background-50 relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/contact",
+        "/employers"
+      ]
+    },
+    {
+      "file": "pages/programmes/components/EventsSection.tsx",
+      "lines": 105,
+      "imports": [],
+      "headings": [
+        {
+          "line": 25,
+          "text": "Meet the people behind the programmes"
+        },
+        {
+          "line": 48,
+          "text": "Explore specialist Project Controls topics"
+        },
+        {
+          "line": 77,
+          "text": "Speak with the College"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-[#F5F8F9] relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/events",
+        "/book-a-session",
+        "/events"
+      ]
+    },
+    {
+      "file": "pages/programmes/components/HowToChoose.tsx",
+      "lines": 64,
+      "imports": [],
+      "headings": [
+        {
+          "line": 33,
+          "text": "Start with the work you are responsible for"
+        },
+        {
+          "line": 55,
+          "text": "{step.title}"
+        }
+      ],
+      "sections": [
+        "<section id=\"how-to-choose\" className=\"py-16 md:py-20 bg-background-50 relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement"
+      ],
+      "section_titles": [],
+      "ids": [
+        "how-to-choose"
+      ],
+      "links": []
+    },
+    {
+      "file": "pages/programmes/components/ProgrammeComparison.tsx",
+      "lines": 127,
+      "imports": [],
+      "headings": [
+        {
+          "line": 61,
+          "text": "Which programme best fits your responsibilities?"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-[#F5F8F9] relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "#how-to-choose"
+      ]
+    },
+    {
+      "file": "pages/programmes/components/ProgrammeFeatures.tsx",
+      "lines": 319,
+      "imports": [],
+      "headings": [
+        {
+          "line": 70,
+          "text": "Project Controls Professional Level 6"
+        },
+        {
+          "line": 188,
+          "text": "{name}"
+        },
+        {
+          "line": 263,
+          "text": "Different responsibilities require different development"
+        }
+      ],
+      "sections": [
+        "<section id=\"programmes-list\" className=\"py-16 md:py-20 bg-background-50 relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement",
+        "LargeProgrammeFeature",
+        "StandardProgrammeFeature"
+      ],
+      "section_titles": [
+        "Build stronger capability across project delivery",
+        "Develop stronger PMO governance, control and decision support"
+      ],
+      "ids": [
+        "programmes-list"
+      ],
+      "links": [
+        "/project-controls-professional-level-6",
+        "/project-controls-professional-level-6",
+        "/associate-project-manager-level-4",
+        "/pmo-pcp"
+      ]
+    },
+    {
+      "file": "pages/programmes/components/ProgrammeIntroduction.tsx",
+      "lines": 84,
+      "imports": [],
+      "headings": [
+        {
+          "line": 50,
+          "text": "Different responsibilities require different development"
+        },
+        {
+          "line": 75,
+          "text": "{point.title}"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-background-50 relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/programmes/components/ProgrammesFaq.tsx",
+      "lines": 124,
+      "imports": [],
+      "headings": [
+        {
+          "line": 102,
+          "text": "Choosing a programme, clearly explained"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-20 bg-background-100 relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement",
+        "FaqItem"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/programmes/components/ProgrammesHero.tsx",
+      "lines": 69,
+      "imports": [],
+      "headings": [
+        {
+          "line": 26,
+          "text": "Build capability around the responsibility you already hold"
+        }
+      ],
+      "sections": [
+        "<section className=\"hero-align-left relative isolate flex min-h-[90vh] w-full items-center overflow-hidden bg-secondary-950 pt-16 md:pt-[72px]\""
+      ],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "#programmes-list",
+        "/contact"
+      ]
+    },
+    {
+      "file": "pages/programmes/components/ProgrammeVsModule.tsx",
+      "lines": 180,
+      "imports": [],
+      "headings": [
+        {
+          "line": 72,
+          "text": "Choose the depth of development you need"
+        },
+        {
+          "line": 129,
+          "text": "{option.title}"
+        },
+        {
+          "line": 158,
+          "text": "Build a focused pathway"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-16 md:py-24 bg-background-50 relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "/contact"
+      ]
+    },
+    {
+      "file": "pages/programmes/components/WhyCollege.tsx",
+      "lines": 120,
+      "imports": [],
+      "headings": [
+        {
+          "line": 82,
+          "text": "More than professional training"
+        }
+      ],
+      "sections": [
+        "<section className=\"py-20 md:py-28 bg-primary-500 relative overflow-hidden\""
+      ],
+      "components": [
+        "HTMLDivElement"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/programmes/page.tsx",
+      "lines": 37,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/ProfessionalOutcomes.tsx",
+        "pages/programmes/components/ProgrammesHero.tsx",
+        "pages/programmes/components/ProgrammeFeatures.tsx",
+        "pages/programmes/components/ProgrammeComparison.tsx",
+        "pages/programmes/components/ProgrammeVsModule.tsx",
+        "pages/programmes/components/HowToChoose.tsx",
+        "pages/programmes/components/WhyCollege.tsx",
+        "pages/programmes/components/EmployerSection.tsx",
+        "components/feature/ProfessionalRecognitionSection.tsx",
+        "components/feature/MeetMentors.tsx",
+        "pages/programmes/components/EventsSection.tsx",
+        "pages/programmes/components/ProgrammesFaq.tsx"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "ProgrammesHero",
+        "ProgrammeFeatures",
+        "ProgrammeComparison",
+        "ProgrammeVsModule",
+        "HowToChoose",
+        "WhyCollege",
+        "EmployerSection",
+        "ProfessionalRecognitionSection",
+        "MeetMentors",
+        "EventsSection",
+        "ProfessionalOutcomes",
+        "ProgrammesFaq",
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/strategic-operational-pcp/page.tsx",
+      "lines": 307,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/StickyCta.tsx",
+        "components/feature/SchemaOrg.tsx",
+        "components/feature/RouteLanding/RouteNavbar.tsx",
+        "components/feature/RouteLanding/RouteHero.tsx",
+        "components/feature/RouteLanding/RouteCapability.tsx",
+        "components/feature/RouteLanding/RouteProblems.tsx",
+        "components/feature/RouteLanding/RouteProcess.tsx",
+        "components/feature/RouteLanding/RouteStats.tsx",
+        "components/feature/RouteLanding/RouteChoose.tsx",
+        "components/feature/RouteLanding/RouteWhoFor.tsx",
+        "components/feature/RouteLanding/RouteDevelop.tsx",
+        "components/feature/RouteLanding/RouteTestimonials.tsx",
+        "components/feature/RouteLanding/RouteFinalCta.tsx",
+        "components/feature/RouteLanding/RouteFaq.tsx",
+        "components/feature/EventsSection.tsx"
+      ],
+      "headings": [],
+      "sections": [
+        "<section className=\"py-16 md:py-20 text-center\"",
+        "<section className=\"py-8 bg-background-100\""
+      ],
+      "components": [
+        "SchemaOrg",
+        "RouteHero",
+        "RouteNavbar",
+        "RouteCapability",
+        "RouteProblems",
+        "RouteProcess",
+        "RouteStats",
+        "RouteChoose",
+        "RouteWhoFor",
+        "RouteDevelop",
+        "RouteTestimonials",
+        "EventsSection",
+        "RouteFinalCta",
+        "RouteFaq",
+        "Footer",
+        "StickyCta"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "#hero",
+        "#who-for",
+        "#eligibility",
+        "#develop",
+        "#faq",
+        "#eligibility",
+        "/commercial-project-controls-route",
+        "#",
+        "#consultation",
+        "#eligibility",
+        "https://collegeofprojectcontrols.com/project-controls-professional/strategic-operational-route",
+        "/book-a-session"
+      ]
+    },
+    {
+      "file": "pages/strategic-pcp/page.tsx",
+      "lines": 6,
+      "imports": [
+        "pages/programme-template/PathwayPage.tsx",
+        "pages/programme-template/pathwayData.ts"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "PathwayPage"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "pages/testimonials/page.tsx",
+      "lines": 113,
+      "imports": [
+        "components/feature/Footer.tsx",
+        "components/feature/ProfessionalOutcomes.tsx",
+        "components/feature/EditorialPageHero.tsx"
+      ],
+      "headings": [
+        {
+          "line": 71,
+          "text": "What we look for in workplace impact"
+        },
+        {
+          "line": 82,
+          "text": "{area.title}"
+        },
+        {
+          "line": 94,
+          "text": "Proof should be clear enough to trust"
+        }
+      ],
+      "sections": [
+        "<section className=\"bg-white py-16 md:py-20\" aria-labelledby=\"evidence-areas-title\"",
+        "<section className=\"bg-secondary-500 py-16 text-white md:py-20\" aria-labelledby=\"evidence-standard-title\""
+      ],
+      "components": [
+        "EditorialPageHero",
+        "ProfessionalOutcomes",
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [
+        "evidence-areas-title",
+        "evidence-standard-title"
+      ],
+      "links": [
+        "/contact",
+        "/programmes"
+      ]
+    },
+    {
+      "file": "pages/thank-you/commercial.tsx",
+      "lines": 47,
+      "imports": [
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 25,
+          "text": "Commercial Route Enquiry Received"
+        },
+        {
+          "line": 33,
+          "text": "While You Wait — Your Next Best Actions"
+        }
+      ],
+      "sections": [
+        "<section className=\"hero-image-office relative flex min-h-[90vh] items-center overflow-hidden bg-primary-950 pb-20 pt-32 text-white md:pt-40\""
+      ],
+      "components": [
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "https://collegeofprojectcontrols.com/thank-you/commercial",
+        "/project-controls-professional-level-6#consultation",
+        "/project-controls-professional-level-6#events",
+        "/project-controls-professional-level-6#routes"
+      ]
+    },
+    {
+      "file": "pages/thank-you/consultation.tsx",
+      "lines": 66,
+      "imports": [
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 25,
+          "text": "Consultation Booked"
+        },
+        {
+          "line": 33,
+          "text": "Before Your Consultation — Recommended Actions"
+        }
+      ],
+      "sections": [
+        "<section className=\"hero-image-office relative flex min-h-[90vh] items-center overflow-hidden bg-primary-950 pb-20 pt-32 text-white md:pt-40\""
+      ],
+      "components": [
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "https://collegeofprojectcontrols.com/thank-you/consultation",
+        "/project-controls-professional-level-6#eligibility",
+        "/project-controls-professional-level-6#routes",
+        "/project-controls-professional-level-6#proof",
+        "/commercial-project-controls-route"
+      ]
+    },
+    {
+      "file": "pages/thank-you/eligibility.tsx",
+      "lines": 94,
+      "imports": [
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 29,
+          "text": "Thank You for Checking Your Eligibility"
+        },
+        {
+          "line": 37,
+          "text": "While You Wait — Your Next Best Actions"
+        }
+      ],
+      "sections": [
+        "<section className=\"hero-image-project relative flex min-h-[90vh] items-center overflow-hidden bg-primary-950 pb-20 pt-32 text-white md:pt-40\""
+      ],
+      "components": [
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "https://collegeofprojectcontrols.com/thank-you/eligibility",
+        "/project-controls-professional-level-6#consultation",
+        "/project-controls-professional-level-6#routes",
+        "/project-controls-professional-level-6#events"
+      ]
+    },
+    {
+      "file": "pages/thank-you/eventbrite.tsx",
+      "lines": 59,
+      "imports": [
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 25,
+          "text": "You Are Registered for the Monthly Online Information Event"
+        },
+        {
+          "line": 33,
+          "text": "While You Wait — Your Next Best Actions"
+        }
+      ],
+      "sections": [
+        "<section className=\"hero-image-office relative flex min-h-[90vh] items-center overflow-hidden bg-primary-950 pb-20 pt-32 text-white md:pt-40\""
+      ],
+      "components": [
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "https://collegeofprojectcontrols.com/thank-you/eventbrite",
+        "/project-controls-professional-level-6#routes",
+        "/project-controls-professional-level-6#eligibility",
+        "/project-controls-professional-level-6#proof"
+      ]
+    },
+    {
+      "file": "pages/thank-you/guide.tsx",
+      "lines": 48,
+      "imports": [
+        "components/feature/Footer.tsx"
+      ],
+      "headings": [
+        {
+          "line": 25,
+          "text": "Your Employer Guide Is on Its Way"
+        },
+        {
+          "line": 33,
+          "text": "Recommended Next Actions"
+        }
+      ],
+      "sections": [
+        "<section className=\"hero-image-documents relative flex min-h-[90vh] items-center overflow-hidden bg-primary-950 pb-20 pt-32 text-white md:pt-40\""
+      ],
+      "components": [
+        "Footer"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": [
+        "https://collegeofprojectcontrols.com/thank-you/guide",
+        "/project-controls-professional-level-6#consultation",
+        "/project-controls-professional-level-6#events",
+        "/project-controls-professional-level-6#proof",
+        "/project-controls-professional-level-6#routes"
+      ]
+    },
+    {
+      "file": "router/config.tsx",
+      "lines": 354,
+      "imports": [
+        "pages/NotFound.tsx",
+        "pages/home/page.tsx",
+        "pages/employers/page.tsx",
+        "pages/apprentices/page.tsx",
+        "pages/apm-level-4/page.tsx",
+        "pages/apprenticeship-eligibility-checker/page.tsx",
+        "pages/employer-agreement/page.tsx",
+        "pages/governance-board/page.tsx",
+        "pages/events/page.tsx",
+        "pages/articles/page.tsx",
+        "pages/pcp-master/page.tsx",
+        "pages/strategic-pcp/page.tsx",
+        "pages/operational-pcp/page.tsx",
+        "pages/strategic-operational-pcp/page.tsx",
+        "pages/pmo-pcp/page.tsx",
+        "pages/chartered-pmo-pathway/page.tsx",
+        "pages/operational-pcp-construction/page.tsx",
+        "pages/operational-pcp-engineering/page.tsx",
+        "pages/operational-pcp-public-sector/page.tsx",
+        "pages/operational-pcp-energy/page.tsx",
+        "pages/thank-you/eligibility.tsx",
+        "pages/thank-you/consultation.tsx",
+        "pages/thank-you/eventbrite.tsx",
+        "pages/thank-you/commercial.tsx",
+        "pages/thank-you/guide.tsx",
+        "pages/campaign/hr-employer/page.tsx",
+        "pages/campaign/head-of-pmo/page.tsx",
+        "pages/campaign/construction/page.tsx",
+        "pages/campaign/energy/page.tsx",
+        "pages/campaign/public-sector/page.tsx",
+        "pages/campaign/commercial-route/page.tsx",
+        "pages/knowledge-hub/page.tsx",
+        "pages/knowledge-hub/what-is-pcp-apprenticeship.tsx",
+        "pages/knowledge-hub/funded-pcp-employer-guide.tsx",
+        "pages/knowledge-hub/pcp-vs-pmp.tsx",
+        "pages/knowledge-hub/apm-chpp-readiness.tsx",
+        "pages/knowledge-hub/strategic-vs-operational.tsx",
+        "pages/knowledge-hub/construction-training.tsx",
+        "pages/knowledge-hub/energy-training.tsx",
+        "pages/knowledge-hub/pmo-governance-training.tsx",
+        "pages/knowledge-hub/employer-apprenticeship-funding.tsx",
+        "pages/knowledge-hub/commercial-routes-explained.tsx",
+        "pages/testimonials/page.tsx",
+        "pages/contact/page.tsx",
+        "pages/book-a-session/page.tsx",
+        "pages/faq/page.tsx",
+        "pages/programmes/page.tsx",
+        "pages/mentors/detail.tsx",
+        "pages/about/page.tsx",
+        "pages/ipc/page.tsx",
+        "pages/legal/LegalPage.tsx"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "Home",
+        "ProgrammesPage",
+        "MentorDetailPage",
+        "AboutPage",
+        "IpcPage",
+        "ApmLevel4",
+        "EmployersPage",
+        "EmployerAgreementPage",
+        "GovernanceBoardPage",
+        "EventsPage",
+        "ArticlesPage",
+        "ApprenticesPage",
+        "ApprenticeshipEligibilityCheckerPage",
+        "PcpMaster",
+        "StrategicPcp",
+        "OperationalPcp",
+        "StrategicOperationalPcp",
+        "PmoPcp",
+        "CharteredPmoPathway",
+        "OperationalPcpConstruction",
+        "OperationalPcpEngineering",
+        "OperationalPcpPublicSector",
+        "OperationalPcpEnergy",
+        "CampaignCommercialRoute",
+        "CampaignHrEmployer",
+        "CampaignHeadOfPmo",
+        "CampaignConstruction",
+        "CampaignEnergy",
+        "CampaignPublicSector",
+        "ThankYouEligibility",
+        "ThankYouConsultation",
+        "ThankYouEventbrite",
+        "ThankYouCommercial",
+        "ThankYouGuide",
+        "KnowledgeHub",
+        "ArticleWhatIsPcp",
+        "ArticleFundedEmployerGuide",
+        "ArticlePcpVsPmp",
+        "ArticleChppReadiness",
+        "ArticleStrategicVsOperational",
+        "ArticleConstructionTraining",
+        "ArticleEnergyTraining",
+        "ArticlePmoGovernance",
+        "ArticleEmployerFunding",
+        "ArticleCommercialRoutes",
+        "TestimonialsPage",
+        "ContactPage",
+        "BookASessionPage",
+        "FaqPage",
+        "LegalPage",
+        "NotFound"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "router/index.tsx",
+      "lines": 61,
+      "imports": [
+        "components/feature/SeoManager.tsx",
+        "components/feature/Navbar.tsx",
+        "components/feature/FundingTicker.tsx",
+        "router/config.tsx"
+      ],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "ReturnType",
+        "SeoManager",
+        "FundingTicker",
+        "Navbar",
+        "AnimatePresence",
+        "Suspense"
+      ],
+      "section_titles": [],
+      "ids": [
+        "main-content"
+      ],
+      "links": []
+    },
+    {
+      "file": "services/coachesApi.ts",
+      "lines": 16,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "Coach"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "services/enquiryApi.ts",
+      "lines": 65,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "services/eventsApi.ts",
+      "lines": 18,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "EventItem"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "services/mentorsApi.ts",
+      "lines": 25,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "Mentor"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "services/partnersApi.ts",
+      "lines": 14,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "Partner"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "services/professionalCredentialsApi.ts",
+      "lines": 17,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "ProfessionalCredential"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    },
+    {
+      "file": "services/sectorsApi.ts",
+      "lines": 23,
+      "imports": [],
+      "headings": [],
+      "sections": [],
+      "components": [
+        "Sector"
+      ],
+      "section_titles": [],
+      "ids": [],
+      "links": []
+    }
+  ],
+  "anchor_candidates": [
+    {
+      "file": "pages/pcp-master/page.tsx",
+      "ids_in_import_closure": [
+        "audience",
+        "benefits",
+        "coaching-support",
+        "cohorts",
+        "delivery",
+        "eligibility",
+        "eligibility-checker-cta-title",
+        "events",
+        "faq",
+        "funding",
+        "funding-options-title",
+        "glance-title",
+        "hero",
+        "ipc-authority",
+        "mentors",
+        "newsletter-email",
+        "newsletter-form",
+        "newsletter-heading",
+        "next-step",
+        "outputs",
+        "overview",
+        "partners-title",
+        "register",
+        "sectors",
+        "structure",
+        "teachers",
+        "workload"
+      ],
+      "unresolved_literal_hash_candidates": [
+        "#",
+        "#consultation",
+        "#pathways"
+      ]
+    },
+    {
+      "file": "pages/operational-pcp-construction/page.tsx",
+      "ids_in_import_closure": [
+        "develop",
+        "events",
+        "faq",
+        "hero",
+        "newsletter-email",
+        "newsletter-form",
+        "newsletter-heading",
+        "who-for"
+      ],
+      "unresolved_literal_hash_candidates": [
+        "#",
+        "#consultation",
+        "#eligibility",
+        "#routes"
+      ]
+    },
+    {
+      "file": "pages/campaign/construction/page.tsx",
+      "ids_in_import_closure": [
+        "events",
+        "funding-options-title",
+        "lead-form",
+        "newsletter-email",
+        "newsletter-form",
+        "newsletter-heading"
+      ],
+      "unresolved_literal_hash_candidates": [
+        "#",
+        "#consultation",
+        "#eligibility",
+        "#routes"
+      ]
+    },
+    {
+      "file": "pages/pmo-pcp/page.tsx",
+      "ids_in_import_closure": [
+        "apm",
+        "apprenticeship",
+        "eligibility",
+        "eligibility-checker-cta-title",
+        "employers",
+        "events",
+        "faq",
+        "funding",
+        "funding-options-title",
+        "hero",
+        "ipc-authority",
+        "journey",
+        "mentors",
+        "newsletter-email",
+        "newsletter-form",
+        "newsletter-heading"
+      ],
+      "unresolved_literal_hash_candidates": [
+        "#",
+        "#consultation"
+      ]
+    },
+    {
+      "file": "pages/knowledge-hub/page.tsx",
+      "ids_in_import_closure": [
+        "chpp-readiness",
+        "employer-guides",
+        "funding-guides",
+        "newsletter-email",
+        "newsletter-form",
+        "newsletter-heading",
+        "route-comparisons",
+        "sector-guides"
+      ],
+      "unresolved_literal_hash_candidates": [
+        "#",
+        "#consultation",
+        "#eligibility",
+        "#routes"
+      ]
+    }
+  ],
+  "limitations": "Regex source inventory, not a JSX parser or rendered DOM audit. Includes unused code and comments; import closure may overcount rendered sections; dynamic IDs/links require manual review. Color-like literals can include HTML entities."
+}

@@ -1,6 +1,16 @@
 from django.contrib import admin
+from .models import Article
 
-from .models import MenuItem, NavigationMenu, Page, PageSection, SiteSettings
+
+@admin.register(Article)
+class ArticleAdmin(admin.ModelAdmin):
+    list_display = ("title", "category", "is_published", "published_at", "order")
+    list_filter = ("is_published", "category")
+    search_fields = ("title", "excerpt", "content")
+    prepopulated_fields = {"slug": ("title",)}
+    readonly_fields = ("created_at", "updated_at")
+
+from .models import Coach, Enquiry, Event, MentorProfile, MenuItem, NavigationMenu, Page, PageSection, Partner, ProfessionalCredential, Sector, SiteSettings
 
 admin.site.site_header = "College of Project Control — Content Dashboard"
 admin.site.site_title = "Project Control CMS"
@@ -55,3 +65,97 @@ class SiteSettingsAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request, obj=None):
         return False
 
+
+@admin.register(MentorProfile)
+class MentorProfileAdmin(admin.ModelAdmin):
+    list_display = ("name", "role_title", "affiliation", "order", "is_active", "updated_at")
+    list_editable = ("order", "is_active")
+    list_filter = ("is_active",)
+    search_fields = ("name", "role_title", "affiliation", "specialties", "biography")
+    ordering = ("order", "id")
+    fieldsets = (
+        ("Profile", {"fields": ("name", "initials", "role_title", "affiliation", "biography")}),
+        ("Expertise", {"fields": ("specialties",)}),
+        ("Links and image", {"fields": ("image", "image_url", "linkedin_url")}),
+        ("Publishing", {"fields": ("order", "is_active")}),
+    )
+
+
+@admin.register(Coach)
+class CoachAdmin(admin.ModelAdmin):
+    list_display = ("name", "qualification", "order", "is_active", "updated_at")
+    list_editable = ("order", "is_active")
+    list_filter = ("is_active",)
+    search_fields = ("name", "qualification", "focus")
+    ordering = ("order", "id")
+    fieldsets = (
+        ("Profile", {"fields": ("name", "qualification", "focus")}),
+        ("Image", {"fields": ("image",)}),
+        ("Publishing", {"fields": ("order", "is_active")}),
+    )
+
+
+@admin.register(Partner)
+class PartnerAdmin(admin.ModelAdmin):
+    list_display = ("__str__", "order", "is_active", "updated_at")
+    list_editable = ("order", "is_active")
+    list_filter = ("is_active",)
+    search_fields = ("name",)
+    ordering = ("order", "id")
+    fieldsets = (
+        ("Logo", {"fields": ("name", "logo", "logo_url", "link_url")}),
+        ("Publishing", {"fields": ("order", "is_active")}),
+    )
+
+
+@admin.register(ProfessionalCredential)
+class ProfessionalCredentialAdmin(admin.ModelAdmin):
+    list_display = ("name", "role", "order", "is_active", "updated_at")
+    list_editable = ("order", "is_active")
+    list_filter = ("is_active",)
+    search_fields = ("name", "role")
+    ordering = ("order", "id")
+    fieldsets = (
+        ("Credential", {"fields": ("name", "role")}),
+        ("Certificate image", {"fields": ("image", "image_url", "link_url")}),
+        ("Publishing", {"fields": ("order", "is_active")}),
+    )
+
+
+@admin.register(Sector)
+class SectorAdmin(admin.ModelAdmin):
+    list_display = ("title", "slug", "order", "is_active", "updated_at")
+    list_editable = ("order", "is_active")
+    list_filter = ("is_active",)
+    search_fields = ("title", "slug", "description")
+    ordering = ("order", "id")
+    fieldsets = (
+        ("Sector", {"fields": ("title", "slug", "description", "icon")}),
+        ("Image and link", {"fields": ("image", "image_url", "link_url")}),
+        ("Publishing", {"fields": ("order", "is_active")}),
+    )
+
+
+@admin.register(Event)
+class EventAdmin(admin.ModelAdmin):
+    list_display = ("title", "category", "format", "order", "is_active", "updated_at")
+    list_editable = ("order", "is_active")
+    list_filter = ("is_active", "format")
+    search_fields = ("title", "category", "description", "external_id")
+    ordering = ("order", "id")
+    fieldsets = (
+        ("Event", {"fields": ("title", "category", "format", "cadence", "description")}),
+        ("Call to action", {"fields": ("cta_label", "cta_href")}),
+        ("External source", {"fields": ("external_id", "source_url")}),
+        ("Publishing", {"fields": ("order", "is_active")}),
+    )
+
+
+@admin.register(Enquiry)
+class EnquiryAdmin(admin.ModelAdmin):
+    list_display = ("name", "email", "organisation", "enquiry_type", "status", "created_at")
+    list_editable = ("status",)
+    list_filter = ("status", "enquiry_type", "created_at")
+    search_fields = ("name", "email", "phone", "organisation", "role_title", "message")
+    readonly_fields = ("created_at", "updated_at", "source_path")
+    ordering = ("-created_at",)

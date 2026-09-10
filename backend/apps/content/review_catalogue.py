@@ -1,0 +1,15 @@
+PROGRAMMES = [
+    ('associate-project-manager-level-4', 'Associate Project Manager Level 4'),
+    ('pcp-level-6', 'Project Controls Professional Level 6'),
+    ('strategic-pcp', 'PCP — Strategic Route'),
+    ('operational-pcp', 'PCP — Operational Route'),
+    ('strategic-operational-pcp', 'PCP — Strategic & Operational Route'),
+    ('pmo-pcp', 'PCP — PMO & Governance Route'),
+    ('chartered-pmo-pathway', 'Chartered PMO Pathway'),
+    ('construction', 'PCP — Construction Route'),
+    ('engineering', 'PCP — Engineering, Manufacturing & Aerospace Route'),
+    ('public-sector', 'PCP — Public Sector & Councils Route'),
+    ('energy', 'PCP — Energy, Oil, Gas & Utilities Route'),
+    ('commercial', 'Commercial Project Controls Route'),
+    ('ipc', 'Institute of Project Controls'),
+]

@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "Public grid loads real database events",
+    "Search and grid using isolated fixtures",
+    "Detail, timezone, Event SEO, three of eight carousel and one-card step",
+    "Responsive carousel and no mobile overflow",
+    "Dashboard credentials save and clear password using isolated API, no live credentials changed"
+  ],
+  "exceptions": []
+}

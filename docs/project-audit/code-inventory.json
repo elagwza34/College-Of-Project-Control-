@@ -1,0 +1,1672 @@
+[
+  {
+    "file": "frontend/src/App.tsx",
+    "lines": 14,
+    "bytes": 794,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/main.tsx",
+    "lines": 11,
+    "bytes": 231,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/dashboard/DashboardApp.tsx",
+    "lines": 66,
+    "bytes": 3350,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/NotFound.tsx",
+    "lines": 30,
+    "bytes": 1852,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/router/config.tsx",
+    "lines": 361,
+    "bytes": 11118,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/router/index.tsx",
+    "lines": 49,
+    "bytes": 1444,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/about/page.tsx",
+    "lines": 216,
+    "bytes": 13631,
+    "img": 1,
+    "sections": 7,
+    "kent": 1,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/apm-level-4/page.tsx",
+    "lines": 99,
+    "bytes": 24280,
+    "img": 0,
+    "sections": 14,
+    "kent": 2,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/apprentices/page.tsx",
+    "lines": 468,
+    "bytes": 31823,
+    "img": 2,
+    "sections": 0,
+    "kent": 0,
+    "external": 2,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/apprenticeship-eligibility-checker/page.tsx",
+    "lines": 59,
+    "bytes": 3487,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/articles/detail.tsx",
+    "lines": 34,
+    "bytes": 3963,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/articles/page.tsx",
+    "lines": 44,
+    "bytes": 4957,
+    "img": 0,
+    "sections": 2,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/book-a-session/page.tsx",
+    "lines": 8,
+    "bytes": 672,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/chartered-pmo-pathway/page.tsx",
+    "lines": 2020,
+    "bytes": 80797,
+    "img": 2,
+    "sections": 17,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/contact/page.tsx",
+    "lines": 176,
+    "bytes": 11763,
+    "img": 1,
+    "sections": 4,
+    "kent": 1,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/employer-agreement/page.tsx",
+    "lines": 75,
+    "bytes": 3059,
+    "img": 0,
+    "sections": 2,
+    "kent": 1,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/employers/page.tsx",
+    "lines": 123,
+    "bytes": 28939,
+    "img": 0,
+    "sections": 15,
+    "kent": 16,
+    "external": 6,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/events/detail.tsx",
+    "lines": 30,
+    "bytes": 5293,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/events/library.tsx",
+    "lines": 40,
+    "bytes": 5792,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/events/page.tsx",
+    "lines": 1,
+    "bytes": 37,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/faq/page.tsx",
+    "lines": 164,
+    "bytes": 15331,
+    "img": 0,
+    "sections": 3,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/governance-board/page.tsx",
+    "lines": 294,
+    "bytes": 18667,
+    "img": 0,
+    "sections": 9,
+    "kent": 2,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/home/page.tsx",
+    "lines": 62,
+    "bytes": 2106,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/ipc/page.tsx",
+    "lines": 80,
+    "bytes": 12831,
+    "img": 1,
+    "sections": 8,
+    "kent": 0,
+    "external": 2,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/apm-chpp-readiness.tsx",
+    "lines": 150,
+    "bytes": 13185,
+    "img": 0,
+    "sections": 0,
+    "kent": 1,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/commercial-routes-explained.tsx",
+    "lines": 192,
+    "bytes": 15328,
+    "img": 0,
+    "sections": 0,
+    "kent": 9,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/construction-training.tsx",
+    "lines": 153,
+    "bytes": 12812,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/employer-apprenticeship-funding.tsx",
+    "lines": 178,
+    "bytes": 14290,
+    "img": 0,
+    "sections": 0,
+    "kent": 1,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/energy-training.tsx",
+    "lines": 137,
+    "bytes": 11121,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/funded-pcp-employer-guide.tsx",
+    "lines": 170,
+    "bytes": 13861,
+    "img": 0,
+    "sections": 0,
+    "kent": 10,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/page.tsx",
+    "lines": 312,
+    "bytes": 13786,
+    "img": 0,
+    "sections": 8,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/pcp-vs-pmp.tsx",
+    "lines": 203,
+    "bytes": 15974,
+    "img": 0,
+    "sections": 0,
+    "kent": 1,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/pmo-governance-training.tsx",
+    "lines": 157,
+    "bytes": 13048,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/strategic-vs-operational.tsx",
+    "lines": 152,
+    "bytes": 13202,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/what-is-pcp-apprenticeship.tsx",
+    "lines": 175,
+    "bytes": 15792,
+    "img": 0,
+    "sections": 0,
+    "kent": 1,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/legal/LegalPage.tsx",
+    "lines": 96,
+    "bytes": 8010,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/mentors/detail.tsx",
+    "lines": 102,
+    "bytes": 4654,
+    "img": 1,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp/OperationalEnquiryBar.tsx",
+    "lines": 13,
+    "bytes": 1335,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp/page.tsx",
+    "lines": 1537,
+    "bytes": 85184,
+    "img": 1,
+    "sections": 17,
+    "kent": 16,
+    "external": 2,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-construction/page.tsx",
+    "lines": 1277,
+    "bytes": 50173,
+    "img": 1,
+    "sections": 14,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-energy/page.tsx",
+    "lines": 1285,
+    "bytes": 51997,
+    "img": 1,
+    "sections": 14,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-engineering/page.tsx",
+    "lines": 612,
+    "bytes": 31759,
+    "img": 1,
+    "sections": 10,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-public-sector/page.tsx",
+    "lines": 8,
+    "bytes": 23776,
+    "img": 1,
+    "sections": 11,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/pcp-master/page.tsx",
+    "lines": 100,
+    "bytes": 19800,
+    "img": 0,
+    "sections": 13,
+    "kent": 2,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/pmo-pcp/page.tsx",
+    "lines": 637,
+    "bytes": 34733,
+    "img": 4,
+    "sections": 10,
+    "kent": 0,
+    "external": 4,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/programme-template/PathwayPage.tsx",
+    "lines": 81,
+    "bytes": 24715,
+    "img": 1,
+    "sections": 16,
+    "kent": 3,
+    "external": 3,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/programmes/page.tsx",
+    "lines": 35,
+    "bytes": 1254,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/strategic-operational-pcp/page.tsx",
+    "lines": 294,
+    "bytes": 15426,
+    "img": 0,
+    "sections": 2,
+    "kent": 1,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/strategic-pcp/page.tsx",
+    "lines": 1674,
+    "bytes": 60040,
+    "img": 2,
+    "sections": 15,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/testimonials/page.tsx",
+    "lines": 3,
+    "bytes": 413,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/thank-you/commercial.tsx",
+    "lines": 2,
+    "bytes": 167,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/thank-you/consultation.tsx",
+    "lines": 2,
+    "bytes": 163,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/thank-you/eligibility.tsx",
+    "lines": 2,
+    "bytes": 162,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/thank-you/eventbrite.tsx",
+    "lines": 2,
+    "bytes": 173,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/thank-you/guide.tsx",
+    "lines": 2,
+    "bytes": 166,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/programmes/components/EmployerSection.tsx",
+    "lines": 123,
+    "bytes": 6954,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/programmes/components/HowToChoose.tsx",
+    "lines": 64,
+    "bytes": 3308,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/programmes/components/ProgrammeComparison.tsx",
+    "lines": 128,
+    "bytes": 5577,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/programmes/components/ProgrammeFeatures.tsx",
+    "lines": 320,
+    "bytes": 14349,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/programmes/components/ProgrammesFaq.tsx",
+    "lines": 124,
+    "bytes": 6484,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/programmes/components/ProgrammesHero.tsx",
+    "lines": 70,
+    "bytes": 4554,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 1,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/programmes/components/ProgrammeVsModule.tsx",
+    "lines": 181,
+    "bytes": 8965,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/pmo-pcp/components/PmoClosingHero.tsx",
+    "lines": 2,
+    "bytes": 508,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/pmo-pcp/components/PmoCommercialTeaser.tsx",
+    "lines": 101,
+    "bytes": 5123,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/pmo-pcp/components/PmoEditorialHero.tsx",
+    "lines": 67,
+    "bytes": 4107,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/pmo-pcp/components/PmoEditorialNavbar.tsx",
+    "lines": 21,
+    "bytes": 581,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/pmo-pcp/components/PmoJourney.tsx",
+    "lines": 228,
+    "bytes": 11169,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 4,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/pmo-pcp/components/PmoTestimonials.tsx",
+    "lines": 2,
+    "bytes": 181,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/pcp-master/components/CapabilityTracks.tsx",
+    "lines": 30,
+    "bytes": 1923,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/home/components/CompactHero.tsx",
+    "lines": 117,
+    "bytes": 6657,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/home/components/ForEmployers.tsx",
+    "lines": 141,
+    "bytes": 7311,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/home/components/PremiumMarquee.tsx",
+    "lines": 52,
+    "bytes": 2894,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/home/components/ProgrammeCards.tsx",
+    "lines": 412,
+    "bytes": 17265,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/home/components/SectorPathways.tsx",
+    "lines": 134,
+    "bytes": 6183,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/pages/home/components/SpecialistModules.tsx",
+    "lines": 103,
+    "bytes": 4665,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/campaign/commercial-route/page.tsx",
+    "lines": 183,
+    "bytes": 13093,
+    "img": 0,
+    "sections": 2,
+    "kent": 6,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/campaign/construction/page.tsx",
+    "lines": 154,
+    "bytes": 11331,
+    "img": 1,
+    "sections": 2,
+    "kent": 3,
+    "external": 2,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/campaign/energy/page.tsx",
+    "lines": 154,
+    "bytes": 11540,
+    "img": 1,
+    "sections": 2,
+    "kent": 3,
+    "external": 2,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/campaign/head-of-pmo/page.tsx",
+    "lines": 153,
+    "bytes": 11342,
+    "img": 0,
+    "sections": 2,
+    "kent": 3,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/campaign/hr-employer/page.tsx",
+    "lines": 157,
+    "bytes": 12672,
+    "img": 0,
+    "sections": 2,
+    "kent": 4,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/campaign/public-sector/page.tsx",
+    "lines": 153,
+    "bytes": 11671,
+    "img": 1,
+    "sections": 2,
+    "kent": 3,
+    "external": 2,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/pages/apprenticeship-eligibility-checker/components/EligibilityCheckerFlow.tsx",
+    "lines": 368,
+    "bytes": 17152,
+    "img": 0,
+    "sections": 0,
+    "kent": 1,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/dashboard/auth/AuthContext.tsx",
+    "lines": 38,
+    "bytes": 1158,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/dashboard/layout/DashboardLayout.tsx",
+    "lines": 105,
+    "bytes": 5356,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/dashboard/pages/ArticlesPage.tsx",
+    "lines": 78,
+    "bytes": 10509,
+    "img": 1,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/dashboard/pages/CoachesPage.tsx",
+    "lines": 225,
+    "bytes": 8150,
+    "img": 1,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/dashboard/pages/ContentOwnershipPage.tsx",
+    "lines": 18,
+    "bytes": 2192,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/dashboard/pages/EnquiriesPage.tsx",
+    "lines": 106,
+    "bytes": 3926,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/dashboard/pages/EventbriteSettings.tsx",
+    "lines": 46,
+    "bytes": 8904,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 1,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/dashboard/pages/EventCategories.tsx",
+    "lines": 11,
+    "bytes": 2809,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/dashboard/pages/EventsManager.tsx",
+    "lines": 38,
+    "bytes": 10531,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/dashboard/pages/EventsPage.tsx",
+    "lines": 205,
+    "bytes": 7784,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/dashboard/pages/IpcImagesPage.tsx",
+    "lines": 93,
+    "bytes": 7324,
+    "img": 1,
+    "sections": 0,
+    "kent": 0,
+    "external": 1,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/dashboard/pages/LoginPage.tsx",
+    "lines": 78,
+    "bytes": 3270,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/dashboard/pages/MediaLibraryPage.tsx",
+    "lines": 63,
+    "bytes": 4446,
+    "img": 1,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/dashboard/pages/MentorsPage.tsx",
+    "lines": 244,
+    "bytes": 9327,
+    "img": 1,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/dashboard/pages/OverviewPage.tsx",
+    "lines": 51,
+    "bytes": 2113,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/dashboard/pages/PartnersPage.tsx",
+    "lines": 238,
+    "bytes": 8811,
+    "img": 1,
+    "sections": 0,
+    "kent": 0,
+    "external": 3,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/dashboard/pages/ProfessionalCredentialsPage.tsx",
+    "lines": 295,
+    "bytes": 12462,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 3,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/dashboard/pages/SectorsPage.tsx",
+    "lines": 238,
+    "bytes": 9110,
+    "img": 1,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/dashboard/pages/TestimonialsPage.tsx",
+    "lines": 38,
+    "bytes": 7864,
+    "img": 1,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/base/BenefitCard.tsx",
+    "lines": 32,
+    "bytes": 1316,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/base/CollectionState.tsx",
+    "lines": 5,
+    "bytes": 504,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/base/ErrorBoundary.tsx",
+    "lines": 14,
+    "bytes": 737,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/base/FormField.tsx",
+    "lines": 13,
+    "bytes": 1155,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/base/Modal.tsx",
+    "lines": 44,
+    "bytes": 2263,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/base/SectionHeading.tsx",
+    "lines": 35,
+    "bytes": 1099,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/base/SiteLink.tsx",
+    "lines": 14,
+    "bytes": 934,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/base/Skeleton.tsx",
+    "lines": 96,
+    "bytes": 3354,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/ArticleBody.tsx",
+    "lines": 24,
+    "bytes": 1988,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/ArticleCard.tsx",
+    "lines": 23,
+    "bytes": 1769,
+    "img": 1,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/feature/ArticleCta.tsx",
+    "lines": 56,
+    "bytes": 2536,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/ArticleLayout.tsx",
+    "lines": 127,
+    "bytes": 4080,
+    "img": 2,
+    "sections": 3,
+    "kent": 0,
+    "external": 1,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/feature/ArticlesSection.tsx",
+    "lines": 69,
+    "bytes": 5482,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/feature/Breadcrumbs.tsx",
+    "lines": 62,
+    "bytes": 2007,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 2,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/CampaignRouteFit.tsx",
+    "lines": 67,
+    "bytes": 2613,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/CampaignTransformation.tsx",
+    "lines": 81,
+    "bytes": 3491,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/CapabilityStrip.tsx",
+    "lines": 36,
+    "bytes": 1773,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/CoachingSupport.tsx",
+    "lines": 69,
+    "bytes": 3021,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/feature/ConfirmationPage.tsx",
+    "lines": 9,
+    "bytes": 793,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/ContactForm.tsx",
+    "lines": 2,
+    "bytes": 137,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/EditorialPageHero.tsx",
+    "lines": 45,
+    "bytes": 2028,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/EligibilityCheckerSection.tsx",
+    "lines": 61,
+    "bytes": 4879,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/EnquiryForm.tsx",
+    "lines": 28,
+    "bytes": 2554,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/EventCard.tsx",
+    "lines": 13,
+    "bytes": 1795,
+    "img": 1,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/feature/EventsSection.tsx",
+    "lines": 69,
+    "bytes": 5583,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/feature/EventsTeaser.tsx",
+    "lines": 4,
+    "bytes": 193,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/Footer.tsx",
+    "lines": 152,
+    "bytes": 8468,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/FundingOptionsSection.tsx",
+    "lines": 82,
+    "bytes": 8092,
+    "img": 1,
+    "sections": 1,
+    "kent": 2,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/FundingTicker.tsx",
+    "lines": 6,
+    "bytes": 398,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/IpcAuthority.tsx",
+    "lines": 208,
+    "bytes": 9227,
+    "img": 2,
+    "sections": 1,
+    "kent": 0,
+    "external": 1,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/feature/MeetMentors.tsx",
+    "lines": 136,
+    "bytes": 6988,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/feature/Navbar.tsx",
+    "lines": 351,
+    "bytes": 16640,
+    "img": 3,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/OutcomeExamples.tsx",
+    "lines": 9,
+    "bytes": 1403,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/PageSectionNav.tsx",
+    "lines": 53,
+    "bytes": 1829,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/PcpComplianceNote.tsx",
+    "lines": 14,
+    "bytes": 865,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/PcpFaqSection.tsx",
+    "lines": 48,
+    "bytes": 1559,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/PcpFundingStrip.tsx",
+    "lines": 6,
+    "bytes": 222,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/PcpHero.tsx",
+    "lines": 158,
+    "bytes": 6277,
+    "img": 1,
+    "sections": 1,
+    "kent": 1,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/feature/PcpPainPointsGrid.tsx",
+    "lines": 33,
+    "bytes": 1189,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/ProfessionalPathwaysSection.tsx",
+    "lines": 122,
+    "bytes": 7082,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/ProfessionalRecognitionSection.tsx",
+    "lines": 9,
+    "bytes": 1492,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/feature/ProgrammeAccessSections.tsx",
+    "lines": 25,
+    "bytes": 812,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/ProgrammeTestimonials.tsx",
+    "lines": 9,
+    "bytes": 445,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/feature/RelatedArticles.tsx",
+    "lines": 49,
+    "bytes": 1881,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/RequestStatus.tsx",
+    "lines": 13,
+    "bytes": 1565,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/RouteScroll.tsx",
+    "lines": 28,
+    "bytes": 1272,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/SchemaOrg.tsx",
+    "lines": 142,
+    "bytes": 4268,
+    "img": 0,
+    "sections": 0,
+    "kent": 4,
+    "external": 8,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/SectorPathwayChoice.tsx",
+    "lines": 21,
+    "bytes": 4151,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/SeoManager.tsx",
+    "lines": 368,
+    "bytes": 21703,
+    "img": 0,
+    "sections": 0,
+    "kent": 4,
+    "external": 6,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/feature/StickyCta.tsx",
+    "lines": 17,
+    "bytes": 973,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/TestimonialsSection.tsx",
+    "lines": 26,
+    "bytes": 6297,
+    "img": 2,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/feature/TestimonialSubmission.tsx",
+    "lines": 45,
+    "bytes": 5757,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/feature/RouteLanding/RouteCapability.tsx",
+    "lines": 43,
+    "bytes": 2026,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/RouteLanding/RouteChoose.tsx",
+    "lines": 73,
+    "bytes": 3452,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/RouteLanding/RouteDevelop.tsx",
+    "lines": 34,
+    "bytes": 1484,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/RouteLanding/RouteFaq.tsx",
+    "lines": 49,
+    "bytes": 1877,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/RouteLanding/RouteFinalCta.tsx",
+    "lines": 44,
+    "bytes": 1804,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/RouteLanding/RouteHero.tsx",
+    "lines": 265,
+    "bytes": 12980,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 1,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/RouteLanding/RouteNavbar.tsx",
+    "lines": 17,
+    "bytes": 423,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/RouteLanding/RouteProblems.tsx",
+    "lines": 84,
+    "bytes": 4884,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/RouteLanding/RouteProcess.tsx",
+    "lines": 55,
+    "bytes": 2787,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/RouteLanding/RouteStats.tsx",
+    "lines": 37,
+    "bytes": 1729,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/RouteLanding/RouteTestimonials.tsx",
+    "lines": 2,
+    "bytes": 126,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/RouteLanding/RouteWhoFor.tsx",
+    "lines": 70,
+    "bytes": 3232,
+    "img": 0,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": false
+  },
+  {
+    "file": "frontend/src/components/feature/RouteLanding/SectorHero.tsx",
+    "lines": 170,
+    "bytes": 6486,
+    "img": 1,
+    "sections": 1,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  },
+  {
+    "file": "frontend/src/components/feature/RouteLanding/SectorRoutePage.tsx",
+    "lines": 34,
+    "bytes": 3008,
+    "img": 0,
+    "sections": 0,
+    "kent": 0,
+    "external": 0,
+    "fetches": true
+  }
+]
