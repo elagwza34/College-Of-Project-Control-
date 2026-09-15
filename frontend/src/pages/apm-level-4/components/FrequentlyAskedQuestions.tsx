@@ -1,5 +1,5 @@
-import SiteLink from '@/components/base/SiteLink';
 import SectionHeading from '@/components/base/SectionHeading';
+import SiteLink from '@/components/base/SiteLink';
 import { faqs } from '../programmeData';
 
 export default function FrequentlyAskedQuestions() {

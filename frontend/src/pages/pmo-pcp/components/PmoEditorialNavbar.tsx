@@ -14,8 +14,7 @@ export default function PmoEditorialNavbar() {
     <PageSectionNav
       pageLabel="PMO & governance"
       links={navItems}
-      ctaHref="/book-a-session"
-      ctaLabel="Discuss this route"
+      showCta={false}
     />
   );
 }

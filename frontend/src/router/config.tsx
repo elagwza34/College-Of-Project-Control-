@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import type { RouteObject } from 'react-router-dom';
 
-const NotFound = lazy(() => import('../pages/NotFound'));
+const NotFound = lazy(() => import("../pages/not-found/page"));
 const Home = lazy(() => import('../pages/home/page'));
 const EmployersPage = lazy(() => import('../pages/employers/page'));
 const ApprenticesPage = lazy(() => import('../pages/apprentices/page'));
@@ -10,9 +10,9 @@ const ApprenticeshipEligibilityCheckerPage = lazy(() => import('../pages/apprent
 const EmployerAgreementPage = lazy(() => import('../pages/employer-agreement/page'));
 const GovernanceBoardPage = lazy(() => import('../pages/governance-board/page'));
 const EventsPage = lazy(() => import('../pages/events/page'));
-const EventDetailPage = lazy(() => import('../pages/events/detail'));
+const EventDetailPage = lazy(() => import("../pages/events/detail/page"));
 const ArticlesPage = lazy(() => import('../pages/articles/page'));
-const ArticleDetailPage = lazy(() => import('../pages/articles/detail'));
+const ArticleDetailPage = lazy(() => import("../pages/articles/detail/page"));
 const PcpMaster = lazy(() => import('../pages/pcp-master/page'));
 const StrategicPcp = lazy(() => import('../pages/strategic-pcp/page'));
 const OperationalPcp = lazy(() => import('../pages/operational-pcp/page'));
@@ -23,11 +23,11 @@ const OperationalPcpConstruction = lazy(() => import('../pages/operational-pcp-c
 const OperationalPcpEngineering = lazy(() => import('../pages/operational-pcp-engineering/page'));
 const OperationalPcpPublicSector = lazy(() => import('../pages/operational-pcp-public-sector/page'));
 const OperationalPcpEnergy = lazy(() => import('../pages/operational-pcp-energy/page'));
-const ThankYouEligibility = lazy(() => import('../pages/thank-you/eligibility'));
-const ThankYouConsultation = lazy(() => import('../pages/thank-you/consultation'));
-const ThankYouEventbrite = lazy(() => import('../pages/thank-you/eventbrite'));
-const ThankYouCommercial = lazy(() => import('../pages/thank-you/commercial'));
-const ThankYouGuide = lazy(() => import('../pages/thank-you/guide'));
+const ThankYouEligibility = lazy(() => import("../pages/thank-you/eligibility/page"));
+const ThankYouConsultation = lazy(() => import("../pages/thank-you/consultation/page"));
+const ThankYouEventbrite = lazy(() => import("../pages/thank-you/eventbrite/page"));
+const ThankYouCommercial = lazy(() => import("../pages/thank-you/commercial/page"));
+const ThankYouGuide = lazy(() => import("../pages/thank-you/guide/page"));
 const CampaignHrEmployer = lazy(() => import('../pages/campaign/hr-employer/page'));
 const CampaignHeadOfPmo = lazy(() => import('../pages/campaign/head-of-pmo/page'));
 const CampaignConstruction = lazy(() => import('../pages/campaign/construction/page'));
@@ -35,25 +35,28 @@ const CampaignEnergy = lazy(() => import('../pages/campaign/energy/page'));
 const CampaignPublicSector = lazy(() => import('../pages/campaign/public-sector/page'));
 const CampaignCommercialRoute = lazy(() => import('../pages/campaign/commercial-route/page'));
 const KnowledgeHub = lazy(() => import('../pages/knowledge-hub/page'));
-const ArticleWhatIsPcp = lazy(() => import('../pages/knowledge-hub/what-is-pcp-apprenticeship'));
-const ArticleFundedEmployerGuide = lazy(() => import('../pages/knowledge-hub/funded-pcp-employer-guide'));
-const ArticlePcpVsPmp = lazy(() => import('../pages/knowledge-hub/pcp-vs-pmp'));
-const ArticleChppReadiness = lazy(() => import('../pages/knowledge-hub/apm-chpp-readiness'));
-const ArticleStrategicVsOperational = lazy(() => import('../pages/knowledge-hub/strategic-vs-operational'));
-const ArticleConstructionTraining = lazy(() => import('../pages/knowledge-hub/construction-training'));
-const ArticleEnergyTraining = lazy(() => import('../pages/knowledge-hub/energy-training'));
-const ArticlePmoGovernance = lazy(() => import('../pages/knowledge-hub/pmo-governance-training'));
-const ArticleEmployerFunding = lazy(() => import('../pages/knowledge-hub/employer-apprenticeship-funding'));
-const ArticleCommercialRoutes = lazy(() => import('../pages/knowledge-hub/commercial-routes-explained'));
+const ArticleWhatIsPcp = lazy(() => import("../pages/knowledge-hub/what-is-pcp-apprenticeship/page"));
+const ArticleFundedEmployerGuide = lazy(() => import("../pages/knowledge-hub/funded-pcp-employer-guide/page"));
+const ArticlePcpVsPmp = lazy(() => import("../pages/knowledge-hub/pcp-vs-pmp/page"));
+const ArticleChppReadiness = lazy(() => import("../pages/knowledge-hub/apm-chpp-readiness/page"));
+const ArticleStrategicVsOperational = lazy(() => import("../pages/knowledge-hub/strategic-vs-operational/page"));
+const ArticleConstructionTraining = lazy(() => import("../pages/knowledge-hub/construction-training/page"));
+const ArticleEnergyTraining = lazy(() => import("../pages/knowledge-hub/energy-training/page"));
+const ArticlePmoGovernance = lazy(() => import("../pages/knowledge-hub/pmo-governance-training/page"));
+const ArticleEmployerFunding = lazy(() => import("../pages/knowledge-hub/employer-apprenticeship-funding/page"));
+const ArticleCommercialRoutes = lazy(() => import("../pages/knowledge-hub/commercial-routes-explained/page"));
 const TestimonialsPage = lazy(() => import('../pages/testimonials/page'));
 const ContactPage = lazy(() => import('../pages/contact/page'));
 const BookASessionPage = lazy(() => import('../pages/book-a-session/page'));
 const FaqPage = lazy(() => import('../pages/faq/page'));
 const ProgrammesPage = lazy(() => import('../pages/programmes/page'));
-const MentorDetailPage = lazy(() => import('../pages/mentors/detail'));
+const MentorDetailPage = lazy(() => import("../pages/mentors/detail/page"));
 const AboutPage = lazy(() => import('../pages/about/page'));
 const IpcPage = lazy(() => import('../pages/ipc/page'));
-const LegalPage = lazy(() => import('../pages/legal/LegalPage'));
+const PrivacyPage = lazy(() => import('../pages/legal/privacy/page'));
+const TermsPage = lazy(() => import('../pages/legal/terms/page'));
+const AccessibilityPage = lazy(() => import('../pages/legal/accessibility/page'));
+const CookiesPage = lazy(() => import('../pages/legal/cookies/page'));
 
 const routes: RouteObject[] = [
   { path: "/events/:slug", element: <EventDetailPage /> },
@@ -338,19 +341,19 @@ const routes: RouteObject[] = [
   },
   {
     path: "/privacy",
-    element: <LegalPage page="privacy" />,
+    element: <PrivacyPage />,
   },
   {
     path: "/terms",
-    element: <LegalPage page="terms" />,
+    element: <TermsPage />,
   },
   {
     path: "/accessibility",
-    element: <LegalPage page="accessibility" />,
+    element: <AccessibilityPage />,
   },
   {
     path: "/cookies",
-    element: <LegalPage page="cookies" />,
+    element: <CookiesPage />,
   },
   {
     path: "*",

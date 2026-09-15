@@ -1,8 +1,8 @@
 import CardGrid from './CardGrid';
 import type { CardItem } from './cardTypes';
 
-import SiteLink from '@/components/base/SiteLink';
 import SectionHeading from '@/components/base/SectionHeading';
+import SiteLink from '@/components/base/SiteLink';
 
 const fundingRoutes: CardItem[] = [
   { title: 'Levy funding', description: 'Employers with available apprenticeship levy funds may be able to use their Apprenticeship Service account to fund eligible training.', icon: 'ri-bank-line' },

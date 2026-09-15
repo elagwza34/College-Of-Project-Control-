@@ -1,61 +1,52 @@
 import Footer from '@/components/feature/Footer';
-import PcpComplianceNote from '@/components/feature/PcpComplianceNote';
-import StickyCta from '@/components/feature/StickyCta';
-import Breadcrumbs from '@/components/feature/Breadcrumbs';
 import SchemaOrg, { organizationSchema } from '@/components/feature/SchemaOrg';
-
-import Hero from './components/Hero';
+import StickyCta from '@/components/feature/StickyCta';
+import APMChPPReadiness from "./components/APMChPPReadiness";
+import BreadcrumbsSection from "./components/BreadcrumbsSection";
+import EmployerDecisionGuides from "./components/EmployerDecisionGuides";
 import ExploreByTopic from './components/ExploreByTopic';
 import Featured from './components/Featured';
 import FundingGuides from './components/FundingGuides';
+import KnowledgeHub from "./components/KnowledgeHub";
+import PcpComplianceNoteSection from "./components/PcpComplianceNoteSection";
+import ReadyToFindYourBestRoute from "./components/ReadyToFindYourBestRoute";
 import RouteComparisons from './components/RouteComparisons';
 import SectorGuides from './components/SectorGuides';
-import ChppReadiness from './components/ChppReadiness';
-import EmployerGuides from './components/EmployerGuides';
-import ClosingCta from './components/ClosingCta';
+export default function KnowledgeHubPage() {
+  return (<>
+    <SchemaOrg type="Organization" data={organizationSchema()} />
+    <main>
+      <KnowledgeHub />
 
-export default function KnowledgeHub() {
-  return (
-    <>
-      <SchemaOrg type="Organization" data={organizationSchema()} />
-      <main>
-        <Hero />
+      <BreadcrumbsSection />
 
-        <Breadcrumbs
-          items={[
-            { label: 'Home', href: '/' },
-            { label: 'Knowledge Hub' },
-          ]}
-        />
+      {/* Categories Section */}
+      <ExploreByTopic />
 
-        {/* Categories Section */}
-        <ExploreByTopic />
+      {/* Featured Articles */}
+      <Featured />
 
-        {/* Featured Articles */}
-        <Featured />
+      {/* Funding Guides */}
+      <FundingGuides />
 
-        {/* Funding Guides */}
-        <FundingGuides />
+      {/* Route Comparisons */}
+      <RouteComparisons />
 
-        {/* Route Comparisons */}
-        <RouteComparisons />
+      {/* Sector Guides */}
+      <SectorGuides />
 
-        {/* Sector Guides */}
-        <SectorGuides />
+      {/* APM ChPP Readiness */}
+      <APMChPPReadiness />
 
-        {/* APM ChPP Readiness */}
-        <ChppReadiness />
+      {/* Employer Decision Guides */}
+      <EmployerDecisionGuides />
 
-        {/* Employer Decision Guides */}
-        <EmployerGuides />
+      {/* CTA */}
+      <ReadyToFindYourBestRoute />
 
-        {/* CTA */}
-        <ClosingCta />
-
-        <PcpComplianceNote />
-      </main>
-      <Footer />
-      <StickyCta />
-    </>
-  );
+      <PcpComplianceNoteSection />
+    </main>
+    <Footer />
+    <StickyCta />
+  </>);
 }

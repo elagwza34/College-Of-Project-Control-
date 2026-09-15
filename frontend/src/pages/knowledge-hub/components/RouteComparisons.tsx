@@ -1,5 +1,5 @@
-import ArticleCard from './ArticleCard';
 import { articles as allArticles } from '@/data/articles';
+import ArticleCard from './ArticleCard';
 
 import SectionHeading from '@/components/base/SectionHeading';
 import { SkeletonArticleCard } from '@/components/base/Skeleton';

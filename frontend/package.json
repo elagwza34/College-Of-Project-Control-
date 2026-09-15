@@ -30,7 +30,13 @@
     "dev": "vite",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "type-check": "tsc --noEmit --project tsconfig.app.json"
+    "type-check": "tsc --noEmit --project tsconfig.app.json",
+    "sections:index": "node scripts/generate-section-index.mjs",
+    "test:sections": "node --test scripts/page-sections.test.mjs",
+    "chatbot:export": "node scripts/export-chatbot-knowledge.mjs",
+    "test:chatbot:browser": "node scripts/chatbot-browser.mjs",
+    "test:responsive": "node scripts/responsive-browser.mjs",
+    "test:dashboard:browser": "node scripts/dashboard-workflow-browser.mjs"
   },
   "type": "module",
   "version": "0.0.0"

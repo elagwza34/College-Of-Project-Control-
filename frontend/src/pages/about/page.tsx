@@ -1,36 +1,31 @@
 import Footer from '@/components/feature/Footer';
-import CapabilityStrip from '@/components/feature/CapabilityStrip';
-
-
-import Hero from './components/Hero';
-import Identity from './components/Identity';
-import Principles from './components/Principles';
-import Capability from './components/Capability';
-import LearningModel from './components/LearningModel';
-import Audiences from './components/Audiences';
-import ClosingCta from './components/ClosingCta';
-
+import AboutCPCM from "./components/AboutCPCM";
+import HowWeWork from "./components/HowWeWork";
+import OurPointOfView from "./components/OurPointOfView";
+import OurSpecialistFocus from "./components/OurSpecialistFocus";
+import SpecialistCapabilityForProjectDrivenOrganisations from "./components/SpecialistCapabilityForProjectDrivenOrganisations";
+import StartWithTheRightQuestion from "./components/StartWithTheRightQuestion";
+import WhoCPCMSupports from "./components/WhoCPCMSupports";
+import WhoWeAre from "./components/WhoWeAre";
 export default function AboutPage() {
-  return (
-    <div className="min-h-screen bg-background-50">
-      <main>
-        <Hero />
+  return (<div className="min-h-screen bg-background-50">
+    <main>
+      <AboutCPCM />
 
-        <CapabilityStrip />
+      <SpecialistCapabilityForProjectDrivenOrganisations />
 
-        <Identity />
+      <WhoWeAre />
 
-        <Principles />
+      <OurPointOfView />
 
-        <Capability />
+      <OurSpecialistFocus />
 
-        <LearningModel />
+      <HowWeWork />
 
-        <Audiences />
+      <WhoCPCMSupports />
 
-        <ClosingCta />
-      </main>
-      <Footer />
-    </div>
-  );
+      <StartWithTheRightQuestion />
+    </main>
+    <Footer />
+  </div>);
 }

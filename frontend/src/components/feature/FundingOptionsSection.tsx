@@ -42,41 +42,73 @@ const defaultCta: FundingCtaContent = {
 };
 
 export default function FundingOptionsSection({
-  title = 'Funding options after we confirm fit',
+  title = 'Funding options',
   description = 'The right funding route depends on programme fit, learner status and employer eligibility.',
   overviewCards = defaultOverviewCards,
   includedBenefits = defaultIncludedBenefits,
   supportCards = defaultSupportCards,
   ctaContent = defaultCta,
-  imageSrc = '/images/hero-professional.webp',
-  imageAlt = 'Professionals developing project management and project controls capability',
+  imageSrc = 'https://jokdxsdbxorzciulkdyl.supabase.co/storage/v1/object/public/images/acf27d01133741779494ccc02a3edb89.png',
+  imageAlt = 'Construction professional wearing a hard hat at a city building site',
 }: FundingOptionsSectionProps) {
   return (
-    <section className="relative overflow-hidden bg-background-50 py-16 md:py-24" aria-labelledby="funding-options-title">
-      <div className="container-site relative">
-        <header className="max-w-3xl">
-          <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-accent-700"><span className="h-2 w-2 rounded-full bg-highlight-500" aria-hidden="true" />Funding and costs</p>
-          <h2 id="funding-options-title" className="mt-4 text-3xl font-bold leading-tight text-foreground-950 md:text-4xl lg:text-5xl">{title}</h2>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-foreground-600 md:text-base">{description}</p>
-        </header>
+    <section className="bg-background-50 py-12 md:py-16" aria-labelledby="funding-options-title">
+      <header className="relative isolate flex min-h-80 w-full min-w-0 items-end overflow-hidden bg-primary-950 md:aspect-[3/1]">
+            <img src={imageSrc} alt={imageAlt} width={2172} height={724} className="absolute inset-0 -z-20 h-full w-full object-cover object-[65%_center] md:object-center" loading="lazy" decoding="async" />
+            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary-950/90 via-primary-950/55 to-primary-950/10 md:via-primary-950/20" aria-hidden="true" />
+            <div className="container-site flex items-end justify-between gap-8 pb-24 pt-8 md:pb-28">
+            <div className="max-w-md lg:max-w-lg">
+              <p className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[.24em] text-white/90"><span className="h-0.5 w-10 bg-highlight-400" aria-hidden="true" />Funding and costs</p>
+              <h2 id="funding-options-title" className="mt-4 text-4xl font-bold leading-tight tracking-tight text-white lg:text-5xl">{title}</h2>
+              <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/90">{description}</p>
+            </div>
+            <div className="hidden shrink-0 text-xs font-semibold uppercase leading-7 tracking-[.22em] text-white lg:block" aria-hidden="true"><span className="mb-4 block h-0.5 w-10 bg-highlight-400" />People<br />Projects<br />Progress</div>
+            </div>
+          </header>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
-          {overviewCards.map(card => <article key={card.title} className="flex h-full flex-col rounded-2xl border border-background-200 bg-white p-6 shadow-card md:p-8"><span className="mb-5 h-1 w-12 rounded-full bg-highlight-500" aria-hidden="true" /><h3 className="text-xl font-bold text-foreground-950 md:text-2xl">{card.title}</h3><div className="mt-4 text-sm leading-relaxed text-foreground-600 md:text-base">{card.content}</div></article>)}
-        </div>
+          <div className="container-site relative z-10 -mt-12 space-y-4">
+            <div className="grid gap-3 md:grid-cols-2">
+              {overviewCards.map((card, index) => (
+                <article key={card.title} className="flex items-start gap-4 rounded-xl border border-background-200 bg-white p-5 shadow-card">
+                  <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-2xl ${index === 0 ? 'bg-highlight-50 text-highlight-700' : 'bg-accent-50 text-primary-800'}`}><i className={index === 0 ? 'ri-coins-line' : 'ri-team-line'} aria-hidden="true" /></span>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-sm font-bold text-foreground-950 sm:text-base">{card.title}</h3>
+                    <div className="mt-2 text-xs leading-relaxed text-foreground-600">{card.content}</div>
+                  </div>
+                  <SiteLink href={ctaContent.href} aria-label={`Discuss ${card.title.toLowerCase()}`} className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary-50 text-primary-800 transition-colors hover:bg-primary-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"><i className="ri-arrow-right-s-line text-lg" aria-hidden="true" /></SiteLink>
+                </article>
+              ))}
+            </div>
 
-        <article className="mt-6 overflow-hidden rounded-2xl border border-background-200 bg-white shadow-card">
-          <div className="aspect-[16/7] min-h-[220px] overflow-hidden bg-primary-100 sm:aspect-[16/6]"><img src={imageSrc} alt={imageAlt} className="h-full w-full object-cover object-center" loading="lazy" /></div>
-          <div className="p-6 md:p-8 lg:p-10"><p className="text-xs font-bold uppercase tracking-[0.16em] text-accent-700">Included professional support</p><h3 className="mt-3 max-w-3xl text-2xl font-bold text-foreground-950 md:text-3xl">What the course and programme package is designed to include</h3><div className="mt-7 flex flex-wrap gap-2.5">{includedBenefits.map(benefit => <span key={benefit} className="rounded-full border border-accent-200 bg-accent-50 px-3.5 py-2 text-xs font-semibold leading-snug text-primary-800">{benefit}</span>)}</div></div>
-        </article>
+            <article className="flex items-start gap-4 rounded-xl border border-accent-100 bg-accent-50/50 p-5">
+              <span className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent-100 text-2xl text-primary-800 sm:flex"><i className="ri-box-3-line" aria-hidden="true" /></span>
+              <div>
+                <h3 className="text-sm font-bold text-primary-900 sm:text-base">Included professional support</h3>
+                <p className="mt-1 text-xs text-foreground-600">Your course and programme package is designed to include:</p>
+                <div className="mt-3 flex flex-wrap gap-2">{includedBenefits.map(benefit => <span key={benefit} className="rounded-full border border-accent-200 bg-white px-3 py-1 text-[11px] font-semibold leading-relaxed text-primary-800">{benefit}</span>)}</div>
+              </div>
+            </article>
 
-        <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {supportCards.map((card, index) => <article key={card.title} className="flex h-full flex-col rounded-2xl border border-background-200 bg-white p-6 shadow-card md:p-7"><div className="flex items-center justify-between gap-4"><span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-50 text-primary-700"><i className={index === 0 ? 'ri-shield-star-line' : 'ri-funds-line'} aria-hidden="true" /></span><span className="text-xs font-bold text-background-400">0{index + 1}</span></div><h3 className="mt-5 text-lg font-bold leading-snug text-foreground-950">{card.title}</h3><p className="mt-3 text-sm leading-relaxed text-foreground-600">{card.description}</p></article>)}
-        </div>
+            <div className="grid divide-y divide-accent-300/25 overflow-hidden rounded-xl bg-primary-900 text-white lg:grid-cols-3 lg:divide-x lg:divide-y-0">
+              {supportCards.map((card, index) => (
+                <article key={card.title} className="flex items-start gap-4 p-5 lg:p-6">
+                  <i className={`${index === 0 ? 'ri-graduation-cap-line' : index === 1 ? 'ri-bar-chart-grouped-line' : 'ri-team-fill'} shrink-0 text-3xl text-accent-100`} aria-hidden="true" />
+                  <div>
+                    <h3 className="text-sm font-bold leading-snug text-white">{card.title.replace('Institute of Project Controls: up to', 'Up to')}</h3>
+                    <p className="mt-2 text-xs leading-relaxed text-white/75">{card.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
 
-        <aside className="mt-6 rounded-xl border border-background-200 border-l-4 border-l-accent-500 bg-white p-5" aria-label="Funding eligibility information"><div className="flex items-start gap-3"><i className="ri-information-line mt-0.5 shrink-0 text-lg text-accent-700" aria-hidden="true" /><p className="text-sm leading-relaxed text-foreground-600">Funding eligibility can vary. You can visit the <SiteLink href="/institute-of-project-controls" className="font-semibold text-primary-700 underline decoration-primary-300 underline-offset-2 hover:text-primary-900">Institute of Project Controls</SiteLink> website or speak to the Kent Business College team to discuss the most appropriate funding option.</p></div></aside>
-
-        <div className="mt-6 rounded-2xl bg-primary-800 p-6 text-white md:flex md:items-center md:justify-between md:gap-10 md:p-8"><div><h3 className="text-2xl font-bold text-white">{ctaContent.title}</h3><p className="mt-2 max-w-2xl text-sm leading-relaxed text-white/70">{ctaContent.description}</p></div><SiteLink href={ctaContent.href} className="btn-primary mt-6 inline-flex min-h-12 w-full shrink-0 items-center justify-center px-6 text-sm font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:mt-0 md:w-auto">{ctaContent.label}<i className="ri-arrow-right-line ml-2" aria-hidden="true" /></SiteLink></div>
-      </div>
+            <div className="flex flex-col gap-3 lg:flex-row lg:items-stretch">
+              <aside className="flex flex-1 items-center gap-3 rounded-xl border border-background-200 bg-background-50 px-4 py-3" aria-label="Funding eligibility information">
+                <i className="ri-information-line shrink-0 text-xl text-accent-700" aria-hidden="true" />
+                <p className="text-xs leading-relaxed text-foreground-600">Funding eligibility can vary. Visit the <SiteLink href="/institute-of-project-controls" className="font-medium text-primary-700 underline underline-offset-2 hover:text-primary-900">Institute of Project Controls</SiteLink> or speak to the Kent Business College team.</p>
+              </aside>
+              <SiteLink href={ctaContent.href} className="btn-primary inline-flex min-h-12 shrink-0 items-center justify-center gap-3 px-5 py-3 text-xs font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700">{ctaContent.label}<i className="ri-arrow-right-line text-base" aria-hidden="true" /></SiteLink>
+            </div>
+          </div>
     </section>
   );
 }

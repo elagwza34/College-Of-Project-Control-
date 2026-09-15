@@ -1,22 +1,20 @@
-import SiteLink from '@/components/base/SiteLink';
 import Footer from '@/components/feature/Footer';
 import PageSectionNav from '@/components/feature/PageSectionNav';
-import SectorPathwayChoice from '@/components/feature/SectorPathwayChoice';
-import Hero from './components/Hero';
+import BuildAProjectManagementFoundationForTheEnergySector from "./components/BuildAProjectManagementFoundationForTheEnergySector";
+import BuildTheCapabilityToControlComplexEnergyProgrammesWithConfidence from "./components/BuildTheCapabilityToControlComplexEnergyProgrammesWithConfidence";
+import CheckTheRightAccessRouteForYou from "./components/CheckTheRightAccessRouteForYou";
+import ChooseYourProfessionalDirection from "./components/ChooseYourProfessionalDirection";
+import CoreProfessionalCapability from "./components/CoreProfessionalCapability";
+import EmployerCapability from "./components/EmployerCapability";
+import EnergyUtilities from "./components/EnergyUtilities";
+import ExpertLedPerspectives from "./components/ExpertLedPerspectives";
+import FundingBursaryAccess from "./components/FundingBursaryAccess";
 import OneFoundation from './components/OneFoundation';
-import Challenge from './components/Challenge';
-import Access from './components/Access';
-import Ai from './components/Ai';
-import Applications from './components/Applications';
-import Outputs from './components/Outputs';
-import Roles from './components/Roles';
-import Maturity from './components/Maturity';
-import Experts from './components/Experts';
-import LearningApproach from './components/LearningApproach';
-import Eligibility from './components/Eligibility';
-import ApmCrossLink from './components/ApmCrossLink';
-import Faq from './components/Faq';
-import NextStep from './components/NextStep';
-
-const links = [{"label": "Challenge", "href": "#challenge"}, {"label": "Pathways", "href": "#pathways"}, {"label": "Access", "href": "#access"}, {"label": "Applications", "href": "#applications"}, {"label": "Outputs", "href": "#outputs"}, {"label": "Roles", "href": "#roles"}, {"label": "Experts", "href": "#experts"}, {"label": "Eligibility", "href": "#eligibility"}, {"label": "Faq", "href": "#faq"}];
-export default function Page() { return <div className="min-h-screen bg-background-50"><main id="hero"><Hero /><PageSectionNav pageLabel="Energy & Utilities" links={links} /><OneFoundation /><Challenge /><SectorPathwayChoice /><Access /><Ai /><Applications /><Outputs /><Roles /><Maturity /><Experts /><LearningApproach /><Eligibility /><ApmCrossLink /><Faq /><NextStep /></main><Footer /></div>; }
+import PracticalAnswers from "./components/PracticalAnswers";
+import ProfessionalProgression from "./components/ProfessionalProgression";
+import SectorApplication from "./components/SectorApplication";
+import TheEnergyDeliveryChallenge from "./components/TheEnergyDeliveryChallenge";
+import TheLearningExperience from "./components/TheLearningExperience";
+import WorkplaceEvidence from "./components/WorkplaceEvidence";
+import { links } from "./sectionData";
+export default function Page() { return <div className="min-h-screen bg-background-50"><main id="hero"><EnergyUtilities /><PageSectionNav pageLabel="Energy & Utilities" links={links} showCta={false} /><OneFoundation /><TheEnergyDeliveryChallenge /><ChooseYourProfessionalDirection /><FundingBursaryAccess /><CoreProfessionalCapability /><SectorApplication /><WorkplaceEvidence /><ProfessionalProgression /><EmployerCapability /><ExpertLedPerspectives /><TheLearningExperience /><CheckTheRightAccessRouteForYou /><BuildAProjectManagementFoundationForTheEnergySector /><PracticalAnswers /><BuildTheCapabilityToControlComplexEnergyProgrammesWithConfidence /></main><Footer /></div>; }

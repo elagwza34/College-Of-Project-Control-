@@ -1,18 +1,16 @@
-import SiteLink from '@/components/base/SiteLink';
 import Footer from '@/components/feature/Footer';
 import PageSectionNav from '@/components/feature/PageSectionNav';
-import SectorPathwayChoice from '@/components/feature/SectorPathwayChoice';
-import Hero from './components/Hero';
-import Value from './components/Value';
-import Applications from './components/Applications';
-import Outputs from './components/Outputs';
-import Roles from './components/Roles';
-import Learning from './components/Learning';
-import Experts from './components/Experts';
-import Access from './components/Access';
-import Eligibility from './components/Eligibility';
-import Faq from './components/Faq';
-import NextStep from './components/NextStep';
-
-const links = [{"label": "Value", "href": "#value"}, {"label": "Applications", "href": "#applications"}, {"label": "Pathways", "href": "#pathways"}, {"label": "Outputs", "href": "#outputs"}, {"label": "Roles", "href": "#roles"}, {"label": "Learning", "href": "#learning"}, {"label": "Experts", "href": "#experts"}, {"label": "Access", "href": "#access"}, {"label": "Eligibility", "href": "#eligibility"}, {"label": "Faq", "href": "#faq"}];
-export default function Page() { return <div className="min-h-screen bg-background-50"><main id="hero"><Hero /><PageSectionNav pageLabel="Engineering & Advanced Manufacturing" links={links} /><Value /><Applications /><SectorPathwayChoice /><Outputs /><Roles /><Learning /><Experts /><Access /><Eligibility /><Faq /><NextStep /></main><Footer /></div>; }
+import CheckTheRightAccessRouteForYou from "./components/CheckTheRightAccessRouteForYou";
+import ChooseYourProfessionalDirection from "./components/ChooseYourProfessionalDirection";
+import EngineeringAdvancedManufacturing from "./components/EngineeringAdvancedManufacturing";
+import EngineeringProjectControlsEvidence from "./components/EngineeringProjectControlsEvidence";
+import FundingAndBursaryAccess from "./components/FundingAndBursaryAccess";
+import LearnApplyTestAndEvidence from "./components/LearnApplyTestAndEvidence";
+import OneProfessionalFoundationAcrossComplexEngineeringEnvironments from "./components/OneProfessionalFoundationAcrossComplexEngineeringEnvironments";
+import ProfessionalInsight from "./components/ProfessionalInsight";
+import ProjectControlsThatProtectEngineeringValue from "./components/ProjectControlsThatProtectEngineeringValue";
+import QuestionsBeforeYouEnquire from "./components/QuestionsBeforeYouEnquire";
+import ReadyToTakeControl from "./components/ReadyToTakeControl";
+import SupportEngineeringDeliveryRoles from "./components/SupportEngineeringDeliveryRoles";
+import { links } from "./sectionData";
+export default function Page() { return <div className="min-h-screen bg-background-50"><main id="hero"><EngineeringAdvancedManufacturing /><PageSectionNav pageLabel="Engineering & Advanced Manufacturing" links={links} showCta={false} /><ProjectControlsThatProtectEngineeringValue /><OneProfessionalFoundationAcrossComplexEngineeringEnvironments /><ChooseYourProfessionalDirection /><EngineeringProjectControlsEvidence /><SupportEngineeringDeliveryRoles /><LearnApplyTestAndEvidence /><ProfessionalInsight /><FundingAndBursaryAccess /><CheckTheRightAccessRouteForYou /><QuestionsBeforeYouEnquire /><ReadyToTakeControl /></main><Footer /></div>; }

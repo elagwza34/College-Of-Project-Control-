@@ -141,7 +141,7 @@ export default function IpcAuthority() {
               href={IPC_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-lg px-7 py-3.5 text-sm font-semibold transition-transform duration-200 hover:-translate-y-0.5 whitespace-nowrap"
+              className="cta-button inline-flex items-center justify-center gap-2 rounded-lg px-7 py-3.5 text-sm font-semibold transition-transform duration-200 hover:-translate-y-0.5 whitespace-nowrap"
               style={{
                 backgroundImage: 'linear-gradient(135deg, #9C6813, #C6953B)',
                 color: '#1A1204',
@@ -155,7 +155,7 @@ export default function IpcAuthority() {
               href={IPC_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-lg px-7 py-3.5 text-sm font-semibold transition-colors duration-200 whitespace-nowrap"
+              className="cta-button inline-flex items-center justify-center gap-2 rounded-lg px-7 py-3.5 text-sm font-semibold transition-colors duration-200 whitespace-nowrap"
               style={{ border: '1px solid rgba(215,180,108,0.35)', color: '#F3EEE4' }}
             >
               Learn About IPC

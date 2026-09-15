@@ -33,7 +33,7 @@ export default function ArticleCta({
                 <SiteLink
                   href={secondaryCta.href}
                   data-gtm-event={secondaryCta.tracking}
-                  className="inline-flex items-center justify-center px-5 py-3 border border-background-200/70 text-foreground-700 font-semibold text-sm rounded-md cursor-pointer hover:bg-background-50 transition-all duration-200 whitespace-nowrap"
+                  className="cta-button inline-flex items-center justify-center px-5 py-3 border border-background-200/70 text-foreground-700 font-semibold text-sm rounded-md cursor-pointer hover:bg-background-50 transition-all duration-200 whitespace-nowrap"
                 >
                   {secondaryCta.label}
                 </SiteLink>

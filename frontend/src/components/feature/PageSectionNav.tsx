@@ -4,6 +4,7 @@ interface PageSectionNavProps {
   links: { label: string; href: string }[];
   ctaHref?: string;
   ctaLabel?: string;
+  showCta?: boolean;
 }
 
 export default function PageSectionNav({
@@ -11,6 +12,7 @@ export default function PageSectionNav({
   links,
   ctaHref = '/book-a-session',
   ctaLabel = 'Request a consultation',
+  showCta = true,
 }: PageSectionNavProps) {
   return (
     <nav
@@ -40,13 +42,13 @@ export default function PageSectionNav({
           </div>
         </div>
 
-        <SiteLink
+        {showCta && <SiteLink
           href={ctaHref}
           className="btn-primary hidden shrink-0 items-center gap-2 px-4 py-2.5 text-xs font-bold transition-colors md:inline-flex"
         >
           {ctaLabel}
           <i className="ri-arrow-right-line" aria-hidden="true" />
-        </SiteLink>
+        </SiteLink>}
       </div>
     </nav>
   );

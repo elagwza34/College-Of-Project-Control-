@@ -1,5 +1,7 @@
+const PagesPage = lazy(() => import('./pages/PagesPage'));
 import { lazy, Suspense, useEffect } from 'react';
 const ContentOwnershipPage = lazy(() => import('./pages/ContentOwnershipPage'));
+const ChatbotPage = lazy(() => import('./pages/ChatbotPage'));
 const ArticlesDashboardPage = lazy(() => import('./pages/ArticlesPage'));
 const TestimonialsDashboardPage = lazy(() => import('./pages/TestimonialsPage'));
 import { Navigate, Route, Routes } from 'react-router-dom';
@@ -29,8 +31,8 @@ function DashboardRoutes() {
       <Route path="login" element={<LoginPage />} />
       <Route element={<ProtectedLayout />}>
         <Route index element={<OverviewPage />} />
-        <Route path="pages" element={<ContentOwnershipPage />} />
-        <Route path="pages/:id" element={<ContentOwnershipPage />} />
+        <Route path="pages" element={<PagesPage />} />
+        <Route path="pages/:id" element={<PagesPage />} />
         <Route path="home" element={<ContentOwnershipPage />} />
         <Route path="content" element={<ContentOwnershipPage />} />
         <Route path="media" element={<MediaLibraryPage />} />
@@ -45,6 +47,7 @@ function DashboardRoutes() {
         <Route path="testimonials" element={<TestimonialsDashboardPage />} />
         <Route path="events" element={<EventsPage />} />
         <Route path="enquiries" element={<EnquiriesPage />} />
+        <Route path="chatbot" element={<ChatbotPage />} />
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Route>
       <Route path="*" element={<Navigate to="/dashboard" replace />} />

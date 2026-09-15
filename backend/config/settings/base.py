@@ -18,6 +18,7 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     "apps.content",
     "apps.cms",
+    "apps.chatbot",
 ]
 
 MIDDLEWARE = [
@@ -84,4 +85,3 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.SessionAuthentication",
     ],
 }
-

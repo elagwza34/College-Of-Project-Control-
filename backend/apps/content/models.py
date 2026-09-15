@@ -513,6 +513,10 @@ class Enquiry(models.Model):
     message = models.TextField(blank=True)
     source_path = models.CharField(max_length=240, blank=True)
     status = models.CharField(max_length=16, choices=Status.choices, default=Status.NEW)
+    read_at = models.DateTimeField(null=True, blank=True, db_index=True)
+    internal_notes = models.TextField(blank=True)
+    assigned_to = models.ForeignKey('auth.User', null=True, blank=True, on_delete=models.SET_NULL, related_name='assigned_enquiries')
+    follow_up_at = models.DateTimeField(null=True, blank=True, db_index=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

@@ -38,10 +38,10 @@ export default function WeeklyRhythm() {
           <div className="container-site">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               {/* Left: Image */}
-              <div className="relative" ref={rhythmRef.ref}>
+              <div className="relative min-w-0" ref={rhythmRef.ref}>
                 <div
                   className="relative rounded-2xl overflow-hidden aspect-[4/3]"
-                  style={{ opacity: rhythmRef.visible ? 1 : 0, transform: rhythmRef.visible ? 'translateX(0)' : 'translateX(-24px)', transition: 'opacity 700ms cubic-bezier(0.22,1,0.36,1), transform 700ms cubic-bezier(0.22,1,0.36,1)' }}
+                  style={{ opacity: rhythmRef.visible ? 1 : 0, transform: rhythmRef.visible ? 'translateX(0)' : 'translateY(24px)', transition: 'opacity 700ms cubic-bezier(0.22,1,0.36,1), transform 700ms cubic-bezier(0.22,1,0.36,1)' }}
                 >
                   <img loading="lazy" decoding="async"
                     src="https://readdy.ai/api/search-image?query=Young%20diverse%20professionals%20collaborating%20around%20laptop%20and%20documents%20in%20bright%20modern%20coworking%20space%20with%20warm%20natural%20light%20from%20large%20arched%20windows%2C%20exposed%20brick%20and%20modern%20minimalist%20interior%20design%2C%20green%20plants%2C%20focused%20engaged%20expressions%2C%20warm%20neutral%20earth%20tones%2C%20editorial%20lifestyle%20photography%2C%20authentic%20candid%20moment%2C%20soft%20bokeh%20background%2C%20high%20end%20corporate%20training%20atmosphere&width=1200&height=900&seq=apprentices-weekly-v2&orientation=landscape"
@@ -53,7 +53,7 @@ export default function WeeklyRhythm() {
 
                 {/* Floating testimonial card */}
                 <div
-                  className="absolute -bottom-5 -right-3 md:-right-6 max-w-[300px] bg-white rounded-2xl p-5 border border-background-200/60 shadow-lg"
+                  className="relative -mt-8 ml-auto max-w-[300px] lg:absolute lg:-bottom-5 lg:-right-6 bg-white rounded-2xl p-5 border border-background-200/60 shadow-lg"
                   style={{ opacity: rhythmRef.visible ? 1 : 0, transform: rhythmRef.visible ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 600ms cubic-bezier(0.22,1,0.36,1) 400ms, transform 600ms cubic-bezier(0.22,1,0.36,1) 400ms' }}
                 >
                   <p className="text-xs font-semibold text-primary-700">Example learning scenario</p>

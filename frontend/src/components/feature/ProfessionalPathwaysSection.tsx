@@ -96,7 +96,7 @@ export default function ProfessionalPathwaysSection({
 
                 <SiteLink
                   href={pathway.href}
-                  className="mt-7 inline-flex min-h-12 items-center justify-center rounded-md bg-primary-700 px-5 text-sm font-bold text-white transition-colors hover:bg-primary-800"
+                  className="cta-button mt-7 inline-flex min-h-12 items-center justify-center rounded-md bg-primary-700 px-5 text-sm font-bold text-white transition-colors hover:bg-primary-800"
                 >
                   Explore {pathway.title}
                   <i className="ri-arrow-right-line ml-2 transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -111,7 +111,7 @@ export default function ProfessionalPathwaysSection({
             <h3 className="text-xl font-heading font-bold text-foreground-950">Need a tailored six-credit route?</h3>
             <p className="mt-2 text-sm leading-relaxed text-foreground-600">A different module combination may be agreed around current duties, employer needs and workplace evidence.</p>
           </div>
-          <SiteLink href="/book-a-session" className="mt-5 inline-flex min-h-11 shrink-0 items-center rounded-md border border-primary-300 bg-white px-5 text-sm font-bold text-primary-800 transition-colors hover:bg-primary-50 md:mt-0">
+          <SiteLink href="/book-a-session" className="cta-button mt-5 inline-flex min-h-11 shrink-0 items-center rounded-md border border-primary-300 bg-white px-5 text-sm font-bold text-primary-800 transition-colors hover:bg-primary-50 md:mt-0">
             Discuss your route
             <i className="ri-arrow-right-line ml-2" aria-hidden="true" />
           </SiteLink>

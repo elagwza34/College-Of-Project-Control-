@@ -7,6 +7,8 @@ export default function RouteScroll() {
     let timeout: ReturnType<typeof setTimeout> | undefined;
     const focusTarget = () => {
       if (document.querySelector('.page-loader')) return false;
+      // A visitor may open the assistant while the lazy page is still loading.
+      if (document.activeElement?.closest('[role="dialog"], dialog[open]')) return true;
       let id = 'main-content';
       try { if (hash) id = decodeURIComponent(hash.slice(1)); } catch { return true; }
       const target = document.getElementById(id);

@@ -1,6 +1,6 @@
-import Bullets from './Bullets';
 import SectionHeading from '@/components/base/SectionHeading';
 import { benefitGroups } from '../programmeData';
+import Bullets from './Bullets';
 
 export default function ProgrammeBenefits() {
   return (

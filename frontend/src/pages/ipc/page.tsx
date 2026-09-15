@@ -1,40 +1,36 @@
 import Footer from '@/components/feature/Footer';
 import SchemaOrg, { breadcrumbListSchema, organizationSchema } from '@/components/feature/SchemaOrg';
-
-import Hero from './components/Hero';
-import TrustBar from './components/TrustBar';
-import WhyItMatters from './components/WhyItMatters';
-import Framework from './components/Framework';
-import Journey from './components/Journey';
+import BuildYourProfessionalDirection from "./components/BuildYourProfessionalDirection";
+import IPCExplained from "./components/IPCExplained";
 import Membership from './components/Membership';
-import Faq from './components/Faq';
-import ClosingCta from './components/ClosingCta';
-
+import ProfessionalJourney from "./components/ProfessionalJourney";
+import TheCapabilityFramework from "./components/TheCapabilityFramework";
+import TheProfessionalHomeOfProjectControls from "./components/TheProfessionalHomeOfProjectControls";
+import TrustBar from './components/TrustBar';
+import WhyIPCMatters from "./components/WhyIPCMatters";
 export default function IpcPage() {
-  return (
-    <>
-      <SchemaOrg type="Organization" data={organizationSchema()} />
-      <SchemaOrg type="WebPage" data={breadcrumbListSchema([{ name: 'Home', item: '/' }, { name: 'Institute of Project Controls' }])} />
-      <div className="min-h-screen bg-background-50">
-        <main>
-          <Hero />
+  return (<>
+    <SchemaOrg type="Organization" data={organizationSchema()} />
+    <SchemaOrg type="WebPage" data={breadcrumbListSchema([{ name: 'Home', item: '/' }, { name: 'Institute of Project Controls' }])} />
+    <div className="min-h-screen bg-background-50">
+      <main>
+        <TheProfessionalHomeOfProjectControls />
 
-          <TrustBar />
+        <TrustBar />
 
-          <WhyItMatters />
+        <WhyIPCMatters />
 
-          <Framework />
+        <TheCapabilityFramework />
 
-          <Journey />
+        <ProfessionalJourney />
 
-          <Membership />
+        <Membership />
 
-          <Faq />
+        <IPCExplained />
 
-          <ClosingCta />
-        </main>
-        <Footer />
-      </div>
-    </>
-  );
+        <BuildYourProfessionalDirection />
+      </main>
+      <Footer />
+    </div>
+  </>);
 }

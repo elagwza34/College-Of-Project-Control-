@@ -100,3 +100,12 @@ class MediaAsset(models.Model):
 
     def __str__(self):
         return self.file.name
+
+class PageContentRevision(models.Model):
+    section_key = models.CharField(max_length=32, unique=True)
+    draft = models.JSONField(default=dict)
+    published = models.JSONField(default=dict)
+    history = models.JSONField(default=list)
+    version = models.PositiveIntegerField(default=0)
+    updated_at = models.DateTimeField(auto_now=True)
+    updated_by = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, on_delete=models.SET_NULL)

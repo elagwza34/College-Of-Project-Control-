@@ -1,11 +1,9 @@
-import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
 import Footer from '@/components/feature/Footer';
 import { fetchArticles, type ArticlePage } from '@/services/articlesApi';
-
-import Hero from './components/Hero';
-import ResultsGrid from './components/ResultsGrid';
-
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import ArticleResults from "./components/ArticleResults";
+import TheCPCMJournal from "./components/TheCPCMJournal";
 export default function ArticlesPage() {
   const [params, setParams] = useSearchParams();
   const query = params.get('search') || '';
@@ -18,35 +16,29 @@ export default function ArticlesPage() {
   useEffect(() => { setInput(query); }, [query]);
   useEffect(() => {
     const controller = new AbortController();
-    setLoading(true); setError(false);
+    setLoading(true);
+    setError(false);
     fetchArticles({ search: query, page }, controller.signal)
-      .then(result => { if (!controller.signal.aborted) setData(result); })
-      .catch(() => { if (!controller.signal.aborted) setError(true); })
-      .finally(() => { if (!controller.signal.aborted) setLoading(false); });
+      .then(result => {
+        if(!controller.signal.aborted)
+          setData(result);
+      })
+      .catch(() => {
+        if(!controller.signal.aborted)
+          setError(true);
+      })
+      .finally(() => {
+        if(!controller.signal.aborted)
+          setLoading(false);
+      });
     return () => controller.abort();
   }, [query, page, revision]);
   const navigatePage = (next: number) => { setParams({ ...(query ? { search: query } : {}), page: String(next) }); document.getElementById('article-grid')?.scrollIntoView({ block: 'start' }); };
-
-  return (
-    <div className="min-h-screen bg-background-50">
-      <main>
-        <Hero
-          input={input}
-          onInputChange={setInput}
-          onSubmit={event => { event.preventDefault(); setParams(input.trim() ? { search: input.trim() } : {}); }}
-        />
-        <ResultsGrid
-          query={query}
-          page={page}
-          data={data}
-          loading={loading}
-          error={error}
-          onRetry={() => setRevision(v => v + 1)}
-          onClearSearch={() => { setInput(''); setParams({}); }}
-          onNavigatePage={navigatePage}
-        />
-      </main>
-      <Footer />
-    </div>
-  );
+  return (<div className="min-h-screen bg-background-50">
+    <main>
+      <TheCPCMJournal input={input} onInputChange={setInput} onSubmit={event => { event.preventDefault(); setParams(input.trim() ? { search: input.trim() } : {}); }} />
+      <ArticleResults query={query} page={page} data={data} loading={loading} error={error} onRetry={() => setRevision(v => v + 1)} onClearSearch={() => { setInput(''); setParams({}); }} onNavigatePage={navigatePage} />
+    </main>
+    <Footer />
+  </div>);
 }

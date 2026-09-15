@@ -1,47 +1,43 @@
-import OutcomeExamples from '@/components/feature/OutcomeExamples';
 import Footer from '@/components/feature/Footer';
-
-import Hero from './components/Hero';
-import CareerJourney from './components/CareerJourney';
-import Benefits from './components/Benefits';
+import CostForEligibleLearners from "./components/CostForEligibleLearners";
+import ForApprenticesProfessionals from "./components/ForApprenticesProfessionals";
+import LearnerSupport from "./components/LearnerSupport";
+import QuickAnswers from "./components/QuickAnswers";
+import ReadyToAdvanceYourCareerInProjectControls from "./components/ReadyToAdvanceYourCareerInProjectControls";
 import WeeklyRhythm from './components/WeeklyRhythm';
-import SupportStrip from './components/SupportStrip';
-import ServiceCards from './components/ServiceCards';
-import Faq from './components/Faq';
-import FinalCta from './components/FinalCta';
-
+import WhatYouCouldApplyAtWork from "./components/WhatYouCouldApplyAtWork";
+import WhatYouWillGain from "./components/WhatYouWillGain";
+import YourJourney from "./components/YourJourney";
 export default function ApprenticesPage() {
-  return (
-    <div className="min-h-screen bg-background-50">
-      <main>
-        {/* ═══════════════ HERO — Full Background Image ═══════════════ */}
-        <Hero />
+  return (<div className="min-h-screen bg-background-50">
+    <main>
+      {/* ═══════════════ HERO — Full Background Image ═══════════════ */}
+      <ForApprenticesProfessionals />
 
-        {/* ═══════════════ CAREER JOURNEY — Timeline ═══════════════ */}
-        <CareerJourney />
+      {/* ═══════════════ CAREER JOURNEY — Timeline ═══════════════ */}
+      <YourJourney />
 
-        {/* ═══════════════ BENEFITS — 3-Column Grid ═══════════════ */}
-        <Benefits />
+      {/* ═══════════════ BENEFITS — 3-Column Grid ═══════════════ */}
+      <WhatYouWillGain />
 
-        {/* ═══════════════ WEEKLY RHYTHM — What to Expect ═══════════════ */}
-        <WeeklyRhythm />
+      {/* ═══════════════ WEEKLY RHYTHM — What to Expect ═══════════════ */}
+      <WeeklyRhythm />
 
-        {/* ═══════════════ SUPPORT STRIP ═══════════════ */}
-        <SupportStrip />
+      {/* ═══════════════ SUPPORT STRIP ═══════════════ */}
+      <CostForEligibleLearners />
 
-        {/* ═══════════════ SERVICE CARDS ═══════════════ */}
-        <ServiceCards />
+      {/* ═══════════════ SERVICE CARDS ═══════════════ */}
+      <LearnerSupport />
 
-        {/* ═══════════════ TESTIMONIALS ═══════════════ */}
-        <OutcomeExamples />
+      {/* ═══════════════ TESTIMONIALS ═══════════════ */}
+      <WhatYouCouldApplyAtWork />
 
-        {/* ═══════════════ FAQ ═══════════════ */}
-        <Faq />
+      {/* ═══════════════ FAQ ═══════════════ */}
+      <QuickAnswers />
 
-        {/* ═══════════════ FINAL CTA ═══════════════ */}
-        <FinalCta />
-      </main>
-      <Footer />
-    </div>
-  );
+      {/* ═══════════════ FINAL CTA ═══════════════ */}
+      <ReadyToAdvanceYourCareerInProjectControls />
+    </main>
+    <Footer />
+  </div>);
 }

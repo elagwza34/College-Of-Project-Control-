@@ -129,7 +129,7 @@ export default function RouteHero({
               </SiteLink>
               <SiteLink
                 href="/apprenticeship-eligibility-checker"
-                className="rounded-md border border-white/55 bg-white/5 px-6 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:border-signal-400 hover:bg-white/10 whitespace-nowrap"
+                className="cta-button rounded-md border border-white/55 bg-white/5 px-6 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:border-signal-400 hover:bg-white/10 whitespace-nowrap"
               >
                 {secondaryCta}
               </SiteLink>

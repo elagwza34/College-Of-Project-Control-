@@ -1,22 +1,21 @@
 import Footer from '@/components/feature/Footer';
 import PageSectionNav from '@/components/feature/PageSectionNav';
-import Hero from './components/Hero';
-import CreditOverview from './components/CreditOverview';
-import Credit12 from './components/Credit12';
-import Credit3 from './components/Credit3';
-import EvidenceToAction from './components/EvidenceToAction';
-import Credit4 from './components/Credit4';
-import Credit5 from './components/Credit5';
-import Credit6 from './components/Credit6';
-import Experts from './components/Experts';
-import WhoShouldApply from './components/WhoShouldApply';
-import Eligibility from './components/Eligibility';
-import Funding from './components/Funding';
-import Delivery from './components/Delivery';
-import Completion from './components/Completion';
+import AIInProjectControls from "./components/AIInProjectControls";
+import EligibilityCriteria from "./components/EligibilityCriteria";
+import ExpertLedLearning from "./components/ExpertLedLearning";
+import FromEvidenceToAction from "./components/FromEvidenceToAction";
+import FundingScenariosForStartsFrom1August2026 from "./components/FundingScenariosForStartsFrom1August2026";
+import HowYouStudy from "./components/HowYouStudy";
+import PMIPMOCPPreparationAndPMOLeadership from "./components/PMIPMOCPPreparationAndPMOLeadership";
+import PMPExamPreparationAndStrategicProjectLeadership from "./components/PMPExamPreparationAndStrategicProjectLeadership";
+import PRINCE2PortfolioManagement from "./components/PRINCE2PortfolioManagement";
+import PRINCE2ProgrammeManagement from "./components/PRINCE2ProgrammeManagement";
 import ProgrammeEssentials from './components/ProgrammeEssentials';
-import Apply from './components/Apply';
-
+import ProjectControlsProfessionalLevel6 from "./components/ProjectControlsProfessionalLevel6";
+import StrategicPathwayComplete from "./components/StrategicPathwayComplete";
+import TakeTheNextStep from "./components/TakeTheNextStep";
+import WhoShouldApply from './components/WhoShouldApply';
+import YourCreditJourney from "./components/YourCreditJourney";
 const sectionLinks = [
   {
     "label": "Credit Overview",
@@ -75,26 +74,25 @@ const sectionLinks = [
     "href": "#apply"
   }
 ];
-
 export default function StrategicPathway() {
-return <div className="min-h-screen bg-background-50"><main id="hero">
-<Hero />
-<PageSectionNav pageLabel="Strategic Pathway" links={sectionLinks} />
-<CreditOverview />
-<Credit12 />
-<Credit3 />
-<EvidenceToAction />
-<Credit4 />
-<Credit5 />
-<Credit6 />
-<Experts />
-<WhoShouldApply />
-<Eligibility />
-<Funding />
-<Delivery />
-<Completion />
-<ProgrammeEssentials />
-<Apply />
+  return <div className="min-h-screen bg-background-50"><main id="hero">
+    <ProjectControlsProfessionalLevel6 />
+    <PageSectionNav pageLabel="Strategic Pathway" links={sectionLinks} showCta={false} />
+    <YourCreditJourney />
+    <PMPExamPreparationAndStrategicProjectLeadership />
+    <AIInProjectControls />
+    <FromEvidenceToAction />
+    <PRINCE2ProgrammeManagement />
+    <PRINCE2PortfolioManagement />
+    <PMIPMOCPPreparationAndPMOLeadership />
+    <ExpertLedLearning />
+    <WhoShouldApply />
+    <EligibilityCriteria />
+    <FundingScenariosForStartsFrom1August2026 />
+    <HowYouStudy />
+    <StrategicPathwayComplete />
+    <ProgrammeEssentials />
+    <TakeTheNextStep />
 
-</main><Footer /></div>;
+  </main><Footer /></div>;
 }

@@ -1,3 +1,5 @@
+import plugin from 'tailwindcss/plugin';
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -132,5 +134,22 @@ export default {
         },
       },
     },
-    plugins: [],
+    plugins: [
+      plugin(({ addBase, theme, e }) => {
+        // Keep section headings 10% smaller at every existing responsive size.
+        // Read the shared scale so future typography changes stay consistent.
+        const sizes = ['xl', '2xl', '3xl', '4xl', '5xl', '6xl', '7xl', 'display'];
+        const rules = (prefix = '') => Object.fromEntries(sizes.map(size => {
+          const value = theme(`fontSize.${size}`);
+          const fontSize = Array.isArray(value) ? value[0] : value;
+          return [`#main-content h2.${e(`${prefix}text-${size}`)}`, {
+            fontSize: `calc((${fontSize}) * 0.9)`,
+          }];
+        }));
+        addBase(rules());
+        for (const [breakpoint, width] of Object.entries(theme('screens'))) {
+          addBase({ [`@media (min-width: ${width})`]: rules(`${breakpoint}:`) });
+        }
+      }),
+    ],
   }

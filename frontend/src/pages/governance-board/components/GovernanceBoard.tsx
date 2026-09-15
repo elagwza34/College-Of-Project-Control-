@@ -13,7 +13,7 @@ export default function GovernanceBoard() {
                   Submit Expression of Interest
                   <i className="ri-arrow-right-line" aria-hidden="true" />
                 </SiteLink>
-                <SiteLink href="#about" className="inline-flex items-center justify-center rounded-lg border border-white/30 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10">
+                <SiteLink href="#about" className="cta-button inline-flex items-center justify-center rounded-lg border border-white/30 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10">
                   Learn About the Board
                 </SiteLink>
           </>}

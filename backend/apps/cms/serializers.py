@@ -131,13 +131,21 @@ class DashboardEnquirySerializer(serializers.ModelSerializer):
     enquiryType = serializers.CharField(source="enquiry_type", read_only=True)
     sourcePath = serializers.CharField(source="source_path", read_only=True)
 
+    assigned_name = serializers.CharField(source="assigned_to.username", read_only=True, default=None)
+
+    def validate_assigned_to(self, user):
+        if user and not (user.is_active and user.is_staff):
+            raise serializers.ValidationError("Select an active dashboard user.")
+        return user
+
     class Meta:
         model = Enquiry
         fields = (
             "id", "name", "email", "phone", "organisation", "roleTitle",
             "enquiryType", "message", "sourcePath", "status", "created_at", "updated_at",
+            "read_at", "internal_notes", "assigned_to", "assigned_name", "follow_up_at",
         )
         read_only_fields = (
             "id", "name", "email", "phone", "organisation", "roleTitle",
-            "enquiryType", "message", "sourcePath", "created_at", "updated_at",
+            "enquiryType", "message", "sourcePath", "created_at", "updated_at", "read_at",
         )

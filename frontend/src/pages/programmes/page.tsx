@@ -1,35 +1,32 @@
 import Footer from '@/components/feature/Footer';
-import ProgrammesHero from './components/ProgrammesHero';
-import ProgrammeFeatures from './components/ProgrammeFeatures';
-import ProgrammeComparison from './components/ProgrammeComparison';
-import ProgrammeVsModule from './components/ProgrammeVsModule';
-import HowToChoose from './components/HowToChoose';
-import EmployerSection from './components/EmployerSection';
-import ProfessionalRecognitionSection from '@/components/feature/ProfessionalRecognitionSection';
-import MeetMentors from '@/components/feature/MeetMentors';
-import EventsSection from '@/components/feature/EventsTeaser';
-import ProgrammesFaq from './components/ProgrammesFaq';
-
+import ChooseYourProgramme from "./components/ChooseYourProgramme";
+import CompareProgrammes from "./components/CompareProgrammes";
+import FindYourFit from "./components/FindYourFit";
+import FlexibleProfessionalDevelopment from "./components/FlexibleProfessionalDevelopment";
+import ForEmployers from "./components/ForEmployers";
+import FrequentlyAskedQuestions from "./components/FrequentlyAskedQuestions";
+import LearnFromPractitioners from "./components/LearnFromPractitioners";
+import LearnTogether from "./components/LearnTogether";
+import ProfessionalDevelopmentAndRecognition from "./components/ProfessionalDevelopmentAndRecognition";
+import ProfessionalProgrammes from "./components/ProfessionalProgrammes";
 export default function Programmes() {
-  return (
-    <div className="min-h-screen bg-background-50">
-      <main>
-        <ProgrammesHero />
-        <ProgrammeFeatures />
-        <ProgrammeComparison />
-        <div className="section-divider" />
-        <ProgrammeVsModule />
-        <HowToChoose />
-        
-        <EmployerSection />
-        <ProfessionalRecognitionSection />
-        <div className="section-divider" />
-        <MeetMentors />
-        <EventsSection />
-        
-        <ProgrammesFaq />
-      </main>
-      <Footer />
-    </div>
-  );
+  return (<div className="min-h-screen bg-background-50">
+    <main>
+      <ProfessionalProgrammes />
+      <ChooseYourProgramme />
+      <CompareProgrammes />
+      <div className="section-divider" />
+      <FlexibleProfessionalDevelopment />
+      <FindYourFit />
+
+      <ForEmployers />
+      <ProfessionalDevelopmentAndRecognition />
+      <div className="section-divider" />
+      <LearnFromPractitioners />
+      <LearnTogether />
+
+      <FrequentlyAskedQuestions />
+    </main>
+    <Footer />
+  </div>);
 }

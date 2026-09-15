@@ -1,106 +1,32 @@
-import { reportCmsError } from '../api/reportError';
-import { useEffect, useState } from 'react';
+﻿import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { cmsApi } from '../api/client';
-
-interface Enquiry {
-  id: number;
-  name: string;
-  email: string;
-  phone: string;
-  organisation: string;
-  roleTitle: string;
-  enquiryType: string;
-  message: string;
-  sourcePath: string;
-  status: 'new' | 'contacted' | 'qualified' | 'closed';
-  created_at: string;
+interface Enquiry { id:number;name:string;email:string;phone:string;organisation:string;roleTitle:string;enquiryType:string;message:string;sourcePath:string;status:string;created_at:string;read_at:string|null;internal_notes:string;assigned_to:number|null;assigned_name:string|null;follow_up_at:string|null }
+const states=['new','contacted','qualified','closed'];
+const field='mt-2 w-full rounded-lg border border-background-200 bg-white p-3 text-base';
+const announce=()=>window.dispatchEvent(new Event('enquiries-updated'));
+function Detail({id,onSaved}:{id:string;onSaved:()=>void}) {
+ const [item,setItem]=useState<Enquiry|null>(null),[team,setTeam]=useState<{id:number;username:string}[]>([]),[error,setError]=useState(''),[saved,setSaved]=useState(''),[busy,setBusy]=useState(false);
+ useEffect(()=>{let active=true;setItem(null);setError('');setSaved('');
+  Promise.all([cmsApi.post<Enquiry>(`/enquiries/${id}/read/`,{}),cmsApi.get<{id:number;username:string}[]>('/enquiries/team/')]).then(([value,users])=>{if(active){setItem(value);setTeam(users);announce();onSaved();}}).catch(()=>{if(active)setError('Could not open this enquiry. Please try again.');});return()=>{active=false;};
+ // onSaved only refreshes the list; opening an enquiry is keyed to its ID.
+ // eslint-disable-next-line react-hooks/exhaustive-deps
+ },[id]);
+ async function save(){if(!item)return;setBusy(true);setError('');setSaved('');try{const value=await cmsApi.patch<Enquiry>(`/enquiries/${id}/`,{status:item.status,internal_notes:item.internal_notes,assigned_to:item.assigned_to,follow_up_at:item.follow_up_at});setItem(value);setSaved('Follow-up saved.');announce();onSaved();}catch{setError('Could not save. Your changes are still here.');}finally{setBusy(false);}}
+ return <section className="mt-6 rounded-xl border border-background-200 bg-white p-4 md:p-6" aria-label="Enquiry details"><h2 className="text-xl font-bold">Enquiry #{id}</h2>{error&&<p role="alert" className="mt-4 text-red-700">{error}</p>}{saved&&<p role="status" className="mt-4 text-primary-700">{saved}</p>}{!item?<p className="mt-4">{error?'Select another enquiry or reload to retry.':'Loading enquiry…'}</p>:<>
+ <dl className="mt-5 grid gap-4 sm:grid-cols-2">{[['Name',item.name],['Email',item.email],['Phone',item.phone],['Organisation',item.organisation],['Role',item.roleTitle],['Enquiry type',item.enquiryType],['Source page',item.sourcePath],['Received',new Date(item.created_at).toLocaleString('en-GB')]].map(([label,value])=><div key={label} className="min-w-0"><dt className="text-xs font-bold uppercase text-foreground-500">{label}</dt><dd className="mt-1 break-words">{value||'—'}</dd></div>)}</dl>
+ <h3 className="mt-6 font-bold">Message</h3><p className="mt-2 whitespace-pre-wrap break-words rounded-lg bg-background-50 p-4">{item.message||'No message provided.'}</p>
+ <form className="mt-6" onSubmit={e=>{e.preventDefault();void save();}}><div className="grid gap-4 md:grid-cols-3"><label className="text-sm font-semibold">Status<select className={field} value={item.status} onChange={e=>setItem({...item,status:e.target.value})}>{states.map(s=><option key={s} value={s}>{s}</option>)}</select></label><label className="text-sm font-semibold">Assigned to<select className={field} value={item.assigned_to??''} onChange={e=>setItem({...item,assigned_to:e.target.value?Number(e.target.value):null})}><option value="">Unassigned</option>{team.map(u=><option key={u.id} value={u.id}>{u.username}</option>)}</select></label><label className="text-sm font-semibold">Follow-up time (your local time)<input type="datetime-local" className={field} value={item.follow_up_at?new Date(new Date(item.follow_up_at).getTime()-new Date(item.follow_up_at).getTimezoneOffset()*60000).toISOString().slice(0,16):''} onChange={e=>setItem({...item,follow_up_at:e.target.value?new Date(e.target.value).toISOString():null})}/></label></div><label className="mt-4 block text-sm font-semibold">Internal notes<textarea rows={5} maxLength={20000} className={field} value={item.internal_notes} onChange={e=>setItem({...item,internal_notes:e.target.value})}/></label><button disabled={busy} className="btn-primary mt-4">{busy?'Saving…':'Save follow-up'}</button></form>
+ </>}</section>;
 }
-
-const statusOptions = ['new', 'contacted', 'qualified', 'closed'] as const;
-
-export default function EnquiriesPage() {
-  const [enquiries, setEnquiries] = useState<Enquiry[] | null>(null);
-  const [error, setError] = useState('');
-
-  const load = () => {
-    cmsApi
-      .get<Enquiry[]>('/enquiries/')
-      .then(setEnquiries)
-      .catch(() => setError('Could not load enquiries.'));
-  };
-
-  useEffect(() => {
-    load();
-  }, []);
-
-  const updateStatus = async (id: number, nextStatus: string) => {
-    try {
-    setEnquiries((prev) =>
-      prev ? prev.map((e) => (e.id === id ? { ...e, status: nextStatus as Enquiry['status'] } : e)) : prev,
-    );
-    try {
-      await cmsApi.patch(`/enquiries/${id}/`, { status: nextStatus });
-    } catch (error) {
-      reportCmsError(error);
-      load();
-    }
-  
-    } catch (error) { reportCmsError(error); }
-};
-
-  return (
-    <div>
-      <h1 className="font-heading text-2xl font-bold text-foreground-900">Enquiries</h1>
-      <p className="mt-1 text-sm text-foreground-600">Every enquiry submitted through the site&apos;s forms.</p>
-
-      {error && <p role="alert" className="mt-4 text-sm text-red-600">{error}</p>}
-
-      <div className="mt-6 overflow-x-auto rounded-xl border border-background-200/70 bg-white">
-        <table className="w-full text-left text-sm">
-          <thead className="border-b border-background-200/70 bg-background-50 text-xs uppercase tracking-wider text-foreground-600">
-            <tr>
-              <th className="px-4 py-3">Name</th>
-              <th className="px-4 py-3">Email</th>
-              <th className="px-4 py-3">Type</th>
-              <th className="px-4 py-3">Source</th>
-              <th className="px-4 py-3">Date</th>
-              <th className="px-4 py-3">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {enquiries === null ? (
-              <tr>
-                <td colSpan={6} className="px-4 py-6 text-center text-foreground-400">Loading…</td>
-              </tr>
-            ) : enquiries.length === 0 ? (
-              <tr>
-                <td colSpan={6} className="px-4 py-6 text-center text-foreground-400">No enquiries yet.</td>
-              </tr>
-            ) : (
-              enquiries.map((e) => (
-                <tr key={e.id} className="border-b border-background-200/50 last:border-0">
-                  <td className="px-4 py-3 font-medium text-foreground-900">{e.name}</td>
-                  <td className="px-4 py-3 text-foreground-600">{e.email}</td>
-                  <td className="px-4 py-3 text-foreground-600">{e.enquiryType || '—'}</td>
-                  <td className="px-4 py-3 text-foreground-400">{e.sourcePath || '—'}</td>
-                  <td className="px-4 py-3 text-foreground-400">{new Date(e.created_at).toLocaleDateString('en-GB')}</td>
-                  <td className="px-4 py-3">
-                    <select
-                      value={e.status}
-                      onChange={(ev) => updateStatus(e.id, ev.target.value)}
-                      className="rounded-md border border-background-200 bg-background-50 px-2 py-1 text-xs capitalize focus:outline-none focus:border-primary-400"
-                    >
-                      {statusOptions.map((s) => (
-                        <option key={s} value={s}>{s}</option>
-                      ))}
-                    </select>
-                  </td>
-                </tr>
-              ))
-            )}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
+export default function EnquiriesPage(){
+ const [params,setParams]=useSearchParams(),[rows,setRows]=useState<Enquiry[]>([]),[loading,setLoading]=useState(true),[error,setError]=useState(''),[revision,setRevision]=useState(0),[search,setSearch]=useState(params.get('search')||'');
+ const query=new URLSearchParams(params);query.delete('enquiry');const filter=query.toString();
+ useEffect(()=>{let active=true;setLoading(true);setError('');cmsApi.get<Enquiry[]>(`/enquiries/?${filter}`).then(data=>{if(active)setRows(data);}).catch(()=>{if(active)setError('Could not load enquiries.');}).finally(()=>{if(active)setLoading(false);});return()=>{active=false;};},[filter,revision]);
+ function setFilter(name:string,value:string){const next=new URLSearchParams(params);next.delete('enquiry');if(value)next.set(name,value);else next.delete(name);setParams(next);}
+ const selected=params.get('enquiry');
+ return <div><h1 className="text-2xl font-bold">Enquiries</h1><p className="mt-2 text-foreground-600">Read requests, assign follow-up and keep track of the next step.</p>
+ <form onSubmit={e=>{e.preventDefault();setFilter('search',search);}} className="mt-6 flex flex-wrap items-end gap-3"><label className="min-w-0 flex-1 text-sm">Search enquiries<input type="search" value={search} onChange={e=>setSearch(e.target.value)} className={field} placeholder="Name, email, organisation or message"/></label><button className="btn-secondary">Search</button><label className="text-sm">Status<select className={field} value={params.get('status')||''} onChange={e=>setFilter('status',e.target.value)}><option value="">All statuses</option>{states.map(s=><option key={s}>{s}</option>)}</select></label><label className="flex min-h-12 items-center gap-2 text-sm"><input type="checkbox" checked={params.get('unread')==='true'} onChange={e=>setFilter('unread',e.target.checked?'true':'')}/>Unread only</label><label className="flex min-h-12 items-center gap-2 text-sm"><input type="checkbox" checked={params.get('due')==='true'} onChange={e=>setFilter('due',e.target.checked?'true':'')}/>Follow-up due</label><button type="button" className="min-h-12 underline" onClick={()=>setRevision(v=>v+1)}>Refresh</button></form>
+ {error&&<p role="alert" className="mt-4 text-red-700">{error}</p>}{selected&&<Detail key={selected} id={selected} onSaved={()=>setRevision(v=>v+1)}/>}
+ <div className="mt-6 overflow-x-auto rounded-xl border bg-white"><table className="w-full text-left text-sm"><thead className="bg-background-50"><tr>{['Name','Type','Received','Status','Assigned to','Follow-up'].map(h=><th key={h} className="px-4 py-3">{h}</th>)}</tr></thead><tbody>{loading?<tr><td colSpan={6} className="p-6">Loading enquiries…</td></tr>:rows.length===0?<tr><td colSpan={6} className="p-6">No enquiries match these filters.</td></tr>:rows.map(e=><tr key={e.id} className={`border-t ${!e.read_at?'bg-primary-50/60':''}`}><td className="px-4 py-3"><button className="min-h-11 text-left font-semibold underline" onClick={()=>{const next=new URLSearchParams(params);next.set('enquiry',String(e.id));setParams(next);}}>{e.name}{!e.read_at&&<span className="ml-2 text-xs text-primary-600">Unread</span>}</button><p className="text-xs">{e.email}</p></td><td className="px-4 py-3">{e.enquiryType||'General'}</td><td className="whitespace-nowrap px-4 py-3">{new Date(e.created_at).toLocaleDateString('en-GB')}</td><td className="px-4 py-3 capitalize">{e.status}</td><td className="px-4 py-3">{e.assigned_name||'Unassigned'}</td><td className="px-4 py-3">{e.follow_up_at?new Date(e.follow_up_at).toLocaleString('en-GB'):'—'}</td></tr>)}</tbody></table></div></div>;
 }

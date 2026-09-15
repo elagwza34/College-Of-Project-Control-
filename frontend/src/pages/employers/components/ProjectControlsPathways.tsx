@@ -1,5 +1,5 @@
-import SiteLink from '@/components/base/SiteLink';
 import SectionHeading from '@/components/base/SectionHeading';
+import SiteLink from '@/components/base/SiteLink';
 
 const developmentAreas = [
   { title: 'Project Management Foundations', description: 'Develop professionals who coordinate delivery, stakeholders, governance, planning and project performance.', programmes: ['Associate Project Manager Level 4', 'Workplace-based project management development'], href: '/associate-project-manager-level-4', cta: 'Explore Level 4', icon: 'ri-stack-line' },

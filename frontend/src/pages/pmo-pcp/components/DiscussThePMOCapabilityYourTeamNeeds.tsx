@@ -1,0 +1,2 @@
+import SiteLink from '@/components/base/SiteLink';
+export default function DiscussThePMOCapabilityYourTeamNeeds() { return <section className="section-space bg-primary-700 text-white"><div className="container-site"><h2 className="text-3xl text-white">Discuss the PMO capability your team needs</h2><p className="mt-4 max-w-2xl">Tell us about your responsibilities and the decisions you want your PMO to support.</p><SiteLink href="/book-a-session" className="btn-primary mt-6">Request a consultation</SiteLink></div></section>; }

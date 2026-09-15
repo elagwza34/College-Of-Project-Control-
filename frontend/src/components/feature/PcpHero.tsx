@@ -15,6 +15,8 @@ interface PcpHeroProps {
   urgencyMessage?: string;
   sectors?: string[];
   bestFor?: string[];
+  compactDetails?: boolean;
+  contentPosition?: 'default' | 'lower';
 }
 
 export default function PcpHero({
@@ -33,6 +35,8 @@ export default function PcpHero({
   urgencyMessage,
   sectors,
   bestFor,
+  compactDetails = false,
+  contentPosition = 'default',
 }: PcpHeroProps) {
   const highlightIndex = headlineHighlight
     ? headline.toLowerCase().indexOf(headlineHighlight.toLowerCase())
@@ -60,7 +64,7 @@ export default function PcpHero({
         <div className="hero-contrast-overlay absolute inset-0"></div>
       </div>
 
-      <div className="relative z-10 w-full container-site py-20 md:py-24">
+      <div className={`relative z-10 w-full container-site ${contentPosition === 'lower' ? 'pb-16 pt-44 md:pb-20 md:pt-52' : 'py-20 md:py-24'}`}>
         <div className="max-w-4xl">
           {tag && (
             <span className="mb-6 inline-block rounded-full border border-signal-400/55 bg-signal-500/10 px-4 py-1.5 text-xs font-label font-semibold uppercase tracking-wider text-signal-300">
@@ -95,7 +99,7 @@ export default function PcpHero({
             {secondaryCta && (
               <SiteLink
                 href={secondaryCta.href}
-                className="inline-flex items-center justify-center rounded-md border border-white/55 px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:border-signal-400 hover:bg-background-50/10 whitespace-nowrap"
+                className="cta-button inline-flex items-center justify-center rounded-md border border-white/55 px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:border-signal-400 hover:bg-background-50/10 whitespace-nowrap"
               >
                 {secondaryCta.label}
               </SiteLink>
@@ -103,14 +107,21 @@ export default function PcpHero({
             {tertiaryCta && (
               <SiteLink
                 href={tertiaryCta.href}
-                className="inline-flex items-center justify-center px-6 py-3 border border-background-50/30 text-background-50 font-semibold text-sm rounded-md cursor-pointer hover:bg-background-50/10 transition-all duration-200 whitespace-nowrap"
+                className="cta-button inline-flex items-center justify-center px-6 py-3 border border-background-50/30 text-background-50 font-semibold text-sm rounded-md cursor-pointer hover:bg-background-50/10 transition-all duration-200 whitespace-nowrap"
               >
                 {tertiaryCta.label}
               </SiteLink>
             )}
           </div>
 
-          {badges && (
+          {compactDetails && (badges?.length || bestFor?.length) && (
+            <div className="mt-7 max-w-3xl space-y-3 border-t border-white/15 pt-5 text-xs leading-relaxed text-white/75 md:text-sm">
+              {!!badges?.length && <p>{badges.map(badge => badge.text).join(' · ')}</p>}
+              {!!bestFor?.length && <p><span className="font-semibold text-white/90">Best for: </span>{bestFor.join(' · ')}</p>}
+            </div>
+          )}
+
+          {badges && !compactDetails && (
             <div className="mt-8 flex flex-wrap gap-3">
               {badges.map((badge) => (
                 <span key={badge.text} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary-700/60 border border-background-50/10 rounded-full text-xs text-background-50/80 whitespace-nowrap">
@@ -121,7 +132,7 @@ export default function PcpHero({
             </div>
           )}
 
-          {bestFor && (
+          {bestFor && !compactDetails && (
             <div className="mt-6 flex flex-wrap gap-2">
               <span className="text-xs text-background-50/70 font-label uppercase tracking-wider mr-2 self-center">Best for:</span>
               {bestFor.map((role) => (

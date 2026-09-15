@@ -1,24 +1,19 @@
 import Footer from '@/components/feature/Footer';
-
-
-import Hero from './components/Hero';
+import BeforeYouReachOut from "./components/BeforeYouReachOut";
 import ContactInfoStrip from './components/ContactInfoStrip';
-import EnquiryForm from './components/EnquiryForm';
-import Faq from './components/Faq';
-
+import FindYourNextStep from "./components/FindYourNextStep";
+import GetInTouch from "./components/GetInTouch";
 export default function ContactPage() {
-  return (
-    <div className="min-h-screen bg-background-50">
-      <main>
-        <Hero />
+  return (<div className="min-h-screen bg-background-50">
+    <main>
+      <GetInTouch />
 
-        <ContactInfoStrip />
+      <ContactInfoStrip />
 
-        <EnquiryForm />
+      <FindYourNextStep />
 
-        <Faq />
-      </main>
-      <Footer />
-    </div>
-  );
+      <BeforeYouReachOut />
+    </main>
+    <Footer />
+  </div>);
 }

@@ -1,3 +1,5 @@
+import { EnquiryNotificationPanel } from './EnquiryNotifications';
+import { useEnquiryNotifications } from './useEnquiryNotifications';
 import { useEffect, useState } from 'react';
 import Modal from '@/components/base/Modal';
 import RouteScroll from '@/components/feature/RouteScroll';
@@ -5,6 +7,8 @@ import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext';
 
 const navItems = [
+  { to: '/dashboard/pages', label: 'Pages & sections', icon: 'ri-layout-line', end: false },
+  { to: '/dashboard/chatbot', label: 'Programme assistant', icon: 'ri-robot-2-line', end: false },
   { to: '/dashboard/testimonials', label: 'Testimonials & reviews', icon: 'ri-chat-quote-line', end: false },
   { to: '/dashboard/articles', label: 'Articles', icon: 'ri-article-line', end: false },
   { to: '/dashboard/ipc-images', label: 'IPC images', icon: 'ri-gallery-line', end: false },
@@ -21,6 +25,7 @@ const navItems = [
 ];
 
 export default function DashboardLayout() {
+  const notifications = useEnquiryNotifications();
   const [menuOpen, setMenuOpen] = useState(false);
   const [requestError, setRequestError] = useState('');
   useEffect(() => {
@@ -59,6 +64,7 @@ export default function DashboardLayout() {
             >
               <i className={`${item.icon} text-base`} aria-hidden="true" />
               {item.label}
+              {item.to === '/dashboard/enquiries' && !!notifications.data?.unread_count && <span aria-label={`${notifications.data.unread_count} unread enquiries`} className="ml-auto rounded-full bg-signal-500 px-2 py-0.5 text-xs font-bold text-primary-950">{notifications.data.unread_count}</span>}
             </NavLink>
           ))}
         </nav>
@@ -97,6 +103,7 @@ export default function DashboardLayout() {
             <div className="mt-3 flex flex-wrap gap-4"><button type="button" className="underline" onClick={() => setRequestError('')}>Dismiss</button>
             <button type="button" className="underline" onClick={() => { if (window.confirm('Reload this page? Unsaved entries will be lost.')) window.location.reload(); }}>Reload list</button></div>
           </div>}
+          <EnquiryNotificationPanel {...notifications} />
           <Outlet />
         </div>
       </main>

@@ -1,5 +1,10 @@
 from rest_framework import viewsets
 from rest_framework.parsers import FormParser, JSONParser, MultiPartParser
+from rest_framework.decorators import action
+from rest_framework.response import Response
+from django.contrib.auth import get_user_model
+from django.db.models import Q
+from django.utils import timezone
 
 from apps.content.models import Coach, Enquiry, Event, MentorProfile, Partner, ProfessionalCredential, Sector
 
@@ -121,4 +126,43 @@ class EnquiryViewSet(viewsets.ModelViewSet):
     queryset = Enquiry.objects.all()
     serializer_class = DashboardEnquirySerializer
     permission_classes = [IsDashboardUser]
-    http_method_names = ["get", "patch", "head", "options"]
+    http_method_names = ["get", "patch", "post", "head", "options"]
+
+    def create(self, request, *args, **kwargs):
+        from rest_framework.exceptions import MethodNotAllowed
+        raise MethodNotAllowed('POST')
+
+    def get_queryset(self):
+        qs = Enquiry.objects.select_related('assigned_to').all()
+        if self.action != 'list':
+            return qs
+        query = self.request.query_params
+        if query.get('search'):
+            term = query['search'][:200]
+            qs = qs.filter(Q(name__icontains=term) | Q(email__icontains=term) | Q(organisation__icontains=term) | Q(message__icontains=term))
+        if query.get('status'):
+            qs = qs.filter(status=query['status'])
+        if query.get('unread') == 'true':
+            qs = qs.filter(read_at__isnull=True)
+        if query.get('due') == 'true':
+            qs = qs.filter(follow_up_at__lte=timezone.now()).exclude(status='closed')
+        return qs
+
+    @action(detail=False, methods=['get'])
+    def notifications(self, request):
+        qs = Enquiry.objects.filter(read_at__isnull=True)
+        return Response({'unread_count': qs.count(), 'latest': list(qs.values('id', 'name', 'enquiry_type', 'created_at')[:5])})
+
+    @action(detail=True, methods=['post'])
+    def read(self, request, pk=None):
+        obj = self.get_object()
+        Enquiry.objects.filter(pk=obj.pk, read_at__isnull=True).update(read_at=timezone.now())
+        obj.refresh_from_db()
+        return Response(self.get_serializer(obj).data)
+
+    @action(detail=False, methods=['get'])
+    def team(self, request):
+        return Response(list(get_user_model().objects.filter(is_staff=True, is_active=True).values('id', 'username')))
+
+
+# Enquiry read state is separate from the admissions follow-up status.

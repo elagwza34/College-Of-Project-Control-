@@ -1,5 +1,5 @@
 import SiteLink from '@/components/base/SiteLink';
-import { useState, useRef, useEffect } from 'react';
+import { useEffect,useRef,useState } from 'react';
 
 function useReveal(threshold = 0.1) {
   const [visible, setVisible] = useState(false);
@@ -79,7 +79,7 @@ export default function ForEmployers() {
             </div>
 
             {/* CTA */}
-            <div className="mt-8 flex flex-col sm:flex-row items-start gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap items-start gap-4">
               <SiteLink
                 href="/employers"
                 className="btn-primary inline-flex items-center gap-3 px-6 py-3.5 font-semibold text-sm cursor-pointer transition-all duration-300 whitespace-nowrap lift-hover"
@@ -90,7 +90,7 @@ export default function ForEmployers() {
               </SiteLink>
               <SiteLink
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3.5 border border-foreground-200 text-foreground-800 font-semibold text-sm rounded-xl cursor-pointer hover:bg-foreground-50 hover:border-foreground-300 transition-all duration-300 whitespace-nowrap"
+                className="cta-button inline-flex items-center gap-2 px-6 py-3.5 border border-foreground-200 text-foreground-800 font-semibold text-sm rounded-xl cursor-pointer hover:bg-foreground-50 hover:border-foreground-300 transition-all duration-300 whitespace-nowrap"
               >
                 <i className="ri-calendar-check-line text-sm" />
                 Request an employer consultation

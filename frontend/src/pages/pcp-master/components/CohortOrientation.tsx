@@ -1,5 +1,5 @@
 import SectionHeading from '@/components/base/SectionHeading';
-import { cohorts, orientations } from '../programmeData';
+import { orientations } from '../programmeData';
 
 export default function CohortOrientation() {
   return (

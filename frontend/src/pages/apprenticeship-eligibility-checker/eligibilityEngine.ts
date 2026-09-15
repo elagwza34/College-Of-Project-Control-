@@ -1,4 +1,4 @@
-import type { CheckerAnswers, CheckerStep } from './checkerData';
+import type { CheckerAnswers,CheckerStep } from './checkerData';
 
 export type EligibilityStatus = 'likely' | 'review' | 'not_suitable';
 

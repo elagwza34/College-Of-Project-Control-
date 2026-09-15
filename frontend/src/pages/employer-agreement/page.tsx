@@ -1,16 +1,12 @@
 import Footer from '@/components/feature/Footer';
-
-import Hero from './components/Hero';
-import Form from './components/Form';
-
+import EmployerAgreementForm from './components/EmployerAgreementForm';
+import ForEmployers from "./components/ForEmployers";
 export default function EmployerAgreementPage() {
-  return (
-    <div className="min-h-screen bg-background-50">
-      <main>
-        <Hero />
-        <Form />
-      </main>
-      <Footer />
-    </div>
-  );
+  return (<div className="min-h-screen bg-background-50">
+    <main>
+      <ForEmployers />
+      <EmployerAgreementForm />
+    </main>
+    <Footer />
+  </div>);
 }

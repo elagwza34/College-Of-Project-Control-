@@ -1,32 +1,26 @@
 import Footer from '@/components/feature/Footer';
 import PageSectionNav from '@/components/feature/PageSectionNav';
+import StickyCta from './components/StickyCta';
 import SchemaOrg, { breadcrumbListSchema, courseSchema, faqPageSchema, organizationSchema } from '@/components/feature/SchemaOrg';
-import MeetMentors from '@/components/feature/MeetMentors';
-import ProgrammeAccessSections from '@/components/feature/ProgrammeAccessSections';
-import CoachingSupport from '@/components/feature/CoachingSupport';
-import { faqs } from './programmeData';
-
-import Hero from './components/Hero';
-import Facts from './components/Facts';
 import BuildCapabilityThatTransfersDirectlyToYourRole from './components/BuildCapabilityThatTransfersDirectlyToYourRole';
-import Your12MonthDevelopmentJourney from './components/Your12MonthDevelopmentJourney';
-import WhatYouWillLearn from './components/WhatYouWillLearn';
-import Outputs from './components/Outputs';
-import WhoShouldApply from './components/WhoShouldApply';
-import HowYouLearn from './components/HowYouLearn';
-import WeeklyCommitment from './components/WeeklyCommitment';
+import CoachingAndSupport from "./components/CoachingAndSupport";
 import ForEmployers from './components/ForEmployers';
-import BeyondApprenticeship from './components/BeyondApprenticeship';
-import TrustAndRelevance from './components/TrustAndRelevance';
 import FrequentlyAskedQuestions from './components/FrequentlyAskedQuestions';
-import NextStepCta from './components/NextStepCta';
-
-const navLinks = [
-  { label: 'Overview', href: '#overview' }, { label: 'Pathway', href: '#pathway' },
-  { label: 'Curriculum', href: '#curriculum' }, { label: 'Learning', href: '#learning' },
-  { label: 'Experts', href: '#experts' }, { label: 'Funding', href: '#funding' }, { label: 'FAQ', href: '#faq' },
-];
-
+import FundingEligibilityAndIPCSupport from "./components/FundingEligibilityAndIPCSupport";
+import HowYouLearn from './components/HowYouLearn';
+import KeyProgrammeFacts from "./components/KeyProgrammeFacts";
+import LearnByBuilding from "./components/LearnByBuilding";
+import LearnFromPractitioners from "./components/LearnFromPractitioners";
+import Level4WorkBasedApprenticeship from "./components/Level4WorkBasedApprenticeship";
+import ProfessionalDevelopment from "./components/ProfessionalDevelopment";
+import TrustAndRelevance from './components/TrustAndRelevance';
+import WeeklyCommitment from './components/WeeklyCommitment';
+import WhatYouWillLearn from './components/WhatYouWillLearn';
+import WhoShouldApply from './components/WhoShouldApply';
+import Your12MonthDevelopmentJourney from './components/Your12MonthDevelopmentJourney';
+import YourNextStep from "./components/YourNextStep";
+import { faqs } from './programmeData';
+import { navLinks } from "./sectionData";
 export default function ApmLevel4() {
   return <>
     <SchemaOrg type="Organization" data={organizationSchema()} />
@@ -34,10 +28,10 @@ export default function ApmLevel4() {
     <SchemaOrg type="WebPage" data={breadcrumbListSchema([{ name: 'Home', item: '/' }, { name: 'Programmes', item: '/programmes' }, { name: 'Associate Project Manager Level 4' }])} />
     <SchemaOrg type="FAQPage" data={faqPageSchema(faqs)} />
     <div className="min-h-screen bg-background-50"><main>
-      <Hero />
+      <Level4WorkBasedApprenticeship />
 
-      <Facts />
-      <PageSectionNav pageLabel="Level 4" links={navLinks} ctaHref="/book-a-session" ctaLabel="Request a consultation" />
+      <KeyProgrammeFacts />
+      <PageSectionNav pageLabel="Level 4" links={navLinks} showCta={false} />
 
       <BuildCapabilityThatTransfersDirectlyToYourRole />
 
@@ -45,7 +39,7 @@ export default function ApmLevel4() {
 
       <WhatYouWillLearn />
 
-      <Outputs />
+      <LearnByBuilding />
 
       <WhoShouldApply />
 
@@ -53,21 +47,21 @@ export default function ApmLevel4() {
 
       <WeeklyCommitment />
 
-      <div id="experts"><MeetMentors /></div>
+      <div id="experts"><LearnFromPractitioners /></div>
 
-      <CoachingSupport />
+      <CoachingAndSupport />
 
-      <ProgrammeAccessSections programmeName="Associate Project Manager Level 4" />
+      <FundingEligibilityAndIPCSupport />
 
       <ForEmployers />
 
-      <BeyondApprenticeship />
+      <ProfessionalDevelopment />
 
       <TrustAndRelevance />
 
       <FrequentlyAskedQuestions />
 
-      <NextStepCta />
-    </main><Footer /></div>
+      <YourNextStep />
+    </main><Footer /><StickyCta /></div>
   </>;
 }

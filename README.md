@@ -15,3 +15,9 @@ The approved primary colour is `#002F2C`, supported by the deeper `#001714`. The
 ## Content dashboard
 
 The independent `backend` directory contains the Django content dashboard and REST API. See `docs/CMS.md` for the page, section, header and footer publishing workflow.
+
+The English programme assistant is configured in [docs/CHATBOT.md](docs/CHATBOT.md). Manage its approved sources at `/dashboard/chatbot`; the API key belongs in the backend environment.
+
+## Find a page section
+
+Open `frontend/src/pages/<page>/components/` and choose the file named after the section's visible label. Each page includes a section guide. Start with the [page index](frontend/src/pages/README.md) or the [editing guide](docs/PAGE_COMPONENTS.md).

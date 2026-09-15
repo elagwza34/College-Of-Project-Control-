@@ -1,24 +1,23 @@
 import Footer from '@/components/feature/Footer';
 import PageSectionNav from '@/components/feature/PageSectionNav';
-import Hero from './components/Hero';
-import PathwayOverview from './components/PathwayOverview';
+import APMGInternationalCertificationContext from "./components/APMGInternationalCertificationContext";
 import CatalogueNavigation from './components/CatalogueNavigation';
-import RoleFit from './components/RoleFit';
-import PathwayStructure from './components/PathwayStructure';
-import OccupationalStandard from './components/OccupationalStandard';
-import CertifiedPmoCore from './components/CertifiedPmoCore';
-import Module1 from './components/Module1';
-import Module2 from './components/Module2';
-import Module3 from './components/Module3';
-import Module4 from './components/Module4';
-import AiProjectControls from './components/AiProjectControls';
-import PortfolioManagement from './components/PortfolioManagement';
-import EarnedValueManagement from './components/EarnedValueManagement';
-import ProfessionalEvidence from './components/ProfessionalEvidence';
-import Delivery from './components/Delivery';
-import Eligibility from './components/Eligibility';
-import SourcesContact from './components/SourcesContact';
-
+import CollegeSpecialistDevelopment from "./components/CollegeSpecialistDevelopment";
+import EligibilityCriteria from "./components/EligibilityCriteria";
+import IndependentProfessionalDevelopmentRoute from "./components/IndependentProfessionalDevelopmentRoute";
+import LiveTeachingCoachingAndWorkplaceApplication from "./components/LiveTeachingCoachingAndWorkplaceApplication";
+import OccupationalAssessmentAndFutureChPPApplication from "./components/OccupationalAssessmentAndFutureChPPApplication";
+import PMOProfessionalDevelopmentModule1 from "./components/PMOProfessionalDevelopmentModule1";
+import PMOProfessionalDevelopmentModule2 from "./components/PMOProfessionalDevelopmentModule2";
+import PMOProfessionalDevelopmentModule3 from "./components/PMOProfessionalDevelopmentModule3";
+import PMOProfessionalDevelopmentModule4 from "./components/PMOProfessionalDevelopmentModule4";
+import ProgrammeInformationAndNextSteps from "./components/ProgrammeInformationAndNextSteps";
+import ProjectControlsProfessionalLevel6 from "./components/ProjectControlsProfessionalLevel6";
+import TechnicalKnowledgeProfessionalPracticeCharteredAmbition from "./components/TechnicalKnowledgeProfessionalPracticeCharteredAmbition";
+import TheCompleteST0845CapabilityRemainsMandatory from "./components/TheCompleteST0845CapabilityRemainsMandatory";
+import TheProfessionalDevelopmentArchitecture from "./components/TheProfessionalDevelopmentArchitecture";
+import TheTechnicalKnowledgeDevelopmentComponent from "./components/TheTechnicalKnowledgeDevelopmentComponent";
+import WhoShouldChooseTheCharteredPathway from "./components/WhoShouldChooseTheCharteredPathway";
 const sectionLinks = [
   {
     "label": "Role fit",
@@ -81,28 +80,27 @@ const sectionLinks = [
     "href": "#sources-contact"
   }
 ];
-
 export default function CharteredPathway() {
-return <div className="min-h-screen bg-background-50"><main id="hero">
-<Hero />
-<PageSectionNav pageLabel="Chartered Pathway" links={sectionLinks} />
-<PathwayOverview />
-<CatalogueNavigation />
-<RoleFit />
-<PathwayStructure />
-<OccupationalStandard />
-<CertifiedPmoCore />
-<Module1 />
-<Module2 />
-<Module3 />
-<Module4 />
-<AiProjectControls />
-<PortfolioManagement />
-<EarnedValueManagement />
-<ProfessionalEvidence />
-<Delivery />
-<Eligibility />
-<SourcesContact />
+  return <div className="min-h-screen bg-background-50"><main id="hero">
+    <ProjectControlsProfessionalLevel6 />
+    <PageSectionNav pageLabel="Chartered Pathway" links={sectionLinks} showCta={false} />
+    <TechnicalKnowledgeProfessionalPracticeCharteredAmbition />
+    <CatalogueNavigation />
+    <WhoShouldChooseTheCharteredPathway />
+    <TheProfessionalDevelopmentArchitecture />
+    <TheCompleteST0845CapabilityRemainsMandatory />
+    <TheTechnicalKnowledgeDevelopmentComponent />
+    <PMOProfessionalDevelopmentModule1 />
+    <PMOProfessionalDevelopmentModule2 />
+    <PMOProfessionalDevelopmentModule3 />
+    <PMOProfessionalDevelopmentModule4 />
+    <CollegeSpecialistDevelopment />
+    <IndependentProfessionalDevelopmentRoute />
+    <APMGInternationalCertificationContext />
+    <OccupationalAssessmentAndFutureChPPApplication />
+    <LiveTeachingCoachingAndWorkplaceApplication />
+    <EligibilityCriteria />
+    <ProgrammeInformationAndNextSteps />
 
-</main><Footer /></div>;
+  </main><Footer /></div>;
 }

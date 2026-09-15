@@ -1,6 +1,6 @@
-import Bullets from './Bullets';
 import SectionHeading from '@/components/base/SectionHeading';
 import { programmePhases } from '../programmeData';
+import Bullets from './Bullets';
 
 export default function ProgrammeStructure() {
   return (

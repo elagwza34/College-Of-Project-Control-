@@ -3,6 +3,7 @@ frontend/node_modules/
 frontend/out/
 frontend/coverage/
 frontend/.cache/
+frontend/.section-refactor/
 backend/.venv/
 backend/db.sqlite3
 backend/staticfiles/

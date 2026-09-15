@@ -1,7 +1,7 @@
 import type { CardItem } from './cardTypes';
 
-import SiteLink from '@/components/base/SiteLink';
 import SectionHeading from '@/components/base/SectionHeading';
+import SiteLink from '@/components/base/SiteLink';
 
 const employerResources: CardItem[] = [
   { title: 'Employer Dashboard', description: 'Access employer systems and progress information.', icon: 'ri-dashboard-line', href: 'https://employer.kentbusinesscollege.net/', external: true },

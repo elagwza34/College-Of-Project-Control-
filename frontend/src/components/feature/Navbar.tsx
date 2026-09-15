@@ -163,6 +163,7 @@ export default function Navbar() {
                 {link.hasDropdown ? (
                   <button
                     type="button"
+                    data-navigation-control
                     ref={triggerRef}
                     aria-expanded={routesOpen}
                     aria-controls="desktop-routes-menu"
@@ -189,6 +190,7 @@ export default function Navbar() {
                 {link.hasDropdown && routesOpen && (
                   <div
                     id="desktop-routes-menu"
+                    data-navigation-menu
                     className="absolute left-1/2 top-full mt-3 max-h-[calc(100vh-96px)] w-[calc(100vw-2rem)] max-w-[1180px] -translate-x-1/2 overflow-x-hidden overflow-y-auto rounded-2xl border border-background-200 bg-white shadow-card"
                     style={{ animation: 'dropdown-in 350ms cubic-bezier(0.22,1,0.36,1) forwards' }}
                   >
@@ -286,7 +288,7 @@ export default function Navbar() {
             ))}
 
             {/* Complete mobile navigation */}
-            <div className="border-t border-background-200/70 pt-3">
+            <div data-navigation-menu className="border-t border-background-200/70 pt-3">
               <p className="text-sm font-label font-semibold uppercase tracking-[0.12em] text-foreground-400 mb-2">
                 Explore all pages
               </p>
@@ -324,7 +326,7 @@ export default function Navbar() {
               <SiteLink
                 href="/book-a-session"
                 onClick={() => setMobileOpen(false)}
-                className="bg-signal-500 text-primary-950 px-7 py-3 rounded-md text-sm font-bold text-center cursor-pointer hover:bg-signal-400 shadow-card transition-colors whitespace-nowrap"
+                className="cta-button bg-signal-500 text-primary-950 px-7 py-3 rounded-md text-sm font-bold text-center cursor-pointer hover:bg-signal-400 shadow-card transition-colors whitespace-nowrap"
               >
                 Request a consultation
               </SiteLink>
