@@ -128,7 +128,10 @@ class DashboardEventSerializer(serializers.ModelSerializer):
         read_only_fields = ("id", "source", "organization_id", "external_id", "source_url", "last_synced_at", "remote_changed_at", "source_is_public", "sync_error", "created_at", "updated_at")
 
     def get_public_visible(self, obj):
-        return visible_events().filter(pk=obj.pk).exists()
+        visible_ids = self.context.get("visible_ids")
+        if visible_ids is None:
+            return visible_events().filter(pk=obj.pk).exists()
+        return obj.pk in visible_ids
 
     def validate_timezone(self, value):
         try:
@@ -171,6 +174,12 @@ class EventViewSet(viewsets.ModelViewSet):
     queryset = Event.objects.select_related("source_category").prefetch_related("classifications").all()
     serializer_class = DashboardEventSerializer
     permission_classes = [IsDashboardUser]
+
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        if self.action in ("list", "retrieve"):
+            context["visible_ids"] = set(visible_events().values_list("pk", flat=True))
+        return context
 
     def destroy(self, request, *args, **kwargs):
         if self.get_object().source == "eventbrite":
