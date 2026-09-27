@@ -1,7 +1,7 @@
 import useCollection from '@/hooks/useCollection';
 import CollectionState from '@/components/base/CollectionState';
 import SiteLink from '@/components/base/SiteLink';
-import { useState, useEffect } from 'react';
+import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { fetchMentors, type Mentor } from '@/services/mentorsApi';
 
 function MentorCard({ mentor }: { mentor: Mentor }) {
@@ -76,8 +76,53 @@ function MentorCard({ mentor }: { mentor: Mentor }) {
 
 export default function MeetMentors() {
   const { items: mentors, loading, error, retry } = useCollection(fetchMentors);
+  const trackId = useId();
+  const track = useRef<HTMLDivElement>(null);
+  const [position, setPosition] = useState({ index: 0, start: true, end: true });
 
+  const measure = useCallback(() => {
+    const el = track.current;
+    if (!el) return;
+    const card = el.firstElementChild as HTMLElement | null;
+    const gap = parseFloat(getComputedStyle(el).columnGap || '0');
+    const stride = card ? card.getBoundingClientRect().width + (Number.isFinite(gap) ? gap : 0) : 1;
+    setPosition({
+      index: Math.round(el.scrollLeft / stride),
+      start: el.scrollLeft < 2,
+      end: el.scrollLeft + el.clientWidth >= el.scrollWidth - 2,
+    });
+  }, []);
 
+  const move = useCallback((direction: number) => {
+    const el = track.current;
+    const card = el?.firstElementChild as HTMLElement | null;
+    if (!el || !card) return;
+    const gap = parseFloat(getComputedStyle(el).columnGap || '0');
+    const stride = card.getBoundingClientRect().width + (Number.isFinite(gap) ? gap : 0);
+    const target = direction === 0 ? 0 : (Math.round(el.scrollLeft / stride) + direction) * stride;
+    el.scrollTo({ left: target, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+  }, []);
+
+  useEffect(() => {
+    const el = track.current;
+    if (!el || mentors.length === 0) return;
+    el.scrollLeft = 0;
+    const observer = new ResizeObserver(measure);
+    observer.observe(el);
+    measure();
+    return () => observer.disconnect();
+  }, [mentors, measure]);
+
+  useEffect(() => {
+    if (mentors.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
+    const tick = () => {
+      if (window.innerWidth >= 1024) return;
+      if (position.end) move(0);
+      else move(1);
+    };
+    const timer = window.setInterval(tick, 4200);
+    return () => window.clearInterval(timer);
+  }, [mentors.length, move, position.end]);
 
   if (loading || error || mentors.length === 0) return <CollectionState id="mentors" label="Mentors" loading={loading} error={error} retry={retry} />;
 
@@ -104,7 +149,33 @@ export default function MeetMentors() {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{mentors.map(mentor => <MentorCard key={mentor.id} mentor={mentor} />)}</div>
+        <div
+          id={trackId}
+          ref={track}
+          onScroll={measure}
+          tabIndex={0}
+          aria-label="Mentor carousel. Swipe or use the arrow buttons to browse."
+          onKeyDown={(event) => {
+            if (event.target === event.currentTarget && (event.key === 'ArrowRight' || event.key === 'ArrowLeft')) {
+              event.preventDefault();
+              move(event.key === 'ArrowRight' ? 1 : -1);
+            }
+          }}
+          className="scrollbar-hide grid auto-cols-[82%] grid-flow-col gap-5 overflow-x-auto snap-x snap-mandatory pb-4 sm:auto-cols-[46%] lg:grid-flow-row lg:grid-cols-3 lg:auto-cols-auto lg:overflow-visible lg:snap-none"
+        >
+          {mentors.map(mentor => <div key={mentor.id} className="min-w-0 snap-start"><MentorCard mentor={mentor} /></div>)}
+        </div>
+        <div className="mt-5 flex items-center justify-between gap-4 lg:hidden">
+          <p className="text-sm text-foreground-600" aria-live="polite">{Math.min(position.index + 1, mentors.length)} / {mentors.length}</p>
+          <div className="flex gap-3">
+            <button type="button" onClick={() => move(-1)} disabled={position.start} aria-label="Previous mentor" aria-controls={trackId} className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-300 bg-white text-primary-800 disabled:opacity-30">
+              <i className="ri-arrow-left-line text-lg" aria-hidden="true" />
+            </button>
+            <button type="button" onClick={() => move(1)} disabled={position.end} aria-label="Next mentor" aria-controls={trackId} className="flex h-11 w-11 items-center justify-center rounded-full bg-primary-700 text-white disabled:opacity-30">
+              <i className="ri-arrow-right-line text-lg" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
         {/* Bottom CTA */}
         <div className="mt-12 md:mt-16">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 md:px-8 md:py-5 bg-white rounded-2xl border border-background-200/70 shadow-sm w-full">

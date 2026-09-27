@@ -6,3 +6,8 @@ class ContentConfig(AppConfig):
     name = "apps.content"
     verbose_name = "Website content"
 
+    def ready(self):
+        from . import signals
+
+        signals.connect()
+

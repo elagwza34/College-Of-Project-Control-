@@ -4,7 +4,6 @@ const navLinks = [
   { label: 'Who It Is For', href: '#who-for' },
   { label: 'Funding', href: '/apprenticeship-eligibility-checker' },
   { label: 'Outcomes', href: '#develop' },
-  { label: 'FAQ', href: '#faq' },
 ];
 
 const heroData = {

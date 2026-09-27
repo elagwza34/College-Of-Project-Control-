@@ -7,15 +7,20 @@ const EmployersPage = lazy(() => import('../pages/employers/page'));
 const ApprenticesPage = lazy(() => import('../pages/apprentices/page'));
 const ApmLevel4 = lazy(() => import('../pages/apm-level-4/page'));
 const ApprenticeshipEligibilityCheckerPage = lazy(() => import('../pages/apprenticeship-eligibility-checker/page'));
+const RouteFinderPage = lazy(() => import('../pages/route-finder/page'));
+const ShortCoursesPage = lazy(() => import('../pages/short-courses/page'));
+const HowToApplyPage = lazy(() => import('../pages/how-to-apply/page'));
 const EmployerAgreementPage = lazy(() => import('../pages/employer-agreement/page'));
 const GovernanceBoardPage = lazy(() => import('../pages/governance-board/page'));
 const EventsPage = lazy(() => import('../pages/events/page'));
 const EventDetailPage = lazy(() => import("../pages/events/detail/page"));
 const ArticlesPage = lazy(() => import('../pages/articles/page'));
 const ArticleDetailPage = lazy(() => import("../pages/articles/detail/page"));
-const PcpMaster = lazy(() => import('../pages/pcp-master/page'));
+const CaseStudiesPage = lazy(() => import('../pages/case-studies/page'));
+const CaseStudyDetailPage = lazy(() => import('../pages/case-studies/detail/page'));
+const PcpMaster = lazy(() => import('../pages/project-controls-professional-level-6/page'));
 const StrategicPcp = lazy(() => import('../pages/strategic-pcp/page'));
-const OperationalPcp = lazy(() => import('../pages/operational-pcp/page'));
+const OperationalPcp = lazy(() => import('../pages/project-controls-professional-operational-route/page'));
 const StrategicOperationalPcp = lazy(() => import('../pages/strategic-operational-pcp/page'));
 const PmoPcp = lazy(() => import('../pages/pmo-pcp/page'));
 const CharteredPmoPathway = lazy(() => import('../pages/chartered-pmo-pathway/page'));
@@ -69,6 +74,26 @@ const routes: RouteObject[] = [
     element: <ProgrammesPage />,
   },
   {
+    path: "/short-courses",
+    element: <ShortCoursesPage />,
+  },
+  {
+    path: "/short-courses/:slug",
+    element: <ShortCoursesPage />,
+  },
+  {
+    path: "/how-to-apply",
+    element: <HowToApplyPage />,
+  },
+  {
+    path: "/find-your-best-project-controls-route",
+    element: <RouteFinderPage />,
+  },
+  {
+    path: "/route-finder",
+    element: <RouteFinderPage />,
+  },
+  {
     path: "/mentors/:id",
     element: <MentorDetailPage />,
   },
@@ -114,6 +139,14 @@ const routes: RouteObject[] = [
     element: <ArticleDetailPage />,
   },
   {
+    path: "/case-studies",
+    element: <CaseStudiesPage />,
+  },
+  {
+    path: "/case-studies/:slug",
+    element: <CaseStudyDetailPage />,
+  },
+  {
     path: "/apprentices",
     element: <ApprenticesPage />,
   },
@@ -122,14 +155,13 @@ const routes: RouteObject[] = [
     path: "/apprenticeship-eligibility-checker",
     element: <ApprenticeshipEligibilityCheckerPage />,
   },
+  {
+    path: "/eligibility-checker",
+    element: <ApprenticeshipEligibilityCheckerPage />,
+  },
   // PCP Master Landing Page — canonical URL
   {
     path: "/project-controls-professional-level-6",
-    element: <PcpMaster />,
-  },
-  // Legacy alias
-  {
-    path: "/pcp-master",
     element: <PcpMaster />,
   },
   // Strategic PCP Route
@@ -144,10 +176,6 @@ const routes: RouteObject[] = [
   // Operational PCP Route
   {
     path: "/project-controls-professional/operational-route",
-    element: <OperationalPcp />,
-  },
-  {
-    path: "/operational-pcp",
     element: <OperationalPcp />,
   },
   // Strategic + Operational Combined

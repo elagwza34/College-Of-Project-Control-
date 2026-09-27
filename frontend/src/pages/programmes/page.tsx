@@ -4,7 +4,6 @@ import CompareProgrammes from "./components/CompareProgrammes";
 import FindYourFit from "./components/FindYourFit";
 import FlexibleProfessionalDevelopment from "./components/FlexibleProfessionalDevelopment";
 import ForEmployers from "./components/ForEmployers";
-import FrequentlyAskedQuestions from "./components/FrequentlyAskedQuestions";
 import LearnFromPractitioners from "./components/LearnFromPractitioners";
 import LearnTogether from "./components/LearnTogether";
 import ProfessionalDevelopmentAndRecognition from "./components/ProfessionalDevelopmentAndRecognition";
@@ -24,8 +23,6 @@ export default function Programmes() {
       <div className="section-divider" />
       <LearnFromPractitioners />
       <LearnTogether />
-
-      <FrequentlyAskedQuestions />
     </main>
     <Footer />
   </div>);

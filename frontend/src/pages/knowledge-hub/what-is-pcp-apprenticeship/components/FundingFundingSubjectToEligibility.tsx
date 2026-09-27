@@ -1,8 +1,8 @@
 
-/** Section: Funding: Funding Subject to Eligibility. */
+/** Section: Apprenticeship funding. */
 export default function FundingFundingSubjectToEligibility() {
   return (
-    <><h3 className="text-lg md:text-xl font-heading font-bold text-foreground-900 mt-8 mb-3">Funding: Funding Subject to Eligibility</h3>
+    <><h3 className="text-lg md:text-xl font-heading font-bold text-foreground-900 mt-8 mb-3">Apprenticeship funding</h3>
         <p className="mb-4">
           <strong>Apprenticeship funding may be available, subject to learner, employer and current funding-rule eligibility.</strong> The programme sits within Funding Band 11 of the Department for Education apprenticeship framework, with a funding cap of up to £27,000. Levy-paying employers can use their apprenticeship levy funds. Government support and any employer contribution depend on learner age, employer status and the funding rules in force on the start date.
         </p>

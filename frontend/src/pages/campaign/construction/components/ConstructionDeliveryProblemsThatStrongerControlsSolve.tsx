@@ -6,7 +6,7 @@ export default function ConstructionDeliveryProblemsThatStrongerControlsSolve() 
   return (
     <PcpPainPointsGrid
           title="Construction Delivery Problems That Stronger Controls Solve"
-          subtitle="These are not inevitable. They are capability gaps the Operational PCP route closes."
+          subtitle="Develop planning, cost and change-control skills to address these construction challenges."
           painPoints={painPoints}
         />
   );

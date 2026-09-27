@@ -102,7 +102,7 @@ export default function IndependentProfessionalDevelopmentRoute() {
 <strong className="font-bold">
 {"Catalogue control: "}
 </strong>
-{"do not describe Portfolio Management as an APMG award unless a current approval or contract supports that exact wording. "}
+{"Confirm the awarding body and exact qualification in your written offer. "}
 </div>
 </div>
 </section>

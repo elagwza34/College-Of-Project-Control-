@@ -6,7 +6,6 @@ const navItems = [
   { label: 'Apprenticeship', href: '#apprenticeship' },
   { label: 'APM Recognition', href: '#apm' },
   { label: 'For Employers', href: '#employers' },
-  { label: 'FAQs', href: '#faq' },
 ];
 
 export default function PmoEditorialNavbar() {

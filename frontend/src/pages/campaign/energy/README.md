@@ -15,7 +15,7 @@ Find the label on the page, then open its component below. Shared implementation
 | Key Message | [KeyMessage.tsx](components/KeyMessage.tsx) | Page-local |
 | Learn together | [LearnTogether.tsx](components/LearnTogether.tsx) | [EventsTeaser.tsx](../../../components/feature/EventsTeaser.tsx) |
 | PcpComplianceNote | [PcpComplianceNoteSection.tsx](components/PcpComplianceNoteSection.tsx) | [PcpComplianceNote.tsx](../../../components/feature/PcpComplianceNote.tsx) |
-| Professional Capability | [ProfessionalCapabilitySection.tsx](components/ProfessionalCapabilitySection.tsx) | [ProfessionalCapability.tsx](../../pcp-master/components/ProfessionalCapability.tsx) |
+| Professional Capability | [ProfessionalCapabilitySection.tsx](components/ProfessionalCapabilitySection.tsx) | [ProfessionalCapability.tsx](../../project-controls-professional-level-6/components/ProfessionalCapability.tsx) |
 | Route Fit | [RouteFit.tsx](components/RouteFit.tsx) | [CampaignRouteFit.tsx](../../../components/feature/CampaignRouteFit.tsx) |
 | What you could apply at work | [WhatYouCouldApplyAtWork.tsx](components/WhatYouCouldApplyAtWork.tsx) | [OutcomeExamples.tsx](../../../components/feature/OutcomeExamples.tsx) |
 

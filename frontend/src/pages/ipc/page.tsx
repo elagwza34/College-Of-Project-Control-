@@ -1,7 +1,6 @@
 import Footer from '@/components/feature/Footer';
 import SchemaOrg, { breadcrumbListSchema, organizationSchema } from '@/components/feature/SchemaOrg';
 import BuildYourProfessionalDirection from "./components/BuildYourProfessionalDirection";
-import IPCExplained from "./components/IPCExplained";
 import Membership from './components/Membership';
 import ProfessionalJourney from "./components/ProfessionalJourney";
 import TheCapabilityFramework from "./components/TheCapabilityFramework";
@@ -25,8 +24,6 @@ export default function IpcPage() {
         <ProfessionalJourney />
 
         <Membership />
-
-        <IPCExplained />
 
         <BuildYourProfessionalDirection />
       </main>

@@ -1,4 +1,5 @@
 from django.core.exceptions import ValidationError
+from django.contrib.auth.hashers import check_password, make_password
 from django.db import models
 from django.conf import settings
 from .review_catalogue import PROGRAMMES
@@ -60,6 +61,10 @@ class SiteSettings(models.Model):
     footer_cta_label = models.CharField(max_length=60, blank=True)
     footer_cta_url = models.CharField(max_length=240, blank=True)
     copyright_name = models.CharField(max_length=120, default="College of Project Control")
+    maintenance_enabled = models.BooleanField(default=False)
+    maintenance_heading = models.CharField(max_length=120, default="Website under construction")
+    maintenance_message = models.TextField(default="We're making updates to the website. Enter the access code to preview the work in progress.")
+    maintenance_pin_hash = models.CharField(max_length=180, blank=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
@@ -79,6 +84,18 @@ class SiteSettings(models.Model):
 
     def __str__(self):
         return "Global site settings"
+
+    @property
+    def has_maintenance_pin(self):
+        return bool(self.maintenance_pin_hash)
+
+    def set_maintenance_pin(self, pin):
+        if not pin or not pin.isdigit() or len(pin) != 6:
+            raise ValidationError("Maintenance PIN must be exactly 6 digits.")
+        self.maintenance_pin_hash = make_password(pin)
+
+    def check_maintenance_pin(self, pin):
+        return bool(self.maintenance_pin_hash and check_password(pin, self.maintenance_pin_hash))
 
 
 class NavigationMenu(models.Model):
@@ -352,6 +369,39 @@ class ProfessionalCredential(models.Model):
         return self.name
 
 
+class ShortCourse(models.Model):
+    slug = models.SlugField(max_length=120, unique=True)
+    title = models.CharField(max_length=180)
+    category = models.CharField(max_length=120, blank=True)
+    duration = models.CharField(max_length=80, blank=True)
+    format = models.CharField(max_length=120, blank=True, default="Professional learning")
+    owner = models.CharField(max_length=160, blank=True)
+    audience = models.TextField(blank=True)
+    summary = models.TextField(blank=True)
+    focus = models.JSONField(default=list, blank=True)
+    detail = models.JSONField(
+        default=dict,
+        blank=True,
+        help_text="Structured course page content: overview, learning blocks, workplace outputs and notes.",
+    )
+    icon = models.CharField(max_length=80, blank=True, default="ri-book-open-line")
+    image_url = models.CharField(
+        max_length=2000,
+        blank=True,
+        help_text="Direct image link. Dashboard uploads are stored as Media Library URLs here.",
+    )
+    order = models.PositiveSmallIntegerField(default=0)
+    is_active = models.BooleanField(default=True, help_text="Unpublished courses are saved as a draft and hidden from the site.")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["order", "title"]
+
+    def __str__(self):
+        return self.title
+
+
 class EventFormat(models.TextChoices):
     ONLINE = "online", "Online"
     IN_PERSON = "in_person", "In Person"
@@ -547,6 +597,39 @@ class Article(models.Model):
 
     class Meta:
         ordering = ["order", "-published_at", "-id"]
+
+    def __str__(self):
+        return self.title
+
+
+class CaseStudy(models.Model):
+    title = models.CharField(max_length=240)
+    slug = models.SlugField(max_length=240, unique=True)
+    sector = models.CharField(max_length=120, blank=True)
+    client_name = models.CharField(max_length=160, blank=True)
+    headline = models.CharField(max_length=260, blank=True)
+    summary = models.TextField(max_length=800)
+    challenge = models.TextField(blank=True)
+    approach = models.TextField(blank=True)
+    outcome = models.TextField(blank=True)
+    metrics = models.JSONField(
+        default=list,
+        blank=True,
+        help_text='List of metric objects, for example [{"label":"Schedule confidence","value":"+18%"}].',
+    )
+    image = models.ImageField(upload_to="case-studies/%Y/%m/", blank=True, null=True)
+    image_url = models.CharField(max_length=2000, blank=True)
+    image_alt = models.CharField(max_length=240, blank=True)
+    is_featured = models.BooleanField(default=False)
+    is_published = models.BooleanField(default=False)
+    published_at = models.DateTimeField(blank=True, null=True)
+    order = models.PositiveSmallIntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["order", "-published_at", "-id"]
+        verbose_name_plural = "Case studies"
 
     def __str__(self):
         return self.title

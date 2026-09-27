@@ -15,7 +15,7 @@ Find the label on the page, then open its component below. Shared implementation
 | Illustrative Public Sector Application | [IllustrativePublicSectorApplication.tsx](components/IllustrativePublicSectorApplication.tsx) | Page-local |
 | Learning Grounded In Government Delivery | [LearningGroundedInGovernmentDelivery.tsx](components/LearningGroundedInGovernmentDelivery.tsx) | Page-local |
 | Public Sector | [PublicSector.tsx](components/PublicSector.tsx) | Page-local |
-| Role To Programme Pathway | [RoleToProgrammePathway.tsx](components/RoleToProgrammePathway.tsx) | Page-local |
+| Role To Programme Pathway | [RoleToProgrammePathway.tsx](components/RoleToProgrammePathway.tsx) | [SectorPathwayChoice.tsx](../../components/feature/SectorPathwayChoice.tsx) |
 | The Project Controls Capability Model | [TheProjectControlsCapabilityModel.tsx](components/TheProjectControlsCapabilityModel.tsx) | Page-local |
 | Why Public Sector Delivery Is Different | [WhyPublicSectorDeliveryIsDifferent.tsx](components/WhyPublicSectorDeliveryIsDifferent.tsx) | Page-local |
 

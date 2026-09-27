@@ -31,7 +31,7 @@ export const afterItems = [
 
 export const routeFitCards = [
   { icon: 'ri-bar-chart-grouped-line', title: 'Strategic PCP', description: 'For PMO leads, governance leads and senior project controls professionals building decision-support capability.', href: '/strategic-pcp', tracking: 'route_selected_strategic' },
-  { icon: 'ri-dashboard-line', title: 'Operational PCP', description: 'For planners, schedulers, cost engineers and project controllers on the front line of project delivery.', href: '/operational-pcp', tracking: 'route_selected_operational' },
+  { icon: 'ri-dashboard-line', title: 'Operational PCP', description: 'For planners, schedulers, cost engineers and project controllers on the front line of project delivery.', href: '/project-controls-professional/operational-route', tracking: 'route_selected_operational' },
   { icon: 'ri-stack-line', title: 'Strategic + Operational', description: 'For high-potential professionals needing both technical depth and leadership capability, with OTHM Level 7 progression.', href: '/strategic-operational-pcp', tracking: 'route_selected_hybrid', recommended: true },
   { icon: 'ri-government-line', title: 'PMO & Governance PCP', description: 'For PMO professionals building governance, assurance and decision-ready reporting capability.', href: '/pmo-pcp', tracking: 'route_selected_pmo' },
   { icon: 'ri-building-line', title: 'Construction PCP', description: 'For construction teams addressing schedule, cost, NEC change control and progress reporting.', href: '/operational-pcp-construction', tracking: 'sector_selected_construction' },

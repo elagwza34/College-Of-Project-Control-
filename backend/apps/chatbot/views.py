@@ -12,7 +12,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from apps.cms.permissions import IsDashboardUser
 from .documents import extract_document
-from .models import ChatQuota, KnowledgeSource
+from .models import AssistantSettings, ChatQuota, KnowledgeSource
 from . import service
 
 
@@ -63,6 +63,44 @@ class ChatSerializer(serializers.Serializer):
     history = TurnSerializer(many=True, required=False, default=list, max_length=8)
 
 
+class AssistantSettingsSerializer(serializers.Serializer):
+    provider = serializers.ChoiceField(choices=['openai', 'openrouter'])
+    model = serializers.CharField(max_length=120, trim_whitespace=True)
+    api_key = serializers.CharField(required=False, allow_blank=True, trim_whitespace=False, write_only=True)
+    clear_api_key = serializers.BooleanField(required=False, default=False, write_only=True)
+
+    def validate_model(self, value):
+        value = value.strip()
+        if not value:
+            raise serializers.ValidationError('Enter a model name.')
+        return value
+
+    def validate_api_key(self, value):
+        value = value.strip()
+        if value and len(value) < 20:
+            raise serializers.ValidationError('The API key looks too short.')
+        return value
+
+    def validate(self, attrs):
+        if attrs.get('clear_api_key') and attrs.get('api_key', '').strip():
+            raise serializers.ValidationError('Choose either a new API key or clear the saved key, not both.')
+        return attrs
+
+
+def settings_payload():
+    stored = AssistantSettings.get_solo()
+    summary = service.provider_summary()
+    saved_override = stored.has_api_key or bool(stored.updated_by_id)
+    return {'provider': stored.provider if saved_override else summary['provider'],
+            'model': stored.model if saved_override else summary['model'],
+            'api_key_saved': stored.has_api_key,
+            'api_key_source': summary['api_key_source'],
+            'configured': service.configured(),
+            'hourly_limit': int(os.environ.get('CHATBOT_HOURLY_LIMIT', '20')),
+            'daily_limit': int(os.environ.get('CHATBOT_DAILY_LIMIT', '500')),
+            'updated_at': stored.updated_at}
+
+
 def quota_allowed(request):
     now = timezone.now()
     address = request.META.get('REMOTE_ADDR', 'unknown')
@@ -89,9 +127,31 @@ def status(request):
 @api_view(['GET'])
 @permission_classes([IsDashboardUser])
 def dashboard_status(request):
-    return Response({'configured': service.configured(), 'model': service.provider_config()[2],
+    summary = service.provider_summary()
+    return Response({'configured': service.configured(), 'provider': summary['provider'], 'model': summary['model'],
+                     'api_key_source': summary['api_key_source'],
                      'active_sources': KnowledgeSource.objects.filter(is_active=True).count(),
                      'daily_limit': int(os.environ.get('CHATBOT_DAILY_LIMIT', '500'))})
+
+
+@api_view(['GET', 'PATCH', 'POST'])
+@permission_classes([IsDashboardUser])
+def assistant_settings(request):
+    stored = AssistantSettings.get_solo()
+    if request.method == 'GET':
+        return Response(settings_payload())
+    serializer = AssistantSettingsSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+    data = serializer.validated_data
+    stored.provider = data['provider']
+    stored.model = data['model']
+    if data.get('clear_api_key'):
+        stored.clear_api_key()
+    elif data.get('api_key'):
+        stored.set_api_key(data['api_key'])
+    stored.updated_by = request.user
+    stored.save()
+    return Response(settings_payload())
 
 
 @api_view(['POST'])

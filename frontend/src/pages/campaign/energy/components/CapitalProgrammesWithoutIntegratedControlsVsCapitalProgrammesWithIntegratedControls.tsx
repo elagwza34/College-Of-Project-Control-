@@ -6,7 +6,7 @@ export default function CapitalProgrammesWithoutIntegratedControlsVsCapitalProgr
   return (
     <CampaignTransformation
           title="Capital Programmes Without Integrated Controls vs Capital Programmes With Integrated Controls"
-          subtitle="The difference between hoping for the best and building the capability to control delivery."
+          subtitle="Connect cost, schedule and risk information to support decisions across capital programmes."
           beforeTitle="Fragmented Controls"
           afterTitle="Integrated Project Controls"
           beforeItems={beforeItems}

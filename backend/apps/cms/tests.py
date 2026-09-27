@@ -47,15 +47,30 @@ class DashboardWorkflowTests(TestCase):
         key = spec['key']; field = next(f['key'] for f in spec['fields'] if f['kind'] == 'text')
         url = f'/api/v1/cms/page-content/{key}/'
         self.assertEqual(self.client.post(url, {'action': 'save', 'version': 0, 'values': {field: 'New heading'}}, format='json').status_code, 200)
-        self.assertNotIn(key, self.client.get('/api/v1/page-content/').data)
+        self.assertNotIn(key, self.client.get('/api/v1/page-content/').data['values'])
         self.assertEqual(self.client.post(url, {'action': 'save', 'version': 0, 'values': {}}, format='json').status_code, 409)
         self.assertEqual(self.client.post(url, {'action': 'publish', 'version': 1}, format='json').status_code, 200)
-        self.assertEqual(self.client.get('/api/v1/page-content/').data[key][field], 'New heading')
+        self.assertEqual(self.client.get('/api/v1/page-content/').data['values'][key][field], 'New heading')
         response = self.client.post(url, {'action': 'restore', 'version': 2, 'restore_version': 1}, format='json')
         self.assertEqual(response.data['draft'], {})
-        self.assertEqual(self.client.get('/api/v1/page-content/').data[key][field], 'New heading')
+        self.assertEqual(self.client.get('/api/v1/page-content/').data['values'][key][field], 'New heading')
         self.client.post(url, {'action': 'publish', 'version': 3}, format='json')
-        self.assertNotIn(key, self.client.get('/api/v1/page-content/').data)
+        self.assertNotIn(key, self.client.get('/api/v1/page-content/').data['values'])
+
+    def test_sections_can_be_hidden_and_shown(self):
+        spec = next(s for s in catalogue() if any(f['kind'] == 'text' for f in s['fields']))
+        key = spec['key']; field = next(f['key'] for f in spec['fields'] if f['kind'] == 'text')
+        url = f'/api/v1/cms/page-content/{key}/'
+        self.assertEqual(self.client.post(url, {'action': 'save', 'version': 0, 'values': {field: 'Visible heading'}}, format='json').status_code, 200)
+        self.assertEqual(self.client.post(url, {'action': 'publish', 'version': 1}, format='json').status_code, 200)
+        hidden = self.client.post(url, {'action': 'hide', 'version': 2}, format='json')
+        self.assertEqual(hidden.status_code, 200)
+        self.assertTrue(hidden.data['is_hidden'])
+        self.assertIn(key, self.client.get('/api/v1/page-content/').data['hidden'])
+        shown = self.client.post(url, {'action': 'show', 'version': 3}, format='json')
+        self.assertEqual(shown.status_code, 200)
+        self.assertFalse(shown.data['is_hidden'])
+        self.assertNotIn(key, self.client.get('/api/v1/page-content/').data['hidden'])
 
     def test_content_schema_and_permissions(self):
         spec = next(s for s in catalogue() if any(f['kind'] == 'image' for f in s['fields']))
@@ -80,4 +95,4 @@ class DashboardWorkflowTests(TestCase):
             self.assertEqual(response.status_code, 200, value)
             version += 1
         self.client.post(url, {'action': 'publish', 'version': version}, format='json')
-        self.assertEqual(self.client.get('/api/v1/page-content/').data[spec['key']][field], 'tel:+44123456789')
+        self.assertEqual(self.client.get('/api/v1/page-content/').data['values'][spec['key']][field], 'tel:+44123456789')

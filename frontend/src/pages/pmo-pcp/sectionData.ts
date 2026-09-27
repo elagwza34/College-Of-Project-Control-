@@ -38,6 +38,6 @@ export const faqs = [
   },
   {
     q: 'How do I start?',
-    a: 'Book a PMO Route consultation. We will review your role, employer support, funding position and whether the apprenticeship or commercial route is the better fit.',
+    a: 'Request a PMO consultation. We will review your role, employer support, funding position and whether the apprenticeship or commercial route is the better fit.',
   },
 ];

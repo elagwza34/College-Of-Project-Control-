@@ -3,14 +3,13 @@ export const navLinks = [
   { label: 'Who It Is For', href: '#who-for' },
   { label: 'Funding', href: '/apprenticeship-eligibility-checker' },
   { label: 'Outcomes', href: '#develop' },
-  { label: 'FAQ', href: '#faq' },
 ];
 
 export const heroData = {
   badge: 'Funding Subject to Eligibility',
   headline: 'Manage the Detail. Explain the Variance. Influence the Decision.',
   subheadline: 'A premium pathway combining Level 6 project controls capability with strategic development and OTHM Level 7 progression for professionals moving towards senior project, PMO and portfolio leadership.',
-  description: 'Most development programmes make you choose between technical and strategic. The combined pathway builds both — giving you the technical depth to manage the controls and the strategic capability to influence the decisions.',
+  description: 'Develop technical project controls and strategic decision-making together, connecting plans, costs and risk information with programme and portfolio priorities.',
   fundingLine: 'Apprenticeship funding may be available, subject to learner, employer and current funding-rule eligibility. Commercial routes are available for self-funded and non-eligible learners.',
   primaryCta: 'Request a consultation',
   secondaryCta: 'Check Funding Eligibility',
@@ -62,7 +61,7 @@ export const capabilityData = {
 
 export const problemsData = {
   sectionLabel: 'Why This Route',
-  heading: 'Technical Depth Without Strategic Voice. Or Strategic Awareness Without Technical Credibility.',
+  heading: 'Connect technical controls with strategic decisions',
   cards: [
     {
       icon: 'ri-close-line',
@@ -82,7 +81,7 @@ export const problemsData = {
     {
       icon: 'ri-close-line',
       title: 'Employers Need Both, But Training Only Gives One',
-      description: 'Most development programmes force you to choose between technical and strategic — leaving you with half the capability your role requires.',
+      description: 'Develop both detailed project controls and the ability to explain their implications for programme decisions.',
     },
   ],
 };

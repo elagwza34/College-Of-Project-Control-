@@ -93,6 +93,6 @@ export const checkerFaqs = [
   ['Is this a final decision?', 'No. Final eligibility is confirmed by Kent Business College after reviewing your circumstances and the rules that apply at enrolment.'],
   ['How long does it take?', 'Most people can complete the checker in less than five minutes.'],
   ['Do I need an employer?', 'Yes. An apprenticeship is a paid job with structured training, so you need an employer and suitable employment arrangements.'],
-  ['What happens after completing the checker?', 'You will see an initial indication and recommended next steps. You can then book an information session or contact admissions.'],
+  ['What happens after completing the checker?', 'You will see an initial indication and recommended next steps. You can then request a consultation or contact admissions.'],
   ['Can I complete it if I am unsure about funding?', 'Yes. The checker is designed to identify questions that may need further review; it does not require you to know your funding position.'],
 ] as const;

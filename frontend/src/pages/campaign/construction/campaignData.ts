@@ -33,7 +33,7 @@ export const afterItems = [
 
 export const routeFitCards = [
   { icon: 'ri-building-line', title: 'Construction & Urban PCP', description: 'Purpose-built for construction planners, schedulers and project controllers addressing NEC, schedule and cost control.', href: '/operational-pcp-construction', tracking: 'sector_selected_construction', recommended: true },
-  { icon: 'ri-dashboard-line', title: 'Operational PCP', description: 'For cost engineers, planners and delivery teams building core project controls capability.', href: '/operational-pcp', tracking: 'route_selected_operational' },
+  { icon: 'ri-dashboard-line', title: 'Operational PCP', description: 'For cost engineers, planners and delivery teams building core project controls capability.', href: '/project-controls-professional/operational-route', tracking: 'route_selected_operational' },
   { icon: 'ri-stack-line', title: 'Strategic + Operational', description: 'For senior construction professionals moving into programme leadership with OTHM Level 7.', href: '/strategic-operational-pcp', tracking: 'route_selected_hybrid' },
 ];
 

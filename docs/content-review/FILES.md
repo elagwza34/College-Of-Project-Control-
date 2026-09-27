@@ -1,0 +1,64 @@
+# Implemented copy changes
+
+All source edits are recorded in [CHANGES.json](CHANGES.json). Rows include the original text, replacement, reason and occurrence count. No business fact has been inferred to resolve the confirmation register.
+
+| Source file | Change records |
+| --- | --- |
+| [frontend/src/components/feature/SectorPathwayChoice.tsx](../../frontend/src/components/feature/SectorPathwayChoice.tsx) | 1 |
+| [frontend/src/dashboard/pages/ContentOwnershipPage.tsx](../../frontend/src/dashboard/pages/ContentOwnershipPage.tsx) | 1 |
+| [frontend/src/dashboard/pages/PagesPage.tsx](../../frontend/src/dashboard/pages/PagesPage.tsx) | 2 |
+| [frontend/src/pages/about/components/AboutCPCM.tsx](../../frontend/src/pages/about/components/AboutCPCM.tsx) | 1 |
+| [frontend/src/pages/apm-level-4/components/TrustAndRelevance.tsx](../../frontend/src/pages/apm-level-4/components/TrustAndRelevance.tsx) | 1 |
+| [frontend/src/pages/apprentices/components/CostForEligibleLearners.tsx](../../frontend/src/pages/apprentices/components/CostForEligibleLearners.tsx) | 2 |
+| [frontend/src/pages/apprentices/components/ForApprenticesProfessionals.tsx](../../frontend/src/pages/apprentices/components/ForApprenticesProfessionals.tsx) | 1 |
+| [frontend/src/pages/apprentices/components/LearnerSupport.tsx](../../frontend/src/pages/apprentices/components/LearnerSupport.tsx) | 3 |
+| [frontend/src/pages/apprentices/components/ReadyToAdvanceYourCareerInProjectControls.tsx](../../frontend/src/pages/apprentices/components/ReadyToAdvanceYourCareerInProjectControls.tsx) | 1 |
+| [frontend/src/pages/apprentices/components/WhatYouWillGain.tsx](../../frontend/src/pages/apprentices/components/WhatYouWillGain.tsx) | 1 |
+| [frontend/src/pages/apprentices/components/YourJourney.tsx](../../frontend/src/pages/apprentices/components/YourJourney.tsx) | 1 |
+| [frontend/src/pages/apprenticeship-eligibility-checker/checkerData.ts](../../frontend/src/pages/apprenticeship-eligibility-checker/checkerData.ts) | 1 |
+| [frontend/src/pages/campaign/construction/components/ConstructionDeliveryProblemsThatStrongerControlsSolve.tsx](../../frontend/src/pages/campaign/construction/components/ConstructionDeliveryProblemsThatStrongerControlsSolve.tsx) | 1 |
+| [frontend/src/pages/campaign/construction/components/ForConstructionEmployersPlannersAndProjectControlsTeams.tsx](../../frontend/src/pages/campaign/construction/components/ForConstructionEmployersPlannersAndProjectControlsTeams.tsx) | 1 |
+| [frontend/src/pages/campaign/energy/components/CapitalProgrammesWithoutIntegratedControlsVsCapitalProgrammesWithIntegratedControls.tsx](../../frontend/src/pages/campaign/energy/components/CapitalProgrammesWithoutIntegratedControlsVsCapitalProgrammesWithIntegratedControls.tsx) | 1 |
+| [frontend/src/pages/campaign/energy/components/ForEnergyUtilitiesAndCapitalProgrammeTeams.tsx](../../frontend/src/pages/campaign/energy/components/ForEnergyUtilitiesAndCapitalProgrammeTeams.tsx) | 1 |
+| [frontend/src/pages/chartered-pmo-pathway/components/IndependentProfessionalDevelopmentRoute.tsx](../../frontend/src/pages/chartered-pmo-pathway/components/IndependentProfessionalDevelopmentRoute.tsx) | 1 |
+| [frontend/src/pages/chartered-pmo-pathway/components/ProgrammeInformationAndNextSteps.tsx](../../frontend/src/pages/chartered-pmo-pathway/components/ProgrammeInformationAndNextSteps.tsx) | 2 |
+| [frontend/src/pages/chartered-pmo-pathway/components/ProjectControlsProfessionalLevel6.tsx](../../frontend/src/pages/chartered-pmo-pathway/components/ProjectControlsProfessionalLevel6.tsx) | 1 |
+| [frontend/src/pages/contact/components/BeforeYouReachOut.tsx](../../frontend/src/pages/contact/components/BeforeYouReachOut.tsx) | 2 |
+| [frontend/src/pages/employers/components/BuiltForProjectDrivenOrganisations.tsx](../../frontend/src/pages/employers/components/BuiltForProjectDrivenOrganisations.tsx) | 1 |
+| [frontend/src/pages/employers/components/EmployerResources.tsx](../../frontend/src/pages/employers/components/EmployerResources.tsx) | 1 |
+| [frontend/src/pages/faq/components/BrowseByTopicData.ts](../../frontend/src/pages/faq/components/BrowseByTopicData.ts) | 2 |
+| [frontend/src/pages/home/components/CollegeOfProjectControlsAndManagement.tsx](../../frontend/src/pages/home/components/CollegeOfProjectControlsAndManagement.tsx) | 2 |
+| [frontend/src/pages/home/components/ForEmployers.tsx](../../frontend/src/pages/home/components/ForEmployers.tsx) | 1 |
+| [frontend/src/pages/knowledge-hub/apm-chpp-readiness/components/HonestyAboutProfessionalRecognitionMatters.tsx](../../frontend/src/pages/knowledge-hub/apm-chpp-readiness/components/HonestyAboutProfessionalRecognitionMatters.tsx) | 1 |
+| [frontend/src/pages/knowledge-hub/commercial-routes-explained/components/NotEligibleForApprenticeshipFundingYouStillDeserveProfessionalProjectControlsDevelopment.tsx](../../frontend/src/pages/knowledge-hub/commercial-routes-explained/components/NotEligibleForApprenticeshipFundingYouStillDeserveProfessionalProjectControlsDevelopment.tsx) | 1 |
+| [frontend/src/pages/knowledge-hub/construction-training/components/StopLettingScheduleDelaysAndCostDriftBecomeNormal.tsx](../../frontend/src/pages/knowledge-hub/construction-training/components/StopLettingScheduleDelaysAndCostDriftBecomeNormal.tsx) | 1 |
+| [frontend/src/pages/knowledge-hub/energy-training/components/ForCapitalProgrammesWhereWeakControlsAreTooExpensiveToIgnore.tsx](../../frontend/src/pages/knowledge-hub/energy-training/components/ForCapitalProgrammesWhereWeakControlsAreTooExpensiveToIgnore.tsx) | 1 |
+| [frontend/src/pages/knowledge-hub/strategic-vs-operational/components/TwoPathwaysOneProfessionalStandardDifferentCareerOutcomes.tsx](../../frontend/src/pages/knowledge-hub/strategic-vs-operational/components/TwoPathwaysOneProfessionalStandardDifferentCareerOutcomes.tsx) | 1 |
+| [frontend/src/pages/knowledge-hub/what-is-pcp-apprenticeship/components/FundingFundingSubjectToEligibility.tsx](../../frontend/src/pages/knowledge-hub/what-is-pcp-apprenticeship/components/FundingFundingSubjectToEligibility.tsx) | 1 |
+| [frontend/src/pages/operational-pcp-construction/components/ChooseYourPathwayCheckYourAccessRoute.tsx](../../frontend/src/pages/operational-pcp-construction/components/ChooseYourPathwayCheckYourAccessRoute.tsx) | 1 |
+| [frontend/src/pages/operational-pcp-construction/components/CoreProfessionalCapability.tsx](../../frontend/src/pages/operational-pcp-construction/components/CoreProfessionalCapability.tsx) | 1 |
+| [frontend/src/pages/operational-pcp-construction/components/EmployerCapability.tsx](../../frontend/src/pages/operational-pcp-construction/components/EmployerCapability.tsx) | 2 |
+| [frontend/src/pages/operational-pcp-construction/components/PracticalAnswers.tsx](../../frontend/src/pages/operational-pcp-construction/components/PracticalAnswers.tsx) | 1 |
+| [frontend/src/pages/operational-pcp-energy/components/BuildTheCapabilityToControlComplexEnergyProgrammesWithConfidence.tsx](../../frontend/src/pages/operational-pcp-energy/components/BuildTheCapabilityToControlComplexEnergyProgrammesWithConfidence.tsx) | 1 |
+| [frontend/src/pages/operational-pcp-energy/components/CoreProfessionalCapability.tsx](../../frontend/src/pages/operational-pcp-energy/components/CoreProfessionalCapability.tsx) | 1 |
+| [frontend/src/pages/operational-pcp-energy/components/EmployerCapability.tsx](../../frontend/src/pages/operational-pcp-energy/components/EmployerCapability.tsx) | 2 |
+| [frontend/src/pages/operational-pcp-energy/components/PracticalAnswers.tsx](../../frontend/src/pages/operational-pcp-energy/components/PracticalAnswers.tsx) | 1 |
+| [frontend/src/pages/operational-pcp-engineering/components/EngineeringAdvancedManufacturing.tsx](../../frontend/src/pages/operational-pcp-engineering/components/EngineeringAdvancedManufacturing.tsx) | 1 |
+| [frontend/src/pages/operational-pcp-public-sector/components/DevelopAccountableProjectCapability.tsx](../../frontend/src/pages/operational-pcp-public-sector/components/DevelopAccountableProjectCapability.tsx) | 1 |
+| [frontend/src/pages/operational-pcp-public-sector/components/EmployerQuestions.tsx](../../frontend/src/pages/operational-pcp-public-sector/components/EmployerQuestions.tsx) | 2 |
+| [frontend/src/pages/operational-pcp/components/OperationalPathwayQuickEnquiry.tsx](../../frontend/src/pages/operational-pcp/components/OperationalPathwayQuickEnquiry.tsx) | 1 |
+| [frontend/src/pages/operational-pcp/components/Section202627LearnerAndEmployerPathway.tsx](../../frontend/src/pages/operational-pcp/components/Section202627LearnerAndEmployerPathway.tsx) | 2 |
+| [frontend/src/pages/operational-pcp/components/TakeTheNextStep.tsx](../../frontend/src/pages/operational-pcp/components/TakeTheNextStep.tsx) | 1 |
+| [frontend/src/pages/pcp-master/components/EmployerPartnershipsAcrossProjectDrivenSectors.tsx](../../frontend/src/pages/pcp-master/components/EmployerPartnershipsAcrossProjectDrivenSectors.tsx) | 1 |
+| [frontend/src/pages/pcp-master/components/ExpectedWorkload.tsx](../../frontend/src/pages/pcp-master/components/ExpectedWorkload.tsx) | 1 |
+| [frontend/src/pages/pcp-master/components/ProfessionalCapability.tsx](../../frontend/src/pages/pcp-master/components/ProfessionalCapability.tsx) | 1 |
+| [frontend/src/pages/pcp-master/programmeData.ts](../../frontend/src/pages/pcp-master/programmeData.ts) | 1 |
+| [frontend/src/pages/pmo-pcp/components/DevelopPMOCapabilityInsideYourOrganisation.tsx](../../frontend/src/pages/pmo-pcp/components/DevelopPMOCapabilityInsideYourOrganisation.tsx) | 1 |
+| [frontend/src/pages/pmo-pcp/components/ProjectControlsProfessionalLevel6.tsx](../../frontend/src/pages/pmo-pcp/components/ProjectControlsProfessionalLevel6.tsx) | 1 |
+| [frontend/src/pages/pmo-pcp/sectionData.ts](../../frontend/src/pages/pmo-pcp/sectionData.ts) | 1 |
+| [frontend/src/pages/programmes/components/ChooseYourProgramme.tsx](../../frontend/src/pages/programmes/components/ChooseYourProgramme.tsx) | 1 |
+| [frontend/src/pages/programmes/components/ForEmployers.tsx](../../frontend/src/pages/programmes/components/ForEmployers.tsx) | 1 |
+| [frontend/src/pages/strategic-operational-pcp/routeData.ts](../../frontend/src/pages/strategic-operational-pcp/routeData.ts) | 3 |
+| [frontend/src/pages/strategic-pcp/components/ExpertLedLearning.tsx](../../frontend/src/pages/strategic-pcp/components/ExpertLedLearning.tsx) | 1 |
+| [frontend/src/pages/strategic-pcp/components/ProjectControlsProfessionalLevel6.tsx](../../frontend/src/pages/strategic-pcp/components/ProjectControlsProfessionalLevel6.tsx) | 1 |
+| [frontend/src/pages/strategic-pcp/components/YourCreditJourney.tsx](../../frontend/src/pages/strategic-pcp/components/YourCreditJourney.tsx) | 1 |

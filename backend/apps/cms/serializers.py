@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from apps.content.models import Coach, Enquiry, Event, MentorProfile, Partner, ProfessionalCredential, Sector
+from apps.content.models import Coach, Enquiry, Event, MentorProfile, Partner, ProfessionalCredential, Sector, ShortCourse
 
 from .models import MediaAsset, NavigationGroup, NavigationItem, Page, Section
 
@@ -75,6 +75,22 @@ class DashboardSectorSerializer(serializers.ModelSerializer):
         return super().update(instance, validated_data)
 
 
+class DashboardShortCourseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ShortCourse
+        fields = (
+            "id", "slug", "title", "category", "duration", "format", "owner",
+            "audience", "summary", "focus", "detail", "icon", "image_url", "order",
+            "is_active", "updated_at",
+        )
+        read_only_fields = ("id", "updated_at")
+
+    def validate_focus(self, value):
+        if not isinstance(value, list) or any(not isinstance(item, str) for item in value):
+            raise serializers.ValidationError("Focus must be a list of text items.")
+        return value
+
+
 class DashboardEventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
@@ -119,11 +135,26 @@ class NavigationGroupSerializer(serializers.ModelSerializer):
 
 class MediaAssetSerializer(serializers.ModelSerializer):
     uploadedBy = serializers.CharField(source="uploaded_by.username", read_only=True, default=None)
+    url = serializers.SerializerMethodField()
 
     class Meta:
         model = MediaAsset
-        fields = ("id", "file", "alt_text", "uploadedBy", "uploaded_at")
+        fields = ("id", "file", "source_url", "url", "alt_text", "uploadedBy", "uploaded_at")
         read_only_fields = ("id", "uploaded_at")
+        extra_kwargs = {"file": {"required": False, "allow_null": True, "write_only": True}}
+
+    def get_url(self, obj):
+        if obj.file:
+            request = self.context.get("request")
+            return request.build_absolute_uri(obj.file.url) if request else obj.file.url
+        return obj.source_url
+
+    def validate(self, attrs):
+        file = attrs.get("file", getattr(self.instance, "file", None))
+        source_url = attrs.get("source_url", getattr(self.instance, "source_url", ""))
+        if not file and not source_url:
+            raise serializers.ValidationError("Provide an image file or an image URL.")
+        return attrs
 
 
 class DashboardEnquirySerializer(serializers.ModelSerializer):

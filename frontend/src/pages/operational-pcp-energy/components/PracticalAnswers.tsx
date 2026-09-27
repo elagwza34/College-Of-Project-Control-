@@ -149,7 +149,7 @@ export default function PracticalAnswers() {
 <div id="faq10" className="min-w-0 space-y-4 space-y-3 px-5 pb-5 text-foreground-600">
 <div className="min-w-0 space-y-4">
 <p className="text-base leading-relaxed text-foreground-600">
-{"Use the quick eligibility check, then book a one-to-one information session to review your current role, pathway fit, funding or bursary route and the evidence you can create at work. "}
+{"Use the quick eligibility check, then request a one-to-one consultation to review your current role, pathway fit, funding or bursary route and the evidence you can create at work. "}
 </p>
 </div>
 </div>

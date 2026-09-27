@@ -1,20 +1,14 @@
 import Footer from '@/components/feature/Footer';
 import PageSectionNav from '@/components/feature/PageSectionNav';
-import BuildAProjectManagementFoundationForTheEnergySector from "./components/BuildAProjectManagementFoundationForTheEnergySector";
-import BuildTheCapabilityToControlComplexEnergyProgrammesWithConfidence from "./components/BuildTheCapabilityToControlComplexEnergyProgrammesWithConfidence";
-import CheckTheRightAccessRouteForYou from "./components/CheckTheRightAccessRouteForYou";
 import ChooseYourProfessionalDirection from "./components/ChooseYourProfessionalDirection";
-import CoreProfessionalCapability from "./components/CoreProfessionalCapability";
 import EmployerCapability from "./components/EmployerCapability";
 import EnergyUtilities from "./components/EnergyUtilities";
 import ExpertLedPerspectives from "./components/ExpertLedPerspectives";
 import FundingBursaryAccess from "./components/FundingBursaryAccess";
 import OneFoundation from './components/OneFoundation';
-import PracticalAnswers from "./components/PracticalAnswers";
 import ProfessionalProgression from "./components/ProfessionalProgression";
-import SectorApplication from "./components/SectorApplication";
 import TheEnergyDeliveryChallenge from "./components/TheEnergyDeliveryChallenge";
 import TheLearningExperience from "./components/TheLearningExperience";
 import WorkplaceEvidence from "./components/WorkplaceEvidence";
 import { links } from "./sectionData";
-export default function Page() { return <div className="min-h-screen bg-background-50"><main id="hero"><EnergyUtilities /><PageSectionNav pageLabel="Energy & Utilities" links={links} showCta={false} /><OneFoundation /><TheEnergyDeliveryChallenge /><ChooseYourProfessionalDirection /><FundingBursaryAccess /><CoreProfessionalCapability /><SectorApplication /><WorkplaceEvidence /><ProfessionalProgression /><EmployerCapability /><ExpertLedPerspectives /><TheLearningExperience /><CheckTheRightAccessRouteForYou /><BuildAProjectManagementFoundationForTheEnergySector /><PracticalAnswers /><BuildTheCapabilityToControlComplexEnergyProgrammesWithConfidence /></main><Footer /></div>; }
+export default function Page() { return <div className="min-h-screen bg-background-50"><main id="hero"><EnergyUtilities /><PageSectionNav pageLabel="Energy & Utilities" links={links} showCta={false} /><OneFoundation /><TheEnergyDeliveryChallenge /><ChooseYourProfessionalDirection /><FundingBursaryAccess /><WorkplaceEvidence /><ProfessionalProgression /><EmployerCapability /><ExpertLedPerspectives /><TheLearningExperience /></main><Footer /></div>; }

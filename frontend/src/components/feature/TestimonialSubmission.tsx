@@ -20,12 +20,12 @@ export default function TestimonialSubmission() {
   const close = () => { if (busy) return; setOpen(false); const next = new URLSearchParams(params); next.delete('review'); setParams(next, { replace: true }); };
   return <><button type="button" onClick={() => setOpen(true)} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-white/35 px-6 text-sm font-semibold text-white transition-colors hover:bg-white/10"><i className="ri-chat-quote-line" aria-hidden="true" />Share your experience</button>
     <Modal open={open} onClose={close} title="Share your programme experience">
-      {success ? <div role="status" className="py-5"><div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-primary-50 text-2xl text-primary-700"><i className="ri-check-line" aria-hidden="true" /></div><h3 className="text-xl font-bold">Thank you for your review</h3><p className="mt-3 text-sm leading-relaxed">Your review has been sent to our team. It will appear on the website only after approval.</p><button onClick={close} className="btn-primary mt-6 px-5 py-3">Done</button></div> : <form onSubmit={async e => {
+      {success ? <div role="status" className="py-5"><div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-primary-50 text-2xl text-primary-700"><i className="ri-check-line" aria-hidden="true" /></div><h3 className="text-xl font-bold">Thank you for your review</h3><p className="mt-3 text-sm leading-relaxed">Your review has been sent to our team. It will appear on the website only after approval.</p><button onClick={close} className="btn-primary mt-6 px-5 py-3">Close</button></div> : <form onSubmit={async e => {
         e.preventDefault(); if (busy || !loaded) return;
         const data = new FormData(e.currentTarget); const photo = data.get('photo');
         if (photo instanceof File && photo.size > 5 * 1024 * 1024) { setError('Choose a photo smaller than 5 MB.'); return; }
         setBusy(true); setError('');
-        try { await submitReview(data); setSuccess(true); } catch (e) { setError(e instanceof Error ? e.message : 'Please try again.'); } finally { setBusy(false); }
+        try { await submitReview(data); setSuccess(true); } catch (e) { setError(e instanceof Error ? e.message : 'Unable to send your review. Please check the form and try again.'); } finally { setBusy(false); }
       }} className="space-y-5">
         <p className="text-sm leading-relaxed text-foreground-600">Tell us about the programme you completed. Our team reviews submissions before publishing them.</p>
         {error && <p role="alert" className="rounded-lg bg-red-50 p-3 text-sm text-red-800">{error}</p>}
@@ -37,7 +37,7 @@ export default function TestimonialSubmission() {
           <label className="block text-sm font-semibold">Your photo<input type="file" name="photo" accept="image/jpeg,image/png,image/webp" required className="mt-2 block w-full min-w-0 text-sm font-normal" /><span className="mt-2 block text-xs font-normal text-foreground-500">JPG, PNG or WebP, up to 5 MB. Upload a photo you have permission to share.</span></label>
           <label className="block text-sm font-semibold">Your review<textarea name="review" required minLength={20} maxLength={4000} rows={5} placeholder="What did you learn, and how has it helped you?" className="mt-2 w-full rounded-lg border border-background-300 px-3 py-2 font-normal" /></label>
           <label className="flex items-start gap-3 text-sm leading-relaxed"><input className="mt-1" type="checkbox" name="consent" value="true" required /><span>I agree that my name, photo, programme and review may be published on this website after approval. <SiteLink href="/privacy" target="_blank" rel="noreferrer" className="text-primary-700 underline">Privacy notice</SiteLink></span></label>
-          <button disabled={!loaded || busy} className="btn-primary w-full px-5 py-3 disabled:opacity-50">{busy ? 'Submitting…' : 'Submit for review'}</button>
+          <button disabled={!loaded || busy} className="btn-primary w-full px-5 py-3 disabled:opacity-50">{busy ? 'Sending review...' : 'Submit for review'}</button>
         </fieldset>
       </form>}
     </Modal>

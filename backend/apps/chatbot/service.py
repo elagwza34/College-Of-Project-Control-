@@ -4,6 +4,9 @@ import os
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+from django.db.utils import OperationalError, ProgrammingError
+
+from .models import AssistantSettings
 from .retrieval import retrieve
 
 logger = logging.getLogger(__name__)
@@ -23,12 +26,56 @@ class ProviderUnavailable(Exception):
     pass
 
 
+def endpoint_for(provider):
+    if provider == 'openrouter':
+        return 'https://openrouter.ai/api/v1/responses'
+    return 'https://api.openai.com/v1/responses'
+
+
+def default_model(provider):
+    if provider == 'openrouter':
+        return os.environ.get('OPENROUTER_MODEL', 'openai/gpt-4.1-mini')
+    return os.environ.get('OPENAI_MODEL', 'gpt-4.1-mini')
+
+
+def saved_settings():
+    try:
+        return AssistantSettings.objects.first()
+    except (OperationalError, ProgrammingError):
+        return None
+
+
 def provider_config():
-    if os.environ.get('CHATBOT_PROVIDER', 'openai').lower() == 'openrouter':
-        return ('https://openrouter.ai/api/v1/responses', os.environ.get('OPENROUTER_API_KEY', '').strip(),
-                os.environ.get('OPENROUTER_MODEL', 'openai/gpt-4.1-mini'))
-    return ('https://api.openai.com/v1/responses', os.environ.get('OPENAI_API_KEY', '').strip(),
-            os.environ.get('OPENAI_MODEL', 'gpt-4.1-mini'))
+    stored = saved_settings()
+    if stored and stored.has_api_key:
+        api_key = stored.get_api_key().strip()
+        if api_key:
+            return (endpoint_for(stored.provider), api_key, stored.model.strip() or default_model(stored.provider))
+    if stored and stored.updated_by_id:
+        env_key = os.environ.get('OPENROUTER_API_KEY' if stored.provider == 'openrouter' else 'OPENAI_API_KEY', '').strip()
+        if env_key:
+            return (endpoint_for(stored.provider), env_key, stored.model.strip() or default_model(stored.provider))
+    provider = os.environ.get('CHATBOT_PROVIDER', 'openai').lower()
+    if provider == 'openrouter':
+        return (endpoint_for(provider), os.environ.get('OPENROUTER_API_KEY', '').strip(), default_model(provider))
+    return (endpoint_for('openai'), os.environ.get('OPENAI_API_KEY', '').strip(), default_model('openai'))
+
+
+def provider_summary():
+    stored = saved_settings()
+    if stored and stored.has_api_key and stored.get_api_key().strip():
+        return {'provider': stored.provider, 'model': stored.model.strip() or default_model(stored.provider),
+                'api_key_source': 'dashboard'}
+    if stored and stored.updated_by_id:
+        env_key = os.environ.get('OPENROUTER_API_KEY' if stored.provider == 'openrouter' else 'OPENAI_API_KEY', '').strip()
+        if env_key:
+            return {'provider': stored.provider, 'model': stored.model.strip() or default_model(stored.provider),
+                    'api_key_source': 'environment'}
+    provider = os.environ.get('CHATBOT_PROVIDER', 'openai').lower()
+    if provider not in {'openai', 'openrouter'}:
+        provider = 'openai'
+    key = os.environ.get('OPENROUTER_API_KEY' if provider == 'openrouter' else 'OPENAI_API_KEY', '').strip()
+    return {'provider': provider, 'model': default_model(provider), 'api_key_source': 'environment' if key else 'none'}
 
 
 def configured():

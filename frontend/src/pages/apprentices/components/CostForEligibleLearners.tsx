@@ -16,11 +16,11 @@ export default function CostForEligibleLearners() {
               </div>
               <div className="flex max-w-full flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3">
                 <div className="text-center sm:text-right px-4">
-                  <p className="text-2xl font-heading font-bold text-highlight-400">\u00A30</p>
+                  <p className="text-2xl font-heading font-bold text-highlight-400">&pound;0</p>
                   <p className="text-sm text-white/70 uppercase tracking-wider font-semibold">Cost for eligible learners</p>
                 </div>
                 <SiteLink href="/contact" className="btn-primary inline-flex items-center gap-2 px-6 py-3 font-semibold text-sm cursor-pointer transition-all duration-300 whitespace-nowrap">
-                  Check your eligibility
+                  Ask about eligibility
                   <i className="ri-arrow-right-line text-sm" />
                 </SiteLink>
               </div>

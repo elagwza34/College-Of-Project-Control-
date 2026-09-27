@@ -19,7 +19,7 @@ export const afterItems = [
 ];
 
 export const routeFitCards = [
-  { icon: 'ri-dashboard-line', title: 'Operational PCP', description: 'For planners, schedulers, cost engineers and project controllers building hands-on project controls capability.', href: '/operational-pcp', tracking: 'route_selected_operational' },
+  { icon: 'ri-dashboard-line', title: 'Operational PCP', description: 'For planners, schedulers, cost engineers and project controllers building hands-on project controls capability.', href: '/project-controls-professional/operational-route', tracking: 'route_selected_operational' },
   { icon: 'ri-bar-chart-grouped-line', title: 'Strategic PCP', description: 'For experienced professionals moving into governance, assurance and senior decision-support roles.', href: '/strategic-pcp', tracking: 'route_selected_strategic', recommended: true },
   { icon: 'ri-stack-line', title: 'Strategic + Operational', description: 'For ambitious professionals who want both technical depth and strategic leadership, with OTHM Level 7.', href: '/strategic-operational-pcp', tracking: 'route_selected_hybrid' },
 ];

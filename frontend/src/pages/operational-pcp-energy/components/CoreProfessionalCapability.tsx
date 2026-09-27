@@ -10,7 +10,7 @@ export default function CoreProfessionalCapability() {
 {"AI accelerates energy controls. Human judgement remains accountable. "}
 </h2>
 <p className="text-base leading-relaxed text-foreground-600">
-{"The AI in Project Controls develops responsible use of AI across planning, outage and commissioning analysis, earned value, risk, reporting, assurance and management information—without removing professional review, confidentiality, safety or decision accountability. "}
+{"AI in Project Controls develops responsible use of AI across planning, outage and commissioning analysis, earned value, risk, reporting, assurance and management information—without removing professional review, confidentiality, safety or decision accountability. "}
 </p>
 <p className="text-base leading-relaxed text-foreground-600">
 {"It is a core component of the Operational, Strategic and Chartered pathways. "}

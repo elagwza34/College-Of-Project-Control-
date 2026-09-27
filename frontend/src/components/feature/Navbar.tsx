@@ -1,4 +1,3 @@
-import Modal from '@/components/base/Modal';
 import SiteLink from '@/components/base/SiteLink';
 import { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -53,7 +52,8 @@ const routeGroups: NavigationRouteGroup[] = [
     color: 'secondary',
     routes: [
       { label: 'Articles', href: '/articles', icon: 'ri-book-open-line' },
-      
+      { label: 'Case studies', href: '/case-studies', icon: 'ri-briefcase-4-line' },
+      { label: 'Short courses', href: '/short-courses', icon: 'ri-graduation-cap-line' },
       { label: 'Events', href: '/events', icon: 'ri-calendar-event-line' },
       { label: 'FAQ', href: '/faq', icon: 'ri-question-line' },
       { label: 'Testimonials & reviews', href: '/testimonials', icon: 'ri-chat-quote-line' },
@@ -77,6 +77,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [routesOpen, setRoutesOpen] = useState(false);
+  const [desktopViewport, setDesktopViewport] = useState(false);
   const routesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -110,10 +111,28 @@ export default function Navbar() {
     return () => document.removeEventListener('keydown', escape);
   }, [routesOpen]);
   useEffect(() => {
-    const resize = () => { if (window.innerWidth >= 1024) setMobileOpen(false); };
-    window.addEventListener('resize', resize);
-    return () => { window.removeEventListener('resize', resize); if (routesTimeoutRef.current) clearTimeout(routesTimeoutRef.current); };
+    const media = window.matchMedia('(min-width: 1024px)');
+    const syncViewport = () => {
+      setDesktopViewport(media.matches);
+      if (media.matches) setMobileOpen(false);
+    };
+    syncViewport();
+    media.addEventListener('change', syncViewport);
+    return () => { media.removeEventListener('change', syncViewport); if (routesTimeoutRef.current) clearTimeout(routesTimeoutRef.current); };
   }, []);
+  useEffect(() => {
+    if (!mobileOpen || desktopViewport) return;
+    const previousOverflow = document.body.style.overflow;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setMobileOpen(false);
+    };
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [mobileOpen, desktopViewport]);
   const handleRoutesEnter = () => {
     if (routesTimeoutRef.current) clearTimeout(routesTimeoutRef.current);
     setRoutesOpen(true);
@@ -126,6 +145,7 @@ export default function Navbar() {
   const navLinks = [
     { label: 'Home', href: '/', hasDropdown: false },
     { label: 'Programmes', href: '/programmes', hasDropdown: false },
+    { label: 'Short courses', href: '/short-courses', hasDropdown: false },
     { label: 'Explore', href: '/about', hasDropdown: true },
   ];
 
@@ -167,7 +187,7 @@ export default function Navbar() {
                     ref={triggerRef}
                     aria-expanded={routesOpen}
                     aria-controls="desktop-routes-menu"
-                    className={`nav-underline-slide flex cursor-pointer items-center gap-1 whitespace-nowrap text-sm font-medium transition-colors duration-500 ${linkTextClass}`}
+                    className={`nav-underline-slide flex cursor-pointer items-center gap-1 whitespace-nowrap rounded-md px-1 py-1 text-sm font-medium transition-colors duration-200 ${linkTextClass}`}
                     onClick={() => setRoutesOpen(!routesOpen)}
                   >
                     {link.label}
@@ -178,7 +198,7 @@ export default function Navbar() {
                 ) : (
                   <SiteLink
                     href={link.href}
-                    className={`nav-underline-slide cursor-pointer whitespace-nowrap text-sm font-medium transition-colors duration-500 ${
+                    className={`nav-underline-slide cursor-pointer whitespace-nowrap rounded-md px-1 py-1 text-sm font-medium transition-colors duration-200 ${
                       pathname === link.href ? 'text-signal-500' : linkTextClass
                     }`}
                   >
@@ -235,7 +255,7 @@ export default function Navbar() {
                     {/* IPC feature strip */}
                     <SiteLink
                       href="/institute-of-project-controls"
-                      className="group flex items-center gap-3 border-t border-[#C99A49]/25 bg-ipc-surface px-5 py-3 transition-colors duration-200 hover:bg-[#0D1418]"
+                    className="interactive-arrow group flex items-center gap-3 border-t border-[#C99A49]/25 bg-ipc-surface px-5 py-3 transition-colors duration-200 hover:bg-[#0D1418]"
                     >
                       <img loading="lazy" decoding="async" src="/images/ipc-logo.webp" alt="" className="h-6 w-6 flex-shrink-0 object-contain" />
                       <span className="text-xs font-bold uppercase tracking-[.14em] text-ipc-gold">Institute of Project Controls</span>
@@ -260,7 +280,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={`ml-auto flex h-10 w-10 cursor-pointer items-center justify-center rounded-md transition-colors duration-500 lg:hidden ${scrolled ? 'text-foreground-800' : 'text-white'}`}
+            className={`ml-auto flex h-10 w-10 cursor-pointer items-center justify-center rounded-md transition-colors duration-200 hover:bg-white/10 lg:hidden ${scrolled ? 'text-foreground-800 hover:bg-background-100' : 'text-white'}`}
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
             aria-controls="mobile-navigation"
@@ -271,68 +291,109 @@ export default function Navbar() {
       </div>
 
       {/* ── Mobile Menu ── */}
-      <Modal open={mobileOpen} onClose={() => setMobileOpen(false)} title="Site navigation" id="mobile-navigation">
-          <div className="px-4 py-4 flex flex-col gap-3">
-            {/* Regular links */}
-            {navLinks.filter(l => l.label !== 'Explore').map((link) => (
-              <SiteLink
-                key={link.label}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className={`text-sm font-medium py-2 cursor-pointer transition-colors ${
-                  pathname === link.href ? 'text-signal-500' : 'text-foreground-700 hover:text-primary-600'
-                }`}
-              >
-                {link.label}
+      {mobileOpen && !desktopViewport && (
+        <div
+          id="mobile-navigation"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="mobile-navigation-title"
+          className="fixed inset-0 z-[1000] bg-black/60 px-4 py-6 backdrop-blur-[2px] lg:hidden"
+          onClick={() => setMobileOpen(false)}
+        >
+          <div
+            className="drawer-panel-center mx-auto flex h-[min(88dvh,760px)] max-w-[424px] flex-col overflow-hidden rounded-lg bg-white text-foreground-900 shadow-overlay"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex shrink-0 items-center justify-between gap-4 border-b border-background-200/70 p-4">
+              <h2 id="mobile-navigation-title" className="sr-only">Site navigation</h2>
+              <SiteLink href="/" onClick={() => setMobileOpen(false)} className="flex h-11 w-[118px] items-center" aria-label="College of Project Controls & Management home">
+                <img decoding="async" width="118" height="44" src="/images/cpcm-logo-dark.webp" alt="College of Project Controls" className="h-full w-full object-contain" />
               </SiteLink>
-            ))}
-
-            {/* Complete mobile navigation */}
-            <div data-navigation-menu className="border-t border-background-200/70 pt-3">
-              <p className="text-sm font-label font-semibold uppercase tracking-[0.12em] text-foreground-400 mb-2">
-                Explore all pages
-              </p>
-              <div className="flex flex-col gap-1 pl-2">
-                {routeGroups.flatMap(g => g.routes).map((route) => {
-                  const active = pathname === route.href;
-                  return (
-                    <SiteLink
-                      key={route.label}
-                      href={route.href}
-                      onClick={() => setMobileOpen(false)}
-                      aria-current={active ? 'page' : undefined}
-                      className={`text-sm py-2 cursor-pointer transition-colors flex items-center gap-2 ${
-                        active ? 'font-semibold text-signal-600' : 'text-foreground-700 hover:text-primary-600'
-                      }`}
-                    >
-                      <div className="w-1.5 h-1.5 rounded-full bg-signal-500 flex-shrink-0"></div>
-                      {route.label}
-                    </SiteLink>
-                  );
-                })}
-              </div>
-              <SiteLink
-                href="/institute-of-project-controls"
+              <button
+                type="button"
                 onClick={() => setMobileOpen(false)}
-                className="mt-3 flex items-center gap-3 rounded-lg bg-ipc-surface px-3 py-2.5"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-foreground-800 transition-colors hover:bg-background-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal-500"
+                aria-label="Close menu"
               >
-                <img loading="lazy" decoding="async" src="/images/ipc-logo.webp" alt="" className="h-5 w-5 flex-shrink-0 object-contain" />
-                <span className="text-xs font-bold uppercase tracking-[.12em] text-ipc-gold">Institute of Project Controls</span>
-                <i className="ri-arrow-right-line ml-auto text-sm text-ipc-gold" aria-hidden="true" />
-              </SiteLink>
+                <i className="ri-close-line text-2xl" aria-hidden="true" />
+              </button>
             </div>
 
-            <div className="border-t border-background-200/70 pt-3 flex flex-col gap-3">
+            <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
+              <div className="flex flex-col gap-4">
+                {navLinks.filter(l => l.label !== 'Explore').map((link) => (
+                  <SiteLink
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`cursor-pointer py-1 text-sm font-semibold transition-colors ${
+                      pathname === link.href ? 'text-signal-500' : 'text-foreground-700 hover:text-primary-600'
+                    }`}
+                  >
+                    {link.label}
+                  </SiteLink>
+                ))}
+
+                <div data-navigation-menu className="border-t border-background-200/70 pt-4">
+                  <p className="mb-4 text-sm font-label font-semibold uppercase tracking-[0.12em] text-foreground-400">
+                    Explore all pages
+                  </p>
+                  <div className="space-y-5">
+                    {routeGroups.map((group) => {
+                      const activeInGroup = group.routes.some((route) => pathname === route.href);
+                      return (
+                        <section key={group.title}>
+                          <h3 className={`text-sm font-bold ${activeInGroup ? 'text-signal-700' : 'text-foreground-950'}`}>
+                            {group.title}
+                          </h3>
+                          <div className="mt-2 grid gap-1">
+                            {group.routes.map((route) => {
+                              const active = pathname === route.href;
+                              return (
+                                <SiteLink
+                                  key={route.label}
+                                  href={route.href}
+                                  onClick={() => setMobileOpen(false)}
+                                  aria-current={active ? 'page' : undefined}
+                                  className={`flex min-h-9 cursor-pointer items-center gap-2 rounded-md px-1 text-sm transition-colors ${
+                                    active ? 'font-semibold text-signal-700' : 'text-foreground-700 hover:bg-background-50 hover:text-primary-700'
+                                  }`}
+                                >
+                                  <i className={`${route.icon} text-base ${active ? 'text-signal-600' : 'text-primary-600'}`} aria-hidden="true" />
+                                  <span>{route.label}</span>
+                                </SiteLink>
+                              );
+                            })}
+                          </div>
+                        </section>
+                      );
+                    })}
+                  </div>
+                  <SiteLink
+                    href="/institute-of-project-controls"
+                    onClick={() => setMobileOpen(false)}
+                    className="mt-3 flex items-center gap-3 rounded-lg bg-ipc-surface px-3 py-2.5"
+                  >
+                    <img loading="lazy" decoding="async" src="/images/ipc-logo.webp" alt="" className="h-5 w-5 flex-shrink-0 object-contain" />
+                    <span className="text-xs font-bold uppercase tracking-[.12em] text-ipc-gold">Institute of Project Controls</span>
+                    <i className="ri-arrow-right-line ml-auto text-sm text-ipc-gold" aria-hidden="true" />
+                  </SiteLink>
+                </div>
+              </div>
+            </div>
+
+            <div className="shrink-0 border-t border-background-200/70 bg-white p-4">
               <SiteLink
                 href="/book-a-session"
                 onClick={() => setMobileOpen(false)}
-                className="cta-button bg-signal-500 text-primary-950 px-7 py-3 rounded-md text-sm font-bold text-center cursor-pointer hover:bg-signal-400 shadow-card transition-colors whitespace-nowrap"
+                className="cta-button flex min-h-12 w-full items-center justify-center rounded-lg bg-signal-500 px-7 text-center text-sm font-bold text-primary-950 shadow-card transition-colors hover:bg-signal-400"
               >
                 Request a consultation
               </SiteLink>
             </div>
           </div>
-      </Modal>
+        </div>
+      )}
 
       {/* Dropdown + header entrance keyframes */}
       <style>{`

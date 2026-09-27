@@ -131,7 +131,7 @@ export default function YourCreditJourney() {
 </div>
 <div className="flex flex-wrap items-center gap-3 pt-4">
 <SiteLink href="/book-a-session" className="inline-flex min-h-12 items-center justify-center rounded-md px-5 py-3 text-sm font-bold btn-primary">
-{"Book an information session "}
+{"Request a consultation "}
 </SiteLink>
 </div>
 </div>

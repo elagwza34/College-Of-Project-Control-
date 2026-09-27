@@ -3,7 +3,7 @@ import { useReveal } from '@/hooks/useReveal';
 const services = [
   { icon: 'ri-award-line', title: 'Certification Ready', desc: 'Structured pathways towards APM, PMI and professional certification — with exam prep built in.' },
   { icon: 'ri-user-voice-line', title: 'One-to-One Tutoring', desc: 'Personal coaching from industry experts actively working in planning, cost, and risk roles today.' },
-  { icon: 'ri-calendar-event-line', title: 'Master Classes', desc: 'Exclusive in-person London events: live case studies, peer networking, and senior practitioner insight.' },
+  { icon: 'ri-calendar-event-line', title: 'Masterclasses', desc: 'Exclusive in-person London events: live case studies, peer networking, and senior practitioner insight.' },
   { icon: 'ri-route-line', title: 'Route Guidance', desc: 'Clarify the programme, funding route and professional direction that best fits your current responsibilities.' },
 ];
 
@@ -18,10 +18,10 @@ export default function LearnerSupport() {
                 Learner Support
               </span>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground-950 leading-tight">
-                Everything You Need to Succeed
+                Support for your learning and development
               </h2>
               <p className="mt-3 text-sm md:text-base text-foreground-600 leading-relaxed">
-                Four pillars of support — from certification to wellbeing. Every one designed to keep you on track.
+                Explore preparation, tutoring, masterclasses and guidance for your chosen route.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">

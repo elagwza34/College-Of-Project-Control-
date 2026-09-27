@@ -30,4 +30,4 @@ class NavigationGroupAdmin(admin.ModelAdmin):
 
 @admin.register(MediaAsset)
 class MediaAssetAdmin(admin.ModelAdmin):
-    list_display = ("file", "alt_text", "uploaded_by", "uploaded_at")
+    list_display = ("__str__", "alt_text", "uploaded_by", "uploaded_at")

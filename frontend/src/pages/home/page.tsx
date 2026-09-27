@@ -1,4 +1,5 @@
 import Footer from '@/components/feature/Footer';
+import CaseStudiesSection from '@/components/feature/CaseStudiesSection';
 import CoachingAndSupport from "./components/CoachingAndSupport";
 import CollegeOfProjectControlsAndManagement from "./components/CollegeOfProjectControlsAndManagement";
 import ForEmployers from './components/ForEmployers';
@@ -12,6 +13,7 @@ import ProfessionalPathways from "./components/ProfessionalPathways";
 import ProfessionalProgrammes from "./components/ProfessionalProgrammes";
 import ProjectDrivenSectors from "./components/ProjectDrivenSectors";
 import SpecialistModules from './components/SpecialistModules';
+import ShortCoursesCarousel from './components/ShortCoursesCarousel';
 import TrustedBy from "./components/TrustedBy";
 
 export default function Home() {
@@ -26,7 +28,9 @@ export default function Home() {
         <ProfessionalPathways />
         <ProjectDrivenSectors />
         <FundingEligibilityAndIPCSupport />
+        <ShortCoursesCarousel />
         <ForEmployers />
+        <CaseStudiesSection />
         <LearnFromPractitioners />
         <CoachingAndSupport />
         <LearnTogether />

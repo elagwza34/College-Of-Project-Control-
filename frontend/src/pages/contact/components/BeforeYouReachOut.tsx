@@ -1,8 +1,8 @@
 const faqs = [
   { q: 'How quickly will I hear back?', a: 'Our team reviews enquiries within 24 hours on working days and will follow up by email or phone with your next step.' },
   { q: 'Is there any obligation to enrol?', a: 'None. Getting in touch is simply the start of a conversation to understand your role, goals and the most relevant option.' },
-  { q: 'What if I am enquiring on behalf of my employer?', a: 'Select "Employer" or "HR / L&D" in the form. We regularly work with organisations building capability across a team.' },
-  { q: 'Can I speak to someone instead of emailing?', a: 'Yes. Request an adviser call above, or book a consultation directly from the events page at a time that suits you.' },
+  { q: 'What if I am enquiring on behalf of my employer?', a: 'Tell us your organisation and role, then describe your team’s development needs in the message field.' },
+  { q: 'Can I speak to someone instead of emailing?', a: 'Yes. Request an adviser call using the consultation form. Our team will contact you to agree the next step.' },
 ];
 
 export default function BeforeYouReachOut() {

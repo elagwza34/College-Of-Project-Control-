@@ -2,7 +2,7 @@ import { useReveal } from '@/hooks/useReveal';
 
 const journey = [
   { icon: 'ri-user-add-line', title: 'Apply & Enrol', desc: 'Complete your eligibility check and select the right pathway for your career.' },
-  { icon: 'ri-book-open-line', title: 'Learn & Practice', desc: 'Live online sessions plus workplace assignments that build real capability.' },
+  { icon: 'ri-book-open-line', title: 'Learn & Practise', desc: 'Live online sessions plus workplace assignments that build real capability.' },
   { icon: 'ri-bar-chart-grouped-line', title: 'Apply at Work', desc: 'Every module maps directly to real project deliverables and evidence.' },
   { icon: 'ri-medal-line', title: 'Certify', desc: 'Progress towards APM, PMI and professional accreditation milestones.' },
   { icon: 'ri-rocket-line', title: 'Advance', desc: 'Step into senior cost, planning, PMO, or programme controls roles.' },

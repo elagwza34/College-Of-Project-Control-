@@ -88,7 +88,8 @@ class NavigationItem(models.Model):
 
 
 class MediaAsset(models.Model):
-    file = models.ImageField(upload_to="uploads/%Y/%m/")
+    file = models.ImageField(upload_to="uploads/%Y/%m/", blank=True, null=True)
+    source_url = models.URLField(max_length=1000, blank=True)
     alt_text = models.CharField(max_length=200, blank=True)
     uploaded_by = models.ForeignKey(
         settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.SET_NULL, related_name="cms_uploads"
@@ -99,7 +100,7 @@ class MediaAsset(models.Model):
         ordering = ["-uploaded_at"]
 
     def __str__(self):
-        return self.file.name
+        return self.file.name if self.file else self.source_url
 
 class PageContentRevision(models.Model):
     section_key = models.CharField(max_length=32, unique=True)
@@ -107,5 +108,6 @@ class PageContentRevision(models.Model):
     published = models.JSONField(default=dict)
     history = models.JSONField(default=list)
     version = models.PositiveIntegerField(default=0)
+    is_hidden = models.BooleanField(default=False)
     updated_at = models.DateTimeField(auto_now=True)
     updated_by = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, on_delete=models.SET_NULL)

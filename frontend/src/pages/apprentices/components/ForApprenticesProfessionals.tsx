@@ -71,7 +71,7 @@ export default function ForApprenticesProfessionals() {
               <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">
                 <SiteLink href="/contact" className="btn-primary inline-flex items-center gap-3 px-8 py-4 font-semibold text-sm cursor-pointer transition-all duration-300 whitespace-nowrap lift-hover">
                   <i className="ri-rocket-line text-lg" />
-                  Start your application
+                  Discuss your options
                   <i className="ri-arrow-right-line text-sm" />
                 </SiteLink>
                 <SiteLink href="#rhythm" className="cta-button inline-flex items-center gap-2 px-6 py-4 border border-white/25 text-white font-semibold text-sm rounded-xl cursor-pointer hover:bg-white/10 hover:border-white/40 transition-all duration-300 whitespace-nowrap">

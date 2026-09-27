@@ -19,7 +19,7 @@ export interface ArticleLayoutProps {
   quickSummary?: string[];
   children: ReactNode;
   ctaSection: ReactNode;
-  faqSection: ReactNode;
+  faqSection?: ReactNode;
   relatedArticles: ReactNode;
 }
 
@@ -33,7 +33,6 @@ export default function ArticleLayout({
   quickSummary,
   children,
   ctaSection,
-  faqSection,
   relatedArticles,
 }: ArticleLayoutProps) {
   return (
@@ -67,9 +66,6 @@ export default function ArticleLayout({
 
         {/* CTA Section */}
         {ctaSection}
-
-        {/* FAQ Section */}
-        {faqSection}
 
         {/* Related Articles */}
         {relatedArticles}

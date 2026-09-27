@@ -6,7 +6,7 @@ export default function ForConstructionEmployersPlannersAndProjectControlsTeams(
   return (
     <PcpHero
           tag="For Construction Employers, Planners &amp; Project Controls Teams"
-          headline="Stop Letting Schedule Delays and Cost Drift Become Normal"
+          headline="Build stronger planning, cost and change-control skills"
           subheadline="Build project controls capability for construction, building and urban programmes where planning discipline, NEC change control, cost visibility and progress reporting matter."
           description="Delay and cost drift are not inevitable. They are symptoms of weak project controls capability. Build the discipline to see problems earlier and control them faster."
           fundingLine="Apprenticeship funding may be available, subject to current eligibility rules. Department for Education funding band up to £27,000 for eligible employers in England. Delivered by Kent Business College."

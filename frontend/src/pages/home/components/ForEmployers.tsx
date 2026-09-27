@@ -72,12 +72,6 @@ export default function ForEmployers() {
               ))}
             </div>
 
-            {/* Key employer statement */}
-            <div className="mt-6 inline-flex items-start gap-2.5 bg-primary-50 border border-primary-200 rounded-lg px-4 py-3">
-              <i className="ri-check-double-line text-primary-600 text-base flex-shrink-0 mt-0.5"></i>
-              <span className="text-sm font-semibold text-foreground-800">Target capability gaps without over-training your team.</span>
-            </div>
-
             {/* CTA */}
             <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap items-start gap-4">
               <SiteLink
@@ -124,13 +118,6 @@ export default function ForEmployers() {
                   <p className="text-sm font-semibold text-foreground-900">Employer capability development</p>
                   <p className="text-xs text-foreground-600">Develop individual specialists, teams or entire functions.</p>
                 </div>
-                <SiteLink
-                  href="/employers"
-                  className="btn-primary ml-auto hidden sm:inline-flex items-center gap-1 px-4 py-2 text-xs font-semibold transition-all duration-200 whitespace-nowrap"
-                >
-                  Learn more
-                  <i className="ri-arrow-right-line text-xs" />
-                </SiteLink>
               </div>
             </div>
           </div>

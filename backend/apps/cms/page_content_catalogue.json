@@ -5,27 +5,21 @@
     "label": "About CPCM",
     "fields": [
       {
-        "key": "819d0b9ef7307dbe",
+        "key": "063cc0255c52fcb8",
         "kind": "image",
-        "default": "https://images.pexels.com/photos/6285078/pexels-photo-6285078.jpeg?auto=compress&cs=tinysrgb&w=1920",
+        "default": "/images/hero-professional.webp",
         "label": "Image URL"
       },
       {
-        "key": "ea55a72e1c84f928",
+        "key": "eb73a09ddf828f50",
         "kind": "text",
-        "default": "About CPCM",
-        "label": "Text"
-      },
-      {
-        "key": "1af616a70e49e333",
-        "kind": "text",
-        "default": "A specialist college for the people behind confident project delivery",
+        "default": "A specialist college for project control, delivery confidence and professional judgement.",
         "label": "Heading"
       },
       {
-        "key": "e396134653423bb8",
+        "key": "91bfcd6c2e87e012",
         "kind": "text",
-        "default": "The College of Project Controls & Management brings project controls, project management and PMO development into one coherent professional environment—built around workplace application, sound judgement and credible evidence.",
+        "default": "We develop professionals and employers who need clearer plans, better evidence, stronger governance and more confident decisions in complex project environments.",
         "label": "Text"
       },
       {
@@ -48,11 +42,97 @@
         "label": "Button/link URL"
       },
       {
-        "key": "8dd2f1ba47880866",
+        "key": "e538351505d82d25",
         "kind": "text",
-        "default": "Speak with an adviser",
+        "default": "Speak with the team",
         "label": "Link text",
         "linkField": "7ddfc5e0202d43bc"
+      },
+      {
+        "key": "a796efe1ad71a417",
+        "kind": "text",
+        "default": "Our focus is deliberately specialist. We connect structured professional learning with practical project responsibilities, so capability is developed through the work people actually do.",
+        "label": "Text"
+      },
+      {
+        "key": "a051f32fc0773562",
+        "kind": "text",
+        "default": "Build one capability at a time.",
+        "label": "Heading"
+      },
+      {
+        "key": "fd9f23fa4451fe05",
+        "kind": "link",
+        "default": "/short-courses",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "dc34f8e3e68e6e01",
+        "kind": "text",
+        "default": "Browse short courses",
+        "label": "Link text",
+        "linkField": "fd9f23fa4451fe05"
+      },
+      {
+        "key": "8625892006532d70",
+        "kind": "text",
+        "default": " - ",
+        "label": "Text"
+      },
+      {
+        "key": "6e6d92cf8410a7a2",
+        "kind": "image",
+        "default": "/images/testimonial-leaders-grid.png",
+        "label": "Image URL"
+      },
+      {
+        "key": "3f627da0faf7e5aa",
+        "kind": "text",
+        "default": "Responsible use",
+        "label": "Text"
+      },
+      {
+        "key": "1b12b1907e7ade98",
+        "kind": "text",
+        "default": "AI learning is developed around governed workflows, validated information, human review and clear decision accountability.",
+        "label": "Text"
+      },
+      {
+        "key": "85f7e886658cb6f7",
+        "kind": "image",
+        "default": "/images/employer-capability-team.webp",
+        "label": "Image URL"
+      },
+      {
+        "key": "4f41e82ade73a221",
+        "kind": "text",
+        "default": "Capability plans should reflect real roles, not abstract training catalogues.",
+        "label": "Text"
+      },
+      {
+        "key": "f15e49bb6e21500c",
+        "kind": "text",
+        "default": "Next step",
+        "label": "Text"
+      },
+      {
+        "key": "98a5af07dfc9a8c8",
+        "kind": "text",
+        "default": "Choose a programme, compare a route or talk through the role you need to develop.",
+        "label": "Heading"
+      },
+      {
+        "key": "72833f62cc255ce2",
+        "kind": "link",
+        "default": "/contact",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "d34ce7312f3ffddf",
+        "kind": "text",
+        "default": "Request a consultation",
+        "label": "Link text",
+        "linkField": "72833f62cc255ce2"
       }
     ],
     "url": "/about"
@@ -232,9 +312,9 @@
         "label": "Button/link URL"
       },
       {
-        "key": "01288f502ada1329",
+        "key": "b58e364a776adff6",
         "kind": "text",
-        "default": "View Next Available Cohort ",
+        "default": "View Next Available Cohort",
         "label": "Link text",
         "linkField": "41c0273876371def"
       }
@@ -480,20 +560,6 @@
     "url": "/associate-project-manager-level-4"
   },
   {
-    "key": "8ca9d9e41b28a8eb",
-    "page": "apm-level-4",
-    "label": "Trust And Relevance",
-    "fields": [
-      {
-        "key": "9e26e5979408975b",
-        "kind": "text",
-        "default": "No verified programme-specific testimonial copy or approved employer-logo assets were available locally, so endorsements have not been invented or implied.",
-        "label": "Text"
-      }
-    ],
-    "url": "/associate-project-manager-level-4"
-  },
-  {
     "key": "75a5b956a51a10cd",
     "page": "apm-level-4",
     "label": "Weekly Commitment",
@@ -634,12 +700,6 @@
         "label": "Text"
       },
       {
-        "key": "9486ec44e1016f52",
-        "kind": "text",
-        "default": "\\u00A30",
-        "label": "Text"
-      },
-      {
         "key": "f704a69c2856281e",
         "kind": "text",
         "default": "Cost for eligible learners",
@@ -652,9 +712,9 @@
         "label": "Button/link URL"
       },
       {
-        "key": "487b01f9b3ea1454",
+        "key": "96b52a2267a31715",
         "kind": "text",
-        "default": "Check your eligibility",
+        "default": "Ask about eligibility",
         "label": "Link text",
         "linkField": "7ddfc5e0202d43bc"
       }
@@ -703,9 +763,9 @@
         "label": "Button/link URL"
       },
       {
-        "key": "bffd11578297c7b4",
+        "key": "277a59f0ddf53fbc",
         "kind": "text",
-        "default": "Start your application",
+        "default": "Discuss your options",
         "label": "Link text",
         "linkField": "7ddfc5e0202d43bc"
       },
@@ -743,15 +803,15 @@
         "label": "Text"
       },
       {
-        "key": "493e3f3eb2db4cf2",
+        "key": "2a3e4a7570f6f549",
         "kind": "text",
-        "default": "Everything You Need to Succeed",
+        "default": "Support for your learning and development",
         "label": "Heading"
       },
       {
-        "key": "7262820752ecb6dd",
+        "key": "6b314640a541a1b7",
         "kind": "text",
-        "default": "Four pillars of support — from certification to wellbeing. Every one designed to keep you on track.",
+        "default": "Explore preparation, tutoring, masterclasses and guidance for your chosen route.",
         "label": "Text"
       }
     ],
@@ -801,9 +861,9 @@
         "label": "Button/link URL"
       },
       {
-        "key": "bffd11578297c7b4",
+        "key": "277a59f0ddf53fbc",
         "kind": "text",
-        "default": "Start your application",
+        "default": "Discuss your options",
         "label": "Link text",
         "linkField": "7ddfc5e0202d43bc"
       },
@@ -1565,9 +1625,9 @@
         "label": "Button/link URL"
       },
       {
-        "key": "a3bec075b1b5cb79",
+        "key": "d34ce7312f3ffddf",
         "kind": "text",
-        "default": "Book an information session",
+        "default": "Request a consultation",
         "label": "Link text",
         "linkField": "41c0273876371def"
       },
@@ -1803,26 +1863,6 @@
         "kind": "text",
         "default": "Built for project-driven organisations",
         "label": "Heading"
-      },
-      {
-        "key": "ae5562eed186f695",
-        "kind": "text",
-        "default": "Employer logos are shown only where explicit approval to present them as endorsements is available.",
-        "label": "Text"
-      }
-    ],
-    "url": "/employers"
-  },
-  {
-    "key": "db3af608dc308fa1",
-    "page": "employers",
-    "label": "Employer Resources",
-    "fields": [
-      {
-        "key": "5a4cf6164ae4a4b9",
-        "kind": "text",
-        "default": "The progress-review card returns to the guidance on this page because no separate approved guide route is currently available.",
-        "label": "Text"
       }
     ],
     "url": "/employers"
@@ -2171,9 +2211,21 @@
     "label": "Find Events",
     "fields": [
       {
-        "key": "4c618da27c401325",
+        "key": "5796ba3f4ca5c128",
         "kind": "text",
-        "default": "Search events",
+        "default": "Filter events",
+        "label": "Text"
+      },
+      {
+        "key": "dcc948149fddb9c6",
+        "kind": "text",
+        "default": "Find the right session",
+        "label": "Heading"
+      },
+      {
+        "key": "f2a57bc11ecd77be",
+        "kind": "text",
+        "default": "Filters",
         "label": "Text"
       },
       {
@@ -2183,9 +2235,9 @@
         "label": "Text"
       },
       {
-        "key": "4c37327d396c3cd1",
+        "key": "56d78dcee7cc1d3a",
         "kind": "text",
-        "default": "Loading events…",
+        "default": "Loading events...",
         "label": "Text"
       },
       {
@@ -2669,15 +2721,15 @@
         "label": "Text"
       },
       {
-        "key": "606f3c8071571fac",
+        "key": "161cbf9f908e603c",
         "kind": "text",
-        "default": "A specialist business college for professionals and organisations responsible for project performance, governance and complex delivery.",
+        "default": "A specialist college for professionals and employers working in project controls, project management and PMO.",
         "label": "Text"
       },
       {
-        "key": "ae7d1fc2c53365e2",
+        "key": "983cf8b543782781",
         "kind": "text",
-        "default": "Build practical capability across project controls, project management and PMO through structured programmes, specialist modules and employer-led development.",
+        "default": "Choose a structured programme, specialist module or team development route, with learning applied to workplace responsibilities.",
         "label": "Text"
       },
       {
@@ -2758,12 +2810,6 @@
         "label": "Text"
       },
       {
-        "key": "e4401c43bc685cfa",
-        "kind": "text",
-        "default": "Target capability gaps without over-training your team.",
-        "label": "Text"
-      },
-      {
         "key": "d2b1e622a2d53a7f",
         "kind": "link",
         "default": "/employers",
@@ -2806,19 +2852,20 @@
         "kind": "text",
         "default": "Develop individual specialists, teams or entire functions.",
         "label": "Text"
-      },
+      }
+    ],
+    "url": "/"
+  },
+  {
+    "key": "7118a90c35e66d58",
+    "page": "home",
+    "label": "Home Audio Summary",
+    "fields": [
       {
-        "key": "932cf43c156763e1",
-        "kind": "link",
-        "default": "/employers",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "58c02265d3148438",
+        "key": "ab83d62604a26b80",
         "kind": "text",
-        "default": "Learn more",
-        "label": "Link text",
-        "linkField": "932cf43c156763e1"
+        "default": "If you are busy, listen to the summary",
+        "label": "Text"
       }
     ],
     "url": "/"
@@ -2942,6 +2989,57 @@
     "url": "/"
   },
   {
+    "key": "c73b5d406a65af45",
+    "page": "home",
+    "label": "Short Courses Carousel",
+    "fields": [
+      {
+        "key": "9dd594becd74c39c",
+        "kind": "text",
+        "default": "Short courses",
+        "label": "Text"
+      },
+      {
+        "key": "ced90281b8b6d29d",
+        "kind": "text",
+        "default": "Build one specialist capability at a time.",
+        "label": "Heading"
+      },
+      {
+        "key": "4a947152ed25337f",
+        "kind": "text",
+        "default": "Focused courses for planning, cost, risk, AI, PMO and professional certification preparation.",
+        "label": "Text"
+      },
+      {
+        "key": "fd9f23fa4451fe05",
+        "kind": "link",
+        "default": "/short-courses",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "39e082d276aec5f1",
+        "kind": "text",
+        "default": "View all short courses ",
+        "label": "Link text",
+        "linkField": "fd9f23fa4451fe05"
+      },
+      {
+        "key": "b45e17b0931cbecf",
+        "kind": "text",
+        "default": "View course ",
+        "label": "Text"
+      },
+      {
+        "key": "1b3dba9772d620f5",
+        "kind": "text",
+        "default": " / ",
+        "label": "Text"
+      }
+    ],
+    "url": "/"
+  },
+  {
     "key": "4385359bcd84e892",
     "page": "home",
     "label": "Specialist Modules",
@@ -2999,6 +3097,81 @@
       }
     ],
     "url": "/"
+  },
+  {
+    "key": "c8333abcd5155be4",
+    "page": "how-to-apply",
+    "label": "How To Apply",
+    "fields": [
+      {
+        "key": "6c11e4ba32cce54c",
+        "kind": "text",
+        "default": "Admissions",
+        "label": "Text"
+      },
+      {
+        "key": "ad7fd1735e00597f",
+        "kind": "text",
+        "default": "How to apply without choosing alone.",
+        "label": "Heading"
+      },
+      {
+        "key": "a7dc17df1a920503",
+        "kind": "text",
+        "default": "Start with a short enquiry. We help confirm route fit, eligibility, funding and employer support before enrolment.",
+        "label": "Text"
+      },
+      {
+        "key": "41c0273876371def",
+        "kind": "link",
+        "default": "/book-a-session",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "f74434a9618a29e9",
+        "kind": "text",
+        "default": "Start your enquiry",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
+      },
+      {
+        "key": "b97c536d5b93a24d",
+        "kind": "link",
+        "default": "/apprenticeship-eligibility-checker",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "f335ec41a6e48e98",
+        "kind": "text",
+        "default": "Check eligibility",
+        "label": "Link text",
+        "linkField": "b97c536d5b93a24d"
+      },
+      {
+        "key": "6c206912ba99737a",
+        "kind": "text",
+        "default": "Before you commit",
+        "label": "Text"
+      },
+      {
+        "key": "f1eaca248e5d1883",
+        "kind": "text",
+        "default": "Eligibility",
+        "label": "Text"
+      },
+      {
+        "key": "5f471bfd6ec8714a",
+        "kind": "text",
+        "default": "Not sure where you fit? Start with the role.",
+        "label": "Heading"
+      },
+      {
+        "key": "1b8d157caf6e01e2",
+        "kind": "text",
+        "default": "The right route depends on your responsibilities, evidence opportunities, prior learning and funding position.",
+        "label": "Text"
+      }
+    ]
   },
   {
     "key": "017e72c2899536a5",
@@ -3265,9 +3438,9 @@
         "label": "Heading"
       },
       {
-        "key": "e234572ca64de30c",
+        "key": "e7206e8eedbef74f",
         "kind": "text",
-        "default": "When a professional development programme mentions \"ChPP readiness,\" it is easy to misunderstand what that means. Some providers blur the line between preparation and guarantee. At the College of Project Controls, we believe honesty about professional recognition matters. This article explains exactly what APM ChPP readiness support includes, how it helps and — equally important — what it does not promise.",
+        "default": "This guide explains how ChPP readiness support helps you prepare professional evidence, what support may include and why eligibility and Chartered status remain subject to APM’s independent assessment.",
         "label": "Text"
       }
     ],
@@ -3330,9 +3503,9 @@
         "label": "Text"
       },
       {
-        "key": "4c5ae33edcacc3f8",
+        "key": "d0c2efa2d3fc85d2",
         "kind": "link",
-        "default": "/operational-pcp",
+        "default": "/project-controls-professional/operational-route",
         "label": "Button/link URL"
       },
       {
@@ -3340,7 +3513,7 @@
         "kind": "text",
         "default": "Operational PCP Route",
         "label": "Link text",
-        "linkField": "4c5ae33edcacc3f8"
+        "linkField": "d0c2efa2d3fc85d2"
       },
       {
         "key": "74a4779c1d9dd25a",
@@ -3614,9 +3787,9 @@
     "label": "Not Eligible For Apprenticeship Funding You Still Deserve Professional Project Controls Development",
     "fields": [
       {
-        "key": "e740d607ba06c263",
+        "key": "84d874498400f87c",
         "kind": "text",
-        "default": "Not Eligible for Apprenticeship Funding? You Still Deserve Professional Project Controls Development.",
+        "default": "Explore professional development through the commercial route",
         "label": "Heading"
       },
       {
@@ -4090,9 +4263,9 @@
     "label": "Stop Letting Schedule Delays And Cost Drift Become Normal",
     "fields": [
       {
-        "key": "76db981eae6c7725",
+        "key": "c3815f4f968fe58f",
         "kind": "text",
-        "default": "Stop Letting Schedule Delays and Cost Drift Become Normal",
+        "default": "Build stronger planning, cost and change-control skills",
         "label": "Heading"
       },
       {
@@ -4652,9 +4825,9 @@
     "label": "For Capital Programmes Where Weak Controls Are Too Expensive To Ignore",
     "fields": [
       {
-        "key": "d4e52c7f949995c0",
+        "key": "b0cc3aea35d7007e",
         "kind": "text",
-        "default": "For Capital Programmes Where Weak Controls Are Too Expensive to Ignore",
+        "default": "Project controls skills for complex energy programmes",
         "label": "Heading"
       },
       {
@@ -5942,9 +6115,9 @@
         "label": "Text"
       },
       {
-        "key": "4c5ae33edcacc3f8",
+        "key": "d0c2efa2d3fc85d2",
         "kind": "link",
-        "default": "/operational-pcp",
+        "default": "/project-controls-professional/operational-route",
         "label": "Button/link URL"
       },
       {
@@ -5952,7 +6125,7 @@
         "kind": "text",
         "default": "Explore the Operational PCP Route →",
         "label": "Link text",
-        "linkField": "4c5ae33edcacc3f8"
+        "linkField": "d0c2efa2d3fc85d2"
       }
     ],
     "url": "/knowledge-hub/strategic-vs-operational"
@@ -6077,9 +6250,9 @@
     "label": "Two Pathways One Professional Standard Different Career Outcomes",
     "fields": [
       {
-        "key": "543b49ddbb239a56",
+        "key": "e82e3ae2c15ce838",
         "kind": "text",
-        "default": "Two Pathways. One Professional Standard. Different Career Outcomes.",
+        "default": "Strategic and operational pathways: different responsibilities",
         "label": "Heading"
       },
       {
@@ -6129,9 +6302,9 @@
     "label": "Funding Funding Subject To Eligibility",
     "fields": [
       {
-        "key": "a6cb9d37ec28542f",
+        "key": "d69e21a906dcf47f",
         "kind": "text",
-        "default": "Funding: Funding Subject to Eligibility",
+        "default": "Apprenticeship funding",
         "label": "Heading"
       },
       {
@@ -6179,9 +6352,9 @@
         "label": "Text"
       },
       {
-        "key": "4dbe11cef8427496",
+        "key": "4e3fd559a4fc2417",
         "kind": "link",
-        "default": "/pcp-master",
+        "default": "/project-controls-professional-level-6",
         "label": "Button/link URL"
       },
       {
@@ -6189,7 +6362,7 @@
         "kind": "text",
         "default": "PCP Master Page",
         "label": "Link text",
-        "linkField": "4dbe11cef8427496"
+        "linkField": "4e3fd559a4fc2417"
       },
       {
         "key": "0c5108fda467d6f3",
@@ -6217,9 +6390,9 @@
         "label": "Text"
       },
       {
-        "key": "4c5ae33edcacc3f8",
+        "key": "d0c2efa2d3fc85d2",
         "kind": "link",
-        "default": "/operational-pcp",
+        "default": "/project-controls-professional/operational-route",
         "label": "Button/link URL"
       },
       {
@@ -6227,7 +6400,7 @@
         "kind": "text",
         "default": "Operational PCP Route",
         "label": "Link text",
-        "linkField": "4c5ae33edcacc3f8"
+        "linkField": "d0c2efa2d3fc85d2"
       },
       {
         "key": "51987931831599d2",
@@ -6769,211 +6942,46 @@
     "url": "*"
   },
   {
-    "key": "a5f1374da6ef2f7e",
-    "page": "operational-pcp",
-    "label": "Eligibility Criteria",
-    "fields": [
-      {
-        "key": "46b83fd6d43b9095",
-        "kind": "image",
-        "default": "https://jokdxsdbxorzciulkdyl.supabase.co/storage/v1/object/public/images/c5916acf755e4a2cbe4d778a1ae304ca.png",
-        "label": "Image URL"
-      },
-      {
-        "key": "b97c536d5b93a24d",
-        "kind": "link",
-        "default": "/apprenticeship-eligibility-checker",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "dc201ca9e659b2b9",
-        "kind": "link",
-        "default": "mailto:office@kentbusinesscollege.com?subject=Operational%20Pathway%20Eligibility%20Enquiry",
-        "label": "Button/link URL"
-      }
-    ],
-    "url": "/project-controls-professional/operational-route"
-  },
-  {
-    "key": "b8ce5871e508acd6",
-    "page": "operational-pcp",
-    "label": "Funding Scenarios For202627 Starts",
-    "fields": [
-      {
-        "key": "d58ff5f70650d5a3",
-        "kind": "link",
-        "default": "mailto:office@kentbusinesscollege.com?subject=Operational%20Pathway%20Funding%20Enquiry",
-        "label": "Button/link URL"
-      }
-    ],
-    "url": "/project-controls-professional/operational-route"
-  },
-  {
-    "key": "1616dd5fe7e30764",
-    "page": "operational-pcp",
-    "label": "Operational Pathway Quick Enquiry",
-    "fields": [
-      {
-        "key": "5c59b445abca1577",
-        "kind": "text",
-        "default": "Operational Pathway enquiries",
-        "label": "Text"
-      },
-      {
-        "key": "11a6903f3742e88f",
-        "kind": "text",
-        "default": "Review your role, funding and pathway suitability with the admissions team.",
-        "label": "Text"
-      },
-      {
-        "key": "ff4814fc5b70cceb",
-        "kind": "link",
-        "default": "#operational-modules",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "4e57d7d4c9314b05",
-        "kind": "text",
-        "default": "View credits",
-        "label": "Link text",
-        "linkField": "ff4814fc5b70cceb"
-      },
-      {
-        "key": "41c0273876371def",
-        "kind": "link",
-        "default": "/book-a-session",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "a3bec075b1b5cb79",
-        "kind": "text",
-        "default": "Book an information session",
-        "label": "Link text",
-        "linkField": "41c0273876371def"
-      }
-    ],
-    "url": "/project-controls-professional/operational-route"
-  },
-  {
-    "key": "500b9587c297be90",
-    "page": "operational-pcp",
-    "label": "Section202627 Learner And Employer Pathway",
-    "fields": [
-      {
-        "key": "53460766cc66e0d8",
-        "kind": "image",
-        "default": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2200&q=85",
-        "label": "Image URL"
-      },
-      {
-        "key": "41c0273876371def",
-        "kind": "link",
-        "default": "/book-a-session",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "dd6dc5513656db82",
-        "kind": "link",
-        "default": "#operational-overview",
-        "label": "Button/link URL"
-      }
-    ],
-    "url": "/project-controls-professional/operational-route"
-  },
-  {
-    "key": "24a7e37c41511e9c",
-    "page": "operational-pcp",
-    "label": "Six Pathway Credits",
-    "fields": [
-      {
-        "key": "d867099d43f0a55a",
-        "kind": "link",
-        "default": "#credit-apm-risk",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "2aa0b1042cc64275",
-        "kind": "link",
-        "default": "#credit-evm",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "80a2b2f19ec0cea1",
-        "kind": "link",
-        "default": "#credit-pmi-sp",
-        "label": "Button/link URL"
-      }
-    ],
-    "url": "/project-controls-professional/operational-route"
-  },
-  {
-    "key": "6031472ce08aaea5",
-    "page": "operational-pcp",
-    "label": "Take The Next Step",
-    "fields": [
-      {
-        "key": "d27291e2cc2f3f1d",
-        "kind": "link",
-        "default": "mailto:office@kentbusinesscollege.com",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "23701e550ae76b1b",
-        "kind": "link",
-        "default": "https://kentbusinesscollege.com",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "6f06eb120f297f0f",
-        "kind": "link",
-        "default": "mailto:office@kentbusinesscollege.com?subject=Operational%20Pathway%20Enquiry%20-%20Project%20Controls%20Professional%20Level%206",
-        "label": "Button/link URL"
-      }
-    ],
-    "url": "/project-controls-professional/operational-route"
-  },
-  {
-    "key": "e83fd123355148ff",
+    "key": "53c15f1d4d073634",
     "page": "operational-pcp-construction",
-    "label": "Check The Right Access Route For You",
+    "label": "Associate Pathway Callout",
     "fields": [
       {
-        "key": "c92b36daa3db447f",
+        "key": "eaf26f873e8568fb",
         "kind": "text",
-        "default": "Check the right access route for you.",
+        "default": "Earlier in your project-management career?",
+        "label": "Text"
+      },
+      {
+        "key": "2d0c2f76d735cf80",
+        "kind": "text",
+        "default": "Explore the Associate Project Management Pathway.",
         "label": "Heading"
       },
       {
-        "key": "ad984a8ee59e065d",
+        "key": "5d07bf72ca94ac7f",
         "kind": "text",
-        "default": "Use our apprenticeship eligibility checker for an initial indication. Our team then reviews role fit, prior learning, employer support and funding. IPC bursary support can be discussed where an apprenticeship route is unsuitable.",
+        "default": "A focused three-credit route combining PMP development with the AI in Project Controls Certificate. Commercial instalments may be available for up to 24 months; funded and bursary terms are assessed separately.",
         "label": "Text"
       },
       {
-        "key": "b97c536d5b93a24d",
+        "key": "892f71c44dcf19e2",
+        "kind": "text",
+        "default": "3 credits · PMP 2 credits · AI in Project Controls 1 credit · Up to 24 months instalments",
+        "label": "Text"
+      },
+      {
+        "key": "0896c39cf65bbe2a",
         "kind": "link",
-        "default": "/apprenticeship-eligibility-checker",
+        "default": "/associate-project-manager-level-4",
         "label": "Button/link URL"
       },
       {
-        "key": "487b01f9b3ea1454",
+        "key": "e9a596874d7c5512",
         "kind": "text",
-        "default": "Check your eligibility",
+        "default": "Explore the entry pathway",
         "label": "Link text",
-        "linkField": "b97c536d5b93a24d"
-      },
-      {
-        "key": "41c0273876371def",
-        "kind": "link",
-        "default": "/book-a-session",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "ee3139de56ed13b1",
-        "kind": "text",
-        "default": "Discuss your circumstances",
-        "label": "Link text",
-        "linkField": "41c0273876371def"
+        "linkField": "0896c39cf65bbe2a"
       }
     ],
     "url": "/project-controls-professional/construction-route"
@@ -6984,16 +6992,42 @@
     "label": "Choose Your Pathway Check Your Access Route",
     "fields": [
       {
+        "key": "b306c487807f755c",
+        "kind": "text",
+        "default": "Choose your pathway. Check your access route.",
+        "label": "Heading"
+      },
+      {
+        "key": "517130f26feef28c",
+        "kind": "text",
+        "default": "Complete a short assessment to identify the most suitable professional pathway and determine whether a funded route or bursary route may fit your circumstances.",
+        "label": "Text"
+      },
+      {
         "key": "fc46d924bf4c48ad",
         "kind": "link",
         "default": "#eligibility",
         "label": "Button/link URL"
       },
       {
+        "key": "b5b5b67060b9a976",
+        "kind": "text",
+        "default": "Check my eligibility",
+        "label": "Link text",
+        "linkField": "fc46d924bf4c48ad"
+      },
+      {
         "key": "41c0273876371def",
         "kind": "link",
         "default": "/book-a-session",
         "label": "Button/link URL"
+      },
+      {
+        "key": "d34ce7312f3ffddf",
+        "kind": "text",
+        "default": "Request a consultation",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
       }
     ],
     "url": "/project-controls-professional/construction-route"
@@ -7004,27 +7038,27 @@
     "label": "Construction Infrastructure",
     "fields": [
       {
-        "key": "32c4ff9d0881e1ff",
-        "kind": "image",
-        "default": "/images/construction-sector-hero.webp",
-        "label": "Image URL"
-      },
-      {
-        "key": "3bda1d5be6eed6c3",
+        "key": "e2eac10c95212a3f",
         "kind": "text",
-        "default": "Construction & Infrastructure",
+        "default": "Construction and infrastructure",
         "label": "Text"
       },
       {
-        "key": "41d363964a65cf16",
+        "key": "45316dd0c8f2325b",
         "kind": "text",
-        "default": "Build the capability to control complex delivery.",
-        "label": "Heading"
+        "default": "Build the capability to control",
+        "label": "Text"
       },
       {
-        "key": "0d43179dfb17db36",
+        "key": "e98fa6e186ddcb6b",
         "kind": "text",
-        "default": "Develop the project-controls capability your organisation needs across planning, scheduling, cost, risk, governance and decision support. Choose the pathway that matches the responsibility your people carry today—and the level they are preparing to reach next.",
+        "default": "complex delivery.",
+        "label": "Text"
+      },
+      {
+        "key": "dd174a7588faff34",
+        "kind": "text",
+        "default": "Develop project-controls capability across planning, scheduling, cost, risk, governance and decision support. Choose the pathway that matches the responsibility your people carry today and the level they are preparing to reach next.",
         "label": "Text"
       },
       {
@@ -7034,24 +7068,68 @@
         "label": "Button/link URL"
       },
       {
-        "key": "5736a4b2337a6b3b",
+        "key": "487f34f6d5afa7b2",
         "kind": "text",
-        "default": "Discuss your team’s capability",
+        "default": "Discuss your team's capability",
         "label": "Link text",
         "linkField": "41c0273876371def"
       },
       {
-        "key": "c064fcf3f9e3e2cf",
+        "key": "fc46d924bf4c48ad",
         "kind": "link",
-        "default": "#pathways",
+        "default": "#eligibility",
         "label": "Button/link URL"
       },
       {
-        "key": "f999fca3b7f26bcb",
+        "key": "665710bbf89be1a6",
         "kind": "text",
-        "default": "Compare pathways",
+        "default": "Check workforce eligibility",
         "label": "Link text",
-        "linkField": "c064fcf3f9e3e2cf"
+        "linkField": "fc46d924bf4c48ad"
+      }
+    ],
+    "url": "/project-controls-professional/construction-route"
+  },
+  {
+    "key": "a2dadb4649540502",
+    "page": "operational-pcp-construction",
+    "label": "Core Professional Capability",
+    "fields": [
+      {
+        "key": "f1ecd9ba2aa74d74",
+        "kind": "text",
+        "default": "Core professional capability",
+        "label": "Text"
+      },
+      {
+        "key": "2cbc3d62b450e364",
+        "kind": "text",
+        "default": "AI accelerates the work. Human judgement remains accountable.",
+        "label": "Heading"
+      },
+      {
+        "key": "5d55f2d2eac1bb70",
+        "kind": "text",
+        "default": "AI in Project Controls develops responsible use of AI across planning, scheduling, earned value, risk analysis, reporting, assurance and management information without removing professional review, confidentiality or decision accountability.",
+        "label": "Text"
+      },
+      {
+        "key": "460c247f94f4f3fe",
+        "kind": "text",
+        "default": "Partnership model: the specialist certificate is owned and strongly supported by the Institute of Project Controls and delivered through Kent Business College. Final awarding arrangements are confirmed within the learner agreement.",
+        "label": "Text"
+      },
+      {
+        "key": "095202eeb746ce9c",
+        "kind": "text",
+        "default": "AI control workflow",
+        "label": "Text"
+      },
+      {
+        "key": "0926d0d325431c5a",
+        "kind": "text",
+        "default": "Human professional judgement remains in the loop.",
+        "label": "Text"
       }
     ],
     "url": "/project-controls-professional/construction-route"
@@ -7062,24 +7140,35 @@
     "label": "Employer Capability",
     "fields": [
       {
+        "key": "2c9cd4d039a52cc4",
+        "kind": "text",
+        "default": "Employer capability",
+        "label": "Text"
+      },
+      {
+        "key": "143521423aa7adef",
+        "kind": "text",
+        "default": "Move from reactive reporting to decision-led control.",
+        "label": "Heading"
+      },
+      {
+        "key": "c10bb6a8681b01d3",
+        "kind": "text",
+        "default": "Employers can use the pathways to develop a more consistent project-controls operating model across planning, cost, risk, reporting and governance.",
+        "label": "Text"
+      },
+      {
         "key": "41c0273876371def",
         "kind": "link",
         "default": "/book-a-session",
         "label": "Button/link URL"
-      }
-    ],
-    "url": "/project-controls-professional/construction-route"
-  },
-  {
-    "key": "d3467a68c517761f",
-    "page": "operational-pcp-construction",
-    "label": "Explore The Associate Project Management Pathway",
-    "fields": [
+      },
       {
-        "key": "0896c39cf65bbe2a",
-        "kind": "link",
-        "default": "/associate-project-manager-level-4",
-        "label": "Button/link URL"
+        "key": "b0bfd0ad56bdcffa",
+        "kind": "text",
+        "default": "Request a capability conversation",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
       }
     ],
     "url": "/project-controls-professional/construction-route"
@@ -7090,10 +7179,59 @@
     "label": "Funding Bursary Access",
     "fields": [
       {
+        "key": "4fdafd80dcee3d20",
+        "kind": "text",
+        "default": "Funding and bursary access",
+        "label": "Text"
+      },
+      {
+        "key": "83ef3c2c3d92ceaa",
+        "kind": "text",
+        "default": "One professional pathway. Two possible access routes.",
+        "label": "Heading"
+      },
+      {
+        "key": "5468649966a903a6",
+        "kind": "text",
+        "default": "Choose the pathway first. The College then assesses whether the Department for Education Funded Route or the IPC Bursary Route is more suitable for your circumstances.",
+        "label": "Text"
+      },
+      {
+        "key": "2d303b24abe00824",
+        "kind": "text",
+        "default": "Department for Education",
+        "label": "Text"
+      },
+      {
+        "key": "f375e36e843853b9",
+        "kind": "text",
+        "default": "Funded Route",
+        "label": "Heading"
+      },
+      {
+        "key": "45557716cc2301a4",
+        "kind": "text",
+        "default": "For eligible apprenticeship pathways, subject to employer participation, funding availability and a full eligibility assessment.",
+        "label": "Text"
+      },
+      {
+        "key": "831899749d0b11a8",
+        "kind": "text",
+        "default": "Potentially fully funded",
+        "label": "Text"
+      },
+      {
         "key": "fc46d924bf4c48ad",
         "kind": "link",
         "default": "#eligibility",
         "label": "Button/link URL"
+      },
+      {
+        "key": "8ae9b4d9867c1002",
+        "kind": "text",
+        "default": "Check funded eligibility",
+        "label": "Link text",
+        "linkField": "fc46d924bf4c48ad"
       },
       {
         "key": "41c0273876371def",
@@ -7102,16 +7240,421 @@
         "label": "Button/link URL"
       },
       {
+        "key": "bc595f98eba45f4b",
+        "kind": "text",
+        "default": "Speak to an adviser",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
+      },
+      {
+        "key": "992bff0f77a08e59",
+        "kind": "text",
+        "default": "Institute of Project Controls",
+        "label": "Text"
+      },
+      {
+        "key": "cc52f5b987e718e1",
+        "kind": "text",
+        "default": "IPC Bursary Route",
+        "label": "Heading"
+      },
+      {
+        "key": "e17b3df1fdbafbb9",
+        "kind": "text",
+        "default": "For professionals who cannot access the DfE route, IPC bursary support can reduce the cost of selected pathways.",
+        "label": "Text"
+      },
+      {
         "key": "43bbf4a37c0bd8a5",
         "kind": "link",
         "default": "#eligibility",
         "label": "Button/link URL"
       },
       {
+        "key": "980a46491ae00f17",
+        "kind": "text",
+        "default": "Check bursary suitability",
+        "label": "Link text",
+        "linkField": "43bbf4a37c0bd8a5"
+      },
+      {
         "key": "7ddfc5e0202d43bc",
         "kind": "link",
         "default": "/contact",
         "label": "Button/link URL"
+      },
+      {
+        "key": "a1f1b5bdf27483a4",
+        "kind": "text",
+        "default": "Discuss IPC support",
+        "label": "Link text",
+        "linkField": "7ddfc5e0202d43bc"
+      }
+    ],
+    "url": "/project-controls-professional/construction-route"
+  },
+  {
+    "key": "16cefcf040fe46a2",
+    "page": "operational-pcp-construction",
+    "label": "Interactive Pathway Builder",
+    "fields": [
+      {
+        "key": "ea5c0cfa889a183f",
+        "kind": "text",
+        "default": "Interactive pathway builder",
+        "label": "Text"
+      },
+      {
+        "key": "3721931d0345a75e",
+        "kind": "text",
+        "default": "Build the credit mix around your responsibilities.",
+        "label": "Heading"
+      },
+      {
+        "key": "184db7cd5d8f5c2d",
+        "kind": "text",
+        "default": "Select a pathway and choose the specialist options that best match the work you perform. The tool is illustrative; the final sequence is confirmed after role, employer, prior-learning and funding review.",
+        "label": "Text"
+      },
+      {
+        "key": "7cd7788a46275b62",
+        "kind": "text",
+        "default": "Pathway",
+        "label": "Text"
+      },
+      {
+        "key": "d62c143d482dbb49",
+        "kind": "text",
+        "default": "/ ",
+        "label": "Text"
+      },
+      {
+        "key": "6063c559a0eb8acd",
+        "kind": "text",
+        "default": "Credits selected",
+        "label": "Text"
+      },
+      {
+        "key": "c478550b1e5f97b4",
+        "kind": "text",
+        "default": "Mandatory core",
+        "label": "Heading"
+      },
+      {
+        "key": "0ea88d2c1a213db5",
+        "kind": "text",
+        "default": " credit",
+        "label": "Text"
+      },
+      {
+        "key": "e28f3daa136291a5",
+        "kind": "text",
+        "default": "Choose specialist options",
+        "label": "Heading"
+      },
+      {
+        "key": "ab7f2ce33fc99727",
+        "kind": "text",
+        "default": " credit",
+        "label": "Text"
+      }
+    ],
+    "url": "/project-controls-professional/construction-route"
+  },
+  {
+    "key": "34a59ce872897b30",
+    "page": "operational-pcp-construction",
+    "label": "Practical Answers",
+    "fields": [
+      {
+        "key": "3bbb996faf6edc63",
+        "kind": "text",
+        "default": "Practical answers",
+        "label": "Text"
+      },
+      {
+        "key": "0dfe77975011fd7e",
+        "kind": "text",
+        "default": "Questions before you enquire.",
+        "label": "Heading"
+      },
+      {
+        "key": "dd3573871ea60354",
+        "kind": "text",
+        "default": "The final pathway, module mix, access route, fees and professional outcomes are confirmed through a written assessment.",
+        "label": "Text"
+      }
+    ],
+    "url": "/project-controls-professional/construction-route"
+  },
+  {
+    "key": "91a72697c03dfc67",
+    "page": "operational-pcp-construction",
+    "label": "Professional Progression",
+    "fields": [
+      {
+        "key": "fcc43c7270d2502c",
+        "kind": "text",
+        "default": "Professional progression",
+        "label": "Text"
+      },
+      {
+        "key": "afe7e0ff81937aea",
+        "kind": "text",
+        "default": "Prepare for roles that influence delivery, not only report it.",
+        "label": "Heading"
+      },
+      {
+        "key": "77526cea7cffee1c",
+        "kind": "text",
+        "default": "The pathways are aligned to increasing levels of responsibility. Progression is illustrative and is not a guarantee of promotion or professional recognition.",
+        "label": "Text"
+      }
+    ],
+    "url": "/project-controls-professional/construction-route"
+  },
+  {
+    "key": "826a50b3440c582f",
+    "page": "operational-pcp-construction",
+    "label": "Quick Access Route Check",
+    "fields": [
+      {
+        "key": "979c251b5fa84360",
+        "kind": "text",
+        "default": "Quick access-route check",
+        "label": "Text"
+      },
+      {
+        "key": "8775d35abfad0be5",
+        "kind": "text",
+        "default": "Which route may be more suitable for you?",
+        "label": "Heading"
+      },
+      {
+        "key": "935e47e9c199cd78",
+        "kind": "text",
+        "default": "This tool provides initial guidance only. Formal eligibility, funding, prior-learning, employer and bursary decisions are completed by the College and relevant partners.",
+        "label": "Text"
+      },
+      {
+        "key": "fe16294d4de54d61",
+        "kind": "text",
+        "default": "Initial guidance",
+        "label": "Text"
+      },
+      {
+        "key": "a5bbc4a303d9012a",
+        "kind": "text",
+        "default": "Funded Route:",
+        "label": "Text"
+      },
+      {
+        "key": "9cf075c11aef95f6",
+        "kind": "text",
+        "default": " Department for Education, subject to full assessment.",
+        "label": "Text"
+      },
+      {
+        "key": "8c808e1c03dafa36",
+        "kind": "text",
+        "default": "IPC Bursary Route:",
+        "label": "Text"
+      },
+      {
+        "key": "aaabd7a2a3b0b856",
+        "kind": "text",
+        "default": " support where DfE funding is unavailable.",
+        "label": "Text"
+      },
+      {
+        "key": "2f91f910e1aaa713",
+        "kind": "text",
+        "default": "Places:",
+        "label": "Text"
+      },
+      {
+        "key": "f4a9be335b28dfd8",
+        "kind": "text",
+        "default": " limited and reviewed on a first-come, first-served basis.",
+        "label": "Text"
+      },
+      {
+        "key": "41c0273876371def",
+        "kind": "link",
+        "default": "/book-a-session",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "bbf3983aa63d9c21",
+        "kind": "text",
+        "default": "Book an eligibility conversation",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
+      },
+      {
+        "key": "6de8564da2b37908",
+        "kind": "link",
+        "default": "#access",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "fab7f0c1f4d3084d",
+        "kind": "text",
+        "default": "Review both access routes",
+        "label": "Link text",
+        "linkField": "6de8564da2b37908"
+      }
+    ],
+    "url": "/project-controls-professional/construction-route"
+  },
+  {
+    "key": "fb83b59d783f8144",
+    "page": "operational-pcp-construction",
+    "label": "Sector Application",
+    "fields": [
+      {
+        "key": "14d2d6308893bc92",
+        "kind": "text",
+        "default": "Sector application",
+        "label": "Text"
+      },
+      {
+        "key": "82a1f5a3651add0c",
+        "kind": "text",
+        "default": "Apply the same control discipline to different built environments.",
+        "label": "Heading"
+      },
+      {
+        "key": "1e893ad55ea65cae",
+        "kind": "text",
+        "default": "Case studies, templates and evidence can be contextualised to the type of construction and infrastructure decisions the learner or employer manages.",
+        "label": "Text"
+      }
+    ],
+    "url": "/project-controls-professional/construction-route"
+  },
+  {
+    "key": "ae636a617c6a95d3",
+    "page": "operational-pcp-construction",
+    "label": "The Construction Challenge",
+    "fields": [
+      {
+        "key": "d3440fe5cd64946b",
+        "kind": "text",
+        "default": "The construction challenge",
+        "label": "Text"
+      },
+      {
+        "key": "fd44c861761559b3",
+        "kind": "text",
+        "default": "Data exists. Decision confidence often does not.",
+        "label": "Heading"
+      },
+      {
+        "key": "51fb6f906690ce1b",
+        "kind": "text",
+        "default": "Complex construction and infrastructure programmes become harder to control when schedules, cost forecasts, risk, change and governance operate as separate conversations. The result is late intervention, reactive reporting and reduced confidence at the point senior decisions must be made.",
+        "label": "Text"
+      },
+      {
+        "key": "8cbd0e65dda80014",
+        "kind": "text",
+        "default": "Purpose",
+        "label": "Text"
+      },
+      {
+        "key": "a1f06ddfefed575f",
+        "kind": "text",
+        "default": "Make better intervention possible earlier, not simply produce more reports.",
+        "label": "Text"
+      },
+      {
+        "key": "a3f831f8e68abc75",
+        "kind": "text",
+        "default": "Control gap ",
+        "label": "Text"
+      },
+      {
+        "key": "005222572b1d5a2a",
+        "kind": "text",
+        "default": "Integrated project controls",
+        "label": "Text"
+      },
+      {
+        "key": "56a26ef78fae811f",
+        "kind": "text",
+        "default": "Connected evidence creates confident action.",
+        "label": "Text"
+      }
+    ],
+    "url": "/project-controls-professional/construction-route"
+  },
+  {
+    "key": "dc412e475cf0de99",
+    "page": "operational-pcp-construction",
+    "label": "The Learning Experience",
+    "fields": [
+      {
+        "key": "963649f6a590036b",
+        "kind": "text",
+        "default": "Bring live construction challenges",
+        "label": "Text"
+      },
+      {
+        "key": "acfab9eb5b84f14e",
+        "kind": "text",
+        "default": "into the learning process.",
+        "label": "Text"
+      },
+      {
+        "key": "215a47f750e9e427",
+        "kind": "text",
+        "default": "The pathway connects structured professional learning with real workplace evidence, guided reflection and employer-supported improvement.",
+        "label": "Text"
+      }
+    ],
+    "url": "/project-controls-professional/construction-route"
+  },
+  {
+    "key": "2d9bb2b609cc7f56",
+    "page": "operational-pcp-construction",
+    "label": "Workplace Evidence",
+    "fields": [
+      {
+        "key": "1665b108d1198e3b",
+        "kind": "text",
+        "default": "Workplace evidence",
+        "label": "Text"
+      },
+      {
+        "key": "85d954c41dc69c8a",
+        "kind": "text",
+        "default": "Create outputs that strengthen real delivery control.",
+        "label": "Heading"
+      },
+      {
+        "key": "ede9b4ba3c9b753c",
+        "kind": "text",
+        "default": "Professionals should leave with credible artefacts, clearer judgement and evidence of how they improved planning, governance or decision support in their working context.",
+        "label": "Text"
+      },
+      {
+        "key": "4bfb0dce04732d60",
+        "kind": "text",
+        "default": "Evidence pack",
+        "label": "Text"
+      },
+      {
+        "key": "c681cbc9b9130754",
+        "kind": "text",
+        "default": "6 outputs",
+        "label": "Text"
+      },
+      {
+        "key": "62c702cf5eb22fbf",
+        "kind": "text",
+        "default": "Adapted to role, employer context and confidentiality requirements.",
+        "label": "Text"
       }
     ],
     "url": "/project-controls-professional/construction-route"
@@ -7202,10 +7745,47 @@
     "label": "Employer Capability",
     "fields": [
       {
+        "key": "2c9cd4d039a52cc4",
+        "kind": "text",
+        "default": "Employer capability",
+        "label": "Text"
+      },
+      {
+        "key": "830e16be61641043",
+        "kind": "text",
+        "default": "Move energy teams from reactive reporting to integrated assurance.",
+        "label": "Heading"
+      },
+      {
+        "key": "7af49f211f596812",
+        "kind": "text",
+        "default": "Employers can use the pathway mix to build a common operating model across planning, cost, risk, regulatory assurance, reporting and operational readiness.",
+        "label": "Text"
+      },
+      {
+        "key": "6b25f2025f159231",
+        "kind": "text",
+        "default": "Capability conversation",
+        "label": "Text"
+      },
+      {
+        "key": "578852d017d8d4b9",
+        "kind": "text",
+        "default": "Review your current controls maturity, priority roles and the best-fit route for capital projects, programmes or PMO teams.",
+        "label": "Text"
+      },
+      {
         "key": "41c0273876371def",
         "kind": "link",
         "default": "/book-a-session",
         "label": "Button/link URL"
+      },
+      {
+        "key": "b0bfd0ad56bdcffa",
+        "kind": "text",
+        "default": "Request a capability conversation",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
       }
     ],
     "url": "/project-controls-professional/energy-oil-gas-utilities-route"
@@ -7215,12 +7795,6 @@
     "page": "operational-pcp-energy",
     "label": "Energy Utilities",
     "fields": [
-      {
-        "key": "f6a5da559f1d37df",
-        "kind": "image",
-        "default": "/images/energy-sector-hero.jpg",
-        "label": "Image URL"
-      },
       {
         "key": "fea718dfdce1f2b5",
         "kind": "text",
@@ -7234,9 +7808,9 @@
         "label": "Heading"
       },
       {
-        "key": "914cfa1d0bdb668d",
+        "key": "2c5939022c4ad531",
         "kind": "text",
-        "default": "Develop the project-controls capability your organisation needs across power generation, renewables, electricity networks, utilities, energy transition and major capital programmes. Choose the pathway that matches the responsibility your people carry today—and the level they are preparing to reach next.",
+        "default": "Develop the project-controls capability your organisation needs across power generation, renewables, electricity networks, utilities, energy transition and major capital programmes. Choose the pathway that matches the responsibility your people carry today and the level they are preparing to reach next.",
         "label": "Text"
       },
       {
@@ -7246,24 +7820,24 @@
         "label": "Button/link URL"
       },
       {
-        "key": "5736a4b2337a6b3b",
+        "key": "487f34f6d5afa7b2",
         "kind": "text",
-        "default": "Discuss your team’s capability",
+        "default": "Discuss your team's capability",
         "label": "Link text",
         "linkField": "41c0273876371def"
       },
       {
-        "key": "c064fcf3f9e3e2cf",
+        "key": "fc46d924bf4c48ad",
         "kind": "link",
-        "default": "#pathways",
+        "default": "#eligibility",
         "label": "Button/link URL"
       },
       {
-        "key": "f999fca3b7f26bcb",
+        "key": "665710bbf89be1a6",
         "kind": "text",
-        "default": "Compare pathways",
+        "default": "Check workforce eligibility",
         "label": "Link text",
-        "linkField": "c064fcf3f9e3e2cf"
+        "linkField": "fc46d924bf4c48ad"
       }
     ],
     "url": "/project-controls-professional/energy-oil-gas-utilities-route"
@@ -7274,16 +7848,108 @@
     "label": "Funding Bursary Access",
     "fields": [
       {
+        "key": "a92224ae68c71098",
+        "kind": "text",
+        "default": "Funding & bursary access",
+        "label": "Text"
+      },
+      {
+        "key": "5505c5e46ab0d295",
+        "kind": "text",
+        "default": "One professional pathway. Two access routes.",
+        "label": "Heading"
+      },
+      {
+        "key": "af9a8621040edda7",
+        "kind": "text",
+        "default": "Choose the pathway first. KBC then assesses whether the Department for Education Funded Route or the IPC Bursary Route is more suitable for your circumstances.",
+        "label": "Text"
+      },
+      {
+        "key": "217d04ced8f998c7",
+        "kind": "text",
+        "default": "Department for Education (DfE)",
+        "label": "Text"
+      },
+      {
+        "key": "f375e36e843853b9",
+        "kind": "text",
+        "default": "Funded Route",
+        "label": "Heading"
+      },
+      {
+        "key": "a832bc2aa800729a",
+        "kind": "text",
+        "default": "A UK government-funded route for eligible six-credit professional pathways, subject to employer participation, funding availability and a full eligibility assessment.",
+        "label": "Text"
+      },
+      {
+        "key": "831899749d0b11a8",
+        "kind": "text",
+        "default": "Potentially fully funded",
+        "label": "Heading"
+      },
+      {
+        "key": "6d9bab59ca7bfd5e",
+        "kind": "text",
+        "default": "Limited funded places are reviewed on a first-come, first-served basis. Funding is never guaranteed until confirmed in writing.",
+        "label": "Text"
+      },
+      {
         "key": "fc46d924bf4c48ad",
         "kind": "link",
         "default": "#eligibility",
         "label": "Button/link URL"
       },
       {
+        "key": "f335ec41a6e48e98",
+        "kind": "text",
+        "default": "Check eligibility",
+        "label": "Link text",
+        "linkField": "fc46d924bf4c48ad"
+      },
+      {
         "key": "41c0273876371def",
         "kind": "link",
         "default": "/book-a-session",
         "label": "Button/link URL"
+      },
+      {
+        "key": "bc595f98eba45f4b",
+        "kind": "text",
+        "default": "Speak to an adviser",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
+      },
+      {
+        "key": "992bff0f77a08e59",
+        "kind": "text",
+        "default": "Institute of Project Controls",
+        "label": "Text"
+      },
+      {
+        "key": "cc52f5b987e718e1",
+        "kind": "text",
+        "default": "IPC Bursary Route",
+        "label": "Heading"
+      },
+      {
+        "key": "b6ed999769d5f735",
+        "kind": "text",
+        "default": "For professionals who cannot access the DfE route, IPC bursary support can reduce the cost of selected pathways delivered through Kent Business College.",
+        "label": "Text"
+      },
+      {
+        "key": "282c4ea312c9ef4b",
+        "kind": "text",
+        "default": "Bursary support + flexible instalments",
+        "label": "Heading"
+      },
+      {
+        "key": "5fd9e10e8f8cd9d9",
+        "kind": "text",
+        "default": "IPC bursary places are limited and allocated on a first-come, first-served basis, subject to pathway suitability, approval and availability. PMO Certified terms are confirmed separately.",
+        "label": "Text"
       },
       {
         "key": "43bbf4a37c0bd8a5",
@@ -7292,59 +7958,211 @@
         "label": "Button/link URL"
       },
       {
+        "key": "ade537186f68acb3",
+        "kind": "text",
+        "default": "Check bursary",
+        "label": "Link text",
+        "linkField": "43bbf4a37c0bd8a5"
+      },
+      {
         "key": "7ddfc5e0202d43bc",
         "kind": "link",
         "default": "/contact",
         "label": "Button/link URL"
+      },
+      {
+        "key": "b4040972b8743e97",
+        "kind": "text",
+        "default": "IPC support",
+        "label": "Link text",
+        "linkField": "7ddfc5e0202d43bc"
       }
     ],
     "url": "/project-controls-professional/energy-oil-gas-utilities-route"
   },
   {
-    "key": "d421c3a8c4311d51",
-    "page": "operational-pcp-engineering",
-    "label": "Check The Right Access Route For You",
+    "key": "35d18c861a4ec534",
+    "page": "operational-pcp-energy",
+    "label": "One Foundation",
     "fields": [
       {
-        "key": "c92b36daa3db447f",
+        "key": "89cfa1cb6b4bce4a",
         "kind": "text",
-        "default": "Check the right access route for you.",
-        "label": "Heading"
-      },
-      {
-        "key": "ad984a8ee59e065d",
-        "kind": "text",
-        "default": "Use our apprenticeship eligibility checker for an initial indication. Our team then reviews role fit, prior learning, employer support and funding. IPC bursary support can be discussed where an apprenticeship route is unsuitable.",
+        "default": "Designed for energy and utilities",
         "label": "Text"
       },
       {
-        "key": "b97c536d5b93a24d",
-        "kind": "link",
-        "default": "/apprenticeship-eligibility-checker",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "487b01f9b3ea1454",
+        "key": "ac629e877e831c3b",
         "kind": "text",
-        "default": "Check your eligibility",
-        "label": "Link text",
-        "linkField": "b97c536d5b93a24d"
+        "default": "One professional foundation across the energy lifecycle.",
+        "label": "Heading"
       },
       {
-        "key": "41c0273876371def",
-        "kind": "link",
-        "default": "/book-a-session",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "ee3139de56ed13b1",
+        "key": "15b9eaaec105495f",
         "kind": "text",
-        "default": "Discuss your circumstances",
-        "label": "Link text",
-        "linkField": "41c0273876371def"
+        "default": "A common project-controls language for capital delivery, operational readiness, risk, cost and evidence-led decisions.",
+        "label": "Text"
       }
     ],
-    "url": "/project-controls-professional/engineering-manufacturing-aerospace-route"
+    "url": "/project-controls-professional/energy-oil-gas-utilities-route"
+  },
+  {
+    "key": "8cdf58c2249148ba",
+    "page": "operational-pcp-energy",
+    "label": "Professional Progression",
+    "fields": [
+      {
+        "key": "fcc43c7270d2502c",
+        "kind": "text",
+        "default": "Professional progression",
+        "label": "Text"
+      },
+      {
+        "key": "015eece5cc5d1d38",
+        "kind": "text",
+        "default": "Grow from delivery control to energy investment confidence.",
+        "label": "Heading"
+      },
+      {
+        "key": "4eb1450974eaabe6",
+        "kind": "text",
+        "default": "The route supports professionals as responsibility grows from reliable project controls practice into programme, portfolio and PMO influence.",
+        "label": "Text"
+      },
+      {
+        "key": "8f7432b1ba2fa561",
+        "kind": "text",
+        "default": "Progression is illustrative. Promotion, external recognition and professional status remain subject to role, evidence, employer context and awarding-body requirements.",
+        "label": "Text"
+      }
+    ],
+    "url": "/project-controls-professional/energy-oil-gas-utilities-route"
+  },
+  {
+    "key": "ae27bdb4a698031d",
+    "page": "operational-pcp-energy",
+    "label": "The Energy Delivery Challenge",
+    "fields": [
+      {
+        "key": "b0273b4e59681178",
+        "kind": "text",
+        "default": "The energy delivery challenge",
+        "label": "Text"
+      },
+      {
+        "key": "5abd5907398828ad",
+        "kind": "text",
+        "default": "Energy programmes carry connected risks. Reporting often does not.",
+        "label": "Heading"
+      },
+      {
+        "key": "869883172d1af2df",
+        "kind": "text",
+        "default": "Energy and utilities programmes become harder to control when technical scope, regulatory gates, outage windows, contractor interfaces, cost forecasts, risk, change and operational readiness are managed as separate conversations.",
+        "label": "Text"
+      },
+      {
+        "key": "b6ebd6e9b1298477",
+        "kind": "text",
+        "default": "The purpose of project controls is not to produce more dashboards. It is to make safer, earlier and better-informed intervention possible.",
+        "label": "Text"
+      },
+      {
+        "key": "005222572b1d5a2a",
+        "kind": "text",
+        "default": "Integrated project controls",
+        "label": "Text"
+      },
+      {
+        "key": "bfe7a512915b3938",
+        "kind": "text",
+        "default": "Connect evidence before decisions become recovery work.",
+        "label": "Heading"
+      },
+      {
+        "key": "bd330dc8e4ea7cb2",
+        "kind": "text",
+        "default": "A joined-up control model links schedule, cost, risk, change and governance into one delivery view.",
+        "label": "Text"
+      }
+    ],
+    "url": "/project-controls-professional/energy-oil-gas-utilities-route"
+  },
+  {
+    "key": "01926d89af827828",
+    "page": "operational-pcp-energy",
+    "label": "The Learning Experience",
+    "fields": [
+      {
+        "key": "dd2d047438111b01",
+        "kind": "text",
+        "default": "Applied energy-sector learning",
+        "label": "Text"
+      },
+      {
+        "key": "c00f565b5a3db5c4",
+        "kind": "text",
+        "default": "From live learning to",
+        "label": "Heading"
+      },
+      {
+        "key": "a05b137f189abfc4",
+        "kind": "text",
+        "default": "energy programme decisions.",
+        "label": "Heading"
+      },
+      {
+        "key": "fd57a6739361fa70",
+        "kind": "text",
+        "default": "Bring real energy delivery challenges into the learning process through structured professional learning, workplace evidence, guided reflection and employer-supported improvement.",
+        "label": "Text"
+      }
+    ],
+    "url": "/project-controls-professional/energy-oil-gas-utilities-route"
+  },
+  {
+    "key": "3dce942604c48c48",
+    "page": "operational-pcp-energy",
+    "label": "Workplace Evidence",
+    "fields": [
+      {
+        "key": "1665b108d1198e3b",
+        "kind": "text",
+        "default": "Workplace evidence",
+        "label": "Text"
+      },
+      {
+        "key": "52c1dbaf60c9c049",
+        "kind": "text",
+        "default": "Create energy project-controls evidence that strengthens delivery.",
+        "label": "Heading"
+      },
+      {
+        "key": "76648ce23f06bef1",
+        "kind": "text",
+        "default": "Professionals should leave with credible energy-sector artefacts, clearer judgement and evidence of how they improved planning, forecast confidence, governance, operational readiness or decision support.",
+        "label": "Text"
+      },
+      {
+        "key": "4bfb0dce04732d60",
+        "kind": "text",
+        "default": "Evidence pack",
+        "label": "Text"
+      },
+      {
+        "key": "c681cbc9b9130754",
+        "kind": "text",
+        "default": "6 outputs",
+        "label": "Text"
+      },
+      {
+        "key": "62c702cf5eb22fbf",
+        "kind": "text",
+        "default": "Adapted to role, employer context and confidentiality requirements.",
+        "label": "Text"
+      }
+    ],
+    "url": "/project-controls-professional/energy-oil-gas-utilities-route"
   },
   {
     "key": "72e160a18d348fb8",
@@ -7352,21 +8170,15 @@
     "label": "Engineering Advanced Manufacturing",
     "fields": [
       {
-        "key": "84e784dd4c449176",
-        "kind": "image",
-        "default": "/images/engineering-sector-hero.webp",
-        "label": "Image URL"
-      },
-      {
         "key": "228bd21191fbcd11",
         "kind": "text",
         "default": "Engineering & Advanced Manufacturing",
         "label": "Text"
       },
       {
-        "key": "87d7c171f78e0338",
+        "key": "703a4acfc37e5478",
         "kind": "text",
-        "default": "Control complex engineering programmes with precision, integration and confidence.",
+        "default": "Build integrated project controls skills for complex engineering programmes.",
         "label": "Heading"
       },
       {
@@ -7382,11 +8194,322 @@
         "label": "Button/link URL"
       },
       {
-        "key": "5736a4b2337a6b3b",
+        "key": "487f34f6d5afa7b2",
         "kind": "text",
-        "default": "Discuss your team’s capability",
+        "default": "Discuss your team's capability",
         "label": "Link text",
         "linkField": "41c0273876371def"
+      },
+      {
+        "key": "fc46d924bf4c48ad",
+        "kind": "link",
+        "default": "#eligibility",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "665710bbf89be1a6",
+        "kind": "text",
+        "default": "Check workforce eligibility",
+        "label": "Link text",
+        "linkField": "fc46d924bf4c48ad"
+      }
+    ],
+    "url": "/project-controls-professional/engineering-manufacturing-aerospace-route"
+  },
+  {
+    "key": "1b705182abd5d688",
+    "page": "operational-pcp-engineering",
+    "label": "Engineering Project Controls Evidence",
+    "fields": [
+      {
+        "key": "bfbe5e7547280242",
+        "kind": "text",
+        "default": "Engineering project-controls evidence",
+        "label": "Text"
+      },
+      {
+        "key": "c9499a2ab9960e6d",
+        "kind": "text",
+        "default": "Create decision-ready evidence, not disconnected documents.",
+        "label": "Heading"
+      },
+      {
+        "key": "b26926fb6951e927",
+        "kind": "text",
+        "default": "Build a compact evidence pack that links technical progress, commercial confidence and programme readiness.",
+        "label": "Text"
+      },
+      {
+        "key": "4bfb0dce04732d60",
+        "kind": "text",
+        "default": "Evidence pack",
+        "label": "Text"
+      },
+      {
+        "key": "05706c9a26ed614a",
+        "kind": "text",
+        "default": "Six connected outputs.",
+        "label": "Text"
+      },
+      {
+        "key": "3118a12926eb3aaf",
+        "kind": "text",
+        "default": "Each output supports a real decision: approve, intervene, re-plan or release.",
+        "label": "Text"
+      }
+    ],
+    "url": "/project-controls-professional/engineering-manufacturing-aerospace-route"
+  },
+  {
+    "key": "d8a158a1b65ae52b",
+    "page": "operational-pcp-engineering",
+    "label": "Funding And Bursary Access",
+    "fields": [
+      {
+        "key": "4fdafd80dcee3d20",
+        "kind": "text",
+        "default": "Funding and bursary access",
+        "label": "Text"
+      },
+      {
+        "key": "5505c5e46ab0d295",
+        "kind": "text",
+        "default": "One professional pathway. Two access routes.",
+        "label": "Heading"
+      },
+      {
+        "key": "2e708ca1b4daf856",
+        "kind": "text",
+        "default": "Choose the professional pathway that reflects your responsibilities. The College then assesses whether the DfE Funded Route or IPC Bursary Route is more appropriate.",
+        "label": "Text"
+      },
+      {
+        "key": "2d303b24abe00824",
+        "kind": "text",
+        "default": "Department for Education",
+        "label": "Text"
+      },
+      {
+        "key": "f375e36e843853b9",
+        "kind": "text",
+        "default": "Funded Route",
+        "label": "Heading"
+      },
+      {
+        "key": "3637a815d425a3e5",
+        "kind": "text",
+        "default": "Eligible employees may be able to access an apprenticeship pathway on a fully funded basis, subject to current rules and written confirmation.",
+        "label": "Text"
+      },
+      {
+        "key": "fc46d924bf4c48ad",
+        "kind": "link",
+        "default": "#eligibility",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "f335ec41a6e48e98",
+        "kind": "text",
+        "default": "Check eligibility",
+        "label": "Link text",
+        "linkField": "fc46d924bf4c48ad"
+      },
+      {
+        "key": "41c0273876371def",
+        "kind": "link",
+        "default": "/book-a-session",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "bc595f98eba45f4b",
+        "kind": "text",
+        "default": "Speak to an adviser",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
+      },
+      {
+        "key": "992bff0f77a08e59",
+        "kind": "text",
+        "default": "Institute of Project Controls",
+        "label": "Text"
+      },
+      {
+        "key": "cc52f5b987e718e1",
+        "kind": "text",
+        "default": "IPC Bursary Route",
+        "label": "Heading"
+      },
+      {
+        "key": "33a84cec8ade4fe9",
+        "kind": "text",
+        "default": "For suitable applicants who cannot access the Funded Route, IPC bursary support can reduce the cost of selected pathways.",
+        "label": "Text"
+      },
+      {
+        "key": "dba410a65fc4a079",
+        "kind": "text",
+        "default": "Bursary places are limited and allocated on a first-come, first-served basis, subject to approval, suitability and availability.",
+        "label": "Text"
+      },
+      {
+        "key": "43bbf4a37c0bd8a5",
+        "kind": "link",
+        "default": "#eligibility",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "ade537186f68acb3",
+        "kind": "text",
+        "default": "Check bursary",
+        "label": "Link text",
+        "linkField": "43bbf4a37c0bd8a5"
+      },
+      {
+        "key": "7ddfc5e0202d43bc",
+        "kind": "link",
+        "default": "/contact",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "b4040972b8743e97",
+        "kind": "text",
+        "default": "IPC support",
+        "label": "Link text",
+        "linkField": "7ddfc5e0202d43bc"
+      }
+    ],
+    "url": "/project-controls-professional/engineering-manufacturing-aerospace-route"
+  },
+  {
+    "key": "9bdb51708377a011",
+    "page": "operational-pcp-engineering",
+    "label": "One Professional Foundation Across Complex Engineering Environments",
+    "fields": [
+      {
+        "key": "14d2d6308893bc92",
+        "kind": "text",
+        "default": "Sector application",
+        "label": "Text"
+      },
+      {
+        "key": "b17473405dc1e0b2",
+        "kind": "text",
+        "default": "One foundation for complex engineering environments.",
+        "label": "Heading"
+      },
+      {
+        "key": "8d43b3d5bdb89d12",
+        "kind": "text",
+        "default": "The same control discipline adapts across design, production, suppliers, testing and readiness decisions.",
+        "label": "Text"
+      }
+    ],
+    "url": "/project-controls-professional/engineering-manufacturing-aerospace-route"
+  },
+  {
+    "key": "ecd3b373097cb457",
+    "page": "operational-pcp-engineering",
+    "label": "Project Controls That Protect Engineering Value",
+    "fields": [
+      {
+        "key": "d0c74e4f64dbf010",
+        "kind": "text",
+        "default": "Project controls that protect engineering value",
+        "label": "Text"
+      },
+      {
+        "key": "f8f46e869b9ea80f",
+        "kind": "text",
+        "default": "Deliver engineered systems with precision, predictability and controlled change.",
+        "label": "Heading"
+      },
+      {
+        "key": "c1dba4967f3f1f56",
+        "kind": "text",
+        "default": "Engineering programmes operate through tightly connected requirements, design maturity, suppliers, tooling, quality, testing, production readiness and operational acceptance. Integrated controls expose pressure earlier, so teams can make stronger decisions before cost and delay become embedded.",
+        "label": "Text"
+      },
+      {
+        "key": "618221e7d78a96d5",
+        "kind": "text",
+        "default": "Engineering controls outcome",
+        "label": "Text"
+      },
+      {
+        "key": "9b2eacc475feac83",
+        "kind": "text",
+        "default": "Controlled decision point",
+        "label": "Text"
+      },
+      {
+        "key": "5fa7bdedba21ff05",
+        "kind": "text",
+        "default": "Strategic value",
+        "label": "Text"
+      },
+      {
+        "key": "93f728419a6f635e",
+        "kind": "text",
+        "default": "Stable baselines. Better trade-offs. Production-ready outcomes.",
+        "label": "Heading"
+      },
+      {
+        "key": "559d0fc816698ecc",
+        "kind": "text",
+        "default": "Connect engineering scope, planning, cost, risk, quality, change and governance in one coherent control environment across products, projects and portfolios.",
+        "label": "Text"
+      },
+      {
+        "key": "c064fcf3f9e3e2cf",
+        "kind": "link",
+        "default": "#pathways",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "ad393c7b37fb6a18",
+        "kind": "text",
+        "default": "Explore pathways",
+        "label": "Link text",
+        "linkField": "c064fcf3f9e3e2cf"
+      }
+    ],
+    "url": "/project-controls-professional/engineering-manufacturing-aerospace-route"
+  },
+  {
+    "key": "21b226bdcb88266a",
+    "page": "operational-pcp-engineering",
+    "label": "Ready To Take Control",
+    "fields": [
+      {
+        "key": "5c91f2b7e52ed0da",
+        "kind": "text",
+        "default": "Ready to take control",
+        "label": "Text"
+      },
+      {
+        "key": "cd084ef959092e26",
+        "kind": "text",
+        "default": "Build the capability to deliver complex engineering programmes with confidence.",
+        "label": "Heading"
+      },
+      {
+        "key": "d3ffc044be32f73e",
+        "kind": "text",
+        "default": "Compare the pathways, complete an initial eligibility check or book a conversation about your organisation's engineering project-controls needs.",
+        "label": "Text"
+      },
+      {
+        "key": "fc46d924bf4c48ad",
+        "kind": "link",
+        "default": "#eligibility",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "f335ec41a6e48e98",
+        "kind": "text",
+        "default": "Check eligibility",
+        "label": "Link text",
+        "linkField": "fc46d924bf4c48ad"
       },
       {
         "key": "c064fcf3f9e3e2cf",
@@ -7405,288 +8528,28 @@
     "url": "/project-controls-professional/engineering-manufacturing-aerospace-route"
   },
   {
-    "key": "d8a158a1b65ae52b",
-    "page": "operational-pcp-engineering",
-    "label": "Funding And Bursary Access",
-    "fields": [
-      {
-        "key": "fc46d924bf4c48ad",
-        "kind": "link",
-        "default": "#eligibility",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "43bbf4a37c0bd8a5",
-        "kind": "link",
-        "default": "#eligibility",
-        "label": "Button/link URL"
-      }
-    ],
-    "url": "/project-controls-professional/engineering-manufacturing-aerospace-route"
-  },
-  {
-    "key": "9bdb51708377a011",
-    "page": "operational-pcp-engineering",
-    "label": "One Professional Foundation Across Complex Engineering Environments",
-    "fields": [
-      {
-        "key": "937d0b845b14051f",
-        "kind": "text",
-        "default": "One professional foundation across complex engineering environments.",
-        "label": "Heading"
-      },
-      {
-        "key": "2e3069024dc6b48c",
-        "kind": "text",
-        "default": "Advanced manufacturing and Industry 4.0",
-        "label": "Heading"
-      },
-      {
-        "key": "eaf39baccd817bbc",
-        "kind": "text",
-        "default": "Production systems, automation, digital operations and scale-up.",
-        "label": "Text"
-      },
-      {
-        "key": "99d42a0bc20d85e6",
-        "kind": "text",
-        "default": "Integrate product introduction, industrialisation, equipment readiness, supply chains, production planning, quality and performance improvement across advanced-manufacturing programmes.",
-        "label": "Text"
-      },
-      {
-        "key": "4bb65bc17ab753cb",
-        "kind": "text",
-        "default": "Product and production baselines",
-        "label": "Text"
-      },
-      {
-        "key": "546ae046f3569f07",
-        "kind": "text",
-        "default": "Tooling and equipment readiness",
-        "label": "Text"
-      },
-      {
-        "key": "9f21f7860a80c478",
-        "kind": "text",
-        "default": "Supplier and interface control",
-        "label": "Text"
-      },
-      {
-        "key": "1a26f983b3caca82",
-        "kind": "text",
-        "default": "Quality, change and launch governance",
-        "label": "Text"
-      },
-      {
-        "key": "c4b32e7052be106d",
-        "kind": "text",
-        "default": "Aerospace and defence engineering",
-        "label": "Heading"
-      },
-      {
-        "key": "dc342ff509055cbd",
-        "kind": "text",
-        "default": "High-integrity products, systems, assembly and assurance.",
-        "label": "Text"
-      },
-      {
-        "key": "10dad19ddc0529eb",
-        "kind": "text",
-        "default": "Control complex design, certification, supply-chain, manufacturing, integration, test and delivery activities where traceability and assurance are critical.",
-        "label": "Text"
-      },
-      {
-        "key": "55e286967025f412",
-        "kind": "text",
-        "default": "Requirements and configuration control",
-        "label": "Text"
-      },
-      {
-        "key": "c176b094de265f33",
-        "kind": "text",
-        "default": "Integrated design and production schedules",
-        "label": "Text"
-      },
-      {
-        "key": "b5fe8cf774055d14",
-        "kind": "text",
-        "default": "Supplier and interface assurance",
-        "label": "Text"
-      },
-      {
-        "key": "5013c2d98c25059e",
-        "kind": "text",
-        "default": "Verification, validation and readiness",
-        "label": "Text"
-      },
-      {
-        "key": "8f3da20b8d36f4a7",
-        "kind": "text",
-        "default": "Automotive and future mobility",
-        "label": "Heading"
-      },
-      {
-        "key": "fe11ff1e3954e43d",
-        "kind": "text",
-        "default": "Vehicle platforms, electrification, software and manufacturing launch.",
-        "label": "Text"
-      },
-      {
-        "key": "69979bd235c51a24",
-        "kind": "text",
-        "default": "Connect product development, battery and powertrain engineering, software, tooling, supplier readiness, validation and start-of-production milestones.",
-        "label": "Text"
-      },
-      {
-        "key": "d90e67dcafd3eed9",
-        "kind": "text",
-        "default": "Platform and programme baselines",
-        "label": "Text"
-      },
-      {
-        "key": "288ffb421801f35d",
-        "kind": "text",
-        "default": "Prototype and validation schedules",
-        "label": "Text"
-      },
-      {
-        "key": "2741e806b0d6ab75",
-        "kind": "text",
-        "default": "Supplier and launch readiness",
-        "label": "Text"
-      },
-      {
-        "key": "82232a9230fc57c9",
-        "kind": "text",
-        "default": "Cost, quality and change control",
-        "label": "Text"
-      },
-      {
-        "key": "0d3721715b795a16",
-        "kind": "text",
-        "default": "Rail and transport engineering",
-        "label": "Heading"
-      },
-      {
-        "key": "784e464d2c3593e6",
-        "kind": "text",
-        "default": "Rolling stock, signalling, systems, infrastructure and fleet programmes.",
-        "label": "Text"
-      },
-      {
-        "key": "b9c40020e95e26a1",
-        "kind": "text",
-        "default": "Integrate technical interfaces, design assurance, procurement, testing, commissioning, fleet introduction and operational-readiness decisions across complex transport programmes.",
-        "label": "Text"
-      },
-      {
-        "key": "b03eb5946b5b8b80",
-        "kind": "text",
-        "default": "Systems and interface control",
-        "label": "Text"
-      },
-      {
-        "key": "24b4ed191a4523cc",
-        "kind": "text",
-        "default": "Testing and commissioning plans",
-        "label": "Text"
-      },
-      {
-        "key": "0cbf929304f529e9",
-        "kind": "text",
-        "default": "Asset and fleet readiness",
-        "label": "Text"
-      },
-      {
-        "key": "e3c434be138f0ef6",
-        "kind": "text",
-        "default": "Safety, risk and assurance",
-        "label": "Text"
-      },
-      {
-        "key": "48f1a54ae9ab9918",
-        "kind": "text",
-        "default": "Industrial systems and capital equipment",
-        "label": "Heading"
-      },
-      {
-        "key": "05bff05cfacc0af7",
-        "kind": "text",
-        "default": "Automation, machinery, process equipment and engineered assets.",
-        "label": "Text"
-      },
-      {
-        "key": "9f1b466d71cfe05a",
-        "kind": "text",
-        "default": "Strengthen controls across bespoke engineering, procurement, fabrication, assembly, factory acceptance, installation, commissioning and handover.",
-        "label": "Text"
-      },
-      {
-        "key": "181cce9710abe0b9",
-        "kind": "text",
-        "default": "Engineering and procurement integration",
-        "label": "Text"
-      },
-      {
-        "key": "5aa742156d2b2646",
-        "kind": "text",
-        "default": "Fabrication and assembly control",
-        "label": "Text"
-      },
-      {
-        "key": "038a16495345014b",
-        "kind": "text",
-        "default": "FAT, SAT and commissioning gates",
-        "label": "Text"
-      },
-      {
-        "key": "40f215fc65d9e5f5",
-        "kind": "text",
-        "default": "Cost, change and final-outturn control",
-        "label": "Text"
-      }
-    ],
-    "url": "/project-controls-professional/engineering-manufacturing-aerospace-route"
-  },
-  {
-    "key": "ecd3b373097cb457",
-    "page": "operational-pcp-engineering",
-    "label": "Project Controls That Protect Engineering Value",
-    "fields": [
-      {
-        "key": "c064fcf3f9e3e2cf",
-        "kind": "link",
-        "default": "#pathways",
-        "label": "Button/link URL"
-      }
-    ],
-    "url": "/project-controls-professional/engineering-manufacturing-aerospace-route"
-  },
-  {
-    "key": "21b226bdcb88266a",
-    "page": "operational-pcp-engineering",
-    "label": "Ready To Take Control",
-    "fields": [
-      {
-        "key": "fc46d924bf4c48ad",
-        "kind": "link",
-        "default": "#eligibility",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "c064fcf3f9e3e2cf",
-        "kind": "link",
-        "default": "#pathways",
-        "label": "Button/link URL"
-      }
-    ],
-    "url": "/project-controls-professional/engineering-manufacturing-aerospace-route"
-  },
-  {
     "key": "f201338a6c0ec3ae",
     "page": "operational-pcp-public-sector",
     "label": "Apprenticeship Funding",
     "fields": [
+      {
+        "key": "d69e21a906dcf47f",
+        "kind": "text",
+        "default": "Apprenticeship funding",
+        "label": "Text"
+      },
+      {
+        "key": "7d088c3aad14d594",
+        "kind": "text",
+        "default": "Use the right funding route for the right employee.",
+        "label": "Heading"
+      },
+      {
+        "key": "96690f8d29f78f59",
+        "kind": "text",
+        "default": "The College reviews the employer, learner, role, programme and prior learning before confirming funding. Fully funded is not automatic.",
+        "label": "Text"
+      },
       {
         "key": "b97c536d5b93a24d",
         "kind": "link",
@@ -7722,17 +8585,61 @@
     "label": "Career Development",
     "fields": [
       {
+        "key": "49915f83b74242ad",
+        "kind": "text",
+        "default": "Career development",
+        "label": "Text"
+      },
+      {
+        "key": "d176318c35822a22",
+        "kind": "text",
+        "default": "Plan the next professional step with the right route and evidence.",
+        "label": "Heading"
+      },
+      {
+        "key": "037327fa2875640f",
+        "kind": "text",
+        "default": "Discuss role progression, planning, cost, risk, reporting, public-sector governance and preparation for senior responsibility.",
+        "label": "Text"
+      },
+      {
         "key": "7ddfc5e0202d43bc",
         "kind": "link",
         "default": "/contact",
         "label": "Button/link URL"
       },
       {
-        "key": "489ac9569a3788e5",
+        "key": "d03b4a1d5ab01b9c",
         "kind": "text",
-        "default": "Discuss your career development",
+        "default": "Discuss career development",
         "label": "Link text",
         "linkField": "7ddfc5e0202d43bc"
+      }
+    ],
+    "url": "/project-controls-professional/public-sector-councils-route"
+  },
+  {
+    "key": "1c7fef1914e0e9db",
+    "page": "operational-pcp-public-sector",
+    "label": "Career Progression",
+    "fields": [
+      {
+        "key": "7f1614ca6bb229ef",
+        "kind": "text",
+        "default": "Career progression",
+        "label": "Text"
+      },
+      {
+        "key": "cf1762eb04d4e4ff",
+        "kind": "text",
+        "default": "Build a visible project-delivery capability pipeline.",
+        "label": "Heading"
+      },
+      {
+        "key": "70aa1237ae79edbc",
+        "kind": "text",
+        "default": "Develop capability from project support through specialist controls and senior programme leadership. These are illustrative progression opportunities, not guaranteed promotions.",
+        "label": "Text"
       }
     ],
     "url": "/project-controls-professional/public-sector-councils-route"
@@ -7749,11 +8656,89 @@
         "label": "Button/link URL"
       },
       {
-        "key": "5ca328b9c80ddf78",
+        "key": "4ab25ab1cd380819",
         "kind": "text",
-        "default": "Book an employer capability review",
+        "default": "Request an employer capability review",
         "label": "Link text",
         "linkField": "41c0273876371def"
+      }
+    ],
+    "url": "/project-controls-professional/public-sector-councils-route"
+  },
+  {
+    "key": "e8c10dbca444ea96",
+    "page": "operational-pcp-public-sector",
+    "label": "Employer Journey",
+    "fields": [
+      {
+        "key": "48d920576c61837f",
+        "kind": "text",
+        "default": "Employer journey",
+        "label": "Text"
+      },
+      {
+        "key": "613560b4a9d4d4ae",
+        "kind": "text",
+        "default": "Learn, apply, assure and evidence.",
+        "label": "Heading"
+      },
+      {
+        "key": "b339cb12835f7e71",
+        "kind": "text",
+        "default": "The employer, learner and College agree the development need, learning plan, responsibilities and evidence approach before enrolment.",
+        "label": "Text"
+      }
+    ],
+    "url": "/project-controls-professional/public-sector-councils-route"
+  },
+  {
+    "key": "45b042c129c5140c",
+    "page": "operational-pcp-public-sector",
+    "label": "Illustrative Public Sector Application",
+    "fields": [
+      {
+        "key": "70ed2cc9f54b7833",
+        "kind": "text",
+        "default": "Illustrative public-sector application",
+        "label": "Text"
+      },
+      {
+        "key": "71c5e4172c76c6cc",
+        "kind": "text",
+        "default": "From fragmented reporting to defensible programme oversight.",
+        "label": "Heading"
+      },
+      {
+        "key": "86dcdf7eb5d1bdfa",
+        "kind": "text",
+        "default": "An illustrative workplace scenario showing how project-controls practice can be applied without claiming a guaranteed learner outcome.",
+        "label": "Text"
+      }
+    ],
+    "url": "/project-controls-professional/public-sector-councils-route"
+  },
+  {
+    "key": "032b06f689d7d793",
+    "page": "operational-pcp-public-sector",
+    "label": "Learning Grounded In Government Delivery",
+    "fields": [
+      {
+        "key": "9e9397f197c0d165",
+        "kind": "text",
+        "default": "Learning grounded in government delivery",
+        "label": "Text"
+      },
+      {
+        "key": "4c288250a0f6d254",
+        "kind": "text",
+        "default": "Apply project capability within public-sector governance.",
+        "label": "Heading"
+      },
+      {
+        "key": "a382565335d0b0fd",
+        "kind": "text",
+        "default": "Contextualise workplace learning to the frameworks, responsibilities and assurance arrangements that apply to the organisation.",
+        "label": "Text"
       }
     ],
     "url": "/project-controls-professional/public-sector-councils-route"
@@ -7764,21 +8749,15 @@
     "label": "Public Sector",
     "fields": [
       {
-        "key": "db608c708d79a558",
-        "kind": "image",
-        "default": "/images/public-sector-sector-hero.png",
-        "label": "Image URL"
-      },
-      {
         "key": "ebdb16288bcf9d27",
         "kind": "text",
         "default": "Public Sector",
         "label": "Text"
       },
       {
-        "key": "e87931b63f8566a8",
+        "key": "622ead07bcea8052",
         "kind": "text",
-        "default": "Build public-sector project delivery capability that stands up to scrutiny .",
+        "default": "Build public-sector project delivery capability that stands up to scrutiny.",
         "label": "Heading"
       },
       {
@@ -7794,565 +8773,79 @@
         "label": "Button/link URL"
       },
       {
-        "key": "5736a4b2337a6b3b",
+        "key": "487f34f6d5afa7b2",
         "kind": "text",
-        "default": "Discuss your team’s capability",
+        "default": "Discuss your team's capability",
         "label": "Link text",
         "linkField": "41c0273876371def"
       },
       {
-        "key": "c064fcf3f9e3e2cf",
+        "key": "fc46d924bf4c48ad",
         "kind": "link",
-        "default": "#pathways",
+        "default": "#eligibility",
         "label": "Button/link URL"
       },
       {
-        "key": "f999fca3b7f26bcb",
+        "key": "665710bbf89be1a6",
         "kind": "text",
-        "default": "Compare pathways",
+        "default": "Check workforce eligibility",
         "label": "Link text",
-        "linkField": "c064fcf3f9e3e2cf"
+        "linkField": "fc46d924bf4c48ad"
       }
     ],
     "url": "/project-controls-professional/public-sector-councils-route"
   },
   {
-    "key": "5ff389386e7d08af",
+    "key": "3837f58605e2dcf7",
     "page": "operational-pcp-public-sector",
-    "label": "Role To Programme Pathway",
+    "label": "The Project Controls Capability Model",
     "fields": [
       {
-        "key": "0896c39cf65bbe2a",
-        "kind": "link",
-        "default": "/associate-project-manager-level-4",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "4ceb82e2963e1faa",
+        "key": "bf3ba6e7bbd597d2",
         "kind": "text",
-        "default": "Explore Level 4",
-        "label": "Link text",
-        "linkField": "0896c39cf65bbe2a"
+        "default": "The project-controls capability model",
+        "label": "Text"
       },
       {
-        "key": "4e3fd559a4fc2417",
-        "kind": "link",
-        "default": "/project-controls-professional-level-6",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "38a4bfe6065ff03c",
+        "key": "a6c213c929be8bf8",
         "kind": "text",
-        "default": "Explore Level 6",
-        "label": "Link text",
-        "linkField": "4e3fd559a4fc2417"
+        "default": "Five capabilities for accountable public-project delivery.",
+        "label": "Heading"
+      },
+      {
+        "key": "bf07f7f30b6c8e04",
+        "kind": "text",
+        "default": "Build reliable controls that give senior leaders decision-ready insight, support earlier intervention and connect delivery to approved programme baselines.",
+        "label": "Text"
       }
     ],
     "url": "/project-controls-professional/public-sector-councils-route"
   },
   {
-    "key": "1524b512e196a187",
-    "page": "pcp-master",
-    "label": "Capability And Workplace Outputs",
+    "key": "3097aed5a007de53",
+    "page": "operational-pcp-public-sector",
+    "label": "Why Public Sector Delivery Is Different",
     "fields": [
       {
-        "key": "06eba7607af100ae",
+        "key": "e9db1f5f7640706a",
         "kind": "text",
-        "default": "Capability and workplace outputs",
+        "default": "Why public-sector delivery is different",
         "label": "Text"
       },
       {
-        "key": "7b80fe6925b0cace",
+        "key": "42653e8a4b416657",
         "kind": "text",
-        "default": "What learners can evidence at work",
+        "default": "Project capability must remain clear, auditable and defensible.",
         "label": "Heading"
       },
       {
-        "key": "9ab6847b342e5881",
+        "key": "cb6611244cc7af37",
         "kind": "text",
-        "default": "Learning is designed to become visible project-controls evidence, stronger decisions and better workplace systems.",
+        "default": "Public programmes operate across formal governance, constrained budgets, complex stakeholders and scrutiny. Decisions must connect scope, affordability, risk, service outcomes and public value.",
         "label": "Text"
       }
     ],
-    "url": "/project-controls-professional-level-6"
-  },
-  {
-    "key": "af3dbe71fba24a6e",
-    "page": "pcp-master",
-    "label": "College Of Project Controls And Project Management",
-    "fields": [
-      {
-        "key": "f7df52d9830f3b76",
-        "kind": "image",
-        "default": "https://jokdxsdbxorzciulkdyl.supabase.co/storage/v1/object/public/images/304c1c37f02c49dcb7b6bc84c60de0fa.png",
-        "label": "Image URL"
-      },
-      {
-        "key": "0f4e432eff0599e5",
-        "kind": "text",
-        "default": "College of Project Controls and Project Management",
-        "label": "Text"
-      },
-      {
-        "key": "ba025f1246768366",
-        "kind": "text",
-        "default": "Project Controls",
-        "label": "Heading"
-      },
-      {
-        "key": "1a41f24df6c19fea",
-        "kind": "text",
-        "default": "Professional",
-        "label": "Heading"
-      },
-      {
-        "key": "51168800bf8d326f",
-        "kind": "text",
-        "default": "Level 6",
-        "label": "Text"
-      },
-      {
-        "key": "6e74197204af34d8",
-        "kind": "text",
-        "default": "A fully funded, work-based pathway for eligible professionals involved in planning, controls, cost, risk, reporting, governance and project transformation.",
-        "label": "Text"
-      },
-      {
-        "key": "1ced8837ee880fa9",
-        "kind": "text",
-        "default": "Government apprenticeship funding is subject to learner eligibility, employer support, prior-learning review and the rules applying at enrolment.",
-        "label": "Text"
-      },
-      {
-        "key": "41c0273876371def",
-        "kind": "link",
-        "default": "/book-a-session",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "d34ce7312f3ffddf",
-        "kind": "text",
-        "default": "Request a consultation",
-        "label": "Link text",
-        "linkField": "41c0273876371def"
-      },
-      {
-        "key": "c064fcf3f9e3e2cf",
-        "kind": "link",
-        "default": "#pathways",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "f999fca3b7f26bcb",
-        "kind": "text",
-        "default": "Compare pathways",
-        "label": "Link text",
-        "linkField": "c064fcf3f9e3e2cf"
-      },
-      {
-        "key": "d4ce45ad40211b4f",
-        "kind": "link",
-        "default": "#register",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "d658f975ef533258",
-        "kind": "text",
-        "default": "Register your interest",
-        "label": "Link text",
-        "linkField": "d4ce45ad40211b4f"
-      },
-      {
-        "key": "041c903bcc8ec2a0",
-        "kind": "text",
-        "default": "For professionals working across",
-        "label": "Text"
-      },
-      {
-        "key": "3f31c4c6a4258041",
-        "kind": "text",
-        "default": "Three standard pathways",
-        "label": "Text"
-      },
-      {
-        "key": "5050ea5be1943287",
-        "kind": "text",
-        "default": "Operational · Strategic · Chartered",
-        "label": "Text"
-      },
-      {
-        "key": "1adb3e5d91f2e250",
-        "kind": "text",
-        "default": "A tailored six-credit combination may be agreed around job duties and employer requirements.",
-        "label": "Text"
-      },
-      {
-        "key": "deea8f3bd520b87f",
-        "kind": "link",
-        "default": "https://kentbusinesscollege.com/wp-content/uploads/2026/05/Edit-Project-Control-Professional-with-ChPP_compressed.pdf",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "fe99b7461b916f29",
-        "kind": "text",
-        "default": "Download Catalogue",
-        "label": "Link text",
-        "linkField": "deea8f3bd520b87f"
-      }
-    ],
-    "url": "/project-controls-professional-level-6"
-  },
-  {
-    "key": "b76f57f95d401491",
-    "page": "pcp-master",
-    "label": "Course At AGlance",
-    "fields": [
-      {
-        "key": "7c54e614c989d356",
-        "kind": "text",
-        "default": "Course at a glance",
-        "label": "Text"
-      },
-      {
-        "key": "db5ea1370075ae62",
-        "kind": "text",
-        "default": "Choose your preferred cohort",
-        "label": "Heading"
-      },
-      {
-        "key": "0c5419755596a3b2",
-        "kind": "text",
-        "default": "January · April · September intake windows",
-        "label": "Text"
-      },
-      {
-        "key": "d4ce45ad40211b4f",
-        "kind": "link",
-        "default": "#register",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "95ee97eebd1f290d",
-        "kind": "text",
-        "default": "Tailored route:",
-        "label": "Text"
-      },
-      {
-        "key": "03b2e79f4c9a54eb",
-        "kind": "text",
-        "default": " module combinations may reflect employer requirements.",
-        "label": "Text"
-      },
-      {
-        "key": "a2332681db271c86",
-        "kind": "text",
-        "default": "Level 7 access:",
-        "label": "Text"
-      },
-      {
-        "key": "bec42e6f589a21a5",
-        "kind": "text",
-        "default": " Saturday Strategy and Leadership sessions.",
-        "label": "Text"
-      }
-    ],
-    "url": "/project-controls-professional-level-6"
-  },
-  {
-    "key": "f17b34e5bbbfebf8",
-    "page": "pcp-master",
-    "label": "Delivery And Assessment",
-    "fields": [
-      {
-        "key": "884dd676e2d1f376",
-        "kind": "text",
-        "default": "0",
-        "label": "Text"
-      },
-      {
-        "key": "c504006538ab3c75",
-        "kind": "text",
-        "default": "Assessment approach",
-        "label": "Heading"
-      },
-      {
-        "key": "914877169a76fa36",
-        "kind": "text",
-        "default": "Employer involvement",
-        "label": "Heading"
-      }
-    ],
-    "url": "/project-controls-professional-level-6"
-  },
-  {
-    "key": "d7d3bf503b8838ed",
-    "page": "pcp-master",
-    "label": "Employer Partnerships Across Project Driven Sectors",
-    "fields": [
-      {
-        "key": "791bc298e0b56848",
-        "kind": "text",
-        "default": "Employer partnerships across project-driven sectors",
-        "label": "Heading"
-      },
-      {
-        "key": "7994a6f3814de2ce",
-        "kind": "text",
-        "default": "No named, approved employer-logo assets were available locally, so logos have not been recreated or implied as endorsements.",
-        "label": "Text"
-      }
-    ],
-    "url": "/project-controls-professional-level-6"
-  },
-  {
-    "key": "33184f490b9212f2",
-    "page": "pcp-master",
-    "label": "Expected Workload",
-    "fields": [
-      {
-        "key": "5a71d117241c97ed",
-        "kind": "text",
-        "default": "Workload clarification:",
-        "label": "Text"
-      },
-      {
-        "key": "d5c8cf7442c2034e",
-        "kind": "text",
-        "default": " the source also states “approximately seven hours”, but its activity breakdown totals 8 hours (2 + 3 + 3). This page uses the stated activity breakdown without silently changing it.",
-        "label": "Text"
-      },
-      {
-        "key": "c14c5de78e76a579",
-        "kind": "text",
-        "default": "Monthly submissions",
-        "label": "Heading"
-      },
-      {
-        "key": "2d96febfd55ba154",
-        "kind": "text",
-        "default": "1. LMS activities",
-        "label": "Text"
-      },
-      {
-        "key": "ab566015fb2b88cd",
-        "kind": "text",
-        "default": "Reading, quizzes, podcasts and online learning activities.",
-        "label": "Text"
-      },
-      {
-        "key": "8215672e5c322727",
-        "kind": "text",
-        "default": "2. Portfolio-building activities",
-        "label": "Text"
-      },
-      {
-        "key": "b70272f4eb05ca58",
-        "kind": "text",
-        "default": "Applied project controls evidence, reflections and professional commentary.",
-        "label": "Text"
-      },
-      {
-        "key": "652531fdaafd8ba9",
-        "kind": "text",
-        "default": "Coaching and reviews",
-        "label": "Heading"
-      },
-      {
-        "key": "0c39299fe59a4371",
-        "kind": "text",
-        "default": "Monthly · 1 hour:",
-        "label": "Text"
-      },
-      {
-        "key": "55479990970f6464",
-        "kind": "text",
-        "default": " present Knowledge, Skills and Behaviours progression and agree evidence, learning needs and next actions.",
-        "label": "Text"
-      },
-      {
-        "key": "7b9b21bcf423deb0",
-        "kind": "text",
-        "default": "Every 10 weeks · 1 hour:",
-        "label": "Text"
-      },
-      {
-        "key": "a71c781ff5ca3caa",
-        "kind": "text",
-        "default": " learner, coach and line manager review progression, feedback and development needs.",
-        "label": "Text"
-      },
-      {
-        "key": "2162fbb16830768c",
-        "kind": "text",
-        "default": "Portfolio evidence should be authentic, relevant, professionally presented and anonymised where employer, client, project or commercial information is confidential.",
-        "label": "Text"
-      }
-    ],
-    "url": "/project-controls-professional-level-6"
-  },
-  {
-    "key": "cc9bcbb3ebe07c3e",
-    "page": "pcp-master",
-    "label": "Next Step",
-    "fields": [
-      {
-        "key": "41c0273876371def",
-        "kind": "link",
-        "default": "/book-a-session",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "d34ce7312f3ffddf",
-        "kind": "text",
-        "default": "Request a consultation",
-        "label": "Link text",
-        "linkField": "41c0273876371def"
-      },
-      {
-        "key": "d72666b8dc0cce41",
-        "kind": "link",
-        "default": "#events",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "05049ce2a724466a",
-        "kind": "text",
-        "default": "Explore events",
-        "label": "Link text",
-        "linkField": "d72666b8dc0cce41"
-      },
-      {
-        "key": "dcd929d5f2f57609",
-        "kind": "link",
-        "default": "mailto:office@kentbusinesscollege.org?subject=Project%20Controls%20Professional%20Level%206",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "f5dbd5634a7597b4",
-        "kind": "text",
-        "default": "Email Alice Saunders",
-        "label": "Link text",
-        "linkField": "dcd929d5f2f57609"
-      }
-    ],
-    "url": "/project-controls-professional-level-6"
-  },
-  {
-    "key": "f2c1bbf9a20a34bc",
-    "page": "pcp-master",
-    "label": "Programme Benefits",
-    "fields": [
-      {
-        "key": "20c1f593a69a06b1",
-        "kind": "text",
-        "default": "Support services and assessments are optional where stated and remain subject to confirmed programme terms and availability.",
-        "label": "Text"
-      }
-    ],
-    "url": "/project-controls-professional-level-6"
-  },
-  {
-    "key": "eb5f2616df934d0e",
-    "page": "pcp-master",
-    "label": "Programme Overview",
-    "fields": [
-      {
-        "key": "2e44425ebd66812f",
-        "kind": "text",
-        "default": "Recognition condition:",
-        "label": "Text"
-      },
-      {
-        "key": "511d3ca6e62c6016",
-        "kind": "text",
-        "default": " professional membership, examinations, Fellowship, Incorporated Cost Engineer and Chartered Project Professional status remain subject to each awarding organisation’s own assessment and requirements.",
-        "label": "Text"
-      }
-    ],
-    "url": "/project-controls-professional-level-6"
-  },
-  {
-    "key": "28fe7ca842b14582",
-    "page": "pcp-master",
-    "label": "Programme Structure",
-    "fields": [
-      {
-        "key": "bd401307bed5ad31",
-        "kind": "text",
-        "default": "Phase ",
-        "label": "Text"
-      },
-      {
-        "key": "a4af5e473961dc9d",
-        "kind": "text",
-        "default": " · ",
-        "label": "Text"
-      },
-      {
-        "key": "3ffa1dc98cf87ff5",
-        "kind": "text",
-        "default": "Additional professional development",
-        "label": "Text"
-      },
-      {
-        "key": "4dcea75a62365a56",
-        "kind": "text",
-        "default": "Diploma Level 7 in Strategy and Leadership",
-        "label": "Heading"
-      },
-      {
-        "key": "024e5a763c0f4245",
-        "kind": "text",
-        "default": "Saturday, 9:00–11:00 · 6 modules · 3 months each · 18 months total",
-        "label": "Text"
-      },
-      {
-        "key": "036dc843d3703ad4",
-        "kind": "text",
-        "default": "This is additional access within the wider support package. It is not one of the six Level 6 credits and remains subject to confirmed programme terms.",
-        "label": "Text"
-      }
-    ],
-    "url": "/project-controls-professional-level-6"
-  },
-  {
-    "key": "fe724aa07a10df9b",
-    "page": "pcp-master",
-    "label": "Register Your Interest",
-    "fields": [
-      {
-        "key": "d658f975ef533258",
-        "kind": "text",
-        "default": "Register your interest",
-        "label": "Text"
-      },
-      {
-        "key": "38452c479ac396d8",
-        "kind": "text",
-        "default": "Register your interest on the next Project Controls cohort",
-        "label": "Heading"
-      },
-      {
-        "key": "b9f87737bcec205f",
-        "kind": "text",
-        "default": "The admissions team will review eligibility, funding and the most appropriate pathway. Request a consultation below to get started.",
-        "label": "Text"
-      },
-      {
-        "key": "41c0273876371def",
-        "kind": "link",
-        "default": "/book-a-session",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "d34ce7312f3ffddf",
-        "kind": "text",
-        "default": "Request a consultation",
-        "label": "Link text",
-        "linkField": "41c0273876371def"
-      }
-    ],
-    "url": "/project-controls-professional-level-6"
+    "url": "/project-controls-professional/public-sector-councils-route"
   },
   {
     "key": "2cc4c6abcb48b644",
@@ -8581,9 +9074,9 @@
         "label": "Button/link URL"
       },
       {
-        "key": "d9ca06e20093e32c",
+        "key": "f84968694d0abd43",
         "kind": "text",
-        "default": "Book an Employer PMO Consultation",
+        "default": "Request an employer PMO consultation",
         "label": "Link text",
         "linkField": "41c0273876371def"
       }
@@ -8972,9 +9465,9 @@
         "label": "Button/link URL"
       },
       {
-        "key": "0c17babd0bc95ecd",
+        "key": "5d737a8db251e0d0",
         "kind": "text",
-        "default": "Book a PMO consultation",
+        "default": "Request a PMO consultation",
         "label": "Link text",
         "linkField": "41c0273876371def"
       },
@@ -9219,9 +9712,9 @@
         "label": "Text"
       },
       {
-        "key": "f5171a9eff6c1749",
+        "key": "9560d9dbf3325744",
         "kind": "text",
-        "default": "Not every professional needs the same programme. Start with your current responsibilities, the capability you need to strengthen and the type of work you are responsible for delivering.",
+        "default": "Compare programmes by your current responsibilities and the skills you want to develop.",
         "label": "Text"
       }
     ],
@@ -9328,19 +9821,6 @@
         "label": "Text"
       },
       {
-        "key": "7ddfc5e0202d43bc",
-        "kind": "link",
-        "default": "/contact",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "f3b36dab138be5bf",
-        "kind": "text",
-        "default": "Explore Specialist Modules",
-        "label": "Link text",
-        "linkField": "7ddfc5e0202d43bc"
-      },
-      {
         "key": "30ef45ccc455a76e",
         "kind": "text",
         "default": "01",
@@ -9434,9 +9914,9 @@
         "label": "Button/link URL"
       },
       {
-        "key": "816e79a9a8eadb9f",
+        "key": "85b91d2d23f4cda9",
         "kind": "text",
-        "default": "Book Employer Consultation",
+        "default": "Request an employer consultation",
         "label": "Link text",
         "linkField": "d2b1e622a2d53a7f"
       },
@@ -9556,6 +10036,757 @@
       }
     ],
     "url": "/programmes"
+  },
+  {
+    "key": "874774dd91c4c8b4",
+    "page": "project-controls-professional-level-6",
+    "label": "Capability And Workplace Outputs",
+    "fields": [
+      {
+        "key": "06eba7607af100ae",
+        "kind": "text",
+        "default": "Capability and workplace outputs",
+        "label": "Text"
+      },
+      {
+        "key": "7b80fe6925b0cace",
+        "kind": "text",
+        "default": "What learners can evidence at work",
+        "label": "Heading"
+      },
+      {
+        "key": "9ab6847b342e5881",
+        "kind": "text",
+        "default": "Learning is designed to become visible project-controls evidence, stronger decisions and better workplace systems.",
+        "label": "Text"
+      }
+    ]
+  },
+  {
+    "key": "3ec752bb9d5cb0f2",
+    "page": "project-controls-professional-level-6",
+    "label": "College Of Project Controls And Project Management",
+    "fields": [
+      {
+        "key": "f7df52d9830f3b76",
+        "kind": "image",
+        "default": "https://jokdxsdbxorzciulkdyl.supabase.co/storage/v1/object/public/images/304c1c37f02c49dcb7b6bc84c60de0fa.png",
+        "label": "Image URL"
+      },
+      {
+        "key": "0f4e432eff0599e5",
+        "kind": "text",
+        "default": "College of Project Controls and Project Management",
+        "label": "Text"
+      },
+      {
+        "key": "ba025f1246768366",
+        "kind": "text",
+        "default": "Project Controls",
+        "label": "Heading"
+      },
+      {
+        "key": "1a41f24df6c19fea",
+        "kind": "text",
+        "default": "Professional",
+        "label": "Heading"
+      },
+      {
+        "key": "51168800bf8d326f",
+        "kind": "text",
+        "default": "Level 6",
+        "label": "Text"
+      },
+      {
+        "key": "6e74197204af34d8",
+        "kind": "text",
+        "default": "A fully funded, work-based pathway for eligible professionals involved in planning, controls, cost, risk, reporting, governance and project transformation.",
+        "label": "Text"
+      },
+      {
+        "key": "1ced8837ee880fa9",
+        "kind": "text",
+        "default": "Government apprenticeship funding is subject to learner eligibility, employer support, prior-learning review and the rules applying at enrolment.",
+        "label": "Text"
+      },
+      {
+        "key": "41c0273876371def",
+        "kind": "link",
+        "default": "/book-a-session",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "d34ce7312f3ffddf",
+        "kind": "text",
+        "default": "Request a consultation",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
+      },
+      {
+        "key": "c064fcf3f9e3e2cf",
+        "kind": "link",
+        "default": "#pathways",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "f999fca3b7f26bcb",
+        "kind": "text",
+        "default": "Compare pathways",
+        "label": "Link text",
+        "linkField": "c064fcf3f9e3e2cf"
+      },
+      {
+        "key": "d4ce45ad40211b4f",
+        "kind": "link",
+        "default": "#register",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "d658f975ef533258",
+        "kind": "text",
+        "default": "Register your interest",
+        "label": "Link text",
+        "linkField": "d4ce45ad40211b4f"
+      },
+      {
+        "key": "041c903bcc8ec2a0",
+        "kind": "text",
+        "default": "For professionals working across",
+        "label": "Text"
+      },
+      {
+        "key": "3f31c4c6a4258041",
+        "kind": "text",
+        "default": "Three standard pathways",
+        "label": "Text"
+      },
+      {
+        "key": "5050ea5be1943287",
+        "kind": "text",
+        "default": "Operational · Strategic · Chartered",
+        "label": "Text"
+      },
+      {
+        "key": "1adb3e5d91f2e250",
+        "kind": "text",
+        "default": "A tailored six-credit combination may be agreed around job duties and employer requirements.",
+        "label": "Text"
+      },
+      {
+        "key": "deea8f3bd520b87f",
+        "kind": "link",
+        "default": "https://kentbusinesscollege.com/wp-content/uploads/2026/05/Edit-Project-Control-Professional-with-ChPP_compressed.pdf",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "fe99b7461b916f29",
+        "kind": "text",
+        "default": "Download Catalogue",
+        "label": "Link text",
+        "linkField": "deea8f3bd520b87f"
+      }
+    ]
+  },
+  {
+    "key": "b9b64d3136e6fe4c",
+    "page": "project-controls-professional-level-6",
+    "label": "Course At AGlance",
+    "fields": [
+      {
+        "key": "7c54e614c989d356",
+        "kind": "text",
+        "default": "Course at a glance",
+        "label": "Text"
+      },
+      {
+        "key": "db5ea1370075ae62",
+        "kind": "text",
+        "default": "Choose your preferred cohort",
+        "label": "Heading"
+      },
+      {
+        "key": "0c5419755596a3b2",
+        "kind": "text",
+        "default": "January · April · September intake windows",
+        "label": "Text"
+      },
+      {
+        "key": "d4ce45ad40211b4f",
+        "kind": "link",
+        "default": "#register",
+        "label": "Button/link URL"
+      }
+    ]
+  },
+  {
+    "key": "e4a4b322cb729c45",
+    "page": "project-controls-professional-level-6",
+    "label": "Delivery And Assessment",
+    "fields": [
+      {
+        "key": "884dd676e2d1f376",
+        "kind": "text",
+        "default": "0",
+        "label": "Text"
+      },
+      {
+        "key": "c504006538ab3c75",
+        "kind": "text",
+        "default": "Assessment approach",
+        "label": "Heading"
+      },
+      {
+        "key": "914877169a76fa36",
+        "kind": "text",
+        "default": "Employer involvement",
+        "label": "Heading"
+      }
+    ]
+  },
+  {
+    "key": "0df29524fb3452e6",
+    "page": "project-controls-professional-level-6",
+    "label": "Employer Partnerships Across Project Driven Sectors",
+    "fields": [
+      {
+        "key": "791bc298e0b56848",
+        "kind": "text",
+        "default": "Employer partnerships across project-driven sectors",
+        "label": "Heading"
+      }
+    ]
+  },
+  {
+    "key": "f253059851871e7d",
+    "page": "project-controls-professional-level-6",
+    "label": "Expected Workload",
+    "fields": [
+      {
+        "key": "2e53274b43a59f58",
+        "kind": "text",
+        "default": "Confirm your study plan:",
+        "label": "Text"
+      },
+      {
+        "key": "94b4a233f5258f41",
+        "kind": "text",
+        "default": " Ask the College to confirm your weekly learning commitment and total programme hours before enrolment.",
+        "label": "Text"
+      },
+      {
+        "key": "c14c5de78e76a579",
+        "kind": "text",
+        "default": "Monthly submissions",
+        "label": "Heading"
+      },
+      {
+        "key": "2d96febfd55ba154",
+        "kind": "text",
+        "default": "1. LMS activities",
+        "label": "Text"
+      },
+      {
+        "key": "ab566015fb2b88cd",
+        "kind": "text",
+        "default": "Reading, quizzes, podcasts and online learning activities.",
+        "label": "Text"
+      },
+      {
+        "key": "8215672e5c322727",
+        "kind": "text",
+        "default": "2. Portfolio-building activities",
+        "label": "Text"
+      },
+      {
+        "key": "b70272f4eb05ca58",
+        "kind": "text",
+        "default": "Applied project controls evidence, reflections and professional commentary.",
+        "label": "Text"
+      },
+      {
+        "key": "652531fdaafd8ba9",
+        "kind": "text",
+        "default": "Coaching and reviews",
+        "label": "Heading"
+      },
+      {
+        "key": "0c39299fe59a4371",
+        "kind": "text",
+        "default": "Monthly · 1 hour:",
+        "label": "Text"
+      },
+      {
+        "key": "55479990970f6464",
+        "kind": "text",
+        "default": " present Knowledge, Skills and Behaviours progression and agree evidence, learning needs and next actions.",
+        "label": "Text"
+      },
+      {
+        "key": "7b9b21bcf423deb0",
+        "kind": "text",
+        "default": "Every 10 weeks · 1 hour:",
+        "label": "Text"
+      },
+      {
+        "key": "a71c781ff5ca3caa",
+        "kind": "text",
+        "default": " learner, coach and line manager review progression, feedback and development needs.",
+        "label": "Text"
+      },
+      {
+        "key": "2162fbb16830768c",
+        "kind": "text",
+        "default": "Portfolio evidence should be authentic, relevant, professionally presented and anonymised where employer, client, project or commercial information is confidential.",
+        "label": "Text"
+      }
+    ]
+  },
+  {
+    "key": "5da0b368038f3f93",
+    "page": "project-controls-professional-level-6",
+    "label": "Next Step",
+    "fields": [
+      {
+        "key": "41c0273876371def",
+        "kind": "link",
+        "default": "/book-a-session",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "d34ce7312f3ffddf",
+        "kind": "text",
+        "default": "Request a consultation",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
+      },
+      {
+        "key": "d72666b8dc0cce41",
+        "kind": "link",
+        "default": "#events",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "05049ce2a724466a",
+        "kind": "text",
+        "default": "Explore events",
+        "label": "Link text",
+        "linkField": "d72666b8dc0cce41"
+      },
+      {
+        "key": "dcd929d5f2f57609",
+        "kind": "link",
+        "default": "mailto:office@kentbusinesscollege.org?subject=Project%20Controls%20Professional%20Level%206",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "f5dbd5634a7597b4",
+        "kind": "text",
+        "default": "Email Alice Saunders",
+        "label": "Link text",
+        "linkField": "dcd929d5f2f57609"
+      }
+    ]
+  },
+  {
+    "key": "9e11cbeb7425b0a0",
+    "page": "project-controls-professional-level-6",
+    "label": "Programme Benefits",
+    "fields": [
+      {
+        "key": "20c1f593a69a06b1",
+        "kind": "text",
+        "default": "Support services and assessments are optional where stated and remain subject to confirmed programme terms and availability.",
+        "label": "Text"
+      }
+    ]
+  },
+  {
+    "key": "dea7e09a383458d1",
+    "page": "project-controls-professional-level-6",
+    "label": "Programme Overview",
+    "fields": [
+      {
+        "key": "2e44425ebd66812f",
+        "kind": "text",
+        "default": "Recognition condition:",
+        "label": "Text"
+      },
+      {
+        "key": "511d3ca6e62c6016",
+        "kind": "text",
+        "default": " professional membership, examinations, Fellowship, Incorporated Cost Engineer and Chartered Project Professional status remain subject to each awarding organisation’s own assessment and requirements.",
+        "label": "Text"
+      }
+    ]
+  },
+  {
+    "key": "b0373c1616c80fcc",
+    "page": "project-controls-professional-level-6",
+    "label": "Programme Structure",
+    "fields": [
+      {
+        "key": "bd401307bed5ad31",
+        "kind": "text",
+        "default": "Phase ",
+        "label": "Text"
+      },
+      {
+        "key": "a4af5e473961dc9d",
+        "kind": "text",
+        "default": " · ",
+        "label": "Text"
+      },
+      {
+        "key": "3ffa1dc98cf87ff5",
+        "kind": "text",
+        "default": "Additional professional development",
+        "label": "Text"
+      },
+      {
+        "key": "4dcea75a62365a56",
+        "kind": "text",
+        "default": "Diploma Level 7 in Strategy and Leadership",
+        "label": "Heading"
+      },
+      {
+        "key": "024e5a763c0f4245",
+        "kind": "text",
+        "default": "Saturday, 9:00–11:00 · 6 modules · 3 months each · 18 months total",
+        "label": "Text"
+      },
+      {
+        "key": "036dc843d3703ad4",
+        "kind": "text",
+        "default": "This is additional access within the wider support package. It is not one of the six Level 6 credits and remains subject to confirmed programme terms.",
+        "label": "Text"
+      }
+    ]
+  },
+  {
+    "key": "202afdfaac1903e6",
+    "page": "project-controls-professional-level-6",
+    "label": "Register Your Interest",
+    "fields": [
+      {
+        "key": "d658f975ef533258",
+        "kind": "text",
+        "default": "Register your interest",
+        "label": "Text"
+      },
+      {
+        "key": "38452c479ac396d8",
+        "kind": "text",
+        "default": "Register your interest on the next Project Controls cohort",
+        "label": "Heading"
+      },
+      {
+        "key": "b9f87737bcec205f",
+        "kind": "text",
+        "default": "The admissions team will review eligibility, funding and the most appropriate pathway. Request a consultation below to get started.",
+        "label": "Text"
+      },
+      {
+        "key": "41c0273876371def",
+        "kind": "link",
+        "default": "/book-a-session",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "d34ce7312f3ffddf",
+        "kind": "text",
+        "default": "Request a consultation",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
+      }
+    ]
+  },
+  {
+    "key": "9e9bcbaf9136eba9",
+    "page": "project-controls-professional-operational-route",
+    "label": "Eligibility Criteria",
+    "fields": [
+      {
+        "key": "46b83fd6d43b9095",
+        "kind": "image",
+        "default": "https://jokdxsdbxorzciulkdyl.supabase.co/storage/v1/object/public/images/c5916acf755e4a2cbe4d778a1ae304ca.png",
+        "label": "Image URL"
+      },
+      {
+        "key": "b97c536d5b93a24d",
+        "kind": "link",
+        "default": "/apprenticeship-eligibility-checker",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "dc201ca9e659b2b9",
+        "kind": "link",
+        "default": "mailto:office@kentbusinesscollege.com?subject=Operational%20Pathway%20Eligibility%20Enquiry",
+        "label": "Button/link URL"
+      }
+    ]
+  },
+  {
+    "key": "35929c37bd2cb73f",
+    "page": "project-controls-professional-operational-route",
+    "label": "Funding Scenarios For202627 Starts",
+    "fields": [
+      {
+        "key": "d58ff5f70650d5a3",
+        "kind": "link",
+        "default": "mailto:office@kentbusinesscollege.com?subject=Operational%20Pathway%20Funding%20Enquiry",
+        "label": "Button/link URL"
+      }
+    ]
+  },
+  {
+    "key": "7d3f6b398b6d3bd7",
+    "page": "project-controls-professional-operational-route",
+    "label": "Operational Pathway Quick Enquiry",
+    "fields": [
+      {
+        "key": "5c59b445abca1577",
+        "kind": "text",
+        "default": "Operational Pathway enquiries",
+        "label": "Text"
+      },
+      {
+        "key": "11a6903f3742e88f",
+        "kind": "text",
+        "default": "Review your role, funding and pathway suitability with the admissions team.",
+        "label": "Text"
+      },
+      {
+        "key": "00affe68ea93176c",
+        "kind": "link",
+        "default": "#operational-structure",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "bf1e63ea679c6d15",
+        "kind": "text",
+        "default": "View structure",
+        "label": "Link text",
+        "linkField": "00affe68ea93176c"
+      },
+      {
+        "key": "41c0273876371def",
+        "kind": "link",
+        "default": "/book-a-session",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "d34ce7312f3ffddf",
+        "kind": "text",
+        "default": "Request a consultation",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
+      }
+    ]
+  },
+  {
+    "key": "8be1dd1c68ef2ca1",
+    "page": "project-controls-professional-operational-route",
+    "label": "Section202627 Learner And Employer Pathway",
+    "fields": [
+      {
+        "key": "53460766cc66e0d8",
+        "kind": "image",
+        "default": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2200&q=85",
+        "label": "Image URL"
+      },
+      {
+        "key": "41c0273876371def",
+        "kind": "link",
+        "default": "/book-a-session",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "dd6dc5513656db82",
+        "kind": "link",
+        "default": "#operational-overview",
+        "label": "Button/link URL"
+      }
+    ]
+  },
+  {
+    "key": "5edf6fb861d773aa",
+    "page": "project-controls-professional-operational-route",
+    "label": "Take The Next Step",
+    "fields": [
+      {
+        "key": "d27291e2cc2f3f1d",
+        "kind": "link",
+        "default": "mailto:office@kentbusinesscollege.com",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "23701e550ae76b1b",
+        "kind": "link",
+        "default": "https://kentbusinesscollege.com",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "6f06eb120f297f0f",
+        "kind": "link",
+        "default": "mailto:office@kentbusinesscollege.com?subject=Operational%20Pathway%20Enquiry%20-%20Project%20Controls%20Professional%20Level%206",
+        "label": "Button/link URL"
+      }
+    ]
+  },
+  {
+    "key": "015c97b686579d81",
+    "page": "route-finder",
+    "label": "Route Finder",
+    "fields": [
+      {
+        "key": "19dca086190ea432",
+        "kind": "text",
+        "default": "Route finder",
+        "label": "Text"
+      },
+      {
+        "key": "926a909419ad09b3",
+        "kind": "text",
+        "default": "Find your best project controls route.",
+        "label": "Heading"
+      },
+      {
+        "key": "ee6691f0d8d9ad5a",
+        "kind": "text",
+        "default": "Answer three quick questions to narrow down the most likely pathway before speaking with the College team.",
+        "label": "Text"
+      },
+      {
+        "key": "ed08c42e5e873479",
+        "kind": "text",
+        "default": "Recommended next step",
+        "label": "Text"
+      },
+      {
+        "key": "57043b8e073d09e9",
+        "kind": "text",
+        "default": "Explore this route",
+        "label": "Link text"
+      },
+      {
+        "key": "41c0273876371def",
+        "kind": "link",
+        "default": "/book-a-session",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "6383309f4157c68c",
+        "kind": "text",
+        "default": "Discuss with an adviser",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
+      },
+      {
+        "key": "f32580d3c7801dda",
+        "kind": "text",
+        "default": "This is a guide only. Final route, eligibility and funding are confirmed by the College before enrolment.",
+        "label": "Text"
+      }
+    ]
+  },
+  {
+    "key": "026f836797a174ba",
+    "page": "short-courses",
+    "label": "Short Courses",
+    "fields": [
+      {
+        "key": "b8ae352680968b8f",
+        "kind": "text",
+        "default": "Focused professional development",
+        "label": "Text"
+      },
+      {
+        "key": "926e9e56fa933d56",
+        "kind": "text",
+        "default": "Short courses & modules.",
+        "label": "Heading"
+      },
+      {
+        "key": "ab5e5dda04eb9c07",
+        "kind": "text",
+        "default": "Build one project-controls capability at a time through focused learning, practical examples and workplace application.",
+        "label": "Text"
+      },
+      {
+        "key": "b45e17b0931cbecf",
+        "kind": "text",
+        "default": "View course ",
+        "label": "Text"
+      },
+      {
+        "key": "41c0273876371def",
+        "kind": "link",
+        "default": "/book-a-session",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "92dbbc92e7b5e98c",
+        "kind": "text",
+        "default": "Discuss this course",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
+      },
+      {
+        "key": "fd9f23fa4451fe05",
+        "kind": "link",
+        "default": "/short-courses",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "697e617a3b71cb62",
+        "kind": "text",
+        "default": "Browse other courses",
+        "label": "Link text",
+        "linkField": "fd9f23fa4451fe05"
+      },
+      {
+        "key": "2a0214c8d3427074",
+        "kind": "text",
+        "default": "Course details",
+        "label": "Text"
+      },
+      {
+        "key": "53ae0b218c013365",
+        "kind": "text",
+        "default": "What this course develops",
+        "label": "Text"
+      },
+      {
+        "key": "828999a9acb9f3e2",
+        "kind": "text",
+        "default": "Course page",
+        "label": "Text"
+      },
+      {
+        "key": "0413c7bcb1935a3b",
+        "kind": "text",
+        "default": "A focused course built around real project work.",
+        "label": "Heading"
+      },
+      {
+        "key": "842bb27efd3840eb",
+        "kind": "text",
+        "default": "Best suited to",
+        "label": "Heading"
+      },
+      {
+        "key": "b9abb109ddc3d649",
+        "kind": "text",
+        "default": "Workplace outputs you can shape",
+        "label": "Heading"
+      },
+      {
+        "key": "906d60aa8997bb35",
+        "kind": "text",
+        "default": "Professional context",
+        "label": "Text"
+      }
+    ]
   },
   {
     "key": "e824f1a097ab7643",
@@ -9757,9 +10988,9 @@
         "label": "Button/link URL"
       },
       {
-        "key": "a3bec075b1b5cb79",
+        "key": "d34ce7312f3ffddf",
         "kind": "text",
-        "default": "Book an information session",
+        "default": "Request a consultation",
         "label": "Link text",
         "linkField": "41c0273876371def"
       },

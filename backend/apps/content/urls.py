@@ -3,6 +3,7 @@ from django.urls import path
 from . import views
 from .ipc import ipc_images_list
 from .articles import articles_list, article_detail
+from .case_studies import case_studies_list, case_study_detail
 from . import events
 from . import testimonials
 
@@ -13,7 +14,11 @@ urlpatterns = [
     path('testimonials/<int:pk>/photo/', testimonials.photo),
     path("articles/", articles_list, name="articles-list"),
     path("articles/<slug:slug>/", article_detail, name="article-detail"),
+    path("case-studies/", case_studies_list, name="case-studies-list"),
+    path("case-studies/<slug:slug>/", case_study_detail, name="case-study-detail"),
     path("ipc-images/", ipc_images_list, name="ipc-images-list"),
+    path("maintenance/", views.maintenance_status, name="maintenance-status"),
+    path("maintenance/verify/", views.maintenance_verify, name="maintenance-verify"),
     path("site/", views.site_detail, name="site-detail"),
     path("navigation/", views.navigation, name="navigation"),
     path("pages/home/", views.homepage, name="homepage"),
@@ -25,6 +30,8 @@ urlpatterns = [
     path("professional-credentials/", views.professional_credentials_list, name="professional-credentials-list"),
     path("sectors/", views.sectors_list, name="sectors-list"),
     path("sectors/<slug:slug>/", views.sector_detail, name="sector-detail"),
+    path("short-courses/", views.short_courses_list, name="short-courses-list"),
+    path("short-courses/<slug:slug>/", views.short_course_detail, name="short-course-detail"),
     path("events/", events.legacy_events, name="events-list"),
     path("events/library/", events.event_library, name="event-library"),
     path("events/options/", events.event_options, name="event-options"),

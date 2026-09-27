@@ -67,14 +67,14 @@ export default function ProgrammeInformationAndNextSteps() {
 <div className="space-y-5">
 <article className="min-w-0 space-y-4 rounded-2xl border border-background-200 bg-white p-6 text-foreground-800 shadow-sm bg-background-100 text-foreground-800">
 <h3 className="text-xl font-bold leading-snug">
-{"Apply or Book an information session "}
+{"Discuss your next step "}
 </h3>
 <p className="text-base leading-relaxed">
 {"College will review your role, prior learning, employer support, funding eligibility and whether the Chartered Pathway is the most appropriate route. "}
 </p>
 <div className="flex flex-wrap items-center gap-3 pt-4">
 <SiteLink href="/book-a-session" className="inline-flex min-h-12 items-center justify-center rounded-md px-5 py-3 text-sm font-bold btn-primary">
-{"Book an information session "}
+{"Request a consultation "}
 </SiteLink>
 </div>
 <p className="text-base leading-relaxed">

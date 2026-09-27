@@ -45,7 +45,7 @@ export default function DevelopPMOCapabilityInsideYourOrganisation() {
                   <div className="mt-8">
                     <SiteLink href="/book-a-session" className="btn-editorial-teal inline-flex items-center gap-2 text-sm">
                       <i className="ri-building-2-line"></i>
-                      Book an Employer PMO Consultation
+                      Request an employer PMO consultation
                     </SiteLink>
                   </div>
                 </div>

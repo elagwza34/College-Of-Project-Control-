@@ -1,0 +1,506 @@
+[
+  {
+    "file": "frontend/src/pages/home/components/CollegeOfProjectControlsAndManagement.tsx",
+    "current": "A specialist business college for professionals and organisations responsible for project performance, governance and complex delivery.",
+    "proposed": "A specialist college for professionals and employers working in project controls, project management and PMO.",
+    "reason": "Name the subject areas and audiences immediately.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/home/components/CollegeOfProjectControlsAndManagement.tsx",
+    "current": "Build practical capability across project controls, project management and PMO through structured programmes, specialist modules and employer-led development.",
+    "proposed": "Choose a structured programme, specialist module or team development route, with learning applied to workplace responsibilities.",
+    "reason": "Avoid repeating the subjects; explain the formats and application.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/about/components/AboutCPCM.tsx",
+    "current": "A specialist college for the people behind confident project delivery",
+    "proposed": "A specialist college for project controls, project management and PMO",
+    "reason": "Make the heading descriptive.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/pcp-master/components/ProfessionalCapability.tsx",
+    "current": "Not Just a Qualification. A Capability Route Built Around Real Projects.",
+    "proposed": "Project controls skills applied to real work",
+    "reason": "Replace a long contrastive heading with a specific subject.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/programmes/components/ChooseYourProgramme.tsx",
+    "current": "Not every professional needs the same programme. Start with your current responsibilities, the capability you need to strengthen and the type of work you are responsible for delivering.",
+    "proposed": "Compare programmes by your current responsibilities and the skills you want to develop.",
+    "reason": "Remove repetition while preserving role-based selection.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/home/components/ForEmployers.tsx",
+    "current": "Learn more",
+    "proposed": "Explore employer development",
+    "reason": "Describe the linked employer page.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/contact/components/BeforeYouReachOut.tsx",
+    "current": "Select \"Employer\" or \"HR / L&D\" in the form. We regularly work with organisations building capability across a team.",
+    "proposed": "Tell us your organisation and role, then describe your team’s development needs in the message field.",
+    "reason": "Match the fields actually available in the enquiry form.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/contact/components/BeforeYouReachOut.tsx",
+    "current": "Yes. Request an adviser call above, or book a consultation directly from the events page at a time that suits you.",
+    "proposed": "Yes. Request an adviser call using the consultation form. Our team will contact you to agree the next step.",
+    "reason": "Do not imply that Events offers a confirmed consultation calendar.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/faq/components/BrowseByTopicData.ts",
+    "current": "What happens after I book a session?",
+    "proposed": "What happens after I request a consultation?",
+    "reason": "Describe an enquiry rather than a booking.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/faq/components/BrowseByTopicData.ts",
+    "current": "The team discusses your role, goals, experience, employer position and possible funding route, then explains the most relevant next step.",
+    "proposed": "The team will contact you to discuss your role, goals, experience, employer support and possible funding route, then agree the next step.",
+    "reason": "Explain what follows submitting the request.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/apprentices/components/CostForEligibleLearners.tsx",
+    "current": "\\u00A30",
+    "proposed": "&pound;0",
+    "reason": "Render the intended currency symbol instead of a literal Unicode escape.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/apprentices/components/CostForEligibleLearners.tsx",
+    "current": "Check your eligibility",
+    "proposed": "Ask about eligibility",
+    "reason": "The existing destination is Contact, not the interactive checker.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/apprentices/components/YourJourney.tsx",
+    "current": "Learn & Practice",
+    "proposed": "Learn & Practise",
+    "reason": "Use British spelling for the verb.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/apprentices/components/LearnerSupport.tsx",
+    "current": "Everything You Need to Succeed",
+    "proposed": "Support for your learning and development",
+    "reason": "Replace an absolute, generic heading.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/apprentices/components/LearnerSupport.tsx",
+    "current": "Four pillars of support — from certification to wellbeing. Every one designed to keep you on track.",
+    "proposed": "Explore preparation, tutoring, masterclasses and guidance for your chosen route.",
+    "reason": "Describe the four displayed cards; there is no wellbeing card in this group.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/apprentices/components/ForApprenticesProfessionals.tsx",
+    "current": "Start your application",
+    "proposed": "Discuss your options",
+    "reason": "The button opens the contact form, not an application workflow.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/apprentices/components/ReadyToAdvanceYourCareerInProjectControls.tsx",
+    "current": "Start your application",
+    "proposed": "Discuss your options",
+    "reason": "The button opens the contact form, not an application workflow.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-engineering/components/EngineeringAdvancedManufacturing.tsx",
+    "current": "Control complex engineering programmes with precision, integration and confidence.",
+    "proposed": "Build integrated project controls skills for complex engineering programmes.",
+    "reason": "Lead with the offered skills and reduce heading length.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-public-sector/components/EmployerQuestions.tsx",
+    "current": " Employer-confirmed impact",
+    "proposed": "",
+    "reason": "Remove an orphan source label from the end of the answer.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-public-sector/components/EmployerQuestions.tsx",
+    "current": "They may be potentially fully funded",
+    "proposed": "They may be fully funded",
+    "reason": "Remove a duplicated qualifier; all funding conditions remain.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/campaign/construction/components/ConstructionDeliveryProblemsThatStrongerControlsSolve.tsx",
+    "current": "These are not inevitable. They are capability gaps the Operational PCP route closes.",
+    "proposed": "Develop planning, cost and change-control skills to address these construction challenges.",
+    "reason": "Describe learning rather than guaranteeing that training closes every delivery gap.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/campaign/energy/components/CapitalProgrammesWithoutIntegratedControlsVsCapitalProgrammesWithIntegratedControls.tsx",
+    "current": "The difference between hoping for the best and building the capability to control delivery.",
+    "proposed": "Connect cost, schedule and risk information to support decisions across capital programmes.",
+    "reason": "Replace a dismissive comparison with practical value.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/what-is-pcp-apprenticeship/components/FundingFundingSubjectToEligibility.tsx",
+    "current": "Funding: Funding Subject to Eligibility",
+    "proposed": "Apprenticeship funding",
+    "reason": "Remove duplicated heading wording; retain the funding qualification in the body.",
+    "occurrences": 2
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/strategic-vs-operational/components/TwoPathwaysOneProfessionalStandardDifferentCareerOutcomes.tsx",
+    "current": "Two Pathways. One Professional Standard. Different Career Outcomes.",
+    "proposed": "Strategic and operational pathways: different responsibilities",
+    "reason": "Describe the actual comparison without implying fixed career outcomes.",
+    "occurrences": 2
+  },
+  {
+    "file": "frontend/src/components/feature/SectorPathwayChoice.tsx",
+    "current": "â€”",
+    "proposed": "—",
+    "reason": "Correct mojibake in the visible pathway credit descriptions.",
+    "occurrences": 9
+  },
+  {
+    "file": "frontend/src/pages/strategic-pcp/components/ExpertLedLearning.tsx",
+    "current": "Advisor focused",
+    "proposed": "Adviser focused",
+    "reason": "Use British English.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/dashboard/pages/PagesPage.tsx",
+    "current": "Click a highlighted text or image in the page, or choose a section below. All page sections appear in their original order.",
+    "proposed": "Click highlighted text, an image or a button in the preview, or choose a section below. Edit the selected content and any connected link in the panel.",
+    "reason": "Include the button-link editing capability in the instructions.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/dashboard/pages/PagesPage.tsx",
+    "current": "Edit text and images directly from a preview of the real page.",
+    "proposed": "Edit page text, images and button links from a preview of the real page.",
+    "reason": "Match current editor capabilities.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/dashboard/pages/ContentOwnershipPage.tsx",
+    "current": "Page-local section text and static images, with draft, publish and previous versions",
+    "proposed": "Page-local section text, static images and button links, with drafts, publishing and previous versions",
+    "reason": "Match current editor capabilities.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/apm-level-4/components/TrustAndRelevance.tsx",
+    "current": "<p className=\"mx-auto mt-6 max-w-2xl text-xs leading-relaxed text-foreground-600\">No verified programme-specific testimonial copy or approved employer-logo assets were available locally, so endorsements have not been invented or implied.</p>",
+    "proposed": "",
+    "reason": "Remove internal editorial/process commentary; retain approved-logo controls and useful surrounding content.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/pcp-master/components/EmployerPartnershipsAcrossProjectDrivenSectors.tsx",
+    "current": "<p className=\"mt-5 text-xs text-foreground-600\">No named, approved employer-logo assets were available locally, so logos have not been recreated or implied as endorsements.</p>",
+    "proposed": "",
+    "reason": "Remove internal editorial/process commentary; retain approved-logo controls and useful surrounding content.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/employers/components/BuiltForProjectDrivenOrganisations.tsx",
+    "current": "<p className=\"mt-5 text-xs text-foreground-600\">Employer logos are shown only where explicit approval to present them as endorsements is available.</p>",
+    "proposed": "",
+    "reason": "Remove internal editorial/process commentary; retain approved-logo controls and useful surrounding content.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/employers/components/EmployerResources.tsx",
+    "current": "<p className=\"mt-5 text-center text-xs text-foreground-600\">The progress-review card returns to the guidance on this page because no separate approved guide route is currently available.</p>",
+    "proposed": "",
+    "reason": "Remove internal editorial/process commentary; retain approved-logo controls and useful surrounding content.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/pcp-master/components/ExpectedWorkload.tsx",
+    "current": "<strong>Workload clarification:</strong> the source also states “approximately seven hours”, but its activity breakdown totals 8 hours (2 + 3 + 3). This page uses the stated activity breakdown without silently changing it.</p>",
+    "proposed": "<strong>Confirm your study plan:</strong> Ask the College to confirm your weekly learning commitment and total programme hours before enrolment.</p>",
+    "reason": "Move the source arithmetic conflict to BC04; preserve existing figures until confirmed.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/apprenticeship-eligibility-checker/checkerData.ts",
+    "current": "book an information session",
+    "proposed": "request a consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/pcp-master/programmeData.ts",
+    "current": "Book a one-to-one information session",
+    "proposed": "Request a one-to-one consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/pmo-pcp/sectionData.ts",
+    "current": "Book a PMO Route consultation",
+    "proposed": "Request a PMO consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/strategic-pcp/components/ProjectControlsProfessionalLevel6.tsx",
+    "current": "Book an information session",
+    "proposed": "Request a consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/strategic-pcp/components/YourCreditJourney.tsx",
+    "current": "Book an information session",
+    "proposed": "Request a consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/programmes/components/ForEmployers.tsx",
+    "current": "Book Employer Consultation",
+    "proposed": "Request an employer consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/pmo-pcp/components/DevelopPMOCapabilityInsideYourOrganisation.tsx",
+    "current": "Book an Employer PMO Consultation",
+    "proposed": "Request an employer PMO consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/pmo-pcp/components/ProjectControlsProfessionalLevel6.tsx",
+    "current": "Book a PMO consultation",
+    "proposed": "Request a PMO consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-public-sector/components/DevelopAccountableProjectCapability.tsx",
+    "current": "Book an employer capability review",
+    "proposed": "Request an employer capability review",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-energy/components/BuildTheCapabilityToControlComplexEnergyProgrammesWithConfidence.tsx",
+    "current": "Book an information session",
+    "proposed": "Request a consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-energy/components/EmployerCapability.tsx",
+    "current": "Book a short capability conversation",
+    "proposed": "Request a short capability conversation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-energy/components/EmployerCapability.tsx",
+    "current": "Book a capability conversation",
+    "proposed": "Request a capability conversation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-energy/components/PracticalAnswers.tsx",
+    "current": "book a one-to-one information session",
+    "proposed": "request a one-to-one consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-construction/components/ChooseYourPathwayCheckYourAccessRoute.tsx",
+    "current": "Book an information session",
+    "proposed": "Request a consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-construction/components/EmployerCapability.tsx",
+    "current": "Book a short capability conversation",
+    "proposed": "Request a short capability conversation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-construction/components/EmployerCapability.tsx",
+    "current": "Book a capability conversation",
+    "proposed": "Request a capability conversation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-construction/components/PracticalAnswers.tsx",
+    "current": "book a one-to-one information session",
+    "proposed": "request a one-to-one consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp/components/OperationalPathwayQuickEnquiry.tsx",
+    "current": "Book an information session",
+    "proposed": "Request a consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp/components/Section202627LearnerAndEmployerPathway.tsx",
+    "current": "book an information session",
+    "proposed": "request a consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp/components/TakeTheNextStep.tsx",
+    "current": "book an information session",
+    "proposed": "request a consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/chartered-pmo-pathway/components/ProgrammeInformationAndNextSteps.tsx",
+    "current": "Apply or Book an information session",
+    "proposed": "Discuss your next step",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/chartered-pmo-pathway/components/ProgrammeInformationAndNextSteps.tsx",
+    "current": "Book an information session",
+    "proposed": "Request a consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/chartered-pmo-pathway/components/ProjectControlsProfessionalLevel6.tsx",
+    "current": "Book an information session",
+    "proposed": "Request a consultation",
+    "reason": "Match enquiry-based destinations; preserve routes and event-registration labels.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-construction/components/CoreProfessionalCapability.tsx",
+    "current": "The AI in Project Controls develops",
+    "proposed": "AI in Project Controls develops",
+    "reason": "Remove the stray article from the subject name.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp-energy/components/CoreProfessionalCapability.tsx",
+    "current": "The AI in Project Controls develops",
+    "proposed": "AI in Project Controls develops",
+    "reason": "Remove the stray article from the subject name.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/apprentices/components/LearnerSupport.tsx",
+    "current": "Master Classes",
+    "proposed": "Masterclasses",
+    "reason": "Use consistent generic masterclass terminology without altering event record titles.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/apprentices/components/WhatYouWillGain.tsx",
+    "current": "Master Class Events",
+    "proposed": "Masterclass events",
+    "reason": "Use consistent generic masterclass terminology without altering event record titles.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/campaign/construction/components/ForConstructionEmployersPlannersAndProjectControlsTeams.tsx",
+    "current": "Stop Letting Schedule Delays and Cost Drift Become Normal",
+    "proposed": "Build stronger planning, cost and change-control skills",
+    "reason": "Lead with skills rather than attributing every delivery problem to capability.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/construction-training/components/StopLettingScheduleDelaysAndCostDriftBecomeNormal.tsx",
+    "current": "Stop Letting Schedule Delays and Cost Drift Become Normal",
+    "proposed": "Build stronger planning, cost and change-control skills",
+    "reason": "Lead with skills rather than attributing every delivery problem to capability.",
+    "occurrences": 2
+  },
+  {
+    "file": "frontend/src/pages/campaign/energy/components/ForEnergyUtilitiesAndCapitalProgrammeTeams.tsx",
+    "current": "For Capital Programmes Where Weak Controls Are Too Expensive to Ignore",
+    "proposed": "Project controls skills for complex energy programmes",
+    "reason": "Replace threat-led language with the specific offer.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/energy-training/components/ForCapitalProgrammesWhereWeakControlsAreTooExpensiveToIgnore.tsx",
+    "current": "For Capital Programmes Where Weak Controls Are Too Expensive to Ignore",
+    "proposed": "Project controls skills for complex energy programmes",
+    "reason": "Replace threat-led language with the specific offer.",
+    "occurrences": 2
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/commercial-routes-explained/components/NotEligibleForApprenticeshipFundingYouStillDeserveProfessionalProjectControlsDevelopment.tsx",
+    "current": "Not Eligible for Apprenticeship Funding? You Still Deserve Professional Project Controls Development.",
+    "proposed": "Explore professional development through the commercial route",
+    "reason": "Describe the alternative route without patronising language.",
+    "occurrences": 2
+  },
+  {
+    "file": "frontend/src/pages/knowledge-hub/apm-chpp-readiness/components/HonestyAboutProfessionalRecognitionMatters.tsx",
+    "current": "When a professional development programme mentions \"ChPP readiness,\" it is easy to misunderstand what that means. Some providers blur the line between preparation and guarantee. At the College of Project Controls, we believe honesty about professional recognition matters. This article explains exactly what APM ChPP readiness support includes, how it helps and — equally important — what it does not promise.",
+    "proposed": "This guide explains how ChPP readiness support helps you prepare professional evidence, what support may include and why eligibility and Chartered status remain subject to APM’s independent assessment.",
+    "reason": "Explain the reader benefit and preserve the independent assessment distinction without competitor allegations.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/strategic-operational-pcp/routeData.ts",
+    "current": "Most development programmes make you choose between technical and strategic. The combined pathway builds both — giving you the technical depth to manage the controls and the strategic capability to influence the decisions.",
+    "proposed": "Develop technical project controls and strategic decision-making together, connecting plans, costs and risk information with programme and portfolio priorities.",
+    "reason": "Remove unsupported comparison and explain how the capabilities connect.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/strategic-operational-pcp/routeData.ts",
+    "current": "Most development programmes force you to choose between technical and strategic — leaving you with half the capability your role requires.",
+    "proposed": "Develop both detailed project controls and the ability to explain their implications for programme decisions.",
+    "reason": "Replace competitor generalisation with the intended development need.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/strategic-operational-pcp/routeData.ts",
+    "current": "Technical Depth Without Strategic Voice. Or Strategic Awareness Without Technical Credibility.",
+    "proposed": "Connect technical controls with strategic decisions",
+    "reason": "Reduce a long abstract heading.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/chartered-pmo-pathway/components/IndependentProfessionalDevelopmentRoute.tsx",
+    "current": "do not describe Portfolio Management as an APMG award unless a current approval or contract supports that exact wording.",
+    "proposed": "Confirm the awarding body and exact qualification in your written offer.",
+    "reason": "Replace an internal publishing instruction with useful learner guidance; retain the preceding awarding-body context.",
+    "occurrences": 1
+  },
+  {
+    "file": "frontend/src/pages/operational-pcp/components/Section202627LearnerAndEmployerPathway.tsx",
+    "current": "{\"request a consultation \"}",
+    "proposed": "{\"Request a consultation \"}",
+    "reason": "Use sentence case for the standalone CTA.",
+    "occurrences": 1
+  }
+]

@@ -6,7 +6,7 @@ from django.contrib.auth import get_user_model
 from django.db.models import Q
 from django.utils import timezone
 
-from apps.content.models import Coach, Enquiry, Event, MentorProfile, Partner, ProfessionalCredential, Sector
+from apps.content.models import Coach, Enquiry, Event, MentorProfile, Partner, ProfessionalCredential, Sector, ShortCourse
 
 from .models import MediaAsset, NavigationGroup, NavigationItem, Page, Section
 from .permissions import IsDashboardUser
@@ -18,6 +18,7 @@ from .serializers import (
     DashboardPartnerSerializer,
     DashboardProfessionalCredentialSerializer,
     DashboardSectorSerializer,
+    DashboardShortCourseSerializer,
     MediaAssetSerializer,
     NavigationGroupSerializer,
     NavigationItemSerializer,
@@ -75,7 +76,7 @@ class MediaAssetViewSet(viewsets.ModelViewSet):
     queryset = MediaAsset.objects.all()
     serializer_class = MediaAssetSerializer
     permission_classes = [IsDashboardUser]
-    parser_classes = [MultiPartParser, FormParser]
+    parser_classes = [MultiPartParser, FormParser, JSONParser]
 
     def perform_create(self, serializer):
         serializer.save(uploaded_by=self.request.user)
@@ -114,6 +115,12 @@ class SectorViewSet(viewsets.ModelViewSet):
     serializer_class = DashboardSectorSerializer
     permission_classes = [IsDashboardUser]
     parser_classes = [MultiPartParser, FormParser, JSONParser]
+
+
+class ShortCourseViewSet(viewsets.ModelViewSet):
+    queryset = ShortCourse.objects.all()
+    serializer_class = DashboardShortCourseSerializer
+    permission_classes = [IsDashboardUser]
 
 
 class EventViewSet(viewsets.ModelViewSet):

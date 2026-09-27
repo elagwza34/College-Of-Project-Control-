@@ -20,7 +20,7 @@ export default function BuildTheCapabilityToControlComplexEnergyProgrammesWithCo
 {"Check my eligibility "}
 </SiteLink>
 <SiteLink href="/book-a-session" className="cta-button inline-flex min-h-12 items-center justify-center rounded-md px-6 py-3 text-sm font-bold border border-primary-700 text-primary-950">
-{"Book an information session "}
+{"Request a consultation "}
 </SiteLink>
 </div>
 </div>

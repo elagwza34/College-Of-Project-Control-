@@ -1,6 +1,7 @@
 import { reportCmsError } from '../api/reportError';
 import { useEffect, useRef, useState } from 'react';
 import { cmsApi } from '../api/client';
+import { DashboardEmptyState, DashboardPageHeader, DashboardSkeletonList, StatusBadge } from '../components/DashboardPrimitives';
 
 interface Partner {
   id: number;
@@ -46,7 +47,7 @@ export default function PartnersPage() {
 
   const deletePartner = async (id: number) => {
     try {
-    if (!window.confirm('Delete this partner logo?')) return;
+    if (!window.confirm('Delete this partner logo? It will be removed from the homepage partner logo grid. This action cannot be undone.')) return;
     await cmsApi.del(`/partners/${id}/`);
     load();
   
@@ -55,10 +56,12 @@ export default function PartnersPage() {
 
   return (
     <div>
-      <div>
-        <h1 className="font-heading text-2xl font-bold text-foreground-900">Partner logos</h1>
-        <p className="mt-1 text-sm text-foreground-600">Logos shown in the partner logo grid on the homepage.</p>
-      </div>
+      <DashboardPageHeader
+        eyebrow="People & recognition"
+        title="Partner logos"
+        description="Manage the logos shown in the partner logo grid on the homepage."
+        meta={partners && <StatusBadge tone="info">{partners.length} partner logos</StatusBadge>}
+      />
 
       <div className="mt-6 flex flex-wrap items-end gap-3 rounded-xl border border-background-200/70 bg-white p-4">
         <div className="min-w-0 flex-1">
@@ -77,15 +80,17 @@ export default function PartnersPage() {
           disabled={adding || !newLogoUrl.trim()}
           className="btn-primary px-4 py-2 text-sm font-semibold disabled:opacity-50"
         >
-          + Add Logo
+          Add logo
         </button>
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {partners === null ? (
-          <p className="text-sm text-foreground-400">Loading…</p>
+          <div className="sm:col-span-2 lg:col-span-3"><DashboardSkeletonList rows={3} /></div>
         ) : partners.length === 0 ? (
-          <p className="text-sm text-foreground-400">No partner logos yet.</p>
+          <div className="sm:col-span-2 lg:col-span-3">
+            <DashboardEmptyState icon="ri-award-line" title="No partner logos yet" description="Add a partner logo link to show it on the homepage." />
+          </div>
         ) : (
           partners.map((partner) => (
             <PartnerEditor key={partner.id} partner={partner} onDelete={() => deletePartner(partner.id)} onSaved={load} />
@@ -150,8 +155,8 @@ function PartnerEditor({ partner, onDelete, onSaved }: { partner: Partner; onDel
             <i className="ri-image-line text-2xl text-foreground-300" />
           )}
         </div>
-        <button type="button" onClick={onDelete} className="text-xs font-semibold text-red-600 hover:text-red-700">
-          Delete
+        <button type="button" onClick={onDelete} className="text-xs font-semibold text-red-700 hover:text-red-800">
+          Delete logo
         </button>
       </div>
 
@@ -161,7 +166,7 @@ function PartnerEditor({ partner, onDelete, onSaved }: { partner: Partner; onDel
           onClick={() => fileInputRef.current?.click()}
           className="text-xs font-semibold text-primary-600 hover:text-primary-700"
         >
-          Upload photo
+          Upload logo
         </button>
         <input
           ref={fileInputRef}
@@ -228,10 +233,10 @@ function PartnerEditor({ partner, onDelete, onSaved }: { partner: Partner; onDel
           disabled={saving}
           className="btn-primary px-4 py-2 text-sm font-semibold disabled:opacity-50"
         >
-          {saving ? 'Saving…' : 'Save'}
+          {saving ? 'Saving...' : 'Save partner logo'}
         </button>
         {!form.is_active && <span className="text-xs font-semibold text-background-600">Draft</span>}
-        {savedMsg && <span className="text-xs font-medium text-highlight-700">Saved!</span>}
+        {savedMsg && <span role="status" className="text-xs font-medium text-highlight-700">Partner logo saved.</span>}
       </div>
     </div>
   );

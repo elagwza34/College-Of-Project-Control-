@@ -1,5 +1,44 @@
+const scenario = [
+  ['Challenge', 'Milestones, dependencies, risks and supplier updates arrive in different formats.'],
+  ['Workplace application', 'Establish common data definitions, a controlled reporting cycle and clear ownership.'],
+  ['Governance improvement', 'Link schedule, cost, risk and change to the approved baseline in board papers.'],
+  ['Organisational value', 'Aim for earlier warning, clearer accountabilities and repeatable internal controls.'],
+  ['Workplace evidence', 'Record applied activity, assignments, reflection and employer feedback.'],
+];
+
 export default function IllustrativePublicSectorApplication() {
   return (
-<section id="workplace-evidence" className="scroll-mt-44 py-16 odd:bg-background-100 md:py-20"><div className="container-site space-y-8"><div className="max-w-3xl space-y-4"><p className="text-xs font-bold uppercase tracking-[.15em] text-accent-700">{"Illustrative public-sector application"}</p><h2 className="text-3xl md:text-4xl">{"From fragmented reporting to defensible programme oversight."}</h2><p className="leading-relaxed text-foreground-600">{"This is an illustrative workplace scenario, not a verified learner testimonial or a guaranteed outcome."}</p></div><div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Challenge"}</h3><p className="leading-relaxed text-foreground-600">{"Milestones, dependencies, risks and supplier updates in different formats limit confidence in the programme view."}</p></article><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Workplace application"}</h3><p className="leading-relaxed text-foreground-600">{"Establish common data definitions, a controlled reporting cycle, clear ownership and an integrated decision log."}</p></article><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Governance improvement"}</h3><p className="leading-relaxed text-foreground-600">{"Link schedule, cost, risk and change to the approved baseline in board papers, with escalation and recommended action."}</p></article><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Organisational value"}</h3><p className="leading-relaxed text-foreground-600">{"Aim for earlier warning, clearer accountabilities and a repeatable internal controls process."}</p></article><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Workplace evidence"}</h3><p className="leading-relaxed text-foreground-600">{"Record applied activity, assignments, professional reflection and employer feedback. Protect confidential information and review impact with the employer."}</p></article></div></div></section>
+    <section id="workplace-evidence" className="scroll-mt-44 bg-white py-16 md:py-24">
+      <div className="container-site">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
+          <div className="max-w-3xl">
+            <p className="text-xs font-bold uppercase tracking-[.18em] text-accent-700">Illustrative public-sector application</p>
+            <h2 className="mt-4 text-3xl font-semibold leading-tight text-foreground-950 md:text-5xl">
+              From fragmented reporting to defensible programme oversight.
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-foreground-600">
+              An illustrative workplace scenario showing how project-controls practice can be applied without claiming a
+              guaranteed learner outcome.
+            </p>
+          </div>
+
+          <div className="rounded-lg border border-background-200 bg-background-50 p-4 md:p-5">
+            <div className="space-y-3">
+              {scenario.map(([title, copy], index) => (
+                <article key={title} className="flex gap-4 rounded-lg border border-background-200 bg-white p-5 shadow-sm">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent-50 text-xs font-bold text-accent-800">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <h3 className="font-bold text-foreground-950">{title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-foreground-600">{copy}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

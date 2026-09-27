@@ -83,14 +83,6 @@ export default function FlexibleProfessionalDevelopment() {
                 We can map your current responsibilities and recommend the right level of development.
               </p>
             </div>
-
-            <SiteLink
-              href="/contact"
-              className="btn-primary mt-8 inline-flex items-center gap-2 px-7 py-3.5 font-semibold text-sm cursor-pointer transition-all duration-300 whitespace-nowrap lift-hover"
-            >
-              Explore Specialist Modules
-              <i className="ri-arrow-right-line text-sm"></i>
-            </SiteLink>
           </div>
 
           <div ref={ref} className="relative">

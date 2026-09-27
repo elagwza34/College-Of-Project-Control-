@@ -48,12 +48,12 @@ Each page guide lists local entry points and shared implementations. Editing a l
 | [legal/terms/page.tsx](legal/terms/page.tsx) | `/terms` | [Sections](legal/terms/README.md) |
 | [mentors/detail/page.tsx](mentors/detail/page.tsx) | `/mentors/:id` | [Sections](mentors/detail/README.md) |
 | [not-found/page.tsx](not-found/page.tsx) | `*` | [Sections](not-found/README.md) |
-| [operational-pcp/page.tsx](operational-pcp/page.tsx) | `/project-controls-professional/operational-route`, `/operational-pcp` | [Sections](operational-pcp/README.md) |
+| [project-controls-professional-operational-route/page.tsx](project-controls-professional-operational-route/page.tsx) | `/project-controls-professional/operational-route` | [Sections](project-controls-professional-operational-route/README.md) |
 | [operational-pcp-construction/page.tsx](operational-pcp-construction/page.tsx) | `/project-controls-professional/construction-route`, `/operational-pcp-construction` | [Sections](operational-pcp-construction/README.md) |
 | [operational-pcp-energy/page.tsx](operational-pcp-energy/page.tsx) | `/project-controls-professional/energy-oil-gas-utilities-route`, `/operational-pcp-energy` | [Sections](operational-pcp-energy/README.md) |
 | [operational-pcp-engineering/page.tsx](operational-pcp-engineering/page.tsx) | `/project-controls-professional/engineering-manufacturing-aerospace-route`, `/operational-pcp-engineering` | [Sections](operational-pcp-engineering/README.md) |
 | [operational-pcp-public-sector/page.tsx](operational-pcp-public-sector/page.tsx) | `/project-controls-professional/public-sector-councils-route`, `/operational-pcp-public-sector` | [Sections](operational-pcp-public-sector/README.md) |
-| [pcp-master/page.tsx](pcp-master/page.tsx) | `/project-controls-professional-level-6`, `/pcp-master` | [Sections](pcp-master/README.md) |
+| [project-controls-professional-level-6/page.tsx](project-controls-professional-level-6/page.tsx) | `/project-controls-professional-level-6` | [Sections](project-controls-professional-level-6/README.md) |
 | [pmo-pcp/page.tsx](pmo-pcp/page.tsx) | `/project-controls-professional/pmo-governance-route`, `/pmo-pcp` | [Sections](pmo-pcp/README.md) |
 | [programmes/page.tsx](programmes/page.tsx) | `/programmes` | [Sections](programmes/README.md) |
 | [strategic-operational-pcp/page.tsx](strategic-operational-pcp/page.tsx) | `/project-controls-professional/strategic-operational-route`, `/strategic-operational-pcp` | [Sections](strategic-operational-pcp/README.md) |

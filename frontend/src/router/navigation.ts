@@ -4,11 +4,8 @@ export const destinations = {
 } as const;
 const legacyTargets: Record<string, string> = {
   '/apprenticeship-eligibility-checker/': destinations.eligibility,
-  '/pcp-master#consultation': destinations.consultation,
-  '/pcp-master#routes': '/project-controls-professional-level-6#pathways',
   '#consultation': destinations.consultation, '#eligibility': destinations.eligibility,
   '#routes': destinations.programmes, '/employers#process': '/employers#how-it-works',
-  '/pcp-master#lead-magnet': '/contact?context=Employer%20guide',
   '/project-controls-professional-level-6#consultation': destinations.consultation,
   '/project-controls-professional-level-6#routes': '/project-controls-professional-level-6#pathways',
   '/project-controls-professional-level-6#proof': '/testimonials',

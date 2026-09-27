@@ -1,6 +1,7 @@
 import { reportCmsError } from '../api/reportError';
 import { useEffect, useState } from 'react';
 import { cmsApi } from '../api/client';
+import { DashboardEmptyState, DashboardPageHeader, DashboardSkeletonList, StatusBadge } from '../components/DashboardPrimitives';
 
 interface ProfessionalCredential {
   id: number;
@@ -36,7 +37,7 @@ export default function ProfessionalCredentialsPage() {
   };
 
   const deleteLogo = async (id: number) => {
-    if (!window.confirm('Delete this logo?')) return;
+    if (!window.confirm('Delete this professional credential logo? It will be removed from the recognition section. This action cannot be undone.')) return;
     try {
       await cmsApi.del(`/professional-credentials/${id}/`);
       load();
@@ -47,17 +48,17 @@ export default function ProfessionalCredentialsPage() {
 
   return (
     <div>
-      <div>
-        <h1 className="font-heading text-2xl font-bold text-foreground-900">Professional credentials &amp; Recognition</h1>
-        <p className="mt-1 text-sm text-foreground-600">
-          Logos shown in the shared professional recognition section across the website.
-        </p>
-      </div>
+      <DashboardPageHeader
+        eyebrow="People & recognition"
+        title="Professional credentials and recognition"
+        description="Manage the logos shown in the shared professional recognition section across the website."
+        meta={credentials && <StatusBadge tone="info">{credentials.length} logos</StatusBadge>}
+      />
 
-      <section className="mt-6 rounded-xl border border-background-200/70 bg-white p-5">
+      <section className="rounded-xl border border-background-200/70 bg-white p-5">
         <div className="flex items-center gap-2">
-          <i className="ri-add-circle-line text-lg text-primary-600" />
-          <h2 className="font-heading text-base font-bold text-foreground-900">Add logo</h2>
+          <i className="ri-add-circle-line text-lg text-primary-600" aria-hidden="true" />
+          <h2 className="font-heading text-base font-bold text-foreground-900">Add credential logo</h2>
         </div>
         <div className="mt-4 flex flex-wrap items-end gap-3">
           <label className="min-w-[280px] flex-1 text-xs font-semibold text-foreground-600">
@@ -75,16 +76,18 @@ export default function ProfessionalCredentialsPage() {
             disabled={adding || !imageUrl.trim()}
             className="btn-primary px-5 py-2 text-sm font-semibold disabled:opacity-50"
           >
-            {adding ? 'Adding…' : 'Add logo'}
+            {adding ? 'Adding logo...' : 'Add logo'}
           </button>
         </div>
       </section>
 
       <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {credentials === null ? (
-          <p className="text-sm text-foreground-400">Loading…</p>
+          <div className="col-span-full"><DashboardSkeletonList rows={3} /></div>
         ) : credentials.length === 0 ? (
-          <p className="text-sm text-foreground-400">No logos yet.</p>
+          <div className="col-span-full">
+            <DashboardEmptyState icon="ri-medal-2-line" title="No credential logos yet" description="Add a logo link to show a professional body or recognition mark on the website." />
+          </div>
         ) : (
           credentials.map((credential) => (
             <LogoEditor key={credential.id} credential={credential} onDelete={() => deleteLogo(credential.id)} onSaved={load} />
@@ -129,12 +132,12 @@ function LogoEditor({
         {imageSrc ? (
           <img loading="lazy" decoding="async" src={imageSrc} alt="" className="h-full w-full object-contain" />
         ) : (
-          <i className="ri-award-line text-3xl text-foreground-300" />
+          <i className="ri-award-line text-3xl text-foreground-300" aria-hidden="true" />
         )}
       </div>
       <div className="mt-3 flex items-end gap-2">
         <label className="flex-1 text-xs font-semibold text-foreground-600">
-          Order
+          Display order
           <input
             type="number"
             value={order}
@@ -143,13 +146,13 @@ function LogoEditor({
           />
         </label>
         <button type="button" onClick={save} disabled={saving} className="btn-primary px-3 py-1.5 text-xs font-semibold disabled:opacity-50">
-          {saving ? '…' : 'Save'}
+          {saving ? 'Saving...' : 'Save order'}
         </button>
       </div>
-      <button type="button" onClick={onDelete} className="mt-2 text-xs font-semibold text-red-600 hover:text-red-700">
-        Delete
+      <button type="button" onClick={onDelete} className="mt-2 text-xs font-semibold text-red-700 hover:text-red-800">
+        Delete logo
       </button>
-      {saved && <p className="mt-1 text-xs font-medium text-highlight-700">Saved!</p>}
+      {saved && <p role="status" className="mt-1 text-xs font-medium text-highlight-700">Order saved.</p>}
     </article>
   );
 }

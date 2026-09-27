@@ -21,11 +21,14 @@ from rest_framework.throttling import SimpleRateThrottle
 
 from apps.cms.permissions import IsDashboardUser
 from .models import Event, EventCategory, EventSyncControl, EventSyncJob
-from .eventbrite import control, encrypt_token, credentials, EventbriteClient, SyncError, enqueue
+from .eventbrite import control, encrypt_token, credentials, EventbriteClient, SyncError, enqueue, run_worker_tick
 
 
 def visible_events():
-    queryset = Event.objects.filter(is_active=True, source_is_public=True).exclude(remote_status__in=["draft", "deleted", "private", "unpublished", "missing"])
+    now = timezone.now()
+    public_source = Q(source_is_public=True) & ~Q(remote_status="draft")
+    eventbrite_upcoming_draft = Q(source="eventbrite", remote_status="draft") & (Q(ends_at__gt=now) | Q(ends_at__isnull=True, starts_at__gt=now))
+    queryset = Event.objects.filter(is_active=True).exclude(remote_status__in=["deleted", "private", "unpublished", "missing"]).filter(public_source | eventbrite_upcoming_draft)
     queryset = queryset.exclude(source_category__is_visible=False).exclude(classifications__is_visible=False)
     if not control().show_uncategorized:
         queryset = queryset.filter(Q(source_category__isnull=False) | Q(classifications__isnull=False))
@@ -196,7 +199,9 @@ class EventViewSet(viewsets.ModelViewSet):
         except SyncError as exc:
             raise ValidationError(str(exc))
         job = enqueue("event", f"/events/{event.external_id}/", "manual event")
-        return Response({"job_id": job.id, "status": job.status}, status=202)
+        worked = run_worker_tick()
+        job.refresh_from_db()
+        return Response({"job_id": job.id, "status": job.status, "result": job.result, "error": job.error, "worker_ran": worked}, status=202)
 
 
 class EventCategoryViewSet(viewsets.ModelViewSet):
@@ -354,7 +359,9 @@ def request_sync(request):
     except SyncError as exc:
         raise ValidationError(str(exc))
     job = enqueue(reason="dashboard")
-    return Response({"job_id": job.id, "status": job.status}, status=202)
+    worked = run_worker_tick()
+    job.refresh_from_db()
+    return Response({"job_id": job.id, "status": job.status, "result": job.result, "error": job.error, "worker_ran": worked}, status=202)
 
 
 @api_view(["GET"])

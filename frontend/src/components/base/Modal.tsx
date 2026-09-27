@@ -1,28 +1,37 @@
 import { useEffect, useId, useRef, type ReactNode } from 'react';
 
 /** Native dialog supplies focus containment and makes the background inert. */
-export default function Modal({ open, onClose, title, id, children }: {
-  open: boolean; onClose: () => void; title: string; id?: string; children: ReactNode;
+export default function Modal({ open, onClose, title, id, children, header, footer, panelClassName = '', bodyClassName = '', closeButtonContent = 'Close', closeButtonClassName = 'btn-secondary px-4 py-2' }: {
+  open: boolean; onClose: () => void; title: string; id?: string; children: ReactNode; header?: ReactNode; footer?: ReactNode; panelClassName?: string; bodyClassName?: string; closeButtonContent?: ReactNode; closeButtonClassName?: string;
 }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const closeButton = useRef<HTMLButtonElement>(null);
   const titleId = useId();
+  const requestClose = () => {
+    if (dialog.current?.open) dialog.current.close();
+    onClose();
+  };
   useEffect(() => {
     const element = dialog.current;
-    if (!open || !element) return;
+    if (!element) return;
+    if (!open) {
+      if (element.open) element.close();
+      return;
+    }
     const previous = document.activeElement as HTMLElement | null;
     const overflow = document.body.style.overflow;
-    element.showModal();
+    if (!element.open) element.showModal();
     document.body.style.overflow = 'hidden';
     closeButton.current?.focus();
     return () => {
-      element.close();
+      if (element.open) element.close();
       document.body.style.overflow = overflow;
       if (previous?.isConnected) previous.focus({ preventScroll: true });
     };
   }, [open]);
   return <dialog ref={dialog} id={id} aria-labelledby={titleId}
-    onCancel={(event) => { event.preventDefault(); onClose(); }}
+    onClose={onClose}
+    onCancel={(event) => { event.preventDefault(); requestClose(); }}
     onKeyDown={(event) => {
       if (event.key !== 'Tab') return;
       const controls = Array.from(event.currentTarget.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex="0"]'))
@@ -34,11 +43,23 @@ export default function Modal({ open, onClose, title, id, children }: {
         event.preventDefault(); first?.focus();
       }
     }}
-    className="m-auto max-h-[85dvh] w-[calc(100%-2rem)] max-w-lg overflow-y-auto rounded-panel bg-white p-5 text-foreground-900 shadow-overlay backdrop:bg-black/60">
-    <div className="mb-4 flex items-center justify-between gap-4">
-      <h2 id={titleId} className="font-heading text-xl font-bold">{title}</h2>
-      <button ref={closeButton} type="button" onClick={onClose} className="btn-secondary px-4 py-2">Close</button>
+    className={`modal-panel m-auto flex max-h-[85dvh] w-[calc(100%-2rem)] max-w-lg flex-col overflow-hidden rounded-lg bg-white p-0 text-foreground-900 shadow-overlay backdrop:bg-black/60 ${panelClassName}`}>
+    <div className="flex shrink-0 items-center justify-between gap-4 border-b border-background-200/70 p-5">
+      {header ? (
+        <>
+          <h2 id={titleId} className="sr-only">{title}</h2>
+          <div className="min-w-0 flex-1">{header}</div>
+        </>
+      ) : (
+        <h2 id={titleId} className="font-heading text-xl font-bold">{title}</h2>
+      )}
+      <button ref={closeButton} type="button" onClick={requestClose} className={`${closeButtonClassName} transition-all`} aria-label="Close">
+        {closeButtonContent}
+      </button>
     </div>
-    {children}
+    <div className={`min-h-0 flex-1 overflow-y-auto p-5 ${bodyClassName}`}>
+      {children}
+    </div>
+    {footer && <div className="shrink-0 border-t border-background-200/70 bg-white p-4">{footer}</div>}
   </dialog>;
 }

@@ -14,7 +14,7 @@ Find the label on the page, then open its component below. Shared implementation
 | Funding and costs | [FundingAndCosts.tsx](components/FundingAndCosts.tsx) | [PcpFundingStrip.tsx](../../../components/feature/PcpFundingStrip.tsx) |
 | Learn together | [LearnTogether.tsx](components/LearnTogether.tsx) | [EventsTeaser.tsx](../../../components/feature/EventsTeaser.tsx) |
 | PcpComplianceNote | [PcpComplianceNoteSection.tsx](components/PcpComplianceNoteSection.tsx) | [PcpComplianceNote.tsx](../../../components/feature/PcpComplianceNote.tsx) |
-| Professional Capability | [ProfessionalCapabilitySection.tsx](components/ProfessionalCapabilitySection.tsx) | [ProfessionalCapability.tsx](../../pcp-master/components/ProfessionalCapability.tsx) |
+| Professional Capability | [ProfessionalCapabilitySection.tsx](components/ProfessionalCapabilitySection.tsx) | [ProfessionalCapability.tsx](../../project-controls-professional-level-6/components/ProfessionalCapability.tsx) |
 | Route Fit | [RouteFit.tsx](components/RouteFit.tsx) | [CampaignRouteFit.tsx](../../../components/feature/CampaignRouteFit.tsx) |
 | Traditional Training vs Funded Professional Development | [TraditionalTrainingVsFundedProfessionalDevelopment.tsx](components/TraditionalTrainingVsFundedProfessionalDevelopment.tsx) | [CampaignTransformation.tsx](../../../components/feature/CampaignTransformation.tsx) |
 | What you could apply at work | [WhatYouCouldApplyAtWork.tsx](components/WhatYouCouldApplyAtWork.tsx) | [OutcomeExamples.tsx](../../../components/feature/OutcomeExamples.tsx) |

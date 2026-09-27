@@ -201,9 +201,7 @@ const seoEntries: Record<string, SeoEntry> = {
 
 const aliases: Record<string, string> = {
   '/ipc': '/institute-of-project-controls',
-  '/pcp-master': '/project-controls-professional-level-6',
   '/strategic-pcp': '/project-controls-professional/strategic-route',
-  '/operational-pcp': '/project-controls-professional/operational-route',
   '/strategic-operational-pcp': '/project-controls-professional/strategic-operational-route',
   '/pmo-pcp': '/project-controls-professional/pmo-governance-route',
   '/chartered-pmo-pathway': '/project-controls-professional/chartered-pmo-pathway',

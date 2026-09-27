@@ -58,7 +58,45 @@ export async function login(username: string, password: string): Promise<string>
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password }),
   });
+  if (response.status === 429) throw new Error('Too many login attempts. Please try again later.');
   if (!response.ok) throw new Error('Invalid email or password.');
   const data = (await response.json()) as { token: string };
   return data.token;
+}
+
+export async function logout(): Promise<void> {
+  const token = getToken();
+  if (!token) return;
+  const response = await fetch(`${CMS_BASE}/auth/logout/`, {
+    method: 'POST',
+    signal: AbortSignal.timeout(20000),
+    headers: { Authorization: `Token ${token}` },
+  });
+  if (!response.ok && response.status !== 401) {
+    throw new Error('Could not revoke the dashboard session.');
+  }
+}
+
+export async function requestPasswordReset(email: string): Promise<{ resetLink?: string }> {
+  const response = await fetch(`${CMS_BASE}/auth/password-reset/`, {
+    method: 'POST',
+    signal: AbortSignal.timeout(20000),
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email }),
+  });
+  if (response.status === 429) throw new Error('Too many requests. Please try again later.');
+  if (!response.ok) throw new Error('We could not process your request. Please try again.');
+  const data = await response.json().catch(() => ({})) as { reset_link?: string };
+  return { resetLink: data.reset_link };
+}
+
+export async function confirmPasswordReset(uid: string, token: string, password: string): Promise<void> {
+  const response = await fetch(`${CMS_BASE}/auth/password-reset/${encodeURIComponent(uid)}/${encodeURIComponent(token)}/`, {
+    method: 'POST',
+    signal: AbortSignal.timeout(20000),
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password }),
+  });
+  const data = await response.json().catch(() => ({})) as { detail?: string; password?: string[] };
+  if (!response.ok) throw new Error(data.password?.[0] || data.detail || 'We could not reset your password.');
 }

@@ -10,7 +10,7 @@ export default function HonestyAboutProfessionalRecognitionMatters() {
   return (
     <><h2 className="text-xl md:text-2xl font-heading font-bold text-foreground-950 mt-0 mb-4">Honesty About Professional Recognition Matters</h2>
         <p className="mb-4">
-          When a professional development programme mentions "ChPP readiness," it is easy to misunderstand what that means. Some providers blur the line between preparation and guarantee. At the College of Project Controls, we believe honesty about professional recognition matters. This article explains exactly what APM ChPP readiness support includes, how it helps and — equally important — what it does not promise.
+          This guide explains how ChPP readiness support helps you prepare professional evidence, what support may include and why eligibility and Chartered status remain subject to APM’s independent assessment.
         </p>
 
         <WhatIsAPMChPP /><WhatChPPReadinessSupportMeans /><WhatChPPReadinessSupportDoesNOTGuarantee /><WhyChPPReadinessMattersEvenWithoutAGuarantee /><KBCComplianceNote /><NextSteps /></>

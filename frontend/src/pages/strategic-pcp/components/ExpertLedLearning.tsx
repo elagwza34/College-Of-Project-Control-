@@ -83,7 +83,7 @@ export default function ExpertLedLearning() {
 {"Ray Mead "}
 </h3>
 <p className="text-base leading-relaxed">
-{"Advisor focused on Project Management Office leadership, organisational governance and transformation. "}
+{"Adviser focused on Project Management Office leadership, organisational governance and transformation. "}
 </p>
 <span>
 {"PMO · Governance · Transformation "}

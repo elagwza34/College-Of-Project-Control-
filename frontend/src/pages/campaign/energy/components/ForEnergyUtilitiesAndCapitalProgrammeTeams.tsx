@@ -6,7 +6,7 @@ export default function ForEnergyUtilitiesAndCapitalProgrammeTeams() {
   return (
     <PcpHero
           tag="For Energy, Utilities &amp; Capital Programme Teams"
-          headline="For Capital Programmes Where Weak Controls Are Too Expensive to Ignore"
+          headline="Project controls skills for complex energy programmes"
           subheadline="Develop project controls professionals who can strengthen baseline control, risk visibility, cost assurance, outage planning, commissioning milestones and governance confidence."
           description="In capital programmes, the cost of weak controls compounds over years — not months. Build the capability to protect programme outcomes from day one."
           fundingLine="Apprenticeship funding may be available, subject to current eligibility rules. Department for Education funding band up to £27,000 for eligible employers in England. Delivered by Kent Business College."

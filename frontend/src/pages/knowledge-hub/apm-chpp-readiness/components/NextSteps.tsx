@@ -9,7 +9,7 @@ export default function NextSteps() {
         </p>
         <ul className="list-disc pl-5 space-y-1 mb-4 text-foreground-700">
           <li><SiteLink href="/strategic-pcp" className="text-primary-600 hover:text-primary-700 underline">Strategic PCP Route</SiteLink> — Leadership-grade project controls with ChPP readiness</li>
-          <li><SiteLink href="/operational-pcp" className="text-primary-600 hover:text-primary-700 underline">Operational PCP Route</SiteLink> — Delivery confidence with professional recognition support</li>
+          <li><SiteLink href="/project-controls-professional/operational-route" className="text-primary-600 hover:text-primary-700 underline">Operational PCP Route</SiteLink> — Delivery confidence with professional recognition support</li>
           <li><SiteLink href="/pmo-pcp" className="text-primary-600 hover:text-primary-700 underline">PMO & Governance PCP</SiteLink> — Governance capability with APM recognition pathway</li>
         </ul>
       </>

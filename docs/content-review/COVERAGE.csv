@@ -1,0 +1,57 @@
+﻿Page group,Routes,Audit,Changed source files
+about,`/about`.,PAGES.md,1
+apm-level-4,`/associate-project-manager-level-4`.,PAGES.md,1
+apprentices,`/apprentices`.,PAGES.md,6
+apprenticeship-eligibility-checker,`/apprenticeship-eligibility-checker`.,PAGES.md,1
+articles,`/articles`.,PAGES.md,0
+articles/detail,`/articles/:slug`.,PAGES.md,0
+book-a-session,`/book-a-session`.,PAGES.md,0
+campaign/commercial-route,"`/commercial-project-controls-route`, `/campaign/commercial-route`.",PAGES.md,0
+campaign/construction,`/campaign/construction`.,PAGES.md,2
+campaign/energy,`/campaign/energy`.,PAGES.md,2
+campaign/head-of-pmo,`/campaign/head-of-pmo`.,PAGES.md,0
+campaign/hr-employer,`/campaign/hr-employer`.,PAGES.md,0
+campaign/public-sector,`/campaign/public-sector`.,PAGES.md,0
+chartered-pmo-pathway,"`/project-controls-professional/chartered-pmo-pathway`, `/chartered-pmo-pathway`.",PAGES.md,3
+contact,`/contact`.,PAGES.md,1
+employer-agreement,`/employer-agreement`.,PAGES.md,0
+employers,`/employers`.,PAGES.md,2
+events,`/events`.,PAGES.md,0
+events/detail,`/events/:slug`.,PAGES.md,0
+faq,`/faq`.,PAGES.md,1
+governance-board,`/governance-board`.,PAGES.md,0
+home,`/`.,PAGES.md,2
+ipc,"`/institute-of-project-controls`, `/ipc`.",PAGES.md,0
+knowledge-hub,`/knowledge-hub`.,PAGES.md,6
+knowledge-hub/apm-chpp-readiness,"`/knowledge-hub/apm-chpp-readiness-support`, `/knowledge-hub/apm-chpp-readiness`.",PAGES.md,1
+knowledge-hub/commercial-routes-explained,`/knowledge-hub/commercial-routes-explained`.,PAGES.md,1
+knowledge-hub/construction-training,`/knowledge-hub/construction-training`.,PAGES.md,1
+knowledge-hub/employer-apprenticeship-funding,`/knowledge-hub/employer-apprenticeship-funding`.,PAGES.md,0
+knowledge-hub/energy-training,`/knowledge-hub/energy-training`.,PAGES.md,1
+knowledge-hub/funded-pcp-employer-guide,"`/knowledge-hub/fully-funded-project-controls-apprenticeship`, `/knowledge-hub/funded-pcp-employer-guide`.",PAGES.md,0
+knowledge-hub/pcp-vs-pmp,"`/knowledge-hub/project-controls-level-6-vs-pmp`, `/knowledge-hub/pcp-vs-pmp`.",PAGES.md,0
+knowledge-hub/pmo-governance-training,`/knowledge-hub/pmo-governance-training`.,PAGES.md,0
+knowledge-hub/strategic-vs-operational,`/knowledge-hub/strategic-vs-operational`.,PAGES.md,1
+knowledge-hub/what-is-pcp-apprenticeship,`/knowledge-hub/what-is-pcp-apprenticeship`.,PAGES.md,1
+legal/accessibility,`/accessibility`.,PAGES.md,0
+legal/cookies,`/cookies`.,PAGES.md,0
+legal/privacy,`/privacy`.,PAGES.md,0
+legal/terms,`/terms`.,PAGES.md,0
+mentors/detail,`/mentors/:id`.,PAGES.md,0
+not-found,`*`.,PAGES.md,0
+operational-pcp,"`/project-controls-professional/operational-route`, `/operational-pcp`.",PAGES.md,3
+operational-pcp-construction,"`/project-controls-professional/construction-route`, `/operational-pcp-construction`.",PAGES.md,4
+operational-pcp-energy,"`/project-controls-professional/energy-oil-gas-utilities-route`, `/operational-pcp-energy`.",PAGES.md,4
+operational-pcp-engineering,"`/project-controls-professional/engineering-manufacturing-aerospace-route`, `/operational-pcp-engineering`.",PAGES.md,1
+operational-pcp-public-sector,"`/project-controls-professional/public-sector-councils-route`, `/operational-pcp-public-sector`.",PAGES.md,2
+pcp-master,"`/project-controls-professional-level-6`, `/pcp-master`.",PAGES.md,4
+pmo-pcp,"`/project-controls-professional/pmo-governance-route`, `/pmo-pcp`.",PAGES.md,3
+programmes,`/programmes`.,PAGES.md,2
+strategic-operational-pcp,"`/project-controls-professional/strategic-operational-route`, `/strategic-operational-pcp`.",PAGES.md,1
+strategic-pcp,"`/project-controls-professional/strategic-route`, `/strategic-pcp`.",PAGES.md,3
+testimonials,`/testimonials`.,PAGES.md,0
+thank-you/commercial,`/thank-you/commercial`.,PAGES.md,0
+thank-you/consultation,`/thank-you/consultation`.,PAGES.md,0
+thank-you/eligibility,`/thank-you/eligibility`.,PAGES.md,0
+thank-you/eventbrite,`/thank-you/eventbrite`.,PAGES.md,0
+thank-you/guide,`/thank-you/guide`.,PAGES.md,0

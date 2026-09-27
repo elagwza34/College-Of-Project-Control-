@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Coach, Enquiry, Event, MentorProfile, MenuItem, NavigationMenu, Page, PageSection, Partner, ProfessionalCredential, Sector, SiteSettings
+from .models import Coach, Enquiry, Event, MentorProfile, MenuItem, NavigationMenu, Page, PageSection, Partner, ProfessionalCredential, Sector, ShortCourse, SiteSettings
 
 
 class MentorPublicSerializer(serializers.ModelSerializer):
@@ -83,6 +83,17 @@ class SectorPublicSerializer(serializers.ModelSerializer):
             return obj.image_url or ""
         request = self.context.get("request")
         return request.build_absolute_uri(obj.image.url) if request else obj.image.url
+
+
+class ShortCoursePublicSerializer(serializers.ModelSerializer):
+    imageUrl = serializers.CharField(source="image_url")
+
+    class Meta:
+        model = ShortCourse
+        fields = (
+            "id", "slug", "title", "category", "duration", "format", "owner",
+            "audience", "summary", "focus", "detail", "icon", "imageUrl", "order",
+        )
 
 
 class EventPublicSerializer(serializers.ModelSerializer):
@@ -188,10 +199,11 @@ class PageSerializer(serializers.ModelSerializer):
 
 
 class EnquirySerializer(serializers.ModelSerializer):
-    organisation = serializers.CharField(required=False, allow_blank=True)
-    roleTitle = serializers.CharField(source="role_title", required=False, allow_blank=True)
-    enquiryType = serializers.CharField(source="enquiry_type", required=False, allow_blank=True)
-    sourcePath = serializers.CharField(source="source_path", required=False, allow_blank=True)
+    organisation = serializers.CharField(required=False, allow_blank=True, max_length=160)
+    roleTitle = serializers.CharField(source="role_title", required=False, allow_blank=True, max_length=140)
+    enquiryType = serializers.CharField(source="enquiry_type", required=False, allow_blank=True, max_length=80)
+    sourcePath = serializers.CharField(source="source_path", required=False, allow_blank=True, max_length=240)
+    message = serializers.CharField(required=False, allow_blank=True, max_length=10000)
 
     class Meta:
         model = Enquiry

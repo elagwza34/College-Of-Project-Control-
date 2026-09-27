@@ -1,11 +1,11 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useCallback, useContext, useState, type ReactNode } from 'react';
-import { clearToken, getToken, login as apiLogin, setToken } from '../api/client';
+import { clearToken, getToken, login as apiLogin, logout as apiLogout, setToken } from '../api/client';
 
 interface AuthContextValue {
   isAuthenticated: boolean;
   login: (username: string, password: string) => Promise<void>;
-  logout: () => void;
+  logout: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextValue | null>(null);
@@ -19,7 +19,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setTokenState(t);
   }, []);
 
-  const logout = useCallback(() => {
+  const logout = useCallback(async () => {
+    await apiLogout();
     clearToken();
     setTokenState(null);
   }, []);

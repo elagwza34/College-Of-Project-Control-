@@ -31,6 +31,7 @@ const linkColumns = [
       { label: 'About CPCM', href: '/about' },
       { label: 'Contact Us', href: '/contact' },
       { label: 'Articles', href: '/articles' },
+      { label: 'Case studies', href: '/case-studies' },
       
       { label: 'Events', href: '/events' },
       { label: 'Frequently Asked Questions', href: '/faq' },

@@ -82,6 +82,13 @@ class EventTests(APITestCase):
         self.assertEqual(refresh_one('123', self.remote), 'hidden')
         self.assertEqual(Event.objects.get().remote_status, 'deleted')
 
+    def test_eventbrite_upcoming_drafts_can_be_publicly_listed(self):
+        import_event(self.payload(id='555', status='draft'), self.remote)
+        event = Event.objects.get(external_id='555')
+        self.assertFalse(event.source_is_public)
+        self.assertEqual(self.client.get(self.library).data['count'], 1)
+        self.assertEqual(self.client.get(f'/api/v1/events/{event.slug}/').status_code, 200)
+
     def test_foreign_organization_rejected_and_partial_list_does_not_remove(self):
         with self.assertRaises(SyncError): import_event(self.payload(organization_id='999'), self.remote)
         self.assertFalse(Event.objects.exists())

@@ -5,7 +5,7 @@ const benefits = [
   { icon: 'ri-folder-chart-line', title: 'Portfolio Evidence', desc: 'Every assignment maps to your real project portfolio — no fake case studies, real deliverables that count.' },
   { icon: 'ri-medal-line', title: 'Certification Pathways', desc: 'Structured progression towards APM PMQ, PMI CAPM, and full chartered status milestones.' },
   { icon: 'ri-user-heart-line', title: 'Dedicated Mentor', desc: 'One-to-one guidance from industry practitioners who have been programme controls directors.' },
-  { icon: 'ri-calendar-event-line', title: 'Master Class Events', desc: 'Exclusive London in-person sessions with industry leaders, live case studies, and peer networking.' },
+  { icon: 'ri-calendar-event-line', title: 'Masterclass events', desc: 'Exclusive London in-person sessions with industry leaders, live case studies, and peer networking.' },
   { icon: 'ri-global-line', title: 'Flexible Live Delivery', desc: 'Study around your work schedule with interactive live online sessions, not pre-recorded videos.' },
 ];
 

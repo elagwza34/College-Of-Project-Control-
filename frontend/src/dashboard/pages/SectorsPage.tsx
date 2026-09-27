@@ -1,6 +1,7 @@
 import { reportCmsError } from '../api/reportError';
 import { useEffect, useRef, useState } from 'react';
 import { cmsApi } from '../api/client';
+import { DashboardEmptyState, DashboardPageHeader, DashboardSkeletonList, StatusBadge } from '../components/DashboardPrimitives';
 
 interface Sector {
   id: number;
@@ -52,7 +53,7 @@ export default function SectorsPage() {
 
   const deleteSector = async (id: number) => {
     try {
-    if (!window.confirm('Delete this sector?')) return;
+    if (!window.confirm('Delete this sector? It will be removed from the sector cards and any connected sector content. This action cannot be undone.')) return;
     await cmsApi.del(`/sectors/${id}/`);
     load();
   
@@ -61,26 +62,28 @@ export default function SectorsPage() {
 
   return (
     <div>
-      <div className="flex flex-wrap items-center justify-between gap-4">
-        <div>
-          <h1 className="font-heading text-2xl font-bold text-foreground-900">Sectors</h1>
-          <p className="mt-1 text-sm text-foreground-600">Shown in the &quot;Built for complex project environments&quot; section on the homepage. If a sector has its own dedicated page, its slug (matching that page) also drives that page&apos;s hero background image.</p>
-        </div>
+      <DashboardPageHeader
+        eyebrow="Website content"
+        title="Sectors"
+        description="Manage the sector cards shown on the homepage. A matching sector slug also controls the hero image on dedicated sector pages."
+        meta={sectors && <StatusBadge tone="info">{sectors.length} sectors</StatusBadge>}
+        actions={
         <button
           type="button"
           onClick={createSector}
           disabled={adding}
           className="btn-primary px-4 py-2 text-sm font-semibold disabled:opacity-50"
         >
-          + Add Sector
+          {adding ? 'Adding sector...' : 'Add sector'}
         </button>
-      </div>
+        }
+      />
 
       <div className="mt-6 space-y-4">
         {sectors === null ? (
-          <p className="text-sm text-foreground-400">Loading…</p>
+          <DashboardSkeletonList rows={3} />
         ) : sectors.length === 0 ? (
-          <p className="text-sm text-foreground-400">No sectors yet.</p>
+          <DashboardEmptyState icon="ri-building-4-line" title="No sectors yet" description="Add a sector card to show it on the homepage and connect it to any matching sector route." action={<button type="button" onClick={createSector} disabled={adding} className="btn-primary px-5 py-3">{adding ? 'Adding sector...' : 'Add sector'}</button>} />
         ) : (
           sectors.map((sector) => (
             <SectorEditor key={sector.id} sector={sector} onDelete={() => deleteSector(sector.id)} onSaved={load} />
@@ -161,7 +164,7 @@ function SectorEditor({ sector, onDelete, onSaved }: { sector: Sector; onDelete:
             onClick={() => fileInputRef.current?.click()}
             className="text-xs font-semibold text-primary-600 hover:text-primary-700"
           >
-            Upload photo
+            Upload sector image
           </button>
           <input
             ref={fileInputRef}
@@ -214,10 +217,10 @@ function SectorEditor({ sector, onDelete, onSaved }: { sector: Sector; onDelete:
           disabled={saving}
           className="btn-primary px-4 py-2 text-sm font-semibold disabled:opacity-50"
         >
-          {saving ? 'Saving…' : 'Save Sector'}
+          {saving ? 'Saving...' : 'Save sector'}
         </button>
         {!form.is_active && <span className="text-xs font-semibold text-background-600">Draft — hidden from the live site</span>}
-        {savedMsg && <span className="text-xs font-medium text-highlight-700">Saved successfully!</span>}
+        {savedMsg && <span role="status" className="text-xs font-medium text-highlight-700">Sector saved.</span>}
       </div>
     </div>
   );

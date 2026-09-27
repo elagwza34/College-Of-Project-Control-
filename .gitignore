@@ -4,6 +4,8 @@ frontend/out/
 frontend/coverage/
 frontend/.cache/
 frontend/.section-refactor/
+.codex_tmp/
+deploy/*.zip
 backend/.venv/
 backend/db.sqlite3
 backend/staticfiles/

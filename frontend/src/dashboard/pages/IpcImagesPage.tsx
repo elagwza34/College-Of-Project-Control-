@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { cmsApi } from '../api/client';
 import type { IpcImage } from '@/services/ipcImagesApi';
+import DeleteImageDialog from '../components/DeleteImageDialog';
 
 function readFields(form: HTMLFormElement) {
   const data = new FormData(form);
@@ -29,6 +30,7 @@ function ImageEditor({ item, onChanged }: { item: IpcImage; onChanged: () => voi
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
   const [broken, setBroken] = useState(false);
+  const [confirmDelete, setConfirmDelete] = useState(false);
   useEffect(() => { setBroken(false); }, [item.image_url]);
   async function save(event: FormEvent<HTMLFormElement>) {
     event.preventDefault(); if (inFlight.current) return;
@@ -42,9 +44,9 @@ function ImageEditor({ item, onChanged }: { item: IpcImage; onChanged: () => voi
     finally { inFlight.current = false; setBusy(false); }
   }
   async function remove() {
-    if (inFlight.current || !window.confirm('Remove this image from the IPC section?')) return;
+    if (inFlight.current) return;
     inFlight.current = true; setBusy(true); setError(''); setMessage('');
-    try { await cmsApi.del(`/ipc-images/${item.id}/`); onChanged(); }
+    try { await cmsApi.del(`/ipc-images/${item.id}/`); setConfirmDelete(false); onChanged(); }
     catch { setError('Could not remove this image. Please try again.'); }
     finally { inFlight.current = false; setBusy(false); }
   }
@@ -52,7 +54,8 @@ function ImageEditor({ item, onChanged }: { item: IpcImage; onChanged: () => voi
     <div className="mb-4 flex items-center gap-4"><img src={item.image_url} alt={item.alt_text} onError={() => setBroken(true)} loading="lazy" className="h-28 w-24 rounded-card object-cover" />
       <div><h2 className="text-lg">IPC image {item.id}</h2><p className="text-sm text-foreground-600">{item.is_active ? 'Visible on website' : 'Hidden from website'}</p>{broken && <p className="mt-2 text-sm text-status-error">Image preview unavailable. Check that the link opens an image directly.</p>}</div></div>
     <form onSubmit={save} aria-busy={busy}><fieldset disabled={busy}><ImageFields item={item} />
-      <div className="mt-4 flex flex-wrap gap-4"><button type="submit" className="btn-primary">{busy ? 'Please wait…' : 'Save image'}</button><button type="button" onClick={remove} className="text-sm text-status-error underline">Remove image</button></div></fieldset></form>
+      <div className="mt-4 flex flex-wrap gap-4"><button type="submit" className="btn-primary">{busy ? 'Please wait…' : 'Save image'}</button><button type="button" onClick={() => { setError(''); setConfirmDelete(true); }} className="text-sm text-status-error underline">Remove image</button></div></fieldset></form>
+    {confirmDelete && <DeleteImageDialog busy={busy} error={error} message="Remove this image from the IPC section? This action cannot be undone." onCancel={() => setConfirmDelete(false)} onConfirm={() => void remove()} />}
     {error && <p role="alert" className="mt-3 text-sm text-status-error">{error}</p>}<p role="status" className="mt-3 text-sm">{message}</p>
   </article>;
 }

@@ -6,8 +6,8 @@ export default function ReadyToExploreThePCPRoute() {
     <ArticleCta
             title="Ready to Explore the PCP Route?"
             body="Check your eligibility and speak to an adviser about how the Level 6 Project Controls Professional apprenticeship fits your career goals or your organisation's capability needs."
-            primaryCta={{ label: 'Check Eligibility', href: '/pcp-master#eligibility', tracking: 'eligibility_check_click' }}
-            secondaryCta={{ label: 'Find Your Best Route', href: '/pcp-master#routes', tracking: 'article_find_route_click' }}
+            primaryCta={{ label: 'Check Eligibility', href: '/project-controls-professional-level-6#eligibility', tracking: 'eligibility_check_click' }}
+            secondaryCta={{ label: 'Find Your Best Route', href: '/project-controls-professional-level-6#routes', tracking: 'article_find_route_click' }}
           />
   );
 }

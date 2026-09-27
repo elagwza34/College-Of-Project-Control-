@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 const resources = [
- ['Page text and images', 'pages', 'Page-local section text and static images, with draft, publish and previous versions'],
+ ['Page text and images', 'pages', 'Page-local section text, static images and button links, with drafts, publishing and previous versions'],
  ['Articles', 'articles', 'Searchable /articles library, individual article pages and the reusable article carousel'],
  ['IPC images', 'ipc-images', 'Moving image strip below the IPC logo on all programme-access sections'],
  ['Mentors', 'mentors', 'Mentor cards and individual public profiles'],

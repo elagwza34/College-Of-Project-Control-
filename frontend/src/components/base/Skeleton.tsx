@@ -22,15 +22,7 @@ export default function Skeleton({
     card: 'rounded-xl',
   };
 
-  const shimmer = (
-    <div
-      className="absolute inset-0 -translate-x-full"
-      style={{
-        background: 'linear-gradient(90deg, transparent, oklch(var(--background-50) / 0.35), transparent)',
-        animation: 'skeleton-shimmer 1.6s ease-in-out infinite',
-      }}
-    />
-  );
+  const shimmer = <div className="skeleton-shimmer -translate-x-full" />;
 
   const items = Array.from({ length: count }).map((_, i) => (
     <div
@@ -51,7 +43,7 @@ export default function Skeleton({
 
 export function SkeletonCard() {
   return (
-    <div className="bg-white rounded-xl border border-background-200/80 p-5 overflow-hidden">
+    <div className="overflow-hidden rounded-xl border border-background-200/80 bg-white p-5">
       <Skeleton variant="rect" height="160px" className="mb-4" />
       <Skeleton variant="text" width="40%" height="12px" className="mb-3" />
       <Skeleton variant="text" width="80%" height="16px" className="mb-2" />
@@ -67,7 +59,7 @@ export function SkeletonCard() {
 
 export function SkeletonArticleCard() {
   return (
-    <div className="bg-background-50 rounded-lg border border-background-200/70 p-5 overflow-hidden">
+    <div className="overflow-hidden rounded-lg border border-background-200/70 bg-background-50 p-5">
       <div className="flex items-center gap-2 mb-3">
         <Skeleton variant="text" width="30%" height="12px" />
         <Skeleton variant="rect" width="50px" height="16px" className="rounded-full" />
@@ -86,7 +78,7 @@ export function SkeletonArticleCard() {
 
 export function SkeletonCategoryCard() {
   return (
-    <div className="bg-background-100 rounded-lg border border-background-200/70 p-6 overflow-hidden">
+    <div className="overflow-hidden rounded-lg border border-background-200/70 bg-background-100 p-6">
       <Skeleton variant="circle" width="44px" height="44px" className="mb-4" />
       <Skeleton variant="text" width="50%" height="18px" className="mb-2" />
       <Skeleton variant="text" width="100%" height="14px" className="mb-1" />

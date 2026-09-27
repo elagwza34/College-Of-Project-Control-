@@ -1,5 +1,44 @@
+const capabilities = [
+  ['Planning and scheduling', 'Roadmaps, baselines, dependencies, progress and scenario planning.'],
+  ['Cost and forecasting', 'Budgets, commitments, estimates, variance, affordability and forecast confidence.'],
+  ['Risk and change', 'Risk appetite, escalation, impact assessment, change control and mitigation.'],
+  ['Performance reporting', 'Integrated data, trends, dashboards and a decision-ready narrative.'],
+  ['Governance and assurance', 'Evidence, auditability, approvals, public accountability and value for money.'],
+];
+
 export default function TheProjectControlsCapabilityModel() {
   return (
-<section id="capability" className="scroll-mt-44 py-16 odd:bg-background-100 md:py-20"><div className="container-site space-y-8"><div className="max-w-3xl space-y-4"><p className="text-xs font-bold uppercase tracking-[.15em] text-accent-700">{"The project-controls capability model"}</p><h2 className="text-3xl md:text-4xl">{"Five capabilities for accountable public-project delivery."}</h2><p className="leading-relaxed text-foreground-600">{"Build reliable controls that give senior leaders decision-ready insight, support earlier intervention and connect delivery to approved programme baselines."}</p></div><div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Planning and scheduling"}</h3><p className="leading-relaxed text-foreground-600">{"Roadmaps, baselines, milestones, dependencies, progress and scenario planning."}</p></article><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Cost and forecasting"}</h3><p className="leading-relaxed text-foreground-600">{"Budgets, commitments, estimates, variance, affordability and forecast confidence."}</p></article><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Risk and change"}</h3><p className="leading-relaxed text-foreground-600">{"Risk appetite, escalation, impact assessment, change control and mitigation."}</p></article><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Performance reporting"}</h3><p className="leading-relaxed text-foreground-600">{"Integrated data, RAG status, trends, dashboards and a decision-ready narrative."}</p></article><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Governance and assurance"}</h3><p className="leading-relaxed text-foreground-600">{"Evidence, auditability, approvals, public accountability and value for money."}</p></article></div></div></section>
+    <section id="capability" className="scroll-mt-44 bg-white py-16 md:py-24">
+      <div className="container-site">
+        <div className="grid gap-10 lg:grid-cols-[360px_minmax(0,1fr)]">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[.18em] text-accent-700">The project-controls capability model</p>
+            <h2 className="mt-4 text-3xl font-semibold leading-tight text-foreground-950 md:text-4xl">
+              Five capabilities for accountable public-project delivery.
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-foreground-600">
+              Build reliable controls that give senior leaders decision-ready insight, support earlier intervention and
+              connect delivery to approved programme baselines.
+            </p>
+          </div>
+
+          <div className="rounded-lg border border-background-200 bg-background-50 p-4 md:p-5">
+            <div className="grid gap-3">
+              {capabilities.map(([title, copy], index) => (
+                <article key={title} className="grid gap-4 rounded-lg border border-background-200 bg-white p-5 shadow-sm sm:grid-cols-[64px_minmax(0,1fr)]">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-950 text-sm font-bold text-signal-300">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <h3 className="text-lg font-bold text-foreground-950">{title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-foreground-600">{copy}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

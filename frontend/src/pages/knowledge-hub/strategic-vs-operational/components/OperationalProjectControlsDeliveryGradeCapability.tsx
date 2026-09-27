@@ -19,7 +19,7 @@ export default function OperationalProjectControlsDeliveryGradeCapability() {
           <strong>Stop reporting project problems after they happen. Build the capability to see them earlier.</strong> Operational project controls capability means you produce schedules that drive delivery, cost forecasts that finance directors trust, risk registers that actually influence decisions and reports that tell the truth before it is too late to act.
         </p>
         <p className="mb-4">
-          <SiteLink href="/operational-pcp" className="text-primary-600 hover:text-primary-700 underline font-semibold">Explore the Operational PCP Route →</SiteLink>
+          <SiteLink href="/project-controls-professional/operational-route" className="text-primary-600 hover:text-primary-700 underline font-semibold">Explore the Operational PCP Route →</SiteLink>
         </p>
 
         </>

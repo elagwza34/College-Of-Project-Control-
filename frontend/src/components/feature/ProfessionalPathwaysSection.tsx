@@ -6,7 +6,7 @@ const pathways = [
     label: 'Hands-on delivery',
     title: 'Operational Pathway',
     audience: 'For planners, schedulers, cost professionals and project controls practitioners responsible for reliable delivery information.',
-    focus: ['Planning and scheduling', 'Cost and earned value', 'Risk and forecasting', 'Performance reporting'],
+    focus: ['PMP (2 credits)', 'AI in Project Management / Controls (1 credit)', 'Risk Management (APM) (1 credit)', 'Project Planning and Control (2 credits)', 'EVM (1 credit)', 'PMI-SP (1 credit)'],
     outcome: 'Build stronger day-to-day control of scope, time, cost, risk and project performance.',
     href: '/project-controls-professional/operational-route',
   },
@@ -16,7 +16,7 @@ const pathways = [
     label: 'Leadership and governance',
     title: 'Strategic Pathway',
     audience: 'For senior project controls, PMO, programme, portfolio and governance professionals supporting complex decisions.',
-    focus: ['Governance and assurance', 'Programme management', 'Portfolio alignment', 'Executive decision support'],
+    focus: ['PMP (2 credits)', 'AI in Project Management / Controls (1 credit)', 'Risk Management (APM) (1 credit)', 'PMI (PMO) (1 credit)', 'Portfolio Management (APMG) (1 credit)', 'Managing Successful Programmes (1 credit)'],
     outcome: 'Develop the strategic judgement needed to connect project performance with organisational priorities.',
     href: '/project-controls-professional/strategic-route',
   },
@@ -26,7 +26,7 @@ const pathways = [
     label: 'Professional progression',
     title: 'Chartered Pathway',
     audience: 'For experienced professionals prioritising technical-knowledge evidence and readiness for APM Chartered Project Professional progression.',
-    focus: ['Technical knowledge', 'PMO professional practice', 'Evidence development', 'ChPP readiness'],
+    focus: ['Certified PMO Professional Level 6 (4 credits)', 'AI in Project Management (1 credit)', 'Portfolio Management (APMG) (1 credit)', 'Earned Value Management (APMG) (1 credit)'],
     outcome: 'Structure development around advanced professional practice and an eligible route towards independent APM assessment.',
     href: '/project-controls-professional/chartered-pmo-pathway',
   },
@@ -61,7 +61,7 @@ export default function ProfessionalPathwaysSection({
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+        <div className="mt-10 space-y-6">
           {pathways.map((pathway) => (
             <article
               key={pathway.title}
@@ -82,9 +82,9 @@ export default function ProfessionalPathwaysSection({
 
                 <ul className="mt-6 space-y-2.5 border-t border-background-200 pt-5">
                   {pathway.focus.map((item) => (
-                    <li key={item} className="flex items-center gap-2.5 text-sm font-medium text-foreground-700">
-                      <i className="ri-check-line text-signal-600" aria-hidden="true" />
-                      {item}
+                    <li key={item} className="flex items-center justify-between gap-4 rounded-lg border border-background-200 bg-background-50 px-3 py-2.5 text-sm font-medium text-foreground-700">
+                      <span className="flex items-center gap-2.5"><i className="ri-check-line text-signal-600" aria-hidden="true" />{item.replace(/ \(\d+ credits?\)$/, '')}</span>
+                      <span className="shrink-0 rounded-full bg-primary-100 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-primary-800">{item.match(/\((\d+ credits?)\)$/)?.[1] ?? 'Pathway'}</span>
                     </li>
                   ))}
                 </ul>

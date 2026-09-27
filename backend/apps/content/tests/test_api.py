@@ -1,7 +1,7 @@
 from django.urls import reverse
 from rest_framework.test import APITestCase
 
-from apps.content.models import Enquiry, MentorProfile, Page, PageSection, ProfessionalCredential, PublicationStatus
+from apps.content.models import Enquiry, MentorProfile, Page, PageSection, ProfessionalCredential, PublicationStatus, ShortCourse
 
 
 class ContentApiTests(APITestCase):
@@ -158,3 +158,42 @@ class ContentApiTests(APITestCase):
             ["First certificate", "Second certificate"],
         )
         self.assertEqual(response.data[0]["imageUrl"], "https://example.com/first.png")
+
+    def test_short_courses_returns_only_active_items_in_order(self):
+        ShortCourse.objects.all().delete()
+        ShortCourse.objects.create(
+            slug="second",
+            title="Second course",
+            category="Planning",
+            summary="Second summary",
+            focus=["Second focus"],
+            image_url="https://example.com/second.jpg",
+            order=20,
+        )
+        ShortCourse.objects.create(
+            slug="first",
+            title="First course",
+            category="AI",
+            summary="First summary",
+            focus=["First focus"],
+            image_url="https://example.com/first.jpg",
+            order=10,
+        )
+        ShortCourse.objects.create(
+            slug="hidden",
+            title="Hidden course",
+            is_active=False,
+            order=1,
+        )
+
+        response = self.client.get(reverse("short-courses-list"))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual([course["slug"] for course in response.data], ["first", "second"])
+        self.assertEqual(response.data[0]["imageUrl"], "https://example.com/first.jpg")
+        self.assertEqual(response.data[0]["focus"], ["First focus"])
+        self.assertIn("detail", response.data[0])
+
+        detail = self.client.get(reverse("short-course-detail", kwargs={"slug": "first"}))
+        self.assertEqual(detail.status_code, 200)
+        self.assertEqual(detail.data["title"], "First course")

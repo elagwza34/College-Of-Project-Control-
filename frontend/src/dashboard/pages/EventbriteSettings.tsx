@@ -26,7 +26,7 @@ export default function EventbriteSettings({ history = false }: { history?: bool
     const timer = window.setInterval(() => { if (active) reload().catch(() => {}); }, 15000);
     return () => { active = false; window.clearInterval(timer); };
   }, []);
-  const act = async (action: () => Promise<unknown>, success: string) => { setBusy(true); setError(''); setMessage(''); try { await action(); setMessage(success); await reload(); } catch (e) { setError(e instanceof Error ? e.message : 'Request failed.'); } finally { setBusy(false); } };
+  const act = async (action: () => Promise<unknown>, success: string) => { setBusy(true); setError(''); setMessage(''); try { await action(); setMessage(success); await reload(); } catch (e) { setError(e instanceof Error ? e.message : 'Unable to update Eventbrite settings. Check the saved details and try again.'); } finally { setBusy(false); } };
   const save = () => act(async () => { await cmsApi.patch('/eventbrite/settings/', { ...form, token, clear_token: clear }); setToken(''); setClear(false); }, 'Settings saved. Test the connection after changing account details.');
   return <div className="space-y-6">
     {error && <p role="alert" className="rounded-lg bg-red-50 p-4 text-sm text-red-800">{error}</p>}{message && <p role="status" className="rounded-lg bg-green-50 p-4 text-sm text-green-800">{message}</p>}

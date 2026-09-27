@@ -1,4 +1,4 @@
-import ProfessionalCapability from "@/pages/pcp-master/components/ProfessionalCapability";
+import ProfessionalCapability from "@/pages/project-controls-professional-level-6/components/ProfessionalCapability";
 
 /** Section: Professional Capability. */
 export default function ProfessionalCapabilitySection() {

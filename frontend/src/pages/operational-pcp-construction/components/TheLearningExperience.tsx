@@ -1,83 +1,72 @@
+const cycle = [
+  {
+    title: 'Prepare',
+    label: 'Evidence review',
+    description: 'Review the role, current evidence and the live control challenge.',
+  },
+  {
+    title: 'Explore',
+    label: 'Guided learning',
+    description: 'Work through live teaching, cases, examples and professional discussion.',
+  },
+  {
+    title: 'Apply',
+    label: 'Workplace use',
+    description: 'Use the framework or technique in an approved construction context.',
+  },
+  {
+    title: 'Evidence and reflect',
+    label: 'Professional output',
+    description: 'Capture judgement, impact and the next improvement action.',
+  },
+];
+
 export default function TheLearningExperience() {
   return (
-<section id="sector-section-12" className="scroll-mt-44 py-16 md:py-20 bg-background-100">
-<div className="min-w-0 container-site space-y-8 grid min-w-0 items-start gap-6 lg:grid-cols-2">
-<div className="min-w-0 space-y-4">
-<div className="min-w-0 space-y-4">
-<small>
-{"Applied professional learning "}
-</small>
-<h3 className="text-xl font-bold leading-snug">
-{"Learn, apply, test and evidence. "}
-</h3>
-</div>
-</div>
-<div className="min-w-0 space-y-4 min-w-0 space-y-4">
-<span className="text-xs font-bold uppercase tracking-[.15em] text-accent-700">
-{"The learning experience "}
-</span>
-<h2 className="text-3xl font-bold leading-tight md:text-4xl">
-{"Bring live construction challenges into the learning process. "}
-</h2>
-<p className="text-base leading-relaxed text-foreground-600">
-{"The pathway should connect structured professional learning with real workplace evidence, guided reflection and employer-supported improvement. "}
-</p>
-<div className="min-w-0 grid min-w-0 gap-5 md:grid-cols-2 lg:grid-cols-4">
-<div className="min-w-0 space-y-4 min-w-0 space-y-4 rounded-2xl border border-background-200 bg-white p-6 text-foreground-800 shadow-sm">
-<i>
-{"01 "}
-</i>
-<div className="min-w-0 space-y-4">
-<b className="font-bold">
-{"Prepare "}
-</b>
-<span>
-{"Review current evidence, role responsibilities and the control challenge. "}
-</span>
-</div>
-</div>
-<div className="min-w-0 space-y-4 min-w-0 space-y-4 rounded-2xl border border-background-200 bg-white p-6 text-foreground-800 shadow-sm">
-<i>
-{"02 "}
-</i>
-<div className="min-w-0 space-y-4">
-<b className="font-bold">
-{"Explore "}
-</b>
-<span>
-{"Use live teaching, cases, worked examples and professional discussion. "}
-</span>
-</div>
-</div>
-<div className="min-w-0 space-y-4 min-w-0 space-y-4 rounded-2xl border border-background-200 bg-white p-6 text-foreground-800 shadow-sm">
-<i>
-{"03 "}
-</i>
-<div className="min-w-0 space-y-4">
-<b className="font-bold">
-{"Apply "}
-</b>
-<span>
-{"Use the framework or technique in an approved workplace context. "}
-</span>
-</div>
-</div>
-<div className="min-w-0 space-y-4 min-w-0 space-y-4 rounded-2xl border border-background-200 bg-white p-6 text-foreground-800 shadow-sm">
-<i>
-{"04 "}
-</i>
-<div className="min-w-0 space-y-4">
-<b className="font-bold">
-{"Evidence and reflect "}
-</b>
-<span>
-{"Capture the output, professional judgement, impact and next improvement. "}
-</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+    <section id="sector-section-12" className="scroll-mt-44 bg-primary-950 py-16 text-white md:py-24">
+      <div className="container-site">
+        <div className="mx-auto max-w-5xl text-center">
+          <small className="text-xs font-bold uppercase tracking-[.15em] text-signal-300">Applied professional learning</small>
+          <h2 className="mx-auto mt-4 max-w-none text-3xl font-bold leading-tight text-white md:text-5xl">
+            <span className="block md:whitespace-nowrap">Bring live construction challenges</span>
+            <span className="block md:whitespace-nowrap">into the learning process.</span>
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/74">
+            The pathway connects structured professional learning with real workplace evidence, guided reflection and employer-supported improvement.
+          </p>
+        </div>
+
+        <div className="relative mx-auto mt-12 max-w-6xl">
+          <div className="absolute left-[8%] right-[8%] top-8 hidden h-px bg-white/18 lg:block" />
+
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {cycle.map((step, index) => (
+              <article
+                key={step.title}
+                className="relative flex min-h-[230px] flex-col rounded-lg border border-white/14 bg-white/[.07] p-5 shadow-[0_22px_55px_rgba(0,0,0,.22)] backdrop-blur"
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <span className="flex h-16 w-16 items-center justify-center rounded-full border border-primary-950/20 bg-signal-400 text-lg font-bold text-primary-950 shadow-[0_0_0_8px_rgba(255,255,255,.06)]">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <span className="rounded-full border border-white/12 px-3 py-1 text-[11px] font-bold uppercase tracking-[.13em] text-white/58">
+                    {step.label}
+                  </span>
+                </div>
+                <div className="mt-8">
+                  <h3 className="text-xl font-bold leading-snug text-white">{step.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-white/72">{step.description}</p>
+                </div>
+                <div className="mt-auto pt-6">
+                  <div className="h-1.5 rounded-full bg-white/10">
+                    <div className="h-full rounded-full bg-signal-400" style={{ width: `${(index + 1) * 25}%` }} />
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

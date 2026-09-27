@@ -114,6 +114,9 @@ export default function IpcAuthority() {
           <p className="mx-auto mt-6 max-w-[500px] text-base leading-relaxed md:text-lg lg:mx-0" style={{ color: 'rgba(245,245,245,0.72)' }}>
             IPC is a trusted accreditation body dedicated to advancing project controls capability and professional development across the global project delivery community.
           </p>
+          <p className="mx-auto mt-3 max-w-[500px] text-sm leading-relaxed text-white/70 lg:mx-0">
+            IPC tuition fee support: up to <strong className="text-[#D8B36E]">75%</strong> for eligible unemployed or self-employed learners, or up to <strong className="text-[#D8B36E]">50%</strong> for eligible employed learners, with employers contributing the remainder. Subject to approval.
+          </p>
 
           {/* Feature items */}
           <div className="mt-8 flex flex-col items-center justify-center gap-6 sm:flex-row lg:items-start lg:justify-start">

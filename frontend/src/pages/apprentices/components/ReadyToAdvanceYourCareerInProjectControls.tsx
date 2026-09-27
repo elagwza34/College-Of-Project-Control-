@@ -21,7 +21,7 @@ export default function ReadyToAdvanceYourCareerInProjectControls() {
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <SiteLink href="/contact" className="btn-primary inline-flex items-center gap-3 px-8 py-4 font-semibold text-sm cursor-pointer transition-all duration-300 whitespace-nowrap lift-hover">
                   <i className="ri-rocket-line text-lg" />
-                  Start your application
+                  Discuss your options
                 </SiteLink>
                 <SiteLink href="mailto:info@collegeofprojectcontrols.com" className="cta-button inline-flex items-center gap-2 px-6 py-4 border-2 border-primary-950/30 text-primary-950 font-semibold text-sm rounded-xl cursor-pointer hover:bg-primary-950/10 hover:border-primary-950/50 transition-all duration-300 whitespace-nowrap">
                   <i className="ri-mail-line text-sm" />

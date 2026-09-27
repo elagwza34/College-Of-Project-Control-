@@ -1,5 +1,39 @@
+const frameworks = [
+  ['Project Delivery Functional Standard', 'Governance, assurance, roles and consistent delivery practice.'],
+  ['Green Book and Five Case Model', 'Appraisal, business cases, options, benefits and demonstrable public value.'],
+  ['Orange Book', 'Risk management embedded in governance, decisions and organisational objectives.'],
+  ['Managing Public Money', 'Probity, regularity, affordability, financial discipline and responsible decisions.'],
+];
+
 export default function LearningGroundedInGovernmentDelivery() {
   return (
-<section id="governance" className="scroll-mt-44 py-16 odd:bg-background-100 md:py-20"><div className="container-site space-y-8"><div className="max-w-3xl space-y-4"><p className="text-xs font-bold uppercase tracking-[.15em] text-accent-700">{"Learning grounded in government delivery"}</p><h2 className="text-3xl md:text-4xl">{"Apply project capability within public-sector governance."}</h2><p className="leading-relaxed text-foreground-600">{"Contextualise workplace learning to the frameworks, responsibilities and assurance arrangements that apply to the organisation."}</p></div><div className="grid gap-6 md:grid-cols-2 "><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Project Delivery Functional Standard"}</h3><p className="leading-relaxed text-foreground-600">{"Governance, assurance, roles and consistent delivery practice."}</p></article><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Green Book and Five Case Model"}</h3><p className="leading-relaxed text-foreground-600">{"Appraisal, business cases, options, benefits and demonstrable public value."}</p></article><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Orange Book"}</h3><p className="leading-relaxed text-foreground-600">{"Risk management embedded in governance, decisions and organisational objectives."}</p></article><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Managing Public Money"}</h3><p className="leading-relaxed text-foreground-600">{"Probity, regularity, affordability, financial discipline and responsible decision-making."}</p></article></div></div></section>
+    <section id="governance" className="scroll-mt-44 bg-primary-950 py-16 text-white md:py-24">
+      <div className="container-site">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[.18em] text-signal-300">
+              Learning grounded in government delivery
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold leading-[1.03] text-white md:text-5xl">
+              Apply project capability within public-sector governance.
+            </h2>
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/72">
+              Contextualise workplace learning to the frameworks, responsibilities and assurance arrangements that apply
+              to the organisation.
+            </p>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            {frameworks.map(([title, copy]) => (
+              <article key={title} className="rounded-lg border border-white/12 bg-white/[.06] p-5">
+                <i className="ri-government-line text-2xl text-signal-300" aria-hidden="true" />
+                <h3 className="mt-4 text-lg font-bold text-white">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/68">{copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

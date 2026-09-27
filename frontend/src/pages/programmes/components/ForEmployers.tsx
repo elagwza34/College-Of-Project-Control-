@@ -84,7 +84,7 @@ export default function ForEmployers() {
                 className="cta-button inline-flex items-center gap-2 px-6 py-3.5 border border-foreground-200 text-foreground-800 font-semibold text-sm rounded-xl cursor-pointer hover:bg-foreground-50 hover:border-foreground-300 transition-all duration-300 whitespace-nowrap"
               >
                 <i className="ri-calendar-check-line text-sm" />
-                Book Employer Consultation
+                Request an employer consultation
               </SiteLink>
             </div>
           </div>

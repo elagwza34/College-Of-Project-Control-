@@ -1,4 +1,5 @@
 import SiteLink from '@/components/base/SiteLink';
+import HomeAudioSummary from './HomeAudioSummary';
 export default function CollegeOfProjectControlsAndManagement() {
   const trustSignals = [
     { icon: 'ri-briefcase-4-line', title: 'Workplace applied', detail: 'Built around live responsibilities' },
@@ -40,18 +41,20 @@ export default function CollegeOfProjectControlsAndManagement() {
 
             {/* Supporting Headline — fade up delayed */}
             <p className="reveal-fade-up is-visible mt-4 text-base md:text-lg font-body text-background-50/80 leading-relaxed max-w-xl" style={{ transitionDelay: '100ms' }}>
-              A specialist business college for professionals and organisations responsible for project performance, governance and complex delivery.
+              A specialist college for professionals and employers working in project controls, project management and PMO.
             </p>
 
             {/* Body Copy — fade up delayed */}
             <p className="reveal-fade-up is-visible mt-3 max-w-xl text-sm font-body leading-relaxed text-background-50/75 md:text-sm" style={{ transitionDelay: '150ms' }}>
-              Build practical capability across project controls, project management and PMO through structured programmes, specialist modules and employer-led development.
+              Choose a structured programme, specialist module or team development route, with learning applied to workplace responsibilities.
             </p>
 
             {/* Micro Line */}
             <p className="reveal-fade-up is-visible mt-2 max-w-xl text-xs font-body leading-relaxed text-background-50/70" style={{ transitionDelay: '200ms' }}>
               Professional programmes &middot; Specialist modules &middot; Employer capability &middot; Funding guidance
             </p>
+
+            <HomeAudioSummary />
 
             {/* CTAs — scale in */}
             <div className="reveal-scale-in is-visible mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-3" style={{ transitionDelay: '250ms' }}>

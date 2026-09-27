@@ -19,15 +19,22 @@ def catalogue():
 def payload(obj):
     return {'draft': obj.draft, 'published': obj.published, 'version': obj.version,
             'updated_at': obj.updated_at, 'updated_by': obj.updated_by.username if obj.updated_by else None,
-            'history': obj.history}
+            'history': obj.history, 'is_hidden': obj.is_hidden}
 
 
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def public_content(request):
     allowed = {s['key']: {f['key'] for f in s['fields']} for s in catalogue()}
-    return Response({obj.section_key: {k: v for k, v in obj.published.items() if k in allowed.get(obj.section_key, set())}
-                     for obj in PageContentRevision.objects.exclude(published={}) if obj.section_key in allowed})
+    values, hidden = {}, []
+    for obj in PageContentRevision.objects.all():
+        if obj.section_key not in allowed:
+            continue
+        if obj.published:
+            values[obj.section_key] = {k: v for k, v in obj.published.items() if k in allowed[obj.section_key]}
+        if obj.is_hidden:
+            hidden.append(obj.section_key)
+    return Response({'values': values, 'hidden': hidden})
 
 
 @api_view(['GET'])
@@ -44,11 +51,11 @@ def section_content(request, key):
         return Response({'detail': 'Section not found.'}, status=404)
     if request.method == 'GET':
         obj = PageContentRevision.objects.filter(section_key=key).select_related('updated_by').first()
-        return Response(payload(obj) if obj else {'draft': {}, 'published': {}, 'version': 0, 'history': [], 'updated_at': None, 'updated_by': None})
+        return Response(payload(obj) if obj else {'draft': {}, 'published': {}, 'version': 0, 'history': [], 'updated_at': None, 'updated_by': None, 'is_hidden': False})
     data = request.data
     action = data.get('action')
-    if action not in ('save', 'publish', 'restore'):
-        return Response({'detail': 'Choose save, publish or restore.'}, status=400)
+    if action not in ('save', 'publish', 'restore', 'hide', 'show'):
+        return Response({'detail': 'Choose save, publish, restore, hide or show.'}, status=400)
     if action == 'save':
         values = data.get('values')
         fields = {f['key']: f for f in spec['fields']}
@@ -82,11 +89,13 @@ def section_content(request, key):
         elif action == 'publish':
             obj.history = ([{'values': obj.published, 'at': timezone.now().isoformat(), 'by': request.user.username, 'version': obj.version}] + obj.history)[:10]
             obj.published = obj.draft
-        else:
+        elif action == 'restore':
             entry = next((h for h in obj.history if h['version'] == data.get('restore_version')), None)
             if not entry:
                 return Response({'detail': 'Previous version not found.'}, status=400)
             obj.draft = entry['values']
+        else:
+            obj.is_hidden = action == 'hide'
         obj.version += 1
         obj.updated_by = request.user
         obj.save()

@@ -75,6 +75,13 @@
   }
 }
 
+:root :is(a.btn-primary, a.btn-secondary).access-route-button {
+  width: 100%;
+  min-width: 0;
+  padding-inline: 1rem 4.25rem;
+  white-space: nowrap;
+}
+
 @layer base {
   html {
     scroll-behavior: auto;
@@ -93,7 +100,7 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 700;
-    letter-spacing: -0.025em;
+    letter-spacing: 0;
     line-height: 1.15;
     color: oklch(var(--foreground-950));
     text-wrap: balance;
@@ -108,6 +115,26 @@
   :focus-visible {
     outline: 3px solid rgb(var(--signal-500));
     outline-offset: 3px;
+  }
+  :where(a, button, input, select, textarea, summary, [role='button'], [role='tab']) {
+    transition-duration: var(--motion-standard);
+    transition-timing-function: var(--ease-standard);
+  }
+  :where(button, [type='button'], [type='submit'], [role='button'], [role='tab']) {
+    touch-action: manipulation;
+  }
+  :where(button, [role='button'], [role='tab']):active:not(:disabled) {
+    transform: translateY(1px);
+  }
+  :where(button, input, select, textarea):disabled {
+    cursor: not-allowed;
+  }
+  :where(input, select, textarea) {
+    transition-property: border-color, box-shadow, background-color, color;
+  }
+  :where(input, select, textarea):focus {
+    border-color: rgb(var(--signal-500));
+    box-shadow: 0 0 0 4px rgb(var(--signal-500) / 0.16);
   }
   ::selection {
     color: white;
@@ -138,7 +165,57 @@
     @apply bg-white rounded-xl border border-background-200/80 shadow-card;
   }
   .card-premium-hover {
-    @apply bg-white rounded-xl border border-background-200/80 shadow-card hover:border-primary-300/60 transition-all duration-300;
+    @apply bg-white rounded-xl border border-background-200/80 shadow-card transition-all;
+    transition-duration: var(--motion-standard);
+    transition-timing-function: var(--ease-standard);
+  }
+  .card-premium-hover:hover {
+    @apply border-primary-300/60 shadow-lg;
+    transform: translateY(-2px);
+  }
+  .interactive-surface {
+    transition-property: transform, border-color, background-color, box-shadow, color, opacity;
+    transition-duration: var(--motion-standard);
+    transition-timing-function: var(--ease-standard);
+  }
+  .interactive-surface:hover {
+    transform: translateY(-2px);
+  }
+  .interactive-arrow i[class*="ri-arrow"] {
+    transition: transform var(--motion-fast) var(--ease-standard);
+  }
+  .interactive-arrow:hover i[class*="ri-arrow"],
+  .interactive-arrow:focus-visible i[class*="ri-arrow"] {
+    transform: translateX(3px);
+  }
+  .button-quiet {
+    @apply inline-flex min-h-10 items-center justify-center rounded-md border border-background-200 bg-white px-3 text-sm font-semibold text-foreground-800;
+    transition-property: transform, border-color, background-color, box-shadow, color;
+    transition-duration: var(--motion-standard);
+    transition-timing-function: var(--ease-standard);
+  }
+  .button-quiet:hover {
+    @apply border-primary-200 bg-background-50 text-primary-800 shadow-sm;
+  }
+  .modal-panel {
+    animation: modal-enter var(--motion-slow) var(--ease-emphasized) both;
+  }
+  .drawer-panel-left {
+    animation: drawer-left-enter var(--motion-slow) var(--ease-emphasized) both;
+  }
+  .drawer-panel-center {
+    animation: drawer-center-enter var(--motion-slow) var(--ease-emphasized) both;
+  }
+  .dropdown-panel {
+    animation: dropdown-in var(--motion-slow) var(--ease-emphasized) both;
+  }
+  .skeleton-shimmer {
+    position: absolute;
+    inset-block: 0;
+    left: 0;
+    width: 50%;
+    animation: skeleton-shimmer 1.4s ease-in-out infinite;
+    background: linear-gradient(to right, transparent, rgb(255 255 255 / .7), transparent);
   }
 
   .signal-pattern {
@@ -171,6 +248,35 @@
   font: 600 0.75rem/1 var(--font-label);
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+:where(:not(h1, h2, h3, h4, h5, h6)).font-heading {
+  font-family: var(--font-body);
+}
+
+:where(a, button):is(.btn-primary, .btn-secondary, .cta-button, .btn-editorial-teal, .btn-editorial-purple),
+:where(a, button)[class*="min-h-12"][class*="border"][class*="px-"] {
+  border-radius: 9999px;
+}
+
+@keyframes modal-enter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes drawer-left-enter {
+  from { opacity: 0; transform: translateX(-18px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes drawer-center-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dropdown-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .skip-link {
@@ -405,21 +511,21 @@
 
 /* ── Lift Hover — subtle raise on hover ──────────────────────── */
 .lift-hover {
-  transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
-              box-shadow 350ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform var(--motion-standard) var(--ease-standard),
+              box-shadow var(--motion-standard) var(--ease-standard);
 }
 .lift-hover:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 0 8px 25px -8px oklch(var(--foreground-900) / 0.08);
 }
 
 /* ── Card Scale Hover — subtle scale on hover ─────────────────── */
 .card-scale-hover {
-  transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
-              box-shadow 350ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform var(--motion-standard) var(--ease-standard),
+              box-shadow var(--motion-standard) var(--ease-standard);
 }
 .card-scale-hover:hover {
-  transform: scale(1.02);
+  transform: translateY(-2px);
   box-shadow: 0 8px 25px -8px oklch(var(--foreground-900) / 0.08);
 }
 
@@ -659,7 +765,8 @@
 /* Shared hero treatment: temporary external photography with one contrast level. */
 .hero-image-office,
 .hero-image-project,
-.hero-image-documents {
+.hero-image-documents,
+.hero-image-register {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -677,6 +784,10 @@
   background-image: linear-gradient(rgba(9, 31, 39, 0.82), rgba(9, 31, 39, 0.82)), url('https://images.pexels.com/photos/19357343/pexels-photo-19357343/free-photo-of-pen-on-documents.jpeg?auto=compress&cs=tinysrgb&w=1920');
 }
 
+.hero-image-register {
+  background-image: linear-gradient(rgba(9, 31, 39, 0.82), rgba(9, 31, 39, 0.82)), url('https://jokdxsdbxorzciulkdyl.supabase.co/storage/v1/object/public/images/897711ece7f0488a951978404c5fed7a.webp');
+}
+
 .hero-contrast-overlay {
   background: rgba(9, 31, 39, 0.82);
 }
@@ -691,11 +802,18 @@
 @layer components {
   .cta-button { display: inline-flex; }
   .section-space { padding-block: var(--section-space); }
-  .btn-secondary { @apply inline-flex min-h-12 items-center justify-center rounded-md border border-current px-6 py-3 text-sm font-semibold; }
+  .btn-secondary { @apply inline-flex min-h-12 items-center justify-center rounded-full border border-current px-6 py-3 text-sm font-semibold; }
   .card-editorial { border-radius: var(--radius-card); }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  :where(button, [role='button'], [role='tab']):active:not(:disabled),
+  .interactive-surface:hover,
+  .card-premium-hover:hover,
+  .lift-hover:hover,
+  .card-scale-hover:hover {
+    transform: none;
+  }
   .reveal-fade-up, .reveal-blur-in, .reveal-scale-in { opacity: 1; transform: none; filter: none; }
 }
 

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Article
+from .models import Article, CaseStudy
 
 
 @admin.register(Article)
@@ -10,7 +10,16 @@ class ArticleAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
     readonly_fields = ("created_at", "updated_at")
 
-from .models import Coach, Enquiry, Event, MentorProfile, MenuItem, NavigationMenu, Page, PageSection, Partner, ProfessionalCredential, Sector, SiteSettings
+
+@admin.register(CaseStudy)
+class CaseStudyAdmin(admin.ModelAdmin):
+    list_display = ("title", "sector", "client_name", "is_published", "is_featured", "published_at", "order")
+    list_filter = ("is_published", "is_featured", "sector")
+    search_fields = ("title", "headline", "summary", "client_name", "sector")
+    prepopulated_fields = {"slug": ("title",)}
+    readonly_fields = ("created_at", "updated_at")
+
+from .models import Coach, Enquiry, Event, MentorProfile, MenuItem, NavigationMenu, Page, PageSection, Partner, ProfessionalCredential, Sector, ShortCourse, SiteSettings
 
 admin.site.site_header = "College of Project Control — Content Dashboard"
 admin.site.site_title = "Project Control CMS"
@@ -56,8 +65,10 @@ class SiteSettingsAdmin(admin.ModelAdmin):
     fieldsets = (
         ("Brand", {"fields": ("site_name", "tagline", "logo_text", "logo_url")}),
         ("Header", {"fields": ("primary_cta_label", "primary_cta_url", "announcement_enabled", "announcement_text", "announcement_url")}),
+        ("Maintenance mode", {"fields": ("maintenance_enabled", "maintenance_heading", "maintenance_message", "maintenance_pin_hash")}),
         ("Footer", {"fields": ("footer_description", "footer_cta_title", "footer_cta_body", "footer_cta_label", "footer_cta_url", "copyright_name")}),
     )
+    readonly_fields = ("maintenance_pin_hash",)
 
     def has_add_permission(self, request):
         return not SiteSettings.objects.exists()
@@ -132,6 +143,22 @@ class SectorAdmin(admin.ModelAdmin):
     fieldsets = (
         ("Sector", {"fields": ("title", "slug", "description", "icon")}),
         ("Image and link", {"fields": ("image", "image_url", "link_url")}),
+        ("Publishing", {"fields": ("order", "is_active")}),
+    )
+
+
+@admin.register(ShortCourse)
+class ShortCourseAdmin(admin.ModelAdmin):
+    list_display = ("title", "category", "duration", "order", "is_active", "updated_at")
+    list_editable = ("order", "is_active")
+    list_filter = ("is_active", "category")
+    search_fields = ("title", "slug", "summary", "audience")
+    prepopulated_fields = {"slug": ("title",)}
+    ordering = ("order", "title")
+    fieldsets = (
+        ("Course", {"fields": ("title", "slug", "category", "duration", "format", "owner", "icon")}),
+        ("Content", {"fields": ("summary", "audience", "focus")}),
+        ("Hero image", {"fields": ("image_url",)}),
         ("Publishing", {"fields": ("order", "is_active")}),
     )
 

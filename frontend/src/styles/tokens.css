@@ -91,7 +91,7 @@
   --foreground-950: 0.160 0.018 252;
 
   /* Typography */
-  --font-heading: 'Poppins', system-ui, sans-serif;
+  --font-heading: 'Source Serif 4', Georgia, serif;
   --font-body: 'Poppins', system-ui, sans-serif;
   --font-label: 'Poppins', system-ui, sans-serif;
 }
@@ -133,6 +133,11 @@
   --radius-panel: 16px;
   --shadow-card: 0 8px 24px -16px rgb(18 59 74 / .2);
   --shadow-overlay: 0 24px 64px -16px rgb(18 59 74 / .24);
+  --motion-fast: 160ms;
+  --motion-standard: 220ms;
+  --motion-slow: 320ms;
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
   --header-height: 112px;
   --section-nav-height: 56px;
   --section-space: 4rem;

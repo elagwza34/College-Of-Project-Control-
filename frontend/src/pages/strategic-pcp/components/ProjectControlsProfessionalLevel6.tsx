@@ -10,7 +10,7 @@ export default function ProjectControlsProfessionalLevel6() {
 <h1 className="text-4xl font-extrabold leading-tight text-white md:text-6xl lg:text-7xl">Strategic Pathway</h1>
 <p className="max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl">Build strategic project-controls capability through six pathway credits, from project leadership to programme, portfolio and PMO decision-making.</p>
 <div className="flex flex-wrap gap-3"><span className="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm">6 pathway credits</span><span className="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm">27-month indicative schedule</span><span className="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm">Workplace evidence</span></div>
-<div className="flex flex-wrap gap-3 pt-2"><SiteLink href="/book-a-session" className="btn-primary inline-flex min-h-12 items-center justify-center px-6 font-bold">Book an information session</SiteLink><SiteLink href="#credit-overview" className="cta-button inline-flex min-h-12 items-center justify-center rounded-md border border-white/50 px-6 font-semibold text-white">Explore the pathway</SiteLink></div>
+<div className="flex flex-wrap gap-3 pt-2"><SiteLink href="/book-a-session" className="btn-primary inline-flex min-h-12 items-center justify-center px-6 font-bold">Request a consultation</SiteLink><SiteLink href="#credit-overview" className="cta-button inline-flex min-h-12 items-center justify-center rounded-md border border-white/50 px-6 font-semibold text-white">Explore the pathway</SiteLink></div>
 </div></div></header>
   );
 }

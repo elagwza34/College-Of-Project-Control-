@@ -264,7 +264,7 @@ export default function ChooseYourProgramme() {
             </span>
           </h2>
           <p className="mt-3 text-sm md:text-base text-foreground-600 leading-relaxed">
-            Not every professional needs the same programme. Start with your current responsibilities, the capability you need to strengthen and the type of work you are responsible for delivering.
+            Compare programmes by your current responsibilities and the skills you want to develop.
           </p>
         </div>
 

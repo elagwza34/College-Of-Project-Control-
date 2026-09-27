@@ -11,10 +11,16 @@ export function extract(code,id){
  if(!path.includes('/components/')||path.startsWith('../')||!id.endsWith('.tsx'))return null;
  const sf=ts.createSourceFile(id,code,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX),fields=[],edits=[];
  const section=hash(path), counts=new Map(), linkFields=new Map();
+ let rootTagged=false;
  function register(kind,value,label){const signature=kind+':'+value;const count=counts.get(signature)||0;counts.set(signature,count+1);const key=hash(signature+':'+count);fields.push({key,kind,default:value,label});return key;}
  function visit(n){
   if(ts.isJsxOpeningElement(n)||ts.isJsxSelfClosingElement(n)){
-   const tag=n.tagName.getText(sf), href=n.attributes.properties.find(p=>p.name?.getText(sf)==='href');
+   const tag=n.tagName.getText(sf);
+   if(!rootTagged&&/^[a-z]/.test(tag)){
+    edits.push([n.attributes.pos,n.attributes.pos,` data-cms-section-root="${section}"`]);
+    rootTagged=true;
+   }
+   const href=n.attributes.properties.find(p=>p.name?.getText(sf)==='href');
    if(['SiteLink','a'].includes(tag)&&href?.initializer&&ts.isStringLiteral(href.initializer)){
     const key=register('link',decode(href.initializer.text),'Button/link URL');
     linkFields.set(n.parent,key);

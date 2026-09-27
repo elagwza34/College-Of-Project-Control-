@@ -34,7 +34,7 @@ export default function PageSectionNav({
               <SiteLink
                 key={`${link.href}-${link.label}`}
                 href={link.href}
-                className="rounded-md px-3 py-2 text-xs font-semibold text-foreground-600 transition-colors hover:bg-accent-50 hover:text-primary-700 md:text-sm"
+                className="rounded-md px-3 py-2 text-xs font-semibold text-foreground-600 transition-all hover:bg-accent-50 hover:text-primary-700 focus-visible:bg-accent-50 md:text-sm"
               >
                 {link.label}
               </SiteLink>
@@ -44,7 +44,7 @@ export default function PageSectionNav({
 
         {showCta && <SiteLink
           href={ctaHref}
-          className="btn-primary hidden shrink-0 items-center gap-2 px-4 py-2.5 text-xs font-bold transition-colors md:inline-flex"
+          className="btn-primary hidden shrink-0 items-center gap-2 px-4 py-2.5 text-xs font-bold md:inline-flex"
         >
           {ctaLabel}
           <i className="ri-arrow-right-line" aria-hidden="true" />

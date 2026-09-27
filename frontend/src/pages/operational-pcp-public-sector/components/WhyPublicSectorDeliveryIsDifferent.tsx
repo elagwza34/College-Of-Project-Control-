@@ -1,5 +1,60 @@
+const pressures = [
+  {
+    title: 'Formal baselines and controlled change',
+    copy: 'Scope, cost and timetable changes need visible impact analysis, agreed approval routes and traceable decisions.',
+    icon: 'ri-file-list-3-line',
+  },
+  {
+    title: 'Accountability and value for money',
+    copy: 'Reports must support governance, assurance and responsible use of public funds, with clear recommendations.',
+    icon: 'ri-scales-3-line',
+  },
+  {
+    title: 'Multi-supplier delivery',
+    copy: 'Departments, partners and suppliers need one coherent view of dependencies, milestones and commitments.',
+    icon: 'ri-team-line',
+  },
+  {
+    title: 'Data, security and service continuity',
+    copy: 'Controls must respect information governance, access requirements, resilience and critical-service duties.',
+    icon: 'ri-shield-keyhole-line',
+  },
+];
+
 export default function WhyPublicSectorDeliveryIsDifferent() {
   return (
-<section id="challenge" className="scroll-mt-44 py-16 odd:bg-background-100 md:py-20"><div className="container-site space-y-8"><div className="max-w-3xl space-y-4"><p className="text-xs font-bold uppercase tracking-[.15em] text-accent-700">{"Why public-sector delivery is different"}</p><h2 className="text-3xl md:text-4xl">{"Project capability must remain clear, auditable and defensible."}</h2><p className="leading-relaxed text-foreground-600">{"Public programmes operate across formal governance, multi-supplier delivery, constrained budgets, complex stakeholders and scrutiny. Decisions must connect scope, affordability, risk, service outcomes and public value."}</p></div><div className="grid gap-6 md:grid-cols-2 "><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Formal baselines and controlled change"}</h3><p className="leading-relaxed text-foreground-600">{"Material changes to scope, cost or timetable require impact analysis, approval routes and traceable decisions."}</p></article><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Accountability and value for money"}</h3><p className="leading-relaxed text-foreground-600">{"Reporting supports governance, assurance and responsible use of public funds, with clear recommendations for intervention."}</p></article><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Multi-supplier delivery"}</h3><p className="leading-relaxed text-foreground-600">{"Coordinate dependencies, commercial interfaces and shared milestones across departments, partners and suppliers."}</p></article><article className="space-y-3 rounded-2xl border border-background-200 bg-white p-6"><h3 className="text-xl">{"Data, security and service continuity"}</h3><p className="leading-relaxed text-foreground-600">{"Respect information governance, access requirements, resilience and critical-service responsibilities."}</p></article></div></div></section>
+    <section id="challenge" className="scroll-mt-44 bg-background-50 py-16 md:py-24">
+      <div className="container-site">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-end">
+          <div className="max-w-3xl">
+            <p className="text-xs font-bold uppercase tracking-[.18em] text-accent-700">
+              <span className="mr-3 inline-block h-px w-7 align-middle bg-signal-400" aria-hidden="true" />
+              Why public-sector delivery is different
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold leading-[1.03] text-foreground-950 md:text-5xl">
+              Project capability must remain clear, auditable and defensible.
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-foreground-600">
+              Public programmes operate across formal governance, constrained budgets, complex stakeholders and scrutiny.
+              Decisions must connect scope, affordability, risk, service outcomes and public value.
+            </p>
+          </div>
+
+          <div className="rounded-lg border border-background-200 bg-white p-5 shadow-card md:p-6">
+            <div className="grid gap-px overflow-hidden rounded-lg border border-background-200 bg-background-200 sm:grid-cols-2">
+              {pressures.map((item) => (
+                <article key={item.title} className="bg-white p-5">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-accent-50 text-xl text-accent-800">
+                    <i className={item.icon} aria-hidden="true" />
+                  </span>
+                  <h3 className="mt-5 text-lg font-bold leading-snug text-foreground-950">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground-600">{item.copy}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

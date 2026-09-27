@@ -1,5 +1,5 @@
 import Footer from '@/components/feature/Footer';
-import SchemaOrg, { courseSchema, faqPageSchema } from '@/components/feature/SchemaOrg';
+import SchemaOrg, { courseSchema } from '@/components/feature/SchemaOrg';
 import StickyCta from '@/components/feature/StickyCta';
 import ChooseTheRightAccessRoute from "./components/ChooseTheRightAccessRoute";
 import CombinedCapabilitiesLearnersDevelop from "./components/CombinedCapabilitiesLearnersDevelop";
@@ -12,11 +12,9 @@ import LearnTogether from "./components/LearnTogether";
 import ReadyToBuildCompleteProjectControlsCapability from "./components/ReadyToBuildCompleteProjectControlsCapability";
 import RequestConsultationCta from './components/RequestConsultationCta';
 import RouteNavbarSection from "./components/RouteNavbarSection";
-import StrategicOperationalPCPRouteFAQs from "./components/StrategicOperationalPCPRouteFAQs";
 import WhatYouCouldApplyAtWork from "./components/WhatYouCouldApplyAtWork";
 import WhoShouldChooseTheStrategicOperationalRoute from "./components/WhoShouldChooseTheStrategicOperationalRoute";
 import WhyThisRoute from "./components/WhyThisRoute";
-import { faqData } from './routeData';
 export default function StrategicOperationalPcp() {
   return (<>
     <SchemaOrg type="EducationalOccupationalProgram" data={courseSchema({
@@ -24,8 +22,6 @@ export default function StrategicOperationalPcp() {
       description: 'A premium combined pathway combining Level 6 project controls capability with strategic leadership development and OTHM Level 7 Diploma progression. Funding subject to eligibility.',
       occupationalCategory: 'Strategic and Operational Project Controls Professional',
     })} />
-    <SchemaOrg type="FAQPage" data={faqPageSchema(faqData.faqs)} />
-
     <div className="min-h-screen bg-background-50">
       <main>
         <FundingSubjectToEligibility />
@@ -41,7 +37,6 @@ export default function StrategicOperationalPcp() {
         <LearnTogether />
         <ReadyToBuildCompleteProjectControlsCapability />
         <RequestConsultationCta />
-        <StrategicOperationalPCPRouteFAQs />
         <ComplianceNote />
       </main>
       <Footer />

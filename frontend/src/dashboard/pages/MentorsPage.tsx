@@ -114,7 +114,7 @@ function MentorCard({ mentor, onEdit }: { mentor: Mentor; onEdit: () => void }) 
     <button
       type="button"
       onClick={onEdit}
-      className="flex flex-col items-center gap-2 rounded-xl border border-background-200/70 bg-white p-4 text-center shadow-sm transition-colors hover:border-primary-300"
+      className="interactive-surface flex flex-col items-center gap-2 rounded-xl border border-background-200/70 bg-white p-4 text-center shadow-sm hover:border-primary-300 hover:shadow-md"
     >
       <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-background-100">
         {imageSrc ? (
@@ -167,7 +167,10 @@ function MentorEditor({ mentor, onDelete, onSaved }: { mentor: Mentor; onDelete:
           await cmsApi.patch(`/mentors/${mentor.id}/`, data);
         } else {
           const { image: _image, ...rest } = form;
-          await cmsApi.patch(`/mentors/${mentor.id}/`, rest);
+          await cmsApi.patch(`/mentors/${mentor.id}/`, {
+            ...rest,
+            ...(form.image_url.trim() && form.image_url !== mentor.image_url ? { image: null } : {}),
+          });
         }
         onSaved();
       } finally {
@@ -176,7 +179,8 @@ function MentorEditor({ mentor, onDelete, onSaved }: { mentor: Mentor; onDelete:
     } catch (error) { reportCmsError(error); }
   };
 
-  const imageSrc = preview || form.image || form.image_url;
+  const replacingWithLink = form.image_url.trim() && form.image_url !== mentor.image_url;
+  const imageSrc = preview || (replacingWithLink ? form.image_url : form.image || form.image_url);
 
   return (
     <div>
@@ -214,6 +218,7 @@ function MentorEditor({ mentor, onDelete, onSaved }: { mentor: Mentor; onDelete:
             onChange={(v) => { set('image_url', v); if (v) onFileChange(null); }}
             placeholder="https://example.com/photo.jpg"
           />
+          <p className="text-xs text-foreground-500">Click Save Mentor to save your photo or image link. A new link replaces the currently uploaded photo.</p>
           <TextField id={`initials-${mentor.id}`} label="Initials (optional)" value={form.initials} onChange={(v) => set('initials', v)} />
           <TextField id={`role-${mentor.id}`} label="Role" value={form.role_title} onChange={(v) => set('role_title', v)} />
           <TextField id={`affiliation-${mentor.id}`} label="Affiliation" value={form.affiliation} onChange={(v) => set('affiliation', v)} />

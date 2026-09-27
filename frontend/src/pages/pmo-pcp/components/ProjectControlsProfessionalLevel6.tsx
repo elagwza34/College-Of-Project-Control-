@@ -45,7 +45,7 @@ export default function ProjectControlsProfessionalLevel6() {
             </SiteLink>
             <SiteLink href="/book-a-session" className="cta-button inline-flex items-center gap-2 rounded-lg border border-white/55 bg-primary-950/35 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:border-signal-400 hover:bg-white/10">
               <i className="ri-calendar-line" />
-              Book a PMO consultation
+              Request a PMO consultation
             </SiteLink>
             <SiteLink href="/PMO_Governance_Project_Controls_Professional_Catalogue.pdf" className="cta-button inline-flex items-center gap-2 rounded-lg border border-white/55 bg-primary-950/35 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:border-signal-400 hover:bg-white/10">
               <i className="ri-file-pdf-2-line" />

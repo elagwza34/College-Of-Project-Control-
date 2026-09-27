@@ -1,11 +1,15 @@
 from django.shortcuts import get_object_or_404
+from django.core.signing import BadSignature, SignatureExpired, TimestampSigner
 from rest_framework.decorators import api_view
-from rest_framework.decorators import permission_classes
+from rest_framework.decorators import permission_classes, throttle_classes
+from apps.cms.throttles import EnquiryThrottle
+from apps.cms.permissions import IsDashboardUser
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework import serializers
 
-from .models import Coach, Event, MentorProfile, NavigationMenu, Page, Partner, ProfessionalCredential, PublicationStatus, Sector, SiteSettings
+from .models import Coach, Event, MentorProfile, NavigationMenu, Page, Partner, ProfessionalCredential, PublicationStatus, Sector, ShortCourse, SiteSettings
 from .serializers import (
     CoachPublicSerializer,
     EnquirySerializer,
@@ -16,8 +20,42 @@ from .serializers import (
     PartnerPublicSerializer,
     ProfessionalCredentialPublicSerializer,
     SectorPublicSerializer,
+    ShortCoursePublicSerializer,
     SiteSettingsSerializer,
 )
+
+MAINTENANCE_TOKEN_MAX_AGE = 60 * 60 * 24 * 7
+
+
+class MaintenanceSettingsSerializer(serializers.Serializer):
+    enabled = serializers.BooleanField()
+    heading = serializers.CharField(max_length=120, allow_blank=False)
+    message = serializers.CharField(max_length=1000, allow_blank=False)
+    pin = serializers.RegexField(regex=r"^\d{6}$", required=False, allow_blank=True, write_only=True)
+
+
+def maintenance_signer():
+    return TimestampSigner(salt="cpcm-maintenance-access-v1")
+
+
+def maintenance_token_valid(request):
+    token = request.headers.get("X-Maintenance-Access", "").strip()
+    if not token:
+        return False
+    try:
+        return maintenance_signer().unsign(token, max_age=MAINTENANCE_TOKEN_MAX_AGE) == "maintenance-access"
+    except (BadSignature, SignatureExpired):
+        return False
+
+
+def maintenance_payload(settings, request=None):
+    return {
+        "enabled": settings.maintenance_enabled,
+        "authenticated": (not settings.maintenance_enabled) or maintenance_token_valid(request) if request else False,
+        "heading": settings.maintenance_heading,
+        "message": settings.maintenance_message,
+        "pinSet": settings.has_maintenance_pin,
+    }
 
 
 @api_view(["GET"])
@@ -30,6 +68,49 @@ def site_detail(_request):
             "menus": NavigationMenuSerializer(menus, many=True).data,
         }
     )
+
+
+@api_view(["GET"])
+@permission_classes([AllowAny])
+def maintenance_status(request):
+    settings = SiteSettings.load()
+    return Response(maintenance_payload(settings, request))
+
+
+@api_view(["POST"])
+@permission_classes([AllowAny])
+def maintenance_verify(request):
+    settings = SiteSettings.load()
+    pin = str(request.data.get("pin", "")).strip()
+    if not settings.maintenance_enabled:
+        return Response({"accessToken": "", **maintenance_payload(settings, request)})
+    if not pin.isdigit() or len(pin) != 6 or not settings.check_maintenance_pin(pin):
+        return Response({"detail": "Invalid access code."}, status=status.HTTP_400_BAD_REQUEST)
+    return Response({
+        "accessToken": maintenance_signer().sign("maintenance-access"),
+        **maintenance_payload(settings, request),
+        "authenticated": True,
+    })
+
+
+@api_view(["GET", "PATCH"])
+@permission_classes([IsDashboardUser])
+def cms_maintenance_settings(request):
+    settings = SiteSettings.load()
+    if request.method == "GET":
+        return Response(maintenance_payload(settings))
+    serializer = MaintenanceSettingsSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+    data = serializer.validated_data
+    if data["enabled"] and not data.get("pin") and not settings.has_maintenance_pin:
+        return Response({"pin": ["Set a 6-digit PIN before enabling maintenance mode."]}, status=status.HTTP_400_BAD_REQUEST)
+    settings.maintenance_enabled = data["enabled"]
+    settings.maintenance_heading = data["heading"]
+    settings.maintenance_message = data["message"]
+    if data.get("pin"):
+        settings.set_maintenance_pin(data["pin"])
+    settings.save()
+    return Response(maintenance_payload(settings))
 
 
 @api_view(["GET"])
@@ -105,6 +186,18 @@ def sector_detail(request, slug):
 
 
 @api_view(["GET"])
+def short_courses_list(request):
+    courses = ShortCourse.objects.filter(is_active=True).order_by("order", "title")
+    return Response(ShortCoursePublicSerializer(courses, many=True, context={"request": request}).data)
+
+
+@api_view(["GET"])
+def short_course_detail(request, slug):
+    course = get_object_or_404(ShortCourse, slug=slug, is_active=True)
+    return Response(ShortCoursePublicSerializer(course, context={"request": request}).data)
+
+
+@api_view(["GET"])
 def events_list(request):
     events = Event.objects.filter(is_active=True).order_by("order", "id")
     return Response(EventPublicSerializer(events, many=True, context={"request": request}).data)
@@ -112,6 +205,7 @@ def events_list(request):
 
 @api_view(["POST"])
 @permission_classes([AllowAny])
+@throttle_classes([EnquiryThrottle])
 def create_enquiry(request):
     serializer = EnquirySerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
