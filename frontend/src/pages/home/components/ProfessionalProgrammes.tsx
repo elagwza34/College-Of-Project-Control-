@@ -9,6 +9,7 @@ import {
 } from '@/data/programmeFacts';
 import type { ReactNode } from 'react';
 import { useEffect,useRef,useState } from 'react';
+import LearningJourney from './LearningJourney';
 
 /* ─────────────────── ProgrammeCard ─────────────────── */
 interface ProgrammeCardProps {
@@ -391,6 +392,8 @@ export default function ProfessionalProgrammes() {
             />
           ))}
         </div>
+
+        <LearningJourney />
 
         {/* Secondary professional-study panel — audit P00.5 / P01.2. No
             apprenticeship application button: this is a separate offer with its
