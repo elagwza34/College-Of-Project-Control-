@@ -32,20 +32,51 @@ export interface ProgrammeFacts {
   id: string;
   /** Official offer title, exactly as published. */
   officialTitle: string;
+  /**
+   * Short display label for cards, tables and navigation. This is the only
+   * label components should render — never a retyped title.
+   */
+  shortTitle: string;
   /** URL slug. */
   slug: string;
+  /**
+   * Canonical in-site URL. Alias of `slug`, exposed separately so UI code never
+   * has to guess which field carries the link.
+   */
+  url: string;
   /** Single taxonomy label used by navigation, cards and selectors alike. */
   offerType: OfferType;
   offerTypeLabel: string;
-  /** Occupational standard reference, where one exists. */
+  /**
+   * Occupational standard reference, where one exists. `code` is the definitive
+   * link between this programme and its standard — never infer it from `level`.
+   */
   standard?: {
     code: string;
     version: string;
     issuingBody: string;
   };
   level: number;
+  /** One-sentence description used on cards and at the top of programme pages. */
+  description: string;
   /** Human-readable summary of who the offer is for. */
   purpose: string;
+  /**
+   * What this role actually does day to day. Drives the "role focus" row of the
+   * comparison so a visitor can self-select without reading a module list.
+   */
+  roleFit: string;
+  /**
+   * How the learning is organised, distinct from the assessment method. Drives
+   * the "learning approach" comparison row.
+   */
+  learningApproach: string;
+  /**
+   * The work this role is normally expected to carry, described in occupational
+   * terms rather than as a module list. Drives the "typical responsibilities"
+   * comparison row.
+   */
+  responsibilities: string;
   /** Facts shown on cards and comparison tables. */
   facts: {
     /** Planned duration, or an explicit statement that it varies. */
@@ -84,7 +115,9 @@ export const PROGRAMMES: ProgrammeFacts[] = [
   {
     id: 'apm-l4',
     officialTitle: 'Associate Project Manager Level 4 Apprenticeship',
+    shortTitle: 'Associate Project Manager Level 4',
     slug: '/associate-project-manager-level-4',
+    url: '/associate-project-manager-level-4',
     offerType: OFFER_TYPE.apprenticeship,
     offerTypeLabel: 'Apprenticeship',
     standard: {
@@ -93,8 +126,16 @@ export const PROGRAMMES: ProgrammeFacts[] = [
       issuingBody: 'Skills England',
     },
     level: 4,
+    description:
+      'Plan project activities, work with stakeholders and support successful delivery.',
     purpose:
       'Build practical capability to plan activities, work with stakeholders and support successful project delivery, through teaching, guided application and feedback connected to your role.',
+    roleFit:
+      'Coordinating and delivering project activities: planning work, managing stakeholders, tracking progress and closing tasks out.',
+    learningApproach:
+      'Work-based, with off-job teaching and guided application of the learning in your role, plus feedback on the evidence you produce.',
+    responsibilities:
+      'Plan activities, manage stakeholders and information, track progress against the plan, and support delivery through to close.',
     facts: {
       duration: 'Planned over the apprenticeship period agreed in your written offer',
       offJobHours:
@@ -114,7 +155,9 @@ export const PROGRAMMES: ProgrammeFacts[] = [
   {
     id: 'pcp-l6',
     officialTitle: 'Project Controls Professional Level 6 Apprenticeship',
+    shortTitle: 'Project Controls Professional Level 6',
     slug: '/project-controls-professional-level-6',
+    url: '/project-controls-professional-level-6',
     offerType: OFFER_TYPE.apprenticeship,
     offerTypeLabel: 'Apprenticeship',
     standard: {
@@ -123,8 +166,16 @@ export const PROGRAMMES: ProgrammeFacts[] = [
       issuingBody: 'Skills England',
     },
     level: 6,
+    description:
+      'Integrate schedules, cost, risk and performance information so a project team can make and defend control decisions.',
     purpose:
       'Develop the technical and leadership capability to integrate schedules, cost, risk and performance information so a project team can make and defend control decisions.',
+    roleFit:
+      'The technical integration of schedules, costs, risks and performance across a project or programme, and the control decisions that follow.',
+    learningApproach:
+      'Work-based, integrating taught learning with applied project evidence; three internal pathways share the same standard and assessment.',
+    responsibilities:
+      'Build and maintain the project baseline, forecast cost and time to complete, manage risk and change, and report performance so control decisions can be defended.',
     facts: {
       duration: 'Planned over the apprenticeship period agreed in your written offer',
       offJobHours:
@@ -165,12 +216,22 @@ export const PROFESSIONAL_PROGRAMMES: ProgrammeFacts[] = [
   {
     id: 'pmo-l6',
     officialTitle: 'Certified PMO Professional — Level 6 professional programme',
+    shortTitle: 'Certified PMO Professional Level 6',
     slug: '/pmo-pcp',
+    url: '/pmo-pcp',
     offerType: OFFER_TYPE.professional,
     offerTypeLabel: 'Professional programme',
     level: 6,
+    description:
+      'Develop the knowledge and practical evidence to strengthen a project management office.',
     purpose:
       'Develop the knowledge and practical evidence to strengthen a project management office, and understand how this professional programme relates to the Chartered development pathway within Project Controls Professional Level 6.',
+    roleFit:
+      'Professional development for project management office practice. Not a distinct qualification level or a third apprenticeship.',
+    learningApproach:
+      'Structured professional study across four modules, assessed separately from the apprenticeship.',
+    responsibilities:
+      'Professional development for project management office practice. This is not a distinct qualification level and not a third apprenticeship.',
     facts: {
       duration: 'Published as 16 months across four modules',
       delivery:
@@ -215,3 +276,154 @@ export function programmesByLevel(level: number): ProgrammeFacts[] {
 export const APM_L4 = programmeById('apm-l4');
 export const PCP_L6 = programmeById('pcp-l6');
 export const PMO_L6 = programmeById('pmo-l6');
+
+/**
+ * The comparison columns, in a fixed display order, resolved by id.
+ *
+ * A plain array spread would reintroduce the original defect: the moment a
+ * record is inserted, removed or reordered, headings and data drift apart.
+ * Here the order is written as ids and each id is resolved by lookup, so a
+ * missing record fails at module load instead of mislabelling a column.
+ */
+const APPRENTICESHIP_COMPARISON_ORDER = ['apm-l4', 'pcp-l6'] as const;
+
+export const APPRENTICESHIP_COMPARISON_COLUMNS: readonly ProgrammeFacts[] =
+  APPRENTICESHIP_COMPARISON_ORDER.map((id) => {
+    const programme = programmeById(id);
+    if (!programme) {
+      throw new Error(
+        `programmeFacts: comparison column "${id}" is not defined. Fix the id rather than reordering the data.`,
+      );
+    }
+    return programme;
+  });
+
+/**
+ * The apprenticeship names, in a deliberate display order, as one line.
+ *
+ * Exists so summary copy (hero micro-line, SEO text, breadcrumb copy) cannot
+ * drift from the card titles. Order is explicit rather than inherited from the
+ * array, and each name still comes from the record it belongs to.
+ */
+export function apprenticeshipNames(separator = ' · '): string {
+  const order = [APM_L4, PCP_L6].filter(
+    (programme): programme is ProgrammeFacts => programme !== undefined,
+  );
+  return order.map((programme) => programme.shortTitle).join(separator);
+}
+
+/**
+ * One row of the apprenticeship comparison.
+ *
+ * `valueById` is keyed by `ProgrammeFacts.id`, never by array position. An
+ * index-keyed structure allowed the Level 4 and Level 6 columns to be swapped
+ * silently, which is how ST0310 and ST0845 ended up under the wrong headings.
+ * A missing id now fails visibly at render time instead of mislabelling data.
+ */
+export interface ComparisonRow {
+  /** Column heading, e.g. "Role focus". */
+  label: string;
+  /** One short line of supporting context, shown under the label. */
+  hint?: string;
+  valueById: Readonly<Record<string, string>>;
+}
+
+/**
+ * One cell of a comparison row, always resolved through the program record.
+ *
+ * `undefined` is impossible here: `APPRENTICESHIP_COMPARISON_COLUMNS` is typed as
+ * `ProgrammeFacts[]`, so a typo is a compile error rather than a blank cell.
+ */
+function columnValue(
+  id: (typeof APPRENTICESHIP_COMPARISON_ORDER)[number],
+  field: 'roleFit' | 'responsibilities' | 'learningApproach',
+): string {
+  return programmeById(id)![field];
+}
+
+function factsFor(
+  id: (typeof APPRENTICESHIP_COMPARISON_ORDER)[number],
+  field: 'duration' | 'delivery' | 'assessment' | 'entry',
+): string {
+  return programmeById(id)!.facts[field];
+}
+
+function levelFor(id: (typeof APPRENTICESHIP_COMPARISON_ORDER)[number]): number {
+  return programmeById(id)!.level;
+}
+
+/**
+ * The apprenticeship comparison, in a deliberate reading order:
+ * what the role is → where it sits → how you learn → how it's assessed.
+ * Deliberately short: badge level alone is not a useful discriminator, and a
+ * five-row table stops being scannable on a phone.
+ *
+ * Every cell is keyed by programme id. No value here is typed by array index.
+ */
+export const APPRENTICESHIP_COMPARISON: readonly ComparisonRow[] = [
+  {
+    label: 'Role focus',
+    hint: 'The question that separates the two offers: coordinating delivery, or integrating control information.',
+    valueById: {
+      'apm-l4': columnValue('apm-l4', 'roleFit'),
+      'pcp-l6': columnValue('pcp-l6', 'roleFit'),
+    },
+  },
+  {
+    label: 'Typical responsibilities',
+    hint: 'The work the learning is applied to, in the role itself.',
+    valueById: {
+      'apm-l4': columnValue('apm-l4', 'responsibilities'),
+      'pcp-l6': columnValue('pcp-l6', 'responsibilities'),
+    },
+  },
+  {
+    label: 'Level',
+    hint: 'The qualification level of the occupational standard.',
+    valueById: {
+      'apm-l4': `Level ${levelFor('apm-l4')}`,
+      'pcp-l6': `Level ${levelFor('pcp-l6')}`,
+    },
+  },
+  {
+    label: 'Standard reference',
+    hint: 'The occupational standard each offer is assessed against.',
+    valueById: {
+      'apm-l4': standardLabel(APM_L4!),
+      'pcp-l6': standardLabel(PCP_L6!),
+    },
+  },
+  {
+    label: 'Learning approach',
+    valueById: {
+      'apm-l4': columnValue('apm-l4', 'learningApproach'),
+      'pcp-l6': columnValue('pcp-l6', 'learningApproach'),
+    },
+  },
+  {
+    label: 'Assessment',
+    hint: 'Both are work-based, each against its own standard.',
+    valueById: {
+      'apm-l4': factsFor('apm-l4', 'assessment'),
+      'pcp-l6': factsFor('pcp-l6', 'assessment'),
+    },
+  },
+];
+
+/** Standard reference line, e.g. "ST0310 v1.5 — Skills England". */
+export function standardLabel(programme: ProgrammeFacts): string {
+  if (!programme.standard) return '';
+  return `${programme.standard.code} ${programme.standard.version} — ${programme.standard.issuingBody}`;
+}
+
+/**
+ * The bare standard code for compact headings, e.g. "ST0310".
+ *
+ * Returns an em dash rather than an empty string when a programme has no
+ * standard, so a heading can never render as a blank line. It is derived from
+ * the record, never hardcoded — that is what keeps a code from drifting onto
+ * the wrong programme's column.
+ */
+export function standardCode(programme: ProgrammeFacts): string {
+  return programme.standard?.code ?? '—';
+}

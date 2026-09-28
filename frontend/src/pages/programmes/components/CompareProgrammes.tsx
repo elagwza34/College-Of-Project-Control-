@@ -1,6 +1,30 @@
 import SiteLink from '@/components/base/SiteLink';
-import { useEffect,useRef,useState } from 'react';
+import {
+  APPRENTICESHIP_COMPARISON,
+  APPRENTICESHIP_COMPARISON_COLUMNS,
+  standardLabel,
+} from '@/data/programmeFacts';
+import { useEffect, useRef, useState } from 'react';
 
+/**
+ * Comparison of the two apprenticeships.
+ *
+ * Audit P01.3 / P01.6 / P04.1. This table previously hardcoded `pcp` / `apm` /
+ * `pmo` keys inside every row and rendered Certified PMO Professional as a third
+ * peer column. Two defects followed from that:
+ *
+ *   1. a key and its heading lived in different places, so ST0310 and ST0845
+ *      could end up under swapped headings;
+ *   2. a professional programme was presented as if it were an apprenticeship.
+ *
+ * Both are removed structurally rather than by care:
+ *   • headings and cells resolve from the same programme record, via the
+ *     id-keyed rows in APPRENTICESHIP_COMPARISON — never by array position;
+ *   • the comparison covers only the two apprenticeships, filtered by offer
+ *     type, so a new professional offer cannot appear here;
+ *   • mobile renders stacked cards, because a min-width table pushed the Level 4
+ *     column off screen entirely.
+ */
 export default function CompareProgrammes() {
   const [highlightedRow, setHighlightedRow] = useState<string | null>(null);
   const [visible, setVisible] = useState(false);
@@ -17,40 +41,7 @@ export default function CompareProgrammes() {
     return () => obs.disconnect();
   }, []);
 
-  const rows = [
-    {
-      id: 'focus',
-      label: 'Primary Focus',
-      pcp: 'Advanced Project Controls',
-      apm: 'Project Management & Delivery',
-      pmo: 'PMO Governance & Strategic Control',
-      icon: 'ri-focus-3-line',
-    },
-    {
-      id: 'bestFit',
-      label: 'Best Suited To',
-      pcp: 'Project Controls professionals, planners, schedulers, cost professionals, PMO and experienced project professionals.',
-      apm: 'Professionals developing broader project-management and delivery responsibility.',
-      pmo: 'Experienced PMO, Project Controls and project professionals developing strategic PMO capability.',
-      icon: 'ri-user-star-line',
-    },
-    {
-      id: 'capability',
-      label: 'Core Capability',
-      pcp: 'Planning, scheduling, cost, EVM, risk and controls.',
-      apm: 'Governance, scope, schedule, cost, risk, stakeholders and delivery.',
-      pmo: 'Governance, controls, assurance, risk, quality and reporting.',
-      icon: 'ri-bar-chart-line',
-    },
-    {
-      id: 'level',
-      label: 'Level',
-      pcp: 'Level 6',
-      apm: 'Level 4',
-      pmo: 'Level 6',
-      icon: 'ri-medal-line',
-    },
-  ];
+  const columns = APPRENTICESHIP_COMPARISON_COLUMNS;
 
   return (
     <section className="py-16 md:py-20 bg-canvas relative overflow-hidden">
@@ -67,50 +58,124 @@ export default function CompareProgrammes() {
           </p>
         </div>
 
-        <div ref={ref} className="overflow-x-auto rounded-xl border border-background-300 bg-white">
-          <table className="w-full min-w-[720px]">
-            <thead>
-              <tr className="bg-primary-500 border-b border-background-50/20">
-                <th className="text-left px-4 py-4 text-xs font-label font-semibold uppercase tracking-wider text-background-50 w-44">
-                  Programme
-                </th>
-                <th className="text-left px-4 py-4 text-xs font-label font-semibold uppercase tracking-wider text-background-50">
-                  <span className="inline-flex items-center gap-1.5">
-                    <i className="ri-fire-line text-xs text-highlight-300"></i>
-                    Project Controls Professional Level 6
-                  </span>
-                </th>
-                <th className="text-left px-4 py-4 text-xs font-label font-semibold uppercase tracking-wider text-background-50">
-                  Associate Project Manager Level 4
-                </th>
-                <th className="text-left px-4 py-4 text-xs font-label font-semibold uppercase tracking-wider text-background-50">
-                  Certified PMO Professional Level 6
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((row) => (
-                <tr
-                  key={row.id}
-                  className={`border-b border-background-200 transition-colors duration-200 ${
-                    highlightedRow === row.id ? 'bg-primary-50' : 'bg-white'
-                  }`}
-                  onMouseEnter={() => setHighlightedRow(row.id)}
-                  onMouseLeave={() => setHighlightedRow(null)}
-                >
-                  <td className="px-4 py-4 align-top">
-                    <div className="flex items-center gap-2 text-sm font-label font-semibold text-foreground-700">
-                      <i className={`${row.icon} text-foreground-400 text-sm`}></i>
-                      {row.label}
+        <div
+          ref={ref}
+          className={`transition-opacity duration-500 ${visible ? 'opacity-100' : 'opacity-0'}`}
+        >
+          {/* Mobile: stacked cards, one per programme, every comparison point
+              inside it. The previous `min-w-[720px]` table forced horizontal
+              scrolling on a phone, which pushed the Level 4 column off screen. */}
+          <div className="md:hidden space-y-4">
+            {columns.map((programme) => (
+              <article
+                key={programme.id}
+                className="rounded-xl border border-background-300 bg-white p-5"
+              >
+                <span className="inline-block rounded-full border border-primary-300 bg-primary-100 px-2.5 py-0.5 text-xs font-label font-semibold text-primary-700">
+                  {programme.offerTypeLabel}
+                </span>
+                <h3 className="mt-2 text-lg font-heading font-bold text-primary-800 leading-tight">
+                  {programme.shortTitle}
+                </h3>
+                <p className="mt-0.5 text-xs text-foreground-500">{standardLabel(programme)}</p>
+
+                <dl className="mt-4 space-y-3">
+                  {APPRENTICESHIP_COMPARISON.map((row) => (
+                    <div
+                      key={row.label}
+                      className="border-t border-background-200 pt-3 first:border-0 first:pt-0"
+                    >
+                      <dt className="text-xs font-label font-semibold uppercase tracking-wider text-foreground-500">
+                        {row.label}
+                      </dt>
+                      <dd className="mt-1 text-sm leading-relaxed text-foreground-700">
+                        {row.valueById[programme.id] ?? 'Not published — contact our admissions team.'}
+                      </dd>
                     </div>
-                  </td>
-                  <td className="px-4 py-4 text-sm text-highlight-700 font-medium align-top">{row.pcp}</td>
-                  <td className="px-4 py-4 text-sm text-foreground-600 align-top">{row.apm}</td>
-                  <td className="px-4 py-4 text-sm text-foreground-600 align-top">{row.pmo}</td>
+                  ))}
+                </dl>
+
+                <SiteLink
+                  href={programme.url}
+                  className="btn-primary mt-5 inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap px-5 py-3 text-sm font-bold transition-colors duration-300"
+                  data-gtm-event={`${programme.id}_programmes_compare_explore`}
+                  data-gtm-location="programmes-comparison"
+                >
+                  Explore {programme.shortTitle}
+                  <i className="ri-arrow-right-line text-sm" aria-hidden="true"></i>
+                </SiteLink>
+              </article>
+            ))}
+          </div>
+
+          {/* Desktop: one row per comparison point, two programme columns.
+              Headings and cells both resolve by programme id, so a column can
+              never be relabelled without its data moving with it. */}
+          <div className="hidden md:block overflow-x-auto rounded-xl border border-background-300 bg-white">
+            <table className="w-full min-w-[640px] table-fixed">
+              <caption className="sr-only">
+                Comparison of the two apprenticeships offered by Kent Business College
+              </caption>
+              <colgroup>
+                <col className="w-56" />
+                {columns.map((programme) => (
+                  <col key={programme.id} />
+                ))}
+              </colgroup>
+              <thead>
+                <tr className="bg-primary-500 border-b border-background-50/20">
+                  <th scope="col" className="text-left px-4 py-3 text-xs font-label font-semibold uppercase tracking-wider text-background-50">
+                    <span className="sr-only">Comparison point</span>
+                  </th>
+                  {columns.map((programme) => (
+                    <th
+                      key={programme.id}
+                      scope="col"
+                      className="text-left px-4 py-3 text-xs font-label font-semibold uppercase tracking-wider text-background-50"
+                    >
+                      <span className="block normal-case tracking-normal text-sm font-heading font-bold">
+                        {programme.shortTitle}
+                      </span>
+                      <span className="mt-0.5 block normal-case tracking-normal font-normal opacity-80">
+                        {standardLabel(programme)}
+                      </span>
+                    </th>
+                  ))}
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {APPRENTICESHIP_COMPARISON.map((row) => (
+                  <tr
+                    key={row.label}
+                    className={`border-b border-background-200 last:border-b-0 transition-colors duration-200 ${
+                      highlightedRow === row.label ? 'bg-primary-50' : 'bg-white'
+                    }`}
+                    onMouseEnter={() => setHighlightedRow(row.label)}
+                    onMouseLeave={() => setHighlightedRow(null)}
+                  >
+                    <th scope="row" className="px-4 py-4 text-left align-top">
+                      <span className="block text-sm font-label font-semibold text-foreground-700">
+                        {row.label}
+                      </span>
+                      {row.hint ? (
+                        <span className="mt-1 block text-xs leading-relaxed text-foreground-500">
+                          {row.hint}
+                        </span>
+                      ) : null}
+                    </th>
+                    {columns.map((programme) => (
+                      <td
+                        key={programme.id}
+                        className="px-4 py-4 align-top text-sm leading-relaxed text-foreground-600"
+                      >
+                        {row.valueById[programme.id]}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div className="mt-8 text-center">

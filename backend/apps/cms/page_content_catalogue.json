@@ -2978,22 +2978,22 @@
     "label": "Professional Programmes",
     "fields": [
       {
-        "key": "64ba11a42f0aed75",
+        "key": "b4a6d43c6d8abd43",
         "kind": "text",
-        "default": "Most Popular",
+        "default": "Role focus",
         "label": "Text"
       },
       {
-        "key": "2e4120ae4b3b4f16",
+        "key": "46349b9de531d0fa",
         "kind": "text",
-        "default": "About",
+        "default": "How you learn and are assessed",
         "label": "Text"
       },
       {
-        "key": "a8336d5286275abb",
+        "key": "d5454642203aa2f7",
         "kind": "text",
-        "default": "Includes",
-        "label": "Text"
+        "default": "Explore ",
+        "label": "Link text"
       },
       {
         "key": "087aa130fb132671",
@@ -3002,15 +3002,27 @@
         "label": "Heading"
       },
       {
-        "key": "aa35ea7e6f34aa65",
+        "key": "d6b1a2dfa454dba7",
         "kind": "text",
-        "default": "Both are apprenticeships. Compare the responsibilities, new learning and assessment each one covers.",
+        "default": "Both are apprenticeships. Compare the role, the learning and how each one is assessed.",
         "label": "Text"
+      },
+      {
+        "key": "ce9b5f992903e194",
+        "kind": "text",
+        "default": "Explore ",
+        "label": "Link text"
       },
       {
         "key": "dd01356c32692899",
         "kind": "text",
         "default": "Comparison point",
+        "label": "Text"
+      },
+      {
+        "key": "4bb3906547ee03cd",
+        "kind": "text",
+        "default": "Not published — contact our admissions team.",
         "label": "Text"
       },
       {
@@ -9864,9 +9876,15 @@
         "label": "Text"
       },
       {
-        "key": "e3ed61db86392858",
+        "key": "d5454642203aa2f7",
         "kind": "text",
-        "default": "Project Controls Professional Level 6",
+        "default": "Explore ",
+        "label": "Link text"
+      },
+      {
+        "key": "dd01356c32692899",
+        "kind": "text",
+        "default": "Comparison point",
         "label": "Text"
       },
       {

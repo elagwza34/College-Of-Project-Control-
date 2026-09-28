@@ -1,35 +1,29 @@
 import SiteLink from '@/components/base/SiteLink';
-import { APPRENTICESHIPS, PMO_L6 } from '@/data/programmeFacts';
+import {
+  APPRENTICESHIP_COMPARISON,
+  APPRENTICESHIP_COMPARISON_COLUMNS,
+  APPRENTICESHIPS,
+  PMO_L6,
+  standardLabel,
+  type ProgrammeFacts,
+} from '@/data/programmeFacts';
 import { useEffect,useRef,useState } from 'react';
 
 /* ─────────────────── ProgrammeCard ─────────────────── */
 interface ProgrammeCardProps {
-  title: string;
-  badge: string;
-  duration: string;
-  shortLine: string;
-  bestFor: string;
-  includes: string[];
-  cta: string;
-  href: string;
-  popular?: boolean;
+  /**
+   * The whole approved record, not a bag of strings.
+   *
+   * The component cannot invent or retype a programme fact, because there is no
+   * prop to pass one through. A card therefore cannot show ST0845 beside a
+   * Level 4 heading — heading, standard and role text all come from one object.
+   */
+  programme: ProgrammeFacts;
   ctaTracking: string;
   delay?: number;
 }
 
-function ProgrammeCard({
-  title,
-  badge,
-  duration,
-  shortLine,
-  bestFor,
-  includes,
-  cta,
-  href,
-  popular,
-  ctaTracking,
-  delay = 0,
-}: ProgrammeCardProps) {
+function ProgrammeCard({ programme, ctaTracking, delay = 0 }: ProgrammeCardProps) {
   const [visible, setVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -54,49 +48,23 @@ function ProgrammeCard({
   return (
     <div
       ref={ref}
-      className={`relative flex flex-col rounded-xl transition-all duration-500 ${animClass} hover:-translate-y-1 ${
-        popular
-          ? 'bg-white border-2 border-signal-500 hover:shadow-lg hover:shadow-signal-500/15'
-          : 'bg-white border border-background-300 hover:border-primary-400 hover:shadow-md hover:shadow-primary-500/10'
-      }`}
+      className={`relative flex flex-col rounded-xl transition-all duration-500 ${animClass} hover:-translate-y-1 bg-white border border-background-300 hover:border-primary-400 hover:shadow-md hover:shadow-primary-500/10`}
       style={{
         transition: `transform 350ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 350ms cubic-bezier(0.22, 1, 0.36, 1), opacity 500ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms`,
       }}
     >
-      {/* Popular badge */}
-      {popular && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
-          <span className="inline-flex items-center gap-1 rounded-full bg-signal-500 px-3 py-1 text-sm font-label font-bold text-primary-950 shadow-md whitespace-nowrap">
-            <i className="ri-fire-line text-sm"></i>
-            Most Popular
-          </span>
-        </div>
-      )}
-
       {/* Header band */}
       <div className="px-5 pt-6 pb-4 rounded-t-xl bg-white">
-        <span
-          className={`inline-block px-2.5 py-0.5 text-sm font-label font-semibold rounded-full whitespace-nowrap mb-2 ${
-            popular
-              ? 'bg-signal-50 text-signal-800 border border-signal-200'
-              : 'bg-primary-100 text-primary-700 border border-primary-300'
-          }`}
-        >
-          {badge}
+        <span className="inline-block px-2.5 py-0.5 text-sm font-label font-semibold rounded-full whitespace-nowrap mb-2 bg-primary-100 text-primary-700 border border-primary-300">
+          {programme.offerTypeLabel}
         </span>
         <h3 className="text-xl font-heading font-bold leading-tight text-primary-800 md:text-2xl">
-          {title}
+          {programme.shortTitle}
         </h3>
-        <p className="text-xs text-foreground-600 mt-1 leading-snug">{shortLine}</p>
-        <div
-          className={`inline-flex items-center gap-1 mt-2.5 px-2 py-0.5 rounded-full text-sm font-label font-semibold ${
-            popular
-              ? 'bg-signal-50 text-signal-800'
-              : 'bg-secondary-100 text-secondary-700'
-          }`}
-        >
-          <i className="ri-medal-line text-sm"></i>
-          {duration}
+        <p className="text-xs text-foreground-600 mt-1 leading-snug">{programme.description}</p>
+        <div className="inline-flex items-center gap-1 mt-2.5 px-2 py-0.5 rounded-full text-sm font-label font-semibold bg-secondary-100 text-secondary-700">
+          <i className="ri-shield-check-line text-sm" aria-hidden="true"></i>
+          {standardLabel(programme)}
         </div>
       </div>
 
@@ -104,38 +72,53 @@ function ProgrammeCard({
       <div className="px-5 pt-4 pb-4 flex-1">
         <div className="mb-4">
           <p className="text-sm text-foreground-400 font-label font-semibold uppercase tracking-wider mb-1">
-            About
+            Role focus
           </p>
-          <p className="text-xs text-foreground-600 leading-relaxed">{bestFor}</p>
+          <p className="text-xs text-foreground-600 leading-relaxed">{programme.roleFit}</p>
         </div>
 
+        <dl className="mb-4 space-y-1.5">
+          <div className="flex items-baseline gap-2">
+            <dt className="text-xs font-label font-semibold uppercase tracking-wider text-foreground-400 shrink-0">
+              Level
+            </dt>
+            <dd className="text-xs text-foreground-700">{programme.level}</dd>
+          </div>
+          <div className="flex items-baseline gap-2">
+            <dt className="text-xs font-label font-semibold uppercase tracking-wider text-foreground-400 shrink-0">
+              Duration
+            </dt>
+            <dd className="text-xs text-foreground-700 leading-relaxed">
+              {programme.facts.duration}
+            </dd>
+          </div>
+        </dl>
+
         <p className="text-sm text-foreground-400 font-label font-semibold uppercase tracking-wider mb-1.5">
-          Includes
+          How you learn and are assessed
         </p>
         <ul className="space-y-1">
-          {includes.map((item) => (
-            <li key={item} className="flex items-start gap-1.5 text-xs text-foreground-700">
-              <i
-                className={`ri-check-line mt-0.5 flex-shrink-0 text-sm ${
-                  popular ? 'text-signal-600' : 'text-primary-500'
-                }`}
-              ></i>
-              <span className="leading-snug">{item}</span>
-            </li>
-          ))}
+          <li className="flex items-start gap-1.5 text-xs text-foreground-700">
+            <i className="ri-check-line mt-0.5 flex-shrink-0 text-sm text-primary-500" aria-hidden="true"></i>
+            <span className="leading-snug">{programme.facts.delivery}</span>
+          </li>
+          <li className="flex items-start gap-1.5 text-xs text-foreground-700">
+            <i className="ri-check-line mt-0.5 flex-shrink-0 text-sm text-primary-500" aria-hidden="true"></i>
+            <span className="leading-snug">{programme.facts.assessment}</span>
+          </li>
         </ul>
       </div>
 
       {/* CTA */}
       <div className="px-5 pb-6 pt-4">
         <SiteLink
-          href={href}
+          href={programme.url}
           className="btn-primary inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap px-6 py-3 text-sm font-bold transition-colors duration-300"
           data-gtm-event={ctaTracking}
           data-gtm-location="programme-cards"
         >
-          {cta}
-          <i className="ri-arrow-right-line text-sm"></i>
+          Explore {programme.shortTitle}
+          <i className="ri-arrow-right-line text-sm" aria-hidden="true"></i>
         </SiteLink>
       </div>
     </div>
@@ -164,57 +147,15 @@ function ProgrammeComparisonTable() {
     return () => obs.disconnect();
   }, []);
 
-  const [pcp, apm] = APPRENTICESHIPS;
+  /* Audit P01.3: compare role focus, learning approach, level and assessment —
+     not just the badge level.
 
-  /* Audit P01.3: compare responsibilities, new learning, delivery, duration and
-     assessment — not just the badge level. Facts are inherited from the master
-     record rather than retyped here. */
-  const rows = [
-    {
-      id: 'role',
-      label: 'Role emphasis',
-      pcp: pcp.purpose,
-      apm: apm.purpose,
-      icon: 'ri-briefcase-4-line',
-    },
-    {
-      id: 'newLearning',
-      label: 'New learning',
-      pcp:
-        'Integrate schedule, cost, risk and performance information into defensible control decisions.',
-      apm:
-        'Plan activities, work with stakeholders and support successful project delivery.',
-      icon: 'ri-book-open-line',
-    },
-    {
-      id: 'delivery',
-      label: 'Delivery',
-      pcp: pcp.facts.delivery,
-      apm: apm.facts.delivery,
-      icon: 'ri-building-4-line',
-    },
-    {
-      id: 'duration',
-      label: 'Duration',
-      pcp: pcp.facts.duration,
-      apm: apm.facts.duration,
-      icon: 'ri-time-line',
-    },
-    {
-      id: 'assessment',
-      label: 'Assessment',
-      pcp: pcp.facts.assessment,
-      apm: apm.facts.assessment,
-      icon: 'ri-file-check-line',
-    },
-    {
-      id: 'standard',
-      label: 'Occupational standard',
-      pcp: `${pcp.standard.code} ${pcp.standard.version} (${pcp.standard.issuingBody})`,
-      apm: `${apm.standard.code} ${apm.standard.version} (${apm.standard.issuingBody})`,
-      icon: 'ri-shield-check-line',
-    },
-  ];
+     Every value is looked up by programme id from APPRENTICESHIP_COMPARISON. The
+     previous `const [pcp, apm] = APPRENTICESHIPS` destructuring bound data to
+     array order, so reordering the source silently attached ST0845 to the
+     Level 4 heading. Column order is now explicit and independent of the data
+     order, and the header and every cell resolve from the same id. */
+  const columns = APPRENTICESHIP_COMPARISON_COLUMNS;
 
   const animClass = visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8';
 
@@ -225,47 +166,117 @@ function ProgrammeComparisonTable() {
           Which programme best fits your responsibilities?
         </h3>
         <p className="text-sm text-foreground-600">
-          Both are apprenticeships. Compare the responsibilities, new learning and assessment each one
-          covers.
+          Both are apprenticeships. Compare the role, the learning and how each one is assessed.
         </p>
       </div>
 
-      <div className="overflow-x-auto rounded-xl border border-background-300 bg-white">
-        <table className="w-full min-w-[640px]">
+      {/* Mobile: stacked cards. A min-width table forces horizontal scrolling on
+          a phone, which pushed the Level 4 column off screen entirely. */}
+      <div className="md:hidden space-y-4">
+        {columns.map((programme) => (
+          <article
+            key={programme.id}
+            className="rounded-xl border border-background-300 bg-white p-5"
+          >
+            <span className="inline-block rounded-full border border-primary-300 bg-primary-100 px-2.5 py-0.5 text-xs font-label font-semibold text-primary-700">
+              {programme.offerTypeLabel}
+            </span>
+            <h4 className="mt-2 text-lg font-heading font-bold text-primary-800 leading-tight">
+              {programme.shortTitle}
+            </h4>
+            <p className="mt-0.5 text-xs text-foreground-500">{standardLabel(programme)}</p>
+
+            <dl className="mt-4 space-y-3">
+              {APPRENTICESHIP_COMPARISON.map((row) => (
+                <div
+                  key={row.label}
+                  className="border-t border-background-200 pt-3 first:border-0 first:pt-0"
+                >
+                  <dt className="text-xs font-label font-semibold uppercase tracking-wider text-foreground-500">
+                    {row.label}
+                  </dt>
+                  <dd className="mt-1 text-sm leading-relaxed text-foreground-700">
+                    {row.valueById[programme.id] ?? 'Not published — contact our admissions team.'}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+
+            <SiteLink
+              href={programme.url}
+              className="btn-primary mt-5 inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap px-5 py-3 text-sm font-bold transition-colors duration-300"
+              data-gtm-event={`${programme.id}_compare_explore`}
+              data-gtm-location="programme-comparison"
+            >
+              Explore {programme.shortTitle}
+              <i className="ri-arrow-right-line text-sm" aria-hidden="true"></i>
+            </SiteLink>
+          </article>
+        ))}
+      </div>
+
+      {/* Desktop: two columns, one row per comparison point. */}
+      <div className="hidden md:block overflow-x-auto rounded-xl border border-background-300 bg-white">
+        <table className="w-full min-w-[640px] table-fixed">
           <caption className="sr-only">
             Comparison of the two apprenticeships offered by Kent Business College
           </caption>
+          <colgroup>
+            <col className="w-48" />
+            {columns.map((programme) => (
+              <col key={programme.id} />
+            ))}
+          </colgroup>
           <thead>
             <tr className="bg-primary-500 border-b border-background-50/20">
-              <th scope="col" className="text-left px-4 py-3 text-xs font-label font-semibold uppercase tracking-wider text-background-50 w-44">
+              <th scope="col" className="text-left px-4 py-3 text-xs font-label font-semibold uppercase tracking-wider text-background-50">
                 <span className="sr-only">Comparison point</span>
               </th>
-              <th scope="col" className="text-left px-4 py-3 text-xs font-label font-semibold uppercase tracking-wider text-background-50">
-                Project Controls Professional Level 6
-              </th>
-              <th scope="col" className="text-left px-4 py-3 text-xs font-label font-semibold uppercase tracking-wider text-background-50">
-                Associate Project Manager Level 4
-              </th>
+              {columns.map((programme) => (
+                <th
+                  key={programme.id}
+                  scope="col"
+                  className="text-left px-4 py-3 text-xs font-label font-semibold uppercase tracking-wider text-background-50"
+                >
+                  <span className="block normal-case tracking-normal text-sm font-heading font-bold">
+                    {programme.shortTitle}
+                  </span>
+                  <span className="mt-0.5 block normal-case tracking-normal font-normal opacity-80">
+                    {standardLabel(programme)}
+                  </span>
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
-            {rows.map((row) => (
+            {APPRENTICESHIP_COMPARISON.map((row) => (
               <tr
-                key={row.id}
+                key={row.label}
                 className={`border-b border-background-200 align-top transition-colors duration-200 ${
-                  highlightedRow === row.id ? 'bg-primary-50' : 'bg-white'
+                  highlightedRow === row.label ? 'bg-primary-50' : 'bg-white'
                 }`}
-                onMouseEnter={() => setHighlightedRow(row.id)}
+                onMouseEnter={() => setHighlightedRow(row.label)}
                 onMouseLeave={() => setHighlightedRow(null)}
               >
                 <th scope="row" className="px-4 py-3.5 text-left">
-                  <span className="flex items-center gap-2 text-sm font-label font-semibold text-foreground-700">
-                    <i className={`${row.icon} text-foreground-400 text-sm`} aria-hidden="true"></i>
+                  <span className="text-sm font-label font-semibold text-foreground-700">
                     {row.label}
                   </span>
+                  {row.hint && (
+                    <span className="mt-0.5 block text-xs font-normal leading-snug text-foreground-500">
+                      {row.hint}
+                    </span>
+                  )}
                 </th>
-                <td className="px-4 py-3.5 text-sm leading-relaxed text-foreground-700">{row.pcp}</td>
-                <td className="px-4 py-3.5 text-sm leading-relaxed text-foreground-700">{row.apm}</td>
+                {columns.map((programme) => (
+                  <td key={programme.id} className="px-4 py-3.5 text-sm leading-relaxed text-foreground-700">
+                    {row.valueById[programme.id] ?? (
+                      <span className="text-foreground-500">
+                        Not published — contact our admissions team.
+                      </span>
+                    )}
+                  </td>
+                ))}
               </tr>
             ))}
           </tbody>
@@ -386,19 +397,16 @@ export default function ProfessionalProgrammes() {
         </div>
 
         {/* Cards grid — audit P00.2/P01.2: two apprenticeships of equal visual
-            weight. The professional programme is not a third peer. */}
+            weight. The professional programme is not a third peer.
+
+            Every field below is read from programmeFacts.ts; the card component
+            receives no retyped programme copy. `APPRENTICESHIPS` is filtered by
+            offer type, so adding a professional offer cannot make it appear here. */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-stretch">
           {APPRENTICESHIPS.map((programme, index) => (
             <ProgrammeCard
               key={programme.id}
-              title={programme.officialTitle}
-              badge={programme.offerTypeLabel}
-              duration={`Level ${programme.level} · ${programme.facts.duration}`}
-              shortLine={programme.purpose}
-              bestFor={programme.facts.entry}
-              includes={[programme.facts.delivery, programme.facts.assessment]}
-              cta={`Explore ${programme.officialTitle.replace(' Apprenticeship', '')}`}
-              href={programme.slug}
+              programme={programme}
               ctaTracking={`${programme.id}_explore`}
               delay={index * 80}
             />
@@ -416,10 +424,10 @@ export default function ProfessionalProgrammes() {
                 Professional development linked to the Chartered pathway
               </span>
               <h3 className="mt-3 text-lg md:text-xl font-heading font-bold text-foreground-950">
-                {PMO_L6.officialTitle}
+                {PMO_L6?.officialTitle}
               </h3>
               <p className="mt-2 max-w-3xl text-sm leading-relaxed text-foreground-600">
-                {PMO_L6.purpose}
+                {PMO_L6?.purpose}
               </p>
               <p className="mt-3 max-w-3xl text-sm leading-relaxed text-foreground-600">
                 This is professional study, not a third apprenticeship. It is assessed separately and
@@ -427,12 +435,12 @@ export default function ProfessionalProgrammes() {
                 offer.
               </p>
               <p className="mt-3 max-w-3xl text-xs leading-relaxed text-foreground-500">
-                {PMO_L6.recognition.statement}
+                {PMO_L6?.recognition?.statement}
               </p>
             </div>
             <div className="shrink-0">
               <SiteLink
-                href={PMO_L6.slug}
+                href={PMO_L6?.url ?? '/pmo-pcp'}
                 className="cta-button inline-flex items-center justify-center gap-2 rounded-md border border-primary-700/50 px-6 py-3 text-sm font-semibold text-primary-800 transition-colors hover:bg-primary-50 whitespace-nowrap"
                 data-gtm-event="pmo_level_6_explore"
                 data-gtm-location="programme-cards"
