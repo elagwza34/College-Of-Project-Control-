@@ -33,6 +33,8 @@
     "type-check": "tsc --noEmit --project tsconfig.app.json",
     "sections:index": "node scripts/generate-section-index.mjs",
     "test:sections": "node --test scripts/page-sections.test.mjs",
+    "test:journeys": "node --test scripts/journeys.test.mjs",
+    "test": "npm run test:sections && npm run test:journeys",
     "chatbot:export": "node scripts/export-chatbot-knowledge.mjs",
     "test:chatbot:browser": "node scripts/chatbot-browser.mjs",
     "test:responsive": "node scripts/responsive-browser.mjs",

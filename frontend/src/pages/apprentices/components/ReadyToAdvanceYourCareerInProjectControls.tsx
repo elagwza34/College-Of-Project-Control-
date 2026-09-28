@@ -16,7 +16,7 @@ export default function ReadyToAdvanceYourCareerInProjectControls() {
                 Ready to advance your career in project controls?
               </h2>
               <p className="mt-5 text-base md:text-lg text-primary-800/60 max-w-xl mx-auto leading-relaxed">
-                Check your eligibility, explore the right pathway, and start your application — all with no commitment and no cost to you.
+                Check your eligibility, explore the right pathway, and send your enquiry — with no commitment.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <SiteLink href="/contact" className="btn-primary inline-flex items-center gap-3 px-8 py-4 font-semibold text-sm cursor-pointer transition-all duration-300 whitespace-nowrap lift-hover">

@@ -9,7 +9,7 @@ export default function EligibilityCriteria() {
 {"Eligibility criteria "}
 </div>
 <h2 id="eligibility-title" className="text-3xl font-bold leading-tight md:text-4xl">
-{"Could this fully funded apprenticeship be right "}
+{"Could this apprenticeship be right "}
 <span>
 {"for you? "}
 </span>

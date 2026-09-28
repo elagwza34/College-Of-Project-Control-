@@ -80,9 +80,9 @@
         "label": "Text"
       },
       {
-        "key": "6e6d92cf8410a7a2",
+        "key": "d05e4f137391ecd2",
         "kind": "image",
-        "default": "/images/testimonial-leaders-grid.png",
+        "default": "/images/testimonial-leaders-grid.webp",
         "label": "Image URL"
       },
       {
@@ -487,9 +487,9 @@
         "label": "Text"
       },
       {
-        "key": "44018f13a5ea54b9",
+        "key": "2af284bb77e02c6b",
         "kind": "text",
-        "default": "Fully funded apprenticeship route available for eligible learners.",
+        "default": "An apprenticeship route is available with no apprenticeship fees for eligible learners. Eligibility depends on your age, the funding rules in force when you start, and your employer’s levy status.",
         "label": "Text"
       },
       {
@@ -688,21 +688,21 @@
     "label": "Cost For Eligible Learners",
     "fields": [
       {
-        "key": "88c0ce6c87b27172",
+        "key": "cd3f97bcefb138b8",
         "kind": "text",
-        "default": "Government-funded apprenticeship programmes",
+        "default": "Apprenticeship costs for eligible learners",
         "label": "Text"
       },
       {
-        "key": "940f597240cc6c13",
+        "key": "262c10b33c44296c",
         "kind": "text",
-        "default": "Apprentices do not contribute to eligible training costs. Employer funding is confirmed against the rules in force at the planned start date.",
+        "default": "Apprentices do not contribute to eligible training costs. Whether a place is funded depends on your circumstances and the rules in force at the planned start date.",
         "label": "Text"
       },
       {
-        "key": "f704a69c2856281e",
+        "key": "61e3d1f8e96f00b7",
         "kind": "text",
-        "default": "Cost for eligible learners",
+        "default": "Learner contribution for eligible places",
         "label": "Text"
       },
       {
@@ -849,9 +849,9 @@
         "label": "Heading"
       },
       {
-        "key": "5752c69b729ff549",
+        "key": "dc27117826409975",
         "kind": "text",
-        "default": "Check your eligibility, explore the right pathway, and start your application — all with no commitment and no cost to you.",
+        "default": "Check your eligibility, explore the right pathway, and send your enquiry — with no commitment.",
         "label": "Text"
       },
       {
@@ -1517,6 +1517,121 @@
       }
     ],
     "url": "/campaign/public-sector"
+  },
+  {
+    "key": "a2d56b5d7ad56684",
+    "page": "case-studies",
+    "label": "Case Studies Grid",
+    "fields": [
+      {
+        "key": "a948fcdd6cae3bcc",
+        "kind": "text",
+        "default": "Loading case studies...",
+        "label": "Text"
+      },
+      {
+        "key": "09eb1cb6028e2244",
+        "kind": "text",
+        "default": "We could not load the case studies. Please try again.",
+        "label": "Text"
+      },
+      {
+        "key": "7bc0c8612ac739c3",
+        "kind": "text",
+        "default": "Page ",
+        "label": "Text"
+      },
+      {
+        "key": "f4760819dd4b3cd0",
+        "kind": "text",
+        "default": " of ",
+        "label": "Text"
+      }
+    ]
+  },
+  {
+    "key": "2ee96fa4eadab696",
+    "page": "case-studies",
+    "label": "Case Studies Hero",
+    "fields": [
+      {
+        "key": "38dc9c912313d79d",
+        "kind": "text",
+        "default": "Project evidence",
+        "label": "Text"
+      },
+      {
+        "key": "b9f829d93e4a46b9",
+        "kind": "text",
+        "default": "Case studies from project-driven environments.",
+        "label": "Heading"
+      },
+      {
+        "key": "910d005cb366d269",
+        "kind": "text",
+        "default": "See how professional learning, project controls discipline and workplace evidence translate into clearer decisions.",
+        "label": "Text"
+      }
+    ]
+  },
+  {
+    "key": "7759ea2679fcf7d2",
+    "page": "case-studies/detail",
+    "label": "Case Study Detail Body",
+    "fields": [
+      {
+        "key": "50079676773bfa15",
+        "kind": "text",
+        "default": "Organisation",
+        "label": "Text"
+      }
+    ]
+  },
+  {
+    "key": "9a3b44927f8a6f98",
+    "page": "case-studies/detail",
+    "label": "Case Study Detail Hero",
+    "fields": [
+      {
+        "key": "95ff1811ad48fced",
+        "kind": "link",
+        "default": "/case-studies",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "d29e6a2757110779",
+        "kind": "text",
+        "default": "Case studies",
+        "label": "Link text",
+        "linkField": "95ff1811ad48fced"
+      }
+    ]
+  },
+  {
+    "key": "8a3ae2a313c3c749",
+    "page": "case-studies/detail",
+    "label": "Case Study Detail Status",
+    "fields": [
+      {
+        "key": "9496590a2cb7762b",
+        "kind": "text",
+        "default": "Case study not found",
+        "label": "Heading"
+      },
+      {
+        "key": "95ff1811ad48fced",
+        "kind": "link",
+        "default": "/case-studies",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "574b5fbea8390922",
+        "kind": "text",
+        "default": "Back to case studies",
+        "label": "Link text",
+        "linkField": "95ff1811ad48fced"
+      }
+    ]
   },
   {
     "key": "fabdae5d0c404e7f",
@@ -2709,33 +2824,33 @@
         "label": "Text"
       },
       {
-        "key": "9b71fe79056b2152",
+        "key": "7c077a394dea5a80",
         "kind": "text",
-        "default": "Lead projects with",
+        "default": "Project controls and",
         "label": "Heading"
       },
       {
-        "key": "e3102f53731e7758",
+        "key": "e2c580834c9966c7",
         "kind": "text",
-        "default": "clarity, control and confidence",
+        "default": "project management apprenticeships",
         "label": "Text"
       },
       {
-        "key": "161cbf9f908e603c",
+        "key": "8419fed200fca8ae",
         "kind": "text",
-        "default": "A specialist college for professionals and employers working in project controls, project management and PMO.",
+        "default": "Develop the capability to plan, control and deliver projects through work-based learning with Kent Business College.",
         "label": "Text"
       },
       {
-        "key": "983cf8b543782781",
+        "key": "5f64a71062390d70",
         "kind": "text",
-        "default": "Choose a structured programme, specialist module or team development route, with learning applied to workplace responsibilities.",
+        "default": "Explore the apprenticeship that fits your responsibilities and the support your employer can provide.",
         "label": "Text"
       },
       {
-        "key": "fdceeac88a302fee",
+        "key": "25318ecaf9273f1c",
         "kind": "text",
-        "default": "Professional programmes · Specialist modules · Employer capability · Funding guidance",
+        "default": "Associate Project Manager Level 4 · Project Controls Professional Level 6",
         "label": "Text"
       },
       {
@@ -2745,37 +2860,24 @@
         "label": "Button/link URL"
       },
       {
-        "key": "8e9860a953b4066a",
+        "key": "1f1a1042c62607e7",
         "kind": "text",
-        "default": "Explore Programmes",
+        "default": "Explore apprenticeships",
         "label": "Link text",
         "linkField": "4f8dae8e0e324a62"
       },
       {
-        "key": "3c28f332ead98489",
+        "key": "d2b1e622a2d53a7f",
         "kind": "link",
-        "default": "/programmes",
+        "default": "/employers",
         "label": "Button/link URL"
       },
       {
-        "key": "0aeaa13504044779",
+        "key": "2e525d4011aea646",
         "kind": "text",
-        "default": "Compare programmes",
+        "default": "Develop your team",
         "label": "Link text",
-        "linkField": "3c28f332ead98489"
-      },
-      {
-        "key": "92a8e2ae7ac0f81a",
-        "kind": "link",
-        "default": "/knowledge-hub/employer-apprenticeship-funding",
-        "label": "Button/link URL"
-      },
-      {
-        "key": "c3e3c8ba5f920c41",
-        "kind": "text",
-        "default": "Explore funding and access options",
-        "label": "Link text",
-        "linkField": "92a8e2ae7ac0f81a"
+        "linkField": "d2b1e622a2d53a7f"
       },
       {
         "key": "b3e5c7cde0fd004f",
@@ -2900,15 +3002,21 @@
         "label": "Heading"
       },
       {
-        "key": "e736489be43f048d",
+        "key": "aa35ea7e6f34aa65",
         "kind": "text",
-        "default": "Compare each programme against the responsibilities it is best suited to.",
+        "default": "Both are apprenticeships. Compare the responsibilities, new learning and assessment each one covers.",
         "label": "Text"
       },
       {
-        "key": "e3ed61db86392858",
+        "key": "dd01356c32692899",
         "kind": "text",
-        "default": "Project Controls Professional Level 6",
+        "default": "Comparison point",
+        "label": "Text"
+      },
+      {
+        "key": "b2658fdda3039df9",
+        "kind": "text",
+        "default": "Both programmes are apprenticeships assessed against their own occupational standard. Our admissions team assesses suitable employment, the work available to develop and your development needs before confirming a programme. Professional study is offered separately and is not part of this comparison.",
         "label": "Text"
       },
       {
@@ -2930,28 +3038,40 @@
         "label": "Text"
       },
       {
-        "key": "cc0d4be9d279f937",
+        "key": "d050faf35715f8c5",
         "kind": "text",
-        "default": "Professional Programmes",
+        "default": "Apprenticeships",
         "label": "Text"
       },
       {
-        "key": "b7df1f07211acd02",
+        "key": "529a7c5c5e55c41e",
         "kind": "text",
-        "default": "Professional development",
+        "default": "Choose around your work, not the badge",
         "label": "Heading"
       },
       {
-        "key": "1d746e19be9f1012",
+        "key": "813bce4a801e1b92",
         "kind": "text",
-        "default": "built around real project responsibility",
-        "label": "Heading"
-      },
-      {
-        "key": "6fa614aad4445eaa",
-        "kind": "text",
-        "default": "Develop deeper capability through structured programmes designed for professionals working across Project Management, Project Controls and PMO environments.",
+        "default": "Two apprenticeships, built around the responsibilities you already hold. We review your role, previous learning and the development opportunities available to you before we identify the right programme.",
         "label": "Text"
+      },
+      {
+        "key": "8fa0bbd0a7e745c8",
+        "kind": "text",
+        "default": "Professional development linked to the Chartered pathway",
+        "label": "Text"
+      },
+      {
+        "key": "d45a0f646737523f",
+        "kind": "text",
+        "default": "This is professional study, not a third apprenticeship. It is assessed separately and carries its own fee and funding terms, which are set out in full in your written offer.",
+        "label": "Text"
+      },
+      {
+        "key": "dcf0bde0e89d7662",
+        "kind": "text",
+        "default": "Understand the PMO programme",
+        "label": "Link text"
       }
     ],
     "url": "/"
@@ -10098,9 +10218,9 @@
         "label": "Text"
       },
       {
-        "key": "6e74197204af34d8",
+        "key": "833adcfab0146a26",
         "kind": "text",
-        "default": "A fully funded, work-based pathway for eligible professionals involved in planning, controls, cost, risk, reporting, governance and project transformation.",
+        "default": "A work-based apprenticeship for professionals involved in planning, controls, cost, risk, reporting, governance and project transformation.",
         "label": "Text"
       },
       {

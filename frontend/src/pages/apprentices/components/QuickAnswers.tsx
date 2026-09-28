@@ -4,8 +4,8 @@ import { useState } from 'react';
 const faqs = [
   { q: 'Do I need prior project controls experience?', a: 'No. We have entry points from Level 3 through to Level 6. Your eligibility depends on your current role and qualifications, not prior controls knowledge.' },
   { q: 'How much does it cost me personally?', a: 'Apprentices must not be asked to contribute to eligible apprenticeship training costs. Whether a place is funded depends on employer support, learner eligibility and the funding rules that apply on the start date. We confirm this before enrolment.' },
-  { q: 'How long does the programme take?', a: 'Typically 18\u201324 months depending on your level and pace. You will be learning while working, so the programme fits around your job.' },
-  { q: 'What certification will I achieve?', a: 'Depending on your pathway, you can achieve APM PMQ, PMI CAPM, or progress towards chartered status. Certification is integrated into the programme.' },
+  { q: 'How long does the programme take?', a: 'Duration depends on the programme and the plan agreed for you, and the approved facts are confirmed in your written offer. You will be learning while working, so the programme fits around your job.' },
+  { q: 'What certification will I achieve?', a: 'Completing the apprenticeship awards the qualification set out in the official standard for your programme. Any external professional certification is separate: it has its own eligibility, application and assessment requirements, and your written offer confirms what is included.' },
   { q: 'Can I study while working full-time?', a: 'Yes. The programme is designed for working professionals. Live sessions are in the evenings, and workplace assignments count as your evidence.' },
 ];
 

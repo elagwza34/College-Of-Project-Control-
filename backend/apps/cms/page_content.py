@@ -1,6 +1,7 @@
 ﻿"""Schema-bound copy editing. Layout and interactive controls remain in React."""
 import json
 import re
+from functools import lru_cache
 from urllib.parse import urlsplit
 from pathlib import Path
 from django.db import transaction
@@ -11,9 +12,25 @@ from rest_framework.response import Response
 from .models import PageContentRevision
 from .permissions import IsDashboardUser
 
+CATALOGUE_FILE = Path(__file__).with_name('page_content_catalogue.json')
+
+
+@lru_cache(maxsize=1)
+def _catalogue_cached(signature):
+    # signature is the file mtime+size; it is only a cache key, never used for logic.
+    with CATALOGUE_FILE.open(encoding='utf-8') as handle:
+        return json.load(handle)
+
 
 def catalogue():
-    return json.loads(Path(__file__).with_name('page_content_catalogue.json').read_text(encoding='utf-8'))
+    """Return the section schema.
+
+    The file is read on every request without this, which turns a static asset into
+    per-request disk I/O. Caching on mtime+size keeps edits visible immediately while
+    collapsing the repeated reads into a single stat() per call.
+    """
+    stat = CATALOGUE_FILE.stat()
+    return _catalogue_cached((stat.st_mtime_ns, stat.st_size))
 
 
 def payload(obj):

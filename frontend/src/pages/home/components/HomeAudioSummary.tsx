@@ -41,7 +41,9 @@ export default function HomeAudioSummary() {
       <div className="flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.07] p-2 pr-3 backdrop-blur-sm">
       <audio
         ref={audioRef}
-        preload="metadata"
+        // The file is 4.6 MB. "none" keeps it out of the critical path entirely; the
+        // duration is read from the loadedmetadata event on first play instead.
+        preload="none"
         src={audioSrc}
         onLoadedMetadata={(event) => setDuration(event.currentTarget.duration)}
         onTimeUpdate={(event) => setCurrentTime(event.currentTarget.currentTime)}

@@ -40,6 +40,35 @@ class ChatbotTests(TestCase):
         self.assertTrue(retrieve('Tell me more', [{'role': 'user', 'content': 'Level 4 programme'}]))
         self.assertFalse(retrieve('zyxw', [{'role': 'assistant', 'content': 'Level 4 programme'}]))
 
+    def test_index_is_cached_and_rebuilt_only_when_sources_change(self):
+        from django.core.cache import cache
+        from . import retrieval
+
+        cache.clear()
+        self.assertTrue(retrieve('L4 programme', []))
+
+        with patch.object(retrieval, '_build_index', wraps=retrieval._build_index) as builder:
+            retrieve('L4 programme', [])
+            retrieve('Tell me more', [{'role': 'user', 'content': 'Level 4 programme'}])
+            self.assertEqual(builder.call_count, 0, 'a warm cache must not re-tokenise the knowledge base')
+
+            # Adding a source changes the fingerprint, so the index must be rebuilt.
+            KnowledgeSource.objects.create(
+                title='Level 6 programme', kind='website', reference_path='/level-6', is_active=True,
+                content='The Level 6 programme covers senior project controls practice and reporting.')
+            self.assertTrue(retrieve('Level 6 senior controls reporting', []))
+            self.assertEqual(builder.call_count, 1)
+
+    def test_index_cache_never_serves_inactive_sources(self):
+        from django.core.cache import cache
+        from .retrieval import INDEX_CACHE_KEY, knowledge_index
+
+        cache.clear()
+        knowledge_index()
+        self.source.is_active = False
+        self.source.save()
+        self.assertEqual([chunk['pk'] for chunk in knowledge_index()], [])
+
     def test_source_permissions(self):
         url = '/api/v1/cms/chatbot/sources/'
         self.assertIn(self.client.get(url).status_code, (401, 403))

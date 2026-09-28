@@ -4,9 +4,11 @@ interface SectionHeadingProps {
   subtitle?: string;
   light?: boolean;
   className?: string;
+  as?: 'h1' | 'h2' | 'h3';
 }
 
-export default function SectionHeading({ tag, title, subtitle, light = false, className = '' }: SectionHeadingProps) {
+export default function SectionHeading({ tag, title, subtitle, light = false, className = '', as = 'h2' }: SectionHeadingProps) {
+  const HeadingTag = as;
   return (
     <div className={`text-center mx-auto ${className}`}>
       {tag && (
@@ -18,11 +20,11 @@ export default function SectionHeading({ tag, title, subtitle, light = false, cl
           {tag}
         </span>
       )}
-      <h2 className={`mx-auto max-w-4xl text-balance text-2xl md:text-3xl lg:text-4xl font-heading font-bold leading-tight ${
+      <HeadingTag className={`mx-auto max-w-4xl text-balance text-2xl md:text-3xl lg:text-4xl font-heading font-bold leading-tight ${
         light ? 'text-background-50' : 'text-foreground-950'
       }`}>
         {title}
-      </h2>
+      </HeadingTag>
       {subtitle && (
         <p className={`mx-auto mt-3 max-w-2xl text-sm md:mt-4 md:text-base leading-relaxed ${
           light ? 'text-background-50/70' : 'text-foreground-600'

@@ -46,3 +46,9 @@ SECURE_HSTS_PRELOAD = True
 SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
 X_FRAME_OPTIONS = "DENY"
 
+# Most deployments terminate TLS at a load balancer, CDN or cPanel proxy. Without
+# this, Django sees plain HTTP and SECURE_SSL_REDIRECT loops forever. Set
+# DJANGO_TRUST_PROXY_HEADERS=false only when the app receives TLS directly.
+if os.environ.get("DJANGO_TRUST_PROXY_HEADERS", "true").strip().lower() not in {"0", "false", "no"}:
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+

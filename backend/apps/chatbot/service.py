@@ -82,8 +82,10 @@ def configured():
     return bool(provider_config()[1]) and os.environ.get('CHATBOT_ENABLED', 'true').lower() == 'true'
 
 
-def call_model(payload):
-    endpoint, key, _model = provider_config()
+def call_model(payload, config=None):
+    # config is passed in by callers that already resolved it, so one chat message
+    # performs one settings query and one key decryption instead of two of each.
+    endpoint, key, _model = config or provider_config()
     request = Request(endpoint, data=json.dumps(payload).encode(), method='POST',
                       headers={'Authorization': 'Bearer ' + key,
                                'Content-Type': 'application/json'})
@@ -114,11 +116,13 @@ def answer(message, history):
               'source_ids': {'type': 'array', 'items': {'type': 'string'}},
               'needs_consultation': {'type': 'boolean'}},
               'required': ['answer', 'source_ids', 'needs_consultation'], 'additionalProperties': False}
-    result = call_model({'model': provider_config()[2], 'store': False,
+    config = provider_config()
+    result = call_model({'model': config[2], 'store': False,
                          'max_output_tokens': 700, 'instructions': SYSTEM,
                          'input': [{'role': 'user', 'content': json.dumps({'approved_sources': sources,
                                     'conversation': history, 'question': message}, ensure_ascii=False)}],
-                         'text': {'format': {'type': 'json_schema', 'name': 'programme_answer', 'strict': True, 'schema': schema}}})
+                         'text': {'format': {'type': 'json_schema', 'name': 'programme_answer', 'strict': True, 'schema': schema}}},
+                config)
     if not isinstance(result, dict) or not isinstance(result.get('answer'), str) or not isinstance(result.get('source_ids'), list):
         raise ProviderUnavailable()
     cited = [source for source in sources if source['id'] in result['source_ids']]

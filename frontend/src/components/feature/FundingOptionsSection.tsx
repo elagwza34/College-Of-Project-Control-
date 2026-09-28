@@ -16,9 +16,48 @@ interface FundingOptionsSectionProps {
   imageAlt?: string;
 }
 
+/** Audit P00.5 / P01.6 / P04.7 / P11.4 (funding gate): the two offers are priced
+ *  and funded differently, so they are described separately and never implied to
+ *  produce identical outcomes. Every figure below is conditional and must match
+ *  the approved offer. */
 const defaultOverviewCards: FundingOverviewCard[] = [
-  { title: 'Commercial credit value', content: <><span>Each four-credit course has a commercial tuition value of <strong className="font-bold text-primary-800">£4,000 GBP</strong>.</span><span className="mt-3 block">The Project Management Professional or Certified Associate in Project Management route is treated as a <strong className="font-bold text-primary-800">two-credit course</strong>. Most other listed courses are one credit.</span></> },
-  { title: 'Apprenticeship route', content: <><span>Eligible apprenticeship programmes may be fully funded through Department for Education apprenticeship funding arrangements where learner, employer and programme conditions are met.</span><span className="mt-3 flex items-start gap-2 rounded-lg bg-highlight-50 p-3 text-xs font-semibold text-foreground-700"><i className="ri-information-line mt-0.5 shrink-0 text-highlight-700" aria-hidden="true" />Funding is assessed individually and is not guaranteed.</span></> },
+  {
+    title: 'Apprenticeships: funding is assessed individually',
+    content: (
+      <>
+        <span>
+          Associate Project Manager Level 4 and Project Controls Professional Level 6 are delivered
+          as apprenticeships. Where a learner, employer and programme all meet the conditions, the
+          apprenticeship may be funded through Department for Education apprenticeship funding
+          arrangements.
+        </span>
+        <span className="mt-3 flex items-start gap-2 rounded-lg bg-highlight-50 p-3 text-xs font-semibold text-foreground-700">
+          <i className="ri-information-line mt-0.5 shrink-0 text-highlight-700" aria-hidden="true" />
+          Funding is not guaranteed. It depends on your age band, employer levy status, the standard
+          in effect on your start date and whether you are already funded elsewhere. Your written
+          offer confirms the position for your circumstances.
+        </span>
+      </>
+    ),
+  },
+  {
+    title: 'Professional study: commercial fees and separate support',
+    content: (
+      <>
+        <span>
+          Our short courses and professional programmes are commercial study, not apprenticeships.
+          Each four-credit course has a commercial tuition value of{' '}
+          <strong className="font-bold text-primary-800">£4,000 GBP</strong>. The Project Management
+          Professional or Certified Associate in Project Management route is treated as a two-credit
+          course. Most other listed courses are one credit.
+        </span>
+        <span className="mt-3 block">
+          Completing professional study does not by itself produce an apprenticeship certificate or
+          an occupational standard award.
+        </span>
+      </>
+    ),
+  },
 ];
 
 const defaultIncludedBenefits = [
@@ -29,10 +68,24 @@ const defaultIncludedBenefits = [
   'Optional personality traits assessment', 'Job and career fitness psychological tests',
 ];
 
+/** Audit P00.5: these are Institute of Project Controls benefits offered against
+ *  professional study only. They must not be presented as apprenticeship funding. */
 const defaultSupportCards: FundingSupportCard[] = [
-  { title: 'Institute of Project Controls Fund', description: 'The Institute of Project Controls Fund may support eligible applicants by contributing towards tuition fees, subject to pathway, evidence and approval criteria.' },
-  { title: 'Institute of Project Controls: up to 75% support', description: 'For eligible unemployed or self-employed learners, the Institute of Project Controls Fund may cover up to 75% of tuition fees, subject to approval.' },
-  { title: 'Institute of Project Controls: up to 50% support', description: 'For eligible employed learners, the Institute of Project Controls Fund may cover up to 50% of tuition fees, with the employer contributing the remaining share, subject to approval.' },
+  {
+    title: 'Institute of Project Controls Fund',
+    description:
+      'The Institute of Project Controls Fund may support eligible applicants towards professional-study tuition fees, subject to pathway, evidence and approval criteria.',
+  },
+  {
+    title: 'Professional study: up to 75% support',
+    description:
+      'For eligible unemployed or self-employed learners taking professional study, the Institute of Project Controls Fund may cover up to 75% of tuition fees, subject to approval.',
+  },
+  {
+    title: 'Professional study: up to 50% support',
+    description:
+      'For eligible employed learners taking professional study, the Institute of Project Controls Fund may cover up to 50% of tuition fees, with the employer contributing the remaining share, subject to approval.',
+  },
 ];
 
 const defaultCta: FundingCtaContent = {
@@ -43,7 +96,8 @@ const defaultCta: FundingCtaContent = {
 
 export default function FundingOptionsSection({
   title = 'Funding options',
-  description = 'The right funding route depends on programme fit, learner status and employer eligibility.',
+  description =
+    'Apprenticeships and professional study are funded differently. The right route depends on programme fit, learner status and employer eligibility.',
   overviewCards = defaultOverviewCards,
   includedBenefits = defaultIncludedBenefits,
   supportCards = defaultSupportCards,
@@ -94,7 +148,7 @@ export default function FundingOptionsSection({
                 <article key={card.title} className="flex items-start gap-4 p-5 lg:p-6">
                   <i className={`${index === 0 ? 'ri-graduation-cap-line' : index === 1 ? 'ri-bar-chart-grouped-line' : 'ri-team-fill'} shrink-0 text-3xl text-accent-100`} aria-hidden="true" />
                   <div>
-                    <h3 className="text-sm font-bold leading-snug text-white">{card.title.replace('Institute of Project Controls: up to', 'Up to')}</h3>
+                    <h3 className="text-sm font-bold leading-snug text-white">{card.title.replace('Professional study: up to', 'Up to')}</h3>
                     <p className="mt-2 text-xs leading-relaxed text-white/75">{card.description}</p>
                   </div>
                 </article>

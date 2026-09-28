@@ -32,65 +32,53 @@ export default function CollegeOfProjectControlsAndManagement() {
               College of Project Controls &amp; Management
             </span>
 
-            {/* Main Headline — fade up */}
+            {/* Main Headline — the offer is named in the H1 (audit P00.1) */}
             <h1 className="reveal-fade-up is-visible text-display font-heading font-bold text-background-50 leading-[1.08] tracking-tight">
-              Lead projects with
+              Project controls and
               <br />
-              <span className="text-signal-400">clarity, control and confidence</span>
+              <span className="text-signal-400">project management apprenticeships</span>
             </h1>
 
             {/* Supporting Headline — fade up delayed */}
             <p className="reveal-fade-up is-visible mt-4 text-base md:text-lg font-body text-background-50/80 leading-relaxed max-w-xl" style={{ transitionDelay: '100ms' }}>
-              A specialist college for professionals and employers working in project controls, project management and PMO.
+              Develop the capability to plan, control and deliver projects through work-based learning with Kent Business College.
             </p>
 
             {/* Body Copy — fade up delayed */}
             <p className="reveal-fade-up is-visible mt-3 max-w-xl text-sm font-body leading-relaxed text-background-50/75 md:text-sm" style={{ transitionDelay: '150ms' }}>
-              Choose a structured programme, specialist module or team development route, with learning applied to workplace responsibilities.
+              Explore the apprenticeship that fits your responsibilities and the support your employer can provide.
             </p>
 
             {/* Micro Line */}
             <p className="reveal-fade-up is-visible mt-2 max-w-xl text-xs font-body leading-relaxed text-background-50/70" style={{ transitionDelay: '200ms' }}>
-              Professional programmes &middot; Specialist modules &middot; Employer capability &middot; Funding guidance
+              Associate Project Manager Level 4 &middot; Project Controls Professional Level 6
             </p>
 
             <HomeAudioSummary />
 
-            {/* CTAs — scale in */}
+            {/* CTAs — one action per destination, per audit P00.6 */}
             <div className="reveal-scale-in is-visible mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-3" style={{ transitionDelay: '250ms' }}>
               <SiteLink
                 href="#programmes"
                 className="btn-primary inline-flex items-center justify-center px-7 py-3 text-sm font-bold transition-all duration-300 whitespace-nowrap"
-                data-gtm-event="hero_explore_programmes_click"
+                data-gtm-event="hero_explore_apprenticeships_click"
                 data-gtm-location="hero"
                 data-gtm-position="primary"
               >
-                Explore Programmes
+                Explore apprenticeships
                 <i className="ri-arrow-right-line ml-2"></i>
               </SiteLink>
               <SiteLink
-                href="/programmes"
+                href="/employers"
                 className="cta-button inline-flex items-center justify-center gap-2 rounded-md border border-white/60 bg-primary-950/35 px-7 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-signal-400 hover:bg-white/10 whitespace-nowrap"
-                data-gtm-event="hero_compare_programmes_click"
+                data-gtm-event="hero_develop_your_team_click"
                 data-gtm-location="hero"
-                data-gtm-position="tertiary"
+                data-gtm-position="secondary"
               >
-                <i className="ri-layout-grid-line" aria-hidden="true"></i>
-                Compare programmes
+                <i className="ri-briefcase-4-line" aria-hidden="true"></i>
+                Develop your team
               </SiteLink>
             </div>
-
-            {/* Tertiary Link */}
-            <SiteLink
-              href="/knowledge-hub/employer-apprenticeship-funding"
-              className="reveal-fade-up is-visible mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-signal-300 transition-colors hover:text-signal-200" style={{ transitionDelay: '300ms' }}
-              data-gtm-event="hero_check_bursary_click"
-              data-gtm-location="hero"
-              data-gtm-position="tertiary"
-            >
-              <i className="ri-question-line text-sm"></i>
-              Explore funding and access options
-            </SiteLink>
 
             {/* Trust Line + Animated Stats */}
             <div className="reveal-fade-up is-visible mt-6 pt-5 border-t border-background-50/10" style={{ transitionDelay: '350ms' }}>

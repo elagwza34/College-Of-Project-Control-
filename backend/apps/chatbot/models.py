@@ -18,6 +18,10 @@ class KnowledgeSource(models.Model):
 
     class Meta:
         ordering = ['-updated_at', '-id']
+        # retrieve() and _index_signature() both filter on is_active only.
+        indexes = [
+            models.Index(fields=["is_active", "-updated_at"], name="source_active_updated_idx"),
+        ]
 
     def __str__(self):
         return self.title

@@ -117,7 +117,7 @@ const imagePanels = [
     label: 'Engineering and aerospace',
   },
   {
-    src: '/images/public-sector-sector-hero.png',
+    src: '/images/public-sector-sector-hero.webp',
     alt: 'Public sector delivery environment representing accountable programme governance',
     label: 'Public sector',
   },
@@ -373,9 +373,10 @@ export default function AboutCPCM() {
 
           <div className="overflow-hidden rounded-lg border border-white/14 bg-white/[0.06]">
             <img
-              src="/images/testimonial-leaders-grid.png"
+              src="/images/testimonial-leaders-grid.webp"
               alt="Professionals and leaders representing learning, community and professional experience"
               className="h-72 w-full object-cover"
+              loading="lazy"
             />
             <div className="p-7">
               <p className="text-sm font-black uppercase tracking-[0.22em] text-accent-300">Responsible use</p>

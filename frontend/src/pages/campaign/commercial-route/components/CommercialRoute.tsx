@@ -8,7 +8,7 @@ export default function CommercialRoute() {
               tag="Commercial Route"
               title="The Same Professional Development. A Different Funding Route."
               subtitle="The commercial pathway gives you access to the same structured professional development, tutoring, Master Class Events and APM ChPP readiness support as the apprenticeship-funded route."
-            />
+             as="h1" />
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-background-50 border border-background-200/70 rounded-lg p-5">
                 <h4 className="text-sm font-heading font-bold text-foreground-900 mb-3">What is included</h4>

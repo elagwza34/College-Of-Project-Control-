@@ -1,4 +1,5 @@
 import SiteLink from '@/components/base/SiteLink';
+import { APPRENTICESHIPS, PMO_L6 } from '@/data/programmeFacts';
 import { useEffect,useRef,useState } from 'react';
 
 /* ─────────────────── ProgrammeCard ─────────────────── */
@@ -163,30 +164,55 @@ function ProgrammeComparisonTable() {
     return () => obs.disconnect();
   }, []);
 
+  const [pcp, apm] = APPRENTICESHIPS;
+
+  /* Audit P01.3: compare responsibilities, new learning, delivery, duration and
+     assessment — not just the badge level. Facts are inherited from the master
+     record rather than retyped here. */
   const rows = [
     {
-      id: 'level',
-      label: 'Level',
-      pcp: 'Level 6',
-      apm: 'Level 4',
-      pmo: 'Level 6',
-      icon: 'ri-medal-line',
+      id: 'role',
+      label: 'Role emphasis',
+      pcp: pcp.purpose,
+      apm: apm.purpose,
+      icon: 'ri-briefcase-4-line',
     },
     {
-      id: 'discipline',
-      label: 'Discipline',
-      pcp: 'Project Controls',
-      apm: 'Project Management',
-      pmo: 'PMO',
-      icon: 'ri-shield-line',
+      id: 'newLearning',
+      label: 'New learning',
+      pcp:
+        'Integrate schedule, cost, risk and performance information into defensible control decisions.',
+      apm:
+        'Plan activities, work with stakeholders and support successful project delivery.',
+      icon: 'ri-book-open-line',
     },
     {
-      id: 'bestFit',
-      label: 'Best suited to',
-      pcp: 'Professionals responsible for planning, scheduling, cost, risk, controls, PMO and complex project performance.',
-      apm: 'Professionals developing broader project-management and delivery responsibility.',
-      pmo: 'Experienced PMO, project and Project Controls professionals developing strategic governance and PMO capability.',
-      icon: 'ri-user-star-line',
+      id: 'delivery',
+      label: 'Delivery',
+      pcp: pcp.facts.delivery,
+      apm: apm.facts.delivery,
+      icon: 'ri-building-4-line',
+    },
+    {
+      id: 'duration',
+      label: 'Duration',
+      pcp: pcp.facts.duration,
+      apm: apm.facts.duration,
+      icon: 'ri-time-line',
+    },
+    {
+      id: 'assessment',
+      label: 'Assessment',
+      pcp: pcp.facts.assessment,
+      apm: apm.facts.assessment,
+      icon: 'ri-file-check-line',
+    },
+    {
+      id: 'standard',
+      label: 'Occupational standard',
+      pcp: `${pcp.standard.code} ${pcp.standard.version} (${pcp.standard.issuingBody})`,
+      apm: `${apm.standard.code} ${apm.standard.version} (${apm.standard.issuingBody})`,
+      icon: 'ri-shield-check-line',
     },
   ];
 
@@ -199,55 +225,59 @@ function ProgrammeComparisonTable() {
           Which programme best fits your responsibilities?
         </h3>
         <p className="text-sm text-foreground-600">
-          Compare each programme against the responsibilities it is best suited to.
+          Both are apprenticeships. Compare the responsibilities, new learning and assessment each one
+          covers.
         </p>
       </div>
 
       <div className="overflow-x-auto rounded-xl border border-background-300 bg-white">
         <table className="w-full min-w-[640px]">
+          <caption className="sr-only">
+            Comparison of the two apprenticeships offered by Kent Business College
+          </caption>
           <thead>
             <tr className="bg-primary-500 border-b border-background-50/20">
-              <th className="text-left px-4 py-3 text-xs font-label font-semibold uppercase tracking-wider text-background-50 w-40">
-                Feature
+              <th scope="col" className="text-left px-4 py-3 text-xs font-label font-semibold uppercase tracking-wider text-background-50 w-44">
+                <span className="sr-only">Comparison point</span>
               </th>
-              <th className="text-center px-4 py-3 text-xs font-label font-semibold uppercase tracking-wider text-background-50">
-                <span className="inline-flex items-center gap-1">
-                  <i className="ri-fire-line text-xs text-highlight-300"></i>
-                  Project Controls Professional Level 6
-                </span>
+              <th scope="col" className="text-left px-4 py-3 text-xs font-label font-semibold uppercase tracking-wider text-background-50">
+                Project Controls Professional Level 6
               </th>
-              <th className="text-center px-4 py-3 text-xs font-label font-semibold uppercase tracking-wider text-background-50">
+              <th scope="col" className="text-left px-4 py-3 text-xs font-label font-semibold uppercase tracking-wider text-background-50">
                 Associate Project Manager Level 4
-              </th>
-              <th className="text-center px-4 py-3 text-xs font-label font-semibold uppercase tracking-wider text-background-50">
-                Certified PMO Professional Level 6
               </th>
             </tr>
           </thead>
           <tbody>
-            {rows.map((row, idx) => (
+            {rows.map((row) => (
               <tr
                 key={row.id}
-                className={`border-b border-background-200 transition-colors duration-200 ${
+                className={`border-b border-background-200 align-top transition-colors duration-200 ${
                   highlightedRow === row.id ? 'bg-primary-50' : 'bg-white'
                 }`}
                 onMouseEnter={() => setHighlightedRow(row.id)}
                 onMouseLeave={() => setHighlightedRow(null)}
               >
-                <td className="px-4 py-3.5">
-                  <div className="flex items-center gap-2 text-sm font-label font-semibold text-foreground-700">
-                    <i className={`${row.icon} text-foreground-400 text-sm`}></i>
+                <th scope="row" className="px-4 py-3.5 text-left">
+                  <span className="flex items-center gap-2 text-sm font-label font-semibold text-foreground-700">
+                    <i className={`${row.icon} text-foreground-400 text-sm`} aria-hidden="true"></i>
                     {row.label}
-                  </div>
-                </td>
-                <td className="px-4 py-3.5 text-center text-sm font-semibold text-highlight-700 align-top">{row.pcp}</td>
-                <td className="px-4 py-3.5 text-center text-sm text-foreground-600 align-top">{row.apm}</td>
-                <td className="px-4 py-3.5 text-center text-sm text-foreground-600 align-top">{row.pmo}</td>
+                  </span>
+                </th>
+                <td className="px-4 py-3.5 text-sm leading-relaxed text-foreground-700">{row.pcp}</td>
+                <td className="px-4 py-3.5 text-sm leading-relaxed text-foreground-700">{row.apm}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+
+      <p className="mt-4 text-xs leading-relaxed text-foreground-500">
+        Both programmes are apprenticeships assessed against their own occupational standard. Our
+        admissions team assesses suitable employment, the work available to develop and your
+        development needs before confirming a programme. Professional study is offered separately
+        and is not part of this comparison.
+      </p>
 
     </div>
   );
@@ -343,64 +373,75 @@ export default function ProfessionalProgrammes() {
       <div className="container-site relative z-10">
         <div className="text-center max-w-5xl mx-auto mb-10 md:mb-14 reveal-blur-in is-visible">
           <span className="inline-block rounded-full border border-signal-400 px-4 py-1.5 text-xs font-label font-bold uppercase tracking-wider text-signal-700 mb-4">
-            Professional Programmes
+            Apprenticeships
           </span>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground-950 leading-tight">
-            Professional development
-            <br className="hidden md:block" />
-            {' '}built around real project responsibility
+            Choose around your work, not the badge
           </h2>
           <p className="mt-3 text-sm md:text-base text-foreground-600 leading-relaxed">
-            Develop deeper capability through structured programmes designed for professionals working across Project Management, Project Controls and PMO environments.
+            Two apprenticeships, built around the responsibilities you already hold. We review your
+            role, previous learning and the development opportunities available to you before we
+            identify the right programme.
           </p>
         </div>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch">
-          <ProgrammeCard
-            title="Project Controls Professional Level 6"
-            badge="Professional Programme"
-            duration="Level 6 · Project Controls · Advanced Professional Development"
-            shortLine="Advanced capability for complex project environments."
-            bestFor="Develop senior capability across planning, scheduling, cost, Earned Value, risk, governance, PMO and Project Controls decision-making."
-            includes={[
-              'Multiple professional development pathways available within the programme.',
-            ]}
-            cta="Explore Project Controls Professional"
-            href="/project-controls-professional-level-6"
-            popular
-            ctaTracking="pcp_level_6_explore"
-            delay={0}
-          />
-          <ProgrammeCard
-            title="Associate Project Manager Level 4"
-            badge="Professional Programme"
-            duration="Level 4 · Project Management · Applied Professional Development"
-            shortLine="Build stronger capability across project delivery."
-            bestFor="Strengthen project governance, planning, schedule, cost, risk, stakeholder management and delivery while applying development directly to real work."
-            includes={[
-              'Apply development directly to real work',
-            ]}
-            cta="Explore Associate Project Manager"
-            href="/associate-project-manager-level-4"
-            ctaTracking="apm_level_4_explore"
-            delay={80}
-          />
-          <ProgrammeCard
-            title="Certified PMO Professional Level 6"
-            badge="Professional Programme"
-            duration="Level 6 · PMO · Professional Development"
-            shortLine="Develop strategic PMO capability."
-            bestFor="Build advanced capability across governance, integrated controls, risk, quality, stakeholder leadership and evidence-based reporting."
-            includes={[
-              'Strategic governance & integrated controls',
-              'Evidence-based reporting systems',
-            ]}
-            cta="Explore Certified PMO Professional"
-            href="/pmo-pcp"
-            ctaTracking="pmo_level_6_explore"
-            delay={160}
-          />
+        {/* Cards grid — audit P00.2/P01.2: two apprenticeships of equal visual
+            weight. The professional programme is not a third peer. */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-stretch">
+          {APPRENTICESHIPS.map((programme, index) => (
+            <ProgrammeCard
+              key={programme.id}
+              title={programme.officialTitle}
+              badge={programme.offerTypeLabel}
+              duration={`Level ${programme.level} · ${programme.facts.duration}`}
+              shortLine={programme.purpose}
+              bestFor={programme.facts.entry}
+              includes={[programme.facts.delivery, programme.facts.assessment]}
+              cta={`Explore ${programme.officialTitle.replace(' Apprenticeship', '')}`}
+              href={programme.slug}
+              ctaTracking={`${programme.id}_explore`}
+              delay={index * 80}
+            />
+          ))}
+        </div>
+
+        {/* Secondary professional-study panel — audit P00.5 / P01.2. No
+            apprenticeship application button: this is a separate offer with its
+            own fee and funding terms. */}
+        <div className="mt-6 rounded-xl border border-background-300 bg-white">
+          <div className="grid gap-6 p-6 md:grid-cols-[1fr_auto] md:items-center md:p-8">
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary-300 bg-primary-100 px-3 py-1 text-xs font-label font-semibold text-primary-700">
+                <i className="ri-briefcase-line" aria-hidden="true"></i>
+                Professional development linked to the Chartered pathway
+              </span>
+              <h3 className="mt-3 text-lg md:text-xl font-heading font-bold text-foreground-950">
+                {PMO_L6.officialTitle}
+              </h3>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-foreground-600">
+                {PMO_L6.purpose}
+              </p>
+              <p className="mt-3 max-w-3xl text-sm leading-relaxed text-foreground-600">
+                This is professional study, not a third apprenticeship. It is assessed separately and
+                carries its own fee and funding terms, which are set out in full in your written
+                offer.
+              </p>
+              <p className="mt-3 max-w-3xl text-xs leading-relaxed text-foreground-500">
+                {PMO_L6.recognition.statement}
+              </p>
+            </div>
+            <div className="shrink-0">
+              <SiteLink
+                href={PMO_L6.slug}
+                className="cta-button inline-flex items-center justify-center gap-2 rounded-md border border-primary-700/50 px-6 py-3 text-sm font-semibold text-primary-800 transition-colors hover:bg-primary-50 whitespace-nowrap"
+                data-gtm-event="pmo_level_6_explore"
+                data-gtm-location="programme-cards"
+              >
+                Understand the PMO programme
+                <i className="ri-arrow-right-line" aria-hidden="true"></i>
+              </SiteLink>
+            </div>
+          </div>
         </div>
 
         <ProgrammeComparisonTable />

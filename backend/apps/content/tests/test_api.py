@@ -197,3 +197,46 @@ class ContentApiTests(APITestCase):
         detail = self.client.get(reverse("short-course-detail", kwargs={"slug": "first"}))
         self.assertEqual(detail.status_code, 200)
         self.assertEqual(detail.data["title"], "First course")
+
+    def test_growing_collection_paginates_only_when_asked(self):
+        baseline = ShortCourse.objects.count()
+        for number in range(30):
+            ShortCourse.objects.create(
+                slug=f"course-{number:02d}",
+                title=f"Course {number:02d}",
+                order=100 + number,
+            )
+        total = baseline + 30
+
+        # No paging parameters: the historic array contract must be preserved.
+        default = self.client.get(reverse("short-courses-list"))
+        self.assertEqual(default.status_code, 200)
+        self.assertIsInstance(default.data, list)
+        self.assertEqual(len(default.data), total)
+
+        paged = self.client.get(reverse("short-courses-list"), {"page_size": 10})
+        self.assertEqual(paged.status_code, 200)
+        self.assertEqual(paged.data["count"], total)
+        self.assertEqual(len(paged.data["results"]), 10)
+        self.assertIsNotNone(paged.data["next"])
+
+        second = self.client.get(reverse("short-courses-list"), {"page": 2, "page_size": 10})
+        self.assertEqual(len(second.data["results"]), 10)
+        self.assertNotEqual(
+            [item["id"] for item in paged.data["results"]],
+            [item["id"] for item in second.data["results"]],
+            "pages must not repeat the same rows",
+        )
+
+        # Paging must never exceed the declared ceiling.
+        huge = self.client.get(reverse("short-courses-list"), {"page_size": 5000})
+        self.assertLessEqual(len(huge.data["results"]), 100)
+
+    def test_small_catalogues_stay_complete_and_capped(self):
+        baseline = MentorProfile.objects.count()
+        MentorProfile.objects.create(name="Ada", is_active=True)
+        MentorProfile.objects.create(name="Grace", is_active=True, order=1)
+        response = self.client.get(reverse("mentors-list"))
+        self.assertEqual(response.status_code, 200)
+        self.assertIsInstance(response.data, list)
+        self.assertEqual(len(response.data), baseline + 2)

@@ -10,14 +10,14 @@ export default function CostForEligibleLearners() {
                   <i className="ri-graduation-cap-line text-xl" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-white">Government-funded apprenticeship programmes</p>
-                  <p className="text-xs text-white/70 mt-0.5 max-w-md">Apprentices do not contribute to eligible training costs. Employer funding is confirmed against the rules in force at the planned start date.</p>
+                  <p className="text-sm font-semibold text-white">Apprenticeship costs for eligible learners</p>
+                  <p className="text-xs text-white/70 mt-0.5 max-w-md">Apprentices do not contribute to eligible training costs. Whether a place is funded depends on your circumstances and the rules in force at the planned start date.</p>
                 </div>
               </div>
               <div className="flex max-w-full flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3">
                 <div className="text-center sm:text-right px-4">
                   <p className="text-2xl font-heading font-bold text-highlight-400">&pound;0</p>
-                  <p className="text-sm text-white/70 uppercase tracking-wider font-semibold">Cost for eligible learners</p>
+                  <p className="text-sm text-white/70 uppercase tracking-wider font-semibold">Learner contribution for eligible places</p>
                 </div>
                 <SiteLink href="/contact" className="btn-primary inline-flex items-center gap-2 px-6 py-3 font-semibold text-sm cursor-pointer transition-all duration-300 whitespace-nowrap">
                   Ask about eligibility

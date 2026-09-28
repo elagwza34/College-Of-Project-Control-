@@ -8,7 +8,7 @@ export const navLinks = [
 export const heroData = {
   badge: 'Funding Subject to Eligibility',
   headline: 'Manage the Detail. Explain the Variance. Influence the Decision.',
-  subheadline: 'A premium pathway combining Level 6 project controls capability with strategic development and OTHM Level 7 progression for professionals moving towards senior project, PMO and portfolio leadership.',
+  subheadline: 'A combined pathway joining Level 6 project controls capability with strategic development for professionals moving towards senior project, PMO and portfolio leadership responsibilities.',
   description: 'Develop technical project controls and strategic decision-making together, connecting plans, costs and risk information with programme and portfolio priorities.',
   fundingLine: 'Apprenticeship funding may be available, subject to learner, employer and current funding-rule eligibility. Commercial routes are available for self-funded and non-eligible learners.',
   primaryCta: 'Request a consultation',
@@ -17,12 +17,12 @@ export const heroData = {
   trustItems: [
     { icon: 'ri-checkbox-circle-fill', text: 'Funding Subject to Eligibility' },
     { icon: 'ri-funds-fill', text: 'Up to £27,000 Government Funding Band' },
-    { icon: 'ri-award-fill', text: 'OTHM Level 7 Diploma Progression' },
+    { icon: 'ri-award-line', text: 'Optional OTHM Level 7 Progression Route' },
     { icon: 'ri-building-2-fill', text: 'Workplace Evidence Support' },
   ],
   dashboardTitle: 'Combined Controls Dashboard',
   routeTitle: 'Strategic + Operational PCP',
-  routeSubtitle: 'Technical · Strategic · Leadership · OTHM Level 7',
+  routeSubtitle: 'Technical · Strategic · Leadership · optional OTHM Level 7 progression',
   accentColor: '#3FA7A3',
   metrics: {
     governance: '85%',
@@ -53,8 +53,8 @@ export const capabilityData = {
     },
     {
       icon: 'ri-award-line',
-      title: 'OTHM Level 7 Progression',
-      description: 'Progress towards the OTHM Diploma Level 7 in Project Management with Strategy and Leadership focus.',
+      title: 'Optional OTHM Level 7 Route',
+      description: 'An optional, separately applied-for progression route towards the OTHM Diploma Level 7 in Project Management with Strategy and Leadership focus. It is not part of the apprenticeship itself and carries its own entry requirements, fees and assessment.',
     },
   ],
 };
@@ -103,7 +103,7 @@ export const processData = {
     {
       number: '03',
       title: 'Progress to Leadership',
-      description: 'Apply combined capability through OTHM Level 7 progression, building the strategic leadership that opens senior roles.',
+      description: 'Apply combined capability in senior project, PMO and portfolio roles. Any OTHM Level 7 progression is a separate, optional route — the apprenticeship does not include it.',
     },
   ],
 };
@@ -114,9 +114,9 @@ export const statsData = {
   stats: [
     { value: '£27,000', label: 'Government funding band where eligible', icon: 'ri-funds-line' },
     { value: '2', label: 'Combined capability tracks: Operational + Strategic', icon: 'ri-stack-line' },
-    { value: '7', label: 'OTHM Level 7 Diploma progression included', icon: 'ri-award-line' },
+    { value: '1', label: 'Apprenticeship standard: Project Controls Professional ST0845', icon: 'ri-award-line' },
   ],
-  description: 'The Strategic + Operational PCP Route builds the complete professional — combining technical mastery with strategic leadership for employers investing in future project controls capability.',
+  description: 'The Strategic + Operational PCP Route combines technical controls capability with strategic leadership for employers investing in future project controls capability. One apprenticeship is awarded at the end of the programme; professional-body and Level 7 progression are separate routes with their own conditions.',
 };
 
 export const chooseData = {
@@ -163,7 +163,7 @@ export const whoForData = {
     items: [
       'Technical depth and strategic leadership combined',
       'Internal project controls leaders with board confidence',
-      'OTHM Level 7 progression for high-potential staff',
+      'Optional OTHM Level 7 progression route for high-potential staff',
       'Stronger PMO maturity and governance',
       'Improved cost, schedule and risk challenge',
       'Structured progression for future programme leaders',
@@ -177,7 +177,7 @@ export const developData = {
   capabilities: [
     { icon: 'ri-settings-line', title: 'Technical Mastery', description: 'Deep competence in planning, scheduling, cost engineering, risk and performance reporting.' },
     { icon: 'ri-lightbulb-line', title: 'Strategic Leadership', description: 'Governance, assurance, executive reporting and decision-support capability.' },
-    { icon: 'ri-award-line', title: 'OTHM Level 7 Progression', description: 'Strategy and leadership development towards OTHM Diploma Level 7.' },
+    { icon: 'ri-award-line', title: 'Optional OTHM Level 7 Route', description: 'A separate, optional progression route with its own entry requirements and fees. It is not part of the apprenticeship.' },
     { icon: 'ri-user-voice-line', title: 'One-to-One Coaching', description: 'Personalised support from experienced practitioners throughout your journey.' },
     { icon: 'ri-building-line', title: 'London Master Class Events', description: 'In-person professional development with industry peers and expert practitioners.' },
     { icon: 'ri-shield-check-line', title: 'APM ChPP Readiness', description: 'Structured evidence preparation and professional support towards Chartered status.' },
@@ -196,10 +196,10 @@ export const finalCtaData = {
 export const faqData = {
   heading: 'Strategic + Operational PCP Route FAQs',
   faqs: [
-    { q: 'What is the Strategic + Operational combined route?', a: 'This premium pathway combines the hands-on project controls skills of the Operational route with the governance, assurance and leadership capability of the Strategic route. It also includes OTHM Level 7 Diploma progression for professionals moving towards senior project, PMO and portfolio leadership.' },
+    { q: 'What is the Strategic + Operational combined route?', a: 'This pathway combines the hands-on project controls skills of the Operational route with the governance, assurance and leadership capability of the Strategic route. An optional OTHM Level 7 progression route is available separately; it is not included in the apprenticeship and is not part of the qualification you are awarded.' },
     { q: 'Who is this route designed for?', a: 'Experienced project controls professionals, senior PMO professionals, project managers moving into controls leadership, and employers building future project controls leaders who need both technical and strategic capability.' },
-    { q: 'How long does the combined route take?', a: 'Typically 2 years, with the Strategic and Operational modules running in parallel. The OTHM Level 7 Diploma progression continues beyond the apprenticeship, supported by Saturday workshops focused on Strategy and Leadership.' },
-    { q: 'What professional recognition does it lead to?', a: 'APM ChPP readiness support, PMO leadership development, OTHM Level 7 Diploma in Project Management, and professional membership support. This is the most comprehensive professional development pathway we offer.' },
+    { q: 'How long does the combined route take?', a: 'Typically 2 years, with the Strategic and Operational modules running in parallel. Any OTHM Level 7 study continues separately after the apprenticeship and follows its own schedule and fees.' },
+    { q: 'What professional recognition does it lead to?', a: 'It supports evidence for APM Chartered Project Professional (ChPP) applications and provides professional development. Chartered status is awarded independently by APM and is never guaranteed. OTHM Level 7 is a separate, optional route with its own registration, fees and assessment. Completing this apprenticeship awards the Project Controls Professional apprenticeship certificate; it does not award a university degree or the OTHM Diploma.' },
     { q: 'Can my employer support this route?', a: 'Yes. The combined route can connect immediate controls capability with longer-term leadership development. Apprenticeship funding may be available, subject to learner, employer and current funding-rule eligibility.' },
     { q: 'Can apprenticeship funding support this route?', a: 'The Level 6 standard has a maximum funding band of £27,000. The amount available depends on the current rules, learner age, employer status and available levy funds. Funding is confirmed only after an individual eligibility review.' },
     { q: 'What determines the employer contribution?', a: 'For starts from 1 August 2026, contribution rates vary by learner age, whether the employer pays the levy and whether sufficient levy funds are available. Workplace location, role relevance, prior learning and the applicable start-date rules must also be checked.' },

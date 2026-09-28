@@ -5,7 +5,8 @@
 
 /* Capsule CTAs use the supplied artwork; the arrow panel slides out on hover. */
 /* Opt in using cta-button; ordinary controls and navigation are never selected. */
-:root :is(a.btn-primary, a.btn-secondary, a.btn-editorial-teal, a.btn-editorial-purple, .cta-button) {
+.cta-button {
+  display: inline-flex;
   position: relative;
   isolation: isolate;
   align-items: center;
@@ -17,7 +18,10 @@
   border: 1px solid rgb(var(--signal-500) / 0.7);
   border-radius: 9999px;
   background-color: oklch(var(--primary-700));
-  background-image: url('/images/cta-background.png');
+  background-image: image-set(
+    url('/images/cta-background.webp') type('image/webp'),
+    url('/images/cta-background.png') type('image/png')
+  );
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -75,7 +79,7 @@
   }
 }
 
-:root :is(a.btn-primary, a.btn-secondary).access-route-button {
+.cta-button.access-route-button {
   width: 100%;
   min-width: 0;
   padding-inline: 1rem 4.25rem;
@@ -146,19 +150,26 @@
 }
 
 @layer components {
-  .cta-button { display: inline-flex; }
+  /* display is already set by the .cta-button rule above; do not restate it here. */
   .container-site {
     @apply w-full max-w-[1280px] mx-auto px-4 md:px-6;
   }
   .honeypot-field {
-    position: absolute;
-    left: -9999px;
-    top: -9999px;
-    opacity: 0;
-    height: 0;
-    width: 0;
-    z-index: -1;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    opacity: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    pointer-events: none !important;
+    z-index: -1 !important;
   }
+
+  .btn-primary { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-signal-500 px-6 py-3 text-sm font-bold text-primary-950 transition-colors hover:bg-signal-400 disabled:cursor-wait disabled:opacity-60; }
+  .btn-secondary { @apply inline-flex min-h-12 items-center justify-center rounded-full border border-current px-6 py-3 text-sm font-semibold; }
+  .form-control { @apply w-full min-h-12 rounded-md border border-foreground-500 bg-white px-3 py-2 text-base text-foreground-900; }
+  .form-control:focus-visible { outline: 3px solid #1F5F73; outline-offset: 2px; }
+  .section-space { padding-block: var(--section-space); }
 
   /* Premium card on #F5F8F9 canvas */
   .card-premium {
@@ -206,9 +217,7 @@
   .drawer-panel-center {
     animation: drawer-center-enter var(--motion-slow) var(--ease-emphasized) both;
   }
-  .dropdown-panel {
-    animation: dropdown-in var(--motion-slow) var(--ease-emphasized) both;
-  }
+
   .skeleton-shimmer {
     position: absolute;
     inset-block: 0;
@@ -226,10 +235,7 @@
   }
 
   /* Gold micro-accent line */
-  .gold-accent-line {
-    @apply w-8 h-0.5 rounded-full;
-    background: oklch(var(--highlight-500) / 0.6);
-  }
+
 
   /* Lavender section divider */
   .section-divider {
@@ -248,15 +254,6 @@
   font: 600 0.75rem/1 var(--font-label);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-}
-
-:where(:not(h1, h2, h3, h4, h5, h6)).font-heading {
-  font-family: var(--font-body);
-}
-
-:where(a, button):is(.btn-primary, .btn-secondary, .cta-button, .btn-editorial-teal, .btn-editorial-purple),
-:where(a, button)[class*="min-h-12"][class*="border"][class*="px-"] {
-  border-radius: 9999px;
 }
 
 @keyframes modal-enter {
@@ -313,11 +310,6 @@
   animation-play-state: paused;
 }
 
-.animate-marquee-mentors {
-  animation: marquee-scroll 40s linear infinite;
-  will-change: transform;
-}
-
 /* IPC institutional section — portrait marquee (right to left) */
 @keyframes ipc-portrait-flow {
   0% { transform: translate3d(0, 0, 0); }
@@ -354,26 +346,6 @@
 }
 
 /* Speech bubble tail */
-.speech-tail {
-  position: absolute;
-  left: -14px;
-  top: 32px;
-  width: 0;
-  height: 0;
-  border-top: 14px solid transparent;
-  border-bottom: 14px solid transparent;
-  border-right: 14px solid white;
-}
-.speech-tail-border {
-  position: absolute;
-  left: -16px;
-  top: 30px;
-  width: 0;
-  height: 0;
-  border-top: 16px solid transparent;
-  border-bottom: 16px solid transparent;
-  border-right: 16px solid oklch(var(--background-200) / 0.8);
-}
 
 /* ── Premium Micro-Interaction Animations ──────────────────────── */
 
@@ -417,9 +389,6 @@
 /* Apply data-animate="fade-up|blur-in|scale-in" to parent
    and .reveal-stagger-child on each child with style="transition-delay: Xms" */
 
-.reveal-stagger-child {
-  opacity: 0;
-}
 .reveal-stagger-child.animate-in {
   opacity: 1;
 }
@@ -541,25 +510,6 @@
   animation: lavender-float 12s ease-in-out infinite;
 }
 
-/* Gold micro-sparkle pulse */
-@keyframes gold-pulse {
-  0%, 100% { opacity: 0.25; transform: scale(1); }
-  50% { opacity: 0.45; transform: scale(1.08); }
-}
-.gold-sparkle {
-  animation: gold-pulse 4s ease-in-out infinite;
-}
-
-/* Subtle pathway line drawing */
-@keyframes pathway-draw {
-  from { stroke-dashoffset: 1000; }
-  to { stroke-dashoffset: 0; }
-}
-.pathway-line {
-  stroke-dasharray: 1000;
-  animation: pathway-draw 20s linear infinite;
-}
-
 /* Footer light theme using the project canvas colour. */
 .footer-light-bg {
   background: linear-gradient(180deg, #ffffff 0%, #F5F8F9 100%);
@@ -572,9 +522,6 @@
 }
 
 /* ── Page Transition Base ──────────────────────────────────── */
-.page-transition-wrapper {
-  will-change: opacity, transform;
-}
 
 /* ── Fade Slide Up (for result cards) ─────────────────────── */
 @keyframes fadeSlideUp {
@@ -591,34 +538,16 @@
 /* ── Editorial PMO Route Styles ─────────────────────────────── */
 
 /* Editorial background variants constrained to the brand palette. */
-.bg-editorial-cream {
-  background-color: #F5F8F9;
-}
 
 /* White editorial panel */
-.bg-editorial-yellow {
-  background-color: #FFFFFF;
-}
 
 /* Light petrol editorial panel */
-.bg-editorial-mint {
-  background-color: #F5F8F9;
-}
 
 /* Light petrol editorial panel */
-.bg-editorial-peach {
-  background-color: #F5F8F9;
-}
 
 /* Light petrol editorial panel */
-.bg-editorial-lavender {
-  background-color: #F5F8F9;
-}
 
 /* Off-white card */
-.bg-editorial-white {
-  background-color: #FFFFFF;
-}
 
 /* Thin charcoal divider */
 .divider-ink {
@@ -721,22 +650,6 @@
   opacity: 0.75;
 }
 
-/* Subtle fade-in for illustrations */
-@keyframes editorial-fade-in {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-editorial-in {
-  animation: editorial-fade-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-/* Stagger delays */
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-.delay-500 { animation-delay: 500ms; }
-
 /* Gold arrow hover nudge */
 @keyframes arrow-nudge {
   0%, 100% { transform: translateX(0); }
@@ -755,25 +668,14 @@
   from { opacity: 0; transform: translateX(-60px) scale(0.92); }
   to { opacity: 1; transform: translateX(0) scale(1); }
 }
-.animate-testimonial-left {
-  animation: testimonial-slide-left 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-.animate-testimonial-right {
-  animation: testimonial-slide-right 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
 
 /* Shared hero treatment: temporary external photography with one contrast level. */
-.hero-image-office,
 .hero-image-project,
 .hero-image-documents,
 .hero-image-register {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.hero-image-office {
-  background-image: linear-gradient(rgba(9, 31, 39, 0.82), rgba(9, 31, 39, 0.82)), url('https://images.pexels.com/photos/6285078/pexels-photo-6285078.jpeg?auto=compress&cs=tinysrgb&w=1920');
 }
 
 .hero-image-project {
@@ -792,19 +694,6 @@
   background: rgba(9, 31, 39, 0.82);
 }
 
-@layer components {
-  .cta-button { display: inline-flex; }
-  .btn-primary { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-signal-500 px-6 py-3 text-sm font-bold text-primary-950 transition-colors hover:bg-signal-400 disabled:cursor-wait disabled:opacity-60; }
-  .form-control { @apply w-full min-h-12 rounded-md border border-foreground-500 bg-white px-3 py-2 text-base text-foreground-900; }
-  .form-control:focus-visible { outline: 3px solid #1F5F73; outline-offset: 2px; }
-}
-
-@layer components {
-  .cta-button { display: inline-flex; }
-  .section-space { padding-block: var(--section-space); }
-  .btn-secondary { @apply inline-flex min-h-12 items-center justify-center rounded-full border border-current px-6 py-3 text-sm font-semibold; }
-  .card-editorial { border-radius: var(--radius-card); }
-}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
   :where(button, [role='button'], [role='tab']):active:not(:disabled),

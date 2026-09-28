@@ -2,13 +2,19 @@ from django.shortcuts import get_object_or_404
 from django.core.signing import BadSignature, SignatureExpired, TimestampSigner
 from rest_framework.decorators import api_view
 from rest_framework.decorators import permission_classes, throttle_classes
-from apps.cms.throttles import EnquiryThrottle
+from apps.cms.throttles import (
+    EnquiryThrottle,
+    MaintenanceAccessThrottle,
+    MaintenanceStatusThrottle,
+    PublicListThrottle,
+)
 from apps.cms.permissions import IsDashboardUser
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework import serializers
 
+from .pagination import capped_catalogue, paginated_response
 from .models import Coach, Event, MentorProfile, NavigationMenu, Page, Partner, ProfessionalCredential, PublicationStatus, Sector, ShortCourse, SiteSettings
 from .serializers import (
     CoachPublicSerializer,
@@ -24,7 +30,15 @@ from .serializers import (
     SiteSettingsSerializer,
 )
 
-MAINTENANCE_TOKEN_MAX_AGE = 60 * 60 * 24 * 7
+MAINTENANCE_TOKEN_MAX_AGE = 60 * 60 * 12
+
+# Forms carry these hidden fields for bots only; the browser blocks a filled
+# value before submitting, so a filled value here means the request is scripted.
+HONEYPOT_FIELDS = ("phone_alt", "company_alt", "website_alt", "mobile_alt")
+
+
+def looks_like_bot(payload):
+    return any(str(payload.get(field, "")).strip() for field in HONEYPOT_FIELDS)
 
 
 class MaintenanceSettingsSerializer(serializers.Serializer):
@@ -49,11 +63,16 @@ def maintenance_token_valid(request):
 
 
 def maintenance_payload(settings, request=None):
+    enabled = settings.maintenance_enabled
+    # The interstitial copy is public only while the gate is actually up. Keeping
+    # it out of "site is live" responses stops the endpoint from advertising
+    # unpublished launch messaging to anyone who polls it.
+    show_copy = request is None or enabled
     return {
-        "enabled": settings.maintenance_enabled,
-        "authenticated": (not settings.maintenance_enabled) or maintenance_token_valid(request) if request else False,
-        "heading": settings.maintenance_heading,
-        "message": settings.maintenance_message,
+        "enabled": enabled,
+        "authenticated": (not enabled) or maintenance_token_valid(request) if request else False,
+        "heading": settings.maintenance_heading if show_copy else "",
+        "message": settings.maintenance_message if show_copy else "",
         "pinSet": settings.has_maintenance_pin,
     }
 
@@ -72,6 +91,7 @@ def site_detail(_request):
 
 @api_view(["GET"])
 @permission_classes([AllowAny])
+@throttle_classes([MaintenanceStatusThrottle])
 def maintenance_status(request):
     settings = SiteSettings.load()
     return Response(maintenance_payload(settings, request))
@@ -79,6 +99,7 @@ def maintenance_status(request):
 
 @api_view(["POST"])
 @permission_classes([AllowAny])
+@throttle_classes([MaintenanceAccessThrottle])
 def maintenance_verify(request):
     settings = SiteSettings.load()
     pin = str(request.data.get("pin", "")).strip()
@@ -139,7 +160,7 @@ def homepage(_request):
 
 @api_view(["GET"])
 def mentors_list(request):
-    mentors = MentorProfile.objects.filter(is_active=True).order_by("order", "id")
+    mentors = capped_catalogue(MentorProfile.objects.filter(is_active=True).order_by("order", "id"))
     return Response(MentorPublicSerializer(mentors, many=True, context={"request": request}).data)
 
 
@@ -151,19 +172,19 @@ def mentor_detail(request, pk):
 
 @api_view(["GET"])
 def coaches_list(request):
-    coaches = Coach.objects.filter(is_active=True).order_by("order", "id")
+    coaches = capped_catalogue(Coach.objects.filter(is_active=True).order_by("order", "id"))
     return Response(CoachPublicSerializer(coaches, many=True, context={"request": request}).data)
 
 
 @api_view(["GET"])
 def partners_list(request):
-    partners = Partner.objects.filter(is_active=True).order_by("order", "id")
+    partners = capped_catalogue(Partner.objects.filter(is_active=True).order_by("order", "id"))
     return Response(PartnerPublicSerializer(partners, many=True, context={"request": request}).data)
 
 
 @api_view(["GET"])
 def professional_credentials_list(request):
-    credentials = ProfessionalCredential.objects.filter(is_active=True).order_by("order", "id")
+    credentials = capped_catalogue(ProfessionalCredential.objects.filter(is_active=True).order_by("order", "id"))
     return Response(
         ProfessionalCredentialPublicSerializer(
             credentials,
@@ -175,7 +196,7 @@ def professional_credentials_list(request):
 
 @api_view(["GET"])
 def sectors_list(request):
-    sectors = Sector.objects.filter(is_active=True).order_by("order", "id")
+    sectors = capped_catalogue(Sector.objects.filter(is_active=True).order_by("order", "id"))
     return Response(SectorPublicSerializer(sectors, many=True, context={"request": request}).data)
 
 
@@ -188,7 +209,7 @@ def sector_detail(request, slug):
 @api_view(["GET"])
 def short_courses_list(request):
     courses = ShortCourse.objects.filter(is_active=True).order_by("order", "title")
-    return Response(ShortCoursePublicSerializer(courses, many=True, context={"request": request}).data)
+    return paginated_response(request, courses, ShortCoursePublicSerializer, context={"request": request})
 
 
 @api_view(["GET"])
@@ -207,6 +228,12 @@ def events_list(request):
 @permission_classes([AllowAny])
 @throttle_classes([EnquiryThrottle])
 def create_enquiry(request):
+    if looks_like_bot(request.data):
+        # Pretend the submission succeeded: spambots stop retrying when they get a 201.
+        return Response(
+            {"id": 0, "name": "Enquiry received"},
+            status=status.HTTP_201_CREATED,
+        )
     serializer = EnquirySerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
     serializer.save()

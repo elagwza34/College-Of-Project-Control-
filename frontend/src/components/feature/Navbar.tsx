@@ -13,33 +13,38 @@ interface NavigationRoute {
 interface NavigationRouteGroup {
   title: string;
   color: string;
+  /** Clarifies the group's status where the classification is easy to misread. */
+  note?: string;
   routes: NavigationRoute[];
 }
 
+/* Approved classification (audit P0 · offer taxonomy):
+   two apprenticeships → three internal Level 6 pathways → separate professional study. */
 const routeGroups: NavigationRouteGroup[] = [
   {
-    title: 'Programmes',
+    title: 'Apprenticeships',
     color: 'primary',
+    note: 'The two work-based programmes we offer.',
     routes: [
-      { label: 'All Programmes', href: '/programmes', icon: 'ri-layout-grid-line' },
+      { label: 'Compare both programmes', href: '/programmes', icon: 'ri-layout-grid-line' },
       { label: 'PCP Level 6', href: '/project-controls-professional-level-6', icon: 'ri-line-chart-line' },
       { label: 'APM Level 4', href: '/associate-project-manager-level-4', icon: 'ri-briefcase-4-line' },
-      { label: 'Certified PMO Level 6', href: '/project-controls-professional/pmo-governance-route', icon: 'ri-building-4-line' },
     ],
   },
   {
-    title: 'PCP Pathways',
+    title: 'Level 6 pathways',
     color: 'primary',
+    note: 'Role emphasis within PCP Level 6 — not separate qualifications.',
     routes: [
       { label: 'Strategic Route', href: '/project-controls-professional/strategic-route', icon: 'ri-compass-3-line' },
       { label: 'Operational Route', href: '/project-controls-professional/operational-route', icon: 'ri-calendar-check-line' },
       { label: 'Chartered Route', href: '/project-controls-professional/chartered-pmo-pathway', icon: 'ri-shield-star-line' },
-      { label: 'Commercial Route', href: '/commercial-project-controls-route', icon: 'ri-bank-card-line' },
     ],
   },
   {
     title: 'Sectors',
     color: 'accent',
+    note: 'Sector examples applied to the same programme facts.',
     routes: [
       { label: 'Construction', href: '/project-controls-professional/construction-route', icon: 'ri-building-2-line' },
       { label: 'Engineering', href: '/project-controls-professional/engineering-manufacturing-aerospace-route', icon: 'ri-tools-line' },
@@ -48,25 +53,26 @@ const routeGroups: NavigationRouteGroup[] = [
     ],
   },
   {
-    title: 'Resources',
+    title: 'Professional study',
     color: 'secondary',
+    note: 'Separate commercial programmes — not an apprenticeship.',
     routes: [
-      { label: 'Articles', href: '/articles', icon: 'ri-book-open-line' },
-      { label: 'Case studies', href: '/case-studies', icon: 'ri-briefcase-4-line' },
+      { label: 'Certified PMO Level 6', href: '/project-controls-professional/pmo-governance-route', icon: 'ri-building-4-line' },
+      { label: 'Commercial Project Controls', href: '/commercial-project-controls-route', icon: 'ri-bank-card-line' },
       { label: 'Short courses', href: '/short-courses', icon: 'ri-graduation-cap-line' },
-      { label: 'Events', href: '/events', icon: 'ri-calendar-event-line' },
-      { label: 'FAQ', href: '/faq', icon: 'ri-question-line' },
-      { label: 'Testimonials & reviews', href: '/testimonials', icon: 'ri-chat-quote-line' },
     ],
   },
   {
-    title: 'College',
+    title: 'About & Support',
     color: 'secondary',
     routes: [
       { label: 'About the College', href: '/about', icon: 'ri-information-line' },
-      { label: 'Governance Board', href: '/governance-board', icon: 'ri-government-line' },
       { label: 'For Employers', href: '/employers', icon: 'ri-building-line' },
       { label: 'For Professionals', href: '/apprentices', icon: 'ri-user-star-line' },
+      { label: 'Events', href: '/events', icon: 'ri-calendar-event-line' },
+      { label: 'Articles & guides', href: '/articles', icon: 'ri-book-open-line' },
+      { label: 'Case studies', href: '/case-studies', icon: 'ri-briefcase-4-line' },
+      { label: 'FAQ', href: '/faq', icon: 'ri-question-line' },
       { label: 'Contact', href: '/contact', icon: 'ri-mail-line' },
     ],
   },
@@ -142,11 +148,15 @@ export default function Navbar() {
     routesTimeoutRef.current = setTimeout(() => setRoutesOpen(false), 200);
   };
 
+  /* Primary navigation follows the approved journey order
+     (audit REVIEW 09): the apprenticeship offer comes before supporting
+     destinations, and professional study stays a labelled secondary branch. */
   const navLinks = [
     { label: 'Home', href: '/', hasDropdown: false },
-    { label: 'Programmes', href: '/programmes', hasDropdown: false },
-    { label: 'Short courses', href: '/short-courses', hasDropdown: false },
-    { label: 'Explore', href: '/about', hasDropdown: true },
+    { label: 'Apprenticeships', href: '/programmes', hasDropdown: true },
+    { label: 'Sectors', href: '/project-controls-professional/construction-route', hasDropdown: false },
+    { label: 'How learning works', href: '/how-to-apply', hasDropdown: false },
+    { label: 'About & Support', href: '/about', hasDropdown: false },
   ];
 
   const linkTextClass = scrolled
@@ -176,7 +186,7 @@ export default function Navbar() {
               <div
                 key={link.label}
                 className={link.hasDropdown ? 'static' : 'relative'}
-                ref={link.label === 'Explore' ? dropdownRef : undefined}
+                ref={link.hasDropdown ? dropdownRef : undefined}
                 onMouseEnter={link.hasDropdown ? handleRoutesEnter : undefined}
                 onMouseLeave={link.hasDropdown ? handleRoutesLeave : undefined}
               >
@@ -212,7 +222,7 @@ export default function Navbar() {
                     id="desktop-routes-menu"
                     data-navigation-menu
                     className="absolute left-1/2 top-full mt-3 max-h-[calc(100vh-96px)] w-[calc(100vw-2rem)] max-w-[1180px] -translate-x-1/2 overflow-x-hidden overflow-y-auto rounded-2xl border border-background-200 bg-white shadow-card"
-                    style={{ animation: 'dropdown-in 350ms cubic-bezier(0.22,1,0.36,1) forwards' }}
+                    style={{ animation: 'navbar-dropdown-in 350ms cubic-bezier(0.22,1,0.36,1) forwards' }}
                   >
                     {/* Route groups */}
                     <div className="grid grid-cols-2 gap-x-6 gap-y-5 p-5 sm:grid-cols-3 xl:grid-cols-5">
@@ -397,7 +407,7 @@ export default function Navbar() {
 
       {/* Dropdown + header entrance keyframes */}
       <style>{`
-        @keyframes dropdown-in {
+        @keyframes navbar-dropdown-in {
           from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
           to { opacity: 1; transform: translateX(-50%) translateY(0); }
         }

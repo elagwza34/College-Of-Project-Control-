@@ -34,6 +34,10 @@ class Testimonial(models.Model):
 
     class Meta:
         ordering = ['-is_featured', 'order', '-created_at', '-id']
+        indexes = [
+            # public_reviews() filters on status and orders by the same two columns.
+            models.Index(fields=['status', '-is_featured'], name='testimonial_status_idx'),
+        ]
 
     def __str__(self):
         return f'{self.name} — {self.get_status_display()}'
@@ -156,6 +160,12 @@ class Page(models.Model):
 
     class Meta:
         ordering = ["title"]
+        # page_detail filters on slug + status; homepage() filters on is_homepage
+        # with status, so both are indexed together.
+        indexes = [
+            models.Index(fields=["status"], name="page_status_idx"),
+            models.Index(fields=["is_homepage", "status"], name="page_home_idx"),
+        ]
 
     def clean(self):
         if self.is_homepage:
@@ -397,6 +407,9 @@ class ShortCourse(models.Model):
 
     class Meta:
         ordering = ["order", "title"]
+        indexes = [
+            models.Index(fields=["is_active", "order", "title"], name="shortcourse_active_order_idx"),
+        ]
 
     def __str__(self):
         return self.title
@@ -471,6 +484,15 @@ class Event(models.Model):
     class Meta:
         ordering = ["order", "id"]
         constraints = [models.UniqueConstraint(fields=["organization_id", "external_id"], condition=models.Q(source="eventbrite") & ~models.Q(external_id=""), name="unique_eventbrite_event")]
+        # Every public list filters and orders on these columns, so they are indexed
+        # together rather than one at a time to keep the index count down. ends_at is
+        # included because the ended/upcoming split compares it against now.
+        indexes = [
+            models.Index(fields=["is_active", "starts_at"], name="event_active_start_idx"),
+            models.Index(fields=["is_active", "ends_at"], name="event_active_end_idx"),
+            models.Index(fields=["is_featured", "order"], name="event_featured_order_idx"),
+            models.Index(fields=["remote_status"], name="event_remote_status_idx"),
+        ]
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -597,6 +619,10 @@ class Article(models.Model):
 
     class Meta:
         ordering = ["order", "-published_at", "-id"]
+        # published_articles() always filters is_published and orders on published_at.
+        indexes = [
+            models.Index(fields=["is_published", "published_at"], name="article_published_idx"),
+        ]
 
     def __str__(self):
         return self.title
@@ -630,6 +656,12 @@ class CaseStudy(models.Model):
     class Meta:
         ordering = ["order", "-published_at", "-id"]
         verbose_name_plural = "Case studies"
+        indexes = [
+            models.Index(fields=["is_published", "published_at"], name="casestudy_published_idx"),
+            models.Index(fields=["sector"], name="casestudy_sector_idx"),
+            # case_studies_list offers `?featured=` filtering on top of the publish filter.
+            models.Index(fields=["is_published", "is_featured"], name="casestudy_featured_idx"),
+        ]
 
     def __str__(self):
         return self.title
