@@ -9,6 +9,7 @@ import {
 } from '@/data/programmeFacts';
 import type { ReactNode } from 'react';
 import { useEffect,useRef,useState } from 'react';
+import Level6Pathways from './Level6Pathways';
 import LearningJourney from './LearningJourney';
 
 /* ─────────────────── ProgrammeCard ─────────────────── */
@@ -394,30 +395,29 @@ export default function ProfessionalProgrammes() {
         </div>
 
         <LearningJourney />
+        <Level6Pathways />
 
         {/* Secondary professional-study panel — audit P00.5 / P01.2. No
             apprenticeship application button: this is a separate offer with its
             own fee and funding terms. */}
-        <div className="mt-6 rounded-xl border border-background-300 bg-white">
+        <div className="mt-6 rounded-xl border border-background-300 bg-white/92">
           <div className="grid gap-6 p-6 md:grid-cols-[1fr_auto] md:items-center md:p-8">
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-primary-300 bg-primary-100 px-3 py-1 text-xs font-label font-semibold text-primary-700">
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary-300 bg-primary-100 px-3 py-1 text-xs font-label font-semibold uppercase tracking-[0.14em] text-primary-700">
                 <i className="ri-briefcase-line" aria-hidden="true"></i>
-                Professional development linked to the Chartered pathway
+                Professional development
               </span>
               <h3 className="mt-3 text-lg md:text-xl font-heading font-bold text-foreground-950">
-                {PMO_L6?.officialTitle}
+                {PMO_L6?.shortTitle}
               </h3>
               <p className="mt-2 max-w-3xl text-sm leading-relaxed text-foreground-600">
-                {PMO_L6?.purpose}
+                A separate professional development programme for experienced PMO and project professionals who want to strengthen advanced PMO capability and structured professional evidence.
               </p>
-              <p className="mt-3 max-w-3xl text-sm leading-relaxed text-foreground-600">
-                This is professional study, not a third apprenticeship. It is assessed separately and
-                carries its own fee and funding terms, which are set out in full in your written
-                offer.
+              <p className="mt-4 max-w-3xl rounded-lg border border-background-200 bg-background-50 px-4 py-3 text-xs leading-relaxed text-foreground-600">
+                {PMO_L6?.recognition?.statement}
               </p>
               <p className="mt-3 max-w-3xl text-xs leading-relaxed text-foreground-500">
-                {PMO_L6?.recognition?.statement}
+                This is professional study, not a third apprenticeship. It is assessed separately from the full apprenticeship and carries its own fee and funding terms, which are set out in your written offer.
               </p>
             </div>
             <div className="shrink-0">
@@ -427,7 +427,7 @@ export default function ProfessionalProgrammes() {
                 data-gtm-event="pmo_level_6_explore"
                 data-gtm-location="programme-cards"
               >
-                Understand the PMO programme
+                Explore Certified PMO Professional
                 <i className="ri-arrow-right-line" aria-hidden="true"></i>
               </SiteLink>
             </div>

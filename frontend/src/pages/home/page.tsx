@@ -9,7 +9,6 @@ import LearnFromPractitioners from "./components/LearnFromPractitioners";
 import LearnTogether from "./components/LearnTogether";
 import ProfessionalDevelopmentAndRecognition from "./components/ProfessionalDevelopmentAndRecognition";
 import ProfessionalExperience from "./components/ProfessionalExperience";
-import ProfessionalPathways from "./components/ProfessionalPathways";
 import ProfessionalProgrammes from "./components/ProfessionalProgrammes";
 import ProjectDrivenSectors from "./components/ProjectDrivenSectors";
 import SpecialistModules from './components/SpecialistModules';
@@ -25,7 +24,6 @@ export default function Home() {
         <ProfessionalProgrammes />
         <div className="section-divider" />
         <SpecialistModules />
-        <ProfessionalPathways />
         <ProjectDrivenSectors />
         <FundingEligibilityAndIPCSupport />
         <ShortCoursesCarousel />

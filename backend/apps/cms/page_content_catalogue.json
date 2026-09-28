@@ -2961,6 +2961,45 @@
     "url": "/"
   },
   {
+    "key": "82d2f41f76996c60",
+    "page": "home",
+    "label": "Level6 Pathways",
+    "fields": [
+      {
+        "key": "14f497646d83b6c9",
+        "kind": "text",
+        "default": "These are development pathways within the Level 6 apprenticeship offer, not separate apprenticeship standards.",
+        "label": "Text"
+      },
+      {
+        "key": "4388ae6b4bd7e79e",
+        "kind": "text",
+        "default": "What it develops",
+        "label": "Text"
+      },
+      {
+        "key": "bc5a25997d702a4e",
+        "kind": "text",
+        "default": "Need to discuss a different development mix? Your route may be shaped around current responsibilities, prior learning, employer needs and available workplace evidence.",
+        "label": "Text"
+      },
+      {
+        "key": "41c0273876371def",
+        "kind": "link",
+        "default": "/book-a-session",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "aa86319a74cd812b",
+        "kind": "text",
+        "default": "Discuss your route",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
+      }
+    ],
+    "url": "/"
+  },
+  {
     "key": "580d766069a3985b",
     "page": "home",
     "label": "Professional Programmes",
@@ -3038,21 +3077,27 @@
         "label": "Text"
       },
       {
-        "key": "8fa0bbd0a7e745c8",
+        "key": "b7df1f07211acd02",
         "kind": "text",
-        "default": "Professional development linked to the Chartered pathway",
+        "default": "Professional development",
         "label": "Text"
       },
       {
-        "key": "d45a0f646737523f",
+        "key": "54e5f6ab10cf5ac9",
         "kind": "text",
-        "default": "This is professional study, not a third apprenticeship. It is assessed separately and carries its own fee and funding terms, which are set out in full in your written offer.",
+        "default": "A separate professional development programme for experienced PMO and project professionals who want to strengthen advanced PMO capability and structured professional evidence.",
         "label": "Text"
       },
       {
-        "key": "dcf0bde0e89d7662",
+        "key": "402ffc2c487c70bb",
         "kind": "text",
-        "default": "Understand the PMO programme",
+        "default": "This is professional study, not a third apprenticeship. It is assessed separately from the full apprenticeship and carries its own fee and funding terms, which are set out in your written offer.",
+        "label": "Text"
+      },
+      {
+        "key": "63be973fdf95e035",
+        "kind": "text",
+        "default": "Explore Certified PMO Professional",
         "label": "Link text"
       }
     ],
