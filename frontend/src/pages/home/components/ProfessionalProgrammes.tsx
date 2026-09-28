@@ -7,6 +7,7 @@ import {
   standardLabel,
   type ProgrammeFacts,
 } from '@/data/programmeFacts';
+import type { ReactNode } from 'react';
 import { useEffect,useRef,useState } from 'react';
 
 /* ─────────────────── ProgrammeCard ─────────────────── */
@@ -44,6 +45,7 @@ function ProgrammeCard({ programme, ctaTracking, delay = 0 }: ProgrammeCardProps
   }, []);
 
   const animClass = visible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-[0.95] translate-y-6';
+  const ctaLabel = `Explore Level ${programme.level}`;
 
   return (
     <div
@@ -53,74 +55,51 @@ function ProgrammeCard({ programme, ctaTracking, delay = 0 }: ProgrammeCardProps
         transition: `transform 350ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 350ms cubic-bezier(0.22, 1, 0.36, 1), opacity 500ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms`,
       }}
     >
-      {/* Header band */}
-      <div className="px-5 pt-6 pb-4 rounded-t-xl bg-white">
-        <span className="inline-block px-2.5 py-0.5 text-sm font-label font-semibold rounded-full whitespace-nowrap mb-2 bg-primary-100 text-primary-700 border border-primary-300">
+      <div className="rounded-t-xl bg-white px-5 pb-4 pt-6">
+        <span className="mb-3 inline-block rounded-full border border-primary-300 bg-primary-100 px-2.5 py-0.5 text-sm font-label font-semibold text-primary-700">
           {programme.offerTypeLabel}
         </span>
         <h3 className="text-xl font-heading font-bold leading-tight text-primary-800 md:text-2xl">
           {programme.shortTitle}
         </h3>
-        <p className="text-xs text-foreground-600 mt-1 leading-snug">{programme.description}</p>
-        <div className="inline-flex items-center gap-1 mt-2.5 px-2 py-0.5 rounded-full text-sm font-label font-semibold bg-secondary-100 text-secondary-700">
-          <i className="ri-shield-check-line text-sm" aria-hidden="true"></i>
-          {standardLabel(programme)}
-        </div>
+        <p className="mt-3 text-sm leading-relaxed text-foreground-600">{programme.description}</p>
       </div>
 
-      {/* Body */}
-      <div className="px-5 pt-4 pb-4 flex-1">
-        <div className="mb-4">
-          <p className="text-sm text-foreground-400 font-label font-semibold uppercase tracking-wider mb-1">
-            Role focus
-          </p>
-          <p className="text-xs text-foreground-600 leading-relaxed">{programme.roleFit}</p>
-        </div>
-
-        <dl className="mb-4 space-y-1.5">
-          <div className="flex items-baseline gap-2">
-            <dt className="text-xs font-label font-semibold uppercase tracking-wider text-foreground-400 shrink-0">
-              Level
-            </dt>
-            <dd className="text-xs text-foreground-700">{programme.level}</dd>
-          </div>
-          <div className="flex items-baseline gap-2">
-            <dt className="text-xs font-label font-semibold uppercase tracking-wider text-foreground-400 shrink-0">
-              Duration
-            </dt>
-            <dd className="text-xs text-foreground-700 leading-relaxed">
-              {programme.facts.duration}
-            </dd>
-          </div>
+      <div className="flex-1 px-5 pb-4 pt-4">
+        <dl className="space-y-4">
+          <ProgrammeFact label="Level">Level {programme.level}</ProgrammeFact>
+          <ProgrammeFact label="Standard">{standardLabel(programme)}</ProgrammeFact>
+          <ProgrammeFact label="Role focus">{programme.roleFit}</ProgrammeFact>
+          <ProgrammeFact label="Learning">{programme.learningApproach}</ProgrammeFact>
+          <ProgrammeFact label="Assessment">{programme.facts.assessment}</ProgrammeFact>
         </dl>
-
-        <p className="text-sm text-foreground-400 font-label font-semibold uppercase tracking-wider mb-1.5">
-          How you learn and are assessed
-        </p>
-        <ul className="space-y-1">
-          <li className="flex items-start gap-1.5 text-xs text-foreground-700">
-            <i className="ri-check-line mt-0.5 flex-shrink-0 text-sm text-primary-500" aria-hidden="true"></i>
-            <span className="leading-snug">{programme.facts.delivery}</span>
-          </li>
-          <li className="flex items-start gap-1.5 text-xs text-foreground-700">
-            <i className="ri-check-line mt-0.5 flex-shrink-0 text-sm text-primary-500" aria-hidden="true"></i>
-            <span className="leading-snug">{programme.facts.assessment}</span>
-          </li>
-        </ul>
       </div>
 
-      {/* CTA */}
       <div className="px-5 pb-6 pt-4">
         <SiteLink
           href={programme.url}
-          className="btn-primary inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap px-6 py-3 text-sm font-bold transition-colors duration-300"
+          className="btn-primary inline-flex w-full items-center justify-center gap-1.5 px-6 py-3 text-sm font-bold transition-colors duration-300"
           data-gtm-event={ctaTracking}
           data-gtm-location="programme-cards"
+          aria-label={`${ctaLabel}: ${programme.shortTitle}`}
         >
-          Explore {programme.shortTitle}
+          {ctaLabel}
           <i className="ri-arrow-right-line text-sm" aria-hidden="true"></i>
         </SiteLink>
       </div>
+    </div>
+  );
+}
+
+function ProgrammeFact({ label, children }: { label: string; children: ReactNode }) {
+  return (
+    <div className="border-t border-background-200 pt-4 first:border-t-0 first:pt-0">
+      <dt className="text-xs font-label font-semibold uppercase tracking-wider text-foreground-500">
+        {label}
+      </dt>
+      <dd className="mt-1.5 text-sm leading-relaxed text-foreground-700">
+        {children}
+      </dd>
     </div>
   );
 }

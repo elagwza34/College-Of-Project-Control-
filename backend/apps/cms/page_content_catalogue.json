@@ -2824,33 +2824,27 @@
         "label": "Text"
       },
       {
-        "key": "7c077a394dea5a80",
+        "key": "476b4ec75be517d6",
         "kind": "text",
-        "default": "Project controls and",
+        "default": "Part of Kent Business College",
+        "label": "Text"
+      },
+      {
+        "key": "80f9d95c650fe079",
+        "kind": "text",
+        "default": "Project controls and project management apprenticeships",
         "label": "Heading"
       },
       {
-        "key": "e2c580834c9966c7",
+        "key": "4c00e09f66e4b9ed",
         "kind": "text",
-        "default": "project management apprenticeships",
+        "default": "Build the capability to plan, control and deliver projects through practical, work-based learning with Kent Business College.",
         "label": "Text"
       },
       {
-        "key": "8419fed200fca8ae",
+        "key": "93d58a91dceb6f2f",
         "kind": "text",
-        "default": "Develop the capability to plan, control and deliver projects through work-based learning with Kent Business College.",
-        "label": "Text"
-      },
-      {
-        "key": "5f64a71062390d70",
-        "kind": "text",
-        "default": "Explore the apprenticeship that fits your responsibilities and the support your employer can provide.",
-        "label": "Text"
-      },
-      {
-        "key": "25318ecaf9273f1c",
-        "kind": "text",
-        "default": "Associate Project Manager Level 4 · Project Controls Professional Level 6",
+        "default": "Explore the apprenticeship that fits your responsibilities, experience and development needs.",
         "label": "Text"
       },
       {
@@ -2878,12 +2872,6 @@
         "default": "Develop your team",
         "label": "Link text",
         "linkField": "d2b1e622a2d53a7f"
-      },
-      {
-        "key": "b3e5c7cde0fd004f",
-        "kind": "text",
-        "default": "Designed for working professionals and project-driven organisations.",
-        "label": "Text"
       }
     ],
     "url": "/"
@@ -2978,24 +2966,6 @@
     "label": "Professional Programmes",
     "fields": [
       {
-        "key": "b4a6d43c6d8abd43",
-        "kind": "text",
-        "default": "Role focus",
-        "label": "Text"
-      },
-      {
-        "key": "46349b9de531d0fa",
-        "kind": "text",
-        "default": "How you learn and are assessed",
-        "label": "Text"
-      },
-      {
-        "key": "d5454642203aa2f7",
-        "kind": "text",
-        "default": "Explore ",
-        "label": "Link text"
-      },
-      {
         "key": "087aa130fb132671",
         "kind": "text",
         "default": "Which programme best fits your responsibilities?",
@@ -3008,7 +2978,7 @@
         "label": "Text"
       },
       {
-        "key": "ce9b5f992903e194",
+        "key": "d5454642203aa2f7",
         "kind": "text",
         "default": "Explore ",
         "label": "Link text"
@@ -3222,9 +3192,9 @@
     "label": "Trusted By",
     "fields": [
       {
-        "key": "49d3fe630324ed9b",
+        "key": "8c7ec771592cbf97",
         "kind": "text",
-        "default": "Trusted by",
+        "default": "Professionals from organisations including",
         "label": "Heading"
       }
     ],
