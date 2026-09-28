@@ -22,13 +22,13 @@ export default function Home() {
         <CollegeOfProjectControlsAndManagement />
         <TrustedBy />
         <ProfessionalProgrammes />
+        <ForEmployers />
+        <ProjectDrivenSectors />
+        <CaseStudiesSection />
         <div className="section-divider" />
         <SpecialistModules />
-        <ProjectDrivenSectors />
         <FundingEligibilityAndIPCSupport />
         <ShortCoursesCarousel />
-        <ForEmployers />
-        <CaseStudiesSection />
         <LearnFromPractitioners />
         <CoachingAndSupport />
         <LearnTogether />

@@ -1,7 +1,24 @@
 import CaseStudyCard from '@/components/feature/CaseStudyCard';
-import { fetchCaseStudies, type CaseStudyPage } from '@/services/caseStudiesApi';
+import { fetchCaseStudies, type CaseStudyPage, type CaseStudySummary } from '@/services/caseStudiesApi';
 import { useEffect, useState } from 'react';
 import SiteLink from '../base/SiteLink';
+
+const blockedCaseStudyTerms = ['demo', 'sample', 'example', 'placeholder', 'test'];
+
+function isRealPublishedCaseStudy(item: CaseStudySummary) {
+  const searchableText = [
+    item.title,
+    item.slug,
+    item.headline,
+    item.summary,
+    item.client_name,
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+
+  return !blockedCaseStudyTerms.some((term) => searchableText.includes(term));
+}
 
 export default function CaseStudiesSection({ limit = 3, showLink = true }: { limit?: number; showLink?: boolean }) {
   const [data, setData] = useState<CaseStudyPage | null>(null);
@@ -25,6 +42,10 @@ export default function CaseStudiesSection({ limit = 3, showLink = true }: { lim
     return () => controller.abort();
   }, [limit]);
 
+  const caseStudies = (data?.results ?? []).filter(isRealPublishedCaseStudy).slice(0, limit);
+
+  if (loading || error || caseStudies.length === 0) return null;
+
   return (
     <section className="bg-background-50 py-16 md:py-24">
       <div className="container-site">
@@ -32,10 +53,10 @@ export default function CaseStudiesSection({ limit = 3, showLink = true }: { lim
           <div className="max-w-3xl">
             <p className="font-label text-xs font-bold uppercase tracking-[.18em] text-accent-700">Case studies</p>
             <h2 className="mt-4 font-heading text-3xl font-bold leading-tight text-foreground-950 md:text-5xl">
-              Evidence of project controls capability in action.
+              Evidence of learning applied at work
             </h2>
             <p className="mt-4 text-base leading-relaxed text-foreground-600">
-              Explore how structured learning, workplace evidence and stronger controls can support better delivery decisions.
+              See how professionals and employers connect structured learning with real project responsibilities and development.
             </p>
           </div>
           {showLink && (
@@ -46,21 +67,10 @@ export default function CaseStudiesSection({ limit = 3, showLink = true }: { lim
           )}
         </div>
 
-        <div className="mt-10">
-          {loading ? (
-            <p role="status">Loading case studies...</p>
-          ) : error ? (
-            <p role="alert">Case studies could not be loaded.</p>
-          ) : data?.results.length ? (
-            <div className="grid gap-6 md:grid-cols-3">
-              {data.results.slice(0, limit).map((item) => <CaseStudyCard key={item.id} item={item} />)}
-            </div>
-          ) : (
-            <div className="rounded-2xl border border-background-200 bg-white p-8 text-center">
-              <h3 className="text-xl font-bold text-foreground-950">Case studies are on the way</h3>
-              <p className="mt-3 text-sm text-foreground-600">Add and publish case studies from the dashboard to show them here.</p>
-            </div>
-          )}
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {caseStudies.map((item) => (
+            <CaseStudyCard key={item.id} item={item} />
+          ))}
         </div>
       </div>
     </section>

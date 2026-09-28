@@ -2882,21 +2882,21 @@
     "label": "For Employers",
     "fields": [
       {
-        "key": "6d5a164bb771491f",
+        "key": "3ebdc0cdfc71afc4",
         "kind": "text",
-        "default": "For Employers",
+        "default": "For employers",
         "label": "Text"
       },
       {
-        "key": "a385c847d3eb6610",
+        "key": "ab043cceb43296fa",
         "kind": "text",
-        "default": "Build Project Controls capability across your organisation",
+        "default": "Build stronger project capability across your organisation",
         "label": "Heading"
       },
       {
-        "key": "da9e81a92d6aa4cd",
+        "key": "4e0bdd7e6aad7118",
         "kind": "text",
-        "default": "Develop individual specialists, strengthen a PMO or build structured capability across a wider Project Controls function.",
+        "default": "Develop individual specialists, strengthen a PMO or build structured project-controls capability across a wider team.",
         "label": "Text"
       },
       {
@@ -2906,9 +2906,9 @@
         "label": "Button/link URL"
       },
       {
-        "key": "ef55a82a736c8494",
+        "key": "2e525d4011aea646",
         "kind": "text",
-        "default": "Build a Capability Plan",
+        "default": "Develop your team",
         "label": "Link text",
         "linkField": "d2b1e622a2d53a7f"
       },
@@ -2930,18 +2930,6 @@
         "kind": "image",
         "default": "/images/employer-capability-team.webp",
         "label": "Image URL"
-      },
-      {
-        "key": "84219c15666172db",
-        "kind": "text",
-        "default": "Employer capability development",
-        "label": "Text"
-      },
-      {
-        "key": "f451af9b8b7e9341",
-        "kind": "text",
-        "default": "Develop individual specialists, teams or entire functions.",
-        "label": "Text"
       }
     ],
     "url": "/"
@@ -3109,15 +3097,9 @@
     "label": "Project Driven Sectors",
     "fields": [
       {
-        "key": "1690f49900008b89",
+        "key": "1ecf9f653641758a",
         "kind": "text",
-        "default": "Explore this sector",
-        "label": "Text"
-      },
-      {
-        "key": "f068c28f4941a55b",
-        "kind": "text",
-        "default": "Project-Driven Sectors",
+        "default": "Project-driven sectors",
         "label": "Text"
       },
       {
@@ -3127,9 +3109,21 @@
         "label": "Heading"
       },
       {
-        "key": "16adcbd4bc227e3e",
+        "key": "6a67043b8c9954b5",
         "kind": "text",
-        "default": "Apply specialist Project Controls capability where planning, cost, risk, governance and delivery performance matter most.",
+        "default": "Apply project-controls capability where planning, cost, risk, governance and delivery performance matter.",
+        "label": "Text"
+      },
+      {
+        "key": "1690f49900008b89",
+        "kind": "text",
+        "default": "Explore this sector",
+        "label": "Link text"
+      },
+      {
+        "key": "02920454818e5504",
+        "kind": "text",
+        "default": "Sector context helps illustrate how Project Controls capability can be applied. Programme suitability depends on the learner's actual role, responsibilities, prior learning and workplace development opportunities.",
         "label": "Text"
       }
     ],
