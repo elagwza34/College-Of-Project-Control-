@@ -1,12 +1,38 @@
 import SiteLink from '@/components/base/SiteLink';
+import {
+  employerContributionPercent,
+  formatGBP,
+  formatPercent,
+  fundingContributionPercent,
+  fundingRoutes,
+  fundingWindowPhrase,
+  fundsUpToBandMaximum,
+  type FundingRouteId,
+} from '@/data/apprenticeshipFundingPolicy';
+import { PCP_L6 } from '@/data/programmeFacts';
+
+/**
+ * One headline figure for a funding position.
+ *
+ * Percentage routes show the government contribution. Positions funded up to the
+ * band maximum are described as "Band maximum" rather than "100%", because a
+ * levy-paying employer is spending its own levy rather than receiving government
+ * funding, and "100% government funded" would misstate that.
+ */
+function headlineFor(routeId: FundingRouteId, ageBandLabel: string): string | null {
+  const percent = fundingContributionPercent(routeId, ageBandLabel);
+  if (percent !== undefined) return formatPercent(percent);
+  return fundsUpToBandMaximum(routeId, ageBandLabel) ? 'Band maximum' : null;
+}
 
 export default function FundingScenariosForStartsFrom1August2026() {
+  const band = formatGBP(PCP_L6?.fundingBandMaximum ?? 0);
   return (
 <section id="funding" className="scroll-mt-44 py-16 md:py-20 bg-white">
 <div className="container-site space-y-8">
 <div className="max-w-3xl space-y-4">
 <div className="text-xs font-bold uppercase tracking-[.14em] text-accent-700">
-{"Funding scenarios for starts from 1 August 2026 "}
+{`Funding scenarios for starts ${fundingWindowPhrase()} `}
 </div>
 <h2 className="text-3xl font-bold leading-tight md:text-4xl">
 {"How the apprenticeship may be funded "}
@@ -17,54 +43,32 @@ export default function FundingScenariosForStartsFrom1August2026() {
 </div>
 <div className="grid min-w-0 gap-6 lg:grid-cols-2">
 <div className="space-y-3">
-<article className="min-w-0 space-y-4 rounded-2xl border border-background-200 bg-white p-6 text-foreground-800 shadow-sm">
-<strong className="font-bold">
-{"Account "}
-</strong>
-<h3 className="text-xl font-bold leading-snug">
-{"Levy account funds "}
-</h3>
-<p className="text-base leading-relaxed">
-{"Levy account funds can be used where sufficient funds are available. "}
-</p>
-</article>
-<article className="min-w-0 space-y-4 rounded-2xl border border-background-200 bg-white p-6 text-foreground-800 shadow-sm">
-<strong className="font-bold">
-{"75% "}
-</strong>
-<h3 className="text-xl font-bold leading-snug">
-{"Levy shortfall "}
-</h3>
-<p className="text-base leading-relaxed">
-{"Government contribution for levy employers with insufficient funds; employer contribution 25%. "}
-</p>
-</article>
-<article className="min-w-0 space-y-4 rounded-2xl border border-background-200 bg-white p-6 text-foreground-800 shadow-sm">
-<strong className="font-bold">
-{"100% "}
-</strong>
-<h3 className="text-xl font-bold leading-snug">
-{"Eligible non-levy starts aged 16–24 "}
-</h3>
-<p className="text-base leading-relaxed">
-{"Government contribution for eligible non-levy employers where the apprentice meets the applicable age requirements. "}
-</p>
-</article>
-<article className="min-w-0 space-y-4 rounded-2xl border border-background-200 bg-white p-6 text-foreground-800 shadow-sm">
-<strong className="font-bold">
-{"95% "}
-</strong>
-<h3 className="text-xl font-bold leading-snug">
-{"Eligible non-levy starts aged 25+ "}
-</h3>
-<p className="text-base leading-relaxed">
-{"Government contribution for eligible non-levy employers; employer contribution 5%. "}
-</p>
-</article>
+      {fundingRoutes.flatMap((route) =>
+        route.contributions.map((contribution) => {
+          const headline = headlineFor(route.id, contribution.ageBandLabel);
+          if (!headline) return null;
+          const employer = employerContributionPercent(route.id, contribution.ageBandLabel);
+          const position = employer === undefined
+            ? contribution.description
+            : `${contribution.description} Employer co-investment ${formatPercent(employer)}.`;
+          return (
+            <article
+              key={`${route.id}-${contribution.ageBandLabel}`}
+              className="min-w-0 space-y-4 rounded-2xl border border-background-200 bg-white p-6 text-foreground-800 shadow-sm"
+            >
+              <strong className="font-bold">{`${headline} `}</strong>
+              <h3 className="text-xl font-bold leading-snug">
+                {`${route.label}: ${contribution.ageBandLabel} `}
+              </h3>
+              <p className="text-base leading-relaxed">{`${position} `}</p>
+            </article>
+          );
+        }),
+      )}
 </div>
 <article className="min-w-0 space-y-4 rounded-2xl border border-background-200 bg-white p-6 text-foreground-800 shadow-sm bg-background-100 text-foreground-800">
 <span className="block text-4xl font-bold">
-{"£27,000 "}
+{`${band} `}
 </span>
 <h3 className="text-xl font-bold leading-snug">
 {"Maximum funding band "}

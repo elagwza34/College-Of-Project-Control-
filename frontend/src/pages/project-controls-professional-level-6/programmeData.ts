@@ -1,8 +1,27 @@
+import { PCP_L6 } from '@/data/programmeFacts';
+import { formatGBP } from '@/data/apprenticeshipFundingPolicy';
+
+/**
+ * Maximum value of the Institute of Project Controls support package.
+ *
+ * This is a SEPARATE commercial support package, not part of the DfE
+ * apprenticeship funding band. It is declared here, next to the package it
+ * describes, so the two funding figures are never confused with one another.
+ */
+export const ipcSupportPackageMaximum = 7000;
+
 export const programmeStats = [
   { value: '27 months', label: 'Soft start, six credits and closing workshops', icon: 'ri-calendar-2-line' },
   { value: '6 credits', label: 'A standard credit is a four-month course', icon: 'ri-stack-line' },
   { value: '3 pathways', label: 'Operational, Strategic and Chartered', icon: 'ri-route-line' },
-  { value: '£34,000', label: 'Potential combined support, subject to eligibility', icon: 'ri-funds-line' },
+  // Derived, not authored: the ST0845 funding band plus the IPC support package
+  // itemised below. Keeping it calculated prevents a third competing headline
+  // figure appearing beside them.
+  {
+    value: formatGBP((PCP_L6?.fundingBandMaximum ?? 0) + ipcSupportPackageMaximum),
+    label: 'Potential combined support, subject to eligibility',
+    icon: 'ri-funds-line',
+  },
 ];
 
 export const cohorts = [
@@ -73,8 +92,8 @@ export const benefitGroups = [
 ];
 
 export const fundingPackages = [
-  { title: 'Department for Education apprenticeship funding', value: '£27,000', items: ['Education and training', 'End-Point Assessment costs', 'Coaching', 'Learning materials'] },
-  { title: 'Institute of Project Controls support package', value: '£7,000', items: ['Memberships and professional exams', 'Level 7 Strategy and Leadership access', 'Masterclass support', 'Clubs and workshops', 'Private healthcare', 'Graduation ceremony'] },
+  { title: 'Department for Education apprenticeship funding', value: formatGBP(PCP_L6?.fundingBandMaximum ?? 0), items: ['Education and training', 'End-Point Assessment costs', 'Coaching', 'Learning materials'] },
+  { title: 'Institute of Project Controls support package', value: formatGBP(ipcSupportPackageMaximum), items: ['Memberships and professional exams', 'Level 7 Strategy and Leadership access', 'Masterclass support', 'Clubs and workshops', 'Private healthcare', 'Graduation ceremony'] },
 ];
 
 export const events = [

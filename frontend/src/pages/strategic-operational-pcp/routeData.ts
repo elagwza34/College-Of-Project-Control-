@@ -1,3 +1,9 @@
+import { formatGBP } from '@/data/apprenticeshipFundingPolicy';
+import { apprenticeshipFundingPolicy } from '@/data/apprenticeshipFundingPolicy';
+import { PCP_L6 } from '@/data/programmeFacts';
+
+/** Maximum apprenticeship funding band for the ST0845 standard. */
+const pcpFundingBand = formatGBP(PCP_L6?.fundingBandMaximum ?? 0);
 export const navLinks = [
   { label: 'Combined Route', href: '#hero' },
   { label: 'Who It Is For', href: '#who-for' },
@@ -16,7 +22,7 @@ export const heroData = {
   commercialLink: '/commercial-project-controls-route',
   trustItems: [
     { icon: 'ri-checkbox-circle-fill', text: 'Funding Subject to Eligibility' },
-    { icon: 'ri-funds-fill', text: 'Up to £27,000 Government Funding Band' },
+    { icon: 'ri-funds-fill', text: `Up to ${pcpFundingBand} Government Funding Band` },
     { icon: 'ri-award-line', text: 'Optional OTHM Level 7 Progression Route' },
     { icon: 'ri-building-2-fill', text: 'Workplace Evidence Support' },
   ],
@@ -112,7 +118,7 @@ export const statsData = {
   sectionLabel: 'Combined Value',
   heading: 'Built for Employers Who Need Both Technical and Strategic Capability',
   stats: [
-    { value: '£27,000', label: 'Government funding band where eligible', icon: 'ri-funds-line' },
+    { value: pcpFundingBand, label: 'Government funding band where eligible', icon: 'ri-funds-line' },
     { value: '2', label: 'Combined capability tracks: Operational + Strategic', icon: 'ri-stack-line' },
     { value: '1', label: 'Apprenticeship standard: Project Controls Professional ST0845', icon: 'ri-award-line' },
   ],
@@ -201,8 +207,8 @@ export const faqData = {
     { q: 'How long does the combined route take?', a: 'Typically 2 years, with the Strategic and Operational modules running in parallel. Any OTHM Level 7 study continues separately after the apprenticeship and follows its own schedule and fees.' },
     { q: 'What professional recognition does it lead to?', a: 'It supports evidence for APM Chartered Project Professional (ChPP) applications and provides professional development. Chartered status is awarded independently by APM and is never guaranteed. OTHM Level 7 is a separate, optional route with its own registration, fees and assessment. Completing this apprenticeship awards the Project Controls Professional apprenticeship certificate; it does not award a university degree or the OTHM Diploma.' },
     { q: 'Can my employer support this route?', a: 'Yes. The combined route can connect immediate controls capability with longer-term leadership development. Apprenticeship funding may be available, subject to learner, employer and current funding-rule eligibility.' },
-    { q: 'Can apprenticeship funding support this route?', a: 'The Level 6 standard has a maximum funding band of £27,000. The amount available depends on the current rules, learner age, employer status and available levy funds. Funding is confirmed only after an individual eligibility review.' },
-    { q: 'What determines the employer contribution?', a: 'For starts from 1 August 2026, contribution rates vary by learner age, whether the employer pays the levy and whether sufficient levy funds are available. Workplace location, role relevance, prior learning and the applicable start-date rules must also be checked.' },
+    { q: 'Can apprenticeship funding support this route?', a: `The Level 6 standard has a maximum funding band of ${pcpFundingBand}. The amount available depends on the current rules, learner age, employer status and available levy funds. Funding is confirmed only after an individual eligibility review.` },
+    { q: 'What determines the employer contribution?', a: `For starts from ${apprenticeshipFundingPolicy.appliesFromLabel}, contribution rates vary by learner age, whether the employer pays the levy and whether sufficient levy funds are available. Workplace location, role relevance, prior learning and the applicable start-date rules must also be checked.` },
     { q: 'How do I book a consultation?', a: 'Complete the consultation form on this page or email us directly. A member of our team will arrange a one-to-one discussion to understand your role, organisation and funding position.' },
   ],
 };

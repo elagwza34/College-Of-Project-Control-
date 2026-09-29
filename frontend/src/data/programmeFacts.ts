@@ -88,6 +88,17 @@ export interface ProgrammeFacts {
     /** Entry requirements as published — do not embellish. */
     entry: string;
   };
+  /**
+   * Maximum DfE apprenticeship funding band for this programme's standard, in
+   * whole pounds. This is a REGULATORY figure and is the only place it may be
+   * declared. Render it with `formatGBP` from apprenticeshipFundingPolicy; never
+   * re-type "£27,000" in a component.
+   *
+   * Note this is NOT the same as a package of combined support (for example an
+   * Institute of Project Controls support package). Those are separate figures
+   * with their own basis and must not be presented as the funding band.
+   */
+  fundingBandMaximum?: number;
   /** Funding wording. Conditional by design: never a bare "fully funded". */
   fundingNote: string;
   /** Recognition wording. Kept precise about issuer and what it covers. */
@@ -126,6 +137,7 @@ export const PROGRAMMES: ProgrammeFacts[] = [
       issuingBody: 'Skills England',
     },
     level: 4,
+    fundingBandMaximum: 7000,
     description:
       'Plan project activities, work with stakeholders and support successful delivery.',
     purpose:
@@ -166,6 +178,7 @@ export const PROGRAMMES: ProgrammeFacts[] = [
       issuingBody: 'Skills England',
     },
     level: 6,
+    fundingBandMaximum: 27000,
     description:
       'Integrate schedules, cost, risk and performance information so a project team can make and defend control decisions.',
     purpose:

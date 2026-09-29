@@ -1,3 +1,9 @@
+import { formatGBP } from '@/data/apprenticeshipFundingPolicy';
+import { apprenticeshipFundingPolicy } from '@/data/apprenticeshipFundingPolicy';
+import { PCP_L6 } from '@/data/programmeFacts';
+
+/** Maximum apprenticeship funding band for the ST0845 standard. */
+const pcpFundingBand = formatGBP(PCP_L6?.fundingBandMaximum ?? 0);
 import type { SectorRouteConfig } from '@/components/feature/RouteLanding/SectorRoutePage';
 const navLinks = [
   { label: 'Engineering Route', href: '#hero' },
@@ -18,7 +24,7 @@ const heroData = {
   commercialLink: '/commercial-project-controls-route',
   trustItems: [
     { icon: 'ri-checkbox-circle-fill', text: 'Funding Subject to Eligibility' },
-    { icon: 'ri-funds-fill', text: 'Up to £27,000 Government Funding Band' },
+    { icon: 'ri-funds-fill', text: `Up to ${pcpFundingBand} Government Funding Band` },
     { icon: 'ri-award-fill', text: 'APM ChPP Readiness Support' },
     { icon: 'ri-building-2-fill', text: 'Workplace Evidence Support' },
   ],
@@ -123,7 +129,7 @@ const statsData = {
   sectionLabel: 'Engineering Value',
   heading: 'Built for Employers Who Need Integrated Controls in Regulated Environments',
   stats: [
-    { value: '£27,000', label: 'Government funding band where eligible', icon: 'ri-funds-line' },
+    { value: pcpFundingBand, label: 'Government funding band where eligible', icon: 'ri-funds-line' },
     { value: '3', label: 'Core areas: Schedule, Cost and Compliance', icon: 'ri-stack-line' },
     { value: '1', label: 'Route-fit consultation to confirm the best pathway', icon: 'ri-compass-3-line' },
   ],
@@ -212,8 +218,8 @@ const faqData = {
     { q: 'What makes this different from the construction route?', a: 'While core project controls skills are the same, this route focuses on manufacturing and engineering-specific challenges: supplier milestone tracking, regulated documentation, quality compliance and technical programme control.' },
     { q: 'Which roles benefit most?', a: 'Planners, cost engineers, project controllers, quality assurance professionals, production planners and PMO analysts in engineering, manufacturing, aerospace, medical devices and pharmaceuticals.' },
     { q: 'How does this support regulated industries?', a: 'The programme emphasises audit-ready documentation, governance frameworks and compliance-aware project controls. Relevant for aerospace (AS9100), medical devices (ISO 13485) and pharmaceuticals (GxP) environments.' },
-    { q: 'Can apprenticeship funding support this route?', a: 'The Level 6 standard has a maximum funding band of £27,000. The amount available depends on the current rules, learner age, employer status and available levy funds. Funding is confirmed only after an individual eligibility review.' },
-    { q: 'What determines the employer contribution?', a: 'For starts from 1 August 2026, contribution rates vary by learner age, whether the employer pays the levy and whether sufficient levy funds are available. Workplace location, role relevance, prior learning and the applicable start-date rules must also be checked.' },
+    { q: 'Can apprenticeship funding support this route?', a: `The Level 6 standard has a maximum funding band of ${pcpFundingBand}. The amount available depends on the current rules, learner age, employer status and available levy funds. Funding is confirmed only after an individual eligibility review.` },
+    { q: 'What determines the employer contribution?', a: `For starts from ${apprenticeshipFundingPolicy.appliesFromLabel}, contribution rates vary by learner age, whether the employer pays the levy and whether sufficient levy funds are available. Workplace location, role relevance, prior learning and the applicable start-date rules must also be checked.` },
     { q: 'How is the programme delivered?', a: 'Delivery includes live online sessions (2 hours per week), guided reading, portfolio building, monthly one-to-one coaching and tripartite progress reviews every 10 weeks.' },
     { q: 'Can employers enrol multiple learners?', a: 'Yes. Many employers enrol cohorts across planning, cost, risk and quality functions. Group delivery can be arranged for organisations building controls capability at scale.' },
   ],

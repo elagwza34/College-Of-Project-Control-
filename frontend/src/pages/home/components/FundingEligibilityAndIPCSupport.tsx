@@ -1,41 +1,11 @@
 import SiteLink from '@/components/base/SiteLink';
+import { fundingRoutes, fundingWindowPhrase } from '@/data/apprenticeshipFundingPolicy';
 
-const fundingRoutes = [
-  {
-    title: 'Employer has sufficient levy funds',
-    body: 'Eligible apprenticeship training and assessment costs can normally be paid through the employer\'s apprenticeship service account, subject to available funds, the applicable funding rules and the funding-band maximum.',
-  },
-  {
-    title: 'Employer does not pay the apprenticeship levy',
-    body: 'For eligible new starts under the current 2026/27 rules:',
-    details: [
-      {
-        label: 'Age 16-24',
-        text: 'Government may fund eligible training and assessment costs up to the funding-band maximum.',
-      },
-      {
-        label: 'Age 25+',
-        text: 'Government currently contributes 95% of eligible costs up to the funding-band maximum, with 5% employer co-investment.',
-      },
-    ],
-    note: 'Other conditions apply and the position is confirmed before enrolment.',
-  },
-  {
-    title: 'Levy-paying employer with insufficient account funds',
-    body: 'For eligible new starts under the current 2026/27 rules:',
-    details: [
-      {
-        label: 'Age 16-24',
-        text: 'Government may fund eligible training and assessment costs up to the funding-band maximum.',
-      },
-      {
-        label: 'Age 25+',
-        text: 'Government currently contributes 75% of eligible costs up to the funding-band maximum, with 25% employer co-investment.',
-      },
-    ],
-    note: 'The exact funding route is confirmed with the employer before enrolment.',
-  },
-];
+/**
+ * Employer funding situations are read from the canonical policy so the
+ * percentages, age bands and the funding-year window have exactly one owner.
+ * The heading text around each figure stays editorial.
+ */
 
 const eligibilityFactors = [
   {
@@ -85,26 +55,28 @@ export default function FundingEligibilityAndIPCSupport() {
 
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
           {fundingRoutes.map((route) => (
-            <article key={route.title} className="flex h-full flex-col rounded-xl border border-background-200 bg-background-50 p-5 shadow-sm">
-              <h3 className="font-heading text-xl font-bold leading-tight text-foreground-950">{route.title}</h3>
-              <p className="mt-4 text-sm leading-relaxed text-foreground-600">{route.body}</p>
-              {route.details && (
-                <dl className="mt-5 space-y-3">
-                  {route.details.map((detail) => (
-                    <div key={detail.label} className="rounded-lg border border-background-200 bg-white p-4">
-                      <dt className="text-xs font-bold uppercase tracking-[0.12em] text-primary-800">{detail.label}</dt>
-                      <dd className="mt-2 text-sm leading-relaxed text-foreground-700">{detail.text}</dd>
-                    </div>
-                  ))}
-                </dl>
+            <article key={route.id} className="flex h-full flex-col rounded-xl border border-background-200 bg-background-50 p-5 shadow-sm">
+              <h3 className="font-heading text-xl font-bold leading-tight text-foreground-950">{route.label}</h3>
+              <p className="mt-4 text-sm leading-relaxed text-foreground-600">{route.summary}</p>
+              <dl className="mt-5 space-y-3">
+                {route.contributions.map((contribution) => (
+                  <div key={contribution.ageBandLabel} className="rounded-lg border border-background-200 bg-white p-4">
+                    <dt className="text-xs font-bold uppercase tracking-[0.12em] text-primary-800">{contribution.ageBandLabel}</dt>
+                    <dd className="mt-2 text-sm leading-relaxed text-foreground-700">{contribution.description}</dd>
+                  </div>
+                ))}
+              </dl>
+              {route.id !== 'levy-sufficient' && (
+                <p className="mt-5 text-sm font-semibold leading-relaxed text-foreground-700">
+                  Other conditions apply and the position is confirmed before enrolment.
+                </p>
               )}
-              {route.note && <p className="mt-5 text-sm font-semibold leading-relaxed text-foreground-700">{route.note}</p>}
             </article>
           ))}
         </div>
 
         <p className="mx-auto mt-6 max-w-3xl rounded-lg border border-accent-200 bg-accent-50 px-4 py-3 text-center text-sm leading-relaxed text-foreground-700">
-          Current rules shown apply to eligible apprenticeship starts from 1 August 2026 to 31 July 2027 and may change.
+          {`Current rules shown apply to eligible apprenticeship starts ${fundingWindowPhrase()} and may change.`}
         </p>
 
         <div className="mt-14 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.72fr)] lg:items-start">

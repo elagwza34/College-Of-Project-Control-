@@ -1,6 +1,41 @@
 import SiteLink from '@/components/base/SiteLink';
+import {
+  employerContributionPercent,
+  formatGBP,
+  formatPercent,
+  fundingContributionPercent,
+  fundingRoutes,
+  fundsUpToBandMaximum,
+  type FundingRouteId,
+} from '@/data/apprenticeshipFundingPolicy';
+import { PCP_L6 } from '@/data/programmeFacts';
+
+/** Government contribution text for a position, with the employer share appended. */
+function contributionText(routeId: FundingRouteId, ageBandLabel: string): string {
+  const employer = employerContributionPercent(routeId, ageBandLabel);
+  const base = employer === undefined
+    ? 'funded up to the band maximum when all conditions are met'
+    : formatPercent(fundingContributionPercent(routeId, ageBandLabel) ?? 0);
+  return employer === undefined
+    ? base
+    : `government contributes ${base}; the employer is responsible for the remaining ${formatPercent(employer)} up to the band maximum`;
+}
+
+/**
+ * Headline figure for a position.
+ *
+ * Percentage routes show the government contribution. Positions funded up to the
+ * band maximum read "Band maximum" rather than "100%", because a levy-paying
+ * employer spends its own levy rather than receiving government funding.
+ */
+function headlineFor(routeId: FundingRouteId, ageBandLabel: string): string | null {
+  const percent = fundingContributionPercent(routeId, ageBandLabel);
+  if (percent !== undefined) return formatPercent(percent);
+  return fundsUpToBandMaximum(routeId, ageBandLabel) ? 'Band maximum' : null;
+}
 
 export default function FundingScenariosFor202627Starts() {
+  const band = formatGBP(PCP_L6?.fundingBandMaximum ?? 0);
   return (
 <section id="operational-funding" className="scroll-mt-44 py-16 md:py-20 bg-white">
         <div className="container-site">
@@ -17,54 +52,26 @@ export default function FundingScenariosFor202627Starts() {
           </div>
           <div className="grid items-start gap-6 lg:grid-cols-[1.5fr_1fr]">
             <div className="grid gap-5 sm:grid-cols-2">
-              <article className="rounded-2xl border border-background-200 bg-white p-6 shadow-sm">
-                <strong className="mb-4 text-3xl font-extrabold text-primary-700">
-                  {"Account "}
-                </strong>
-                <h3 className="mb-3 text-xl font-bold leading-snug text-foreground-950">
-                  {"Levy account funds "}
-                </h3>
-                <p className="text-sm leading-relaxed text-foreground-600">
-                  {"Eligible training and assessment costs are paid from available employer account funds, up to the negotiated price and funding-band maximum. "}
-                </p>
-              </article>
-              <article className="rounded-2xl border border-background-200 bg-white p-6 shadow-sm">
-                <strong className="mb-4 text-3xl font-extrabold text-primary-700">
-                  {"75% "}
-                </strong>
-                <h3 className="mb-3 text-xl font-bold leading-snug text-foreground-950">
-                  {"Levy shortfall "}
-                </h3>
-                <p className="text-sm leading-relaxed text-foreground-600">
-                  {"For levy-paying employers with insufficient account funds, government contributes 75%; the employer is responsible for the remaining 25% up to the band maximum. "}
-                </p>
-              </article>
-              <article className="rounded-2xl border border-background-200 bg-white p-6 shadow-sm">
-                <strong className="mb-4 text-3xl font-extrabold text-primary-700">
-                  {"100% "}
-                </strong>
-                <h3 className="mb-3 text-xl font-bold leading-snug text-foreground-950">
-                  {"Eligible non-levy starts aged 16–24 "}
-                </h3>
-                <p className="text-sm leading-relaxed text-foreground-600">
-                  {"For non-levy employers and apprentices aged 16-24 at the start, government funds eligible costs up to the band maximum when all conditions are met. "}
-                </p>
-              </article>
-              <article className="rounded-2xl border border-background-200 bg-white p-6 shadow-sm">
-                <strong className="mb-4 text-3xl font-extrabold text-primary-700">
-                  {"95% "}
-                </strong>
-                <h3 className="mb-3 text-xl font-bold leading-snug text-foreground-950">
-                  {"Eligible non-levy starts aged 25+ "}
-                </h3>
-                <p className="text-sm leading-relaxed text-foreground-600">
-                  {"For non-levy employers and apprentices aged 25+ government contributes 95%; the employer normally contributes 5% up to the band maximum. "}
-                </p>
-              </article>
+              {fundingRoutes.map((route) => {
+                const position = route.contributions[route.contributions.length - 1];
+                const headline = headlineFor(route.id, position.ageBandLabel);
+                if (!headline) return null;
+                const detail = contributionText(route.id, position.ageBandLabel);
+                const body = route.id === 'levy-sufficient'
+                  ? 'Eligible training and assessment costs are paid from available employer account funds, up to the negotiated price and funding-band maximum.'
+                  : `For ${route.id === 'non-levy' ? 'non-levy employers' : 'levy-paying employers with insufficient account funds'} and apprentices aged 25+, ${detail}.`;
+                return (
+                  <article key={route.id} className="rounded-2xl border border-background-200 bg-white p-6 shadow-sm">
+                    <strong className="mb-4 text-3xl font-extrabold text-primary-700">{`${headline} `}</strong>
+                    <h3 className="mb-3 text-xl font-bold leading-snug text-foreground-950">{`${route.label} `}</h3>
+                    <p className="text-sm leading-relaxed text-foreground-600">{`${body} `}</p>
+                  </article>
+                );
+              })}
             </div>
             <article className="rounded-2xl border border-primary-700 bg-primary-800 p-7 text-white">
               <strong className="mb-3 block text-4xl font-extrabold text-signal-300">
-                {"£27,000 "}
+                {`${band} `}
               </strong>
               <h3 className="mb-3 text-xl font-bold leading-snug text-white">
                 {"Maximum funding band "}
@@ -77,7 +84,7 @@ export default function FundingScenariosFor202627Starts() {
                   {"The apprentice must not be charged eligible apprenticeship training or assessment costs. "}
                 </li>
                 <li className="text-sm leading-relaxed text-white/80">
-                  {"Employers are responsible for costs above the £27,000 funding-band maximum. "}
+                  {`Employers are responsible for costs above the ${band} funding-band maximum. `}
                 </li>
                 <li className="text-sm leading-relaxed text-white/80">
                   {"Memberships, professional exams or resits are included only when expressly confirmed and eligible. "}
