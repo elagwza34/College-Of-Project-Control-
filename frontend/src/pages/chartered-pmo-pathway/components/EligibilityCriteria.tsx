@@ -80,7 +80,7 @@ export default function EligibilityCriteria() {
 {"Self-employed individuals are not eligible "}
 </h3>
 <p className="text-base leading-relaxed">
-{"Self-employed individuals are not eligible for DfE funding. "}
+{"Self-employed individuals are not eligible for government apprenticeship funding. "}
 </p>
 </div>
 </article>

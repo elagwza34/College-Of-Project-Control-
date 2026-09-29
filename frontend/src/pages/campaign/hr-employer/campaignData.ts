@@ -1,6 +1,18 @@
+import { formatGBP } from '@/data/apprenticeshipFundingPolicy';
+import { PCP_L6 } from '@/data/programmeFacts';
+
+/**
+ * Maximum government apprenticeship funding for the ST0845 standard.
+ *
+ * Stated as a funding-band maximum rather than a cash figure: it is the ceiling
+ * for eligible training and assessment costs, not money paid to the learner or a
+ * guaranteed saving for the employer.
+ */
+const fundingBandMaximum = formatGBP(PCP_L6?.fundingBandMaximum ?? 0);
+
 export const heroBadges = [
   { icon: 'ri-shield-check-line', text: 'Funding subject to eligibility' },
-  { icon: 'ri-funds-line', text: 'DfE funding band up to £27,000' },
+  { icon: 'ri-funds-line', text: `Government apprenticeship funding band up to ${fundingBandMaximum}` },
   { icon: 'ri-star-line', text: 'KBC added support value included' },
   { icon: 'ri-building-line', text: 'London Master Class Events' },
   { icon: 'ri-calendar-line', text: 'Intake availability confirmed on enquiry' },
@@ -39,7 +51,7 @@ export const routeFitCards = [
 ];
 
 export const employerBenefits = [
-  { icon: 'ri-funds-line', title: 'Use Apprenticeship Funding', description: 'Access up to £27,000 in DfE funding for eligible employers in England, reducing pressure on L&amp;D budgets.' },
+  { icon: 'ri-funds-line', title: 'Use Apprenticeship Funding', description: `Access government apprenticeship funding up to a funding-band maximum of ${fundingBandMaximum} for eligible employers in England, reducing pressure on L&amp;D budgets.` },
   { icon: 'ri-line-chart-line', title: 'Measurable Capability Growth', description: 'Every learner produces workplace evidence demonstrating real project controls competence.' },
   { icon: 'ri-user-star-line', title: 'Improve Retention', description: 'Clear professional progression pathways with APM ChPP readiness support and professional memberships.' },
   { icon: 'ri-building-2-line', title: 'Sector-Specific Routes', description: 'Construction, energy, public sector, engineering and PMO routes built for real delivery environments.' },
@@ -48,7 +60,7 @@ export const employerBenefits = [
 ];
 
 export const faqs = [
-  { q: 'Is apprenticeship funding really available for project controls training?', a: 'Yes. The Level 6 Project Controls Professional apprenticeship is funded through the Department for Education, with a funding band of up to £27,000 for eligible employers in England. Levy-paying employers can use their apprenticeship levy. Non-levy-paying employers may access co-funded options.' },
+  { q: 'Is apprenticeship funding really available for project controls training?', a: `Yes. The Level 6 Project Controls Professional apprenticeship is supported by government apprenticeship funding, with a funding-band maximum of up to ${fundingBandMaximum} for eligible employers in England. Levy-paying employers can use their apprenticeship levy. Non-levy-paying employers may access co-funded options.` },
   { q: 'What makes this different from buying commercial training courses?', a: 'This is a structured professional development pathway, not a short course. Learners produce real workplace evidence, receive one-to-one tutoring, access professional membership support, attend Master Class Events, and build APM ChPP readiness. Commercial training typically does not include any of these.' },
   { q: 'How much time do learners need to commit each week?', a: 'The programme is designed alongside full-time employment. Learners typically spend around 20% of their working week on apprenticeship activities, including live online sessions, self-directed study, and workplace evidence development.' },
   { q: 'Can we put multiple employees through the programme?', a: 'Yes. Many employers develop cohorts of project controls professionals across different routes and sectors. This builds consistent capability, shared language and stronger internal project controls culture.' },

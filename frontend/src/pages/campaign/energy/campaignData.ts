@@ -1,6 +1,18 @@
+import { formatGBP } from '@/data/apprenticeshipFundingPolicy';
+import { PCP_L6 } from '@/data/programmeFacts';
+
+/**
+ * Maximum government apprenticeship funding for the ST0845 standard.
+ *
+ * Stated as a funding-band maximum rather than a cash figure: it is the ceiling
+ * for eligible training and assessment costs, not money paid to the learner or a
+ * guaranteed saving for the employer.
+ */
+const fundingBandMaximum = formatGBP(PCP_L6?.fundingBandMaximum ?? 0);
+
 export const heroBadges = [
   { icon: 'ri-shield-check-line', text: 'Funding subject to eligibility' },
-  { icon: 'ri-funds-line', text: 'DfE funding band up to £27,000' },
+  { icon: 'ri-funds-line', text: `Government apprenticeship funding band up to ${fundingBandMaximum}` },
   { icon: 'ri-star-line', text: 'KBC added support value included' },
   { icon: 'ri-building-line', text: 'London Master Class Events' },
   { icon: 'ri-calendar-line', text: 'Intake availability confirmed on enquiry' },

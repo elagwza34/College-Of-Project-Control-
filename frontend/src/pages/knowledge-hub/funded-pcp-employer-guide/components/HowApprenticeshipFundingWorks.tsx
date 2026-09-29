@@ -1,10 +1,15 @@
+import { formatGBP } from '@/data/apprenticeshipFundingPolicy';
+import { PCP_L6 } from '@/data/programmeFacts';
+
+/** Maximum government apprenticeship funding for the ST0845 standard. */
+const fundingBandMaximum = formatGBP(PCP_L6?.fundingBandMaximum ?? 0);
 
 /** Section: How Apprenticeship Funding Works. */
 export default function HowApprenticeshipFundingWorks() {
   return (
     <><h3 className="text-lg md:text-xl font-heading font-bold text-foreground-900 mt-8 mb-3">How Apprenticeship Funding Works</h3>
         <p className="mb-4">
-          The Level 6 Project Controls Professional apprenticeship sits within Funding Band 11 of the Department for Education apprenticeship framework, with a maximum funding cap of up to £27,000 per learner. Funding is accessed differently depending on whether your organisation is a levy-paying or non-levy employer.
+          The Level 6 Project Controls Professional apprenticeship has a government funding-band maximum of up to {fundingBandMaximum} per learner for eligible training and assessment costs. That is the ceiling for the standard, not a payment to the learner or a guaranteed saving for the employer. Funding is accessed differently depending on whether your organisation is a levy-paying or non-levy employer.
         </p>
 
         <h4 className="text-base font-heading font-semibold text-foreground-900 mt-6 mb-2">Levy-Paying Employers</h4>

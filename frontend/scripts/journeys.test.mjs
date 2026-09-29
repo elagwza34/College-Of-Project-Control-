@@ -133,3 +133,75 @@ test('currency and percentage formatting derive from the canonical numbers', () 
   assert.equal(policy.formatPercent(95), '95%');
   assert.equal(policy.formatPercent(5), '5%');
 });
+
+
+/* -- Active public funding presentation (Phase B2A) -- */
+
+const readSrc = (p) => readFileSync(p, 'utf8');
+
+test('active campaign and knowledge-hub copy derives the funding band from canonical facts', () => {
+  const active = [
+    'src/pages/campaign/construction/campaignData.ts',
+    'src/pages/campaign/energy/campaignData.ts',
+    'src/pages/campaign/hr-employer/campaignData.ts',
+    'src/pages/campaign/public-sector/campaignData.ts',
+    'src/pages/campaign/construction/components/ForConstructionEmployersPlannersAndProjectControlsTeams.tsx',
+    'src/pages/campaign/energy/components/ForEnergyUtilitiesAndCapitalProgrammeTeams.tsx',
+    'src/pages/campaign/head-of-pmo/components/ForHeadsOfPMOPMOLeadsAndGovernanceProfessionals.tsx',
+    'src/pages/campaign/hr-employer/components/ForHRDirectorsLAndDManagersAndEmployers.tsx',
+    'src/pages/campaign/public-sector/components/ForCouncilsLocalAuthoritiesAndPublicSectorProgrammeTeams.tsx',
+    'src/pages/knowledge-hub/funded-pcp-employer-guide/components/HowApprenticeshipFundingWorks.tsx',
+    'src/pages/knowledge-hub/funded-pcp-employer-guide/components/QuickSummary.tsx',
+    'src/pages/knowledge-hub/what-is-pcp-apprenticeship/components/FundingFundingSubjectToEligibility.tsx',
+  ];
+  for (const file of active) {
+    const source = readSrc(file);
+    assert.doesNotMatch(source, /\u00a327,000/, `${file} must not retype the funding band`);
+    assert.match(source, /fundingBandMaximum/, `${file} must derive the band from programme facts`);
+  }
+});
+
+test('active public copy does not use the discouraged unconditional funding terms', () => {
+  const active = [
+    'src/pages/campaign/construction/campaignData.ts',
+    'src/pages/campaign/energy/campaignData.ts',
+    'src/pages/campaign/hr-employer/campaignData.ts',
+    'src/pages/campaign/public-sector/campaignData.ts',
+    'src/pages/campaign/construction/components/ForConstructionEmployersPlannersAndProjectControlsTeams.tsx',
+    'src/pages/campaign/energy/components/ForEnergyUtilitiesAndCapitalProgrammeTeams.tsx',
+    'src/pages/campaign/head-of-pmo/components/ForHeadsOfPMOPMOLeadsAndGovernanceProfessionals.tsx',
+    'src/pages/campaign/hr-employer/components/ForHRDirectorsLAndDManagersAndEmployers.tsx',
+    'src/pages/campaign/public-sector/components/ForCouncilsLocalAuthoritiesAndPublicSectorProgrammeTeams.tsx',
+  ];
+  for (const file of active) {
+    const source = readSrc(file);
+    assert.doesNotMatch(source, /DfE fund/i, `${file} must not present "DfE funded" as public wording`);
+    assert.doesNotMatch(source, /100% fund/i, `${file} must not claim 100% funding`);
+    // "fully funded" may only appear inside a comment, never as published copy.
+    const copy = source.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\/\/.*$/gm, '');
+    assert.doesNotMatch(copy, /fully funded/i, `${file} must not publish "fully funded"`);
+  }
+});
+
+test('the unverified Funding Band 11 ordinal is not published anywhere in active source', () => {
+  const active = [
+    'src/pages/knowledge-hub/funded-pcp-employer-guide/components/HowApprenticeshipFundingWorks.tsx',
+    'src/pages/knowledge-hub/funded-pcp-employer-guide/components/QuickSummary.tsx',
+    'src/pages/knowledge-hub/what-is-pcp-apprenticeship/components/FundingFundingSubjectToEligibility.tsx',
+  ];
+  for (const file of active) {
+    assert.doesNotMatch(readSrc(file), /Band\s*11/i, `${file} must not state the unverified band ordinal`);
+  }
+});
+
+test('the ST0845 band is described as a maximum, not as cash paid or a guaranteed saving', () => {
+  const source = readSrc('src/pages/knowledge-hub/funded-pcp-employer-guide/components/HowApprenticeshipFundingWorks.tsx');
+  assert.match(source, /funding-band maximum/);
+  assert.match(source, /not a payment to the learner or a guaranteed saving/);
+});
+
+test('chatbot knowledge is generated, so its funding copy must not be hand-maintained', () => {
+  const exporter = readSrc('scripts/export-chatbot-knowledge.mjs');
+  assert.match(exporter, /website_knowledge\.json/);
+  assert.match(exporter, /innerText/, 'chatbot knowledge is scraped from rendered public pages');
+});
