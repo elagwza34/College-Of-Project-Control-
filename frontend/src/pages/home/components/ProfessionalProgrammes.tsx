@@ -185,7 +185,7 @@ function ProgrammeComparisonTable() {
 
             <SiteLink
               href={programme.url}
-              className="btn-primary mt-5 inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap px-5 py-3 text-sm font-bold transition-colors duration-300"
+              className="btn-primary mt-5 inline-flex min-h-12 w-full items-center justify-center gap-1.5 px-4 py-3 text-center text-sm font-bold leading-tight transition-colors duration-300"
               data-gtm-event={`${programme.id}_compare_explore`}
               data-gtm-location="programme-comparison"
             >

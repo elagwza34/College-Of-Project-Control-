@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import SiteLink from '@/components/base/SiteLink';
 import EventCard from './EventCard';
+import { getHomepageEventDisplayTitle } from './homepageEventTitle';
 import { fetchEventLibrary, type EventItem } from '@/services/eventsApi';
 
 interface Props {
@@ -40,6 +41,8 @@ const unrelatedEventTerms = [
 ];
 
 const blockedEventTerms = ['demo', 'sample', 'placeholder', 'test'];
+
+export { getHomepageEventDisplayTitle } from './homepageEventTitle';
 
 function eventText(event: EventItem) {
   return [
@@ -195,7 +198,7 @@ export default function EventsSection({
             >
               {events.map((event) => (
                 <div key={event.id} className={homepageCpcmOnly ? 'min-w-0' : 'min-w-0 snap-start'}>
-                  <EventCard event={event} />
+                  <EventCard event={event} displayTitle={homepageCpcmOnly ? getHomepageEventDisplayTitle(event.title) : undefined} />
                 </div>
               ))}
             </div>

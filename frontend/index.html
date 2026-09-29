@@ -29,26 +29,6 @@
     <!-- The icon sheet is needed for first paint (navigation icons), so fetch it early. -->
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
-    <script>
-      /* Pre-initialise the GTM data layer so no events pushed before the container loads are lost. */
-      window.dataLayer = window.dataLayer || [];
-
-      /* If an operator supplies a GTM container ID (via env or window), load it cleanly. */
-      (function() {
-        var gtmId = '%VITE_GTM_ID%';
-        if (!gtmId || gtmId.indexOf('VITE_GTM_ID') !== -1) {
-          try { gtmId = window.ENV_GTM_ID || ''; } catch(e) {}
-        }
-        if (gtmId && /^GTM-[A-Z0-9]+$/i.test(gtmId)) {
-          window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-          var f = document.getElementsByTagName('script')[0],
-              j = document.createElement('script');
-          j.async = true;
-          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + encodeURIComponent(gtmId);
-          f.parentNode.insertBefore(j, f);
-        }
-      })();
-    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

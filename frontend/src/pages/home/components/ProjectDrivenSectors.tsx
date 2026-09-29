@@ -19,7 +19,7 @@ const sectors = [
     title: 'Public Sector',
     description: 'Governance, assurance, planning and accountable delivery across public programmes and projects.',
     href: '/project-controls-professional/public-sector-councils-route',
-    image: '/images/public-sector-sector-hero.png',
+    image: '/images/public-sector-sector-hero.webp',
     alt: 'Public sector project delivery environment',
   },
   {

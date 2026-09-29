@@ -164,13 +164,14 @@ export default function Navbar() {
     : 'text-white/90 hover:text-white';
 
   return (
-    <nav
+    <header
       className={`header-entrance relative w-full overflow-visible transition-all duration-500 ease-out ${
         scrolled
           ? 'border-b border-background-200/80 bg-background-50/95 shadow-sm backdrop-blur-xl'
           : 'border-b border-transparent bg-transparent'
       }`}
     >
+    <nav aria-label="Primary">
       <div
         className="container-site relative overflow-visible"
       >
@@ -278,7 +279,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="ml-auto hidden items-center gap-6 lg:flex">
+          <div className="ml-auto hidden items-center gap-6 xl:flex">
             <SiteLink
               href="/book-a-session"
               className="btn-primary cursor-pointer whitespace-nowrap px-7 py-3 text-sm font-bold transition-colors duration-300"
@@ -420,5 +421,6 @@ export default function Navbar() {
         }
       `}</style>
     </nav>
+    </header>
   );
 }
