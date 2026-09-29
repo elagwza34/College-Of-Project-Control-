@@ -2935,6 +2935,112 @@
     "url": "/"
   },
   {
+    "key": "f0e4c0ff8485a7f8",
+    "page": "home",
+    "label": "Funding Eligibility And IPCSupport",
+    "fields": [
+      {
+        "key": "d01421d3f6af489f",
+        "kind": "text",
+        "default": "Funding & eligibility",
+        "label": "Text"
+      },
+      {
+        "key": "4d58b44621ad4d18",
+        "kind": "text",
+        "default": "Funding explained before you commit",
+        "label": "Heading"
+      },
+      {
+        "key": "f75e18b7c50bedb5",
+        "kind": "text",
+        "default": "Government apprenticeship funding may be available where the learner, employer and programme meet the applicable rules. Your employer's levy position, your age at the start of training and your individual circumstances affect how the apprenticeship is funded.",
+        "label": "Text"
+      },
+      {
+        "key": "91a468ef4d60dd1f",
+        "kind": "text",
+        "default": "We confirm eligibility, the funding route and any employer contribution before enrolment.",
+        "label": "Text"
+      },
+      {
+        "key": "9d9afc5e90da635f",
+        "kind": "text",
+        "default": "Current rules shown apply to eligible apprenticeship starts from 1 August 2026 to 31 July 2027 and may change.",
+        "label": "Text"
+      },
+      {
+        "key": "9e96f7267cf9bb48",
+        "kind": "text",
+        "default": "Apprenticeship eligibility",
+        "label": "Text"
+      },
+      {
+        "key": "9fd7f230e627e6b5",
+        "kind": "text",
+        "default": "Check whether an apprenticeship could fit your circumstances",
+        "label": "Heading"
+      },
+      {
+        "key": "1e9346f787bd8f2b",
+        "kind": "text",
+        "default": "Eligibility is reviewed against your role, employer, prior learning and personal circumstances. The homepage gives the headline factors only; the detailed review happens through the eligibility check and admissions process.",
+        "label": "Text"
+      },
+      {
+        "key": "b97c536d5b93a24d",
+        "kind": "link",
+        "default": "/apprenticeship-eligibility-checker",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "f335ec41a6e48e98",
+        "kind": "text",
+        "default": "Check eligibility",
+        "label": "Link text",
+        "linkField": "b97c536d5b93a24d"
+      },
+      {
+        "key": "41c0273876371def",
+        "kind": "link",
+        "default": "/book-a-session",
+        "label": "Button/link URL"
+      },
+      {
+        "key": "58b5e31b010148c7",
+        "kind": "text",
+        "default": "Discuss funding",
+        "label": "Link text",
+        "linkField": "41c0273876371def"
+      },
+      {
+        "key": "701fcd883e35f85f",
+        "kind": "text",
+        "default": "Professional study",
+        "label": "Text"
+      },
+      {
+        "key": "dfb965d3039e703e",
+        "kind": "text",
+        "default": "Professional courses have separate fees and support arrangements",
+        "label": "Heading"
+      },
+      {
+        "key": "4764dc741871c1a1",
+        "kind": "text",
+        "default": "Short courses and professional programmes are not automatically funded through apprenticeship funding. Commercial fees and any private support are confirmed separately in writing.",
+        "label": "Text"
+      },
+      {
+        "key": "dd4ea29888a29eef",
+        "kind": "text",
+        "default": "Private support may be available for eligible professional-study applicants, subject to the provider or fund's current criteria, approval and written terms.",
+        "label": "Text"
+      }
+    ],
+    "url": "/"
+  },
+  {
     "key": "7118a90c35e66d58",
     "page": "home",
     "label": "Home Audio Summary",
