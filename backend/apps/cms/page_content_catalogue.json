@@ -3241,21 +3241,21 @@
     "label": "Short Courses Carousel",
     "fields": [
       {
-        "key": "9dd594becd74c39c",
+        "key": "b7df1f07211acd02",
         "kind": "text",
-        "default": "Short courses",
+        "default": "Professional development",
         "label": "Text"
       },
       {
-        "key": "ced90281b8b6d29d",
+        "key": "d3e4ac7c9fca96ff",
         "kind": "text",
-        "default": "Build one specialist capability at a time.",
+        "default": "Build a specialist capability",
         "label": "Heading"
       },
       {
-        "key": "4a947152ed25337f",
+        "key": "c11b204f424f8fd5",
         "kind": "text",
-        "default": "Focused courses for planning, cost, risk, AI, PMO and professional certification preparation.",
+        "default": "Explore focused professional development in planning, controls, performance and emerging project technologies.",
         "label": "Text"
       },
       {
@@ -3265,9 +3265,9 @@
         "label": "Button/link URL"
       },
       {
-        "key": "39e082d276aec5f1",
+        "key": "8d2e5017c6ee6c16",
         "kind": "text",
-        "default": "View all short courses ",
+        "default": "View all professional courses ",
         "label": "Link text",
         "linkField": "fd9f23fa4451fe05"
       },
@@ -3275,13 +3275,7 @@
         "key": "b45e17b0931cbecf",
         "kind": "text",
         "default": "View course ",
-        "label": "Text"
-      },
-      {
-        "key": "1b3dba9772d620f5",
-        "kind": "text",
-        "default": " / ",
-        "label": "Text"
+        "label": "Link text"
       }
     ],
     "url": "/"
