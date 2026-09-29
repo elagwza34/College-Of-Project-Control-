@@ -2,6 +2,7 @@ import Footer from '@/components/feature/Footer';
 import CaseStudiesSection from '@/components/feature/CaseStudiesSection';
 import CoachingAndSupport from "./components/CoachingAndSupport";
 import CollegeOfProjectControlsAndManagement from "./components/CollegeOfProjectControlsAndManagement";
+import FinalHomepageCta from "./components/FinalHomepageCta";
 import ForEmployers from './components/ForEmployers';
 import FromTheJournal from "./components/FromTheJournal";
 import FundingEligibilityAndIPCSupport from "./components/FundingEligibilityAndIPCSupport";
@@ -35,6 +36,7 @@ export default function Home() {
         <FromTheJournal />
         <ProfessionalExperience />
         <ProfessionalDevelopmentAndRecognition />
+        <FinalHomepageCta />
       </main>
       <Footer />
     </div>
