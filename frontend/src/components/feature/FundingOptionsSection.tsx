@@ -1,4 +1,10 @@
 import SiteLink from '@/components/base/SiteLink';
+import {
+  employerContributionPercent,
+  formatPercent,
+  fundingRoutes,
+  fundingWindowPhrase,
+} from '@/data/apprenticeshipFundingPolicy';
 import type { ReactNode } from 'react';
 
 export interface FundingOverviewCard { title: string; content: ReactNode; }
@@ -88,6 +94,21 @@ const defaultSupportCards: FundingSupportCard[] = [
   },
 ];
 
+/** Employer-side apprenticeship funding positions, read from the canonical policy
+ *  rather than restated here. The funding year and the two percentage splits are
+ *  regulatory facts with a single owner in apprenticeshipFundingPolicy.ts. */
+const apprenticeshipContributionCards: FundingSupportCard[] = fundingRoutes.map((route) => {
+  const position = route.contributions[route.contributions.length - 1];
+  const employer = employerContributionPercent(route.id, position.ageBandLabel);
+  return {
+    title: `${route.label}: ${position.ageBandLabel}`,
+    description:
+      employer === undefined
+        ? `${position.description} Applies to starts ${fundingWindowPhrase()}.`
+        : `${position.description} Employer co-investment ${formatPercent(employer)}. Applies to starts ${fundingWindowPhrase()}.`,
+  };
+});
+
 const defaultCta: FundingCtaContent = {
   title: 'Discuss the funding route for your circumstances',
   description: 'Confirm programme fit, funding conditions and the next available start date with the Kent Business College team.',
@@ -149,6 +170,20 @@ export default function FundingOptionsSection({
                   <i className={`${index === 0 ? 'ri-graduation-cap-line' : index === 1 ? 'ri-bar-chart-grouped-line' : 'ri-team-fill'} shrink-0 text-3xl text-accent-100`} aria-hidden="true" />
                   <div>
                     <h3 className="text-sm font-bold leading-snug text-white">{card.title.replace('Professional study: up to', 'Up to')}</h3>
+                    <p className="mt-2 text-xs leading-relaxed text-white/75">{card.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            {/* Employer-side apprenticeship funding positions. Same card treatment as
+                the support cards above; the values come from the canonical policy. */}
+            <div className="grid divide-y divide-accent-300/25 overflow-hidden rounded-xl bg-primary-900 text-white lg:grid-cols-3 lg:divide-x lg:divide-y-0">
+              {apprenticeshipContributionCards.map((card) => (
+                <article key={card.title} className="flex items-start gap-4 p-5 lg:p-6">
+                  <i className="ri-percent-line shrink-0 text-3xl text-accent-100" aria-hidden="true" />
+                  <div>
+                    <h3 className="text-sm font-bold leading-snug text-white">{card.title}</h3>
                     <p className="mt-2 text-xs leading-relaxed text-white/75">{card.description}</p>
                   </div>
                 </article>

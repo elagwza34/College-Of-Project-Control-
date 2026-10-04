@@ -78,7 +78,7 @@ export default function CollegeOfProjectControlsAndManagement() {
                 </SiteLink>
                 <SiteLink
                   href="/employers"
-                  className="cta-button inline-flex items-center justify-center gap-2 border-white/60 bg-primary-950/35 px-7 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-signal-400 hover:bg-white/10"
+                  className="btn-secondary inline-flex min-h-[3.25rem] items-center justify-center gap-2 border-white/60 px-7 py-3 text-sm font-bold text-white backdrop-blur-sm transition-all duration-300 hover:border-signal-400 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal-400"
                   data-gtm-event="hero_develop_your_team_click"
                   data-gtm-location="hero"
                   data-gtm-position="secondary"

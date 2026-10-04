@@ -39,6 +39,10 @@ const seoEntries: Record<string, SeoEntry> = {
     title: 'Institute of Project Controls | Standards & Recognition',
     description: 'Explore the Institute of Project Controls, its professional capability framework, standards, recognition routes and connection with applied College programmes.',
   },
+  '/sectors': {
+    title: 'Project Controls Sectors | CPCM',
+    description: 'Explore project controls sector routes for construction, engineering and manufacturing, public sector, and energy and utilities — delivered against the same Level 6 occupational standard.',
+  },
   '/associate-project-manager-level-4': {
     title: 'Associate Project Manager Level 4 Apprenticeship | KBC',
     description: 'Develop practical project management expertise through the Associate Project Manager Level 4 apprenticeship, combining professional project management preparation, workplace learning and applied AI capability.',

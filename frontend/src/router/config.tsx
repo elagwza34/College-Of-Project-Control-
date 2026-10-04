@@ -9,6 +9,7 @@ const ApmLevel4 = lazy(() => import('../pages/apm-level-4/page'));
 const ApprenticeshipEligibilityCheckerPage = lazy(() => import('../pages/apprenticeship-eligibility-checker/page'));
 const RouteFinderPage = lazy(() => import('../pages/route-finder/page'));
 const ShortCoursesPage = lazy(() => import('../pages/short-courses/page'));
+const SectorsPage = lazy(() => import('../pages/sectors/page'));
 const HowToApplyPage = lazy(() => import('../pages/how-to-apply/page'));
 const EmployerAgreementPage = lazy(() => import('../pages/employer-agreement/page'));
 const GovernanceBoardPage = lazy(() => import('../pages/governance-board/page'));
@@ -76,6 +77,10 @@ const routes: RouteObject[] = [
   {
     path: "/short-courses",
     element: <ShortCoursesPage />,
+  },
+  {
+    path: "/sectors",
+    element: <SectorsPage />,
   },
   {
     path: "/short-courses/:slug",

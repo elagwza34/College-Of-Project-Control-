@@ -138,7 +138,7 @@ export default function DashboardLayout() {
   );
 
   return (
-    <div className="flex min-h-screen bg-background-50">
+    <div className="dashboard-shell flex min-h-screen bg-background-50">
       <RouteScroll />
       <aside className="sticky top-0 hidden h-dvh w-64 shrink-0 lg:block">{navigation}</aside>
       {menuOpen && !desktopViewport && (
